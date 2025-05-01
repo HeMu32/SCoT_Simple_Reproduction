@@ -1,0 +1,13 @@
+[BEGIN CODE]
+```python
+def rev(num):
+    """
+    Write a python function to check if a given number is one less than twice its reverse.
+    """
+    # Convert the number to a string and reverse it, then convert back to an integer
+    reversed_num = int(str(num)[::-1])
+    
+    # Check if the number is one less than twice its reverse
+    return num == 2 * reversed_num - 1
+```
+[END CODE]

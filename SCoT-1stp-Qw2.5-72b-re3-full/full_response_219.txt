@@ -1,0 +1,47 @@
+[BEGIN PROCESS]
+Input: test_tup: a tuple of integers, K: an integer representing the number of elements to extract
+Output: A tuple containing the K smallest and K largest elements from the input tuple
+
+1: Convert the tuple to a list for easier manipulation.
+2: Sort the list in ascending order.
+3: Extract the first K elements from the sorted list to get the K smallest elements.
+4: Extract the last K elements from the sorted list to get the K largest elements.
+5: Combine the two lists of K elements.
+6: Convert the combined list back into a tuple.
+7: Return the resulting tuple.
+[END PROCESS]
+
+[BEGIN CODE]
+def extract_min_max(test_tup, K):
+    # Convert the tuple to a list
+    test_list = list(test_tup)
+    
+    # Sort the list in ascending order
+    test_list.sort()
+    
+    # Extract the first K elements (smallest)
+    min_elements = test_list[:K]
+    
+    # Extract the last K elements (largest)
+    max_elements = test_list[-K:]
+    
+    # Combine the two lists
+    result_list = min_elements + max_elements
+    
+    # Convert the result list back to a tuple
+    result_tuple = tuple(result_list)
+    
+    # Return the resulting tuple
+    return result_tuple
+[END CODE]
+
+### Explanation:
+- **Step 1:** The tuple is converted to a list because lists in Python are mutable and easier to manipulate compared to tuples.
+- **Step 2:** The list is sorted in ascending order to easily access the smallest and largest elements.
+- **Step 3:** The first `K` elements of the sorted list are the smallest `K` elements.
+- **Step 4:** The last `K` elements of the sorted list are the largest `K` elements.
+- **Step 5:** The two lists of `K` elements are combined into a single list.
+- **Step 6:** The combined list is converted back to a tuple to match the expected output format.
+- **Step 7:** The resulting tuple is returned.
+
+This approach ensures that the function correctly extracts the `K` smallest and `K` largest elements from the given tuple.

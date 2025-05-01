@@ -1,0 +1,11 @@
+Input: list: a list of strings, where each string may contain digits and other characters
+Output: new_list: a list of strings with all digits removed from each string
+
+1: Initialize an empty list new_list to store the results
+2: For each string (s) in the input list:
+3:     Initialize an empty string new_s to store the processed string
+4:     For each character (c) in the string s:
+5:         If c is not a digit:
+6:             Append c to new_s
+7:     Append new_s to new_list
+8: Return new_list

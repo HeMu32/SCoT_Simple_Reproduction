@@ -1,0 +1,7 @@
+[BEGIN]
+Input: text: a string  
+Output: a list of substrings split at uppercase letters  
+1: Import the regular expression module (re)  
+2: Use the findall method from the re module to find all substrings that start with an uppercase letter followed by zero or more non-uppercase letters  
+3: Return the list of substrings found  
+[END]

@@ -1,0 +1,20 @@
+Input: x: a list of integers or comparable elements
+Output: A new list that is a sorted version of x
+
+1: If the length of x is 1 or less, return x as it is already sorted.
+2: Divide the list x into two halves, left and right.
+3: Recursively sort the left half using merge_sort.
+4: Recursively sort the right half using merge_sort.
+5: Merge the two sorted halves into a single sorted list.
+   - Initialize an empty list called merged.
+   - Initialize two pointers, i and j, to 0, which will iterate over the left and right lists, respectively.
+   - While i is less than the length of the left list and j is less than the length of the right list:
+     - If the element at index i in the left list is less than or equal to the element at index j in the right list:
+       - Append the element at index i from the left list to merged.
+       - Increment i by 1.
+     - Otherwise:
+       - Append the element at index j from the right list to merged.
+       - Increment j by 1.
+   - If there are remaining elements in the left list, append them to merged.
+   - If there are remaining elements in the right list, append them to merged.
+6: Return the merged list.

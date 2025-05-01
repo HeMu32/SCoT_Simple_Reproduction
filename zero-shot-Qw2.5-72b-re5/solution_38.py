@@ -1,0 +1,13 @@
+def div_even_odd(list1):
+    even = None
+    odd = None
+    for num in list1:
+        if num % 2 == 0 and even is None:
+            even = num
+        elif num % 2 != 0 and odd is None:
+            odd = num
+        if even is not None and odd is not None:
+            break
+    if even is not None and odd != 0:
+        return even / odd
+    return None

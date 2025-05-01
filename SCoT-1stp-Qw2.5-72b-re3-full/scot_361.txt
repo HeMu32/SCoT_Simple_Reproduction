@@ -1,0 +1,8 @@
+Input: list1: a list of lists, which may contain empty lists
+Output: a list of lists with all empty lists removed
+
+1: Initialize an empty list called `result` to store non-empty lists
+2: Iterate through each sublist in `list1`
+3:     If the current sublist is not empty (i.e., its length is greater than 0)
+4:         Append the current sublist to `result`
+5: Return `result` as the final list with empty lists removed

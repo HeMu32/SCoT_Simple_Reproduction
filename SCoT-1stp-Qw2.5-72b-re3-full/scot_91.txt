@@ -1,0 +1,8 @@
+Input: str1: a string, sub_str: a string
+Output: result: a boolean indicating whether the substring is present in the given string
+
+1: Initialize a variable `result` to False
+2: Loop through each character index in the string `str1` where the substring could start
+3: Check if the substring starting from the current index in `str1` matches `sub_str`
+4: If a match is found, set `result` to True and break the loop
+5: After the loop, return the value of `result`

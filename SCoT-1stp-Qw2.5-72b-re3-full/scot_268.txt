@@ -1,0 +1,6 @@
+Input: n: an integer representing the position of the star number to find
+Output: The n-th star number
+
+1: Define the formula for calculating the n-th star number. The formula for the n-th star number is \( 6n(n - 1) + 1 \).
+2: Calculate the n-th star number using the formula.
+3: Return the calculated star number.

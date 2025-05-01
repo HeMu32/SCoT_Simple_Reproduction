@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the size of the array, arr: a list of integers
+Output: frequency: an integer representing the frequency of the smallest value in the array
+
+1: Check if the array is empty or if n is less than 1. If true, return 0 as there are no elements to process.
+2: Find the smallest value in the array.
+3: Initialize a counter to 0.
+4: Loop through each element in the array:
+5:     If the current element is equal to the smallest value, increment the counter.
+6: Return the counter as the frequency of the smallest value.
+[END PROCESS]
+
+[BEGIN CODE]
+def frequency_Of_Smallest(n, arr):
+    if n < 1 or not arr:
+        return 0  # Return 0 if the array is empty or n is less than 1
+    
+    smallest_value = min(arr)  # Find the smallest value in the array
+    frequency = 0  # Initialize the frequency counter
+    
+    for element in arr:
+        if element == smallest_value:
+            frequency += 1  # Increment the frequency counter if the element is the smallest value
+    
+    return frequency  # Return the frequency of the smallest value
+[END CODE]
+
+### Explanation:
+- **Input Validation:** The function first checks if the array is empty or if `n` is less than 1. If either condition is true, it returns 0 because there are no elements to process.
+- **Finding the Smallest Value:** The `min` function is used to find the smallest value in the array.
+- **Frequency Calculation:** A loop iterates through each element in the array. If the current element is equal to the smallest value, the frequency counter is incremented.
+- **Return the Result:** Finally, the function returns the frequency of the smallest value.
+
+This approach ensures that the function efficiently finds and counts the smallest value in the array, handling edge cases like empty arrays or invalid input sizes.

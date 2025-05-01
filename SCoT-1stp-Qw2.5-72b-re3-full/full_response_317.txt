@@ -1,0 +1,57 @@
+[BEGIN PROCESS]
+Input: alist: a list of elements (can be of any type)
+Output: a list of tuples where each tuple represents a consecutive sequence of the same element in the input list. The first element of the tuple is the count of consecutive occurrences, and the second element is the value of the element.
+
+1: Initialize an empty list to store the result (encoded_list)
+2: Initialize a variable to keep track of the current element (current_element) and its count (count)
+3: Loop through each element in the input list (alist)
+4:     If the current element is the same as the last element (current_element):
+5:         Increment the count
+6:     Else:
+7:         If the count is greater than 1:
+8:             Append a tuple (count, current_element) to the encoded_list
+9:         Else:
+10:            Append the current_element to the encoded_list
+11:        Reset the count to 1 and set current_element to the current element
+12: After the loop, handle the last element:
+13:    If the count is greater than 1:
+14:        Append a tuple (count, current_element) to the encoded_list
+15:    Else:
+16:        Append the current_element to the encoded_list
+17: Return the encoded_list
+[END PROCESS]
+
+[BEGIN CODE]
+def modified_encode(alist):
+    encoded_list = []
+    if not alist:
+        return encoded_list
+
+    current_element = alist[0]
+    count = 1
+
+    for element in alist[1:]:
+        if element == current_element:
+            count += 1
+        else:
+            if count > 1:
+                encoded_list.append((count, current_element))
+            else:
+                encoded_list.append(current_element)
+            current_element = element
+            count = 1
+
+    if count > 1:
+        encoded_list.append((count, current_element))
+    else:
+        encoded_list.append(current_element)
+
+    return encoded_list
+[END CODE]
+
+### Explanation:
+The function `modified_encode` performs a modified run-length encoding on the input list `alist`. The encoding process is as follows:
+- It iterates through the list, tracking the current element and its count.
+- When a different element is encountered, it checks if the count is greater than 1. If so, it appends a tuple `(count, current_element)` to the result list. If the count is 1, it appends the element itself.
+- After the loop, it handles the last element in the list in the same way.
+- The function returns the encoded list, which represents the modified run-length encoding of the input list.

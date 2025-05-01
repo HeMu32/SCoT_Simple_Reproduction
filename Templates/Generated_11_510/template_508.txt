@@ -1,0 +1,12 @@
+Input: l1, l2: two lists  
+Output: True or False  
+1:  common_elements = set(l1) & set(l2)  # Find common elements between l1 and l2  
+2:  l1_filtered = []  # Initialize an empty list to store filtered elements from l1  
+3:  l2_filtered = []  # Initialize an empty list to store filtered elements from l2  
+4:  for e in l1:  # Loop through each element in l1  
+5:      if e in common_elements:  # If the element is in common_elements  
+6:          l1_filtered.append(e)  # Add the element to l1_filtered  
+7:  for e in l2:  # Loop through each element in l2  
+8:      if e in common_elements:  # If the element is in common_elements  
+9:          l2_filtered.append(e)  # Add the element to l2_filtered  
+10: return l1_filtered == l2_filtered  # Compare the filtered lists and return the result

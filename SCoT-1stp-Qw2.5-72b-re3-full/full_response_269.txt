@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: k: a single character
+Output: ascii_value: the ASCII value of the character k
+
+1: Check if the input k is a single character
+2: If k is not a single character, raise an error or return an appropriate message
+3: If k is a single character, use the ord() function to get the ASCII value of k
+4: Return the ASCII value
+[END PROCESS]
+
+[BEGIN CODE]
+def ascii_value(k):
+  if len(k) != 1:
+    raise ValueError("Input must be a single character.")
+  ascii_value = ord(k)
+  return ascii_value
+[END CODE]
+
+### Explanation:
+The function `ascii_value` is designed to return the ASCII value of a given character. The process involves the following steps:
+
+1. **Input Validation**: The function first checks if the input `k` is a single character. This is important because the `ord()` function, which converts a character to its ASCII value, expects a string of length 1. If the input is not a single character, the function raises a `ValueError` with an appropriate message.
+
+2. **Conversion to ASCII Value**: If the input is a single character, the function uses the `ord()` function to convert the character to its corresponding ASCII value.
+
+3. **Return the Result**: The function then returns the ASCII value.
+
+This approach ensures that the function behaves correctly and provides meaningful feedback if the input is invalid.

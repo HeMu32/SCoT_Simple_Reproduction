@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: num: a string representing a number
+Output: A boolean value indicating whether the number is a decimal with a precision of 2
+
+1: Import the `re` module for regular expression operations
+2: Define a regular expression pattern that matches a decimal number with exactly two digits after the decimal point
+3: Use the `re.match` function to check if the input string matches the pattern
+4: If the match is found, return True; otherwise, return False
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def is_decimal(num):
+  # Define the regex pattern for a decimal with a precision of 2
+  pattern = r'^\d+(\.\d{2})?$'
+  
+  # Check if the input string matches the pattern
+  if re.match(pattern, num):
+    return True
+  else:
+    return False
+[END CODE]
+
+**Explanation:**
+
+- The function `is_decimal` takes a string `num` as input.
+- The regular expression `^\d+(\.\d{2})?$` is used to match a string that represents a decimal number with a precision of 2:
+  - `^\d+` matches one or more digits at the beginning of the string.
+  - `(\.\d{2})?` matches an optional decimal point followed by exactly two digits.
+  - `^` and `$` ensure that the entire string must match the pattern from start to end.
+- The `re.match` function is used to check if the input string matches the pattern.
+- If a match is found, the function returns `True`, indicating that the input is a valid decimal with a precision of 2.
+- If no match is found, the function returns `False`.
+
+This approach ensures that the function correctly identifies valid decimal numbers with a precision of 2.

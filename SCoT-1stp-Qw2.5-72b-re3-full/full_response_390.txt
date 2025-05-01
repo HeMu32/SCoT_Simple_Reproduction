@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: list: a list of items, string: a string to be inserted at the beginning of each item in the list
+Output: result: a new list where the given string is inserted at the beginning of each item in the original list
+
+1: Initialize an empty list result
+2: Loop through each item in the input list
+3:     Concatenate the given string with the current item
+4:     Append the concatenated result to the result list
+5: Return the result list
+[END PROCESS]
+
+[BEGIN CODE]
+def add_string(lst, string):
+    result = [string + str(item) for item in lst]
+    return result
+[END CODE]
+
+Explanation:
+- The function `add_string` takes two parameters: `lst`, which is a list of items, and `string`, which is the string to be inserted at the beginning of each item in the list.
+- An empty list `result` is initialized to store the modified items.
+- A list comprehension is used to iterate over each item in the input list `lst`. For each item, the string `string` is concatenated with the string representation of the item (using `str(item)` to ensure that the item is converted to a string if it is not already one).
+- The concatenated result is then appended to the `result` list.
+- Finally, the `result` list, which now contains the modified items, is returned by the function.

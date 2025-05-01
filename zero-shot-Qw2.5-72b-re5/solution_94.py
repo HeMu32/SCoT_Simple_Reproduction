@@ -1,0 +1,8 @@
+def index_minimum(test_list):
+    """
+    Write a function to extract the index minimum value record from the given tuples.
+    """
+    if not test_list:
+        return -1  # Return -1 if the list is empty
+    min_index, min_value = min(enumerate(test_list), key=lambda x: x[1])
+    return min_index

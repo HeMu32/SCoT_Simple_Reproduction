@@ -1,0 +1,6 @@
+[BEGIN]
+Input: l: length of a side of the cube
+Output: LSA: lateral surface area of the cube
+1: Calculate the lateral surface area (LSA) using the formula 4 * (l * l)
+2: Return the calculated LSA
+[END]

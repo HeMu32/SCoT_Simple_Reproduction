@@ -1,0 +1,9 @@
+Input: list1: a list of numerical values
+Output: positions: a list of indices where the minimum value occurs in list1
+
+1: Initialize an empty list `positions` to store the indices of the minimum values.
+2: Check if the input list `list1` is empty. If it is, return an empty list.
+3: Find the minimum value in `list1` using the `min` function.
+4: Iterate over the list `list1` using a loop, keeping track of the index and the value.
+5: For each element, if the value is equal to the minimum value, append the index to the `positions` list.
+6: After the loop, return the `positions` list.

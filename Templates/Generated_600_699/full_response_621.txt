@@ -1,0 +1,15 @@
+[BEGIN]
+Input: test_list: a list of strings, K: an integer
+Output: res: a list of strings with numeric values incremented by K
+
+1: Initialize an empty list res
+2: For each element ele in test_list:
+3:     If ele is a digit:
+4:         Convert ele to an integer
+5:         Increment the integer by K
+6:         Convert the result back to a string
+7:         Append the string to res
+8:     Else:
+9:         Append ele to res without modification
+10: Return res
+[END]

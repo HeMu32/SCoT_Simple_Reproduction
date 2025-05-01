@@ -1,0 +1,11 @@
+Input: arr: a list of non-negative integers, k: a positive integer
+Output: count: the number of subsequences where the product of elements is less than k
+
+1: Initialize count to 0
+2: for each subsequence of arr:
+3:     Initialize product to 1
+4:     for each element in the subsequence:
+5:         Multiply the element to the product
+6:     if the product is less than k:
+7:         Increment count by 1
+8: return count

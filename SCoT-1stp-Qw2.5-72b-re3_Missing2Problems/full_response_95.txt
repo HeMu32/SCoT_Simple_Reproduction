@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: lst: a list of sublists containing any type of elements
+Output: min_length: the minimum length of the sublists in the given list
+
+1: Initialize min_length to a very large number (or use the length of the first sublist as a starting point)
+2: For each sublist in lst:
+3:     Compute the length of the current sublist
+4:     If the length of the current sublist is less than min_length:
+5:         Update min_length to the length of the current sublist
+6: Return min_length
+[END PROCESS]
+
+[BEGIN CODE]
+def Find_Min_Length(lst):
+    if not lst:  # Check if the list is empty
+        return 0  # Return 0 if the list is empty, as there are no sublists to measure
+    min_length = len(lst[0])  # Initialize min_length with the length of the first sublist
+    for sublist in lst:
+        if len(sublist) < min_length:
+            min_length = len(sublist)
+    return min_length
+[END CODE]
+
+Explanation:
+- The function `Find_Min_Length` takes a list of sublists as input.
+- It initializes `min_length` with the length of the first sublist to ensure that there is a valid starting point for comparison.
+- The function then iterates over each sublist in the input list, comparing the length of each sublist to the current `min_length`.
+- If a sublist is found that has a length less than the current `min_length`, `min_length` is updated to the length of this sublist.
+- After all sublists have been checked, the function returns `min_length`, which is the minimum length of the sublists in the input list.
+- A check is included at the beginning to handle the case where the input list is empty, returning 0 in such a case.

@@ -1,0 +1,6 @@
+Input: n: a natural number
+Output: tetrahedral: the nth tetrahedral number
+
+1: Validate the input to ensure it is a positive integer.
+2: Calculate the nth tetrahedral number using the formula: \( \text{tetrahedral} = \frac{n(n+1)(n+2)}{6} \).
+3: Return the calculated tetrahedral number.

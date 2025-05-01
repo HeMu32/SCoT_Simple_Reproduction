@@ -1,0 +1,6 @@
+Input: s: a string  
+Output: a string with words reversed  
+1: Split the string s into a list of words  
+2: Reverse the list of words  
+3: Join the reversed list of words into a single string with spaces in between  
+4: Return the resulting string

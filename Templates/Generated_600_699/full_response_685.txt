@@ -1,0 +1,18 @@
+[BEGIN]
+Input: n: an integer 
+Output: sum: the sum of prime numbers between 1 to n 
+1: Create a list `prime` of size `n + 1` initialized to `True`
+2: Set `p` to 2
+3: While `p * p` is less than or equal to `n`:
+4:     If `prime[p]` is `True`:
+5:         Set `i` to `p * 2`
+6:         While `i` is less than or equal to `n`:
+7:             Set `prime[i]` to `False`
+8:             Increment `i` by `p`
+9:     Increment `p` by 1
+10: Initialize `sum` to 0
+11: For each `i` in the range from 2 to `n + 1`:
+12:     If `prime[i]` is `True`:
+13:         Add `i` to `sum`
+14: Return `sum`
+[END]

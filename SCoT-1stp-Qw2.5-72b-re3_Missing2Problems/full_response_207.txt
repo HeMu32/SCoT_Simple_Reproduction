@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: str: a string
+Output: The length of the longest repeating subsequence with no same characters at the same positions
+
+1: Initialize a 2D list dp of size n x n with all elements set to 0, where n is the length of the string.
+2: Loop i from 1 to n (incrementing by 1):
+3:     Loop j from 1 to n (incrementing by 1):
+4:         If str[i-1] is equal to str[j-1] and i is not equal to j:
+5:             Set dp[i][j] to 1 + dp[i-1][j-1].
+6:         Else:
+7:             Set dp[i][j] to the maximum of dp[i-1][j] and dp[i][j-1].
+8: Return dp[n][n] as the length of the longest repeating subsequence.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_longest_repeating_subseq(s):
+    n = len(s)
+    dp = [[0] * (n + 1) for _ in range(n + 1)]
+    
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            if s[i - 1] == s[j - 1] and i != j:
+                dp[i][j] = 1 + dp[i - 1][j - 1]
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+    
+    return dp[n][n]
+[END CODE]
+
+Explanation:
+The function `find_longest_repeating_subseq` is designed to find the length of the longest repeating subsequence in a given string `s` where the two subsequences do not have the same characters at the same positions. This is achieved using dynamic programming.
+
+- A 2D list `dp` is initialized to store the lengths of the longest repeating subsequences for substrings of `s`.
+- The outer loop iterates over the characters of the string from 1 to n (inclusive).
+- The inner loop also iterates over the characters of the string from 1 to n (inclusive).
+- If the characters at positions `i-1` and `j-1` are the same and `i` is not equal to `j`, then the value of `dp[i][j]` is set to `1 + dp[i-1][j-1]`, indicating that the current characters can be part of the repeating subsequence.
+- If the characters are not the same, or if `i` is equal to `j`, then `dp[i][j]` is set to the maximum of `dp[i-1][j]` and `dp[i][j-1]`, indicating that the current characters cannot be part of the repeating subsequence.
+- Finally, the value of `dp[n][n]` is returned, which represents the length of the longest repeating subsequence in the string `s`.

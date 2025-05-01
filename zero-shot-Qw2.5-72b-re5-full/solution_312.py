@@ -1,0 +1,6 @@
+def volume_cone(r, h):
+    """
+    Write a function to find the volume of a cone.
+    """
+    import math
+    return (1/3) * math.pi * r**2 * h

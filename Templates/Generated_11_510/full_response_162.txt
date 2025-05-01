@@ -1,0 +1,8 @@
+[BEGIN]
+Input: n: a positive integer  
+Output: sum: the sum of the series n + (n-2) + (n-4) + ... (until n-x <= 0)  
+1: if n is less than 1:  
+2:     return 0  
+3: else:  
+4:     return n + sum_series(n - 2)  
+[END]

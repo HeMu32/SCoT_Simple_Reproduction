@@ -1,0 +1,13 @@
+[BEGIN]
+Input: p, q: two integers  
+Output: True or False indicating if p and q are co-prime  
+1: Define a function gcd(p, q)  
+2:     while q is not 0:  
+3:         set p to q and q to p modulo q  
+4:     return p  
+5: Define a function is_coprime(x, y)  
+6:     if gcd(x, y) equals 1:  
+7:         return True  
+8:     else:  
+9:         return False  
+[END]

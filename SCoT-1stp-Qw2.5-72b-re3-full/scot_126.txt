@@ -1,0 +1,9 @@
+Input: a, b: two integers
+Output: sum: the sum of all common divisors of a and b
+
+1: Initialize a variable `sum` to 0 to store the sum of common divisors.
+2: Determine the smaller of the two numbers, `min_num`, because the largest possible common divisor cannot be larger than the smaller of the two numbers.
+3: Loop from 1 to `min_num` (inclusive):
+4:     Check if the current number is a divisor of both `a` and `b`:
+5:         If it is, add the current number to `sum`.
+6: After the loop, return the value of `sum`.

@@ -1,0 +1,6 @@
+Input: n: an integer representing the position in the sequence of hexagonal numbers
+Output: The nth hexagonal number
+
+1: Check if n is less than 1. If so, return an error or an appropriate message, as there are no hexagonal numbers for non-positive integers.
+2: Calculate the nth hexagonal number using the formula: Hn = n * (2n - 1).
+3: Return the calculated hexagonal number.

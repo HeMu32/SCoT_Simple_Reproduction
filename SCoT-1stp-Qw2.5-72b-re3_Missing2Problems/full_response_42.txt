@@ -1,0 +1,58 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the list
+Output: sum of repeated elements in the list
+
+1: Initialize a dictionary to keep track of the count of each element in the list
+2: Initialize a variable `sum_repeated` to 0 to store the sum of repeated elements
+3: Loop through each element in the list:
+4:     If the element is not in the dictionary, add it with a count of 1
+5:     If the element is already in the dictionary, increment its count
+6: Loop through the dictionary:
+7:     If the count of an element is greater than 1, add the element multiplied by its count to `sum_repeated`
+8: Return `sum_repeated`
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Sum(arr, n):
+    # Initialize a dictionary to count occurrences of each element
+    count_dict = {}
+    # Initialize the sum of repeated elements
+    sum_repeated = 0
+    
+    # Count the occurrences of each element in the array
+    for element in arr:
+        if element in count_dict:
+            count_dict[element] += 1
+        else:
+            count_dict[element] = 1
+    
+    # Calculate the sum of repeated elements
+    for element, count in count_dict.items():
+        if count > 1:
+            sum_repeated += element * count
+    
+    return sum_repeated
+[END CODE]
+
+### Explanation
+
+The function `find_Sum` takes a list `arr` and its length `n` as input. The goal is to find the sum of elements that appear more than once in the list.
+
+1. **Initialization**:
+   - A dictionary `count_dict` is used to keep track of the count of each element in the list.
+   - A variable `sum_repeated` is initialized to 0 to store the sum of repeated elements.
+
+2. **Counting Elements**:
+   - The function iterates through each element in the list `arr`.
+   - For each element, it checks if the element is already in the dictionary `count_dict`.
+   - If the element is not in the dictionary, it adds the element with a count of 1.
+   - If the element is already in the dictionary, it increments the count of that element.
+
+3. **Calculating the Sum**:
+   - The function then iterates through the dictionary `count_dict`.
+   - For each element in the dictionary, if the count is greater than 1, it adds the element multiplied by its count to `sum_repeated`.
+
+4. **Return**:
+   - Finally, the function returns the value of `sum_repeated`, which is the sum of all repeated elements in the list.
+
+This approach ensures that the function efficiently counts the occurrences of each element and calculates the sum of repeated elements.

@@ -1,0 +1,17 @@
+Input: str1: a string containing parentheses
+Output: Boolean value indicating whether the string of parentheses is valid
+
+1: Initialize an empty stack to keep track of opening parentheses
+2: for each character in str1 do
+3:     if the character is an opening parenthesis (i.e., '(', '{', '[') then
+4:         push the character onto the stack
+5:     else if the character is a closing parenthesis (i.e., ')', '}', ']') then
+6:         if the stack is empty then
+7:             return False (unmatched closing parenthesis)
+8:         else
+9:             pop the top element from the stack
+10:            if the popped element does not match the current closing parenthesis then
+11:                return False (mismatched parentheses)
+12: if the stack is not empty then
+13:     return False (unmatched opening parentheses)
+14: return True (all parentheses are matched)

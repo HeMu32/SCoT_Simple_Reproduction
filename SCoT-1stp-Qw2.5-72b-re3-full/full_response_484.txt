@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: test_list1, test_list2: two lists of tuples
+Output: A new list of tuples with the matching tuples removed from both lists
+
+1: Initialize an empty list `result` to store the non-matching tuples.
+2: Loop through each tuple `t1` in `test_list1`.
+3: If `t1` is not in `test_list2`, append `t1` to `result`.
+4: Loop through each tuple `t2` in `test_list2`.
+5: If `t2` is not in `test_list1`, append `t2` to `result`.
+6: Return the `result` list.
+[END PROCESS]
+
+[BEGIN CODE]
+def remove_matching_tuple(test_list1, test_list2):
+    result = []
+    for t1 in test_list1:
+        if t1 not in test_list2:
+            result.append(t1)
+    for t2 in test_list2:
+        if t2 not in test_list1:
+            result.append(t2)
+    return result
+[END CODE]
+
+### Explanation:
+The function `remove_matching_tuple` takes two lists of tuples, `test_list1` and `test_list2`, as input. The goal is to remove any tuples that are present in both lists and return a new list containing only the tuples that are unique to each list.
+
+1. **Initialization**: An empty list `result` is initialized to store the tuples that are not present in both lists.
+2. **First Loop**: The function iterates over each tuple `t1` in `test_list1`. For each tuple, it checks if `t1` is not in `test_list2`. If `t1` is not found in `test_list2`, it is appended to the `result` list.
+3. **Second Loop**: The function then iterates over each tuple `t2` in `test_list2`. For each tuple, it checks if `t2` is not in `test_list1`. If `t2` is not found in `test_list1`, it is appended to the `result` list.
+4. **Return**: Finally, the function returns the `result` list, which contains only the tuples that are unique to each input list.
+
+This approach ensures that any tuple that appears in both lists is not included in the final result, effectively removing the matching tuples.

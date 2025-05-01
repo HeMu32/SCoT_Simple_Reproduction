@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: result: an integer with the leftmost unset bit set
+
+1: Convert the integer `n` to its binary representation.
+2: Identify the position of the leftmost unset bit (0) in the binary representation.
+3: If no unset bit is found (i.e., all bits are 1), return `n` as it is.
+4: Otherwise, create a mask with a single bit set at the position of the identified unset bit.
+5: Apply the OR operation between `n` and the mask to set the identified bit.
+6: Return the result of the OR operation.
+[END PROCESS]
+
+[BEGIN CODE]
+def set_left_most_unset_bit(n):
+    # Step 1: Convert n to binary and check if all bits are set
+    if n == 0:
+        return 1  # Special case where n is 0, the result should be 1 (binary 1)
+    
+    # Step 2: Find the leftmost unset bit
+    mask = 1
+    while n & mask:
+        mask <<= 1
+    
+    # Step 3: Set the leftmost unset bit
+    result = n | mask
+    
+    return result
+[END CODE]
+
+### Explanation:
+1. **Convert to Binary and Check for All Set Bits:**
+   - The function first checks if `n` is 0. If `n` is 0, the leftmost unset bit is the first bit, so the function returns 1 (binary 1).
+   - If `n` is not 0, the function proceeds to find the leftmost unset bit.
+
+2. **Find the Leftmost Unset Bit:**
+   - A mask is initialized to 1 (binary 0001).
+   - The function uses a while loop to shift the mask left until it finds an unset bit (0) in `n`. The condition `n & mask` checks if the current bit in `n` is set (1). If it is, the mask is shifted left by one position.
+   - When the loop exits, the mask will have a 1 at the position of the leftmost unset bit in `n`.
+
+3. **Set the Leftmost Unset Bit:**
+   - The function then applies the OR operation between `n` and the mask. This operation sets the leftmost unset bit in `n` to 1.
+   - The result of the OR operation is returned.
+
+This approach ensures that the leftmost unset bit is set correctly, and the function handles edge cases like `n` being 0.

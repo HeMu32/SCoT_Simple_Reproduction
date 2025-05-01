@@ -1,0 +1,16 @@
+Input: string: a string, second_string: a string  
+Output: result: a string with characters from the first string that are not present in the second string  
+
+1: Convert the first string into a list of characters  
+2: Initialize an array `count` of size 256 to zero, to keep track of character counts in the second string  
+3: For each character in the second string:  
+4:     Increment the corresponding index in the `count` array based on the ASCII value of the character  
+5: Initialize two indices `ip_ind` and `res_ind` to zero  
+6: While `ip_ind` is less than the length of the list of characters from the first string:  
+7:     Get the character at index `ip_ind` from the list  
+8:     If the count of this character in the `count` array is zero:  
+9:         Place this character at index `res_ind` in the list  
+10:        Increment `res_ind` by one  
+11:    Increment `ip_ind` by one  
+12: Convert the list of characters from index 0 to `res_ind` back into a string  
+13: Return the resulting string

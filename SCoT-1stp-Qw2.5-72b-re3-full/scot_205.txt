@@ -1,0 +1,10 @@
+Input: test_tup: a tuple of elements
+Output: A list of tuples where each tuple is an inversion of the elements in the input tuple
+
+1: Initialize an empty list `res` to store the result
+2: For each element `ele` in `test_tup`:
+3:     If `ele` is a tuple:
+4:         Append the reversed `ele` to `res`
+5:     Else:
+6:         Append `ele` to `res` as it is
+7: Return `res`

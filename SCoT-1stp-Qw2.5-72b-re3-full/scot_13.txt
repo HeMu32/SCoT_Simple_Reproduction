@@ -1,0 +1,10 @@
+Input: words: a list of strings representing words.
+Output: A dictionary where each key is a unique word from the input list, and the value is the count of how many times the word appears in the list.
+
+1: Initialize an empty dictionary called `word_count` to store the count of each word.
+2: Loop through each word in the input list `words`.
+3:     If the word is already a key in `word_count`:
+4:         Increment the count of that word by 1.
+5:     Else:
+6:         Add the word to `word_count` with a count of 1.
+7: Return the `word_count` dictionary.

@@ -1,0 +1,9 @@
+Input: start, end: two integers representing the start and end of the range (inclusive)
+Output: count: the number of hexadecimal numbers within the given range
+
+1: Initialize a count variable to 0
+2: For each number in the range from start to end (inclusive):
+3:     Convert the number to a hexadecimal string
+4:     If the hexadecimal string contains any of the characters 'A', 'B', 'C', 'D', 'E', 'F':
+5:         Increment the count variable
+6: Return the count variable

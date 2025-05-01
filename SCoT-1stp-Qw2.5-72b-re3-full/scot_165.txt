@@ -1,0 +1,9 @@
+Input: str1: a string
+Output: count: the number of characters in the string that are at the same position in the English alphabet as their index in the string (considering 0-based indexing and 'a' or 'A' as the 0th character)
+
+1: Initialize count to 0
+2: Convert the string to lowercase to handle both uppercase and lowercase characters uniformly
+3: Loop through each character in the string with its index
+4:     Calculate the position of the character in the alphabet (0-based)
+5:     If the position matches the index, increment count by 1
+6: Return count

@@ -1,0 +1,7 @@
+import re
+
+def snake_to_camel(word):
+    return re.sub(r'_(.)', lambda x: x.group(1).upper(), word)
+
+# Example usage:
+# print(snake_to_camel('hello_world'))  # HelloWorld

@@ -1,0 +1,6 @@
+def check_Consecutive(l):
+    if not l:
+        return False
+    min_val = min(l)
+    max_val = max(l)
+    return len(l) == max_val - min_val + 1 and len(set(l)) == len(l)

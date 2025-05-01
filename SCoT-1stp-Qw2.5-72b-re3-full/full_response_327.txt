@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: x, y, z: three integers representing the lengths of the sides of a triangle
+Output: A string indicating whether the triangle is isosceles or not
+
+1: Check if any two sides of the triangle are equal
+2: If two sides are equal, then the triangle is isosceles
+3: If no two sides are equal, then the triangle is not isosceles
+4: Return the appropriate message based on the check
+[END PROCESS]
+
+[BEGIN CODE]
+def check_isosceles(x, y, z):
+    # Check if any two sides of the triangle are equal
+    if x == y or y == z or x == z:
+        return "The triangle is isosceles."
+    else:
+        return "The triangle is not isosceles."
+[END CODE]
+
+Explanation:
+The function `check_isosceles` takes three parameters, `x`, `y`, and `z`, which represent the lengths of the sides of a triangle. The function checks if any two sides are equal using a simple if-else statement. If any two sides are equal, it returns a message stating that the triangle is isosceles. If no two sides are equal, it returns a message stating that the triangle is not isosceles. This approach uses a branch (if-else) to determine the type of triangle based on the side lengths.

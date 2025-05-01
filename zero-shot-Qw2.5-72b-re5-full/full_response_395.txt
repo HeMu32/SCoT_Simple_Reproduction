@@ -1,0 +1,17 @@
+[BEGIN CODE]
+```python
+def first_non_repeating_character(str1):
+    char_order = []
+    counts = {}
+    for char in str1:
+        if char in counts:
+            counts[char] += 1
+        else:
+            counts[char] = 1
+            char_order.append(char)
+    for char in char_order:
+        if counts[char] == 1:
+            return char
+    return None
+```
+[END CODE]

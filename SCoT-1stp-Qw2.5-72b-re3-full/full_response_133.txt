@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: nums: a list of numbers
+Output: sum: the sum of the negative numbers in the list
+
+1: Use the `filter` function with a lambda to filter out the negative numbers from the list `nums`.
+2: Convert the filtered result into a list of negative numbers.
+3: Use the `sum` function to calculate the sum of the negative numbers.
+4: Return the sum.
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_negativenum(nums):
+    # Filter the list to include only negative numbers
+    negative_nums = list(filter(lambda x: x < 0, nums))
+    # Calculate the sum of the negative numbers
+    sum_neg = sum(negative_nums)
+    # Return the sum
+    return sum_neg
+[END CODE]
+
+Explanation:
+- The `filter` function is used to filter elements from the list `nums` based on a condition provided by a lambda function. The lambda function `lambda x: x < 0` checks if each element `x` in the list is less than 0 (i.e., negative).
+- The `filter` function returns an iterator, which is then converted to a list `negative_nums` containing only the negative numbers from the original list.
+- The `sum` function is then used to calculate the sum of the elements in the `negative_nums` list.
+- Finally, the function returns the sum of the negative numbers.

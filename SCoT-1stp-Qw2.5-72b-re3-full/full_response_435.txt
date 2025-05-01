@@ -1,0 +1,37 @@
+[BEGIN PROCESS]
+Input: A number (integer or float)
+Output: The last digit of the number (an integer)
+
+1: Convert the number to a string to easily access the last character.
+2: If the number is a float and has a decimal point, find the last digit after the decimal point.
+3: If the number is an integer, find the last digit before the decimal point.
+4: Convert the last character back to an integer.
+5: Return the last digit.
+[END PROCESS]
+
+[BEGIN CODE]
+def last_Digit(number):
+    # Convert the number to a string
+    num_str = str(number)
+    
+    # Check if the number is a float
+    if '.' in num_str:
+        # Split the string at the decimal point and take the part after the decimal
+        decimal_part = num_str.split('.')[1]
+        # The last digit is the last character of the decimal part
+        last_digit = int(decimal_part[-1])
+    else:
+        # The number is an integer, the last digit is the last character of the string
+        last_digit = int(num_str[-1])
+    
+    return last_digit
+[END CODE]
+
+### Explanation:
+- **Step 1:** The number is converted to a string to facilitate the extraction of the last digit. This is because strings allow easy access to individual characters.
+- **Step 2:** A check is performed to determine if the number is a float by looking for a decimal point in the string representation.
+- **Step 3:** If the number is a float, the string is split at the decimal point, and the part after the decimal point is considered. The last character of this part is the last digit.
+- **Step 4:** If the number is an integer, the last character of the string representation is the last digit.
+- **Step 5:** The last character is converted back to an integer and returned as the result.
+
+This approach ensures that the function works correctly for both integers and floating-point numbers, returning the last digit as an integer.

@@ -1,0 +1,8 @@
+Input: list1: a list of numbers, m: an integer representing the start index, n: an integer representing the end index
+Output: sum: the sum of the numbers in list1 between the indices m and n (inclusive)
+
+1: Check if m and n are valid indices for list1.
+2: Initialize sum to 0.
+3: For each index i from m to n (inclusive):
+4:     Add the element at index i in list1 to sum.
+5: Return sum.

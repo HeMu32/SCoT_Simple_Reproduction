@@ -1,0 +1,21 @@
+Input: colors: a list of colors, patterns: a list of patterns
+Output: True if the colors follow the sequence given in the patterns array, otherwise False
+
+1: if the length of colors is not equal to the length of patterns:
+2:     return False
+3: initialize sdict as an empty dictionary
+4: initialize pset as an empty set
+5: initialize sset as an empty set
+6: for each index i in the range of the length of patterns:
+7:     add patterns[i] to pset
+8:     add colors[i] to sset
+9:     if patterns[i] is not in sdict:
+10:         add patterns[i] as a key in sdict with an empty list as its value
+11:     append colors[i] to the list of sdict[patterns[i]]
+12: if the length of pset is not equal to the length of sset:
+13:     return False
+14: for each list of values in sdict:
+15:     for each index i in the range of the length of values - 1:
+16:         if values[i] is not equal to values[i+1]:
+17:             return False
+18: return True

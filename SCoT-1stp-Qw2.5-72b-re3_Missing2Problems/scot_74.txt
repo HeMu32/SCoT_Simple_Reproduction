@@ -1,0 +1,11 @@
+Input: colors: a list of colors, patterns: a list of pattern identifiers
+Output: A boolean value indicating whether the colors follow the sequence given in the patterns array
+
+1: Check if the lengths of the colors and patterns lists are the same. If not, return False.
+2: Create a dictionary to map each pattern identifier to its corresponding color.
+3: Iterate over the patterns and colors simultaneously.
+4:   For each pattern identifier:
+5:     If the pattern identifier is not in the dictionary, add it with the corresponding color.
+6:     If the pattern identifier is in the dictionary, check if the mapped color matches the current color.
+7:       If it does not match, return False.
+8: If the loop completes without returning False, return True.

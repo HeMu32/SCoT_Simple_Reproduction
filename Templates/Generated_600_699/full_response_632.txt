@@ -1,0 +1,9 @@
+[BEGIN]
+Input: num_list: a list of integers  
+Output: x: a list with all zeroes moved to the end  
+
+1: Initialize a list `a` with zeroes, the length of which is equal to the count of zeroes in `num_list`  
+2: Initialize a list `x` with all non-zero elements from `num_list`  
+3: Extend list `x` with list `a` to move all zeroes to the end  
+4: Return the modified list `x`  
+[END]

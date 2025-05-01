@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: words: a list of strings representing words.
+Output: A dictionary where each key is a unique word from the input list, and the value is the count of how many times the word appears in the list.
+
+1: Initialize an empty dictionary called `word_count` to store the count of each word.
+2: Loop through each word in the input list `words`.
+3:     If the word is already a key in `word_count`:
+4:         Increment the count of that word by 1.
+5:     Else:
+6:         Add the word to `word_count` with a count of 1.
+7: Return the `word_count` dictionary.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_common(words):
+    word_count = {}
+    for word in words:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    return word_count
+[END CODE]
+
+Explanation:
+The function `count_common` takes a list of words as input and returns a dictionary with the count of each unique word in the list. The process involves initializing an empty dictionary to keep track of word counts. As we iterate through the list, we check if the word is already in the dictionary. If it is, we increment its count; if not, we add the word to the dictionary with a count of 1. Finally, we return the dictionary containing the counts of all words. This approach ensures that we efficiently count the occurrences of each word in the list.

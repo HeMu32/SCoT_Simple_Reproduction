@@ -1,0 +1,8 @@
+[BEGIN]
+Input: text: a string  
+Output: a string with only alphanumeric characters  
+1: Import the regular expression module (re)  
+2: Compile a regular expression pattern that matches any character that is not alphanumeric  
+3: Use the compiled pattern to substitute all non-alphanumeric characters in the input text with an empty string  
+4: Return the modified text  
+[END]

@@ -1,0 +1,12 @@
+Input: tri: a list of lists representing a triangle, m: the number of rows in the triangle, n: the number of columns in the last row (though n is not necessary since the number of columns in each row is equal to the row index + 1)
+Output: max_sum: the maximum total path sum from the top to the bottom of the triangle
+
+1: Initialize a 2D list `dp` of the same dimensions as `tri` to store the maximum path sums at each position.
+2: Set `dp[0][0]` to `tri[0][0]` since this is the starting point.
+3: For each row starting from the second row:
+   - For each element in the row:
+     - If the element is the first in the row, it can only come from the element directly above it in the previous row.
+     - If the element is the last in the row, it can only come from the element directly above and to the left in the previous row.
+     - Otherwise, the element can come from either the element directly above or the element directly above and to the left in the previous row, choose the one with the higher sum.
+4: The maximum path sum will be the maximum value in the last row of `dp`.
+5: Return the maximum path sum.

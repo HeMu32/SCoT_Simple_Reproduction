@@ -1,0 +1,10 @@
+Input: text: a string of text
+Output: A boolean value indicating whether the text contains a word with the letter 'z'
+
+1: Initialize a variable `found` to False, which will be used to indicate if a word containing 'z' is found.
+2: Split the input text into a list of words.
+3: Loop through each word in the list:
+4:     If the word contains the letter 'z':
+5:         Set `found` to True
+6:         Break the loop
+7: After the loop, return the value of `found`.

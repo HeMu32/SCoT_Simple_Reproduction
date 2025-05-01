@@ -1,0 +1,7 @@
+Input: text: a string
+Output: words: a list of words that are exactly five characters long
+
+1: Import the `re` module for regular expression operations
+2: Define a regular expression pattern to match words that are exactly five characters long
+3: Use the `re.findall` function to find all occurrences of the pattern in the input text
+4: Return the list of matched words

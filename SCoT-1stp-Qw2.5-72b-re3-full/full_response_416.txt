@@ -1,0 +1,57 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: max_sum: the maximum sum obtained by dividing the number into three parts recursively and summing them up
+
+1: If n is less than or equal to 0, return 0 (base case)
+2: Initialize max_sum to 0
+3: For each division of n into three parts (i, j, k) where i + j + k = n and i, j, k > 0:
+4:     Calculate the sum of the recursive calls for i, j, and k
+5:     If the calculated sum is greater than max_sum, update max_sum
+6: Return max_sum
+[END PROCESS]
+
+However, the above process is inefficient because it involves a lot of redundant calculations. A more efficient approach is to use dynamic programming to store the results of subproblems and avoid recalculating them.
+
+[BEGIN PROCESS]
+Input: n: an integer
+Output: max_sum: the maximum sum obtained by dividing the number into three parts recursively and summing them up
+
+1: If n is less than or equal to 0, return 0 (base case)
+2: Create a list dp of size n+1 to store the maximum sum for each number up to n
+3: Initialize dp[0] to 0 (base case)
+4: For each number i from 1 to n:
+5:     Initialize max_sum to 0
+6:     For each possible division of i into three parts (i.e., i-1, i-2, i-3):
+7:         If the division is valid (i.e., the index is non-negative):
+8:             Calculate the sum of the current division and the stored maximum sum for the remaining part
+9:             If the calculated sum is greater than max_sum, update max_sum
+10:    Store max_sum in dp[i]
+11: Return dp[n]
+[END PROCESS]
+
+[BEGIN CODE]
+def breakSum(n):
+    if n <= 0:
+        return 0
+    
+    # Initialize the dp array with zeros
+    dp = [0] * (n + 1)
+    
+    # Fill the dp array
+    for i in range(1, n + 1):
+        max_sum = 0
+        for j in [i - 1, i - 2, i - 3]:
+            if j >= 0:
+                max_sum = max(max_sum, dp[j] + i - j)
+        dp[i] = max_sum
+    
+    return dp[n]
+[END CODE]
+
+### Explanation:
+- **Base Case**: If `n` is less than or equal to 0, the maximum sum is 0.
+- **Dynamic Programming Array (`dp`)**: We use a list `dp` where `dp[i]` represents the maximum sum we can get by breaking the number `i` into three parts.
+- **Filling the DP Array**: For each number `i` from 1 to `n`, we consider all possible ways to break `i` into three parts (i.e., `i-1`, `i-2`, `i-3`). For each valid division, we calculate the sum of the current part and the maximum sum of the remaining part (stored in `dp[j]`), and update `max_sum` if the new sum is greater.
+- **Result**: The final result is stored in `dp[n]`, which gives the maximum sum for the number `n`.
+
+This approach ensures that we avoid redundant calculations and efficiently compute the maximum sum using dynamic programming.

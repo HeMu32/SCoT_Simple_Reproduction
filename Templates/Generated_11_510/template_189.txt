@@ -1,0 +1,14 @@
+Input: arr: a list of integers, n: the length of the list
+Output: The first missing positive integer
+
+1: Initialize a pointer `ptr` to 0.
+2: Loop through each element in the array:
+   2.1: If the current element is 1, set `ptr` to 1 and break the loop.
+3: If `ptr` is still 0, return 1 (since 1 is the first missing positive integer).
+4: Loop through each element in the array again:
+   4.1: If the current element is less than or equal to 0 or greater than n, set it to 1.
+5: Loop through each element in the array:
+   5.1: Increment the value at the index `(arr[i] - 1) % n` by n.
+6: Loop through each element in the array:
+   6.1: If the current element is less than or equal to n, return the index + 1.
+7: If no missing positive integer is found in the previous steps, return n + 1.

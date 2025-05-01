@@ -1,0 +1,2 @@
+def sort_sublists(input_list):
+    return [sorted(sublist, key=lambda x: x) for sublist in input_list]

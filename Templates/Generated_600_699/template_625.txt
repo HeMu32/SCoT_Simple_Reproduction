@@ -1,0 +1,9 @@
+Input: newList: a list 
+Output: newList: the list with the first and last elements swapped 
+1: size = length of newList 
+2: if size is less than 2: 
+3:     return newList (no swap needed) 
+4: temp = newList[0] (store the first element) 
+5: newList[0] = newList[size - 1] (set the first element to the last element) 
+6: newList[size - 1] = temp (set the last element to the stored first element) 
+7: return newList (return the modified list)

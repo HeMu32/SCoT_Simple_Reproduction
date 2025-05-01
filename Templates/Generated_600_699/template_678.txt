@@ -1,0 +1,4 @@
+Input: str1: a string  
+Output: str1: a string without spaces  
+1: Replace all spaces in str1 with nothing (an empty string)  
+2: Return the modified str1

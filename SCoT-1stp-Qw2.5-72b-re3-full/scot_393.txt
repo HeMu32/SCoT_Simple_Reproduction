@@ -1,0 +1,6 @@
+Input: input_list: a list of lists, where each sublist contains elements of any type
+Output: The sublist with the maximum length
+
+1: Use the `max` function with a key parameter set to a lambda function that returns the length of each sublist.
+2: The `max` function will compare the lengths of the sublists and return the one with the maximum length.
+3: Return the sublist with the maximum length.

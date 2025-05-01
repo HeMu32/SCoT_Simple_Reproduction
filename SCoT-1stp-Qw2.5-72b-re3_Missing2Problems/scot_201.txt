@@ -1,0 +1,8 @@
+Input: lst: a list of elements
+Output: A boolean value indicating whether all elements in the list are the same
+
+1: Check if the list is empty or contains only one element, in which case return True as all (or the single) elements are the same.
+2: Initialize a variable `first_element` with the first element of the list.
+3: Loop through the list starting from the second element.
+4:     If an element is not equal to `first_element`, return False.
+5: If the loop completes without returning False, return True.

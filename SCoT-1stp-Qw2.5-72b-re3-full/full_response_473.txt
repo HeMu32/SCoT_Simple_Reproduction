@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: test_list1, test_list2: two lists of tuples
+Output: intersection: a list of tuples that are present in both test_list1 and test_list2, irrespective of the order of elements in the tuples
+
+1: Initialize an empty list `intersection` to store the result.
+2: For each tuple `t1` in `test_list1`:
+3:     For each tuple `t2` in `test_list2`:
+4:         If the sorted version of `t1` is equal to the sorted version of `t2`:
+5:             Add `t1` to `intersection` and break the inner loop to avoid duplicate entries.
+6: Return `intersection`.
+[END PROCESS]
+
+[BEGIN CODE]
+def tuple_intersection(test_list1, test_list2):
+    intersection = []
+    for t1 in test_list1:
+        for t2 in test_list2:
+            if sorted(t1) == sorted(t2):
+                intersection.append(t1)
+                break  # Avoid adding duplicates
+    return intersection
+[END CODE]
+
+### Explanation
+
+The function `tuple_intersection` is designed to find the intersection of two lists of tuples, where the order of elements within the tuples does not matter. Here's a step-by-step breakdown of how the function works:
+
+1. **Initialization**: An empty list `intersection` is initialized to store the tuples that are common between `test_list1` and `test_list2`.
+
+2. **Nested Loops**: The function uses nested loops to compare each tuple in `test_list1` with each tuple in `test_list2`.
+
+3. **Sorting and Comparison**: For each pair of tuples `t1` and `t2`, the function sorts both tuples and checks if they are equal. Sorting the tuples ensures that the order of elements does not affect the comparison.
+
+4. **Adding to Intersection**: If the sorted versions of `t1` and `t2` are equal, `t1` is added to the `intersection` list. The inner loop is then broken to avoid adding the same tuple multiple times if it appears more than once in `test_list2`.
+
+5. **Return Result**: Finally, the function returns the `intersection` list, which contains all the tuples that are present in both input lists, regardless of the order of elements within the tuples.
+
+This approach ensures that the function correctly identifies and returns the intersection of the two lists of tuples, considering the unordered nature of the tuples.

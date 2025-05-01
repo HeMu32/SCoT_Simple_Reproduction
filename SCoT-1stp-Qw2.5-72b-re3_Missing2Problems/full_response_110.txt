@@ -1,0 +1,56 @@
+[BEGIN PROCESS]
+Input: test_list: a list of integers, strt_val: an integer representing the start of the range, stop_val: an integer representing the end of the range
+Output: missing_ranges: a list of tuples, each representing a range of missing numbers
+
+1: Initialize an empty list missing_ranges to store the ranges of missing numbers.
+2: Create a set of numbers from the given range using strt_val and stop_val to allow for O(1) lookups.
+3: Iterate over the set of numbers from strt_val to stop_val.
+4:     If the current number is not in test_list:
+5:         Check if the next number is also not in test_list to determine if it's the start of a new range.
+6:         If it is the start of a new range, record the start and continue checking subsequent numbers until a number is found in test_list or the end of the range is reached.
+7:         Record the end of the range and add the range (start, end) to missing_ranges.
+8: Return the list missing_ranges.
+[END PROCESS]
+
+[BEGIN CODE]
+def extract_missing(test_list, strt_val, stop_val):
+    # Convert the test_list to a set for O(1) lookups
+    test_set = set(test_list)
+    missing_ranges = []
+    current_start = None
+
+    for num in range(strt_val, stop_val + 1):
+        if num not in test_set:
+            if current_start is None:
+                # Start of a new missing range
+                current_start = num
+        else:
+            if current_start is not None:
+                # End of a missing range
+                missing_ranges.append((current_start, num - 1))
+                current_start = None
+
+    # Check if the last number is part of a missing range
+    if current_start is not None:
+        missing_ranges.append((current_start, stop_val))
+
+    return missing_ranges
+[END CODE]
+
+### Explanation
+
+The function `extract_missing` is designed to find and return the ranges of numbers that are missing from a given list within a specified range. The process involves:
+
+1. **Initialization**: We initialize an empty list `missing_ranges` to store the ranges of missing numbers and convert the `test_list` to a set `test_set` for efficient lookups.
+
+2. **Iteration**: We iterate over each number in the range from `strt_val` to `stop_val` (inclusive).
+
+3. **Range Detection**:
+   - If the current number is not in `test_set` and `current_start` is `None`, it indicates the start of a new missing range, so we set `current_start` to the current number.
+   - If the current number is in `test_set` and `current_start` is not `None`, it indicates the end of a missing range, so we append the range `(current_start, num - 1)` to `missing_ranges` and reset `current_start` to `None`.
+
+4. **Final Check**: After the loop, if `current_start` is not `None`, it means the last number in the range is part of a missing range, so we append the range `(current_start, stop_val)` to `missing_ranges`.
+
+5. **Return**: Finally, we return the list `missing_ranges` containing all the missing ranges.
+
+This approach ensures that we efficiently find and return all missing ranges in the specified range.

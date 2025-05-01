@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: a: a list of integers, n: the length of the list
+Output: True if the count of inversions of two types (i < j and a[i] > a[j], and i < j and a[i] < a[j]) are the same, False otherwise
+
+1: Initialize two counters, `count1` and `count2`, to zero for counting the inversions of the two types.
+2: Loop through the list with index `i` from 0 to n-2.
+3:     For each `i`, loop through the list with index `j` from i+1 to n-1.
+4:         If `a[i] > a[j]`, increment `count1` by 1.
+5:         If `a[i] < a[j]`, increment `count2` by 1.
+6: After the loops, compare `count1` and `count2`.
+7: If `count1` equals `count2`, return True.
+8: Otherwise, return False.
+[END PROCESS]
+
+[BEGIN CODE]
+def solve(a, n):
+    count1 = 0
+    count2 = 0
+    
+    for i in range(n):
+        for j in range(i + 1, n):
+            if a[i] > a[j]:
+                count1 += 1
+            if a[i] < a[j]:
+                count2 += 1
+    
+    return count1 == count2
+[END CODE]
+
+### Explanation:
+The function `solve` checks if the number of inversions of two types in a list are the same. An inversion of the first type occurs when for indices `i < j`, the element at `i` is greater than the element at `j` (`a[i] > a[j]`). An inversion of the second type occurs when for indices `i < j`, the element at `i` is less than the element at `j` (`a[i] < a[j]`). The function counts both types of inversions and returns `True` if the counts are equal, otherwise it returns `False`. This is useful in scenarios where the relative ordering of elements in a list is of interest, such as in sorting algorithms or data analysis.

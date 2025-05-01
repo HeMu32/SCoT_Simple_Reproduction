@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: list1: a list of tuples, n: an integer representing the index of the element to extract from each tuple
+Output: A list containing the nth element from each tuple in the given list
+
+1: Initialize an empty list called result to store the nth elements.
+2: Loop through each tuple in list1.
+3:     For each tuple, check if the tuple has at least n+1 elements to avoid index out-of-range errors.
+4:     If the tuple has enough elements, append the nth element to result.
+5: After the loop, return the result list.
+[END PROCESS]
+
+[BEGIN CODE]
+def extract_nth_element(list1, n):
+  result = []
+  for tup in list1:
+    if len(tup) > n:  # Check if the tuple has enough elements
+      result.append(tup[n])
+  return result
+[END CODE]
+
+### Explanation:
+The function `extract_nth_element` is designed to extract the nth element from each tuple in a given list of tuples. The process involves:
+- Initializing an empty list `result` to store the extracted elements.
+- Iterating over each tuple in the input list `list1`.
+- For each tuple, the function checks if the tuple contains at least `n+1` elements to avoid an index out-of-range error.
+- If the tuple has enough elements, the nth element is appended to the `result` list.
+- Finally, the function returns the `result` list containing the nth elements from each tuple.
+
+This approach ensures that the function handles tuples of varying lengths gracefully, avoiding errors and providing a clean output.

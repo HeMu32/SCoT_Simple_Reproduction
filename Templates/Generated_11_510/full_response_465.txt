@@ -1,0 +1,9 @@
+[BEGIN]
+Input: dict1: a dictionary  
+Output: dict1: a dictionary with empty items removed  
+1: Initialize an empty dictionary to store non-empty items  
+2: For each key-value pair in dict1:  
+3:     If the value is not None:  
+4:         Add the key-value pair to the new dictionary  
+5: Return the new dictionary  
+[END]

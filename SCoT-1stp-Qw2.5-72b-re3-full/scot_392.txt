@@ -1,0 +1,10 @@
+Input: n: an integer
+Output: The maximum sum possible using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n)
+
+1: If n is less than or equal to 11, return n. (Base case: for small values of n, the maximum sum is n itself)
+2: Initialize a list dp of size n+1 with all elements set to 0. This list will store the maximum sum for each value up to n.
+3: Set dp[0] to 0 and dp[1] to 1. (Base cases for the dynamic programming approach)
+4: For i from 2 to n:
+5:     Calculate the sum of the maximum sums for i/2, i/3, i/4, and i/5 using the dp list.
+6:     Set dp[i] to the maximum of i and the calculated sum.
+7: Return dp[n].

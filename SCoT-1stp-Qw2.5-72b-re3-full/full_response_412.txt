@@ -1,0 +1,19 @@
+[BEGIN PROCESS]
+Input: l: a list of integers
+Output: res: a list of integers with all odd numbers removed
+
+1: Initialize an empty list res to store the result
+2: For each element ele in the list l:
+3:     If ele is even (ele % 2 == 0):
+4:         Append ele to res
+5: Return res
+[END PROCESS]
+
+[BEGIN CODE]
+def remove_odd(l):
+    res = [ele for ele in l if ele % 2 == 0]
+    return res
+[END CODE]
+
+### Explanation:
+The function `remove_odd` is designed to filter out all odd numbers from a given list `l`. The process involves iterating through each element in the list and checking if it is even. If the element is even, it is added to the result list `res`. This is achieved using a list comprehension, which is a concise way to create lists based on existing lists. The condition `ele % 2 == 0` checks if the element is even, and only even elements are included in the resulting list. Finally, the function returns the list `res` containing only the even numbers from the original list.

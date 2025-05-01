@@ -1,0 +1,16 @@
+[BEGIN]
+Input: test_tup1, test_tup2: two tuples of tuples
+Output: res: a tuple of tuples where each element is the maximum of the corresponding elements from test_tup1 and test_tup2
+
+1: Initialize an empty list to store the result tuples.
+2: For each pair of inner tuples (tup1, tup2) from test_tup1 and test_tup2:
+3:     Initialize an empty list to store the maximum elements of the current inner tuples.
+4:     For each pair of elements (a, b) from tup1 and tup2:
+5:         If a is greater than or equal to b:
+6:             Add a to the list of maximum elements.
+7:         Else:
+8:             Add b to the list of maximum elements.
+9:     Convert the list of maximum elements to a tuple and add it to the result list.
+10: Convert the result list to a tuple.
+11: Return the result tuple.
+[END]

@@ -1,0 +1,10 @@
+Input: test_tup: a tuple of integers, K: an integer representing the number of elements to extract
+Output: A tuple containing the K smallest and K largest elements from the input tuple
+
+1: Convert the tuple to a list for easier manipulation.
+2: Sort the list in ascending order.
+3: Extract the first K elements from the sorted list to get the K smallest elements.
+4: Extract the last K elements from the sorted list to get the K largest elements.
+5: Combine the two lists of K elements.
+6: Convert the combined list back into a tuple.
+7: Return the resulting tuple.

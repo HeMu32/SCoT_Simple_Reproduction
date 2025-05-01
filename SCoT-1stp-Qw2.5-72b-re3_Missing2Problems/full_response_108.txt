@@ -1,0 +1,49 @@
+[-BEGIN PROCESS]
+Input: num1, num2, num3: three lists of integers, each sorted in non-decreasing order
+Output: An iterator that yields the elements of num1, num2, and num3 in a single sorted order
+
+1: Import the `heapq` module to use the heap queue algorithm
+2: Initialize an empty list to act as the heap
+3: Push the first element of each list into the heap along with the index of the list and the element index (0) to keep track of the origin of the element
+4: While the heap is not empty:
+5:     Pop the smallest element from the heap
+6:     Yield the element
+7:     If the list from which the element was popped has more elements:
+8:         Push the next element from that list into the heap
+[END PROCESS]
+
+[BEGIN CODE]
+import heapq
+
+def merge_sorted_list(num1, num2, num3):
+    # Initialize the heap
+    heap = []
+    
+    # Function to push the first element of each list into the heap
+    def push_initial_elements():
+        for index, lst in enumerate((num1, num2, num3)):
+            if lst:  # Check if the list is not empty
+                heapq.heappush(heap, (lst[0], index, 0))
+    
+    push_initial_elements()
+    
+    # Merge the lists
+    while heap:
+        value, list_index, element_index = heapq.heappop(heap)
+        yield value
+        if element_index + 1 < len((num1, num2, num3)[list_index]):
+            next_value = (num1, num2, num3)[list_index][element_index + 1]
+            heapq.heappush(heap, (next_value, list_index, element_index + 1))
+[END CODE]
+
+### Explanation
+
+1. **Heap Initialization**: We use the `heapq` module to manage a min-heap. The heap is initialized as an empty list.
+
+2. **Push Initial Elements**: We define a helper function `push_initial_elements` to push the first element of each list into the heap. Each element is pushed as a tuple containing the value, the index of the list it comes from, and the index of the element within that list. This helps in keeping track of the origin of each element and allows us to push the next element from the same list when needed.
+
+3. **Merge the Lists**: We use a while loop to repeatedly pop the smallest element from the heap and yield it. After yielding an element, we check if the list from which the element was popped has more elements. If it does, we push the next element from that list into the heap.
+
+4. **Yielding Elements**: The function yields elements one by one, ensuring that the output is a single sorted iterator that combines all the elements from the input lists.
+
+This approach ensures that the merging process is efficient, with a time complexity of O(n log k), where n is the total number of elements across all lists and k is the number of lists.

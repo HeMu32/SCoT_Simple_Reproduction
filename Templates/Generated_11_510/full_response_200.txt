@@ -1,0 +1,11 @@
+[BEGIN]
+Input: list1: a list of numbers
+Output: max_result: a list of indices where the maximum value occurs in list1
+
+1: max_val = max(list1)  # Find the maximum value in the list
+2: max_result = []  # Initialize an empty list to store the indices of the maximum value
+3: for i, j in enumerate(list1):  # Loop through the list with index and value
+4:     if j == max_val:  # If the current value is equal to the maximum value
+5:         max_result.append(i)  # Add the index to the max_result list
+6: return max_result  # Return the list of indices
+[END]

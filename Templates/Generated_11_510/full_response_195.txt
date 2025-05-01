@@ -1,0 +1,15 @@
+[BEGIN]
+Input: arr: a sorted array, x: the element to find, n: the number of elements in arr
+Output: The index of the first occurrence of x in arr, or -1 if x is not found
+1: Initialize low to 0 and high to n - 1, and res to -1
+2: While low is less than or equal to high:
+3:     Calculate mid as (low + high) // 2
+4:     If arr[mid] is greater than x:
+5:         Set high to mid - 1
+6:     Else if arr[mid] is less than x:
+7:         Set low to mid + 1
+8:     Else:
+9:         Set res to mid
+10:        Set high to mid - 1
+11: Return res
+[END]

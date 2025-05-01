@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number of first odd natural numbers to consider
+Output: sum: the sum of squares of the first n odd natural numbers
+
+1: Initialize sum to 0
+2: Initialize counter to 1 (to keep track of the number of odd numbers processed)
+3: Initialize odd_number to 1 (the first odd number)
+4: While counter is less than or equal to n:
+5:     Add the square of odd_number to sum
+6:     Increment odd_number by 2 to get the next odd number
+7:     Increment counter by 1
+8: Return sum
+[END PROCESS]
+
+[BEGIN CODE]
+def square_Sum(n):
+    sum = 0
+    counter = 1
+    odd_number = 1
+    while counter <= n:
+        sum += odd_number ** 2
+        odd_number += 2
+        counter += 1
+    return sum
+[END CODE]
+
+Explanation:
+The function `square_Sum(n)` calculates the sum of squares of the first n odd natural numbers. It initializes a variable `sum` to store the cumulative sum of squares, a `counter` to keep track of how many odd numbers have been processed, and `odd_number` to represent the current odd number being processed. The loop continues until `counter` exceeds `n`, in each iteration, the square of the current `odd_number` is added to `sum`, and `odd_number` is incremented by 2 to move to the next odd number. Finally, the function returns the computed sum.

@@ -1,0 +1,7 @@
+Input: string: a string containing words separated by spaces
+Output: result: a string with duplicate words removed, maintaining the original order of words
+
+1: Split the input string into a list of words
+2: Create an OrderedDict from the list of words, which automatically removes duplicates while preserving order
+3: Join the keys of the OrderedDict back into a single string, separated by spaces
+4: Return the resulting string

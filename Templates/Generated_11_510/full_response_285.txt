@@ -1,0 +1,10 @@
+[BEGIN]
+Input: text: a string  
+Output: 'Found a match!' or 'Not matched!'  
+1: Define a pattern 'ab{2,3}' which matches 'a' followed by two to three 'b's  
+2: Use re.search to search for the pattern in the text  
+3: If a match is found:  
+4:     Return 'Found a match!'  
+5: Else:  
+6:     Return 'Not matched!'
+[END]

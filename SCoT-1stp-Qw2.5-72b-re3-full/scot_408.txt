@@ -1,0 +1,13 @@
+Input: nums1: a list of integers, nums2: a list of integers, k: an integer
+Output: pairs: a list of k pairs, each pair consisting of one element from nums1 and one element from nums2
+
+1: Initialize an empty list to store the pairs
+2: Initialize a min-heap to store the pairs along with their sums, where the heap is sorted by the sum of the pair
+3: For each element in nums1, and for each element in nums2:
+4:     Calculate the sum of the current pair
+5:     If the heap has less than k elements, push the current pair and its sum into the heap
+6:     If the heap has k elements and the sum of the current pair is less than the largest sum in the heap, replace the largest sum in the heap with the current pair and its sum
+7: Initialize an empty list to store the final k pairs
+8: While the heap is not empty:
+9:     Pop the smallest sum pair from the heap and add it to the final list of pairs
+10: Return the final list of pairs

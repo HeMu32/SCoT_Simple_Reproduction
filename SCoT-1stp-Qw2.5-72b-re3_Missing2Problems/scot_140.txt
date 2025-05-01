@@ -1,0 +1,13 @@
+Input: test_list: a list of tuples
+Output: res: a list containing elements that occur exactly once in the entire list of tuples
+
+1: Initialize an empty dictionary `freq_dict` to store the frequency of each element.
+2: For each tuple `tup` in `test_list`:
+3:     For each element `ele` in `tup`:
+4:         If `ele` is not in `freq_dict`, add it with a count of 1.
+5:         If `ele` is already in `freq_dict`, increment its count by 1.
+6: Initialize an empty list `res` to store elements that occur exactly once.
+7: For each key `k` in `freq_dict`:
+8:     If the value of `k` in `freq_dict` is 1:
+9:         Append `k` to `res`.
+10: Return `res` as the list of elements that occur exactly once.

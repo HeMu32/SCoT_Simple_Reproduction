@@ -1,0 +1,13 @@
+Input: d: a dictionary which may contain nested dictionaries
+Output: depth: an integer representing the depth of the dictionary
+
+1: Define a function dict_depth with a parameter d
+2:   Initialize a variable depth to 1, representing the minimum depth of a dictionary
+3:   Check if d is not a dictionary or if it is empty:
+4:     If true, return 0 as the depth
+5:   Initialize a variable max_depth to 0 to keep track of the maximum depth found
+6:   Iterate over each key-value pair in the dictionary d:
+7:     If the value is a dictionary:
+8:       Recursively call dict_depth on the value to find its depth
+9:       Update max_depth if the depth of the current value is greater than max_depth
+10:  Return max_depth + 1 as the final depth of the dictionary

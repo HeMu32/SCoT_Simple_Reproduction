@@ -1,0 +1,13 @@
+[BEGIN]
+Input: test_list: a list of tuples representing a matrix
+Output: res: a set of tuples with similar rows removed
+
+1: Initialize an empty list to store the processed rows
+2: For each row (sub) in test_list:
+3:     Convert the row to a set to remove duplicate elements within the row
+4:     Sort the set to ensure the elements are in a consistent order
+5:     Convert the sorted set back to a tuple
+6:     Append the processed tuple to the list from step 1
+7: Convert the list of processed tuples to a set to remove duplicate rows
+8: Return the set of unique rows
+[END]

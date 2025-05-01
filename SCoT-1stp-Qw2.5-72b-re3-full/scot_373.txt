@@ -1,0 +1,5 @@
+Input: l, w, h: three integers or floats representing the length, width, and height of a cuboid.
+Output: The volume of the cuboid as a float or integer.
+
+1: Calculate the volume by multiplying the length, width, and height.
+2: Return the calculated volume.

@@ -1,0 +1,8 @@
+Input: nums: a list of integers
+Output: differences: a list of integers representing the differences between consecutive numbers in the input list
+1: Initialize an empty list to store the differences
+2: Use a loop to iterate over the list, starting from the first element and ending at the second-to-last element
+3:     for each element (except the last one):
+4:         calculate the difference between the current element and the next element
+5:         append the difference to the differences list
+6: Return the differences list

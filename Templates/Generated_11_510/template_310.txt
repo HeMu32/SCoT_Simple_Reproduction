@@ -1,0 +1,7 @@
+Input: str1: a string  
+Output: result: a tuple containing characters from str1, excluding spaces  
+1: Initialize an empty tuple named result  
+2: For each character x in str1:  
+3:     If x is not a space:  
+4:         Add x to result  
+5: Return result

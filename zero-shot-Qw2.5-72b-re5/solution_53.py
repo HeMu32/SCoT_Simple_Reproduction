@@ -1,0 +1,4 @@
+def check_Equality(str): 
+    if len(str) == 0:
+        return False
+    return str[0] == str[-1]

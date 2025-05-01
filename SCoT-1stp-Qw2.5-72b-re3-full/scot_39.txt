@@ -1,0 +1,11 @@
+Input: S: a string
+Output: True if the letters of the string can be rearranged so that no two adjacent characters are the same, otherwise False
+
+1: Count the frequency of each character in the string using a dictionary
+2: Find the maximum frequency of any character in the string
+3: If the maximum frequency is more than half the length of the string plus one, return False (it's impossible to rearrange the string to meet the requirement)
+4: Otherwise, return True (it's possible to rearrange the string to meet the requirement)
+
+Explanation:
+- The key insight is that if any character appears more than half the length of the string plus one, it is impossible to place this character in a way that it does not have the same character adjacent to it. For example, in a string of length 5, if a character appears 3 times, it's impossible to arrange the string so that no two of this character are adjacent.
+- If no character appears more than half the length of the string plus one, it is always possible to rearrange the string to meet the requirement.

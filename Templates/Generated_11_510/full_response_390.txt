@@ -1,0 +1,10 @@
+[BEGIN]
+Input: list: a list of items, string: a string to be inserted at the beginning of each item
+Output: new_list: a list with the string inserted at the beginning of each item
+
+1: Initialize an empty list called new_list
+2: For each item in the input list:
+3:     Create a new string by concatenating the input string with the current item
+4:     Append the new string to new_list
+5: Return new_list
+[END]

@@ -1,0 +1,7 @@
+Input: arr: a sorted list of integers, n: the number of elements in arr, x: the element to check for majority
+Output: True if x is a majority element, False otherwise
+1: Initialize count to 0
+2: Iterate through the array arr
+3:     If the current element is equal to x, increment count
+4:     If count is greater than n/2, return True
+5: If the loop completes without count exceeding n/2, return False

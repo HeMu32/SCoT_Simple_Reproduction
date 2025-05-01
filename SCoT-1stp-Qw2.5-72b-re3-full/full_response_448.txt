@@ -1,0 +1,57 @@
+Certainly! Let's start by understanding the requirement and then outline the solving process.
+
+### Understanding the Requirement
+The task is to write a function `cal_sum(n)` that calculates the sum of the first `n` Perrin numbers. The Perrin numbers are defined as follows:
+- \( P(0) = 3 \)
+- \( P(1) = 0 \)
+- \( P(2) = 2 \)
+- For \( n > 2 \), \( P(n) = P(n-2) + P(n-3) \)
+
+### Solving Process
+[BEGIN PROCESS]
+Input: n: an integer indicating the number of Perrin numbers to sum
+Output: The sum of the first n Perrin numbers
+
+1: Initialize a list `perrin` to store the first n Perrin numbers.
+2: Set the first three Perrin numbers:
+3:     - perrin[0] = 3
+4:     - perrin[1] = 0
+5:     - perrin[2] = 2
+6: If n is less than or equal to 2:
+7:     Return the sum of the first n elements in the perrin list
+8: For i from 3 to n-1:
+9:     Calculate perrin[i] as perrin[i-2] + perrin[i-3]
+10: Return the sum of all elements in the perrin list
+[END PROCESS]
+
+### Code Implementation
+[BEGIN CODE]
+def cal_sum(n):
+    # Initialize the list to store the first n Perrin numbers
+    perrin = [0] * n
+    
+    # Set the first three Perrin numbers
+    perrin[0] = 3
+    perrin[1] = 0
+    perrin[2] = 2
+    
+    # If n is less than or equal to 2, return the sum of the first n elements
+    if n <= 2:
+        return sum(perrin[:n])
+    
+    # Calculate the remaining Perrin numbers
+    for i in range(3, n):
+        perrin[i] = perrin[i-2] + perrin[i-3]
+    
+    # Return the sum of all elements in the perrin list
+    return sum(perrin)
+[END CODE]
+
+### Explanation
+1. **Initialization**: We initialize a list `perrin` with `n` elements, all set to 0. This list will store the first `n` Perrin numbers.
+2. **Base Cases**: We set the first three Perrin numbers as \( P(0) = 3 \), \( P(1) = 0 \), and \( P(2) = 2 \).
+3. **Early Return**: If `n` is less than or equal to 2, we return the sum of the first `n` elements in the `perrin` list.
+4. **Recursive Calculation**: For each index `i` from 3 to `n-1`, we calculate the Perrin number \( P(i) \) as the sum of \( P(i-2) \) and \( P(i-3) \).
+5. **Sum Calculation**: Finally, we return the sum of all elements in the `perrin` list.
+
+This approach ensures that we correctly compute the sum of the first `n` Perrin numbers efficiently.

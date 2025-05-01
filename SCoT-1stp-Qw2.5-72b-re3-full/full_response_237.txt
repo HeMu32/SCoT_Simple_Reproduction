@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples
+Output: a dictionary where the keys are the unique elements from the tuples and the values are the counts of how many times each element occurs in the list of tuples
+
+1: Initialize an empty dictionary to store the counts of each element
+2: Loop through each tuple in the test_list
+3:     For each element in the tuple:
+4:         If the element is already a key in the dictionary:
+5:             Increment the count of that element by 1
+6:         Else:
+7:             Add the element to the dictionary with a count of 1
+8: Return the dictionary containing the counts of each element
+[END PROCESS]
+
+[BEGIN CODE]
+def check_occurences(test_list):
+    # Initialize an empty dictionary to store the counts
+    counts = {}
+    
+    # Loop through each tuple in the test_list
+    for tup in test_list:
+        # Loop through each element in the tuple
+        for elem in tup:
+            # If the element is already a key in the dictionary, increment its count
+            if elem in counts:
+                counts[elem] += 1
+            # Otherwise, add the element to the dictionary with a count of 1
+            else:
+                counts[elem] = 1
+    
+    # Return the dictionary containing the counts of each element
+    return counts
+[END CODE]
+
+### Explanation:
+The function `check_occurences` takes a list of tuples as input and returns a dictionary where each key is a unique element from the tuples, and the value is the count of how many times that element appears across all tuples in the list. The function uses a dictionary to keep track of the counts, iterating through each tuple and each element within the tuple to update the counts accordingly. This approach ensures that all elements are counted, and the final dictionary provides a clear and concise summary of the occurrences.

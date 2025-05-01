@@ -1,0 +1,10 @@
+[BEGIN]
+Input: tup: a list of tuples
+Output: sorted_tup: a list of tuples sorted by the last element in each tuple
+1: lst = length of tup
+2: for i from 0 to lst - 1:
+3:     for j from 0 to lst - i - 2:
+4:         if the last element of tup[j] is greater than the last element of tup[j + 1]:
+5:             swap tup[j] and tup[j + 1]
+6: return tup
+[END]

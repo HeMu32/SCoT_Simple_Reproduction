@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: A boolean value indicating whether the number can be represented as the product of two squares.
+
+1: Initialize a variable `i` to 0.
+2: Loop while `i * i` is less than or equal to `n`:
+3:     Calculate `j` as the square root of `n / (i * i)`.
+4:     If `j` is an integer and `i * i * j * j` equals `n`:
+5:         Return True, as `n` can be represented as the product of two squares.
+6:     Increment `i` by 1.
+7: If the loop completes without finding such `i` and `j`:
+8:     Return False, as `n` cannot be represented as the product of two squares.
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def prod_Square(n):
+    i = 0
+    while i * i <= n:
+        j = math.sqrt(n / (i * i))
+        if j.is_integer() and i * i * j * j == n:
+            return True
+        i += 1
+    return False
+[END CODE]
+
+### Explanation:
+The function `prod_Square` checks if a given number `n` can be expressed as the product of two squares. The approach is to iterate through possible values of `i` (starting from 0) and for each `i`, calculate `j` such that `i * i * j * j` equals `n`. If such `i` and `j` are found, the function returns `True`. If the loop completes without finding such values, the function returns `False`.
+
+- **Step 1:** Initialize `i` to 0.
+- **Step 2:** Loop while `i * i` is less than or equal to `n`.
+- **Step 3:** Calculate `j` as the square root of `n / (i * i)`.
+- **Step 4:** Check if `j` is an integer and if `i * i * j * j` equals `n`.
+- **Step 5:** If the condition in step 4 is met, return `True`.
+- **Step 6:** Increment `i` by 1.
+- **Step 7:** If the loop completes without finding such `i` and `j`, return `False`.
+
+This approach ensures that we check all possible pairs of squares that could form the product `n`. The use of `math.sqrt` and `is_integer` helps in verifying if `j` is an integer, which is necessary for the product to be a perfect square.

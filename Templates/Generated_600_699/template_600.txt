@@ -1,0 +1,8 @@
+Input: n: an integer
+Output: True if n is even, False otherwise
+
+1: Use the bitwise XOR operator (^) to compare n and 1.
+2:     If the result of n ^ 1 is equal to n + 1:
+3:         Return True (n is even)
+4:     Else:
+5:         Return False (n is odd)

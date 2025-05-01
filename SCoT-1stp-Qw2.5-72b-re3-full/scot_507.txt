@@ -1,0 +1,8 @@
+Input: list1: a list of words, removewords: a list of words to be removed from list1
+Output: result: the list1 with the words in removewords removed
+
+1: Initialize an empty list called result
+2: For each word in list1:
+3:     If the word is not in removewords:
+4:         Append the word to result
+5: Return result

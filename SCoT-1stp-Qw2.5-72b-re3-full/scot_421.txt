@@ -1,0 +1,11 @@
+Input: test_tup: a tuple containing elements that can be converted to strings
+Output: result: a single string where each element of the tuple is concatenated with a delimiter (a space by default)
+
+1: Initialize an empty string `result`
+2: Loop through each element in `test_tup`
+3:     Convert the current element to a string
+4:     If the `result` is still empty (i.e., this is the first element):
+5:         Append the string representation of the current element to `result`
+6:     Else:
+7:         Append a delimiter (space) followed by the string representation of the current element to `result`
+8: Return `result`

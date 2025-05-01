@@ -1,0 +1,7 @@
+Input: x, y: two positive integers
+Output: gcd: the greatest common divisor of x and y
+1: while y is not equal to 0:
+2:     set a temporary variable temp to y
+3:     set y to the remainder of x divided by y
+4:     set x to temp
+5: return x as the gcd

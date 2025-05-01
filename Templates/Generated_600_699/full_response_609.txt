@@ -1,0 +1,8 @@
+[BEGIN]
+Input: A, B, N: integers
+Output: min_val: minimum possible value of the periodic function
+
+1: Set x to the maximum value between B - 1 and N
+2: Calculate min_val as the integer division of (A * x) by B
+3: Return min_val
+[END]

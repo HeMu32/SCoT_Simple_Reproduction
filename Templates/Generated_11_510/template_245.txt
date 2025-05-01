@@ -1,0 +1,17 @@
+Input: arr: a list of integers, n: the length of arr
+Output: max_sum: the maximum sum of a bi-tonic sub-sequence in arr
+
+1: Initialize MSIBS (Maximum Sum Increasing Bi-tonic Sub-sequence) as a copy of arr
+2: For each element i in the range of n:
+3:     For each element j in the range from 0 to i:
+4:         If arr[i] is greater than arr[j] and MSIBS[i] is less than MSIBS[j] + arr[i]:
+5:             Set MSIBS[i] to MSIBS[j] + arr[i]
+6: Initialize MSDBS (Maximum Sum Decreasing Bi-tonic Sub-sequence) as a copy of arr
+7: For each element i in the range from 1 to n + 1:
+8:     For each element j in the range from 1 to i:
+9:         If arr[-i] is greater than arr[-j] and MSDBS[-i] is less than MSDBS[-j] + arr[-i]:
+10:            Set MSDBS[-i] to MSDBS[-j] + arr[-i]
+11: Initialize max_sum to negative infinity
+12: For each element i, j, k in the zip of MSIBS, MSDBS, and arr:
+13:     Set max_sum to the maximum of max_sum and i + j - k
+14: Return max_sum

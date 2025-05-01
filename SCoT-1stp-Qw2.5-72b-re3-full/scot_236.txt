@@ -1,0 +1,7 @@
+Input: N: the side length of the larger equilateral triangle
+       K: the side length of the smaller equilateral triangles to be formed within the larger one
+Output: count: the maximum number of smaller equilateral triangles that can fit within the larger one
+
+1: Calculate the number of smaller triangles that can fit along one side of the larger triangle, which is N // K.
+2: The number of smaller triangles that can fit within the larger triangle is the square of the number calculated in step 1, because the arrangement of smaller triangles within the larger one forms a grid-like structure.
+3: Return the result from step 2 as the count of smaller triangles.

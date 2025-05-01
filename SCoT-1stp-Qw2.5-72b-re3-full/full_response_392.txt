@@ -1,0 +1,37 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: The maximum sum possible using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n)
+
+1: If n is less than or equal to 11, return n. (Base case: for small values of n, the maximum sum is n itself)
+2: Initialize a list dp of size n+1 with all elements set to 0. This list will store the maximum sum for each value up to n.
+3: Set dp[0] to 0 and dp[1] to 1. (Base cases for the dynamic programming approach)
+4: For i from 2 to n:
+5:     Calculate the sum of the maximum sums for i/2, i/3, i/4, and i/5 using the dp list.
+6:     Set dp[i] to the maximum of i and the calculated sum.
+7: Return dp[n].
+[END PROCESS]
+
+[BEGIN CODE]
+def get_max_sum(n):
+    if n <= 11:
+        return n
+    dp = [0] * (n + 1)
+    dp[0] = 0
+    dp[1] = 1
+    for i in range(2, n + 1):
+        dp[i] = max(i, dp[i // 2] + dp[i // 3] + dp[i // 4] + dp[i // 5])
+    return dp[n]
+[END CODE]
+
+### Explanation:
+The function `get_max_sum` calculates the maximum sum possible using the given equation `f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n)`. The approach uses dynamic programming to store the results of subproblems and avoid redundant calculations.
+
+1. **Base Case**: For small values of `n` (less than or equal to 11), the maximum sum is `n` itself. This is because the sum of the divisions (n/2, n/3, n/4, n/5) will be less than `n`.
+
+2. **Dynamic Programming Table**: A list `dp` is initialized to store the maximum sum for each value from 0 to `n`. The base cases `dp[0]` and `dp[1]` are set to 0 and 1, respectively.
+
+3. **Filling the DP Table**: For each value `i` from 2 to `n`, the function calculates the sum of the maximum sums for `i/2`, `i/3`, `i/4`, and `i/5` using the `dp` list. It then sets `dp[i]` to the maximum of `i` and the calculated sum.
+
+4. **Result**: The final result is stored in `dp[n]`, which is returned by the function.
+
+This approach ensures that the function runs efficiently even for large values of `n` by leveraging the results of previously computed subproblems.

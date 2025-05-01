@@ -1,0 +1,11 @@
+Input: test_tup1, test_tup2: two tuples of the same length containing boolean values (True or False)
+Output: result_tup: a tuple containing the element-wise AND of the two input tuples
+
+1: Initialize an empty list result_list to store the results of the AND operation
+2: for each index i from 0 to the length of test_tup1 - 1:
+3:     if test_tup1[i] AND test_tup2[i] is True:
+4:         append True to result_list
+5:     else:
+6:         append False to result_list
+7: Convert result_list to a tuple result_tup
+8: return result_tup

@@ -1,0 +1,9 @@
+[BEGIN CODE]
+```python
+def surfacearea_cuboid(l, w, h):
+    """
+    Write a function to find the surface area of a cuboid.
+    """
+    return 2 * (l*w + w*h + h*l)
+```
+[END CODE]

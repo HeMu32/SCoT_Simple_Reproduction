@@ -1,0 +1,9 @@
+Input: list1, list2: two lists  
+Output: True or False  
+1: Initialize result to False  
+2: for each element x in list1:  
+3:     for each element y in list2:  
+4:         if x is equal to y:  
+5:             set result to True  
+6:             return result  
+7: return result

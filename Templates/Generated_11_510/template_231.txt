@@ -1,0 +1,14 @@
+Input: tri: a list of lists representing a right triangle of numbers, n: the number of rows in the triangle
+Output: the maximum sum possible from the top to the bottom of the triangle
+
+1: if n is greater than 1:
+2:     update the second row's elements by adding the top element to both elements
+3: for i from 2 to n-1:
+4:     update the first element of the i-th row by adding the first element of the (i-1)-th row
+5:     update the last element of the i-th row by adding the last element of the (i-1)-th row
+6:     for j from 1 to i-1:
+7:         if the sum of the j-th element of the i-th row and the (j-1)-th element of the (i-1)-th row is greater than or equal to the sum of the j-th element of the i-th row and the j-th element of the (i-1)-th row:
+8:             update the j-th element of the i-th row by adding the (j-1)-th element of the (i-1)-th row
+9:         else:
+10:            update the j-th element of the i-th row by adding the j-th element of the (i-1)-th row
+11: return the maximum value from the last row of the triangle

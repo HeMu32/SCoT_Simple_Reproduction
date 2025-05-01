@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: list1, list2: two lists of elements
+Output: a new list containing elements from list1 that are not present in list2
+
+1: Initialize an empty list called `result` to store the elements that are in list1 but not in list2.
+2: Loop through each element in list1.
+3: For each element, check if it is not in list2.
+4: If the element is not in list2, append it to the `result` list.
+5: After the loop ends, return the `result` list.
+[END PROCESS]
+
+[BEGIN CODE]
+def remove_elements(list1, list2):
+    result = []
+    for element in list1:
+        if element not in list2:
+            result.append(element)
+    return result
+[END CODE]
+
+### Explanation:
+The function `remove_elements` takes two lists, `list1` and `list2`, as input. The goal is to create a new list that contains only the elements from `list1` that are not present in `list2`. This is achieved by iterating over each element in `list1` and checking if it is not in `list2`. If the element is not found in `list2`, it is added to the `result` list. Finally, the `result` list is returned, which contains the filtered elements. This approach ensures that all elements from `list1` that are also in `list2` are removed, and only the unique elements from `list1` are retained.

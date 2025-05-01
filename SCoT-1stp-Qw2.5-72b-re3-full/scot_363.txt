@@ -1,0 +1,10 @@
+Input: test_list: a list of tuples, K: an integer
+Output: a new list of tuples where K has been added to each element of the tuples in the original list
+
+1: Initialize an empty list called result to store the new tuples
+2: For each tuple in the test_list:
+3:     Initialize an empty list called new_tuple to store the modified elements
+4:     For each element in the current tuple:
+5:         Add K to the element and append the result to new_tuple
+6:     Convert new_tuple to a tuple and append it to result
+7: Return the result list

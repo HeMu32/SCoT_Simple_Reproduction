@@ -1,0 +1,7 @@
+Input: sub_li: a list of sublists, where each sublist contains at least two elements
+Output: sorted_list: a list of sublists sorted based on the second element of each sublist
+
+1: Define a function named `Sort` that takes a list `sub_li` as an argument
+2: Use the `sorted` function with a custom key to sort the list
+3: The key should be a lambda function that returns the second element of each sublist
+4: Return the sorted list

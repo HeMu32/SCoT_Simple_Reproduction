@@ -1,0 +1,19 @@
+Input: l: list, s: sublist
+Output: sub_set: boolean indicating if s is a sublist of l
+1: Initialize sub_set to False
+2: If s is an empty list:
+3:     Set sub_set to True
+4: Else if s is equal to l:
+5:     Set sub_set to True
+6: Else if the length of s is greater than the length of l:
+7:     Set sub_set to False
+8: Else:
+9:     For each index i in the range of the length of l:
+10:        If the element at index i in l is equal to the first element in s:
+11:           Initialize n to 1
+12:           While n is less than the length of s and the element at index i+n in l is equal to the element at index n in s:
+13:              Increment n by 1
+14:           If n is equal to the length of s:
+15:              Set sub_set to True
+16:              Break the loop
+17: Return sub_set

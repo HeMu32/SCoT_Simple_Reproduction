@@ -1,0 +1,9 @@
+[BEGIN]
+Input: lst: a list of boolean values  
+Output: count: the number of True values in lst  
+1: Initialize a variable count to 0  
+2: for each element e in lst:  
+3:     if e is True:  
+4:         increment count by 1  
+5: return count  
+[END]

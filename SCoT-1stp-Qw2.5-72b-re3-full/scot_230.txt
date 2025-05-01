@@ -1,0 +1,10 @@
+Input: str1: a string, char: a character to replace blank spaces
+Output: new_str: a new string with all blank spaces replaced by the character `char`
+
+1: Initialize an empty string `new_str` to store the result
+2: Iterate over each character `c` in the input string `str1`
+3:     If `c` is a blank space:
+4:         Append `char` to `new_str`
+5:     Else:
+6:         Append `c` to `new_str`
+7: Return `new_str`

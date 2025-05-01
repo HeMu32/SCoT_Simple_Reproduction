@@ -1,0 +1,9 @@
+Input: r: a float or integer representing the radius of the circle
+Output: d: a float representing the diameter of the circle
+
+1: Check if the radius r is a positive number
+2: If r is positive:
+3:     Calculate the diameter d by multiplying the radius r by 2
+4: Else:
+5:     Raise an error or return an appropriate message indicating that the radius must be a positive number
+6: Return the diameter d

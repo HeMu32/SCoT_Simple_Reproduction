@@ -1,0 +1,11 @@
+[BEGIN CODE]
+```python
+def get_max_occuring_char(str1): 
+    from collections import Counter
+    if not str1:
+        return None
+    counter = Counter(str1)
+    max_char = max(counter, key=counter.get)
+    return max_char
+```
+[END CODE]

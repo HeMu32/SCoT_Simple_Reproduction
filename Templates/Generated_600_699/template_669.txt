@@ -1,0 +1,9 @@
+Input: Ip: a string representing an IP address
+Output: "Valid IP address" or "Invalid IP address"
+
+1: Define a regex pattern that matches valid IP addresses
+2: Use the regex pattern to search the input Ip
+3: If the search returns a match:
+4:     Return "Valid IP address"
+5: Else:
+6:     Return "Invalid IP address"

@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: a, b, c: three numbers
+Output: min_val: the minimum of the three numbers
+
+1: Compare a and b
+2: If a is less than b:
+3:     Set min_val to a
+4: Else:
+5:     Set min_val to b
+6: Compare min_val with c
+7: If min_val is greater than c:
+8:     Set min_val to c
+9: Return min_val
+[END PROCESS]
+
+[BEGIN CODE]
+def min_of_three(a, b, c):
+    # First, find the minimum between a and b
+    if a < b:
+        min_val = a
+    else:
+        min_val = b
+    # Then, compare the minimum of a and b with c
+    if min_val > c:
+        min_val = c
+    return min_val
+[END CODE]
+
+### Explanation
+
+The function `min_of_three` is designed to find the minimum value among three given numbers. The process involves two main steps:
+
+1. **Initial Comparison**: First, we compare `a` and `b`. The smaller of the two is stored in `min_val`.
+2. **Final Comparison**: Next, we compare `min_val` with `c`. If `c` is smaller than `min_val`, we update `min_val` to `c`.
+
+This ensures that `min_val` holds the smallest of the three numbers by the end of the function, which is then returned. This approach uses simple conditional logic (branching) to determine the minimum value without the need for loops.

@@ -1,0 +1,10 @@
+[BEGIN]
+Input: nestedlist: a list of lists
+Output: result: a list of common elements found in all sublists
+
+1: Convert each sublist in nestedlist to a set to remove duplicates and allow set operations
+2: Use the map function to apply the set conversion to all sublists
+3: Use the set.intersection method to find common elements across all converted sets
+4: Convert the result of the intersection back to a list
+5: Return the result list
+[END]

@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: list1: a list of lists, where each sublist contains integers.
+Output: max_sum: an integer representing the maximum sum of elements from any of the sublists.
+
+1: Initialize a variable `max_sum` to store the maximum sum found, set it to the smallest possible integer value.
+2: Loop through each sublist in `list1`.
+3:     Calculate the sum of the current sublist.
+4:     If the sum of the current sublist is greater than `max_sum`, update `max_sum` with the sum of the current sublist.
+5: After the loop, return `max_sum`.
+[END PROCESS]
+
+[BEGIN CODE]
+def maximum_Sum(list1):
+    max_sum = float('-inf')  # Initialize max_sum to negative infinity
+    for sublist in list1:
+        current_sum = sum(sublist)  # Calculate the sum of the current sublist
+        if current_sum > max_sum:
+            max_sum = current_sum  # Update max_sum if the current_sum is greater
+    return max_sum
+[END CODE]
+
+### Explanation:
+- **Initialization**: We start by initializing `max_sum` to negative infinity (`float('-inf')`). This ensures that any sum of a sublist will be larger than the initial value, allowing us to correctly update `max_sum` as we iterate through the sublists.
+- **Looping through Sublists**: We use a for loop to iterate through each sublist in `list1`.
+- **Sum Calculation**: For each sublist, we calculate the sum of its elements using the `sum()` function.
+- **Comparison and Update**: We compare the sum of the current sublist with `max_sum`. If the current sum is greater, we update `max_sum` with this new value.
+- **Return the Result**: After the loop completes, `max_sum` will contain the maximum sum of elements from any of the sublists, which we then return.
+
+This approach ensures that we efficiently find the maximum sum by only iterating through the list once, making it an O(n) solution where n is the total number of elements in all sublists combined.

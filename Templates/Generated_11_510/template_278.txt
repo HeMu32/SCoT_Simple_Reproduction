@@ -1,0 +1,7 @@
+Input: test_tup: a tuple containing elements of any type, including nested tuples
+Output: count: the number of elements that occur before the first nested tuple in test_tup
+1: Initialize a variable `count` to 0
+2: Loop through each element `ele` in `test_tup` with its index `count` using `enumerate`:
+3:     If `ele` is a tuple:
+4:         Break the loop
+5: Return the value of `count`

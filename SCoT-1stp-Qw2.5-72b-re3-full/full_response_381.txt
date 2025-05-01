@@ -1,0 +1,18 @@
+[-BEGIN PROCESS]
+Input: list_data: a list of lists, index_no: an integer representing the index to sort by
+Output: A list of lists sorted by the specified index of the inner lists
+
+1: Define the function index_on_inner_list with parameters list_data and index_no
+2: Use the sorted function with a lambda function as the key to sort the list_data based on the specified index_no of each inner list
+3: Return the sorted list
+[END PROCESS]
+
+[BEGIN CODE]
+def index_on_inner_list(list_data, index_no):
+    # Sort the list of lists based on the specified index of the inner lists
+    sorted_list = sorted(list_data, key=lambda x: x[index_no])
+    return sorted_list
+[END CODE]
+
+### Explanation:
+The function `index_on_inner_list` takes two parameters: `list_data`, which is a list of lists, and `index_no`, which is the index of the inner lists by which the sorting should be performed. The `sorted` function is used along with a lambda function to sort the `list_data`. The lambda function `lambda x: x[index_no]` specifies that the sorting should be based on the element at the `index_no` position in each inner list. The sorted list is then returned. This approach ensures that the list of lists is sorted according to the specified index, maintaining the order of elements within each inner list.

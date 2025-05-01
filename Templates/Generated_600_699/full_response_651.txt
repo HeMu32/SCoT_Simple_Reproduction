@@ -1,0 +1,11 @@
+[BEGIN]
+Input: test_tup1, test_tup2: two tuples  
+Output: res: a boolean value indicating if test_tup2 is a subset of test_tup1  
+1: Convert test_tup2 to a set  
+2: Check if this set is a subset of test_tup1  
+3: If it is a subset:  
+4:     Set res to True  
+5: Else:  
+6:     Set res to False  
+7: Return res  
+[END]

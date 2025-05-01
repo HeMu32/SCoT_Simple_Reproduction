@@ -1,0 +1,8 @@
+Input: arr: a list of integers, n: the number of elements in arr
+Output: prod: the product of non-repeated elements in arr
+1: Sort the array arr
+2: Initialize prod to 1
+3: for i from 0 to n-1:
+4:     if arr[i - 1] is not equal to arr[i]:
+5:         multiply prod by arr[i]
+6: return prod

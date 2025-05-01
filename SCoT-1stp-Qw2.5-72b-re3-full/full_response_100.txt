@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: num: an integer
+Output: The next smallest palindrome integer greater than num
+
+1: Define a function `next_smallest_palindrome` that takes an integer `num` as input.
+2: Increment `num` by 1 to start checking from the next number.
+3: Start a loop that continues until a palindrome is found.
+4:   Convert the current number to a string.
+5:   Check if the string is equal to its reverse (i.e., it is a palindrome).
+6:   If it is a palindrome, return the number.
+7:   If it is not a palindrome, increment the number by 1 and continue the loop.
+[END PROCESS]
+
+[BEGIN CODE]
+def next_smallest_palindrome(num):
+    num += 1  # Start checking from the next number
+    while True:
+        str_num = str(num)
+        if str_num == str_num[::-1]:  # Check if the number is a palindrome
+            return num
+        num += 1  # Increment the number if it's not a palindrome
+[END CODE]
+
+### Explanation:
+The function `next_smallest_palindrome` is designed to find the next smallest palindrome greater than the given number `num`. The process involves incrementing the number by 1 and then checking if the number is a palindrome. This is done by converting the number to a string and comparing it to its reverse. If the number is a palindrome, it is returned; otherwise, the number is incremented, and the process repeats. This ensures that the function will eventually find and return the next smallest palindrome.

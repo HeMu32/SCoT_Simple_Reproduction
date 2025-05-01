@@ -1,0 +1,7 @@
+Input: a: a float or integer representing the side length of the square
+Output: perimeter: a float or integer representing the perimeter of the square
+
+1: Check if the input 'a' is a positive number
+2: If 'a' is not positive, return an error message or an invalid value (e.g., -1)
+3: If 'a' is positive, calculate the perimeter by multiplying 'a' by 4
+4: Return the calculated perimeter

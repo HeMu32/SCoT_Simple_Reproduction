@@ -1,0 +1,9 @@
+def max_occurrences(nums): 
+    from collections import Counter
+    if not nums:
+        return None
+    counter = Counter(nums)
+    max_freq = max(counter.values())
+    for item, freq in counter.items():
+        if freq == max_freq:
+            return item

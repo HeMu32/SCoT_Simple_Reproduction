@@ -1,0 +1,41 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the number of elements in arr
+Output: sum: the sum of absolute differences in all pairs of the given array
+
+1: Initialize `sum` to 0
+2: Sort the array `arr` to make the calculation of absolute differences easier
+3: Loop through each element `i` in the range from 0 to n-1
+4:     For each element `j` in the range from i+1 to n
+5:         Calculate the absolute difference between `arr[j]` and `arr[i]`
+6:         Add the absolute difference to `sum`
+7: Return `sum`
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_Pairs(arr, n):
+    # Initialize sum to 0
+    sum = 0
+    
+    # Sort the array to make the calculation of absolute differences easier
+    arr.sort()
+    
+    # Loop through each element in the array
+    for i in range(n):
+        # For each subsequent element, calculate the absolute difference
+        for j in range(i + 1, n):
+            # Calculate the absolute difference and add it to the sum
+            sum += abs(arr[j] - arr[i])
+    
+    # Return the total sum of absolute differences
+    return sum
+[END CODE]
+
+**Explanation:**
+The function `sum_Pairs` calculates the sum of absolute differences in all pairs of the given array. The process involves:
+1. Initializing a variable `sum` to store the total sum of absolute differences.
+2. Sorting the array to simplify the calculation of absolute differences, as the differences will always be positive.
+3. Using a nested loop to iterate through all possible pairs of elements in the array. The outer loop iterates through each element, and the inner loop iterates through all subsequent elements.
+4. For each pair, the absolute difference is calculated and added to `sum`.
+5. Finally, the function returns the total sum of absolute differences.
+
+This approach ensures that all pairs are considered, and the absolute differences are correctly calculated and summed. The sorting step helps in avoiding the need for the `abs` function in the inner loop, as the array is already in ascending order.

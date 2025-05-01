@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: dict1, dict2, dict3: three dictionaries to be merged
+Output: A single dictionary containing all key-value pairs from the three input dictionaries
+
+1: Initialize an empty dictionary `merged_dict`
+2: For each key-value pair in dict1, add it to `merged_dict`
+3: For each key-value pair in dict2, add it to `merged_dict`
+4: For each key-value pair in dict3, add it to `merged_dict`
+5: Return `merged_dict`
+[END PROCESS]
+
+[BEGIN CODE]
+def merge_dictionaries_three(dict1, dict2, dict3):
+    # Initialize an empty dictionary to store the merged results
+    merged_dict = {}
+    
+    # Add all key-value pairs from dict1 to merged_dict
+    for key, value in dict1.items():
+        merged_dict[key] = value
+    
+    # Add all key-value pairs from dict2 to merged_dict
+    for key, value in dict2.items():
+        merged_dict[key] = value
+    
+    # Add all key-value pairs from dict3 to merged_dict
+    for key, value in dict3.items():
+        merged_dict[key] = value
+    
+    # Return the merged dictionary
+    return merged_dict
+[END CODE]
+
+Explanation:
+The function `merge_dictionaries_three` takes three dictionaries as input and merges them into a single dictionary. The process involves initializing an empty dictionary `merged_dict` and then iterating over each of the input dictionaries to add their key-value pairs to `merged_dict`. If there are duplicate keys across the dictionaries, the value from the last dictionary processed will be the one that remains in the final merged dictionary. This is a simple and straightforward approach to merging dictionaries in Python.

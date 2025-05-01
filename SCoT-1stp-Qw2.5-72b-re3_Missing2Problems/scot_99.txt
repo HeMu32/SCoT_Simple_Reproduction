@@ -1,0 +1,11 @@
+Input: n: an integer (decimal number)
+Output: binary: a string representing the binary equivalent of the decimal number
+
+1: Initialize an empty string `binary`.
+2: While `n` is greater than 0:
+3:     Compute the remainder of `n` divided by 2 and convert it to a string.
+4:     Prepend the remainder to the `binary` string.
+5:     Update `n` to be the integer division of `n` by 2.
+6: If the `binary` string is still empty (which means `n` was 0):
+7:     Set `binary` to "0".
+8: Return the `binary` string.

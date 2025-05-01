@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: r (radius of the cylinder), h (height of the cylinder)
+Output: volume (the volume of the cylinder)
+
+1: Define the value of π (pi) as a constant (approximately 3.14159)
+2: Calculate the volume using the formula V = π * r^2 * h
+3: Return the calculated volume
+[END PROCESS]
+
+[BEGIN CODE]
+def volume_cylinder(r, h):
+    """ 
+    Write a function to find the volume of a cylinder. 
+    """
+    pi = 3.14159  # Define the value of pi
+    volume = pi * r**2 * h  # Calculate the volume using the formula
+    return volume  # Return the calculated volume
+[END CODE]
+
+### Explanation:
+The function `volume_cylinder` takes two parameters: `r` (the radius of the cylinder) and `h` (the height of the cylinder). The goal is to calculate the volume of the cylinder using the formula \( V = \pi r^2 h \), where \( \pi \) is a mathematical constant approximately equal to 3.14159. The function then returns the calculated volume.
+
+1. **Define the value of π (pi):** The value of π is defined as a constant within the function to ensure accuracy and consistency.
+2. **Calculate the volume:** The volume is calculated using the formula \( V = \pi r^2 h \), where `r` is the radius and `h` is the height.
+3. **Return the volume:** The calculated volume is returned as the output of the function.

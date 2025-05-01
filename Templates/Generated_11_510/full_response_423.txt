@@ -1,0 +1,25 @@
+[BEGIN]
+Input: gold: a 2D list representing the gold mine, m: number of rows, n: number of columns
+Output: max_gold: the maximum amount of gold that can be collected
+
+1: Initialize a 2D list `goldTable` of size m x n with all elements set to 0.
+2: For each column `col` from n-1 to 0 (right to left):
+3:     For each row `row` from 0 to m-1:
+4:         If `col` is the last column:
+5:             Set `right` to 0.
+6:         Otherwise:
+7:             Set `right` to the value in `goldTable` at position `[row][col+1]`.
+8:         If `row` is the first row or `col` is the last column:
+9:             Set `right_up` to 0.
+10:        Otherwise:
+11:            Set `right_up` to the value in `goldTable` at position `[row-1][col+1]`.
+12:        If `row` is the last row or `col` is the last column:
+13:            Set `right_down` to 0.
+14:        Otherwise:
+15:            Set `right_down` to the value in `goldTable` at position `[row+1][col+1]`.
+16:        Update `goldTable[row][col]` to be the sum of `gold[row][col]` and the maximum of `right`, `right_up`, and `right_down`.
+17: Initialize `res` to the value in `goldTable[0][0]`.
+18: For each row `i` from 1 to m-1:
+19:    Update `res` to be the maximum of `res` and `goldTable[i][0]`.
+20: Return `res` as the maximum gold that can be collected.
+[END]

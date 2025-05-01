@@ -1,0 +1,8 @@
+Input: l: a list, s: a sublist
+Output: boolean: True if s is a sublist of l, False otherwise
+
+1: If the length of s is greater than l, return False immediately as s cannot be a sublist of l.
+2: Iterate over the list l with an index i from 0 to len(l) - len(s) + 1.
+3: For each index i, check if the slice of l from i to i + len(s) is equal to s.
+4: If a matching slice is found, return True.
+5: If the loop completes without finding a match, return False.

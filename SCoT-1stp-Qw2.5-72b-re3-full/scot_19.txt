@@ -1,0 +1,7 @@
+Input: arraynums: a list of integers
+Output: True if the list contains any duplicate elements, False otherwise
+
+1: Create a set from the list to remove any duplicates
+2: Compare the length of the original list with the length of the set
+3: If the lengths are different, return True (indicating duplicates are present)
+4: If the lengths are the same, return False (indicating no duplicates)

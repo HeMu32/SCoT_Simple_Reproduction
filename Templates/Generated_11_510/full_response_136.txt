@@ -1,0 +1,19 @@
+[BEGIN]
+Input: units: the number of electricity units consumed
+Output: total: the total electricity bill amount
+
+1: if units is less than 50:
+2:     calculate amount as units multiplied by 2.60
+3:     set surcharge to 25
+4: elif units is less than or equal to 100:
+5:     calculate amount as 130 plus (units minus 50) multiplied by 3.25
+6:     set surcharge to 35
+7: elif units is less than or equal to 200:
+8:     calculate amount as 130 plus 162.50 plus (units minus 100) multiplied by 5.26
+9:     set surcharge to 45
+10: else:
+11:     calculate amount as 130 plus 162.50 plus 526 plus (units minus 200) multiplied by 8.45
+12:     set surcharge to 75
+13: calculate total as amount plus surcharge
+14: return total
+[END]

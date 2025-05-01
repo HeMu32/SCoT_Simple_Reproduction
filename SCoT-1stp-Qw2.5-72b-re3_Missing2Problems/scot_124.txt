@@ -1,0 +1,6 @@
+Input: a, b: real and imaginary parts of a complex number
+Output: angle: the angle (in radians) of the complex number
+
+1: Create a complex number using the real part 'a' and the imaginary part 'b'
+2: Calculate the angle of the complex number using the cmath module's phase function
+3: Return the angle

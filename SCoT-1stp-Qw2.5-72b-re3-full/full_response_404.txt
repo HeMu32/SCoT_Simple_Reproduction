@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: a, b: two numbers
+Output: The minimum of the two numbers
+
+1: Define the function `minimum` with parameters `a` and `b`.
+2: Compare the values of `a` and `b`.
+3: If `a` is less than `b`, return `a`.
+4: Otherwise, return `b`.
+[END PROCESS]
+
+[BEGIN CODE]
+def minimum(a, b):
+    if a < b:
+        return a
+    else:
+        return b
+[END CODE]
+
+Explanation:
+The function `minimum` takes two parameters, `a` and `b`, which are the numbers to be compared. The function uses a simple if-else statement to determine which number is smaller. If `a` is less than `b`, `a` is returned; otherwise, `b` is returned. This function effectively finds the minimum of the two numbers provided.

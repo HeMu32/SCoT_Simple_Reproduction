@@ -1,0 +1,18 @@
+def bin_coff(n, r):
+    from math import comb
+    return comb(n + r, r)
+
+def count_sequences(n, values):
+    from itertools import product
+    count = 0
+    for seq in product(values, repeat=n):
+        prefix_sum = 0
+        valid = True
+        for num in seq:
+            prefix_sum += num
+            if prefix_sum < 0:
+                valid = False
+                break
+        if valid:
+            count += 1
+    return count

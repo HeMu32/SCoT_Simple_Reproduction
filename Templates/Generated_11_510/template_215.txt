@@ -1,0 +1,15 @@
+Input: alist: a list of elements where each element is either a single item or a list of two items (count, value) representing run-length encoding.
+
+Output: a decoded list where each value is repeated according to its count in the run-length encoding.
+
+1: Define an auxiliary function `aux` that takes a group `g` as input.
+2:     If `g` is a list:
+3:         Return a list containing a tuple with the second element of `g` and a range object from 0 to the first element of `g` (exclusive).
+4:     Otherwise:
+5:         Return a list containing a tuple with `g` and a list containing 0.
+6: Initialize an empty list to store the decoded elements.
+7: For each group `g` in `alist`:
+8:     For each tuple `(x, R)` in the result of `aux(g)`:
+9:         For each index `i` in `R`:
+10:            Append `x` to the decoded list.
+11: Return the decoded list.

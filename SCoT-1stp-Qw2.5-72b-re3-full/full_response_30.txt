@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: s: a string
+Output: count: the number of substrings that start and end with the same character
+
+1: Initialize a variable `count` to 0 to keep track of the number of valid substrings.
+2: Iterate through each character in the string using a loop.
+3: For each character, check all possible substrings that start with this character.
+4: For each substring, check if it ends with the same character it started with.
+5: If the substring meets the condition, increment the `count` by 1.
+6: After checking all possible substrings, return the `count`.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Substring_With_Equal_Ends(s):
+    count = 0
+    n = len(s)
+    
+    # Iterate through each character in the string
+    for i in range(n):
+        # Check all possible substrings starting from the current character
+        for j in range(i, n):
+            # If the substring starts and ends with the same character
+            if s[i] == s[j]:
+                count += 1
+                
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_Substring_With_Equal_Ends` is designed to count all substrings within a given string `s` that start and end with the same character. The process involves two nested loops:
+- The outer loop iterates through each character in the string, treating each character as the starting point of potential substrings.
+- The inner loop generates all possible substrings starting from the current character and checks if the substring ends with the same character it started with.
+- If the condition is met, the `count` is incremented.
+- Finally, the function returns the total count of such substrings.
+
+This approach ensures that all possible substrings are checked, and the count is accurate. The time complexity of this solution is O(n^2), where n is the length of the string, due to the nested loops. This is efficient enough for strings of moderate length.

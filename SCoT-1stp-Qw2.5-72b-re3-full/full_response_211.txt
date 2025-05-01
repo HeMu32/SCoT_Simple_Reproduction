@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the bit position
+Output: count: the number of integers where the 0th and nth bits are set
+
+1: Initialize a variable count to 0 to keep track of the number of valid integers.
+2: Determine the range of numbers to check. Since we are interested in the 0th and nth bits, the maximum number to check is 2^(n+1) - 1, as this is the smallest number that has n+1 bits.
+3: Loop through each number from 0 to 2^(n+1) - 1.
+4:     Convert the number to its binary representation.
+5:     Check if the 0th and nth bits are set (i.e., they are 1).
+6:     If both bits are set, increment the count.
+7: Return the count.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Num(n):
+    count = 0
+    # The range of numbers to check is from 0 to 2^(n+1) - 1
+    for num in range(2**(n+1)):
+        # Convert the number to binary and check the 0th and nth bits
+        if (num & (1 << n)) and (num & 1):
+            count += 1
+    return count
+[END CODE]
+
+### Explanation:
+- **Input:** The function `count_Num(n)` takes an integer `n` as input, which represents the bit position.
+- **Output:** The function returns the count of numbers where the 0th and nth bits are set.
+- **Process:**
+  - **Step 1:** Initialize a counter `count` to 0.
+  - **Step 2:** Determine the range of numbers to check. Since we are interested in the 0th and nth bits, the maximum number to check is `2^(n+1) - 1`. This is because `2^(n+1)` is the smallest number that has `n+1` bits, and we need to check all numbers up to but not including this value.
+  - **Step 3:** Loop through each number in the range from 0 to `2^(n+1) - 1`.
+  - **Step 4:** For each number, convert it to its binary representation and check if the 0th and nth bits are set.
+  - **Step 5:** Use bitwise operations to check the bits:
+    - `num & (1 << n)` checks if the nth bit is set.
+    - `num & 1` checks if the 0th bit is set.
+  - **Step 6:** If both bits are set, increment the `count`.
+  - **Step 7:** After the loop, return the `count`.
+
+This approach ensures that we efficiently count the numbers with the specified bit conditions.

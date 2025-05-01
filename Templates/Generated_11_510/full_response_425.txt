@@ -1,0 +1,9 @@
+[BEGIN]
+Input: list1: a list of lists, x: an element to search for
+Output: ctr: the count of sublists containing x
+1: Initialize a counter ctr to 0
+2: Loop through each sublist in list1
+3:     If x is found in the current sublist:
+4:         Increment ctr by 1
+5: Return ctr
+[END]

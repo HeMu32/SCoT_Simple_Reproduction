@@ -1,0 +1,9 @@
+[BEGIN]
+Input: number: an integer  
+Output: sum of all divisors of number  
+1: Initialize a list `divisors` with the first element 1  
+2: for each integer `i` from 2 to `number - 1`:  
+3:     if `number` is divisible by `i` (i.e., `number % i == 0`):  
+4:         append `i` to the list `divisors`  
+5: return the sum of all elements in the list `divisors`  
+[END]

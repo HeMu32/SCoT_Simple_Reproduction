@@ -1,0 +1,8 @@
+import re
+
+def words_ae(text):
+    """
+    Write a function to find all words starting with 'a' or 'e' in a given string.
+    """
+    pattern = r'\b[ae]\w*\b'
+    return re.findall(pattern, text)

@@ -1,0 +1,12 @@
+Input: n: an integer
+Output: A boolean value indicating whether the frequency of each digit in `n` is less than or equal to the digit itself
+
+1: Convert the integer `n` to a string to easily iterate over each digit.
+2: Initialize an empty dictionary `digit_freq` to store the frequency of each digit.
+3: For each character `char` in the string representation of `n`:
+4:     Convert `char` to an integer `digit`.
+5:     If `digit` is not in `digit_freq`, add it with a value of 1.
+6:     Otherwise, increment the value of `digit` in `digit_freq` by 1.
+7: For each key `digit` in `digit_freq`:
+8:     If the value of `digit` in `digit_freq` is greater than `digit`, return False.
+9: Return True if the loop completes without returning False.

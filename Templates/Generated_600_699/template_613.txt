@@ -1,0 +1,9 @@
+Input: test_list: a list of tuples, where each tuple contains a key and a list of values
+Output: res: a list of tuples, where each tuple contains the key and the maximum value from the corresponding list in the input
+
+1: Initialize an empty list res
+2: For each tuple (key, lst) in test_list:
+3:     Find the maximum value in lst
+4:     Create a new tuple with key and the maximum value
+5:     Append the new tuple to res
+6: Return res

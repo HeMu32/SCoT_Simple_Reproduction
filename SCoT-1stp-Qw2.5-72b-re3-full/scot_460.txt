@@ -1,0 +1,8 @@
+Input: lst: a list of sublists
+Output: A list containing the first element of each sublist
+
+1: Initialize an empty list result
+2: Loop through each sublist in lst
+3:     For each sublist, extract the first element
+4:     Append the first element to result
+5: Return the result list

@@ -1,0 +1,11 @@
+[BEGIN]
+Input: a: list of integers, n: integer (length of list a)
+Output: True or False
+1: Initialize mx to the smallest possible integer value
+2: Loop through the list a starting from the second element (index 1) to the last element (index n-1)
+3:     If mx is greater than the current element a[j]:
+4:         Return False
+5:     Update mx to be the maximum of mx and the previous element a[j-1]
+6: If the loop completes without returning False:
+7:     Return True
+[END]

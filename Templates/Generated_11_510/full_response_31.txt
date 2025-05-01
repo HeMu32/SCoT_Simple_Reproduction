@@ -1,0 +1,24 @@
+[BEGIN]
+Input: nums: a list of lists, where each list contains sorted and distinct integers; k: an integer representing the number of top frequent integers to return.
+Output: result: a list of the top k integers that occur most frequently in the input lists.
+
+1: Initialize a dictionary d to store the frequency of each integer.
+2: For each row in nums:
+3:     For each integer i in row:
+4:         Increment the count of i in dictionary d.
+5: Initialize an empty list temp to store the top k frequent integers.
+6: For each key-value pair (key, v) in dictionary d:
+7:     If the length of temp is less than k:
+8:         Add the pair (v, key) to temp.
+9:         If the length of temp equals k:
+10:            Convert temp into a min-heap.
+11:    Else:
+12:        If the frequency v is greater than the frequency of the smallest element in temp:
+13:            Remove the smallest element from temp.
+14:            Add the pair (v, key) to temp.
+15: Initialize an empty list result to store the final output.
+16: While temp is not empty:
+17:    Pop the smallest element from temp.
+18:    Append the integer part of the popped element to result.
+19: Return result.
+[END]

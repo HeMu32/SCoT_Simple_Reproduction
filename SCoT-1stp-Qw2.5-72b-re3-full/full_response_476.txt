@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: sum_of_extremes: the sum of the largest and smallest values in the list
+
+1: Check if the list is empty; if it is, return 0 as there are no elements to sum.
+2: Initialize two variables, `min_val` and `max_val`, to the first element of the list.
+3: Iterate through the list starting from the second element.
+4: For each element, compare it with `min_val` and `max_val`.
+5: If the current element is less than `min_val`, update `min_val`.
+6: If the current element is greater than `max_val`, update `max_val`.
+7: After the loop, calculate the sum of `min_val` and `max_val`.
+8: Return the sum.
+[END PROCESS]
+
+[BEGIN CODE]
+def big_sum(nums):
+    if not nums:  # Check if the list is empty
+        return 0
+    min_val = max_val = nums[0]  # Initialize min and max with the first element
+    for num in nums[1:]:  # Start from the second element
+        if num < min_val:
+            min_val = num
+        if num > max_val:
+            max_val = num
+    sum_of_extremes = min_val + max_val  # Calculate the sum of the smallest and largest values
+    return sum_of_extremes
+[END CODE]
+
+### Explanation:
+- **Input Handling:** The function first checks if the input list `nums` is empty. If it is, the function returns 0, as there are no elements to sum.
+- **Initialization:** The variables `min_val` and `max_val` are initialized to the first element of the list. This ensures that the initial values are set to a valid number from the list.
+- **Iteration and Comparison:** The function iterates through the list starting from the second element. For each element, it checks if the current element is less than `min_val` or greater than `max_val` and updates these variables accordingly.
+- **Sum Calculation:** After the loop, the function calculates the sum of `min_val` and `max_val` and returns this sum.
+- **Efficiency:** This approach ensures that the function runs in O(n) time complexity, where n is the number of elements in the list, as it only requires a single pass through the list.

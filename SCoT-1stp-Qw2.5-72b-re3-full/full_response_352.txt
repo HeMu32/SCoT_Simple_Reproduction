@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: str: a string
+Output: A boolean value indicating whether all characters in the string are unique
+
+1: Initialize an empty set called `seen_chars` to keep track of characters we have encountered.
+2: Loop through each character `ch` in the string `str`:
+3:     If `ch` is already in `seen_chars`, return False because we found a duplicate.
+4:     Otherwise, add `ch` to `seen_chars`.
+5: If the loop completes without finding duplicates, return True.
+[END PROCESS]
+
+[BEGIN CODE]
+def unique_Characters(str):
+    seen_chars = set()
+    for ch in str:
+        if ch in seen_chars:
+            return False
+        seen_chars.add(ch)
+    return True
+[END CODE]
+
+**Explanation:**
+The function `unique_Characters` checks if all characters in the input string `str` are unique. It uses a set `seen_chars` to keep track of characters that have already been encountered. As it iterates through each character in the string, it checks if the character is already in the set. If it is, the function returns `False` because it means the character is not unique. If the character is not in the set, it is added to the set. If the loop completes without finding any duplicates, the function returns `True`, indicating that all characters in the string are unique. This approach is efficient with a time complexity of O(n), where n is the length of the string, and a space complexity of O(n) in the worst case, where all characters are unique.

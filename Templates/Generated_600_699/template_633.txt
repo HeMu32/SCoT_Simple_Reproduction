@@ -1,0 +1,8 @@
+Input: arr: a list of integers, n: the length of arr
+Output: ans: the sum of XOR of all pairs of numbers in arr
+1: Initialize ans to 0
+2: for i from 0 to n-1:
+3:     for j from i+1 to n-1:
+4:         Compute the XOR of arr[i] and arr[j]
+5:         Add the result of the XOR operation to ans
+6: return ans

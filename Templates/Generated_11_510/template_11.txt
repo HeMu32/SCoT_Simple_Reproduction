@@ -1,0 +1,11 @@
+Input: s: a string, ch: a character
+Output: a string with the first and last occurrence of ch removed
+1: for each index i from 0 to length of s - 1:
+2:     if the character at index i is equal to ch:
+3:         remove the character at index i from s
+4:         break the loop
+5: for each index i from length of s - 1 to 0, in reverse order:
+6:     if the character at index i is equal to ch:
+7:         remove the character at index i from s
+8:         break the loop
+9: return the modified string s

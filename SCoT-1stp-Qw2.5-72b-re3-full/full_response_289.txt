@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: N: an integer representing the year
+Output: The number of odd days in the given year
+
+1: Initialize `odd_days` to 0
+2: Determine if the year is a leap year:
+   - A year is a leap year if it is divisible by 4, but not by 100, unless it is also divisible by 400.
+3: If the year is a leap year, set `days_in_year` to 366, otherwise set `days_in_year` to 365
+4: Calculate the number of odd days by taking the remainder of `days_in_year` divided by 7
+5: Return `odd_days`
+[END PROCESS]
+
+[BEGIN CODE]
+def odd_Days(N):
+    # Initialize the number of odd days
+    odd_days = 0
+    
+    # Check if the year is a leap year
+    if (N % 400 == 0) or (N % 4 == 0 and N % 100 != 0):
+        days_in_year = 366
+    else:
+        days_in_year = 365
+    
+    # Calculate the number of odd days
+    odd_days = days_in_year % 7
+    
+    # Return the number of odd days
+    return odd_days
+[END CODE]
+
+### Explanation:
+The function `odd_Days(N)` calculates the number of odd days in a given year `N`. An odd day is the remainder when the total number of days in a year is divided by 7. This is because a week has 7 days, and any complete weeks do not contribute to the count of odd days.
+
+1. **Leap Year Check**: The function first determines if the year `N` is a leap year. A year is a leap year if:
+   - It is divisible by 400, or
+   - It is divisible by 4 but not by 100.
+
+2. **Days in the Year**: If the year is a leap year, it has 366 days; otherwise, it has 365 days.
+
+3. **Odd Days Calculation**: The number of odd days is calculated by taking the remainder of the total number of days in the year divided by 7.
+
+4. **Return the Result**: The function returns the number of odd days.
+
+This approach ensures that the function correctly calculates the number of odd days for any given year, taking into account the leap year rules.

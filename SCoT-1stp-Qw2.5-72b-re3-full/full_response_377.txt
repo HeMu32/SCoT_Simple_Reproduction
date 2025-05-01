@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: s: a string, char: a character to remove from the string
+Output: result: a string with all occurrences of char removed
+
+1: Initialize an empty string result
+2: Loop through each character c in the string s
+3:     If c is not equal to char:
+4:         Append c to result
+5: Return result
+[END PROCESS]
+
+[BEGIN CODE]
+def remove_Char(s, char):
+    result = ""
+    for c in s:
+        if c != char:
+            result += c
+    return result
+[END CODE]
+
+### Explanation:
+The function `remove_Char` is designed to remove all occurrences of a specified character from a given string. The process involves iterating over each character in the string and appending it to a new string only if it does not match the character to be removed. This approach ensures that the resulting string contains only the characters that are not equal to the specified character. The final result is then returned.

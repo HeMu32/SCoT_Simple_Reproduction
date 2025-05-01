@@ -1,0 +1,14 @@
+Input: item_list: a sorted list of elements, item: the element to search for
+Output: The index of the item if found, otherwise -1
+
+1: Initialize two pointers, low and high, to the start and end of the item_list respectively.
+2: While low is less than or equal to high:
+3:     Calculate mid as the average of low and high.
+4:     If the element at mid is equal to item:
+5:         Return mid.
+6:     If the element at mid is less than item:
+7:         Set low to mid + 1.
+8:     If the element at mid is greater than item:
+9:         Set high to mid - 1.
+10: If the loop completes without finding the item:
+11:     Return -1.

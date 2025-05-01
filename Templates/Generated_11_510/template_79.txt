@@ -1,0 +1,8 @@
+Input: s: a string 
+Output: True or False 
+1: Split the string s into a list of words using space as the delimiter 
+2: For each word in the list of words: 
+3:     If the length of the word is odd: 
+4:         Return True 
+5:     Else: 
+6:         Return False

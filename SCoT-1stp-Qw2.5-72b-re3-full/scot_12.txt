@@ -1,0 +1,11 @@
+Input: M: a 2D list (matrix) of integers
+Output: M: a 2D list (matrix) of integers sorted in ascending order based on the sum of each row
+
+1: Initialize an empty list to store the sums of each row
+2: Loop through each row in the matrix M:
+3:     Calculate the sum of the current row
+4:     Append the sum to the list of sums
+5: Pair each row with its corresponding sum in a list of tuples
+6: Sort the list of tuples based on the sum (second element of each tuple)
+7: Extract the rows from the sorted list of tuples to form the sorted matrix
+8: Return the sorted matrix

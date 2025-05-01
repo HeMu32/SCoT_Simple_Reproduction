@@ -1,0 +1,7 @@
+Input: nums: a list of numbers
+Output: a list of the cubes of the numbers in the input list
+
+1: Define a lambda function that takes a single argument and returns the cube of that argument.
+2: Use the map function to apply the lambda function to each element in the input list.
+3: Convert the map object to a list to get the final list of cubes.
+4: Return the list of cubes.

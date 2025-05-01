@@ -1,0 +1,10 @@
+[BEGIN]
+Input: stdata: a list of tuples, where each tuple contains a name (string) and marks (integer)
+Output: A tuple containing the name with the maximum aggregate marks and the corresponding marks
+
+1: Initialize a dictionary temp to store the aggregate marks for each name
+2: For each tuple (name, marks) in stdata:
+3:     Add marks to the current aggregate marks for name in temp
+4: Find the item in temp with the maximum value (marks)
+5: Return the item with the maximum aggregate marks
+[END]

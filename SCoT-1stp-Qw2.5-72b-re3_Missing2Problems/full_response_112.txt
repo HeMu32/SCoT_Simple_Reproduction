@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: radius (r), height (h): two floats representing the radius and height of the cylinder
+Output: perimeter: a float representing the perimeter of the cylinder
+
+1: Check if the radius and height are positive
+2: If either radius or height is not positive:
+3:     Return -1 (indicating an invalid input)
+4: Else:
+5:     Calculate the perimeter using the formula: perimeter = 2 * (2 * π * r + h)
+6:     Return the perimeter
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def perimeter(r, h):
+    # Check if the radius and height are positive
+    if r <= 0 or h <= 0:
+        return -1  # Indicating an invalid input
+    else:
+        # Calculate the perimeter using the formula: 2 * (2 * π * r + h)
+        perimeter = 2 * (2 * math.pi * r + h)
+        return perimeter
+[END CODE]
+
+### Explanation:
+The perimeter of a cylinder is the sum of the circumferences of the two circular bases and the height of the cylinder. The formula for the perimeter (or more accurately, the lateral surface area plus the circumferences of the bases) is given by:
+\[ \text{Perimeter} = 2 \times (2 \times \pi \times r + h) \]
+where:
+- \( r \) is the radius of the cylinder's base.
+- \( h \) is the height of the cylinder.
+- \( \pi \) is the mathematical constant Pi, approximately equal to 3.14159.
+
+The function first checks if the radius and height are positive. If either is not positive, it returns -1 to indicate an invalid input. If both are positive, it calculates the perimeter using the formula and returns the result.

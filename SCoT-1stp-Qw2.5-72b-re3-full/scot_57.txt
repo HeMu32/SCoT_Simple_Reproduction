@@ -1,0 +1,8 @@
+Input: A list of digits (0-9)
+Output: The largest number that can be formed with the given digits
+
+1: Check if the input list is empty.
+2: If the list is empty, return 0 or an appropriate message.
+3: Sort the list of digits in descending order.
+4: Convert the sorted list of digits into a single integer.
+5: Return the integer as the largest number that can be formed.

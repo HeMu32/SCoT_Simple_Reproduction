@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: tup: a tuple, lst: a list
+Output: count_dict: a dictionary with elements from lst as keys and their counts in tup as values
+
+1: Initialize an empty dictionary count_dict
+2: For each element ele in lst:
+3:     Initialize a variable count to 0
+4:     For each item in tup:
+5:         If item is equal to ele:
+6:             Increment count by 1
+7:     Add ele and count as a key-value pair to count_dict
+8: Return count_dict
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Occurrence(tup, lst):
+    count_dict = {}
+    for ele in lst:
+        count = 0
+        for item in tup:
+            if item == ele:
+                count += 1
+        count_dict[ele] = count
+    return count_dict
+[END CODE]
+
+### Explanation:
+The function `count_Occurrence` is designed to count how many times each element in the list `lst` appears in the tuple `tup`. The function works as follows:
+
+1. **Initialization**: An empty dictionary `count_dict` is initialized to store the counts of each element.
+2. **Outer Loop**: The function iterates over each element `ele` in the list `lst`.
+3. **Count Initialization**: For each `ele`, a variable `count` is initialized to 0 to keep track of the occurrences.
+4. **Inner Loop**: The function then iterates over each item in the tuple `tup`.
+5. **Comparison and Counting**: If the current item in `tup` is equal to `ele`, the `count` is incremented by 1.
+6. **Dictionary Update**: After the inner loop completes, the `ele` and its corresponding `count` are added to `count_dict`.
+7. **Return**: Finally, the function returns the `count_dict` containing the counts of all elements from `lst` in `tup`.
+
+This approach ensures that the function efficiently counts the occurrences of each element in the list within the tuple and returns the results in a dictionary format.

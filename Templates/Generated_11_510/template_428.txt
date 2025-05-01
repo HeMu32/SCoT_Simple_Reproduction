@@ -1,0 +1,14 @@
+Input: my_list: a list of elements to be sorted
+Output: my_list: the sorted list
+
+1: Initialize gap as the integer division of the length of my_list by 2
+2: While gap is greater than 0:
+3:     For each index i starting from gap to the length of my_list:
+4:         Set current_item to my_list[i]
+5:         Set j to i
+6:         While j is greater than or equal to gap and the element at index (j - gap) in my_list is greater than current_item:
+7:             Set my_list[j] to the element at index (j - gap)
+8:             Decrease j by gap
+9:         Set my_list[j] to current_item
+10:    Integer divide gap by 2
+11: Return my_list

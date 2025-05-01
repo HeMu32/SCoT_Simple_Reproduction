@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: list1: a list of elements (can be of any type)
+Output: a dictionary where keys are the elements from the list and values are the counts of how many times each element appears in the list
+
+1: Initialize an empty dictionary to store the frequency of each element
+2: Loop through each element in the list
+3:     If the element is already a key in the dictionary:
+4:         Increment the count of that element by 1
+5:     Otherwise:
+6:         Add the element to the dictionary with a count of 1
+7: Return the dictionary
+[END PROCESS]
+
+[BEGIN CODE]
+def freq_count(list1):
+    # Initialize an empty dictionary to store the frequency of each element
+    frequency = {}
+    
+    # Loop through each element in the list
+    for element in list1:
+        # If the element is already a key in the dictionary, increment its count
+        if element in frequency:
+            frequency[element] += 1
+        # Otherwise, add the element to the dictionary with a count of 1
+        else:
+            frequency[element] = 1
+    
+    # Return the dictionary containing the frequency of each element
+    return frequency
+[END CODE]
+
+### Explanation:
+The function `freq_count` takes a list `list1` as input and returns a dictionary where each key is an element from the list, and the corresponding value is the number of times that element appears in the list. The function works by initializing an empty dictionary `frequency`. It then iterates over each element in the list. For each element, it checks if the element is already a key in the dictionary. If it is, the function increments the count associated with that key. If the element is not yet in the dictionary, it adds the element as a new key with a count of 1. Finally, the function returns the dictionary containing the frequency of each element. This approach ensures that all elements in the list are counted, and the result is a clear and concise representation of the frequency of each element.

@@ -1,0 +1,8 @@
+Input: list1: a list of lists (sublists), x: an element to search for
+Output: count: the number of sublists containing the element x
+
+1: Initialize count to 0
+2: Loop through each sublist in list1
+3:     If x is in the current sublist:
+4:         Increment count by 1
+5: Return count

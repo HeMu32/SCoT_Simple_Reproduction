@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: test_tup: a tuple of elements
+Output: A dictionary where each key is an element from the tuple, and the value is the count of elements that occur before the first occurrence of the key in the tuple.
+
+1: Initialize an empty dictionary `result` to store the count of elements before each unique element.
+2: Initialize a variable `count` to 0 to keep track of the number of elements processed.
+3: Loop through each element in `test_tup`:
+4:     If the element is not already a key in `result`:
+5:         Add the element to `result` with the value of `count`.
+6:     Increment `count` by 1.
+7: Return the `result` dictionary.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_first_elements(test_tup):
+    result = {}
+    count = 0
+    for element in test_tup:
+        if element not in result:
+            result[element] = count
+        count += 1
+    return result
+[END CODE]
+
+### Explanation:
+The function `count_first_elements` takes a tuple `test_tup` as input and returns a dictionary. The dictionary maps each unique element in the tuple to the count of elements that occur before its first occurrence in the tuple. This is achieved by iterating through the tuple and maintaining a count of the elements processed so far. When a new element is encountered (i.e., it is not already a key in the dictionary), it is added to the dictionary with the current count as its value. The count is then incremented for the next iteration. This ensures that the first occurrence of each element is correctly mapped to the number of elements that precede it in the tuple.

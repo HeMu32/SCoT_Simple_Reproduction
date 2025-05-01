@@ -1,0 +1,9 @@
+Input: n: an integer representing the number of elements in the binomial coefficient sequence
+Output: sum: the sum of the binomial coefficients at even indices
+
+1: Initialize a variable `sum` to 0 to store the sum of the even index binomial coefficients
+2: For each index `i` from 0 to n (inclusive):
+3:     If `i` is even:
+4:         Calculate the binomial coefficient for `n` choose `i`
+5:         Add the calculated binomial coefficient to `sum`
+6: Return `sum`

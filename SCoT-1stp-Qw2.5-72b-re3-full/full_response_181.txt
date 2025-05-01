@@ -1,0 +1,37 @@
+[BEGIN PROCESS]
+Input: arr: a list of strings, n: the number of strings in the list
+Output: prefix: the longest common prefix among the strings in the list
+
+1: If the list is empty or n is 0, return an empty string as there are no strings to compare.
+2: Initialize prefix with the first string in the list.
+3: Loop through the rest of the strings in the list:
+4:     While the current string does not start with the prefix:
+5:         Reduce the prefix by one character from the end.
+6:         If the prefix becomes empty, return an empty string as no common prefix exists.
+7: Return the prefix after all strings have been compared.
+[END PROCESS]
+
+[BEGIN CODE]
+def common_prefix(arr, n):
+    if n == 0:
+        return ""
+    
+    # Initialize prefix with the first string in the list
+    prefix = arr[0]
+    
+    # Loop through the rest of the strings
+    for i in range(1, n):
+        # While the current string does not start with the prefix
+        while arr[i].find(prefix) != 0:
+            # Reduce the prefix by one character from the end
+            prefix = prefix[:-1]
+            # If the prefix becomes empty, return an empty string
+            if not prefix:
+                return ""
+    
+    # Return the longest common prefix
+    return prefix
+[END CODE]
+
+### Explanation:
+The function `common_prefix` is designed to find the longest common prefix among a list of strings. The process starts by checking if the list is empty or if the number of strings is zero, in which case it returns an empty string immediately. If there are strings in the list, the function initializes the prefix with the first string. It then iterates through the rest of the strings, reducing the prefix by one character from the end until it finds a common prefix that matches the beginning of each string. If at any point the prefix becomes empty, it means there is no common prefix, and the function returns an empty string. If a common prefix is found, it is returned after all strings have been compared. This approach ensures that the function efficiently finds the longest common prefix by progressively shortening the prefix until it fits all strings.

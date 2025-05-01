@@ -1,0 +1,10 @@
+Input: n: an integer representing the bit position
+Output: count: the number of integers where the 0th and nth bits are set
+
+1: Initialize a variable count to 0 to keep track of the number of valid integers.
+2: Determine the range of numbers to check. Since we are interested in the 0th and nth bits, the maximum number to check is 2^(n+1) - 1, as this is the smallest number that has n+1 bits.
+3: Loop through each number from 0 to 2^(n+1) - 1.
+4:     Convert the number to its binary representation.
+5:     Check if the 0th and nth bits are set (i.e., they are 1).
+6:     If both bits are set, increment the count.
+7: Return the count.

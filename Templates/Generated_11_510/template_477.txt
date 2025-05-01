@@ -1,0 +1,4 @@
+Input: string: a string  
+Output: lower_string: a string converted to lower case  
+1: Convert string to lower case and assign it to lower_string  
+2: Return lower_string

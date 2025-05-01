@@ -1,0 +1,6 @@
+Input: input_list: a list of lists
+Output: The list with the minimum length from the input_list.
+
+1: Use the `min` function with a key parameter to find the list with the minimum length.
+2: The key parameter should use a lambda function that returns the length of each list.
+3: Return the list with the minimum length.

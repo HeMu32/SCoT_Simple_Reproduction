@@ -1,0 +1,10 @@
+Input: n: an integer 
+Output: an integer with all even bits set 
+
+1: Initialize count to 0, res to 0, and temp to n
+2: While temp is greater than 0:
+3:     If count is odd:
+4:         Set the bit at position count in res
+5:     Increment count by 1
+6:     Right shift temp by 1 bit
+7: Return the result of bitwise OR between n and res

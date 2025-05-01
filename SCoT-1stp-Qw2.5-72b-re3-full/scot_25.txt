@@ -1,0 +1,10 @@
+Input: arr: a list of integers, n: the number of elements in the list
+Output: product: the product of all non-repeated elements in the list
+
+1: Initialize a dictionary to keep track of the frequency of each element in the list.
+2: Loop through the list to populate the dictionary with the frequency of each element.
+3: Initialize a variable `product` to 1, which will hold the product of non-repeated elements.
+4: Loop through the dictionary:
+5:     If the frequency of the current element is 1 (i.e., it is not repeated):
+6:         Multiply the `product` by the current element.
+7: Return the `product`.

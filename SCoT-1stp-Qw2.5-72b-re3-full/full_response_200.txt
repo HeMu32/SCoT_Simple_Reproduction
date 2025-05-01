@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: list1: a list of numbers
+Output: positions: a list of indices where the maximum value occurs in list1
+
+1: Find the maximum value in list1.
+2: Initialize an empty list called positions to store the indices of the maximum value.
+3: Loop through the list1 with index and value.
+4: For each element, if the value is equal to the maximum value, append the index to the positions list.
+5: After the loop, return the positions list.
+[END PROCESS]
+
+[BEGIN CODE]
+def position_max(list1):
+    # Find the maximum value in the list
+    max_value = max(list1)
+    
+    # Initialize an empty list to store the indices of the maximum value
+    positions = []
+    
+    # Loop through the list with index and value
+    for index, value in enumerate(list1):
+        # If the value is equal to the maximum value, append the index to the positions list
+        if value == max_value:
+            positions.append(index)
+    
+    # Return the positions list
+    return positions
+[END CODE]
+
+### Explanation:
+The function `position_max` is designed to find all the indices in a given list where the maximum value occurs. The process involves first identifying the maximum value in the list using the `max()` function. Then, an empty list `positions` is initialized to store the indices of the maximum value. The function iterates over the list using a `for` loop with `enumerate` to get both the index and the value of each element. If the value matches the maximum value, the index is appended to the `positions` list. Finally, the function returns the `positions` list containing all the indices where the maximum value is found.

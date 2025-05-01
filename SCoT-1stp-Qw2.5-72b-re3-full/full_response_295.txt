@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: number: an integer for which we need to find the sum of all divisors.
+Output: sum_divisors: the sum of all divisors of the given number.
+
+1: Initialize a variable sum_divisors to 0 to store the sum of divisors.
+2: For each integer i from 1 to the square root of number (inclusive):
+3:     If number is divisible by i (i.e., number % i == 0):
+4:         Add i to sum_divisors.
+5:         If i is not equal to number // i (to avoid adding the square root twice if it's a perfect square):
+6:             Add number // i to sum_divisors.
+7: Return sum_divisors.
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def sum_div(number):
+    sum_divisors = 0
+    for i in range(1, int(math.sqrt(number)) + 1):
+        if number % i == 0:
+            sum_divisors += i
+            if i != number // i:
+                sum_divisors += number // i
+    return sum_divisors
+[END CODE]
+
+### Explanation:
+The function `sum_div` calculates the sum of all divisors of a given number. The process involves iterating from 1 to the square root of the number because any divisor larger than the square root would have a corresponding divisor smaller than the square root. This optimization reduces the number of iterations needed, making the function more efficient.
+
+1. **Initialization**: We start by initializing `sum_divisors` to 0, which will hold the sum of all divisors.
+2. **Loop through potential divisors**: We loop through all integers from 1 to the square root of the number. For each integer `i`:
+   - **Check divisibility**: If `i` is a divisor of `number` (i.e., `number % i == 0`), we add `i` to `sum_divisors`.
+   - **Avoid double counting**: If `i` is not equal to `number // i` (i.e., `i` is not the square root of `number`), we also add `number // i` to `sum_divisors` to account for the corresponding divisor.
+3. **Return the result**: After the loop, `sum_divisors` contains the sum of all divisors of the number, which is then returned.
+
+This approach ensures that all divisors are considered and that the function runs efficiently even for large numbers.

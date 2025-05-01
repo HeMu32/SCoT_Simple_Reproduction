@@ -1,0 +1,7 @@
+Input: arr: a list of integers, n: the length of the list
+Output: sum of repeated elements in arr
+1: Initialize an empty list to store repeated elements
+2: For each element x in arr:
+3:     If the count of x in arr is greater than 1:
+4:         Add x to the list of repeated elements
+5: Return the sum of the list of repeated elements

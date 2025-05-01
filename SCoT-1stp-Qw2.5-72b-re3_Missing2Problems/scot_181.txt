@@ -1,0 +1,10 @@
+Input: arr: a list of strings, n: the number of strings in the list
+Output: prefix: the longest common prefix among the strings in the list
+
+1: If the list is empty or n is 0, return an empty string as there are no strings to compare.
+2: Initialize prefix with the first string in the list.
+3: Loop through the rest of the strings in the list:
+4:     While the current string does not start with the prefix:
+5:         Reduce the prefix by one character from the end.
+6:         If the prefix becomes empty, return an empty string as no common prefix exists.
+7: Return the prefix after all strings have been compared.

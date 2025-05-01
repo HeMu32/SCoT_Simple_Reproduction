@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: The first even number in the list, or None if no even number is found
+
+1: For each number num in nums:
+2:     If num is even (i.e., num % 2 == 0):
+3:         Return num
+4: If no even number is found after the loop:
+5:     Return None
+[END PROCESS]
+
+[BEGIN CODE]
+def first_even(nums):
+    for num in nums:
+        if num % 2 == 0:
+            return num
+    return None
+[END CODE]
+
+Explanation:
+The function `first_even` takes a list of integers as input and returns the first even number it encounters in the list. It iterates through the list using a for loop. For each number, it checks if the number is even by using the modulus operator `%`. If the number is even, it immediately returns that number. If the loop completes without finding an even number, the function returns `None` to indicate that no even number was found in the list. This approach ensures that the function is efficient, stopping as soon as it finds the first even number.

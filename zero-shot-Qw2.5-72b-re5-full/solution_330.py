@@ -1,0 +1,8 @@
+import re
+
+def find_char(text):
+    """
+    Write a function to find all three, four, five characters long words in the given string by using regex.
+    """
+    pattern = r'\b\w{3,5}\b'
+    return re.findall(pattern, text)

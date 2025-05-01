@@ -1,0 +1,18 @@
+Input: a, b, c: three numbers
+Output: median: the median of the three numbers
+1: if a is greater than b:
+2:     if a is less than c:
+3:         return a as the median
+4:     else:
+5:         if b is greater than c:
+6:             return b as the median
+7:         else:
+8:             return c as the median
+9: else:
+10:    if a is greater than c:
+11:        return a as the median
+12:    else:
+13:        if b is less than c:
+14:            return b as the median
+15:        else:
+16:            return c as the median

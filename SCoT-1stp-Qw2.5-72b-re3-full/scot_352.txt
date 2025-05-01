@@ -1,0 +1,8 @@
+Input: str: a string
+Output: A boolean value indicating whether all characters in the string are unique
+
+1: Initialize an empty set called `seen_chars` to keep track of characters we have encountered.
+2: Loop through each character `ch` in the string `str`:
+3:     If `ch` is already in `seen_chars`, return False because we found a duplicate.
+4:     Otherwise, add `ch` to `seen_chars`.
+5: If the loop completes without finding duplicates, return True.

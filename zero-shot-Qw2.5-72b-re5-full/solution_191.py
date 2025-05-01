@@ -1,0 +1,6 @@
+def check_monthnumber(monthname3): 
+    """ 
+    Write a function to check whether the given month name contains 30 days or not. 
+    """ 
+    thirty_days_months = ["April", "June", "September", "November"]
+    return monthname3 in thirty_days_months

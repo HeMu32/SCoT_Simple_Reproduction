@@ -1,0 +1,7 @@
+Input: l: list of colors, n: number of colors to choose
+Output: list of all combinations of n colors from l with repetitions
+
+1: Import the `combinations_with_replacement` function from the `itertools` module
+2: Generate all combinations with repetitions of n colors from the list l using `combinations_with_replacement`
+3: Convert the generated combinations into a list
+4: Return the list of combinations

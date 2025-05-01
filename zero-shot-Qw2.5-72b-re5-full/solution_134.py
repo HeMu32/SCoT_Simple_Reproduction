@@ -1,0 +1,4 @@
+def check_last(arr, n, p):
+    for _ in range(p):
+        arr[-1] += n
+    return 'even' if arr[-1] % 2 == 0 else 'odd'

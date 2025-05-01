@@ -1,0 +1,10 @@
+Input: lst: a list of sublists
+Output: max_sublist: the sublist with the maximum length
+
+1: Initialize a variable `max_sublist` to store the sublist with the maximum length, initially set to an empty list.
+2: Initialize a variable `max_length` to store the length of the longest sublist found so far, initially set to 0.
+3: Loop through each sublist in `lst`:
+   4: If the length of the current sublist is greater than `max_length`:
+      5: Update `max_length` to the length of the current sublist.
+      6: Update `max_sublist` to the current sublist.
+7: After the loop, return `max_sublist`.

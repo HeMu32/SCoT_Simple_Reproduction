@@ -1,0 +1,18 @@
+[BEGIN]
+Input: N: an integer representing the year
+Output: odd: the number of odd days in the year N
+
+1: Calculate the number of complete centuries (hund1) in the year N by dividing N by 100.
+2: Calculate the number of complete 400-year periods (hund4) in the year N by dividing N by 400.
+3: Calculate the number of leap years (leap) in the year N by right-shifting N by 2 (equivalent to dividing by 4 and truncating the result).
+4: Calculate the number of ordinary years (ordd) by subtracting the number of leap years from N.
+5: If there are complete centuries (hund1):
+   1: Add the number of complete centuries to the number of ordinary years.
+   2: Subtract the number of complete centuries from the number of leap years.
+6: If there are complete 400-year periods (hund4):
+   1: Subtract the number of complete 400-year periods from the number of ordinary years.
+   2: Add the number of complete 400-year periods to the number of leap years.
+7: Calculate the total number of days (days) by adding the number of ordinary years to twice the number of leap years.
+8: Calculate the number of odd days (odd) by taking the total number of days modulo 7.
+9: Return the number of odd days.
+[END]

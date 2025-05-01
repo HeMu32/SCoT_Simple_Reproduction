@@ -1,0 +1,11 @@
+Input: n: an integer  
+Output: True or False  
+1: Initialize i to 1  
+2: While i squared is less than or equal to n:  
+3:     Initialize j to 1  
+4:     While j squared is less than or equal to n:  
+5:         If i squared plus j squared equals n:  
+6:             Return True  
+7:         Increment j by 1  
+8:     Increment i by 1  
+9: Return False

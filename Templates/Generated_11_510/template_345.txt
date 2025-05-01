@@ -1,0 +1,8 @@
+Input: nums: a list of numbers  
+Output: result: a list of differences between consecutive numbers in nums  
+1: Initialize an empty list result  
+2: Loop through the list nums, except the last element, and the list nums, except the first element, simultaneously:  
+3:     For each pair of consecutive elements a and b:  
+4:         Calculate the difference b - a  
+5:         Append the difference to the result list  
+6: Return the result list

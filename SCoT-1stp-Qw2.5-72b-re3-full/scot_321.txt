@@ -1,0 +1,9 @@
+Input: s: an integer representing the number for which we need to find the Demlo number
+Output: result: a string representing the Demlo number for the given `s`
+
+1: Initialize an empty string `result` to store the Demlo number
+2: For each integer `i` from 1 to `s`:
+3:     Convert `i` to a string and append it to `result`
+4: For each integer `i` from `s-1` down to 1:
+5:     Convert `i` to a string and append it to `result`
+6: Return the `result` string

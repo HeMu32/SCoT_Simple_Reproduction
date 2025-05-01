@@ -1,0 +1,17 @@
+Input: A: a circularly sorted array
+Output: rotation_count: the number of rotations in the array
+
+1: Initialize left to 0 and right to the last index of A
+2: While left is less than or equal to right:
+3:     If A[left] is less than or equal to A[right]:
+4:         Return left as the rotation count
+5:     Calculate mid as the floor of (left + right) / 2
+6:     Calculate next as (mid + 1) % length of A
+7:     Calculate prev as (mid - 1 + length of A) % length of A
+8:     If A[mid] is less than or equal to both A[next] and A[prev]:
+9:         Return mid as the rotation count
+10:    If A[mid] is less than or equal to A[right]:
+11:        Set right to mid - 1
+12:    Else if A[mid] is greater than or equal to A[left]:
+13:        Set left to mid + 1
+14: Return -1 if no rotation is found

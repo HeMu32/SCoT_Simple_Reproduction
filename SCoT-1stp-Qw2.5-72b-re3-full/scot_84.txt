@@ -1,0 +1,14 @@
+Input: n: an integer representing the position in the Newman-Conway sequence
+Output: The n-th number in the Newman-Conway sequence
+
+The Newman-Conway sequence is defined as follows:
+- P(1) = 1
+- P(2) = 1
+- For all n > 2, P(n) = P(P(n - 1)) + P(n - P(n - 1))
+
+1: If n is 1 or 2, return 1 (base cases)
+2: Initialize a list `seq` with the first two elements of the sequence [1, 1]
+3: For i from 3 to n:
+4:     Calculate the next element in the sequence using the formula P(i) = P(P(i - 1)) + P(i - P(i - 1))
+5:     Append the calculated value to `seq`
+6: Return the n-th element of `seq`

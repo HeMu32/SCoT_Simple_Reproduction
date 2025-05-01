@@ -1,0 +1,6 @@
+[BEGIN]
+Input: a: the first term of the arithmetic progression, n: the term number to find, d: the common difference
+Output: tn: the n-th term of the arithmetic progression
+1: Calculate the n-th term using the formula tn = a + (n - 1) * d
+2: Return the calculated value tn
+[END]

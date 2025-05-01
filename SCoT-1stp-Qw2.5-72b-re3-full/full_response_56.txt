@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: n: an integer to check
+Output: A boolean value indicating whether the number is one less than twice its reverse.
+
+1: Convert the integer n to a string to facilitate reversing.
+2: Reverse the string representation of n.
+3: Convert the reversed string back to an integer.
+4: Calculate twice the reversed integer and subtract one.
+5: Compare the result from step 4 with the original number n.
+6: If they are equal, return True; otherwise, return False.
+[END PROCESS]
+
+[BEGIN CODE]
+def check(n):
+    # Convert the integer to a string
+    str_n = str(n)
+    
+    # Reverse the string
+    reversed_str_n = str_n[::-1]
+    
+    # Convert the reversed string back to an integer
+    reversed_n = int(reversed_str_n)
+    
+    # Calculate twice the reversed integer and subtract one
+    result = 2 * reversed_n - 1
+    
+    # Compare the result with the original number
+    return result == n
+[END CODE]
+
+### Explanation:
+The function `check` is designed to verify if a given integer `n` is one less than twice its reverse. Here’s a step-by-step breakdown of how the function works:
+
+1. **Convert to String**: The integer `n` is first converted to a string to make it easier to reverse. This is done using `str(n)`.
+
+2. **Reverse the String**: The string representation of `n` is reversed using slicing `[::-1]`. This effectively reverses the digits of the number.
+
+3. **Convert Back to Integer**: The reversed string is then converted back to an integer using `int(reversed_str_n)`. This gives us the reversed number.
+
+4. **Calculate the Condition**: We calculate twice the reversed number and subtract one using the expression `2 * reversed_n - 1`.
+
+5. **Comparison**: Finally, we compare the result of the calculation with the original number `n`. If they are equal, the function returns `True`, indicating that the condition is met. Otherwise, it returns `False`.
+
+This approach ensures that the function correctly checks the given condition for any integer input.

@@ -1,0 +1,8 @@
+Input: dict1: a dictionary with various key-value pairs, where some values may be empty (None, '', [], {}, etc.)
+Output: A new dictionary with all empty values removed
+
+1: Initialize a new dictionary, new_dict, to store the non-empty items
+2: Loop through each key-value pair in dict1
+3:     If the value is not empty (i.e., not None, not an empty string, not an empty list, not an empty dictionary, etc.)
+4:         Add the key-value pair to new_dict
+5: After the loop, return new_dict

@@ -1,0 +1,11 @@
+[BEGIN]
+Input: x1, y1, x2, y2, x3, y3: coordinates of three points
+Output: 'Yes' if the points form a valid triangle, 'No' otherwise
+
+1: Calculate the area of the triangle formed by the points using the formula:
+   a = (x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2))
+2: If a is equal to 0:
+3:     Return 'No' (The points are collinear and do not form a triangle)
+4: Else:
+5:     Return 'Yes' (The points form a valid triangle)
+[END]

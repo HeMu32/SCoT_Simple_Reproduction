@@ -1,0 +1,7 @@
+Input: array_nums: a list of integers  
+Output: count_even: the number of even elements in array_nums  
+1: Initialize count_even to the length of a filtered list  
+2:     The filter function applies a lambda function to each element in array_nums  
+3:     The lambda function checks if an element is even (x % 2 == 0)  
+4:     The filter function returns an iterator that is converted to a list  
+5: Return count_even

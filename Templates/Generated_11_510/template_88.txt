@@ -1,0 +1,5 @@
+Input: list1: a list of elements  
+Output: freq_count: a dictionary with elements as keys and their frequencies as values  
+1: import the collections module  
+2: create a Counter object from the list1, which counts the frequency of each element  
+3: return the Counter object as the frequency count

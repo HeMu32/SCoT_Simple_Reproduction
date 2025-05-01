@@ -1,0 +1,12 @@
+[BEGIN]
+Input: sample_names: a list of strings  
+Output: total_length: an integer representing the sum of the lengths of the names that start with an uppercase letter and have no other uppercase letters  
+
+1: Initialize a filter to select names from sample_names that start with an uppercase letter and have no other uppercase letters
+2:   for each name in sample_names:
+3:     if the first character of the name is uppercase and all other characters are lowercase:
+4:       include the name in the filtered list
+5: Join all names in the filtered list into a single string
+6: Calculate the length of the joined string
+7: Return the length as total_length
+[END]

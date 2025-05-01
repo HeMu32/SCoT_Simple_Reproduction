@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: s: a set of elements
+Output: t: a tuple containing all elements from the set s in an arbitrary order
+
+1: Convert the set s to a list to allow for indexing and ordering
+2: Convert the list to a tuple t
+3: Return the tuple t
+[END PROCESS]
+
+[BEGIN CODE]
+def set_to_tuple(s):
+    # Convert the set to a list
+    lst = list(s)
+    # Convert the list to a tuple
+    t = tuple(lst)
+    # Return the tuple
+    return t
+[END CODE]
+
+### Explanation:
+The function `set_to_tuple` takes a set `s` as input and converts it into a tuple. Since sets in Python are unordered collections of unique elements, converting a set to a list first allows us to create an ordered collection. Then, converting the list to a tuple ensures that the elements are in a fixed, ordered format. The resulting tuple is returned as the output. Note that the order of elements in the tuple may vary each time the function is called, as sets do not maintain a specific order.

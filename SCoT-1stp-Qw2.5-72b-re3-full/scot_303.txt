@@ -1,0 +1,11 @@
+Input: a: a list of integers, n: the length of the list
+Output: True if the count of inversions of two types (i < j and a[i] > a[j], and i < j and a[i] < a[j]) are the same, False otherwise
+
+1: Initialize two counters, `count1` and `count2`, to zero for counting the inversions of the two types.
+2: Loop through the list with index `i` from 0 to n-2.
+3:     For each `i`, loop through the list with index `j` from i+1 to n-1.
+4:         If `a[i] > a[j]`, increment `count1` by 1.
+5:         If `a[i] < a[j]`, increment `count2` by 1.
+6: After the loops, compare `count1` and `count2`.
+7: If `count1` equals `count2`, return True.
+8: Otherwise, return False.

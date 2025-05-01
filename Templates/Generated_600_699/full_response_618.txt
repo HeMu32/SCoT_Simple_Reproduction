@@ -1,0 +1,9 @@
+[BEGIN]
+Input: nums1, nums2: two lists of numbers
+Output: result: a list of numbers where each element is the result of dividing the corresponding elements of nums1 by nums2
+
+1: Use the `map` function to apply a lambda function to each pair of elements from nums1 and nums2.
+2:     The lambda function takes two arguments, x and y, and returns the result of x divided by y.
+3: Convert the map object to a list.
+4: Return the list as the result.
+[END]

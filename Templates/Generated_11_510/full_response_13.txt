@@ -1,0 +1,7 @@
+[BEGIN]
+Input: words: a list of words
+Output: top_four: a list of the four most common words and their counts
+1: Initialize word_counts using Counter from the collections module to count occurrences of each word in words
+2: Use the most_common method of word_counts to get the top four most frequent words
+3: Return top_four
+[END]

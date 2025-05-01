@@ -1,0 +1,35 @@
+[BEGIN PROCESS]
+Input: text: a string, patterns: a list of strings
+Output: matches: a list of tuples, each containing the pattern and the start and end positions of the match in the text
+
+1: Import the `re` module for regular expression operations.
+2: Initialize an empty list to store the matches.
+3: Loop through each pattern in the patterns list:
+   3.1: Use the `re.finditer` function to find all occurrences of the pattern in the text.
+   3.2: For each match found, extract the start and end positions of the match.
+   3.3: Append a tuple containing the pattern and the start and end positions to the matches list.
+4: Return the matches list.
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def check_literals(text, patterns):
+    # Initialize an empty list to store the matches
+    matches = []
+    
+    # Loop through each pattern in the patterns list
+    for pattern in patterns:
+        # Find all occurrences of the pattern in the text
+        for match in re.finditer(pattern, text):
+            # Extract the start and end positions of the match
+            start, end = match.span()
+            # Append a tuple containing the pattern and the start and end positions to the matches list
+            matches.append((pattern, start, end))
+    
+    # Return the matches list
+    return matches
+[END CODE]
+
+### Explanation:
+The function `check_literals` is designed to search for multiple literal strings (patterns) within a given text using regular expressions. The function uses the `re.finditer` method, which returns an iterator yielding match objects for all non-overlapping matches of the pattern in the string. For each match, the start and end positions are extracted using the `span` method of the match object. These positions, along with the pattern, are stored in a tuple and appended to the `matches` list. Finally, the function returns the list of matches, which contains all the patterns found in the text along with their respective positions.

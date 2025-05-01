@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: a: the first term of the arithmetic progression, n: the number of terms, d: the common difference
+Output: sum: the sum of the first n terms of the arithmetic progression
+
+1: Calculate the sum of the arithmetic progression using the formula: sum = n/2 * (2*a + (n-1)*d)
+2: Return the calculated sum
+[END PROCESS]
+
+[BEGIN CODE]
+def ap_sum(a, n, d):
+  sum = n / 2 * (2 * a + (n - 1) * d)
+  return sum
+[END CODE]
+
+**Explanation:**
+The function `ap_sum` calculates the sum of the first `n` terms of an arithmetic progression (AP) given the first term `a`, the number of terms `n`, and the common difference `d`. The formula used is derived from the sum of an arithmetic series, which is given by:
+
+\[ \text{Sum} = \frac{n}{2} \times (2a + (n-1)d) \]
+
+- `n` is the number of terms.
+- `a` is the first term.
+- `d` is the common difference between consecutive terms.
+
+This formula efficiently computes the sum without needing to iterate through each term, making it a direct and efficient solution.

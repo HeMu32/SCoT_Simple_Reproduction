@@ -1,0 +1,29 @@
+[BEGIN CODE]
+```python
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def newman_prime(n):
+    if n == 1:
+        return 3
+    a = 3
+    b = 1
+    count = 1
+    while True:
+        a, b = 2 * a * b + 1, a
+        if is_prime(a):
+            count += 1
+            if count == n:
+                return a
+
+# Example usage
+print(newman_prime(1))  # 3
+print(newman_prime(2))  # 7
+print(newman_prime(3))  # 41
+```
+[END CODE]

@@ -1,0 +1,8 @@
+Input: m: an integer representing the number of multiples to find, n: an integer representing the number to find multiples of
+Output: A list of the first m multiples of n
+
+1: Initialize an empty list to store the multiples
+2: For i from 1 to m inclusive:
+3:     Calculate the multiple by multiplying n by i
+4:     Append the multiple to the list
+5: Return the list of multiples

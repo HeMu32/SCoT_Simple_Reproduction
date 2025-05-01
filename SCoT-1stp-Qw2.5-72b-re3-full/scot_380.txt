@@ -1,0 +1,10 @@
+Input: rownum, colnum: two integers representing the number of rows and columns for the two-dimensional array
+Output: A two-dimensional array (list of lists) with the specified number of rows and columns
+
+1: Initialize an empty list `result` to store the two-dimensional array
+2: Start a loop to iterate `rownum` times (for each row)
+3:     Inside the row loop, initialize an empty list `row` to store the current row
+4:     Start a loop to iterate `colnum` times (for each column in the current row)
+5:         Inside the column loop, append a default value (e.g., 0) to `row`
+6:     After the column loop, append the `row` to `result`
+7: After the row loop, return the `result` as the two-dimensional array

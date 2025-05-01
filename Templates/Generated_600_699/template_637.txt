@@ -1,0 +1,6 @@
+Input: actual_cost: a numeric value representing the actual cost of a product, sale_amount: a numeric value representing the sale amount of the product
+Output: True if there is no profit and no loss, otherwise False
+1: if sale_amount is equal to actual_cost:
+2:     return True
+3: else:
+4:     return False

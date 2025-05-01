@@ -1,0 +1,10 @@
+[BEGIN]
+Input: words: a list of strings  
+Output: A tuple containing the first two words from any string in the list that start with the letter 'p'. If no such pair is found, return None.  
+1: for each word w in words:  
+2:     use a regular expression to match the word w to find two consecutive words starting with 'p'  
+3:     if a match is found:  
+4:         return the matched words as a tuple  
+5: if no match is found after checking all words:  
+6:     return None  
+[END]

@@ -1,0 +1,16 @@
+Input: n: an integer
+Output: True if n is an undulating number, False otherwise
+
+1: Convert the integer n to a string to easily access individual digits
+2: Check if the length of the string is less than 3:
+3:     If true, return False (a number with less than 3 digits cannot be undulating)
+4: Initialize two variables, a and b, to store the first and second digits of the string
+5: If a is equal to b:
+6:     Return False (a and b must be different for the number to be undulating)
+7: Iterate through the string from the third digit to the end:
+8:     For each digit at index i:
+9:         If i is even and the digit is not equal to a:
+10:            Return False
+11:         If i is odd and the digit is not equal to b:
+12:            Return False
+13: Return True (if all checks pass, the number is undulating)

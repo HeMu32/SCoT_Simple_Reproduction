@@ -1,0 +1,5 @@
+Input: text1: a string containing whitespaces
+Output: a string with all whitespaces removed
+1: Import the regular expression module (re)
+2: Use the sub method from the re module to replace all whitespace characters in text1 with an empty string
+3: Return the modified string

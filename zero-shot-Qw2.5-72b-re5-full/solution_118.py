@@ -1,0 +1,5 @@
+def string_to_list(string): 
+    """ 
+    Converts a given string into a list of characters.
+    """
+    return list(string)

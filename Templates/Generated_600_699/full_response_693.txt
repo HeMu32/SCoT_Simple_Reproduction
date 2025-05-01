@@ -1,0 +1,9 @@
+[BEGIN]
+Input: text1: a string containing multiple spaces
+Output: a string with multiple spaces removed
+
+1: Import the regex module (re)
+2: Define a function remove_multiple_spaces with a parameter text1
+3:   Use regex to find and replace multiple spaces in text1 with a single space
+4:   Return the modified string
+[END]

@@ -1,0 +1,10 @@
+Input: x, y: two positive integers 
+Output: gcd: the greatest common divisor of x and y 
+1: Initialize gcd to 1 
+2: If x is divisible by y then 
+3:     Return y 
+4: For k from y/2 down to 1 do 
+5:     If x is divisible by k and y is divisible by k then 
+6:         Set gcd to k 
+7:         Break the loop 
+8: Return gcd

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: nums: a two-dimensional list, N: an integer representing the index of the element to extract from each sublist
+Output: result: a list containing the Nth element from each sublist in nums
+1: Initialize an empty list result
+2: for each sublist i in nums:
+3:     append the Nth element of i to result
+4: return result
+[END]

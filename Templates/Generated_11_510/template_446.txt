@@ -1,0 +1,7 @@
+Input: tup: a tuple, lst: a list  
+Output: count: the total number of occurrences of all elements of lst in tup  
+1: Initialize count to 0  
+2: for each item in tup:  
+3:     if item is in lst:  
+4:         increment count by 1  
+5: return count

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: a, b: two numbers  
+Output: a, b: the swapped values of the two numbers  
+1: 	temp = a  # Store the value of a in a temporary variable  
+2: 	a = b  # Assign the value of b to a  
+3: 	b = temp  # Assign the value of the temporary variable (original a) to b  
+4: 	return (a, b)  # Return the new values of a and b
+[END]

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: monthname1: a string representing the name of a month
+Output: True if the month contains 28 days, otherwise False
+1: if monthname1 is "February":
+2:     return True
+3: else:
+4:     return False
+[END]

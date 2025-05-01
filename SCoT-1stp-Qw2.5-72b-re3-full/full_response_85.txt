@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: r: a float or integer representing the radius of the sphere
+Output: surface_area: a float representing the surface area of the sphere
+
+1: Import the math module to access the value of pi
+2: Define a function surfacearea_sphere with a parameter r
+3:   Calculate the surface area using the formula 4 * pi * r^2
+4:   Return the calculated surface area
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def surfacearea_sphere(r):
+  surface_area = 4 * math.pi * r ** 2
+  return surface_area
+[END CODE]
+
+Explanation:
+The function `surfacearea_sphere` calculates the surface area of a sphere given its radius `r`. The formula for the surface area of a sphere is \(4 \pi r^2\), where \(r\) is the radius of the sphere. The `math` module is used to access the value of \(\pi\). The function computes the surface area using this formula and returns the result. This implementation is straightforward and uses a simple mathematical formula, so it does not require complex control structures like loops or branches.

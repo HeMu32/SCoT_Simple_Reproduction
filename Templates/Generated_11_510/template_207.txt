@@ -1,0 +1,11 @@
+Input: str: a string  
+Output: length: the length of the longest repeating subsequence such that the two subsequences don’t have the same string characters at the same positions  
+1: n = length of str  
+2: Initialize a 2D list dp of size (n+1) x (n+1) with all elements set to 0  
+3: for i from 1 to n+1:  
+4:     for j from 1 to n+1:  
+5:         if str[i-1] is equal to str[j-1] and i is not equal to j:  
+6:             dp[i][j] = 1 + dp[i-1][j-1]  
+7:         else:  
+8:             dp[i][j] = maximum of dp[i][j-1] and dp[i-1][j]  
+9: return dp[n][n]

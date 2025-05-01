@@ -1,0 +1,11 @@
+[BEGIN]
+Input: n: an integer
+Output: max_sum: the maximum sum obtained by dividing the number into three parts and summing them up
+
+1: Initialize an array dp of size n+1 with all elements set to 0
+2: Set dp[0] to 0 and dp[1] to 1
+3: for i from 2 to n do
+4:     Calculate the sum of dp[i/2], dp[i/3], and dp[i/4]
+5:     Set dp[i] to the maximum of the calculated sum and i
+6: return dp[n]
+[END]

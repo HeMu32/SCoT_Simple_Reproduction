@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: result: an integer with all even bits set to 1
+
+1: Initialize a variable `mask` to 0, which will be used to create a mask with all even bits set to 1.
+2: Initialize a variable `bit_position` to 1, which will be used to determine the current bit position.
+3: Loop through each bit position from 1 to the number of bits in `n`:
+   a: Check if the current bit position is even:
+      - If the bit position is even, set the corresponding bit in `mask` to 1.
+   b: Increment the `bit_position` by 1.
+4: Use the `mask` to set all even bits in `n` by performing a bitwise OR operation between `n` and `mask`.
+5: Return the result of the bitwise OR operation.
+[END PROCESS]
+
+[BEGIN CODE]
+def even_bit_set_number(n):
+    mask = 0
+    bit_position = 1
+    while bit_position <= n.bit_length():
+        if bit_position % 2 == 0:
+            mask |= (1 << (bit_position - 1))
+        bit_position += 1
+    result = n | mask
+    return result
+[END CODE]
+
+### Explanation:
+- **Mask Creation**: The `mask` is created by setting the bits at even positions (1-based index) to 1. For example, for a 4-bit number, the even positions are 2 and 4, so the mask would be `0101` in binary, which is `5` in decimal.
+- **Bitwise OR Operation**: The `mask` is then used to set the even bits in the original number `n` by performing a bitwise OR operation. This operation ensures that any bit in `n` that is at an even position will be set to 1, while the other bits remain unchanged.
+- **Bit Position Calculation**: The loop runs from 1 to the number of bits in `n` (determined by `n.bit_length()`), and the `bit_position` is incremented by 1 in each iteration. The condition `bit_position % 2 == 0` checks if the current bit position is even, and if so, the corresponding bit in the `mask` is set.
+- **Result**: The final result is the original number `n` with all even bits set to 1, achieved by the bitwise OR operation between `n` and `mask`.
+
+This approach ensures that all even bits in the given number are set to 1, while the odd bits remain unchanged.

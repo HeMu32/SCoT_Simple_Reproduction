@@ -1,0 +1,6 @@
+Input: x, y, z: lengths of the sides of a triangle
+Output: True if the triangle is isosceles, False otherwise
+1: if x is equal to y or y is equal to z or z is equal to x:
+2:     return True
+3: else:
+4:     return False

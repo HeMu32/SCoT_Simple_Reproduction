@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: nums: a two-dimensional list, N: an integer representing the index of the element to extract (0-based index)
+Output: result: a list containing the first or specified element from each sublist in nums
+
+1: Initialize an empty list called result
+2: for each sublist in nums:
+3:     if the length of the sublist is greater than N:
+4:         append the element at index N of the sublist to result
+5:     else:
+6:         append None to result (to handle cases where the sublist is too short)
+7: return result
+[END PROCESS]
+
+[BEGIN CODE]
+def specified_element(nums, N):
+    result = []
+    for sublist in nums:
+        if len(sublist) > N:
+            result.append(sublist[N])
+        else:
+            result.append(None)
+    return result
+[END CODE]
+
+### Explanation
+
+The function `specified_element` is designed to extract a specified element (based on the index `N`) from each sublist within a two-dimensional list `nums`. Here's a breakdown of the process:
+
+1. **Initialization**: An empty list `result` is initialized to store the extracted elements.
+2. **Iteration**: The function iterates over each sublist in `nums`.
+3. **Condition Check**: For each sublist, the function checks if the length of the sublist is greater than `N`:
+   - If true, it appends the element at index `N` of the sublist to `result`.
+   - If false, it appends `None` to `result` to indicate that the sublist is too short to have an element at index `N`.
+4. **Return**: Finally, the function returns the `result` list containing the extracted elements or `None` for sublists that are too short.
+
+This approach ensures that the function handles cases where sublists may have different lengths, providing a robust solution to the problem.

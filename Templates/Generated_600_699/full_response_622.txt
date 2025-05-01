@@ -1,0 +1,27 @@
+[BEGIN]
+Input: arr1, arr2: two sorted arrays of the same size n
+Output: median: the median of the combined arrays
+
+1: Initialize i and j to 0 (pointers for arr1 and arr2)
+2: Initialize m1 and m2 to -1 (to store the last two elements seen)
+3: Initialize count to 0 (to count the number of elements processed)
+4: Loop while count is less than n + 1:
+5:     Increment count by 1
+6:     If i is equal to n (all elements of arr1 are processed):
+7:         Set m1 to m2
+8:         Set m2 to the first element of arr2
+9:         Break the loop
+10:    Else if j is equal to n (all elements of arr2 are processed):
+11:        Set m1 to m2
+12:        Set m2 to the first element of arr1
+13:        Break the loop
+14:    Else if the current element in arr1 is less than or equal to the current element in arr2:
+15:        Set m1 to m2
+16:        Set m2 to the current element in arr1
+17:        Increment i by 1
+18:    Else:
+19:        Set m1 to m2
+20:        Set m2 to the current element in arr2
+21:        Increment j by 1
+22: Return the average of m1 and m2 as the median
+[END]

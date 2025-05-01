@@ -1,0 +1,8 @@
+Input: x: an integer value for which the parity needs to be determined
+Output: parity: a string indicating the parity of the number ("Even" or "Odd")
+
+1: Initialize a variable `parity` to store the result
+2: Use a branch to check if the number `x` is even or odd
+3:     If `x` modulo 2 equals 0, set `parity` to "Even"
+4:     Otherwise, set `parity` to "Odd"
+5: Return the value of `parity`

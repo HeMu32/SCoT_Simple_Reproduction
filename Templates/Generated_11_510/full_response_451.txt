@@ -1,0 +1,7 @@
+[BEGIN]
+Input: text1: a string 
+Output: text1: a string with all whitespaces removed 
+1: Import the regex module (re) 
+2: Use the re.sub function to substitute all whitespace characters in text1 with an empty string 
+3: Return the modified text1
+[END]

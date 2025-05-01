@@ -1,0 +1,9 @@
+Input: radius (r), height (h): two floats representing the radius and height of the cylinder
+Output: perimeter: a float representing the perimeter of the cylinder
+
+1: Check if the radius and height are positive
+2: If either radius or height is not positive:
+3:     Return -1 (indicating an invalid input)
+4: Else:
+5:     Calculate the perimeter using the formula: perimeter = 2 * (2 * π * r + h)
+6:     Return the perimeter

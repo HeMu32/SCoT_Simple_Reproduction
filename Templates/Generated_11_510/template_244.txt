@@ -1,0 +1,6 @@
+Input: N: an integer  
+Output: nextN_squared: the next perfect square greater than N  
+1: Calculate the square root of N and round it down to the nearest integer, store the result in nextN  
+2: Increment nextN by 1  
+3: Calculate the square of nextN, store the result in nextN_squared  
+4: Return nextN_squared

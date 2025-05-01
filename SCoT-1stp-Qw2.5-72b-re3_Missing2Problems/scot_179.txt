@@ -1,0 +1,11 @@
+Input: x: an integer number
+Output: A boolean value indicating whether the number is a Keith number or not
+
+1: Convert the number x into a list of its digits.
+2: Determine the length of the list of digits, which will be the number of terms in the sequence.
+3: Initialize a list with the digits of x as the starting sequence.
+4: While the last element in the sequence is less than x:
+5:     Calculate the next term by summing the last n terms of the sequence, where n is the length of the initial list of digits.
+6:     Append the next term to the sequence.
+7: If the last element of the sequence is exactly x, then x is a Keith number.
+8: Return True if x is a Keith number, otherwise return False.

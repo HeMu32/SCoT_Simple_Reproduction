@@ -1,0 +1,11 @@
+[BEGIN]
+Input: test_list: a list of tuples representing a matrix
+Output: res: a list of tuples where each tuple represents a column of the original matrix
+
+1: Initialize an empty list `temp`
+2: For each sublist `sub` in `test_list`:
+3:     For each element `ele` in `sub`:
+4:         Append `ele` to `temp`
+5: Transpose `temp` to convert rows into columns and store the result in `res`
+6: Return `res` as a string representation
+[END]

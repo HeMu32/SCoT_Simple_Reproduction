@@ -1,0 +1,35 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: A boolean value indicating whether the given number can be represented as the sum of non-zero powers of 2
+
+1: Initialize a variable `result` to True
+2: While `n` is greater than 0:
+3:     If `n` is odd:
+4:         Set `result` to False
+5:         Break the loop
+6:     Otherwise:
+7:         Subtract the largest power of 2 less than or equal to `n` from `n`
+8: Return `result`
+
+Explanation:
+- A number can be represented as the sum of non-zero powers of 2 if and only if it is a sum of distinct powers of 2. This is equivalent to the number being a sum of distinct bits in its binary representation.
+- If a number is odd, it means it has a '1' in the least significant bit, which cannot be represented as a sum of non-zero powers of 2 (since the smallest non-zero power of 2 is 2^1 = 2).
+- If a number is even, we can subtract the largest power of 2 less than or equal to the number and continue checking the remainder.
+- If we can reduce the number to 0 by repeatedly subtracting powers of 2, then the number can be represented as the sum of non-zero powers of 2.
+[END PROCESS]
+
+[BEGIN CODE]
+def is_Sum_Of_Powers_Of_Two(n):
+    while n > 0:
+        if n % 2 == 1:
+            return False
+        n = n & (n - 1)  # Remove the lowest set bit
+    return True
+[END CODE]
+
+Explanation of the code:
+- The function `is_Sum_Of_Powers_Of_Two` takes an integer `n` as input.
+- The loop continues as long as `n` is greater than 0.
+- Inside the loop, if `n` is odd (`n % 2 == 1`), the function returns `False` because an odd number cannot be represented as a sum of non-zero powers of 2.
+- If `n` is even, the expression `n = n & (n - 1)` removes the lowest set bit from `n`. This operation effectively subtracts the largest power of 2 less than or equal to `n` from `n`.
+- If the loop completes without finding an odd number, the function returns `True`, indicating that `n` can be represented as the sum of non-zero powers of 2.

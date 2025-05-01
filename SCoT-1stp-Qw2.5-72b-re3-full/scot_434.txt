@@ -1,0 +1,7 @@
+Input: text: a string to be checked
+Output: match: a boolean indicating whether the text matches the pattern (an 'a' followed by one or more 'b's)
+
+1: Define the pattern to match an 'a' followed by one or more 'b's.
+2: Use a regular expression to search for the pattern in the text.
+3: If the pattern is found, return True.
+4: If the pattern is not found, return False.

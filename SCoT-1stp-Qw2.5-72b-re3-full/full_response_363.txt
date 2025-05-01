@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples, K: an integer
+Output: a new list of tuples where K has been added to each element of the tuples in the original list
+
+1: Initialize an empty list called result to store the new tuples
+2: For each tuple in the test_list:
+3:     Initialize an empty list called new_tuple to store the modified elements
+4:     For each element in the current tuple:
+5:         Add K to the element and append the result to new_tuple
+6:     Convert new_tuple to a tuple and append it to result
+7: Return the result list
+[END PROCESS]
+
+[BEGIN CODE]
+def add_K_element(test_list, K):
+    result = []
+    for tup in test_list:
+        new_tuple = [elem + K for elem in tup]
+        result.append(tuple(new_tuple))
+    return result
+[END CODE]
+
+### Explanation:
+The function `add_K_element` takes two parameters: `test_list`, which is a list of tuples, and `K`, which is an integer. The goal is to add `K` to each element in each tuple and return a new list of tuples with the updated values.
+
+1. **Initialization**: An empty list `result` is initialized to store the new tuples.
+2. **Outer Loop**: The function iterates over each tuple in `test_list`.
+3. **Inner List Comprehension**: For each tuple, a new list `new_tuple` is created using a list comprehension. This list comprehension iterates over each element in the current tuple, adds `K` to the element, and appends the result to `new_tuple`.
+4. **Conversion and Appending**: The `new_tuple` is converted back to a tuple and appended to the `result` list.
+5. **Return**: Finally, the `result` list, which contains the new tuples with the updated values, is returned.
+
+This approach ensures that each element in each tuple is incremented by `K`, and the structure of the original list of tuples is preserved.

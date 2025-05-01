@@ -1,0 +1,9 @@
+Input: numbers: a list of complex numbers
+Output: polar_coords: a list of tuples, each containing the magnitude and phase angle (in radians) of the corresponding complex number
+
+1: Initialize an empty list called polar_coords
+2: For each complex number in the numbers list:
+3:     Calculate the magnitude using the formula sqrt(real^2 + imag^2)
+4:     Calculate the phase angle using the formula atan2(imag, real)
+5:     Append a tuple (magnitude, phase angle) to polar_coords
+6: Return polar_coords

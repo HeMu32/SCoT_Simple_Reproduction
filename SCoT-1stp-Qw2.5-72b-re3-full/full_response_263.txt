@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: d1, d2: two dictionaries
+Output: merged_dict: a single dictionary containing all key-value pairs from both d1 and d2. If there are overlapping keys, the values from d2 will overwrite those from d1.
+
+1: Initialize an empty dictionary merged_dict
+2: For each key-value pair in d1, add it to merged_dict
+3: For each key-value pair in d2, add it to merged_dict (this will overwrite any existing key in merged_dict with the value from d2)
+4: Return merged_dict
+[END PROCESS]
+
+[BEGIN CODE]
+def merge_dict(d1, d2):
+    # Initialize an empty dictionary to store the merged result
+    merged_dict = {}
+    
+    # Add all key-value pairs from d1 to merged_dict
+    for key, value in d1.items():
+        merged_dict[key] = value
+    
+    # Add all key-value pairs from d2 to merged_dict, overwriting any existing keys
+    for key, value in d2.items():
+        merged_dict[key] = value
+    
+    # Return the merged dictionary
+    return merged_dict
+[END CODE]
+
+**Explanation:**
+The function `merge_dict` takes two dictionaries, `d1` and `d2`, as input and returns a new dictionary that contains all key-value pairs from both input dictionaries. If there are overlapping keys, the values from `d2` will overwrite those from `d1`. This is achieved by first copying all key-value pairs from `d1` into `merged_dict`, and then copying all key-value pairs from `d2` into `merged_dict`, which automatically handles the overwriting of any overlapping keys.

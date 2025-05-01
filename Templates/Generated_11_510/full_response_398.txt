@@ -1,0 +1,12 @@
+[BEGIN]
+Input: nums: a list of numbers
+Output: sum: the sum of all digits of each number in the list
+1: Initialize a variable sum to 0
+2: for each number n in nums do
+3:     Convert n to a string
+4:     for each character el in the string representation of n do
+5:         if el is a digit then
+6:             Convert el to an integer
+7:             Add the integer value of el to sum
+8: return sum
+[END]

@@ -1,0 +1,27 @@
+Input: a, b: two sorted lists
+Output: c: a merged and sorted list of a and b
+
+1: Initialize an empty list c
+2: While a is not empty and b is not empty:
+3:     If the first element of a is less than the first element of b:
+4:         Append the first element of a to c
+5:         Remove the first element from a
+6:     Else:
+7:         Append the first element of b to c
+8:         Remove the first element from b
+9: If a is empty:
+10:    Append all remaining elements of b to c
+11: Else:
+12:    Append all remaining elements of a to c
+13: Return c
+
+Input: x: a list to be sorted
+Output: x: a sorted list
+
+1: If the length of x is 0 or 1:
+2:     Return x
+3: Else:
+4:     Find the middle index of x
+5:     Recursively call merge_sort on the first half of x and store the result in a
+6:     Recursively call merge_sort on the second half of x and store the result in b
+7:     Return the result of merge(a, b)

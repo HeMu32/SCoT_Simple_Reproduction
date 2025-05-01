@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples, where each tuple contains numeric elements
+Output: res: the maximum numeric value found in any of the tuples
+
+1: Initialize a variable `max_value` to store the maximum value found, setting it initially to the lowest possible integer value.
+2: Loop through each tuple in the test_list.
+3:     For each element in the current tuple:
+4:         If the element is greater than the current `max_value`, update `max_value` to this element.
+5: After the loop, `max_value` will contain the maximum value found in all tuples.
+6: Return `max_value`.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_max(test_list):
+  max_value = float('-inf')  # Initialize max_value to negative infinity
+  for tup in test_list:
+    for elem in tup:
+      if elem > max_value:
+        max_value = elem
+  return max_value
+[END CODE]
+
+Explanation:
+- The function `find_max` is designed to find the maximum element from a list of tuples. Each tuple can contain any number of numeric elements.
+- The variable `max_value` is initialized to negative infinity to ensure that any numeric value in the tuples will be larger.
+- The function iterates over each tuple in the list and then over each element in the tuple. If an element is found that is greater than the current `max_value`, `max_value` is updated to this new value.
+- After all elements have been checked, the function returns `max_value`, which is the maximum value found in all the tuples.

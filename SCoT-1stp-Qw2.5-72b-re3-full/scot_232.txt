@@ -1,0 +1,7 @@
+Input: list1: a list of numbers, n: an integer representing the number of largest items to retrieve
+Output: a list of the n largest numbers from list1, in descending order
+1: Check if n is greater than the length of list1 or less than 1. If so, return an appropriate error message or an empty list.
+2: Sort the list1 in descending order.
+3: Create a new list to store the n largest numbers.
+4: Use a loop to add the first n elements from the sorted list to the new list.
+5: Return the new list containing the n largest numbers.

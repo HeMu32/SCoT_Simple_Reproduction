@@ -1,0 +1,28 @@
+[-BEGIN PROCESS]
+Input: l, w, h: three numbers representing the length, width, and height of a cuboid
+Output: surface_area: a number representing the surface area of the cuboid
+
+1: Calculate the area of the front and back faces (2 * l * h).
+2: Calculate the area of the top and bottom faces (2 * l * w).
+3: Calculate the area of the left and right faces (2 * w * h).
+4: Sum the areas of all faces to get the total surface area.
+5: Return the total surface area.
+[END PROCESS]
+
+[-BEGIN CODE]
+def surfacearea_cuboid(l, w, h):
+    # Calculate the surface area of the cuboid
+    surface_area = 2 * (l * h + l * w + w * h)
+    return surface_area
+[END CODE]
+
+### Explanation:
+The surface area of a cuboid is calculated by summing the areas of all six faces. A cuboid has three pairs of identical faces:
+- The front and back faces, each with an area of \( l \times h \).
+- The top and bottom faces, each with an area of \( l \times w \).
+- The left and right faces, each with an area of \( w \times h \).
+
+The total surface area is given by the formula:
+\[ \text{Surface Area} = 2 \times (l \times h + l \times w + w \times h) \]
+
+In the code, we compute this formula and return the result. This approach ensures that the function accurately calculates the surface area of a cuboid given its length, width, and height.

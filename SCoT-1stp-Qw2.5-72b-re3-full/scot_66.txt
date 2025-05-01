@@ -1,0 +1,8 @@
+Input: list: a list of numbers
+Output: count: the number of positive numbers in the list
+
+1: Initialize a counter variable to 0
+2: Loop through each number in the list:
+3:     If the number is greater than 0:
+4:         Increment the counter by 1
+5: Return the counter

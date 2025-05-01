@@ -1,0 +1,11 @@
+Input: test_list: a list containing elements of various types
+Output: result: a list with all convertible elements converted to float
+
+1: Initialize an empty list called result
+2: Loop through each element in test_list
+3:     Try to convert the element to a float
+4:     If the conversion is successful:
+5:         Append the converted float to result
+6:     If the conversion fails (raises an exception):
+7:         Append the original element to result
+8: Return the result list

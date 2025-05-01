@@ -1,0 +1,5 @@
+Input: r: a float representing the radius of the cylinder; h: a float representing the height of the cylinder
+Output: The lateral surface area of the cylinder as a float
+
+1: Calculate the lateral surface area using the formula 2 * π * r * h
+2: Return the calculated lateral surface area

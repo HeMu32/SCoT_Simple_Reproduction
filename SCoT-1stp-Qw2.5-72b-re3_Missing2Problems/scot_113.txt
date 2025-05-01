@@ -1,0 +1,8 @@
+Input: text: a string that may represent an integer
+Output: A boolean value indicating whether the string represents an integer
+
+1: Import the regex module (re)
+2: Define a function check_integer with a parameter text
+3:   Use regex to check if the string matches the pattern of an integer (optional leading + or -, followed by digits)
+4:   If the string matches the pattern, return True
+5:   Otherwise, return False

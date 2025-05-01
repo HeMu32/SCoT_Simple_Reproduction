@@ -1,0 +1,9 @@
+[BEGIN CODE]
+```python
+def tn_ap(a, n, d):
+    """
+    Write a function to find t-nth term of arithmetic progression.
+    """
+    return a + (n - 1) * d
+```
+[END CODE]

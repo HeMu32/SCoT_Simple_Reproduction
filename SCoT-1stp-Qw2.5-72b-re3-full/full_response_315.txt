@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: str: a string containing words separated by spaces
+Output: The length of the first longest word that has an even number of characters. If no such word exists, return -1.
+
+1: Split the string into a list of words.
+2: Initialize a variable max_len to -1 to keep track of the maximum length of an even word found.
+3: Loop through each word in the list:
+4:     Calculate the length of the current word.
+5:     If the length is even and greater than max_len:
+6:         Update max_len to the length of the current word.
+7:         Break the loop as we are looking for the first maximum length even word.
+8: Return max_len.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Max_Len_Even(str):
+    # Split the string into a list of words
+    words = str.split()
+    
+    # Initialize max_len to -1
+    max_len = -1
+    
+    # Loop through each word in the list
+    for word in words:
+        # Calculate the length of the current word
+        word_len = len(word)
+        
+        # Check if the length is even and greater than max_len
+        if word_len % 2 == 0 and word_len > max_len:
+            max_len = word_len
+            break  # We found the first maximum length even word, so we can stop
+    
+    # Return the maximum length of an even word or -1 if none found
+    return max_len
+[END CODE]
+
+### Explanation:
+The function `find_Max_Len_Even` is designed to find the first word in a given string that has an even number of characters and is the longest among such words. The function splits the input string into a list of words, iterates through each word, and checks if the word's length is even and greater than the current maximum length (`max_len`). If such a word is found, `max_len` is updated, and the loop is broken to ensure that the first occurrence is returned. If no even-length word is found, the function returns -1. This approach ensures that the function efficiently finds the required word and stops as soon as it is found, optimizing performance.

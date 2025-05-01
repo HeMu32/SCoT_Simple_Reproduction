@@ -1,0 +1,16 @@
+Input: list1: a nested list structure  
+Output: result_list: a flattened list containing all the elements from the nested lists  
+
+1: Initialize an empty list `result_list` to store the flattened elements.  
+2: If `list1` is empty, return `result_list`.  
+3: Initialize a stack with `list1` as its first element.  
+4: While the stack is not empty:  
+5:     Pop the last element from the stack and assign it to `c_num`.  
+6:     Pop the last element from `c_num` and assign it to `next`.  
+7:     If `c_num` is not empty, push `c_num` back onto the stack.  
+8:     If `next` is a list and not empty:  
+9:         Push `next` onto the stack.  
+10:    Else:  
+11:        Append `next` to `result_list`.  
+12: Reverse `result_list` to restore the original order of elements.  
+13: Return `result_list`.

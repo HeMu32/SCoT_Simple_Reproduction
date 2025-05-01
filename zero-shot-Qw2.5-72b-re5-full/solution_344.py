@@ -1,0 +1,16 @@
+def count_Odd_Squares(n, m):
+    def count_odd_factors(x):
+        count = 0
+        for i in range(1, int(x**0.5) + 1):
+            if x % i == 0:
+                if i % 2 == 1:
+                    count += 1
+                if (x // i) % 2 == 1 and i != x // i:
+                    count += 1
+        return count
+    
+    count = 0
+    for num in range(n, m + 1):
+        if count_odd_factors(num) % 2 == 1:
+            count += 1
+    return count

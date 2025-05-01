@@ -1,0 +1,49 @@
+[BEGIN PROCESS]
+Input: nums: a list of lists of sorted and distinct integers, k: an integer representing the number of top frequent integers to return
+Output: A list of the top k integers that occur most frequently in the given lists
+
+1: Initialize an empty dictionary `freq` to store the frequency of each integer.
+2: Loop through each list in `nums`:
+3:     For each integer in the list, increment its count in `freq`.
+4: Convert the dictionary `freq` into a list of tuples, where each tuple is (integer, frequency).
+5: Use a heap queue (priority queue) to find the top k elements based on their frequency.
+6: Extract the integers from the top k elements and return them as a list.
+[END PROCESS]
+
+[BEGIN CODE]
+import heapq
+
+def func(nums, k):
+    # Initialize a dictionary to store the frequency of each integer
+    freq = {}
+    
+    # Loop through each list in nums
+    for num_list in nums:
+        # For each integer in the list, increment its count in freq
+        for num in num_list:
+            if num in freq:
+                freq[num] += 1
+            else:
+                freq[num] = 1
+    
+    # Convert the dictionary freq into a list of tuples (integer, frequency)
+    freq_list = [(num, count) for num, count in freq.items()]
+    
+    # Use a heap queue to find the top k elements based on their frequency
+    top_k = heapq.nlargest(k, freq_list, key=lambda x: x[1])
+    
+    # Extract the integers from the top k elements and return them as a list
+    return [num for num, count in top_k]
+[END CODE]
+
+### Explanation
+
+1. **Frequency Calculation**: We start by initializing an empty dictionary `freq` to keep track of the frequency of each integer across all lists. We then iterate through each list in `nums` and for each integer in the list, we increment its count in the `freq` dictionary.
+
+2. **Dictionary to List Conversion**: After calculating the frequencies, we convert the dictionary `freq` into a list of tuples, where each tuple contains an integer and its frequency. This is done using a list comprehension.
+
+3. **Heap Queue for Top K Elements**: We use the `heapq.nlargest` function to find the top k elements based on their frequency. The `key=lambda x: x[1]` argument ensures that the elements are compared based on their frequency (the second element in each tuple).
+
+4. **Extracting and Returning the Result**: Finally, we extract the integers from the top k elements and return them as a list. This is done using another list comprehension.
+
+This approach ensures that we efficiently find the top k most frequent integers using a heap queue, which is well-suited for this type of problem.

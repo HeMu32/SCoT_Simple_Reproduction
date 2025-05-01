@@ -1,0 +1,14 @@
+[BEGIN]
+Input: A, B: integers where A ≤ B
+Output: last digit of the result when factorial of A divides factorial of B
+
+1: Initialize variable to 1
+2: If A is equal to B:
+3:     return 1
+4: Else if the difference between B and A is greater than or equal to 5:
+5:     return 0
+6: Else:
+7:     for i from A + 1 to B + 1:
+8:         update variable to (variable * (i % 10)) % 10
+9:     return variable % 10
+[END]

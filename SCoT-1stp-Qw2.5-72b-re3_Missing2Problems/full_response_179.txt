@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: x: an integer number
+Output: A boolean value indicating whether the number is a Keith number or not
+
+1: Convert the number x into a list of its digits.
+2: Determine the length of the list of digits, which will be the number of terms in the sequence.
+3: Initialize a list with the digits of x as the starting sequence.
+4: While the last element in the sequence is less than x:
+5:     Calculate the next term by summing the last n terms of the sequence, where n is the length of the initial list of digits.
+6:     Append the next term to the sequence.
+7: If the last element of the sequence is exactly x, then x is a Keith number.
+8: Return True if x is a Keith number, otherwise return False.
+[END PROCESS]
+
+[BEGIN CODE]
+def is_num_keith(x):
+    # Convert the number into a list of its digits
+    digits = [int(d) for d in str(x)]
+    n = len(digits)
+    
+    # Initialize the sequence with the digits of x
+    sequence = digits[:]
+    
+    # Generate the sequence until the last term is greater than or equal to x
+    while sequence[-1] < x:
+        next_term = sum(sequence[-n:])
+        sequence.append(next_term)
+    
+    # Check if the last term is exactly x
+    return sequence[-1] == x
+[END CODE]
+
+Explanation:
+A Keith number is an integer N that, when its digits are used to form a Fibonacci-like sequence, N appears as a term in this sequence. The process involves:
+- Converting the number into a list of its digits to determine the number of terms to sum for the next term in the sequence.
+- Initializing a sequence with these digits.
+- Generating the sequence by summing the last n terms (where n is the number of digits) and appending the sum to the sequence.
+- Checking if the number x appears in the sequence. If it does, x is a Keith number; otherwise, it is not.

@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: n: number of trials, k: number of successes, p: probability of success on an individual trial
+Output: The binomial probability of getting exactly k successes in n trials
+
+1: Calculate the binomial coefficient (n choose k) which is the number of ways to choose k successes out of n trials.
+2: Calculate the probability of k successes, which is p^k.
+3: Calculate the probability of n-k failures, which is (1-p)^(n-k).
+4: Multiply the binomial coefficient by the probability of k successes and the probability of n-k failures to get the binomial probability.
+5: Return the binomial probability.
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def binomial_probability(n, k, p):
+    # Calculate the binomial coefficient (n choose k)
+    binom_coeff = math.comb(n, k)
+    
+    # Calculate the probability of k successes
+    prob_successes = p ** k
+    
+    # Calculate the probability of n-k failures
+    prob_failures = (1 - p) ** (n - k)
+    
+    # Calculate the binomial probability
+    binom_prob = binom_coeff * prob_successes * prob_failures
+    
+    return binom_prob
+[END CODE]
+
+### Explanation
+
+The binomial probability formula is given by:
+
+\[ P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k} \]
+
+Where:
+- \( \binom{n}{k} \) is the binomial coefficient, which represents the number of ways to choose k successes out of n trials.
+- \( p^k \) is the probability of k successes.
+- \( (1-p)^{n-k} \) is the probability of n-k failures.
+
+The function `binomial_probability` calculates the binomial probability using the above formula. It first computes the binomial coefficient using `math.comb(n, k)`, then calculates the probability of k successes and the probability of n-k failures. Finally, it multiplies these values together to get the binomial probability and returns it.

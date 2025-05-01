@@ -1,0 +1,7 @@
+Input: str1: a string  
+Output: result: a string with lowercase substrings removed  
+
+1: Define a lambda function `remove_lower` that takes a string `text` as input  
+2:     Use regex to substitute all lowercase letters in `text` with an empty string  
+3: Apply the `remove_lower` function to `str1` and store the result in `result`  
+4: Return `result`

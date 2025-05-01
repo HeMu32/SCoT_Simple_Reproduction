@@ -1,0 +1,40 @@
+[BEGIN PROCESS]
+Input: l: a list of colors, n: an integer representing the number of colors to choose
+Output: A list of all combinations of `n` colors from the list `l` with repetitions allowed
+
+1: Initialize an empty list `result` to store the combinations.
+2: Use a recursive function to generate combinations.
+3: The recursive function should take the current combination, the remaining number of colors to choose, and the starting index in the list `l`.
+4: If the remaining number of colors to choose is 0, add the current combination to `result`.
+5: Otherwise, loop through the list `l` starting from the current index:
+6:     Add the current color to the combination.
+7:     Recursively call the function with the updated combination, the remaining number of colors decreased by 1, and the current index (to allow repetitions).
+8:     Remove the last color from the combination (backtrack).
+9: Return the `result` list containing all combinations.
+[END PROCESS]
+
+[BEGIN CODE]
+def combinations_colors(l, n):
+    def generate_combinations(current, remaining, start):
+        if remaining == 0:
+            result.append(list(current))
+            return
+        for i in range(start, len(l)):
+            current.append(l[i])
+            generate_combinations(current, remaining - 1, i)
+            current.pop()
+
+    result = []
+    generate_combinations([], n, 0)
+    return result
+[END CODE]
+
+### Explanation:
+The function `combinations_colors` generates all combinations of `n` colors from the list `l` with repetitions allowed. It uses a recursive helper function `generate_combinations` to build the combinations. The helper function takes three parameters:
+- `current`: The current combination being built.
+- `remaining`: The number of colors still needed to complete the combination.
+- `start`: The starting index in the list `l` from which to choose the next color.
+
+The base case of the recursion is when `remaining` is 0, at which point the current combination is added to the result list. Otherwise, the function loops through the list `l` starting from the `start` index, adds the current color to the combination, and recursively calls itself with the updated parameters. After the recursive call, the last color is removed from the combination (backtracking) to explore other possibilities.
+
+This approach ensures that all combinations are generated, and the use of backtracking allows for efficient exploration of the solution space.

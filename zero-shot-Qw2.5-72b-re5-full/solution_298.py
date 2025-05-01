@@ -1,0 +1,13 @@
+def intersection_nested_lists(l1, l2):
+    """
+    Write a function to find the nested list elements which are present in another list.
+    """
+    def to_tuple(lst):
+        return tuple(to_tuple(i) if isinstance(i, list) else i for i in lst)
+    
+    set1 = set(map(to_tuple, l1))
+    set2 = set(map(to_tuple, l2))
+    
+    intersection = set1 & set2
+    
+    return [list(i) if isinstance(i, tuple) else i for i in intersection]

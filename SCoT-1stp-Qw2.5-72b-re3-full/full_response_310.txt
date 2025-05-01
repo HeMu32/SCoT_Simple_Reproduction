@@ -1,0 +1,18 @@
+[BEGIN PROCESS]
+Input: str1: a string  
+Output: tuple1: a tuple containing each character of the string as its elements
+
+1: Convert the string `str1` into a tuple where each character of the string becomes an element of the tuple.
+2: Return the tuple.
+[END PROCESS]
+
+[BEGIN CODE]
+def string_to_tuple(str1):
+    # Convert the string to a tuple of characters
+    tuple1 = tuple(str1)
+    # Return the resulting tuple
+    return tuple1
+[END CODE]
+
+### Explanation:
+The function `string_to_tuple` takes a single string `str1` as input. The goal is to convert this string into a tuple where each character of the string becomes an individual element of the tuple. This is achieved using the `tuple()` function, which can take an iterable (like a string) and convert it into a tuple. The resulting tuple is then returned by the function. This approach is straightforward and leverages Python's built-in functionality to achieve the desired result.

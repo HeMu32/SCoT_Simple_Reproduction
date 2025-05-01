@@ -1,0 +1,41 @@
+Certainly! Let's break down the task and then implement the solution.
+
+### Task Understanding
+The task is to write a function `recursive_list_sum` that calculates the sum of all numbers in a nested list. The list can contain integers and other lists, and the function should be able to handle this nested structure recursively.
+
+### Solving Process
+[BEGIN PROCESS]
+Input: data_list: a list that can contain integers or other lists
+Output: total_sum: an integer representing the sum of all integers in the nested list
+
+1: Define a function `recursive_list_sum` that takes a list `data_list` as input.
+2: Initialize a variable `total_sum` to 0 to store the cumulative sum.
+3: Use a loop to iterate over each element in `data_list`.
+4:     For each element:
+5:         If the element is an integer:
+6:             Add the integer to `total_sum`.
+7:         If the element is a list:
+8:             Recursively call `recursive_list_sum` on the sublist and add the result to `total_sum`.
+9: Return `total_sum` after all elements have been processed.
+[END PROCESS]
+
+### Code Implementation
+[BEGIN CODE]
+def recursive_list_sum(data_list):
+    total_sum = 0
+    for element in data_list:
+        if isinstance(element, int):
+            total_sum += element
+        elif isinstance(element, list):
+            total_sum += recursive_list_sum(element)
+    return total_sum
+[END CODE]
+
+### Explanation
+1. **Initialization**: We start by initializing `total_sum` to 0. This variable will hold the cumulative sum of all integers in the nested list.
+2. **Iteration**: We use a `for` loop to iterate over each element in the input list `data_list`.
+3. **Type Checking**: For each element, we check if it is an integer using `isinstance(element, int)`. If it is, we add it to `total_sum`.
+4. **Recursion**: If the element is a list (checked using `isinstance(element, list)`), we recursively call `recursive_list_sum` on this sublist and add the result to `total_sum`.
+5. **Return**: After processing all elements, we return `total_sum`.
+
+This approach ensures that the function can handle any level of nesting in the input list and correctly computes the sum of all integers.

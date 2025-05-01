@@ -1,0 +1,10 @@
+def smallest_missing(A, left_element, right_element): 
+    if not A or A[0] != left_element:
+        return left_element
+    
+    n = len(A)
+    for i in range(1, n):
+        if A[i] != A[i - 1] + 1:
+            return A[i - 1] + 1
+    
+    return A[-1] + 1

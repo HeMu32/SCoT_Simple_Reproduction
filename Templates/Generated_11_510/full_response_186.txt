@@ -1,0 +1,10 @@
+[BEGIN]
+Input: text: a string, patterns: a list of string patterns
+Output: 'Matched!' if any pattern is found in the text, otherwise 'Not Matched!'
+
+1: for each pattern in patterns:
+2:     if the pattern is found in the text using regex:
+3:         return 'Matched!'
+4:     else:
+5:         return 'Not Matched!'
+[END]

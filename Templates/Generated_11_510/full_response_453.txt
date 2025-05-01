@@ -1,0 +1,22 @@
+[BEGIN]
+Input: n: an integer
+Output: res: the sum of even factors of n
+
+1: If n is odd, return 0
+2: Initialize res to 1
+3: For i from 2 to the square root of n (inclusive):
+4:     Initialize count to 0
+5:     Initialize curr_sum to 1
+6:     Initialize curr_term to 1
+7:     While n is divisible by i:
+8:         Increment count by 1
+9:         Divide n by i (integer division)
+10:        If i is 2 and count is 1:
+11:            Set curr_sum to 0
+12:        Multiply curr_term by i
+13:        Add curr_term to curr_sum
+14:     Multiply res by curr_sum
+15: If n is greater than or equal to 2:
+16:    Multiply res by (1 + n)
+17: Return res
+[END]

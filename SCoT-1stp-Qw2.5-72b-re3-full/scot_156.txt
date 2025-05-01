@@ -1,0 +1,9 @@
+Input: tuple_str: a tuple containing string values
+Output: tuple_int: a tuple containing the integer values converted from the string values
+
+1: Initialize an empty list to store the integer values
+2: Loop through each element in the input tuple
+3: Convert the current string element to an integer
+4: Append the converted integer to the list
+5: Convert the list of integers to a tuple
+6: Return the tuple of integers

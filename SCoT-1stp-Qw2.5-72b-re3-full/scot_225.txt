@@ -1,0 +1,12 @@
+Input: arr: a list of integers, low: the starting index, high: the ending index
+Output: The minimum element in the array
+
+1: If the array is not rotated (i.e., the element at the low index is less than or equal to the element at the high index), return the element at the low index.
+2: Initialize min_element as the first element of the array.
+3: While low is less than or equal to high:
+4:     Calculate mid as the average of low and high (integer division).
+5:     If the element at mid is greater than the element at the next index, the minimum element is at the next index, so return the element at the next index.
+6:     If the element at mid is less than the element at the previous index, the minimum element is at mid, so return the element at mid.
+7:     If the element at mid is greater than the element at low, the minimum element is in the right half, so set low to mid + 1.
+8:     Otherwise, the minimum element is in the left half, so set high to mid - 1.
+9: Return min_element.

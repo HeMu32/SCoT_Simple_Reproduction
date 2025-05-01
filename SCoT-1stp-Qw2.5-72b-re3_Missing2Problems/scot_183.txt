@@ -1,0 +1,9 @@
+Input: arr: a list of integers, n: the length of the list, k: the difference to find between pairs
+Output: count: the number of distinct pairs (i, j) such that arr[i] - arr[j] = k or arr[j] - arr[i] = k
+
+1: Initialize a variable count to 0 to keep track of the number of valid pairs.
+2: Create a set from the array to remove duplicates and allow for O(1) look-up times.
+3: For each element x in the set:
+4:     If the element (x + k) is also in the set:
+5:         Increment count by 1.
+6: Return count.

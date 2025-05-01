@@ -1,0 +1,7 @@
+Input: arr: a list of integers, lens: the length of the list, n: an integer divisor
+Output: The remainder of the product of all elements in arr divided by n
+
+1: Initialize a variable `product` to 1. This variable will hold the cumulative product of the elements in the array.
+2: Loop through each element in the array `arr`.
+3: For each element, multiply it with `product` and take the modulo `n` of the result to avoid large number overflow.
+4: After the loop, return the value of `product` which now holds the remainder of the product of all elements divided by `n`.

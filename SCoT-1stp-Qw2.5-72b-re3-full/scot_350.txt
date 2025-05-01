@@ -1,0 +1,9 @@
+Input: s: a string
+Output: min_length: the minimum length of the string after removing all occurrences of any one character
+
+1: Initialize min_length to the length of the string s
+2: for each unique character c in s:
+3:     Create a new string s_new by removing all occurrences of c from s
+4:     if the length of s_new is less than min_length:
+5:         Update min_length to the length of s_new
+6: return min_length

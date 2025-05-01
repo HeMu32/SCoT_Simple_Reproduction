@@ -1,0 +1,45 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of arr
+Output: ans: the maximum length of the subsequence with the difference between adjacent elements being 1
+
+1: Initialize a dictionary `dp` to store the maximum length of subsequence ending with a specific number.
+2: Initialize a variable `max_len` to 1, as the minimum length of any subsequence is 1.
+3: For each element `num` in `arr`:
+4:     If `num - 1` is in `dp`, then the current element can extend the subsequence ending with `num - 1`.
+5:     Update `dp[num]` to be `dp[num - 1] + 1` if `num - 1` is in `dp`, otherwise set `dp[num]` to 1.
+6:     Update `max_len` to be the maximum of `max_len` and `dp[num]`.
+7: Return `max_len` as the result.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_len_sub(arr, n):
+    dp = {}
+    max_len = 1
+    for num in arr:
+        if num - 1 in dp:
+            dp[num] = dp[num - 1] + 1
+        else:
+            dp[num] = 1
+        max_len = max(max_len, dp[num])
+    return max_len
+[END CODE]
+
+### Explanation:
+The function `max_len_sub` is designed to find the maximum length of a subsequence in the given array `arr` where the difference between adjacent elements is exactly 1. The approach uses dynamic programming to keep track of the longest subsequence ending with each number in the array.
+
+1. **Initialization**:
+   - A dictionary `dp` is used to store the maximum length of the subsequence ending with a specific number.
+   - `max_len` is initialized to 1, as the minimum length of any subsequence is 1.
+
+2. **Iterating through the array**:
+   - For each element `num` in the array, we check if `num - 1` is already in the dictionary `dp`.
+   - If `num - 1` is in `dp`, it means we can extend the subsequence ending with `num - 1` by including `num`. Therefore, we set `dp[num]` to `dp[num - 1] + 1`.
+   - If `num - 1` is not in `dp`, it means `num` starts a new subsequence, so we set `dp[num]` to 1.
+
+3. **Updating the maximum length**:
+   - After updating `dp[num]`, we update `max_len` to be the maximum of its current value and `dp[num]`.
+
+4. **Returning the result**:
+   - Finally, we return `max_len`, which represents the maximum length of the subsequence with the required property.
+
+This approach ensures that we efficiently find the longest subsequence with the desired property in linear time, O(n), where n is the length of the array.

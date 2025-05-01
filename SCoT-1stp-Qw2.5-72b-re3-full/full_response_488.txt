@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: a: the side length of a regular pentagon
+Output: area: the area of the pentagon
+
+1: Define the formula for the area of a regular pentagon, which is (1/4) * sqrt(5 * (5 + 2 * sqrt(5))) * a^2.
+2: Calculate the area using the formula.
+3: Return the calculated area.
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def area_pentagon(a):
+    # Calculate the area using the formula for a regular pentagon
+    area = (1/4) * math.sqrt(5 * (5 + 2 * math.sqrt(5))) * a**2
+    return area
+[END CODE]
+
+### Explanation:
+The function `area_pentagon(a)` calculates the area of a regular pentagon given the side length `a`. The formula used is derived from the geometric properties of a regular pentagon and is given by:
+
+\[ \text{Area} = \frac{1}{4} \sqrt{5(5 + 2\sqrt{5})} \times a^2 \]
+
+This formula is implemented in the function using Python's `math.sqrt` function to handle the square root calculations. The result is then returned as the area of the pentagon.

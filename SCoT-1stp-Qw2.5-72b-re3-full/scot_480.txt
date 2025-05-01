@@ -1,0 +1,12 @@
+Input: str1: a string
+Output: max_char: the character that occurs the most in the string
+
+1: Initialize an empty dictionary to store the frequency of each character
+2: For each character (char) in str1:
+3:     If char is not in the dictionary, add it with a count of 1
+4:     If char is already in the dictionary, increment its count by 1
+5: Initialize max_char to None and max_count to 0
+6: For each key (char) and value (count) in the dictionary:
+7:     If count is greater than max_count:
+8:         Set max_char to char and max_count to count
+9: Return max_char

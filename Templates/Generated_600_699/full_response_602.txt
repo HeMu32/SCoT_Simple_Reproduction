@@ -1,0 +1,8 @@
+[BEGIN]
+Input: str1: a string  
+Output: ch: the first repeated character in str1 or "None" if no repeated character is found  
+1: for each character c and its index in str1:  
+2:     if the count of c in the substring from the start to the current index (inclusive) is greater than 1:  
+3:         return c  
+4: return "None"  
+[END]

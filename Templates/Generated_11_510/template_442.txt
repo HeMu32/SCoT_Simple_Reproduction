@@ -1,0 +1,11 @@
+Input: nums: an array of integers  
+Output: ratio: the ratio of positive numbers in nums  
+1: Initialize n to the length of nums  
+2: Initialize n1 to 0  
+3: for each element x in nums do  
+4:     if x is greater than 0 then  
+5:         increment n1 by 1  
+6:     else  
+7:         do nothing  
+8: Calculate the ratio of positive numbers as n1 divided by n  
+9: Return the ratio rounded to 2 decimal places

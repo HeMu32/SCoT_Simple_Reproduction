@@ -1,0 +1,12 @@
+[BEGIN]
+Input: string: a string to check
+Output: "Valid" if the string starts and ends with the same character, "Invalid" otherwise
+
+1: Define a regex pattern that matches strings starting and ending with the same character:
+   - The pattern should match a single character or a string where the first and last characters are the same.
+2: Use the `re.search` function to check if the string matches the regex pattern.
+3: If the string matches the pattern:
+   3.1: Return "Valid"
+4: Otherwise:
+   4.1: Return "Invalid"
+[END]

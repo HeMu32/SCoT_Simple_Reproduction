@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: m, n: integers representing the dimensions of a rectangle.
+Output: count: the number of squares that can be formed within the rectangle.
+
+1: Initialize a variable `count` to 0 to keep track of the number of squares.
+2: Determine the smaller dimension between `m` and `n` and store it in `min_dim`.
+3: Loop from `1` to `min_dim` (inclusive) to consider squares of all possible sizes.
+4: For each square size `i`:
+5:     Calculate the number of squares of size `i` that can fit horizontally in the rectangle, which is `m - i + 1`.
+6:     Calculate the number of squares of size `i` that can fit vertically in the rectangle, which is `n - i + 1`.
+7:     Multiply the horizontal and vertical counts to get the total number of squares of size `i` that can fit in the rectangle.
+8:     Add this total to `count`.
+9: Return `count`.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Squares(m, n):
+    count = 0
+    min_dim = min(m, n)
+    for i in range(1, min_dim + 1):
+        horizontal_squares = m - i + 1
+        vertical_squares = n - i + 1
+        count += horizontal_squares * vertical_squares
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_Squares(m, n)` calculates the total number of squares that can be formed within a rectangle of dimensions `m` by `n`. The key idea is to consider squares of all possible sizes from `1x1` up to the size of the smaller dimension of the rectangle. For each square size, the function calculates how many such squares can fit horizontally and vertically, and then multiplies these two numbers to get the total number of squares of that size. This total is then added to the overall count. The function finally returns the total count of squares.

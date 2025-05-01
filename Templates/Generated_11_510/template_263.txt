@@ -1,0 +1,5 @@
+Input: d1, d2: two dictionaries  
+Output: d: a merged dictionary  
+1:  create a new dictionary d by copying all key-value pairs from d1  
+2:  update d with all key-value pairs from d2, overwriting any existing keys in d1  
+3:  return the merged dictionary d

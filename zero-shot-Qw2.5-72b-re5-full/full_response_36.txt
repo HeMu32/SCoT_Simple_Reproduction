@@ -1,0 +1,14 @@
+[BEGIN CODE]
+```python
+def find_Nth_Digit(numerator, denominator, n):
+    """ 
+    Write a python function to find the nth digit in the proper fraction of two given numbers. 
+    """
+    quotient = str(numerator // denominator)
+    decimal_part = str((numerator % denominator) / denominator)[2:]  # Skip the "0."
+    if n <= len(quotient):
+        return int(quotient[n - 1])
+    else:
+        return int(decimal_part[n - len(quotient) - 1])
+```
+[END CODE]

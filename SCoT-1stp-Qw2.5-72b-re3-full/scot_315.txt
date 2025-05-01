@@ -1,0 +1,11 @@
+Input: str: a string containing words separated by spaces
+Output: The length of the first longest word that has an even number of characters. If no such word exists, return -1.
+
+1: Split the string into a list of words.
+2: Initialize a variable max_len to -1 to keep track of the maximum length of an even word found.
+3: Loop through each word in the list:
+4:     Calculate the length of the current word.
+5:     If the length is even and greater than max_len:
+6:         Update max_len to the length of the current word.
+7:         Break the loop as we are looking for the first maximum length even word.
+8: Return max_len.

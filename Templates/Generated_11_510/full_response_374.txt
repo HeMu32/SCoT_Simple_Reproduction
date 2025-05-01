@@ -1,0 +1,13 @@
+[BEGIN]
+Input: str: a string  
+Output: A list of all permutations of the string, including duplicates  
+
+1: If the length of str is 0, return a list containing an empty string  
+2: Recursively call the function with the substring of str from the second character to the end, and store the result in prev_list  
+3: Initialize an empty list next_list to store the permutations of the current string  
+4: For each string in prev_list:  
+5:     For each position in the current string:  
+6:         Create a new string by inserting the first character of str at the current position in the string from prev_list  
+7:         If the new string is not already in next_list, append it to next_list  
+8: Return next_list  
+[END]

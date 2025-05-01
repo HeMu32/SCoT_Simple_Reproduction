@@ -1,0 +1,6 @@
+Input: test_tup: a tuple containing binary digits (0s and 1s)
+Output: an integer that represents the binary number in the tuple
+
+1: Convert the tuple into a string, where each element of the tuple is concatenated together.
+2: Use the int() function with base 2 to convert the binary string into an integer.
+3: Return the integer.

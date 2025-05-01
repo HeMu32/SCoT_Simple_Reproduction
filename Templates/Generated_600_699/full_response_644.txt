@@ -1,0 +1,11 @@
+[BEGIN]
+Input: input: a list, k: an integer
+Output: a list with the elements from the start up to position k (inclusive) reversed
+
+1: Split the list into two parts:
+   1.1: The first part from the start up to the k-th element (inclusive)
+   1.2: The second part from the k+1-th element to the end
+2: Reverse the first part of the list
+3: Concatenate the reversed first part with the second part of the list
+4: Return the concatenated list
+[END]

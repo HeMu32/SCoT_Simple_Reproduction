@@ -1,0 +1,16 @@
+Input: n: an integer representing the position of the smart number to find
+Output: the n-th smart number
+
+1: Initialize an array `primes` of size MAX with all elements set to 0.
+2: Initialize an empty list `result` to store the smart numbers.
+3: For each integer `i` from 2 to MAX - 1:
+4:     If `primes[i]` is 0:
+5:         Set `primes[i]` to 1.
+6:         Initialize `j` to `i * 2`.
+7:         While `j` is less than MAX:
+8:             Decrement `primes[j]` by 1.
+9:             If `primes[j] + 3` equals 0:
+10:                Append `j` to `result`.
+11:            Increment `j` by `i`.
+12: Sort the `result` list.
+13: Return the n-th element of `result` (index `n - 1`).

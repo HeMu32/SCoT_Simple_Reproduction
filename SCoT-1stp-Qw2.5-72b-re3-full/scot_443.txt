@@ -1,0 +1,9 @@
+Input: list1: a list of integers
+Output: The largest negative number in the list, or None if there are no negative numbers
+
+1: Initialize a variable `max_neg` to None to keep track of the largest negative number found
+2: For each number `num` in list1:
+3:     If `num` is less than 0 (negative) and `max_neg` is None or `num` is greater than `max_neg`:
+4:         Set `max_neg` to `num`
+5: After the loop, if `max_neg` is still None, return None (no negative numbers found)
+6: Otherwise, return `max_neg` (the largest negative number found)

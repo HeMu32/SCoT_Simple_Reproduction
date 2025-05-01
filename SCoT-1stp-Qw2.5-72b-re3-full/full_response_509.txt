@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: N: an odd integer
+Output: avg: the average of all odd numbers up to and including N
+
+1: Initialize a variable `sum_of_odds` to 0 to store the sum of odd numbers.
+2: Initialize a variable `count_of_odds` to 0 to count the number of odd numbers.
+3: For each number `i` from 1 to N (inclusive):
+4:     If `i` is odd (i.e., `i % 2` is not equal to 0):
+5:         Add `i` to `sum_of_odds`.
+6:         Increment `count_of_odds` by 1.
+7: Calculate the average `avg` as `sum_of_odds` divided by `count_of_odds`.
+8: Return `avg`.
+[END PROCESS]
+
+[BEGIN CODE]
+def average_Odd(N):
+    sum_of_odds = 0
+    count_of_odds = 0
+    for i in range(1, N + 1):
+        if i % 2 != 0:
+            sum_of_odds += i
+            count_of_odds += 1
+    avg = sum_of_odds / count_of_odds
+    return avg
+[END CODE]
+
+### Explanation:
+The function `average_Odd` calculates the average of all odd numbers up to and including a given odd number `N`. The process involves iterating through all numbers from 1 to `N`, checking if each number is odd, and if so, adding it to a running total (`sum_of_odds`) and incrementing a counter (`count_of_odds`). After the loop, the average is calculated by dividing the total sum of the odd numbers by the count of odd numbers. The function then returns this average. This approach ensures that only odd numbers are considered in the calculation, and the average is accurately computed.

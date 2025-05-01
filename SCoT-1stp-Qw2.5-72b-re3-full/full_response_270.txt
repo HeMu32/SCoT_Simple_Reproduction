@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: an integer representing the length of the list
+Output: sum: an integer representing the sum of even numbers at even positions in the list
+1: Initialize sum to 0
+2: for each index i from 0 to n-1, incrementing by 2 (to only consider even indices) do
+3:     if arr[i] is even then
+4:         Add arr[i] to sum
+5: return sum
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_even_and_even_index(arr, n):
+    sum = 0
+    for i in range(0, n, 2):  # Loop through even indices
+        if arr[i] % 2 == 0:  # Check if the element at the even index is even
+            sum += arr[i]  # Add the even element to the sum
+    return sum
+[END CODE]
+
+### Explanation:
+The function `sum_even_and_even_index` is designed to calculate the sum of even numbers located at even indices in a given list `arr`. The process involves:
+- Initializing a variable `sum` to 0 to keep track of the total sum.
+- Iterating through the list using a for loop, but only considering even indices (0, 2, 4, ...).
+- For each element at an even index, checking if the element is even.
+- If the element is even, adding it to the `sum`.
+- Finally, returning the `sum` after the loop completes.
+
+This approach ensures that only even numbers at even positions are considered, and the sum is correctly calculated and returned.

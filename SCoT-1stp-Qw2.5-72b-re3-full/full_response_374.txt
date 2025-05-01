@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: str: a string for which permutations are to be generated
+Output: Print all permutations of the given string, including duplicates
+
+1: If the length of the string is 1, print the string and return (base case)
+2: For each character in the string:
+3:     Remove the character from the string and store it in a variable
+4:     Generate permutations of the remaining string (recursive call)
+5:     For each permutation generated in the recursive call:
+6:         Add the removed character to the beginning of the permutation
+7:         Print the new permutation
+[END PROCESS]
+
+[BEGIN CODE]
+def permute_string(str):
+    # Base case: if the string is a single character, print it
+    if len(str) == 1:
+        print(str)
+        return
+    
+    # Recursive case: for each character in the string
+    for i in range(len(str)):
+        # Remove the character at position i
+        current_char = str[i]
+        # Remaining string after removing the character
+        remaining_str = str[:i] + str[i+1:]
+        
+        # Generate permutations of the remaining string
+        for perm in permute_string(remaining_str):
+            # Add the removed character to the beginning of each permutation
+            print(current_char + perm)
+
+# Example usage:
+permute_string("abc")
+[END CODE]
+
+### Explanation:
+The function `permute_string` is designed to print all permutations of a given string, including duplicates. The process involves recursion, where the function calls itself with a smaller version of the problem (i.e., the string with one character removed). The base case is when the string has only one character, in which case it is printed directly. For longer strings, the function iterates over each character, removes it, and recursively generates permutations of the remaining string. Each permutation is then prefixed with the removed character and printed. This approach ensures that all possible permutations are generated and printed.

@@ -1,0 +1,6 @@
+Input: test_list1, test_list2: lists of tuples
+Output: res: a set of tuples that are common to both lists, irrespective of the order of elements in the tuples
+1: Convert each tuple in test_list1 to a sorted tuple and then to a set.
+2: Convert each tuple in test_list2 to a sorted tuple and then to a set.
+3: Find the intersection of the two sets created in steps 1 and 2.
+4: Return the result of the intersection as res.

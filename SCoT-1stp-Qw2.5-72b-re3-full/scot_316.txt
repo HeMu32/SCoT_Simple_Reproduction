@@ -1,0 +1,8 @@
+Input: A: a sorted list of integers, x: an integer to find the last occurrence of
+Output: index: the index of the last occurrence of x in A, or -1 if x is not found
+
+1: Initialize index to -1
+2: Loop through each element in A with its index
+3:     If the current element equals x
+4:         Set index to the current index
+5: After the loop, return index

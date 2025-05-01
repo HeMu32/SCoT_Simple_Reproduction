@@ -1,0 +1,4 @@
+Input: string: a string  
+Output: upper_string: the input string converted to upper case  
+1: call the upper method on the input string  
+2: return the result of the upper method

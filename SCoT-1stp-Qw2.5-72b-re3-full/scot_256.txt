@@ -1,0 +1,13 @@
+Input: n: a non-negative integer
+Output: count: the number of prime numbers less than n
+
+1: Initialize count to 0 (to keep track of the number of primes)
+2: Loop from 2 to n - 1 (since 0 and 1 are not prime)
+3:     Initialize is_prime to True (assume the current number is prime)
+4:     Loop from 2 to the square root of the current number (inclusive)
+5:         If the current number is divisible by any number in this range:
+6:             Set is_prime to False
+7:             Break the loop
+8:     If is_prime is still True after the inner loop:
+9:         Increment count by 1
+10: Return count

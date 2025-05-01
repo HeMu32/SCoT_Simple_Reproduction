@@ -1,0 +1,7 @@
+Input: n: an integer
+Output: True or False
+1: Calculate the remainder of n divided by 11
+2: If the remainder is 0:
+3:     Return True
+4: Else:
+5:     Return False

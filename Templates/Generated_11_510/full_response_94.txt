@@ -1,0 +1,10 @@
+[BEGIN]
+Input: test_list: a list of tuples where each tuple contains at least two elements.
+Output: res: the first element of the tuple with the minimum second element.
+
+1: Use the `min` function with a key that extracts the second element of each tuple.
+2:     The `itemgetter(1)` function is used as the key to extract the second element.
+3: The `min` function returns the tuple with the smallest second element.
+4: Extract the first element of this tuple.
+5: Return this first element as the result.
+[END]

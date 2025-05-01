@@ -1,0 +1,8 @@
+Input: list1: a list of numbers
+Output: positions: a list of indices where the maximum value occurs in list1
+
+1: Find the maximum value in list1.
+2: Initialize an empty list called positions to store the indices of the maximum value.
+3: Loop through the list1 with index and value.
+4: For each element, if the value is equal to the maximum value, append the index to the positions list.
+5: After the loop, return the positions list.

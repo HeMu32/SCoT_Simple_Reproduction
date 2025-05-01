@@ -1,0 +1,11 @@
+Input: n: an integer
+Output: A boolean value indicating whether the number can be represented as the product of two squares.
+
+1: Initialize a variable `i` to 0.
+2: Loop while `i * i` is less than or equal to `n`:
+3:     Calculate `j` as the square root of `n / (i * i)`.
+4:     If `j` is an integer and `i * i * j * j` equals `n`:
+5:         Return True, as `n` can be represented as the product of two squares.
+6:     Increment `i` by 1.
+7: If the loop completes without finding such `i` and `j`:
+8:     Return False, as `n` cannot be represented as the product of two squares.

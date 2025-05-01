@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number whose odd bits are to be set
+Output: The integer with all odd bits set to 1
+
+1: Initialize a variable `mask` to 0. This will be used to create a mask with all odd bits set.
+2: Initialize a variable `bit_position` to 1. This will be used to determine the current bit position.
+3: Loop while `bit_position` is less than or equal to the number of bits in `n`:
+   a: If `bit_position` is odd, set the corresponding bit in `mask` to 1.
+   b: Increment `bit_position` by 1.
+4: Use bitwise OR operation between `n` and `mask` to set all odd bits in `n`.
+5: Return the result of the bitwise OR operation.
+[END PROCESS]
+
+[BEGIN CODE]
+def odd_bit_set_number(n):
+    mask = 0
+    bit_position = 1
+    while bit_position <= n.bit_length():
+        if bit_position % 2 != 0:
+            mask |= (1 << (bit_position - 1))
+        bit_position += 1
+    return n | mask
+[END CODE]
+
+### Explanation:
+- **Mask Creation**: The `mask` is created by setting all the odd bit positions to 1. For example, for a 4-bit number, the odd bit positions are 1 and 3 (0-indexed). So, the mask would be `0101` in binary, which is `5` in decimal.
+- **Bit Position**: The `bit_position` variable is used to iterate through the bit positions of the number. It starts at 1 (the first bit) and increments by 1 in each iteration.
+- **Bitwise OR**: The final result is obtained by performing a bitwise OR operation between the original number `n` and the `mask`. This operation sets all the odd bits in `n` to 1, while leaving the even bits unchanged.
+
+This approach ensures that all odd bits in the given number are set to 1, and the function returns the modified number.

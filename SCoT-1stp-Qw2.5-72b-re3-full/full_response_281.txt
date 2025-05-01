@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: test_list: a list of elements
+Output: A boolean value indicating whether all elements in the list are unique
+
+1: Initialize an empty set to keep track of seen elements
+2: Iterate over each element in the test_list
+3:   If the element is already in the set:
+4:     Return False, as the element is not unique
+5:   Otherwise:
+6:     Add the element to the set
+7: If the loop completes without finding duplicates:
+8:   Return True, indicating all elements are unique
+[END PROCESS]
+
+[BEGIN CODE]
+def all_unique(test_list):
+    seen = set()
+    for element in test_list:
+        if element in seen:
+            return False
+        seen.add(element)
+    return True
+[END CODE]
+
+**Explanation:**
+The function `all_unique` checks if all elements in the given list `test_list` are unique. It uses a set `seen` to keep track of elements that have already been encountered. As the function iterates over each element in the list, it checks if the element is already in the set. If it is, the function returns `False` because the element is not unique. If the element is not in the set, it is added to the set. If the loop completes without finding any duplicates, the function returns `True`, indicating that all elements in the list are unique. This approach is efficient because checking for membership in a set and adding elements to a set are both average O(1) operations, making the overall time complexity of the function O(n), where n is the number of elements in the list.

@@ -1,0 +1,5 @@
+def sum_Of_Series(n): 
+    """ 
+    Write a python function to find the cube sum of first n natural numbers. 
+    """ 
+    return sum([i**3 for i in range(1, n+1)])

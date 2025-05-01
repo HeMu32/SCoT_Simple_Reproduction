@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: count: the number of integers from 1 to n (inclusive) that have an odd number of set bits (1s) in their binary representation
+
+1: Initialize a variable `count` to 0 to keep track of the number of integers with an odd number of set bits.
+2: For each integer `i` from 1 to n (inclusive):
+3:     Convert `i` to its binary representation.
+4:     Count the number of set bits (1s) in the binary representation of `i`.
+5:     If the number of set bits is odd:
+6:         Increment `count` by 1.
+7: Return `count`.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_With_Odd_SetBits(n):
+    count = 0
+    for i in range(1, n + 1):
+        # Convert the number to binary and count the number of 1s
+        num_of_set_bits = bin(i).count('1')
+        # Check if the number of set bits is odd
+        if num_of_set_bits % 2 != 0:
+            count += 1
+    return count
+[END CODE]
+
+Explanation:
+The function `count_With_Odd_SetBits` takes an integer `n` as input and returns the count of integers from 1 to `n` that have an odd number of set bits in their binary representation. The process involves iterating over each integer from 1 to `n`, converting each integer to its binary form, counting the number of 1s (set bits) in the binary form, and checking if this count is odd. If it is, the `count` variable is incremented. Finally, the function returns the total count of such integers. The `bin` function is used to convert an integer to its binary representation, and the `count` method of the string is used to count the number of '1's in the binary string.

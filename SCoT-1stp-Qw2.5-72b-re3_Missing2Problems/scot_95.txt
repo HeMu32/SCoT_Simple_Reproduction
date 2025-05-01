@@ -1,0 +1,9 @@
+Input: lst: a list of sublists containing any type of elements
+Output: min_length: the minimum length of the sublists in the given list
+
+1: Initialize min_length to a very large number (or use the length of the first sublist as a starting point)
+2: For each sublist in lst:
+3:     Compute the length of the current sublist
+4:     If the length of the current sublist is less than min_length:
+5:         Update min_length to the length of the current sublist
+6: Return min_length

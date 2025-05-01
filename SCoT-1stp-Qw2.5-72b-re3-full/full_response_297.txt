@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: list1: a nested list of elements
+Output: flat_list: a list containing all the elements from the nested lists, flattened into a single list
+
+1: Initialize an empty list flat_list
+2: Define a helper function flatten that takes a single argument item
+3:     If item is a list:
+4:         For each element in item:
+5:             Recursively call flatten on the element
+6:     Else:
+7:         Append item to flat_list
+8: For each item in list1:
+9:     Call the flatten function on item
+10: Return flat_list
+[END PROCESS]
+
+[BEGIN CODE]
+def flatten_list(list1):
+    flat_list = []
+
+    def flatten(item):
+        if isinstance(item, list):
+            for element in item:
+                flatten(element)
+        else:
+            flat_list.append(item)
+
+    for item in list1:
+        flatten(item)
+    
+    return flat_list
+[END CODE]
+
+### Explanation:
+The function `flatten_list` is designed to take a nested list and return a single, flat list containing all the elements from the nested lists. The approach uses a helper function `flatten` that is called recursively to handle nested lists. Here's a breakdown of the process:
+
+1. **Initialization**: An empty list `flat_list` is initialized to store the flattened elements.
+2. **Helper Function**: The `flatten` function is defined to handle the recursion. It checks if the current item is a list.
+   - If it is a list, it iterates through each element and calls `flatten` recursively.
+   - If it is not a list, it appends the item to `flat_list`.
+3. **Main Loop**: The main function iterates through each item in the input `list1` and calls the `flatten` function on it.
+4. **Return**: After all items have been processed, the `flat_list` is returned.
+
+This approach ensures that all nested lists are flattened, regardless of their depth. The use of recursion allows the function to handle arbitrarily nested lists.

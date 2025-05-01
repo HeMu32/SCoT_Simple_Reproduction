@@ -1,0 +1,7 @@
+[BEGIN]
+Input: list1: a list of lists  
+Output: max_length: the maximum length among the lists, max_list: the list with the maximum length  
+1: Initialize max_length to the maximum length of the lists in list1  
+2: Initialize max_list to the list with the maximum length in list1  
+3: Return a tuple containing max_length and max_list
+[END]

@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: r: a float or integer representing the radius of the circle
+Output: d: a float representing the diameter of the circle
+
+1: Check if the radius r is a positive number
+2: If r is positive:
+3:     Calculate the diameter d by multiplying the radius r by 2
+4: Else:
+5:     Raise an error or return an appropriate message indicating that the radius must be a positive number
+6: Return the diameter d
+[END PROCESS]
+
+[BEGIN CODE]
+def diameter_circle(r):
+    """ 
+    Write a function to find the diameter of a circle. 
+    """
+    if r > 0:
+        d = 2 * r
+        return d
+    else:
+        raise ValueError("Radius must be a positive number")
+[END CODE]
+
+### Explanation:
+The function `diameter_circle` takes a single parameter `r`, which represents the radius of the circle. The function first checks if the radius is a positive number. If it is, the diameter is calculated by multiplying the radius by 2, and the result is returned. If the radius is not positive, the function raises a `ValueError` with an appropriate message. This ensures that the function only processes valid input and provides clear feedback when the input is invalid.

@@ -1,0 +1,9 @@
+Input: s: a string representing a word
+Output: True if the length of the word is odd, False otherwise
+
+1: Calculate the length of the string s
+2: Check if the length is odd:
+3:     if the length modulo 2 is 1:
+4:         return True
+5:     else:
+6:         return False

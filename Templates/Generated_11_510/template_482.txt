@@ -1,0 +1,9 @@
+Input: text: a string  
+Output: 'Yes' or 'No'  
+1: Import the regex module  
+2: Define a pattern that matches a sequence starting with one upper case letter followed by lower case letters  
+3: Use the search function from the regex module to look for the pattern in the input text  
+4:     if the pattern is found in the text:  
+5:         return 'Yes'  
+6:     else:  
+7:         return 'No'

@@ -1,0 +1,9 @@
+Input: N: an integer representing the year
+Output: The number of odd days in the given year
+
+1: Initialize `odd_days` to 0
+2: Determine if the year is a leap year:
+   - A year is a leap year if it is divisible by 4, but not by 100, unless it is also divisible by 400.
+3: If the year is a leap year, set `days_in_year` to 366, otherwise set `days_in_year` to 365
+4: Calculate the number of odd days by taking the remainder of `days_in_year` divided by 7
+5: Return `odd_days`

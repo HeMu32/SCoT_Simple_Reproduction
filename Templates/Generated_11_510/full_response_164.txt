@@ -1,0 +1,21 @@
+[BEGIN]
+Input: num1, num2: integers
+Output: True or False
+
+1: Define a function divSum that takes an integer n as input
+2:     Initialize sum to 1
+3:     Initialize i to 2
+4:     While i * i is less than or equal to n:
+5:         If n is divisible by i:
+6:             Add i and n divided by i (integer division) to sum
+7:         Increment i by 1
+8:     Return sum
+
+9: Define a function areEquivalent that takes two integers num1 and num2 as input
+10:    Calculate the sum of divisors for num1 using divSum
+11:    Calculate the sum of divisors for num2 using divSum
+12:    If the sum of divisors for num1 is equal to the sum of divisors for num2:
+13:        Return True
+14:    Else:
+15:        Return False
+[END]

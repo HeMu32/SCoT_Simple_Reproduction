@@ -1,0 +1,8 @@
+Input: test_tup1, test_tup2: two tuples of integers of the same length
+Output: result_tup: a tuple where each element is the result of subtracting the element of test_tup2 from the corresponding element of test_tup1 at the same index
+1: Initialize an empty list to store the results of the subtraction
+2: Iterate over the indices of the tuples (assuming both tuples are of the same length)
+3:     For each index, subtract the element in test_tup2 from the element in test_tup1
+4:     Append the result to the results list
+5: Convert the results list to a tuple
+6: Return the result tuple

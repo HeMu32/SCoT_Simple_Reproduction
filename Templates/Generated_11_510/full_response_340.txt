@@ -1,0 +1,13 @@
+[BEGIN]
+Input: lst: a list of numbers
+Output: sum: the sum of the three lowest positive numbers in lst
+1: Initialize an empty list positive_nums
+2: for each number num in lst:
+3:     if num is greater than 0:
+4:         append num to positive_nums
+5: sort positive_nums in ascending order
+6: if the length of positive_nums is less than 3:
+7:     return None (not enough positive numbers)
+8: else:
+9:     return the sum of the first three elements in positive_nums
+[END]

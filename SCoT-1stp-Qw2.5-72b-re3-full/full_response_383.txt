@@ -1,0 +1,46 @@
+[BEGIN PROCESS]
+Input: A number (integer)
+Output: A number with all odd bits toggled
+
+1: Define the function even_bit_toggle_number with a parameter num
+2: Initialize a variable mask to 0
+3: Initialize a variable bit_position to 0
+4: Loop while (1 << bit_position) is less than or equal to num:
+5:     If bit_position is odd:
+6:         Set the bit at bit_position in mask
+7:     Increment bit_position by 1
+8: XOR num with mask to toggle all odd bits
+9: Return the result of the XOR operation
+[END PROCESS]
+
+[BEGIN CODE]
+def even_bit_toggle_number(num):
+    mask = 0
+    bit_position = 0
+    while (1 << bit_position) <= num:
+        if bit_position % 2 == 1:
+            mask |= (1 << bit_position)
+        bit_position += 1
+    return num ^ mask
+[END CODE]
+
+### Explanation
+
+The function `even_bit_toggle_number` is designed to toggle all odd bits of a given number. Here's a step-by-step breakdown of how it works:
+
+1. **Initialization**:
+   - `mask` is initialized to 0. This variable will be used to create a bitmask where all the odd bits are set to 1.
+   - `bit_position` is initialized to 0. This variable will be used to iterate through each bit position of the number.
+
+2. **Loop through bit positions**:
+   - The loop continues as long as `(1 << bit_position)` is less than or equal to `num`. This ensures that we only consider bit positions that are within the range of the number.
+   - Inside the loop, we check if the current `bit_position` is odd. If it is, we set the corresponding bit in `mask` using the bitwise OR operator (`|`).
+
+3. **Toggle odd bits**:
+   - After the loop, `mask` contains 1s in all the odd bit positions.
+   - We use the XOR operator (`^`) to toggle the bits in `num` where the corresponding bits in `mask` are 1.
+
+4. **Return the result**:
+   - The function returns the result of the XOR operation, which is the number with all odd bits toggled.
+
+This approach ensures that we correctly toggle the odd bits of the given number. The use of bitwise operations makes the solution efficient and straightforward.

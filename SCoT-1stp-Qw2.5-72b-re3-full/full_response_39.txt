@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: S: a string
+Output: True if the letters of the string can be rearranged so that no two adjacent characters are the same, otherwise False
+
+1: Count the frequency of each character in the string using a dictionary
+2: Find the maximum frequency of any character in the string
+3: If the maximum frequency is more than half the length of the string plus one, return False (it's impossible to rearrange the string to meet the requirement)
+4: Otherwise, return True (it's possible to rearrange the string to meet the requirement)
+
+Explanation:
+- The key insight is that if any character appears more than half the length of the string plus one, it is impossible to place this character in a way that it does not have the same character adjacent to it. For example, in a string of length 5, if a character appears 3 times, it's impossible to arrange the string so that no two of this character are adjacent.
+- If no character appears more than half the length of the string plus one, it is always possible to rearrange the string to meet the requirement.
+[END PROCESS]
+
+[BEGIN CODE]
+def rearrange_string(S):
+    from collections import Counter
+    
+    # Count the frequency of each character
+    char_count = Counter(S)
+    
+    # Find the maximum frequency of any character
+    max_freq = max(char_count.values())
+    
+    # Check if the maximum frequency is more than half the length of the string plus one
+    if max_freq > (len(S) + 1) // 2:
+        return False
+    else:
+        return True
+[END CODE]
+
+This function first counts the frequency of each character in the input string using Python's `collections.Counter`. It then checks if the maximum frequency of any character is more than half the length of the string plus one. If it is, the function returns False, indicating that it is not possible to rearrange the string to meet the requirement. Otherwise, it returns True, indicating that it is possible to rearrange the string to meet the requirement.

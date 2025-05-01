@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: x, y, z: three sides of a triangle
+Output: True if the triangle is equilateral, False otherwise
+
+1: Check if all three sides are equal (x == y and y == z)
+2: If they are equal:
+3:     Return True
+4: Else:
+5:     Return False
+[END PROCESS]
+
+[BEGIN CODE]
+def check_equilateral(x, y, z):
+    if x == y == z:
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+The function `check_equilateral` takes three arguments, `x`, `y`, and `z`, which represent the lengths of the sides of a triangle. The function checks if all three sides are equal. If they are, the triangle is equilateral, and the function returns `True`. Otherwise, it returns `False`. This is a straightforward implementation using a simple conditional check to determine if the triangle is equilateral.

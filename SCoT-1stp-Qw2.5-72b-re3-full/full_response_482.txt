@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: text: a string  
+Output: matches: a list of substrings that match the pattern of one uppercase letter followed by lowercase letters  
+1: Import the re module for regular expression operations  
+2: Define the regex pattern to match one uppercase letter followed by zero or more lowercase letters  
+3: Use the re.findall() function to find all non-overlapping matches of the pattern in the text  
+4: Store the matches in a list called matches  
+5: Return the matches list
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def match(text):
+    # Define the regex pattern
+    pattern = r'[A-Z][a-z]*'
+    
+    # Find all matches in the text
+    matches = re.findall(pattern, text)
+    
+    # Return the list of matches
+    return matches
+[END CODE]
+
+### Explanation:
+- **Regex Pattern**: `[A-Z][a-z]*`
+  - `[A-Z]`: Matches any single uppercase letter.
+  - `[a-z]*`: Matches zero or more lowercase letters.
+- **re.findall()**: This function returns all non-overlapping matches of the pattern in the string, as a list of strings. The string is scanned left-to-right, and matches are returned in the order found.
+- **Return Value**: The function returns a list of substrings from the input text that match the defined pattern. Each substring starts with an uppercase letter followed by zero or more lowercase letters.

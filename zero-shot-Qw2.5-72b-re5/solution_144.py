@@ -1,0 +1,6 @@
+def sum_Pairs(arr, n):
+    arr.sort()
+    total_sum = 0
+    for i in range(n):
+        total_sum += (2 * i - n + 1) * arr[i]
+    return total_sum

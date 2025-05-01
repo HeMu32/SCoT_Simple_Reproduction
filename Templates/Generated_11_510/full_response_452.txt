@@ -1,0 +1,10 @@
+[BEGIN]
+Input: actual_cost: a number representing the actual cost of an item, sale_amount: a number representing the sale amount of the item
+Output: amount: the loss amount if there is a loss, otherwise None
+
+1: if sale_amount is greater than actual_cost:
+2:     calculate the difference between sale_amount and actual_cost and store it in amount
+3:     return amount
+4: else:
+5:     return None
+[END]

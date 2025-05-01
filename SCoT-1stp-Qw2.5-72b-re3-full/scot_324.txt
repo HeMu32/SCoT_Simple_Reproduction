@@ -1,0 +1,8 @@
+Input: test_tuple: a tuple of integers
+Output: sum_of_alternates: the sum of elements at alternate positions in the tuple
+
+1: Initialize a variable `sum_of_alternates` to 0 to store the sum of alternate elements.
+2: Loop through the elements of `test_tuple` with an index, starting from index 0.
+3:     If the index is even (i.e., the element is at an alternate position starting from the first element):
+4:         Add the current element to `sum_of_alternates`.
+5: After the loop, return the value of `sum_of_alternates`.

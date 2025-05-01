@@ -1,0 +1,11 @@
+Input: arr: a list of integers, arr_size: the size of the list
+Output: The element that occurs an odd number of times, or -1 if no such element exists
+
+1: for each element in arr (using index i):
+2:     initialize count to 0
+3:     for each element in arr (using index j):
+4:         if the element at index i is equal to the element at index j:
+5:             increment count by 1
+6:     if count is odd (count % 2 != 0):
+7:         return the element at index i
+8: return -1 (if no element occurs an odd number of times)

@@ -1,0 +1,11 @@
+Input: lst: a list of tuples
+Output: a list of tuples sorted based on the occurrence of the first element of tuples
+
+1: Initialize an empty dictionary dct
+2: For each tuple (i, j) in lst:
+3:     Add i as a key in dct if it does not exist, and append j to the list of values for key i
+4: Initialize an empty result list
+5: For each key-value pair (i, j) in dct:
+6:     Create a new tuple with i, the unique elements of j, and the length of j
+7:     Append this new tuple to the result list
+8: Return the result list

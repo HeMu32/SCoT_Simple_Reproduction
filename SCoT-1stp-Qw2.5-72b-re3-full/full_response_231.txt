@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: tri: a list of lists representing the right triangle of numbers; n: the number of rows in the triangle
+Output: max_sum: the maximum sum possible by moving from the top of the triangle to the bottom, moving to adjacent numbers on the row below
+
+1: Initialize a variable `max_sum` to store the maximum sum, starting with the top element of the triangle.
+2: Start a loop from the second last row of the triangle to the first row (moving upwards).
+3: For each element in the current row:
+4:     Add to the element the maximum of the two elements directly below it in the next row.
+5: After the loop, the top element will contain the maximum sum.
+6: Return the top element as the maximum sum.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_sum(tri, n):
+    # Start from the second last row and move upwards
+    for row in range(n-2, -1, -1):
+        for col in range(len(tri[row])):
+            # Add the maximum of the two adjacent numbers from the row below
+            tri[row][col] += max(tri[row+1][col], tri[row+1][col+1])
+    
+    # The top element now contains the maximum sum
+    return tri[0][0]
+[END CODE]
+
+### Explanation:
+The function `max_sum` calculates the maximum sum possible by moving from the top of a right triangle of numbers to the bottom, where at each step, you can move to adjacent numbers on the row below. The approach used here is dynamic programming, where we start from the bottom of the triangle and work our way up, updating each element to be the sum of itself and the maximum of the two elements directly below it. This way, by the time we reach the top of the triangle, the top element will contain the maximum sum possible. This method ensures that we consider all possible paths and find the one with the highest sum.

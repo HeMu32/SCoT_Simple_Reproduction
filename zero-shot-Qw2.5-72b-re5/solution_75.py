@@ -1,0 +1,6 @@
+def find_tuples(test_list, K):
+    """
+    Write a function to find tuples which have all elements divisible by k from the given list of tuples.
+    """
+    result = [tup for tup in test_list if all(x % K == 0 for x in tup)]
+    return result

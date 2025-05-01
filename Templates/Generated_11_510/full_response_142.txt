@@ -1,0 +1,10 @@
+[BEGIN]
+Input: list1, list2, list3: three lists of elements
+Output: result: the count of the same pairs in the three lists
+
+1: Initialize result to 0
+2: For each element m, n, o in the zipped lists (list1, list2, list3):
+3:     If m is equal to n and n is equal to o:
+4:         Increment result by 1
+5: Return result
+[END]

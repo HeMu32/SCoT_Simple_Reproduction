@@ -1,0 +1,43 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the array
+Output: the index of a peak element in the array
+
+A peak element is an element that is not smaller than its neighbors. For corner elements, we need to consider only one neighbor.
+
+1: Check if the array is empty or has only one element; if so, return the index of the only element as the peak.
+2: Check if the first element is a peak; if so, return 0.
+3: Check if the last element is a peak; if so, return n-1.
+4: Iterate through the array from the second element to the second last element.
+5:     For each element, check if it is greater than or equal to its neighbors.
+6:     If it is, return the index of the current element.
+7: If no peak is found, return -1 (indicating no peak element was found).
+[END PROCESS]
+
+[BEGIN CODE]
+def find_peak(arr, n):
+    # Check if the array is empty or has only one element
+    if n == 1:
+        return 0
+    # Check if the first element is a peak
+    if arr[0] >= arr[1]:
+        return 0
+    # Check if the last element is a peak
+    if arr[n-1] >= arr[n-2]:
+        return n-1
+    # Iterate through the array to find a peak
+    for i in range(1, n-1):
+        if arr[i] >= arr[i-1] and arr[i] >= arr[i+1]:
+            return i
+    # If no peak is found
+    return -1
+[END CODE]
+
+### Explanation:
+The function `find_peak` is designed to find the index of a peak element in the given array. A peak element is defined as an element that is not smaller than its neighbors. For the elements at the boundaries (first and last elements), only one neighbor is considered.
+
+1. **Edge Cases**: The function first checks if the array is empty or contains only one element. In such cases, the only element (or the absence of elements) is considered the peak, and its index (0) is returned.
+2. **Boundary Checks**: The function then checks if the first or last element is a peak. If either of these conditions is true, the function returns the index of the respective element.
+3. **Main Loop**: The function iterates through the array from the second element to the second last element. For each element, it checks if the element is greater than or equal to its neighbors. If it is, the function returns the index of the current element.
+4. **No Peak Found**: If no peak is found after the loop, the function returns -1, indicating that no peak element was found in the array.
+
+This approach ensures that the function efficiently finds a peak element if one exists, and handles edge cases appropriately.

@@ -1,0 +1,7 @@
+Input: n, m: integers representing the range [n, m]
+Output: count: integer representing the number of elements with odd factors in the range [n, m]
+
+1: Calculate the square root of m and convert it to an integer, storing the result in `sqrt_m`
+2: Calculate the square root of (n-1) and convert it to an integer, storing the result in `sqrt_n_minus_1`
+3: Subtract `sqrt_n_minus_1` from `sqrt_m` to get the count of elements with odd factors in the range [n, m]
+4: Return the result of the subtraction as the count

@@ -1,0 +1,5 @@
+def replace_max_specialchar(text, n):
+    import re
+    pattern = r'[ ,.]'
+    result = re.sub(pattern, ':', text, count=n)
+    return result

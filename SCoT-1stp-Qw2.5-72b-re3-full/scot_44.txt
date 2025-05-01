@@ -1,0 +1,9 @@
+Input: text: a string that may contain one or more words
+Output: True if the string starts with a word, otherwise False
+
+1: Define a regex pattern that matches a word at the beginning of a string
+2: Use the regex pattern to search the input text
+3: If the search returns a match:
+4:     Return True
+5: Else:
+6:     Return False

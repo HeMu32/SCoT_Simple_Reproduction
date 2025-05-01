@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: x, y: two positive integers
+Output: gcd: the greatest common divisor of x and y
+1: while y is not equal to 0:
+2:     set a temporary variable temp to y
+3:     set y to the remainder of x divided by y
+4:     set x to temp
+5: return x as the gcd
+[END PROCESS]
+
+[BEGIN CODE]
+def gcd(x, y): 
+    while y != 0:
+        temp = y
+        y = x % y
+        x = temp
+    return x
+[END CODE]
+
+### Explanation:
+The function `gcd(x, y)` computes the greatest common divisor (GCD) of two positive integers `x` and `y` using the Euclidean algorithm. The Euclidean algorithm is based on the principle that the GCD of two numbers also divides their difference. The algorithm works as follows:
+
+1. **Initialization**: Start with two positive integers `x` and `y`.
+2. **Loop**: Continue the loop as long as `y` is not zero.
+   - **Step 1**: Store the value of `y` in a temporary variable `temp`.
+   - **Step 2**: Update `y` to be the remainder of `x` divided by `y` (i.e., `x % y`).
+   - **Step 3**: Update `x` to be the value stored in `temp`.
+3. **Termination**: When `y` becomes zero, `x` will hold the GCD of the original `x` and `y`.
+
+This algorithm is efficient and works by repeatedly reducing the problem of finding the GCD of two numbers to a smaller problem until one of the numbers becomes zero. The final non-zero value is the GCD of the original two numbers.

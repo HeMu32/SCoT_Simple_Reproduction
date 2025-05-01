@@ -1,0 +1,5 @@
+Input: A number (integer or float)
+Output: The first digit of the given number
+1: Convert the number to a string to easily access individual characters.
+2: If the number is negative, skip the negative sign by starting from the second character.
+3: Return the first character of the string, which represents the first digit of the number.

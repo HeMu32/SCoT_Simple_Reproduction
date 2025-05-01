@@ -1,0 +1,5 @@
+Input: l, w, h: dimensions of the cuboid (length, width, height)
+Output: volume: the volume of the cuboid
+
+1: Calculate the volume by multiplying the length, width, and height.
+2: Return the calculated volume.

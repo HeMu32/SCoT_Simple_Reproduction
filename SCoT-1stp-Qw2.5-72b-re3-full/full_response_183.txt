@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the list, k: the difference to find between pairs
+Output: count: the number of distinct pairs (i, j) such that arr[i] - arr[j] = k or arr[j] - arr[i] = k
+
+1: Initialize a variable count to 0 to keep track of the number of valid pairs.
+2: Create a set from the array to remove duplicates and allow for O(1) look-up times.
+3: For each element x in the set:
+4:     If the element (x + k) is also in the set:
+5:         Increment count by 1.
+6: Return count.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_pairs(arr, n, k):
+    count = 0
+    elements = set(arr)  # Convert list to set to remove duplicates and for O(1) look-up times.
+    
+    for x in elements:
+        if (x + k) in elements:
+            count += 1
+    
+    return count
+[END CODE]
+
+### Explanation
+
+The function `count_pairs` is designed to count the number of distinct pairs in an array `arr` that have a difference of `k`. Here's a step-by-step breakdown of how the function works:
+
+1. **Initialization**: We initialize a variable `count` to 0. This will keep track of the number of valid pairs.
+2. **Set Conversion**: We convert the input list `arr` to a set called `elements`. This step is crucial for two reasons:
+   - It removes any duplicate elements, ensuring that we only count distinct pairs.
+   - It allows for O(1) average-time complexity for look-up operations, which is efficient for checking if an element exists in the set.
+3. **Loop Through Elements**: We iterate through each element `x` in the set `elements`.
+4. **Check for Pair**: For each element `x`, we check if the element `(x + k)` is also in the set. If it is, it means there is a valid pair `(x, x + k)` with a difference of `k`.
+5. **Increment Count**: If a valid pair is found, we increment the `count` by 1.
+6. **Return Result**: After iterating through all elements, we return the `count`, which represents the number of distinct pairs with a difference of `k`.
+
+This approach ensures that we efficiently count the pairs with a time complexity of O(n), where n is the number of elements in the array. The space complexity is also O(n) due to the use of the set.

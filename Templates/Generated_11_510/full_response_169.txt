@@ -1,0 +1,14 @@
+[BEGIN]
+Input: n: an integer representing the position in the Pell number sequence
+Output: The nth Pell number
+
+1: If n is less than or equal to 2:
+2:     Return n
+3: Initialize a to 1
+4: Initialize b to 2
+5: For i from 3 to n (inclusive):
+6:     Calculate c as 2 times b plus a
+7:     Set a to b
+8:     Set b to c
+9: Return b
+[END]

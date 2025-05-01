@@ -1,0 +1,12 @@
+[BEGIN]
+Input: A: a sorted array, left_element: the starting index, right_element: the ending index
+Output: the smallest missing element in the array
+
+1: if left_element is greater than right_element:
+2:     return left_element
+3: calculate mid as left_element + (right_element - left_element) // 2
+4: if A[mid] is equal to mid:
+5:     return the result of calling smallest_missing with A, mid + 1, and right_element
+6: else:
+7:     return the result of calling smallest_missing with A, left_element, and mid - 1
+[END]

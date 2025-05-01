@@ -1,0 +1,9 @@
+import re
+
+def text_match_wordz(text):
+    """
+    Write a function that matches a word containing 'z'.
+    """
+    pattern = r'\b\w*z\w*\b'
+    matches = re.findall(pattern, text)
+    return matches

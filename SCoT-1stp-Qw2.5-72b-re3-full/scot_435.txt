@@ -1,0 +1,8 @@
+Input: A number (integer or float)
+Output: The last digit of the number (an integer)
+
+1: Convert the number to a string to easily access the last character.
+2: If the number is a float and has a decimal point, find the last digit after the decimal point.
+3: If the number is an integer, find the last digit before the decimal point.
+4: Convert the last character back to an integer.
+5: Return the last digit.

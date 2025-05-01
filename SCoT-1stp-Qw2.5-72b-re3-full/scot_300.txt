@@ -1,0 +1,10 @@
+Input: n: an integer representing half the length of the binary sequences
+Output: The count of all binary sequences of length 2n such that the sum of the first n bits is the same as the sum of the last n bits
+
+1: Initialize a variable `count` to 0 to keep track of the valid sequences.
+2: Generate all possible binary sequences of length 2n.
+3: For each sequence:
+   a: Split the sequence into two halves.
+   b: Calculate the sum of the bits in the first half and the second half.
+   c: If the sums are equal, increment `count`.
+4: Return the `count` of valid sequences.

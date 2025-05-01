@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number of terms in the series
+Output: The sum of the cubes of the first n natural numbers
+
+1: Initialize a variable `sum` to 0 to store the cumulative sum of cubes.
+2: For each number i from 1 to n (inclusive):
+3:     Calculate the cube of i (i.e., i^3).
+4:     Add the cube of i to `sum`.
+5: After the loop, return the value of `sum`.
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_Of_Series(n):
+    # Initialize sum to 0
+    sum = 0
+    # Loop through each number from 1 to n
+    for i in range(1, n + 1):
+        # Calculate the cube of the current number and add it to the sum
+        sum += i ** 3
+    # Return the final sum
+    return sum
+[END CODE]
+
+### Explanation:
+The function `sum_Of_Series(n)` calculates the sum of the cubes of the first `n` natural numbers. The process involves initializing a variable `sum` to 0, which will store the cumulative sum of the cubes. A for loop is then used to iterate through each number from 1 to `n`. For each number `i`, the cube of `i` is calculated using `i ** 3` and added to `sum`. After the loop completes, the final value of `sum` is returned, which represents the sum of the cubes of the first `n` natural numbers.

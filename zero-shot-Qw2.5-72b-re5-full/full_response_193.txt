@@ -1,0 +1,9 @@
+[BEGIN CODE]
+```python
+def remove_tuple(test_tup):
+    """
+    Write a function to remove the duplicates from the given tuple.
+    """
+    return tuple(dict.fromkeys(test_tup))
+```
+[END CODE]

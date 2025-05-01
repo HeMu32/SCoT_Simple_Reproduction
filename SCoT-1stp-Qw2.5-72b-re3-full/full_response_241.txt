@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: m, n, o: three integers representing the dimensions of the 3D array
+Output: A 3D array where each element is a string '*'
+
+1: Initialize an empty list `result` to hold the 3D array.
+2: For each i in the range of m:
+3:     Initialize an empty list `layer` to hold the 2D layer.
+4:     For each j in the range of n:
+5:         Initialize an empty list `row` to hold the 1D row.
+6:         For each k in the range of o:
+7:             Append '*' to `row`.
+8:         Append `row` to `layer`.
+9:     Append `layer` to `result`.
+10: Return `result` as the 3D array.
+[END PROCESS]
+
+[BEGIN CODE]
+def array_3d(m, n, o):
+    result = []
+    for i in range(m):
+        layer = []
+        for j in range(n):
+            row = []
+            for k in range(o):
+                row.append('*')
+            layer.append(row)
+        result.append(layer)
+    return result
+[END CODE]
+
+### Explanation
+
+The function `array_3d(m, n, o)` generates a 3D array with dimensions `m` x `n` x `o`, where each element is a string `'*'`. The function uses nested loops to construct the 3D array:
+
+1. The outermost loop iterates `m` times, creating `m` layers.
+2. For each layer, a middle loop iterates `n` times, creating `n` rows.
+3. For each row, an inner loop iterates `o` times, appending `'*'` to the row.
+4. Each row is then appended to the current layer.
+5. Each layer is then appended to the result list.
+6. Finally, the result list, which is a 3D array, is returned.
+
+This approach ensures that the 3D array is constructed with the specified dimensions and that each element is initialized to `'*'`.

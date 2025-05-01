@@ -1,0 +1,11 @@
+Input: n: an integer 
+Output: the smallest prime divisor of n
+
+1: if n is divisible by 2:
+2:     return 2
+3: initialize i to 3
+4: while i squared is less than or equal to n:
+5:     if n is divisible by i:
+6:         return i
+7:     increment i by 2
+8: return n

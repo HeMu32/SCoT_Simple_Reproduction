@@ -1,0 +1,9 @@
+Input: x, y: two integers
+Output: count: the number of common divisors between x and y
+
+1: Initialize a variable `count` to 0 to keep track of the number of common divisors.
+2: Determine the smaller of the two numbers, `x` and `y`, and store it in a variable `min_val`.
+3: Loop from 1 to `min_val` (inclusive):
+4:     If both `x` and `y` are divisible by the current loop index (i.e., the remainder when `x` and `y` are divided by the index is 0):
+5:         Increment `count` by 1.
+6: After the loop, return `count` as the number of common divisors.

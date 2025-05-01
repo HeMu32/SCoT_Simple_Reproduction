@@ -1,0 +1,13 @@
+Input: list: a list of lists, where each sublist represents an array of integers
+Output: a tuple (start, end) representing the smallest range that includes at least one element from each of the given arrays
+
+1: Initialize variables to store the minimum and maximum values of the current range, and the overall minimum range.
+2: Use a min-heap to keep track of the minimum element from each array and the current range.
+3: Initialize the heap with the first element of each array along with the array index and element index.
+4: Set the initial minimum and maximum values based on the first elements of the arrays.
+5: Loop until the heap is exhausted:
+   - Pop the smallest element from the heap.
+   - Update the overall minimum range if the current range is smaller.
+   - If there are more elements in the array from which the smallest element was popped, push the next element from that array into the heap.
+   - Update the maximum value of the current range if the new element is larger than the current maximum.
+6: Return the overall minimum range.

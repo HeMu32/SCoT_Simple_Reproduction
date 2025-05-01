@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: s: a string
+Output: count: an integer representing the number of substrings where the first and last characters are the same
+
+1: Initialize a variable count to 0 to keep track of the number of valid substrings.
+2: Iterate over each character in the string using an outer loop with index i.
+3: For each character at index i, start an inner loop from i to the end of the string with index j.
+4: Extract the substring from index i to j.
+5: Check if the first and last characters of the substring are the same.
+6: If they are the same, increment count by 1.
+7: After the loops complete, return the count.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Substring_With_Equal_Ends(s):
+  count = 0
+  for i in range(len(s)):
+    for j in range(i, len(s)):
+      substring = s[i:j+1]
+      if substring[0] == substring[-1]:
+        count += 1
+  return count
+[END CODE]
+
+### Explanation:
+The function `count_Substring_With_Equal_Ends` is designed to count the number of substrings within a given string `s` where the first and last characters are the same. The approach involves using two nested loops to generate all possible substrings of the input string. For each substring, it checks if the first and last characters are identical. If they are, it increments a counter. Finally, the function returns the total count of such substrings. This method ensures that all possible substrings are considered, and the condition is checked for each one.

@@ -1,0 +1,10 @@
+Input: nums1: a list of integers, nums2: a list of integers, N: an integer representing the number of largest products to find
+Output: A list of the N largest products that can be formed by multiplying one element from nums1 with one element from nums2
+
+1: Initialize an empty list products to store the products of elements from nums1 and nums2
+2: For each element x in nums1:
+3:     For each element y in nums2:
+4:         Compute the product of x and y
+5:         Add the product to the list products
+6: Sort the list products in descending order
+7: Return the first N elements from the sorted list products

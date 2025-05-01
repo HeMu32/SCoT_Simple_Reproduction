@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: m: an integer representing the number of multiples to find, n: an integer representing the number to find multiples of
+Output: A list of the first m multiples of n
+
+1: Initialize an empty list to store the multiples
+2: For i from 1 to m inclusive:
+3:     Calculate the multiple by multiplying n by i
+4:     Append the multiple to the list
+5: Return the list of multiples
+[END PROCESS]
+
+[BEGIN CODE]
+def multiples_of_num(m, n):
+    multiples = []
+    for i in range(1, m + 1):
+        multiple = n * i
+        multiples.append(multiple)
+    return multiples
+[END CODE]
+
+### Explanation:
+The function `multiples_of_num` is designed to generate the first `m` multiples of a given number `n`. The process involves initializing an empty list to store the multiples, then using a loop to iterate from 1 to `m` (inclusive). In each iteration, the current multiple is calculated by multiplying `n` by the loop index `i`, and this value is appended to the list. Finally, the list of multiples is returned. This approach ensures that the function correctly generates the required multiples and returns them in a list.

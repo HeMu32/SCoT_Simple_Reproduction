@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: string: a string that may contain uppercase and lowercase letters
+Output: A new string where all characters are converted to lowercase
+
+1: Use the built-in `lower()` method of the string to convert all characters to lowercase.
+2: Return the new string.
+[END PROCESS]
+
+[BEGIN CODE]
+def is_lower(string):
+  # Convert the string to lowercase
+  lower_string = string.lower()
+  # Return the converted string
+  return lower_string
+[END CODE]
+
+### Explanation:
+The function `is_lower` takes a single parameter, `string`, which is the input string that may contain uppercase and lowercase letters. The function uses the built-in `lower()` method, which is a method of the string class in Python. This method converts all uppercase characters in the string to their lowercase equivalents and returns a new string. The function then returns this new lowercase string.
+
+This approach is straightforward and leverages Python's built-in string methods to achieve the desired result efficiently.

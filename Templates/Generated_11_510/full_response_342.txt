@@ -1,0 +1,19 @@
+[BEGIN]
+Input: list: a list of lists, where each sublist contains integers
+Output: p: a tuple representing the smallest range that includes at least one element from each of the given arrays
+
+1: Initialize high to negative infinity and p to a tuple (0, positive infinity)
+2: Initialize an empty priority queue pq
+3: For each sublist in list:
+   3.1: Push the first element of the sublist into pq as a Node object with its value, list index, and element index
+   3.2: Update high to be the maximum of high and the value of the pushed element
+4: Start a loop that continues until a break condition is met:
+   4.1: Pop the top element from pq and assign its value to low, its list index to i, and its element index to j
+   4.2: If the difference between high and low is less than the difference between the current p values:
+        4.2.1: Update p to (low, high)
+   4.3: If j is the last index of the sublist i:
+        4.3.1: Break the loop and return p
+   4.4: Push the next element of sublist i into pq as a Node object with its value, list index i, and element index j + 1
+   4.5: Update high to be the maximum of high and the value of the newly pushed element
+5: The loop ends, and the function returns p
+[END]

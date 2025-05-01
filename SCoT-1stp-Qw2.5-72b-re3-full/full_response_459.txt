@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: str1: a string
+Output: a string with all uppercase substrings removed
+
+1: Import the re module for regular expression operations
+2: Use re.sub to substitute all uppercase letters (A-Z) with an empty string
+3: Return the modified string
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def remove_uppercase(str1):
+    """ 
+    Write a function to remove uppercase substrings from a given string by using regex. 
+    """
+    # Substitute all uppercase letters (A-Z) with an empty string
+    result = re.sub(r'[A-Z]', '', str1)
+    return result
+[END CODE]
+
+**Explanation:**
+
+The function `remove_uppercase` is designed to remove all uppercase letters from a given string. Here's how it works:
+
+1. **Import the `re` module**: This module provides support for regular expressions in Python, which are used to perform pattern matching and text processing.
+
+2. **Use `re.sub` to remove uppercase letters**: The `re.sub` function is used to replace all occurrences of a pattern in a string with a specified replacement. In this case, the pattern `[A-Z]` matches any uppercase letter, and the replacement is an empty string `''`, which effectively removes the matched uppercase letters from the string.
+
+3. **Return the modified string**: After the uppercase letters have been removed, the modified string is returned.
+
+This approach ensures that all uppercase letters are removed from the input string, and the function is efficient and concise.

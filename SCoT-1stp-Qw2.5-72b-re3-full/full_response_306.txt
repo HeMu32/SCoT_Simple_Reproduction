@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: a: a list of integers, n: the length of the list, index: the index up to which we consider the prefix, k: the index of the element that must be included in the subsequence.
+Output: The maximum sum of an increasing subsequence from the prefix till the ith index and including the kth element.
+
+1: Initialize a list `dp` of size `n` with all elements set to 0. This list will store the maximum sum of increasing subsequence ending at each index.
+2: Set `dp[k]` to the value of `a[k]` since the kth element must be included.
+3: Loop through the list from the beginning up to the `index` (inclusive).
+4:     For each element at position `i`:
+5:         If `i` is less than `k`:
+6:             Loop through all elements from the start up to `i` (exclusive).
+7:                 If the current element `a[j]` is less than `a[i]`:
+8:                     Update `dp[i]` to be the maximum of `dp[i]` and `dp[j] + a[i]`.
+9:         Else if `i` is equal to `k`:
+10:             Continue to the next iteration since `dp[k]` is already set.
+11:         Else:
+12:             Break the loop as we only need to consider elements up to the `index`.
+13: Return the value of `dp[k]` which represents the maximum sum of the increasing subsequence including the kth element.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_sum_increasing_subseq(a, n, index, k):
+    dp = [0] * n
+    dp[k] = a[k]
+    
+    for i in range(index + 1):
+        if i < k:
+            for j in range(i):
+                if a[j] < a[i]:
+                    dp[i] = max(dp[i], dp[j] + a[i])
+        elif i == k:
+            continue
+        else:
+            break
+    
+    return dp[k]
+[END CODE]
+
+### Explanation:
+The function `max_sum_increasing_subseq` is designed to find the maximum sum of an increasing subsequence that ends at the `k`th index and includes all elements up to the `index`th position. The dynamic programming approach is used here to keep track of the maximum sum of increasing subsequences ending at each index. The `dp` array is initialized to store these sums, and the value at `dp[k]` is set to `a[k]` since the kth element must be included in the subsequence. The nested loops ensure that we only consider valid increasing subsequences, and the final result is the value stored at `dp[k]`.

@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: radius: an integer representing the radius of the circle.
+Output: count: the number of rectangles that can fit inside a circle of the given radius.
+
+1: Initialize count to 0.
+2: For each possible width (w) from 1 to the radius:
+3:     For each possible height (h) from 1 to the radius:
+4:         Calculate the diagonal of the rectangle using the Pythagorean theorem: d = sqrt(w^2 + h^2).
+5:         If the diagonal is less than or equal to the radius:
+6:             Increment count by 1.
+7: Return count.
+[END PROCESS]
+
+Explanation:
+To solve this problem, we need to determine how many rectangles of integer dimensions can fit inside a circle of a given radius. A rectangle can fit inside the circle if its diagonal is less than or equal to the diameter of the circle. The diagonal of a rectangle can be calculated using the Pythagorean theorem, which states that for a rectangle with width `w` and height `h`, the diagonal `d` is given by `d = sqrt(w^2 + h^2)`. We iterate over all possible integer dimensions for the width and height, and for each pair, we check if the diagonal is less than or equal to the radius. If it is, we count this rectangle as fitting inside the circle.
+
+[BEGIN CODE]
+import math
+
+def count_Rectangles(radius):
+    count = 0
+    for w in range(1, radius + 1):
+        for h in range(1, radius + 1):
+            diagonal = math.sqrt(w**2 + h**2)
+            if diagonal <= radius:
+                count += 1
+    return count
+[END CODE]

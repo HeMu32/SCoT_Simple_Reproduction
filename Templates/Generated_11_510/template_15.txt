@@ -1,0 +1,6 @@
+Input: text: a string  
+Output: a list of substrings split at lowercase letters  
+1: Import the regular expression module (re)  
+2: Define a function split_lowerstring that takes a string text as an argument  
+3:   Use the findall method from the re module to find all occurrences of a lowercase letter followed by zero or more non-lowercase characters in text  
+4:   Return the list of substrings found by the findall method

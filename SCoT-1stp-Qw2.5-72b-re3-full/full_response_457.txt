@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: lst: a list of sublists  
+Output: The sublist with the minimum length  
+1: Initialize a variable `min_length` with a large number (like infinity) to keep track of the minimum length found so far  
+2: Initialize a variable `min_sublist` to store the sublist with the minimum length  
+3: Iterate through each sublist in the input list `lst`:  
+4:     If the length of the current sublist is less than `min_length`:  
+5:         Update `min_length` to the length of the current sublist  
+6:         Update `min_sublist` to the current sublist  
+7: Return `min_sublist`  
+[END PROCESS]
+
+[BEGIN CODE]
+def Find_Min(lst):
+    # Initialize min_length with infinity and min_sublist as None
+    min_length = float('inf')
+    min_sublist = None
+    
+    # Iterate through each sublist in the input list
+    for sublist in lst:
+        # Check if the current sublist's length is less than the current minimum length
+        if len(sublist) < min_length:
+            # Update min_length and min_sublist
+            min_length = len(sublist)
+            min_sublist = sublist
+    
+    # Return the sublist with the minimum length
+    return min_sublist
+[END CODE]
+
+### Explanation:
+The function `Find_Min` is designed to find and return the sublist from a list of sublists that has the minimum length. The process involves initializing a variable `min_length` with a very large value (infinity) and a variable `min_sublist` to store the sublist with the minimum length. The function then iterates through each sublist in the input list, comparing the length of each sublist to the current minimum length. If a shorter sublist is found, the `min_length` and `min_sublist` variables are updated accordingly. Finally, the function returns the sublist with the minimum length. This approach ensures that the function correctly identifies and returns the shortest sublist in the input list.

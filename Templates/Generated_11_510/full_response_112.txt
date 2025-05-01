@@ -1,0 +1,8 @@
+[BEGIN]
+Input: diameter: a number representing the diameter of the cylinder  
+Input: height: a number representing the height of the cylinder  
+Output: perimeter: a number representing the perimeter of the cylinder  
+
+1: Calculate the perimeter using the formula 2 * (diameter + height)  
+2: Return the calculated perimeter  
+[END]

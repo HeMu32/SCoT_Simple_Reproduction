@@ -1,0 +1,7 @@
+Input: x, y, z: three integers representing the lengths of the sides of a triangle
+Output: A string indicating whether the triangle is isosceles or not
+
+1: Check if any two sides of the triangle are equal
+2: If two sides are equal, then the triangle is isosceles
+3: If no two sides are equal, then the triangle is not isosceles
+4: Return the appropriate message based on the check

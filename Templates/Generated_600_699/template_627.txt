@@ -1,0 +1,12 @@
+Input: array: a list of integers, start: an integer, end: an integer
+Output: The smallest missing number from the given array
+
+1: If start is greater than end:
+2:     Return end + 1
+3: If start is not equal to array[start]:
+4:     Return start
+5: Calculate mid as the integer division of (start + end) by 2
+6: If array[mid] is equal to mid:
+7:     Recursively call find_First_Missing with parameters (array, mid + 1, end)
+8: Otherwise:
+9:     Recursively call find_First_Missing with parameters (array, start, mid)

@@ -1,0 +1,18 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position of the rectangular number to find
+Output: the n-th rectangular number
+
+1: Calculate the n-th rectangular number using the formula for rectangular numbers: n * (n + 1)
+2: Return the calculated value
+[END PROCESS]
+
+[BEGIN CODE]
+def find_rect_num(n):
+  # Calculate the n-th rectangular number
+  rect_num = n * (n + 1)
+  # Return the calculated value
+  return rect_num
+[END CODE]
+
+### Explanation:
+A rectangular number, also known as a pronic number, is a number that is the product of two consecutive integers, n and n+1. The formula to find the n-th rectangular number is `n * (n + 1)`. This formula is derived from the properties of rectangular numbers, which can be visualized as the number of dots that can form a rectangle with one side of length n and the other side of length n+1. The function `find_rect_num` takes an integer `n` as input and returns the n-th rectangular number by applying this formula.

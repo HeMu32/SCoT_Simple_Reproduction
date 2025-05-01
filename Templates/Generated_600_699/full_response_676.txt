@@ -1,0 +1,10 @@
+[BEGIN]
+Input: text1: a string  
+Output: text1: a string with only alphanumeric characters  
+
+1: Import the `re` module to use regular expressions.  
+2: Define a function `remove_extra_char` that takes a single parameter `text1`.  
+3:   Compile a regular expression pattern that matches any character that is not alphanumeric (`[\W_]+`).  
+4:   Use the `sub` method of the compiled pattern to replace all occurrences of non-alphanumeric characters in `text1` with an empty string.  
+5:   Return the modified string.  
+[END]

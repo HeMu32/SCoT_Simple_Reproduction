@@ -1,0 +1,62 @@
+[BEGIN PROCESS]
+Input: month: a string representing the month, days: an integer representing the day of the month
+Output: season: a string representing the season for the given month and day
+1: Convert the month to lowercase to ensure case insensitivity
+2: Initialize season as an empty string
+3: Use a series of if-elif-else statements to determine the season based on the month and day
+4: For each month, check if the day falls within the range that defines the transition between seasons
+5: Assign the appropriate season based on the month and day
+6: Return the season
+[END PROCESS]
+
+[BEGIN CODE]
+def month_season(month, days):
+    # Convert month to lowercase to ensure case insensitivity
+    month = month.lower()
+    
+    # Initialize season as an empty string
+    season = ""
+    
+    # Determine the season based on the month and day
+    if month in ["january", "february"]:
+        season = "Winter"
+    elif month == "march":
+        if days < 20:
+            season = "Winter"
+        else:
+            season = "Spring"
+    elif month in ["april", "may"]:
+        season = "Spring"
+    elif month == "june":
+        if days < 21:
+            season = "Spring"
+        else:
+            season = "Summer"
+    elif month in ["july", "august"]:
+        season = "Summer"
+    elif month == "september":
+        if days < 22:
+            season = "Summer"
+        else:
+            season = "Fall"
+    elif month in ["october", "november"]:
+        season = "Fall"
+    elif month == "december":
+        if days < 21:
+            season = "Fall"
+        else:
+            season = "Winter"
+    
+    # Return the determined season
+    return season
+[END CODE]
+
+### Explanation:
+The function `month_season` takes two parameters: `month` and `days`. The `month` parameter is a string representing the month, and `days` is an integer representing the day of the month. The function returns a string indicating the season for the given month and day.
+
+1. **Case Insensitivity**: The month is converted to lowercase to ensure that the function works regardless of the case of the input month.
+2. **Season Determination**: The function uses a series of `if-elif-else` statements to determine the season based on the month and day. Each month is checked to see if it falls within a specific range that defines the transition between seasons.
+3. **Transition Days**: For months that have a transition day (e.g., March 20, June 21, September 22, December 21), the function checks if the day is before or after the transition day to determine the correct season.
+4. **Return Value**: The function returns the determined season as a string.
+
+This approach ensures that the function accurately identifies the season for any given month and day.

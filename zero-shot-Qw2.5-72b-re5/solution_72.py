@@ -1,0 +1,11 @@
+def dif_Square(n):
+    """
+    Write a python function to check whether the given number can be represented as difference of two squares or not.
+    """
+    if n % 4 == 2:
+        return False
+    for i in range(0, int(n**0.5) + 1):
+        j = (n + i * i)**0.5
+        if j == int(j):
+            return True
+    return False

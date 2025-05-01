@@ -1,0 +1,8 @@
+Input: x, y, z: three sides of a triangle
+Output: True if the triangle is equilateral, False otherwise
+
+1: Check if all three sides are equal (x == y and y == z)
+2: If they are equal:
+3:     Return True
+4: Else:
+5:     Return False

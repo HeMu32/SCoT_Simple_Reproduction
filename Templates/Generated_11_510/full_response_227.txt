@@ -1,0 +1,11 @@
+[BEGIN]
+Input: a, b, c: three numbers
+Output: smallest: the smallest of the three numbers
+1: if a is less than or equal to b and a is less than or equal to c:
+2:     smallest is a
+3: else if b is less than or equal to a and b is less than or equal to c:
+4:     smallest is b
+5: else:
+6:     smallest is c
+7: return smallest
+[END]

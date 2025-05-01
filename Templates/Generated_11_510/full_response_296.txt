@@ -1,0 +1,11 @@
+[BEGIN]
+Input: arr: a list of integers, n: the length of arr
+Output: inv_count: the number of inversions in arr
+
+1: Initialize inv_count to 0
+2: for i from 0 to n-1 do
+3:     for j from i+1 to n-1 do
+4:         if arr[i] is greater than arr[j] then
+5:             increment inv_count by 1
+6: return inv_count
+[END]

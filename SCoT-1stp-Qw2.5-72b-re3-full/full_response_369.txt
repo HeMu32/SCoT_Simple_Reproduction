@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: l (length), w (width), h (height) - all are positive integers or floats representing the dimensions of the cuboid.
+Output: The lateral surface area of the cuboid, which is a float or integer.
+
+1: Calculate the perimeter of the base of the cuboid, which is 2 * (l + w).
+2: Multiply the perimeter by the height (h) to get the lateral surface area.
+3: Return the calculated lateral surface area.
+[END PROCESS]
+
+[BEGIN CODE]
+def lateralsurface_cuboid(l, w, h):
+    # Calculate the perimeter of the base
+    perimeter = 2 * (l + w)
+    # Calculate the lateral surface area
+    lateral_surface_area = perimeter * h
+    # Return the lateral surface area
+    return lateral_surface_area
+[END CODE]
+
+### Explanation:
+The lateral surface area of a cuboid is the area of the four sides, excluding the top and bottom faces. The formula to calculate the lateral surface area (LSA) is given by:
+\[ \text{LSA} = 2 \times (l + w) \times h \]
+where:
+- \( l \) is the length of the cuboid,
+- \( w \) is the width of the cuboid,
+- \( h \) is the height of the cuboid.
+
+The perimeter of the base (which is a rectangle) is \( 2 \times (l + w) \). Multiplying this perimeter by the height \( h \) gives the lateral surface area. This formula is implemented in the function `lateralsurface_cuboid`, which takes the length, width, and height as inputs and returns the lateral surface area.

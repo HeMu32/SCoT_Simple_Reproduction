@@ -1,0 +1,14 @@
+[BEGIN]
+Input: n: an integer  
+Output: True or False  
+1: for each digit i from 0 to 9:  
+2:     set temp to n  
+3:     set count to 0  
+4:     while temp is not 0:  
+5:         if the last digit of temp is equal to i:  
+6:             increment count by 1  
+7:         if count is greater than i:  
+8:             return False  
+9:         remove the last digit from temp  
+10: return True  
+[END]

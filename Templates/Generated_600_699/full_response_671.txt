@@ -1,0 +1,13 @@
+[BEGIN]
+Input: n: an integer
+Output: an integer with the rightmost unset bit set
+
+1: if n is 0:
+2:     return 1
+3: if n and (n + 1) is 0:
+4:     return n
+5: calculate the position of the rightmost set bit in the bitwise NOT of n
+6:     set pos to the result of get_Pos_Of_Right_most_Set_Bit(~n)
+7: set the bit at position pos - 1 in n
+8:     return (1 << (pos - 1)) | n
+[END]

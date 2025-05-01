@@ -1,0 +1,10 @@
+Input: str: a string for which permutations are to be generated
+Output: Print all permutations of the given string, including duplicates
+
+1: If the length of the string is 1, print the string and return (base case)
+2: For each character in the string:
+3:     Remove the character from the string and store it in a variable
+4:     Generate permutations of the remaining string (recursive call)
+5:     For each permutation generated in the recursive call:
+6:         Add the removed character to the beginning of the permutation
+7:         Print the new permutation

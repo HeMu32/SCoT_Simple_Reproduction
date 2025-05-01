@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: str1: a string  
+Output: count: the total number of characters in str1  
+
+1: Initialize a variable `count` to 0 to keep track of the number of characters  
+2: Loop through each character `char` in the string `str1`:  
+3:     Increment `count` by 1  
+4: Return `count` as the total number of characters in the string
+[END PROCESS]
+
+[BEGIN CODE]
+def count_charac(str1):
+    count = 0
+    for char in str1:
+        count += 1
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_charac` is designed to count the total number of characters in a given string `str1`. The process involves initializing a counter variable `count` to 0. Then, the function iterates over each character in the string, incrementing the counter by 1 for each character. Finally, the function returns the total count of characters. This approach ensures that all characters, including spaces and special characters, are counted.

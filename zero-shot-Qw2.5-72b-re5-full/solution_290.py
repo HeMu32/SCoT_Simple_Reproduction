@@ -1,0 +1,5 @@
+def max_length(list1):
+    if not list1:
+        return []
+    max_len = max(len(sublist) for sublist in list1)
+    return [sublist for sublist in list1 if len(sublist) == max_len]

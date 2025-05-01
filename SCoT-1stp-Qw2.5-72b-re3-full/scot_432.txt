@@ -1,0 +1,6 @@
+Input: base1: length of the first base of the trapezium, base2: length of the second base of the trapezium, height: height of the trapezium
+Output: median: the length of the median (or midsegment) of the trapezium
+
+1: Calculate the median of the trapezium using the formula:
+2:     median = (base1 + base2) / 2
+3: Return the calculated median

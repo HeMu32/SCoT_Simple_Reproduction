@@ -1,0 +1,11 @@
+[BEGIN]
+Input: l: a list of tuples, where each tuple contains a key and a value
+Output: result: a dictionary where each key maps to a list of values
+
+1: Initialize an empty dictionary named result
+2: For each tuple (k, v) in the list l:
+3:     If the key k is not already in the dictionary result:
+4:         Add k to result with an empty list as its value
+5:     Append the value v to the list associated with key k in result
+6: Return the dictionary result
+[END]

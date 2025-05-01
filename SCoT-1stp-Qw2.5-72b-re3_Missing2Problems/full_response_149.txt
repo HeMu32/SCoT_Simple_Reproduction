@@ -1,0 +1,53 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the list
+Output: The length of the longest subsequence where the difference between adjacent elements is one.
+
+1: Initialize a variable `max_length` to store the maximum length of the subsequence found so far, set it to 1.
+2: Initialize a variable `current_length` to store the length of the current subsequence being checked, set it to 1.
+3: Iterate through the array from the second element to the last element:
+4:     If the absolute difference between the current element and the previous element is 1:
+5:         Increment `current_length` by 1.
+6:         If `current_length` is greater than `max_length`:
+7:             Update `max_length` to `current_length`.
+8:     Else:
+9:         Reset `current_length` to 1.
+10: Return `max_length`.
+[END PROCESS]
+
+[BEGIN CODE]
+def longest_subseq_with_diff_one(arr, n):
+    if n == 0:
+        return 0  # If the array is empty, the longest subsequence is 0.
+    
+    max_length = 1  # Initialize the maximum length of the subsequence.
+    current_length = 1  # Initialize the current length of the subsequence.
+    
+    for i in range(1, n):
+        if abs(arr[i] - arr[i - 1]) == 1:
+            current_length += 1
+            if current_length > max_length:
+                max_length = current_length
+        else:
+            current_length = 1
+    
+    return max_length
+[END CODE]
+
+### Explanation:
+The function `longest_subseq_with_diff_one` takes an array `arr` and its length `n` as input. The goal is to find the longest subsequence within the array where the difference between adjacent elements is exactly one.
+
+1. **Initialization**:
+   - `max_length` is initialized to 1 because the minimum length of any subsequence is 1 (a single element).
+   - `current_length` is also initialized to 1 to start tracking the length of the current subsequence.
+
+2. **Iteration**:
+   - The loop starts from the second element (index 1) and goes to the last element (index n-1).
+   - For each element, it checks if the absolute difference between the current element and the previous element is 1.
+   - If the condition is met, it increments `current_length` by 1.
+   - If `current_length` exceeds `max_length`, `max_length` is updated to `current_length`.
+   - If the condition is not met, `current_length` is reset to 1 to start a new subsequence.
+
+3. **Return**:
+   - After the loop, the function returns `max_length`, which is the length of the longest subsequence where the difference between adjacent elements is one.
+
+This approach ensures that the function efficiently finds the longest subsequence with the desired property in a single pass through the array.

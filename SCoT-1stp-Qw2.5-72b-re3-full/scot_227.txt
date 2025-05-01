@@ -1,0 +1,12 @@
+Input: a, b, c: three numbers
+Output: min_val: the minimum of the three numbers
+
+1: Compare a and b
+2: If a is less than b:
+3:     Set min_val to a
+4: Else:
+5:     Set min_val to b
+6: Compare min_val with c
+7: If min_val is greater than c:
+8:     Set min_val to c
+9: Return min_val

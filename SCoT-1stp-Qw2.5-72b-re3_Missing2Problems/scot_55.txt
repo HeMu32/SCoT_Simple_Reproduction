@@ -1,0 +1,5 @@
+Input: a: the first term of the geometric series, n: the term number to find, r: the common ratio of the geometric series
+Output: The n-th term of the geometric series
+
+1: Calculate the n-th term using the formula for the n-th term of a geometric series: a * r^(n-1)
+2: Return the calculated n-th term

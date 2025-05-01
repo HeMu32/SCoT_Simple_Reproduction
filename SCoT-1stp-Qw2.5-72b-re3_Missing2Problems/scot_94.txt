@@ -1,0 +1,10 @@
+Input: test_list: a list of tuples
+Output: index: the index of the tuple with the minimum value in the list
+
+1: Initialize a variable min_value to None to keep track of the minimum value found
+2: Initialize a variable index to -1 to keep track of the index of the tuple with the minimum value
+3: Loop through the list of tuples with both the index and the tuple itself
+4:     If min_value is None or the current tuple's value is less than min_value:
+5:         Update min_value to the current tuple's value
+6:         Update index to the current index
+7: After the loop, return index

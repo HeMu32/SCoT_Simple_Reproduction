@@ -1,0 +1,10 @@
+Input: test_tup: a tuple of elements
+Output: A dictionary where each key is an element from the tuple, and the value is the count of elements that occur before the first occurrence of the key in the tuple.
+
+1: Initialize an empty dictionary `result` to store the count of elements before each unique element.
+2: Initialize a variable `count` to 0 to keep track of the number of elements processed.
+3: Loop through each element in `test_tup`:
+4:     If the element is not already a key in `result`:
+5:         Add the element to `result` with the value of `count`.
+6:     Increment `count` by 1.
+7: Return the `result` dictionary.

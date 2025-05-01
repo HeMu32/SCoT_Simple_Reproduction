@@ -1,0 +1,9 @@
+def first_Element(arr, n, k):
+    from collections import defaultdict
+    
+    count_dict = defaultdict(int)
+    for i in range(n):
+        count_dict[arr[i]] += 1
+        if count_dict[arr[i]] == k:
+            return arr[i]
+    return -1

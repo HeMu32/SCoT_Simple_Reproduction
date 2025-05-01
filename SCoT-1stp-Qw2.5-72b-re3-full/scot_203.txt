@@ -1,0 +1,10 @@
+Input: x, y: two integers
+Output: distance: the Hamming distance between x and y
+
+1: Convert integers x and y to their binary representations
+2: Ensure both binary strings are of the same length by padding with leading zeros if necessary
+3: Initialize a variable `distance` to 0 to keep track of the Hamming distance
+4: For each bit in the binary strings:
+5:     If the bits at the current position are different:
+6:         Increment `distance` by 1
+7: Return the `distance`

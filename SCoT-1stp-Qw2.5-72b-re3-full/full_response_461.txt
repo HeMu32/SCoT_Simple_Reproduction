@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: str: a string
+Output: count: the number of uppercase characters in the string
+
+1: Initialize a counter variable count to 0
+2: for each character char in str:
+3:     if char is an uppercase letter:
+4:         increment count by 1
+5: return count
+[END PROCESS]
+
+[BEGIN CODE]
+def upper_ctr(str):
+    count = 0
+    for char in str:
+        if char.isupper():
+            count += 1
+    return count
+[END CODE]
+
+### Explanation:
+The function `upper_ctr` is designed to count the number of uppercase characters in a given string. The process involves initializing a counter to zero, iterating through each character in the string, checking if the character is uppercase, and incrementing the counter if it is. Finally, the function returns the total count of uppercase characters. The `isupper()` method is used to check if a character is an uppercase letter. This method returns `True` if the character is uppercase and `False` otherwise.

@@ -1,0 +1,12 @@
+Input: n, m: integers representing the start and end of the range (inclusive).
+Output: count: the number of elements within the range [n, m] that have an odd number of factors.
+
+1: Initialize count to 0.
+2: Loop through each number i in the range [n, m]:
+3:     Initialize a variable factor_count to 0.
+4:     Loop through each number j from 1 to the square root of i:
+5:         If i is divisible by j (i.e., i % j == 0):
+6:             If i divided by j equals j (i.e., i // j == j), increment factor_count by 1 (since it's a perfect square and has a repeated factor).
+7:             Otherwise, increment factor_count by 2 (since factors come in pairs).
+8:     If factor_count is odd, increment count by 1.
+9: Return count.

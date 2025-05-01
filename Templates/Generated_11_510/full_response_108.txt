@@ -1,0 +1,10 @@
+[BEGIN]
+Input: num1, num2, num3: lists of numbers (assumed to be sorted)
+Output: merged_list: a single sorted list containing all elements from num1, num2, and num3
+
+1: Sort num1, num2, and num3 (though they are assumed to be already sorted)
+2: Initialize a heap queue (priority queue) to merge the sorted lists
+3: Use the heap queue to merge num1, num2, and num3 into a single sorted iterator
+4: Convert the merged iterator into a list
+5: Return the merged list
+[END]

@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: array_nums: a list of integers
+Output: count: the number of odd elements in the list
+
+1: Use the `filter` function to apply a lambda function to each element in array_nums.
+2:     The lambda function checks if an element is odd by using the modulus operator (%). If the element modulo 2 is not equal to 0, it is odd.
+3: Convert the filter object to a list to get a list of all odd elements.
+4: Use the `len` function to count the number of elements in the list of odd elements.
+5: Return the count.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_odd(array_nums):
+    odd_elements = list(filter(lambda x: x % 2 != 0, array_nums))
+    return len(odd_elements)
+[END CODE]
+
+### Explanation:
+The function `count_odd` is designed to count the number of odd elements in a given list `array_nums`. Here's how it works:
+
+1. **Filtering Odd Elements**: The `filter` function is used along with a lambda function to filter out the odd elements from `array_nums`. The lambda function `lambda x: x % 2 != 0` checks if an element `x` is odd by evaluating `x % 2 != 0`. If the condition is true, the element is included in the filtered list.
+
+2. **Converting to List**: The result of the `filter` function is a filter object, which is then converted to a list using `list()`. This list contains all the odd elements from `array_nums`.
+
+3. **Counting Elements**: The `len` function is used to count the number of elements in the list of odd elements, which gives the total number of odd elements in the original list.
+
+4. **Returning the Count**: Finally, the function returns the count of odd elements.
+
+This approach is efficient and concise, leveraging Python's built-in functions to achieve the desired result.

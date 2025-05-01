@@ -1,0 +1,8 @@
+Input: list1: a list containing various types of elements
+Output: count: the number of integer elements in the list
+
+1: Initialize a variable count to 0 to keep track of the number of integers
+2: Loop through each element in the list list1
+3:     Check if the current element is an instance of the int type
+4:     If it is, increment the count by 1
+5: After the loop, return the count

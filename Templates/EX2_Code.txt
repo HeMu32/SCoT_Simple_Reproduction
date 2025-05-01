@@ -1,0 +1,32 @@
+def monotonic (str)
+	"""
+	Complete this method, return True is list elements are monotonically increasing or decreasing.
+	Input: l: list 
+	Output: True or False 
+	1: 	for each element in l do 
+	2: 		if the element is greater than its previous element then 
+	3: 			l increases 
+	4: 		if the element is less than its previous element then 
+	5: 			l decreases 
+	6: 	if both increase and decrease then 
+	7: 		return False 
+	8: 	else 
+	9: 		return True 
+	"""
+
+# Please check the above solving process and write a code based on it. Note that the solving process may contain errors. 
+And you'll need to put [BEGIN] before your solution and [DONE] after it.
+
+[BEGIN]
+def monotonic(l: list): 
+	increasing = False 
+	decreasing = False 
+	for i in range(1, len(l)): 
+		if l[i] > l[i-1]: 
+			increasing = True 
+		if l[i] < l[i-1]: 
+			decreasing = True 
+	if increasing and decreasing: 
+		return False 
+	else: return True
+[DONE]

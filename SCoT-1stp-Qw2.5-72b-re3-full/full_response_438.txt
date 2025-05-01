@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples, where each tuple represents a pair of elements
+Output: count: an integer representing the number of bidirectional pairs in the list
+
+1: Initialize a variable `count` to 0 to keep track of the number of bidirectional pairs
+2: Loop through each tuple `pair` in `test_list` using an index `i`
+3:     For each `pair`, loop through the remaining tuples in `test_list` starting from the next index `i + 1`
+4:         If the reverse of the current `pair` (i.e., `pair` with elements swapped) is found in the remaining tuples, increment `count` by 1
+5: Return the final value of `count`
+[END PROCESS]
+
+[BEGIN CODE]
+def count_bidirectional(test_list):
+    count = 0
+    for i, pair in enumerate(test_list):
+        for j in range(i + 1, len(test_list)):
+            if pair == test_list[j][::-1]:
+                count += 1
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_bidirectional` is designed to count the number of bidirectional pairs in a list of tuples. A bidirectional pair is defined as a tuple where the elements are the same but in reverse order compared to another tuple in the list.
+
+1. **Initialization**: The variable `count` is initialized to 0 to keep track of the number of bidirectional pairs.
+2. **Outer Loop**: The outer loop iterates through each tuple in `test_list` using an index `i`.
+3. **Inner Loop**: The inner loop iterates through the remaining tuples in `test_list` starting from the next index `i + 1` to avoid counting the same pair twice and to avoid comparing a tuple with itself.
+4. **Comparison**: Inside the inner loop, the function checks if the reverse of the current tuple `pair` (i.e., `pair` with elements swapped) is equal to the current tuple in the inner loop `test_list[j]`. If they are equal, it means a bidirectional pair is found, and `count` is incremented by 1.
+5. **Return**: After both loops complete, the function returns the final value of `count`, which represents the number of bidirectional pairs in the list.
+
+This approach ensures that each pair is only counted once and that the function efficiently checks for bidirectional pairs by leveraging the properties of tuple comparison and slicing.

@@ -1,0 +1,14 @@
+[BEGIN]
+Input: test_str: a string  
+Output: res: a string with all numbers moved to the end  
+
+1: Initialize an empty string res to store the non-digit characters.  
+2: Initialize an empty string dig to store the digit characters.  
+3: for each character ele in test_str:  
+4:     if ele is a digit:  
+5:         add ele to dig  
+6:     else:  
+7:         add ele to res  
+8: concatenate dig to the end of res  
+9: return res  
+[END]

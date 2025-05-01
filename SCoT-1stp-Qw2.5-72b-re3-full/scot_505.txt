@@ -1,0 +1,12 @@
+Input: A: a list of integers
+Output: A: a list of integers with all zeroes moved to the end while maintaining the relative order of the non-zero elements
+
+1: Initialize an empty list `non_zero` to store non-zero elements
+2: Initialize an empty list `zeroes` to store zero elements
+3: Iterate through each element in the input list `A`
+4:   If the current element is not zero:
+5:     Append the current element to the `non_zero` list
+6:   Else:
+7:     Append the current element to the `zeroes` list
+8: Concatenate the `non_zero` list with the `zeroes` list
+9: Return the concatenated list

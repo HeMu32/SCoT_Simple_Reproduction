@@ -1,0 +1,8 @@
+Input: l: a list of integers
+Output: res: a list of integers with all odd numbers removed
+
+1: Initialize an empty list res to store the result
+2: For each element ele in the list l:
+3:     If ele is even (ele % 2 == 0):
+4:         Append ele to res
+5: Return res

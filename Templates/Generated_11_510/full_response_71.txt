@@ -1,0 +1,19 @@
+[BEGIN]
+Input: nums: a list of numbers
+Output: nums: a sorted list of numbers
+
+1: Initialize shrink_fact to 1.3
+2: Set gaps to the length of nums
+3: Set swapped to True
+4: Initialize i to 0
+5: While gaps is greater than 1 or swapped is True:
+6:     Update gaps to be the integer part of gaps divided by shrink_fact
+7:     Set swapped to False
+8:     Set i to 0
+9:     While i plus gaps is less than the length of nums:
+10:        If the element at index i in nums is greater than the element at index i plus gaps:
+11:           Swap the elements at index i and i plus gaps in nums
+12:           Set swapped to True
+13:        Increment i by 1
+14: Return nums
+[END]

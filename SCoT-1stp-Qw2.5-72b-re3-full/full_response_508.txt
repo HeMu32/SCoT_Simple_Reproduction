@@ -1,0 +1,45 @@
+[BEGIN PROCESS]
+Input: l1, l2: two lists of elements
+Output: result: a boolean value indicating whether the common elements between the two lists are in the same order
+
+1: Initialize an empty list `common` to store common elements in the order they appear in `l1`.
+2: Loop through each element `e` in `l1`:
+3:     If `e` is in `l2` and not already in `common`, append `e` to `common`.
+4: Initialize an index `index` to 0 to track the position in `common`.
+5: Loop through each element `e` in `l2`:
+6:     If `e` is in `common` and `e` is equal to `common[index]`, increment `index` by 1.
+7:     If `e` is in `common` but not equal to `common[index]`, return `False` because the order is not maintained.
+8: After the loop, if `index` is equal to the length of `common`, return `True` (all common elements are in the same order).
+9: Otherwise, return `False` (not all common elements are in the same order or the order is not maintained).
+[END PROCESS]
+
+[BEGIN CODE]
+def same_order(l1, l2):
+    common = []
+    for e in l1:
+        if e in l2 and e not in common:
+            common.append(e)
+    
+    index = 0
+    for e in l2:
+        if e in common:
+            if e == common[index]:
+                index += 1
+            else:
+                return False
+    
+    return index == len(common)
+[END CODE]
+
+### Explanation:
+The function `same_order` checks if the common elements between two lists `l1` and `l2` appear in the same order in both lists. Here's a step-by-step breakdown of the logic:
+
+1. **Identify Common Elements**: We first identify the common elements between `l1` and `l2` and store them in the list `common` in the order they appear in `l1`. This ensures that we only consider the elements that are present in both lists.
+
+2. **Track Order in `l2`**: We then iterate through `l2` and use an index `index` to track the position in the `common` list. For each element in `l2`:
+   - If the element is in `common` and matches the current element in `common` (i.e., `common[index]`), we increment `index` by 1.
+   - If the element is in `common` but does not match the current element in `common`, it means the order is not maintained, and we return `False`.
+
+3. **Final Check**: After iterating through `l2`, if `index` is equal to the length of `common`, it means all common elements are in the same order in both lists, and we return `True`. Otherwise, we return `False`.
+
+This approach ensures that we correctly identify and verify the order of common elements between the two lists.

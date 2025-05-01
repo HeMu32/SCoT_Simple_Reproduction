@@ -1,0 +1,12 @@
+[BEGIN]
+Input: n: an integer  
+Output: the first digit of the factorial of n  
+1: Initialize fact to 1  
+2: for i from 2 to n inclusive:  
+3:     fact = fact * i  
+4:     while fact is divisible by 10:  
+5:         fact = fact / 10  
+6: while fact is greater than or equal to 10:  
+7:     fact = fact / 10  
+8: return the floor of fact  
+[END]

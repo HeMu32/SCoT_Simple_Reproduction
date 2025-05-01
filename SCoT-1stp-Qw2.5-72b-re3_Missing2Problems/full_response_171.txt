@@ -1,0 +1,17 @@
+[BEGIN PROCESS]
+Input: a: the length of one side of a regular pentagon
+Output: perimeter: the perimeter of the pentagon
+1: Calculate the perimeter by multiplying the length of one side by 5, since a pentagon has five sides.
+2: Return the calculated perimeter.
+[END PROCESS]
+
+[BEGIN CODE]
+def perimeter_pentagon(a):
+    # Calculate the perimeter of the pentagon
+    perimeter = 5 * a
+    # Return the calculated perimeter
+    return perimeter
+[END CODE]
+
+### Explanation:
+The function `perimeter_pentagon(a)` takes a single argument `a`, which represents the length of one side of a regular pentagon. The perimeter of a regular pentagon is simply the sum of the lengths of its five sides. Since all sides are of equal length in a regular pentagon, the perimeter can be calculated by multiplying the length of one side by 5. The function then returns this calculated perimeter.

@@ -1,0 +1,4 @@
+Input: a: a number representing the side length of a square
+Output: perimeter: the perimeter of the square
+1: Calculate the perimeter by multiplying the side length by 4
+2: Return the perimeter

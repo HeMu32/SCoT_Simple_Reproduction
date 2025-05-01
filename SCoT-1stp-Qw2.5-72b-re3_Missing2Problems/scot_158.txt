@@ -1,0 +1,8 @@
+Input: arr: a list of integers, n: the length of the list, k: the number of operations
+Output: The minimum number of operations required to make all elements in the array equal, or -1 if it's not possible with the given number of operations.
+
+1: If the array is empty or has only one element, return 0 since no operations are needed.
+2: Sort the array to find the median, which is the optimal target value to minimize the number of operations.
+3: Calculate the total number of operations required to make all elements equal to the median.
+4: If the total number of operations is less than or equal to k, return the total number of operations.
+5: Otherwise, return -1 as it's not possible to make all elements equal with the given number of operations.

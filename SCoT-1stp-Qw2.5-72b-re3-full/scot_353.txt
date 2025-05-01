@@ -1,0 +1,11 @@
+Input: list1: a nested list, n: an integer representing the index of the column to remove
+Output: a new nested list with the specified column removed
+
+1: Initialize an empty list `result` to store the new nested list without the specified column.
+2: Loop through each sublist in `list1`:
+3:     Initialize an empty list `new_sublist` to store the elements of the current sublist except for the column to be removed.
+4:     Loop through the index `i` of each element in the current sublist:
+5:         If `i` is not equal to `n`:
+6:             Append the element at index `i` to `new_sublist`.
+7:     Append `new_sublist` to `result`.
+8: Return `result`.

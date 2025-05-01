@@ -1,0 +1,6 @@
+Input: n: an integer representing the position in the sequence of nonagonal numbers
+Output: The nth nonagonal number
+
+1: Calculate the value using the formula (n * (7 * n - 5) / 2)
+2: Convert the calculated value to an integer
+3: Return the integer value

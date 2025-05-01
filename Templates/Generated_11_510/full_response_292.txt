@@ -1,0 +1,7 @@
+[BEGIN]
+Input: n, m: two numbers
+Output: q: the quotient of n divided by m
+
+1: Calculate the quotient q by performing integer division of n by m
+2: Return q
+[END]

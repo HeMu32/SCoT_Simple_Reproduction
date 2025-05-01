@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: A sorted array of integers where every element appears twice except for one.
+Output: The element that appears only once in the array.
+
+1: Initialize two pointers, `left` and `right`, to the start and end of the array, respectively.
+2: While `left` is less than `right`:
+3:     Calculate the middle index `mid` as `(left + right) // 2`.
+4:     Check if the middle element is the unique element:
+5:         If the middle element is not equal to its neighbors, return the middle element.
+6:     If the middle element is even and equal to the next element, or if the middle element is odd and equal to the previous element, the unique element must be on the right side:
+7:         Set `left` to `mid + 1`.
+8:     Otherwise, the unique element must be on the left side:
+9:         Set `right` to `mid`.
+10: If the loop completes, return the element at the `left` pointer, which should be the unique element.
+[END PROCESS]
+
+[BEGIN CODE]
+def search(arr):
+    left, right = 0, len(arr) - 1
+    
+    while left < right:
+        mid = (left + right) // 2
+        
+        # Check if the middle element is the unique element
+        if (mid == 0 or arr[mid] != arr[mid - 1]) and (mid == len(arr) - 1 or arr[mid] != arr[mid + 1]):
+            return arr[mid]
+        
+        # Determine which side to search
+        if (mid % 2 == 0 and arr[mid] == arr[mid + 1]) or (mid % 2 == 1 and arr[mid] == arr[mid - 1]):
+            left = mid + 1
+        else:
+            right = mid
+    
+    # The unique element is at the left pointer
+    return arr[left]
+[END CODE]
+
+### Explanation:
+- **Binary Search Approach**: The function uses a binary search approach to efficiently find the unique element in a sorted array where every other element appears exactly twice. This method works in O(log n) time complexity, which is much more efficient than a linear search.
+- **Middle Element Check**: The middle element is checked to see if it is the unique element by comparing it with its neighbors. If it is not equal to either neighbor, it is the unique element.
+- **Side Determination**: If the middle element is part of a pair, the side of the array to continue the search on is determined based on the position of the middle element and its pair. If the middle index is even and the middle element is equal to the next element, or if the middle index is odd and the middle element is equal to the previous element, the unique element must be on the right side. Otherwise, it must be on the left side.
+- **Final Return**: If the loop completes, the unique element is found at the `left` pointer, which is returned as the result.

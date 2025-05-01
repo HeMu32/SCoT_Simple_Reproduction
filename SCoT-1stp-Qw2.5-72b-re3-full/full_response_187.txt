@@ -1,0 +1,51 @@
+[BEGIN PROCESS]
+Input: X: first sequence, Y: second sequence, m: length of X, n: length of Y
+Output: lcs: the longest common subsequence of X and Y
+
+1: Initialize a 2D array dp of size (m+1) x (n+1) to store the lengths of the longest common subsequences for different prefixes of X and Y.
+2: For each element in the 2D array:
+   - If the current indices are 0 (i.e., the first row or the first column), set the value to 0 (base case).
+   - If the characters of X and Y at the current indices match, set dp[i][j] to dp[i-1][j-1] + 1.
+   - If the characters do not match, set dp[i][j] to the maximum of dp[i-1][j] and dp[i][j-1].
+3: The value dp[m][n] will contain the length of the longest common subsequence.
+4: To construct the actual subsequence, start from dp[m][n] and trace back to the beginning:
+   - If the characters of X and Y match, add the character to the result and move diagonally up-left.
+   - Otherwise, move in the direction of the larger value (either up or left).
+5: Reverse the constructed subsequence to get the correct order.
+6: Return the longest common subsequence.
+[END PROCESS]
+
+[BEGIN CODE]
+def longest_common_subsequence(X, Y, m, n):
+    # Initialize the DP table
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    
+    # Fill the DP table
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if X[i - 1] == Y[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+    
+    # Reconstruct the LCS
+    lcs = []
+    i, j = m, n
+    while i > 0 and j > 0:
+        if X[i - 1] == Y[j - 1]:
+            lcs.append(X[i - 1])
+            i -= 1
+            j -= 1
+        elif dp[i - 1][j] > dp[i][j - 1]:
+            i -= 1
+        else:
+            j -= 1
+    
+    # The LCS is constructed backwards, so reverse it
+    lcs.reverse()
+    
+    return ''.join(lcs)
+[END CODE]
+
+### Explanation:
+The function `longest_common_subsequence` computes the longest common subsequence (LCS) of two sequences `X` and `Y`. The approach uses dynamic programming to build a table `dp` where `dp[i][j]` represents the length of the LCS of the sequences `X[0:i]` and `Y[0:j]`. The table is filled in a bottom-up manner, and the LCS is reconstructed by backtracking from `dp[m][n]` to the start. The final LCS is returned as a string. This method ensures that the solution is efficient and handles sequences of any length.

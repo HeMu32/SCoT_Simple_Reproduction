@@ -1,0 +1,15 @@
+Input: S: a string  
+Output: A string where no two adjacent characters are the same, or an empty string if it's not possible  
+
+1: Count the frequency of each character in S using a Counter  
+2: Create a max heap (priority queue) from the frequency counts, where the most frequent characters have the highest priority  
+3: If the highest frequency character appears more than half the length of S plus one, return an empty string (rearrangement is not possible)  
+4: Initialize an empty list to store the rearranged characters  
+5: While the heap has at least two elements:  
+6:     Pop the two most frequent characters from the heap  
+7:     Append these two characters to the result list  
+8:     Decrease their counts by one  
+9:     If the count of the first character is still greater than zero, push it back into the heap  
+10:    If the count of the second character is still greater than zero, push it back into the heap  
+11: If there is one character left in the heap, append it to the result list  
+12: Join the list into a string and return it

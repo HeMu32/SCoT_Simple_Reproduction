@@ -1,0 +1,20 @@
+Input: N: an integer 
+Output: sum: the maximum sum of digits of two parts of N 
+
+1: Define a function sum_digits_single(x) to calculate the sum of digits of a number x:
+   1.1: Initialize ans to 0
+   1.2: While x is not 0:
+        1.2.1: Add the last digit of x to ans
+        1.2.2: Remove the last digit from x
+   1.3: Return ans
+
+2: Define a function closest(x) to find the largest number less than or equal to x with all digits being 9:
+   2.1: Initialize ans to 0
+   2.2: While (ans * 10 + 9) is less than or equal to x:
+        2.2.1: Set ans to (ans * 10 + 9)
+   2.3: Return ans
+
+3: Define a function sum_digits_twoparts(N) to divide N into two parts such that the sum of digits is maximized:
+   3.1: Call closest(N) to get the largest number A with all digits being 9 and less than or equal to N
+   3.2: Calculate the sum of digits of A and (N - A) using sum_digits_single
+   3.3: Return the sum of the two results from step 3.2

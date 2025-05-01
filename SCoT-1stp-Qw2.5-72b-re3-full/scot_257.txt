@@ -1,0 +1,7 @@
+Input: a, b: two numbers  
+Output: a, b: the two numbers with their values swapped  
+
+1: Store the value of 'a' in a temporary variable 'temp'.  
+2: Assign the value of 'b' to 'a'.  
+3: Assign the value stored in 'temp' (which is the original value of 'a') to 'b'.  
+4: Return the new values of 'a' and 'b'.

@@ -1,0 +1,12 @@
+[BEGIN]
+Input: l1, l2, l3: lists
+Output: result: a list of nested dictionaries
+
+1: Initialize an empty list called result
+2: Use a loop to iterate over the elements of l1, l2, and l3 simultaneously using the zip function
+3:     For each tuple (x, y, z) from the zip function:
+4:         Create a nested dictionary with x as the key and another dictionary as its value
+5:         The inner dictionary has y as the key and z as the value
+6:         Append the nested dictionary to the result list
+7: Return the result list
+[END]

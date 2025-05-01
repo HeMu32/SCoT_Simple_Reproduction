@@ -1,0 +1,9 @@
+Input: n: an integer representing the minimum length of words to be included, str: a string containing a list of words separated by spaces
+Output: A list of words from the input string that are longer than n characters
+
+1: Split the input string `str` into a list of words
+2: Initialize an empty list `long_words_list` to store words longer than `n` characters
+3: For each word `word` in the list of words:
+   4: If the length of `word` is greater than `n`:
+      5: Add `word` to `long_words_list`
+6: Return `long_words_list`

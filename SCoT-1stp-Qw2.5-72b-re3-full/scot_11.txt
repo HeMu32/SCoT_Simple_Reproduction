@@ -1,0 +1,12 @@
+Input: s: a string, ch: a character to remove
+Output: A new string with the first and last occurrence of the character `ch` removed
+
+1: Initialize a variable `first_index` to -1 to store the index of the first occurrence of `ch`.
+2: Initialize a variable `last_index` to -1 to store the index of the last occurrence of `ch`.
+3: Loop through the string `s` using an index `i` from 0 to the length of `s` - 1:
+4:     If the character at index `i` is `ch`:
+5:         If `first_index` is -1, set `first_index` to `i`.
+6:         Set `last_index` to `i`.
+7: If `first_index` and `last_index` are both -1, return the original string `s` (no occurrences of `ch` found).
+8: If `first_index` is equal to `last_index`, return the string `s` with the character at `first_index` removed.
+9: Otherwise, return the string `s` with the characters at `first_index` and `last_index` removed.

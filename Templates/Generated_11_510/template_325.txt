@@ -1,0 +1,13 @@
+Input: n: an integer
+Output: res: the minimum number of squares whose sum is equal to n
+1: if n is less than or equal to 3:
+2:     return n
+3: initialize res to n
+4: for x from 1 to n:
+5:     calculate temp as x squared
+6:     if temp is greater than n:
+7:         break the loop
+8:     else:
+9:         calculate the result of get_Min_Squares(n - temp) and add 1 to it
+10:        update res to the minimum of res and the calculated result
+11: return res

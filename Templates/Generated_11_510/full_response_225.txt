@@ -1,0 +1,14 @@
+[BEGIN]
+Input: arr: a sorted and rotated array, low: the starting index, high: the ending index
+Output: the minimum element in the array
+
+1: while (low < high):
+2:     mid = low + (high - low) // 2
+3:     if (arr[mid] == arr[high]):
+4:         high -= 1
+5:     elif (arr[mid] > arr[high]):
+6:         low = mid + 1
+7:     else:
+8:         high = mid
+9: return arr[high]
+[END]

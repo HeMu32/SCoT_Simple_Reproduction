@@ -1,0 +1,10 @@
+Input: test_list: a list of tuples
+Output: res: a string representation of a list of tuples with each original tuple extended by its frequency
+
+1: Initialize a Counter object with test_list to count the frequency of each tuple
+2: Initialize an empty list res
+3: For each key and value pair in the items of the Counter object:
+4:     Extend the key tuple with the value (frequency) to form a new tuple
+5:     Append the new tuple to res
+6: Convert res to a string representation
+7: Return the string representation of res

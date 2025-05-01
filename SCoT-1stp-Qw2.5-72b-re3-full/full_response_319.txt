@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: text: a string
+Output: words: a list of words that are exactly five characters long
+
+1: Import the `re` module for regular expression operations
+2: Define a regular expression pattern to match words that are exactly five characters long
+3: Use the `re.findall` function to find all occurrences of the pattern in the input text
+4: Return the list of matched words
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def find_long_word(text):
+    # Define the regex pattern to match words that are exactly five characters long
+    pattern = r'\b\w{5}\b'
+    # Use re.findall to find all occurrences of the pattern in the text
+    words = re.findall(pattern, text)
+    # Return the list of matched words
+    return words
+[END CODE]
+
+### Explanation
+
+1. **Import the `re` module**: This module provides support for working with regular expressions in Python.
+2. **Define the regex pattern**: The pattern `\b\w{5}\b` is used to match words that are exactly five characters long. Here, `\b` is a word boundary, ensuring that the match is a whole word. `\w{5}` matches exactly five word characters (letters, digits, or underscores).
+3. **Use `re.findall`**: This function returns all non-overlapping matches of the pattern in the string, as a list of strings. The string is scanned left-to-right, and matches are returned in the order found.
+4. **Return the list of matched words**: The function returns the list of words that are exactly five characters long.
+
+This approach ensures that the function accurately finds and returns all five-character words in the given text.

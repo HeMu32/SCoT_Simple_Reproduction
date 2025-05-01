@@ -1,0 +1,10 @@
+Input: arr: a list of integers, n: the number of elements in arr
+Output: max_diff: the maximum absolute difference between any two elements in arr
+
+1: Initialize max_diff to 0
+2: Loop through each element in arr with index i
+3:     Loop through each element in arr with index j, starting from i+1 to avoid redundant comparisons
+4:         Calculate the absolute difference between arr[i] and arr[j]
+5:         If the calculated difference is greater than max_diff:
+6:             Update max_diff to the calculated difference
+7: Return max_diff

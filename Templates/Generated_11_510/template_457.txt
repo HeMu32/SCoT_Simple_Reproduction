@@ -1,0 +1,7 @@
+Input: lst: a list of sublists
+Output: minList: the sublist with the minimum length
+1: Initialize a generator expression that iterates over each sublist x in lst
+2:     For each sublist x, calculate its length
+3: Use the min function to find the sublist with the minimum length from the generator expression
+4: Assign the found sublist to minList
+5: Return minList

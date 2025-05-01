@@ -1,0 +1,20 @@
+def compute_Last_Digit(A, B):
+    def factorial_last_digit(n):
+        if n >= 5:
+            return 0
+        last_digits = [1, 1, 2, 6, 4]
+        return last_digits[n]
+    
+    if A > B:
+        return 0
+    elif A == B:
+        return 1
+    else:
+        last_digit_A = factorial_last_digit(A)
+        last_digit_B = factorial_last_digit(B)
+        return (last_digit_B // last_digit_A) % 10
+
+# Example usage:
+# print(compute_Last_Digit(2, 4))  # Output: 2
+# print(compute_Last_Digit(5, 10))  # Output: 0
+# print(compute_Last_Digit(1, 1))  # Output: 1

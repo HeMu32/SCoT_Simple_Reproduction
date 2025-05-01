@@ -1,0 +1,5 @@
+Input: test_tup: a tuple, N: an integer
+Output: res: a tuple with test_tup repeated N times
+
+1: Create a new tuple res by multiplying the tuple test_tup by N
+2: Return res

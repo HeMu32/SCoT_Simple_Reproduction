@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: str: a string
+Output: A boolean value indicating whether the string has at least one letter and one number
+
+1: Initialize two flags, `has_letter` and `has_number`, to False.
+2: Loop through each character `ch` in the string `str`:
+3:     If `ch` is a letter:
+4:         Set `has_letter` to True.
+5:     If `ch` is a number:
+6:         Set `has_number` to True.
+7:     If both `has_letter` and `has_number` are True:
+8:         Break the loop as the condition is already met.
+9: Return the result of `has_letter and has_number`.
+[END PROCESS]
+
+[BEGIN CODE]
+def check_String(str):
+    has_letter = False
+    has_number = False
+    
+    for ch in str:
+        if ch.isalpha():
+            has_letter = True
+        if ch.isdigit():
+            has_number = True
+        if has_letter and has_number:
+            break
+    
+    return has_letter and has_number
+[END CODE]
+
+### Explanation:
+The function `check_String` is designed to determine if a given string contains at least one letter and one number. The process involves iterating through each character in the string and checking if it is a letter or a number. Two flags, `has_letter` and `has_number`, are used to track the presence of letters and numbers, respectively. If both flags are set to True during the iteration, the function can break early, as the condition is already satisfied. Finally, the function returns the logical AND of the two flags, which will be True only if both a letter and a number are found in the string.

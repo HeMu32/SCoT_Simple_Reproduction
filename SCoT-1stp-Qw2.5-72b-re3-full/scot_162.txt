@@ -1,0 +1,9 @@
+Input: n: a positive integer
+Output: sum: the sum of the series n + (n-2) + (n-4) + ... (until n-x <= 0)
+
+1: Initialize sum to 0
+2: Initialize current to n
+3: Loop while current is greater than 0:
+4:     Add current to sum
+5:     Subtract 2 from current
+6: Return sum

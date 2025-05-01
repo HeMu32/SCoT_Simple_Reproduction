@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: test_tup1, test_tup2: two tuples of the same length containing boolean values (True or False)
+Output: result_tup: a tuple containing the element-wise AND of the two input tuples
+
+1: Initialize an empty list result_list to store the results of the AND operation
+2: for each index i from 0 to the length of test_tup1 - 1:
+3:     if test_tup1[i] AND test_tup2[i] is True:
+4:         append True to result_list
+5:     else:
+6:         append False to result_list
+7: Convert result_list to a tuple result_tup
+8: return result_tup
+[END PROCESS]
+
+[BEGIN CODE]
+def and_tuples(test_tup1, test_tup2):
+    result_list = []
+    for i in range(len(test_tup1)):
+        if test_tup1[i] and test_tup2[i]:
+            result_list.append(True)
+        else:
+            result_list.append(False)
+    result_tup = tuple(result_list)
+    return result_tup
+[END CODE]
+
+### Explanation:
+The function `and_tuples` takes two tuples, `test_tup1` and `test_tup2`, as input. It performs an element-wise logical AND operation on the corresponding elements of the two tuples and returns a new tuple containing the results of these operations.
+
+1. **Initialization**: An empty list `result_list` is initialized to store the results of the AND operations.
+2. **Loop through Elements**: A for loop iterates over the indices of the tuples. The loop variable `i` ranges from 0 to the length of `test_tup1` minus 1.
+3. **AND Operation**: For each index `i`, the function checks if both `test_tup1[i]` and `test_tup2[i]` are `True`. If they are, `True` is appended to `result_list`; otherwise, `False` is appended.
+4. **Convert to Tuple**: After the loop, the `result_list` is converted to a tuple `result_tup`.
+5. **Return Result**: The function returns `result_tup`.
+
+This approach ensures that the function correctly performs the element-wise AND operation and returns the result in the form of a tuple.

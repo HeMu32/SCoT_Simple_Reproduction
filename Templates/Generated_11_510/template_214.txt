@@ -1,0 +1,5 @@
+Input: radian: a float representing an angle in radians
+Output: degree: a float representing the angle in degrees
+1:  import the math module to access the value of pi
+2:  calculate the degree by multiplying radian with (180 / pi)
+3:  return the calculated degree

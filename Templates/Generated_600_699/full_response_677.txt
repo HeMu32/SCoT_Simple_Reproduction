@@ -1,0 +1,9 @@
+[BEGIN]
+Input: a, b, c: three angles of a triangle
+Output: True if the triangle is valid, False otherwise
+1: Calculate the total sum of the three angles (a + b + c)
+2: If the total sum is equal to 180 degrees:
+3:     Return True
+4: Else:
+5:     Return False
+[END]

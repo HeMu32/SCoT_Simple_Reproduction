@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: array_nums1, array_nums2: two lists of integers
+Output: A list containing the intersection of the two input lists
+
+1: Use the `filter` function with a lambda to filter elements in array_nums1 that are also present in array_nums2.
+2: Convert the filtered result to a list to get the intersection.
+3: Return the list of intersecting elements.
+[END PROCESS]
+
+[BEGIN CODE]
+def intersection_array(array_nums1, array_nums2):
+    # Use filter and lambda to find common elements
+    result = list(filter(lambda x: x in array_nums2, array_nums1))
+    return result
+[END CODE]
+
+### Explanation:
+- **Step 1:** The `filter` function is used to iterate over `array_nums1` and apply a condition to each element. The condition is defined by the lambda function `lambda x: x in array_nums2`, which checks if an element `x` from `array_nums1` is also present in `array_nums2`.
+- **Step 2:** The `filter` function returns an iterator, so we convert it to a list using `list()`.
+- **Step 3:** The resulting list, which contains the intersection of the two input lists, is returned.
+
+This approach leverages Python's functional programming capabilities to efficiently find the intersection of two lists.

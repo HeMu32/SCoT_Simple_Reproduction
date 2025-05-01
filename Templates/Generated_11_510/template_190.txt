@@ -1,0 +1,7 @@
+Input: x1, y1, x2, y2: coordinates of the bottom-left and top-right corners of a square
+Output: count: the number of integral points inside the square
+
+1: Calculate the difference in y-coordinates (height) by subtracting y1 from y2 and subtracting 1 to exclude the boundary points.
+2: Calculate the difference in x-coordinates (width) by subtracting x1 from x2 and subtracting 1 to exclude the boundary points.
+3: Multiply the height and width to get the total number of integral points inside the square.
+4: Return the result of the multiplication as the count of integral points.

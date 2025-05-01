@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the array, k: the number of occurrences to find
+Output: The first element in the array that occurs k times, or -1 if no such element exists
+
+1: Initialize an empty dictionary count_dict to store the count of each element
+2: Loop through the array arr:
+3:     If the element is not in count_dict, add it with a count of 1
+4:     Otherwise, increment the count of the element in count_dict
+5: Loop through the array arr again:
+6:     If the count of the current element in count_dict is equal to k:
+7:         Return the current element
+8: If no element occurs k times, return -1
+[END PROCESS]
+
+[BEGIN CODE]
+def first_Element(arr, n, k):
+    count_dict = {}
+    for i in range(n):
+        if arr[i] in count_dict:
+            count_dict[arr[i]] += 1
+        else:
+            count_dict[arr[i]] = 1
+    
+    for i in range(n):
+        if count_dict[arr[i]] == k:
+            return arr[i]
+    
+    return -1
+[END CODE]
+
+### Explanation:
+The function `first_Element` is designed to find the first element in the given array `arr` that occurs exactly `k` times. The function uses a dictionary `count_dict` to keep track of the count of each element in the array. The first loop iterates through the array to populate this dictionary. The second loop then checks each element in the array to see if its count matches `k`. If such an element is found, it is returned immediately. If no such element exists, the function returns -1. This approach ensures that the function returns the first occurrence of an element that meets the criteria, maintaining the order of the elements as they appear in the array.

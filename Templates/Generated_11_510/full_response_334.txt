@@ -1,0 +1,8 @@
+[BEGIN]
+Input: a, b, c: three sides of a triangle
+Output: True if the triangle is valid, False otherwise
+1: if (a + b <= c) or (a + c <= b) or (b + c <= a):
+2:     return False
+3: else:
+4:     return True
+[END]

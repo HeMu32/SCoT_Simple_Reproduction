@@ -1,0 +1,7 @@
+Input: nums: a list of integers
+Output: result: a list of integers containing only the odd numbers from the input list
+
+1: Use the `filter` function to apply a lambda function to each element in the nums list.
+2:     The lambda function takes one argument, x, and returns True if x is odd (x % 2 != 0), otherwise False.
+3: Convert the filter object to a list.
+4: Return the list as the result.

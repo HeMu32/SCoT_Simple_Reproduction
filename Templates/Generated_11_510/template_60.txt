@@ -1,0 +1,15 @@
+Input: arr: a list of integers, n: the length of arr
+Output: max: the maximum length of the subsequence with difference between adjacent elements of at most 1
+
+1: Initialize an empty list mls to store the maximum length of subsequence ending at each index.
+2: Initialize a variable max to 0 to keep track of the maximum length found.
+3: Loop through each element in arr using index i:
+   4:   Set mls[i] to 1, as the minimum length of subsequence ending at any element is 1 (the element itself).
+5: Loop through each element in arr using index i:
+   6:   Loop through all previous elements using index j (from 0 to i-1):
+        7:     If the absolute difference between arr[i] and arr[j] is less than or equal to 1 and mls[i] is less than mls[j] + 1:
+               8:       Set mls[i] to mls[j] + 1, extending the subsequence ending at j to include i.
+9: Loop through each element in mls using index i:
+   10:   If mls[i] is greater than max:
+         11:     Set max to mls[i].
+12: Return max as the maximum length of the subsequence.

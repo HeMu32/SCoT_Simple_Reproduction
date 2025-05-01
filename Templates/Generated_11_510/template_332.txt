@@ -1,0 +1,10 @@
+Input: str1: a string  
+Output: dict: a dictionary with characters as keys and their frequencies as values  
+1: Initialize an empty dictionary dict  
+2: for each character n in str1:  
+3:     Initialize keys with the current keys of dict  
+4:     if n is in keys:  
+5:         Increment the value of dict[n] by 1  
+6:     else:  
+7:         Set the value of dict[n] to 1  
+8: return dict

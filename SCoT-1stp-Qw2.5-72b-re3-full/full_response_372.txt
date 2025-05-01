@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: nums: a list of elements to be sorted
+Output: sorted_nums: a list of elements sorted in ascending order
+
+1: Import the `heapq` module to use heap queue algorithms
+2: Convert the input list `nums` into a heap using `heapify`
+3: Initialize an empty list `sorted_nums` to store the sorted elements
+4: While the heap is not empty:
+   4.1: Pop the smallest element from the heap using `heappop`
+   4.2: Append the popped element to `sorted_nums`
+5: Return `sorted_nums` as the sorted list
+[END PROCESS]
+
+[BEGIN CODE]
+import heapq
+
+def heap_assending(nums):
+    # Convert the list into a heap
+    heapq.heapify(nums)
+    
+    # Initialize an empty list to store the sorted elements
+    sorted_nums = []
+    
+    # Pop elements from the heap and append to the sorted list
+    while nums:
+        sorted_nums.append(heapq.heappop(nums))
+    
+    return sorted_nums
+[END CODE]
+
+### Explanation:
+The function `heap_assending` sorts a given list `nums` in ascending order using the heap queue algorithm provided by Python's `heapq` module. Here's a step-by-step breakdown of the process:
+
+1. **Import the `heapq` module**: This module provides functions to work with heaps, which are binary trees where the parent node is less than or equal to its children (min-heap).
+
+2. **Convert the list to a heap**: The `heapify` function transforms the list `nums` into a heap in-place, which allows efficient retrieval of the smallest element.
+
+3. **Initialize an empty list for the sorted elements**: The `sorted_nums` list will store the elements in sorted order.
+
+4. **Pop elements from the heap**: The `heappop` function is used to pop the smallest element from the heap and append it to `sorted_nums`. This process is repeated until the heap is empty.
+
+5. **Return the sorted list**: The `sorted_nums` list, which now contains all elements from `nums` in ascending order, is returned.
+
+This approach ensures that the list is sorted efficiently, leveraging the properties of a heap to maintain the order of elements.

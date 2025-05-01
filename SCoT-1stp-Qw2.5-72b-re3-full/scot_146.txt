@@ -1,0 +1,7 @@
+Input: str1: a string
+Output: total: the sum of ASCII values of all characters in the string
+
+1: Initialize total to 0
+2: for each character c in str1 do
+3:     Add the ASCII value of c to total
+4: return total

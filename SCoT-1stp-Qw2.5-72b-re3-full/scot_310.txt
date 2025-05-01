@@ -1,0 +1,5 @@
+Input: str1: a string  
+Output: tuple1: a tuple containing each character of the string as its elements
+
+1: Convert the string `str1` into a tuple where each character of the string becomes an element of the tuple.
+2: Return the tuple.

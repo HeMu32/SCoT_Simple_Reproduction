@@ -1,0 +1,13 @@
+Input: list1: a list of lists of integers  
+Output: maxi: the maximum sum of elements of any list in list1  
+1: Initialize maxi to a very small number  
+2: For each list x in list1 do  
+3:     Initialize sum to 0  
+4:     For each element y in x do  
+5:         Add y to sum  
+6:     End for  
+7:     If sum is greater than maxi then  
+8:         Set maxi to sum  
+9:     End if  
+10: End for  
+11: Return maxi

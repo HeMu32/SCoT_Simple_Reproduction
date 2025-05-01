@@ -1,0 +1,55 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, low: the starting index, high: the ending index
+Output: The minimum element in the array
+
+1: If the array is not rotated (i.e., the element at the low index is less than or equal to the element at the high index), return the element at the low index.
+2: Initialize min_element as the first element of the array.
+3: While low is less than or equal to high:
+4:     Calculate mid as the average of low and high (integer division).
+5:     If the element at mid is greater than the element at the next index, the minimum element is at the next index, so return the element at the next index.
+6:     If the element at mid is less than the element at the previous index, the minimum element is at mid, so return the element at mid.
+7:     If the element at mid is greater than the element at low, the minimum element is in the right half, so set low to mid + 1.
+8:     Otherwise, the minimum element is in the left half, so set high to mid - 1.
+9: Return min_element.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Min(arr, low, high):
+    # If the array is not rotated, the first element is the minimum
+    if arr[low] <= arr[high]:
+        return arr[low]
+    
+    min_element = arr[low]
+    
+    while low <= high:
+        mid = (low + high) // 2
+        
+        # Check if mid is the minimum element
+        if mid < high and arr[mid] > arr[mid + 1]:
+            return arr[mid + 1]
+        elif mid > low and arr[mid] < arr[mid - 1]:
+            return arr[mid]
+        
+        # Decide the side to continue the search
+        if arr[mid] > arr[low]:
+            low = mid + 1
+        else:
+            high = mid - 1
+    
+    return min_element
+[END CODE]
+
+### Explanation:
+The function `find_Min` is designed to find the minimum element in a sorted and rotated array. The array is initially sorted in ascending order and then rotated at some pivot unknown to you beforehand. The function uses a modified binary search to efficiently find the minimum element.
+
+- **Step 1**: The function first checks if the array is not rotated by comparing the first and last elements. If the first element is less than or equal to the last element, the array is not rotated, and the first element is the minimum.
+- **Step 2**: If the array is rotated, the function initializes `min_element` to the first element of the array.
+- **Step 3-8**: The function then enters a while loop that continues as long as `low` is less than or equal to `high`. Inside the loop:
+  - The middle index `mid` is calculated.
+  - The function checks if the element at `mid` is greater than the element at the next index, indicating that the next element is the minimum.
+  - If the element at `mid` is less than the element at the previous index, the element at `mid` is the minimum.
+  - If the element at `mid` is greater than the element at `low`, the minimum element must be in the right half, so `low` is updated to `mid + 1`.
+  - Otherwise, the minimum element is in the left half, so `high` is updated to `mid - 1`.
+- **Step 9**: If the loop completes without finding the minimum element, the function returns `min_element`.
+
+This approach ensures that the function runs in O(log n) time, making it efficient for large arrays.

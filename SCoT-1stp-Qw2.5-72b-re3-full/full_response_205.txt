@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: test_tup: a tuple of elements
+Output: A list of tuples where each tuple is an inversion of the elements in the input tuple
+
+1: Initialize an empty list `res` to store the result
+2: For each element `ele` in `test_tup`:
+3:     If `ele` is a tuple:
+4:         Append the reversed `ele` to `res`
+5:     Else:
+6:         Append `ele` to `res` as it is
+7: Return `res`
+[END PROCESS]
+
+[BEGIN CODE]
+def inversion_elements(test_tup):
+    res = []
+    for ele in test_tup:
+        if isinstance(ele, tuple):
+            res.append(ele[::-1])  # Reverse the tuple and append to the result list
+        else:
+            res.append(ele)  # Append the element as it is
+    return res
+[END CODE]
+
+### Explanation:
+The function `inversion_elements` takes a tuple `test_tup` as input. The goal is to invert the elements of the tuple if they are themselves tuples. If an element is not a tuple, it is appended to the result list as is. The function iterates over each element in the input tuple, checks if the element is a tuple, and if so, reverses it. The reversed tuple or the original element (if not a tuple) is then appended to the result list. Finally, the function returns the list of inverted or unchanged elements.

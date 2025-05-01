@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the list
+Output: res: the first missing positive integer
+
+1: Initialize a variable `i` to 0 for the current index
+2: While `i` is less than `n`:
+3:     Calculate the correct index `j` for the current element `arr[i]` as `arr[i] - 1`
+4:     If `arr[i]` is positive, within the range of the array (1 to n), and not already in its correct position:
+5:         Swap `arr[i]` with `arr[j]`
+6:     Otherwise, move to the next element by incrementing `i`
+7: After the loop, iterate through the array to find the first index `i` where `arr[i]` is not equal to `i + 1`
+8: Return `i + 1` as the first missing positive integer
+9: If no such index is found, return `n + 1` (all numbers from 1 to n are present)
+[END PROCESS]
+
+[BEGIN CODE]
+def first_Missing_Positive(arr, n):
+    i = 0
+    while i < n:
+        correct_pos = arr[i] - 1
+        if 1 <= arr[i] <= n and arr[i] != arr[correct_pos]:
+            arr[i], arr[correct_pos] = arr[correct_pos], arr[i]
+        else:
+            i += 1
+    
+    for i in range(n):
+        if arr[i] != i + 1:
+            return i + 1
+    
+    return n + 1
+[END CODE]
+
+### Explanation:
+The function `first_Missing_Positive` aims to find the smallest positive integer that is missing from the given list `arr`. The approach used here is to place each positive integer in its correct position (i.e., the integer `1` should be at index `0`, the integer `2` should be at index `1`, and so on).
+
+1. **Initialization**: We start with an index `i` set to `0`.
+2. **Placement Loop**: We iterate through the list using a while loop. For each element `arr[i]`:
+   - We calculate the correct position `correct_pos` for `arr[i]` as `arr[i] - 1`.
+   - If `arr[i]` is a positive integer within the range of the list (1 to n) and is not already in its correct position, we swap `arr[i]` with `arr[correct_pos]`.
+   - If `arr[i]` is already in its correct position or is out of the valid range, we move to the next element by incrementing `i`.
+3. **Finding the Missing Positive**: After the placement loop, we iterate through the list again to find the first index `i` where `arr[i]` is not equal to `i + 1`. This index `i` indicates the first missing positive integer, which is `i + 1`.
+4. **Return Result**: If no such index is found, it means all integers from 1 to n are present in the list, so we return `n + 1`.
+
+This approach ensures that the function runs in O(n) time complexity and uses O(1) additional space, making it efficient for large lists.

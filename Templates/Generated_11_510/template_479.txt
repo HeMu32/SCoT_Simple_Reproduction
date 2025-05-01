@@ -1,0 +1,5 @@
+Input: n: a number  
+Output: d: the first digit of n  
+1: while n is greater than or equal to 10:  
+2:     divide n by 10  
+3: return n as an integer

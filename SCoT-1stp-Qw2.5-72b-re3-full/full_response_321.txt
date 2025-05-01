@@ -1,0 +1,38 @@
+Certainly! Let's first understand what a Demlo number is. A Demlo number is a number that consists of a sequence of digits from 1 to some number `n` and then back down to 1. For example, the Demlo number for `n = 3` is `12321`.
+
+### Solving Process
+
+[BEGIN PROCESS]
+Input: s: an integer representing the number for which we need to find the Demlo number
+Output: result: a string representing the Demlo number for the given `s`
+
+1: Initialize an empty string `result` to store the Demlo number
+2: For each integer `i` from 1 to `s`:
+3:     Convert `i` to a string and append it to `result`
+4: For each integer `i` from `s-1` down to 1:
+5:     Convert `i` to a string and append it to `result`
+6: Return the `result` string
+[END PROCESS]
+
+### Code Implementation
+
+[BEGIN CODE]
+def find_demlo(s):
+    result = ''
+    # Append numbers from 1 to s
+    for i in range(1, s + 1):
+        result += str(i)
+    # Append numbers from s-1 down to 1
+    for i in range(s - 1, 0, -1):
+        result += str(i)
+    return result
+[END CODE]
+
+### Explanation
+
+1. **Initialization**: We start by initializing an empty string `result` which will store the Demlo number.
+2. **First Loop**: We use a loop to iterate from 1 to `s` and append each number to `result` as a string.
+3. **Second Loop**: We use another loop to iterate from `s-1` down to 1 and append each number to `result` as a string.
+4. **Return**: Finally, we return the `result` string, which now contains the Demlo number.
+
+This approach ensures that the Demlo number is constructed correctly by first building the ascending part and then the descending part. The use of string concatenation allows us to easily form the final Demlo number.

@@ -1,0 +1,13 @@
+[BEGIN]
+Input: l1: list, l2: list of lists  
+Output: result: list of lists containing elements from l2 that are also in l1  
+
+1: Initialize an empty list `result` to store the final output.
+2: For each sublist `lst` in `l2`:
+3:     Initialize an empty list `inner_result` to store the matching elements.
+4:     For each element `n` in `lst`:
+5:         If `n` is in `l1`:
+6:             Append `n` to `inner_result`.
+7:     Append `inner_result` to `result`.
+8: Return `result`.
+[END]

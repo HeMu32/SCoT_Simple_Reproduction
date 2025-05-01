@@ -1,0 +1,7 @@
+Input: l: a float representing the length of the rectangle, b: a float representing the breadth of the rectangle
+Output: area: a float representing the area of the rectangle
+
+1: Check if both l and b are positive numbers
+2:     If not, return -1 indicating an invalid input
+3: Calculate the area by multiplying l and b
+4: Return the area

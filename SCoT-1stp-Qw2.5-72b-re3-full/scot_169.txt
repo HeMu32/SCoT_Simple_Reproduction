@@ -1,0 +1,14 @@
+Input: n: an integer representing the position in the Pell number sequence
+Output: res: the nth Pell number
+
+1: Define the base cases for the first two Pell numbers (P0 = 0 and P1 = 1)
+2: If n is 0, return 0
+3: If n is 1, return 1
+4: Initialize variables to store the two previous Pell numbers (prev1 and prev2)
+5: Set prev1 to 1 and prev2 to 0
+6: Use a loop to calculate the nth Pell number for n > 1
+7:     For each iteration from 2 to n:
+8:         Calculate the current Pell number as 2 * prev1 + prev2
+9:         Update prev2 to prev1
+10:        Update prev1 to the current Pell number
+11: After the loop, return the nth Pell number stored in prev1

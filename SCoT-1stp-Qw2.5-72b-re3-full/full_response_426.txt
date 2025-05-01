@@ -1,0 +1,18 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: result: a list of integers containing only the odd numbers from the input list
+
+1: Use the `filter` function to apply a lambda function to each element in the nums list.
+2:     The lambda function takes one argument, x, and returns True if x is odd (x % 2 != 0), otherwise False.
+3: Convert the filter object to a list.
+4: Return the list as the result.
+[END PROCESS]
+
+[BEGIN CODE]
+def filter_oddnumbers(nums):
+    result = filter(lambda x: x % 2 != 0, nums)
+    return list(result)
+[END CODE]
+
+### Explanation:
+The function `filter_oddnumbers` is designed to filter out odd numbers from a given list of integers. The `filter` function in Python is used to construct an iterator from elements of an iterable for which a function returns true. In this case, the function is a lambda function that checks if a number is odd by using the modulus operator (`%`). If the number modulo 2 is not equal to 0, the number is odd, and the lambda function returns `True`, allowing the number to pass through the filter. The result of the `filter` function is then converted to a list and returned.

@@ -1,0 +1,5 @@
+def len_log(list1): 
+    if not list1:
+        return 0
+    longest_length = max(len(word) for word in list1)
+    return longest_length

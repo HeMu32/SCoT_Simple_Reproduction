@@ -1,0 +1,11 @@
+[BEGIN]
+Input: n1, n2: two integers  
+Output: setBits: the Hamming distance between n1 and n2  
+1: Compute the bitwise XOR of n1 and n2 and store the result in x  
+2: Initialize setBits to 0  
+3: While x is greater than 0:  
+4:     If the least significant bit of x is 1:  
+5:         Increment setBits by 1  
+6:     Right shift x by 1 bit  
+7: Return setBits  
+[END]

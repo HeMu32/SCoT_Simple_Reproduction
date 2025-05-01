@@ -1,0 +1,14 @@
+[BEGIN]
+Input: a: list of integers, n: length of the list
+Output: The size of the largest subset where each pair is divisible
+
+1: Initialize a list dp of size n with all elements set to 0.
+2: Set the last element of dp to 1, as the largest subset for a single element is the element itself.
+3: Loop i from n-2 to 0 (decrementing by 1):
+4:     Initialize mxm to 0.
+5:     Loop j from i+1 to n-1 (incrementing by 1):
+6:         If a[j] is divisible by a[i] or a[i] is divisible by a[j]:
+7:             Update mxm to the maximum of mxm and dp[j].
+8:     Set dp[i] to 1 + mxm.
+9: Return the maximum value in dp.
+[END]

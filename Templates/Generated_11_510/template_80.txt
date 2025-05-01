@@ -1,0 +1,6 @@
+Input: n: an integer
+Output: the nth tetrahedral number
+
+1: Calculate the product of n, (n + 1), and (n + 2)
+2: Divide the result by 6
+3: Return the result

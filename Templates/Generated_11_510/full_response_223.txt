@@ -1,0 +1,21 @@
+[BEGIN]
+Input: arr: a sorted array, n: the number of elements in arr, x: the element to check for majority
+Output: True if x is a majority element in arr, otherwise False
+
+1: Perform a binary search to find the first occurrence of x in arr
+2: If x is not found in arr, return False
+3: Calculate the index of the element that would be the majority element if x is a majority
+4: If the calculated index is within the bounds of the array and the element at this index is x, return True
+5: Otherwise, return False
+
+Function binary_search:
+Input: arr: a sorted array, low: the starting index, high: the ending index, x: the element to search for
+Output: The index of the first occurrence of x in arr, or -1 if x is not found
+
+1: If high is greater than or equal to low, continue the search
+2: Calculate the middle index mid
+3: If mid is the first element or x is greater than the element before mid, and the element at mid is x, return mid
+4: If x is greater than the element at mid, search the right half of the array
+5: Otherwise, search the left half of the array
+6: If x is not found, return -1
+[END]

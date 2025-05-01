@@ -1,0 +1,13 @@
+Input: num1, num2: two integers
+Output: A boolean value indicating whether the sum of divisors of num1 is equal to the sum of divisors of num2
+
+1: Define a helper function `sum_of_divisors` that calculates the sum of divisors of a given number.
+2: In the `sum_of_divisors` function:
+   a: Initialize a variable `sum_div` to 0 to store the sum of divisors.
+   b: Loop through all numbers from 1 to the given number (inclusive).
+   c: If the current number is a divisor of the given number, add it to `sum_div`.
+   d: Return `sum_div` after the loop.
+3: In the `areEquivalent` function:
+   a: Calculate the sum of divisors of `num1` using the `sum_of_divisors` function.
+   b: Calculate the sum of divisors of `num2` using the `sum_of_divisors` function.
+   c: Compare the two sums and return `True` if they are equal, otherwise return `False`.

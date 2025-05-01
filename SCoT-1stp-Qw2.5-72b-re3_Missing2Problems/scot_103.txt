@@ -1,0 +1,14 @@
+Input: n: an integer representing the length of the permutation, m: an integer representing the number of ascents
+Output: a(n, m): the Eulerian number
+
+1: If n is 0 or m is 0, return 0 (base case)
+2: If m is 0 or m is n-1, return 1 (base case)
+3: Initialize a 2D list dp of size (n+1) x (m+1) with all elements set to 0
+4: Set dp[0][0] to 1 (base case)
+5: for i from 1 to n do
+6:     for j from 0 to m do
+7:         if j is 0 then
+8:             set dp[i][j] to 1
+9:         else
+10:            set dp[i][j] to dp[i-1][j-1] + (i-1) * dp[i-1][j]
+11: return dp[n][m]

@@ -1,0 +1,10 @@
+Input: nums: a list of integers  
+Output: The first duplicate integer in nums, or -1 if no duplicates are found  
+1: Initialize an empty set num_set to keep track of seen numbers  
+2: Initialize a variable no_duplicate to -1 to indicate no duplicates if found  
+3: for each element num in nums:  
+4:     if num is in num_set:  
+5:         return num as it is the first duplicate  
+6:     else:  
+7:         add num to num_set  
+8: return no_duplicate if no duplicates were found

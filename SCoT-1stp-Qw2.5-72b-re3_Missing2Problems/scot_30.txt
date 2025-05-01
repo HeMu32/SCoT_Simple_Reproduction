@@ -1,0 +1,9 @@
+Input: s: a string
+Output: count: the number of substrings that start and end with the same character
+
+1: Initialize a variable `count` to 0 to keep track of the number of valid substrings.
+2: Iterate through each character in the string using a loop.
+3: For each character, check all possible substrings that start with this character.
+4: For each substring, check if it ends with the same character it started with.
+5: If the substring meets the condition, increment the `count` by 1.
+6: After checking all possible substrings, return the `count`.

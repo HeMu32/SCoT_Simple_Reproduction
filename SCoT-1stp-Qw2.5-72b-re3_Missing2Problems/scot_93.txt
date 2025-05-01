@@ -1,0 +1,9 @@
+Input: a: a number (base), b: a number (exponent)
+Output: the result of a raised to the power of b
+
+1: If b is 0, return 1 (any number to the power of 0 is 1)
+2: If b is negative, return the reciprocal of a raised to the absolute value of b
+3: Initialize result to 1
+4: for i from 1 to b inclusive:
+5:     result = result * a
+6: return result

@@ -1,0 +1,13 @@
+1. **Input**: 
+   - `s`: a string.
+   - `c`: a character.
+
+2. **Output**: 
+   - An integer representing the number of times the character `c` appears in the string `s`.
+
+3. **Steps**:
+   - Initialize a variable `res` to 0. This variable will store the count of occurrences.
+   - Iterate over each character in the string `s` using a loop.
+   - For each character in `s`, check if it is equal to `c`.
+   - If the character is equal to `c`, increment `res` by 1.
+   - After the loop, return the value of `res`.

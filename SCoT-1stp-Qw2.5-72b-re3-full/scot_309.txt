@@ -1,0 +1,7 @@
+Input: a: an integer or float, b: an integer or float
+Output: The maximum value between a and b
+
+1: Define the function `maximum` with parameters `a` and `b`
+2: Compare `a` and `b` using a conditional statement
+3:   If `a` is greater than `b`, return `a`
+4:   Otherwise, return `b`

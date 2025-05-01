@@ -1,0 +1,11 @@
+Input: X, Y: two sequences, m: length of X, n: length of Y
+Output: Length of the longest common subsequence
+
+1: if m is 0 or n is 0:
+2:     return 0
+3: if the last characters of X and Y are the same:
+4:     return 1 + the result of the function called with the last characters removed from both X and Y
+5: else:
+6:     return the maximum of:
+7:         the result of the function called with the last character removed from Y
+8:         the result of the function called with the last character removed from X

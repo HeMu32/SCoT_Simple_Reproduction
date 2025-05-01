@@ -1,0 +1,7 @@
+[BEGIN]
+Input: text: a string, n: an integer
+Output: modified_text: a string with up to n occurrences of spaces, commas, or dots replaced by colons
+1: Define a regular expression pattern to match spaces, commas, or dots
+2: Use the re.sub function to replace up to n occurrences of the matched characters in text with a colon
+3: Return the modified text
+[END]

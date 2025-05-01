@@ -1,0 +1,4 @@
+def No_of_Triangle(N, K):
+    if K > N:
+        return 0
+    return (N // K) ** 2

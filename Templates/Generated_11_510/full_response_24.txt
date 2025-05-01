@@ -1,0 +1,11 @@
+[BEGIN]
+Input: binary: an integer representing a binary number
+Output: decimal: an integer representing the decimal equivalent of the binary number
+1: Initialize variables decimal to 0, i to 0
+2: While binary is not equal to 0:
+3:     Calculate the remainder of binary divided by 10 and store it in dec
+4:     Update decimal by adding dec multiplied by 2 raised to the power of i
+5:     Update binary by performing integer division by 10
+6:     Increment i by 1
+7: Return decimal
+[END]

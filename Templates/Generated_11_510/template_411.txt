@@ -1,0 +1,8 @@
+Input: word: a string in snake_case format
+Output: a string in camelCase format
+
+1: Split the input string `word` by the underscore character ('_') into a list of substrings
+2: For each substring in the list:
+   3:     Capitalize the first character of the substring
+4: Join all the substrings from the list into a single string without any separators
+5: Return the resulting string

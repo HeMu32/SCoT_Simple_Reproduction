@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: n: a natural number
+Output: tetrahedral: the nth tetrahedral number
+
+1: Validate the input to ensure it is a positive integer.
+2: Calculate the nth tetrahedral number using the formula: \( \text{tetrahedral} = \frac{n(n+1)(n+2)}{6} \).
+3: Return the calculated tetrahedral number.
+[END PROCESS]
+
+[BEGIN CODE]
+def tetrahedral_number(n):
+    # Validate input
+    if not isinstance(n, int) or n < 1:
+        raise ValueError("Input must be a positive integer")
+    
+    # Calculate the nth tetrahedral number
+    tetrahedral = n * (n + 1) * (n + 2) // 6
+    
+    # Return the result
+    return tetrahedral
+[END CODE]
+
+### Explanation:
+The function `tetrahedral_number` calculates the nth tetrahedral number, which is a figurate number that represents a pyramid with a triangular base. The formula for the nth tetrahedral number is given by:
+
+\[ \text{tetrahedral} = \frac{n(n+1)(n+2)}{6} \]
+
+This formula is derived from the sum of the first n triangular numbers. The function first checks if the input `n` is a positive integer. If not, it raises a `ValueError`. If the input is valid, it calculates the tetrahedral number using the formula and returns the result. The use of integer division `//` ensures that the result is an integer, which is appropriate for this type of calculation.

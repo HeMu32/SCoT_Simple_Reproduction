@@ -1,0 +1,6 @@
+Input: heap: a list representing a min-heap, a: an integer to be inserted
+Output: None (the function modifies the heap in place)
+
+1: Import the `heapq` module to use heap operations.
+2: Use the `heapreplace` function from the `heapq` module to pop the smallest element from the heap and push the new item `a` onto the heap in a single operation.
+3: The function does not return anything as the heap is modified in place.

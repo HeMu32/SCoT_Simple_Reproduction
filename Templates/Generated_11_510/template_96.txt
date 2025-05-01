@@ -1,0 +1,8 @@
+Input: n: an integer 
+Output: x: the number of divisors of n 
+1: Initialize an empty list to store divisors 
+2: Loop through each integer i from 1 to n (inclusive): 
+3:     If n is divisible by i (i.e., n % i == 0): 
+4:         Add i to the list of divisors 
+5: After the loop, calculate the length of the list of divisors 
+6: Return the length of the list of divisors

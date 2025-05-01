@@ -1,0 +1,14 @@
+[BEGIN]
+Input: n: integer, the number of elements in the array; arr: list of integers
+Output: freq: integer, the frequency of the smallest value in the array
+
+1: Initialize mn to the first element of arr
+2: Initialize freq to 1
+3: for each element arr[i] in arr starting from the second element:
+4:     if arr[i] is less than mn:
+5:         set mn to arr[i]
+6:         reset freq to 1
+7:     elif arr[i] is equal to mn:
+8:         increment freq by 1
+9: return freq
+[END]

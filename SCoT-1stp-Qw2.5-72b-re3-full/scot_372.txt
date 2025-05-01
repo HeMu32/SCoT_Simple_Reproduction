@@ -1,0 +1,10 @@
+Input: nums: a list of elements to be sorted
+Output: sorted_nums: a list of elements sorted in ascending order
+
+1: Import the `heapq` module to use heap queue algorithms
+2: Convert the input list `nums` into a heap using `heapify`
+3: Initialize an empty list `sorted_nums` to store the sorted elements
+4: While the heap is not empty:
+   4.1: Pop the smallest element from the heap using `heappop`
+   4.2: Append the popped element to `sorted_nums`
+5: Return `sorted_nums` as the sorted list

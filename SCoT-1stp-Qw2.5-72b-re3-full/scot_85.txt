@@ -1,0 +1,7 @@
+Input: r: a float or integer representing the radius of the sphere
+Output: surface_area: a float representing the surface area of the sphere
+
+1: Import the math module to access the value of pi
+2: Define a function surfacearea_sphere with a parameter r
+3:   Calculate the surface area using the formula 4 * pi * r^2
+4:   Return the calculated surface area

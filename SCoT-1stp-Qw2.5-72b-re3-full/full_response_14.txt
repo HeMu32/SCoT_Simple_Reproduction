@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: base, height, length: three positive numbers representing the base, height of the triangle, and the length of the prism, respectively.
+Output: volume: the volume of the triangular prism.
+
+1: Calculate the area of the triangular base using the formula (base * height) / 2.
+2: Multiply the area of the base by the length of the prism to get the volume.
+3: Return the volume.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Volume(base, height, length):
+    # Calculate the area of the triangular base
+    base_area = (base * height) / 2
+    
+    # Calculate the volume of the triangular prism
+    volume = base_area * length
+    
+    # Return the calculated volume
+    return volume
+[END CODE]
+
+### Explanation:
+The function `find_Volume` calculates the volume of a triangular prism. The volume of a triangular prism is given by the product of the area of its triangular base and its length. The area of the triangular base is calculated using the formula \(\text{Area} = \frac{1}{2} \times \text{base} \times \text{height}\). Once the area is known, the volume is calculated by multiplying the area by the length of the prism. The function takes three parameters: `base`, `height`, and `length`, and returns the volume as a result.

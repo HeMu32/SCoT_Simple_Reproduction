@@ -1,0 +1,6 @@
+Input: r: a float or integer representing the radius of the circle
+Output: circumference: a float representing the circumference of the circle
+
+1: Define the value of pi (π) as a constant (approximately 3.14159)
+2: Calculate the circumference using the formula: circumference = 2 * π * r
+3: Return the calculated circumference

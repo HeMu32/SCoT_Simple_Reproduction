@@ -1,0 +1,14 @@
+Input: A: a sorted array, x: a number to find
+Output: index: the index of the last occurrence of x in A, or -1 if x is not found
+1: Initialize left to 0 and right to the last index of A
+2: Initialize result to -1
+3: While left is less than or equal to right:
+4:     Calculate mid as the floor of (left + right) / 2
+5:     If x is equal to A[mid]:
+6:         Set result to mid
+7:         Set left to mid + 1
+8:     Else if x is less than A[mid]:
+9:         Set right to mid - 1
+10:    Else:
+11:        Set left to mid + 1
+12: Return result

@@ -1,0 +1,6 @@
+[BEGIN]
+Input: list1: a list of numbers, n: an integer
+Output: largest: a list of the n largest numbers from list1
+1:  Use the `heapq.nlargest` function to find the n largest elements in list1
+2:  Return the list of the n largest elements
+[END]

@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: filtered_nums: a list of integers containing only the even numbers from the input list
+
+1: Use the filter function with a lambda function to filter out even numbers from the input list `nums`.
+2: Convert the filter object to a list to get the final list of even numbers.
+3: Return the list of even numbers.
+[END PROCESS]
+
+[BEGIN CODE]
+def filter_evennumbers(nums):
+    filtered_nums = list(filter(lambda x: x % 2 == 0, nums))
+    return filtered_nums
+[END CODE]
+
+Explanation:
+- The `filter` function is used to filter elements from the list `nums` based on a condition provided by a lambda function.
+- The lambda function `lambda x: x % 2 == 0` checks if a number `x` is even by evaluating `x % 2 == 0`. If the condition is true, the number is included in the filtered result.
+- The `filter` function returns a filter object, which is an iterator. To get a list of the filtered elements, we convert this filter object to a list using `list()`.
+- Finally, the function returns the list of even numbers.

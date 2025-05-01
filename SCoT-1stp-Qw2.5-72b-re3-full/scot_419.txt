@@ -1,0 +1,9 @@
+Input: list1: a list of floating-point numbers
+Output: The total sum of the rounded numbers multiplied by the length of the list
+
+1: Initialize a variable `total_sum` to 0 to store the sum of the rounded numbers.
+2: Loop through each number in `list1`:
+3:     Round the current number to the nearest integer.
+4:     Add the rounded number to `total_sum`.
+5: After the loop, multiply `total_sum` by the length of `list1`.
+6: Print the result of the multiplication.

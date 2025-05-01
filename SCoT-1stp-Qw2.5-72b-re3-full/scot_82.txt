@@ -1,0 +1,6 @@
+Input: r: a float representing the radius of the sphere
+Output: volume: a float representing the volume of the sphere
+
+1: Define the mathematical constant pi (π) as 3.14159.
+2: Calculate the volume of the sphere using the formula \( V = \frac{4}{3} \pi r^3 \).
+3: Return the calculated volume.

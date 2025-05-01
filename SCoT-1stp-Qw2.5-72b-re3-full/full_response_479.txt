@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: A number (integer or float)
+Output: The first digit of the given number
+1: Convert the number to a string to easily access individual characters.
+2: If the number is negative, skip the negative sign by starting from the second character.
+3: Return the first character of the string, which represents the first digit of the number.
+[END PROCESS]
+
+[BEGIN CODE]
+def first_Digit(number):
+    # Convert the number to a string
+    num_str = str(number)
+    
+    # Check if the number is negative
+    if num_str[0] == '-':
+        # Return the first digit, skipping the negative sign
+        return int(num_str[1])
+    else:
+        # Return the first digit
+        return int(num_str[0])
+[END CODE]
+
+### Explanation:
+The function `first_Digit` is designed to find the first digit of a given number. The process involves converting the number to a string to easily access its characters. If the number is negative, the function skips the negative sign and returns the first digit after the sign. If the number is positive, it directly returns the first character of the string, which is the first digit. The `int()` function is used to convert the character back to an integer before returning it. This approach works for both integers and floating-point numbers.

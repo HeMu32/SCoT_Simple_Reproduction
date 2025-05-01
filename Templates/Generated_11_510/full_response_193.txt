@@ -1,0 +1,7 @@
+[BEGIN]
+Input: test_tup: a tuple 
+Output: res: a tuple with duplicates removed 
+1: Convert test_tup to a set to remove duplicates 
+2: Convert the set back to a tuple 
+3: Return the new tuple 
+[END]

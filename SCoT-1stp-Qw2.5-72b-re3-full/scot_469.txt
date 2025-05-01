@@ -1,0 +1,11 @@
+Input: price: a list of integers representing the price of a stock on different days, k: an integer representing the maximum number of transactions allowed
+Output: max_profit: an integer representing the maximum profit that can be earned from at most k transactions
+
+1: Initialize a list dp of size (k+1) with each element being a list of size 2 (0 for no stock, 1 for holding stock), all set to 0.
+2: Loop through each transaction count from 1 to k (inclusive):
+3:     Initialize max_diff to -price[0] (the maximum difference for buying stock on the first day)
+4:     Loop through each day from 1 to the length of price - 1 (inclusive):
+5:         Update dp[transaction][0] to the maximum of dp[transaction][0] and dp[transaction-1][1] + price[day] (selling stock on the current day)
+6:         Update dp[transaction][1] to the maximum of dp[transaction][1] and dp[transaction-1][0] + max_diff (buying stock on the current day)
+7:         Update max_diff to the maximum of max_diff and dp[transaction-1][0] - price[day] (updating the maximum difference for buying stock)
+8: Return dp[k][0] as the maximum profit that can be earned from at most k transactions

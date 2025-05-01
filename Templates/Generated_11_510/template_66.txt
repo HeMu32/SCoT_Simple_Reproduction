@@ -1,0 +1,7 @@
+Input: list: a list of numbers  
+Output: pos_count: the count of positive numbers in the list  
+1: Initialize pos_count to 0  
+2: for each num in list do  
+3:     if num is greater than or equal to 0 then  
+4:         increment pos_count by 1  
+5: return pos_count

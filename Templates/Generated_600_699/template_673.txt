@@ -1,0 +1,6 @@
+Input: list: a list of integers  
+Output: res: a single integer formed by concatenating the integers in the list  
+1: Convert each integer in the list to a string and store them in a new list s  
+2: Join all the strings in s into a single string  
+3: Convert the concatenated string back to an integer and store it in res  
+4: Return res

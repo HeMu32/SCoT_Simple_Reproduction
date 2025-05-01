@@ -1,0 +1,11 @@
+Input: arr: a list of integers, n: the length of the array
+Output: A list where all negative elements appear before positive ones
+
+1: Initialize two empty lists: `negatives` and `positives`.
+2: Iterate through each element in `arr`:
+3:     If the element is less than 0 (negative):
+4:         Append the element to `negatives`.
+5:     Else:
+6:         Append the element to `positives`.
+7: Concatenate `negatives` and `positives` to form the final rearranged array.
+8: Return the rearranged array.

@@ -1,0 +1,9 @@
+Input: test_tuple: a tuple containing elements of any data type
+Output: True if all elements in the tuple have the same data type, otherwise False
+
+1: If the length of the tuple is 0, return True (an empty tuple is considered to have elements of the same type).
+2: Get the type of the first element in the tuple.
+3: Loop through each element in the tuple.
+4:     If the type of the current element is not the same as the type of the first element:
+5:         Return False
+6: If the loop completes without returning False, return True

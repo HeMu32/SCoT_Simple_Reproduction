@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: list1, list2: two lists of elements
+Output: A boolean value indicating whether the two lists have at least one common element
+
+1: Convert list1 to a set for efficient look-up operations.
+2: Iterate through each element in list2.
+3: For each element in list2, check if it exists in the set created from list1.
+4: If a common element is found, return True.
+5: If the loop completes without finding any common elements, return False.
+[END PROCESS]
+
+[BEGIN CODE]
+def common_element(list1, list2):
+    # Convert list1 to a set for efficient look-up
+    set1 = set(list1)
+    
+    # Iterate through each element in list2
+    for element in list2:
+        # Check if the element exists in set1
+        if element in set1:
+            # If a common element is found, return True
+            return True
+    
+    # If no common elements are found, return False
+    return False
+[END CODE]
+
+**Explanation:**
+- The function `common_element` is designed to determine if there is at least one common element between two lists, `list1` and `list2`.
+- By converting `list1` to a set (`set1`), we can perform membership tests in constant time, which is more efficient than checking each element in a list.
+- The function iterates through each element in `list2` and checks if it exists in `set1`. If a common element is found, the function immediately returns `True`.
+- If the loop completes without finding any common elements, the function returns `False`.
+- This approach ensures that the function is both efficient and straightforward to understand.

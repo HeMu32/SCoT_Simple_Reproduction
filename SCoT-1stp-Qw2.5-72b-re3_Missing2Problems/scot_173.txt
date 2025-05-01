@@ -1,0 +1,8 @@
+Input: text: a string
+Output: result: a string containing only alphanumeric characters
+
+1: Initialize an empty string named result to store the filtered characters.
+2: For each character ch in the text:
+3:     If ch is alphanumeric (using isalnum() method):
+4:         Append ch to result.
+5: Return result.

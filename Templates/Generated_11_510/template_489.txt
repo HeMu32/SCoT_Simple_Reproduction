@@ -1,0 +1,12 @@
+Input: n: integer, the number of elements in the array; arr: list of integers
+Output: freq: integer, the frequency of the largest value in the array
+
+1: Initialize mn to the first element of arr
+2: Initialize freq to 1
+3: for each element in arr starting from the second element:
+4:     if the current element is greater than mn:
+5:         set mn to the current element
+6:         reset freq to 1
+7:     else if the current element is equal to mn:
+8:         increment freq by 1
+9: return freq

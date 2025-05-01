@@ -1,0 +1,10 @@
+Input: str1: a string, ch: a character to be replaced, newch: a new character to replace ch
+Output: A new string where all occurrences of ch in str1 are replaced with newch
+
+1: Initialize an empty string, result, to store the new string.
+2: Loop through each character, c, in the input string, str1.
+3:     If c is equal to ch:
+4:         Append newch to result.
+5:     Else:
+6:         Append c to result.
+7: Return the result string.

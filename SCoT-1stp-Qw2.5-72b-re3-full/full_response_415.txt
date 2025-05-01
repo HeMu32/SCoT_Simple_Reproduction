@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers
+Output: A tuple containing the pair of integers from the array that has the highest product
+
+1: Check if the length of the array is less than 2, if so, return None because a pair cannot be formed.
+2: Initialize two variables to store the maximum product and the pair of integers that produce this product.
+3: Iterate through the array using a loop, for each element, compare it with every other element in the array.
+4:     Calculate the product of the current pair of elements.
+5:     If the product is greater than the current maximum product, update the maximum product and the pair.
+6: After the loop, return the pair of integers that produced the highest product.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_Product(arr):
+    # Check if the array has less than 2 elements
+    if len(arr) < 2:
+        return None
+    
+    # Initialize variables to store the maximum product and the pair
+    max_product = arr[0] * arr[1]
+    max_pair = (arr[0], arr[1])
+    
+    # Iterate through the array to find the pair with the highest product
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            product = arr[i] * arr[j]
+            if product > max_product:
+                max_product = product
+                max_pair = (arr[i], arr[j])
+    
+    # Return the pair with the highest product
+    return max_pair
+[END CODE]
+
+### Explanation:
+The function `max_Product` is designed to find a pair of integers within a given array that has the highest product. The process involves checking all possible pairs in the array and keeping track of the pair with the highest product found so far. The function handles edge cases where the array has fewer than two elements by returning `None`. The nested loops ensure that each element is compared with every other element exactly once, which is necessary to find the maximum product. The function returns a tuple containing the two integers that form the pair with the highest product.

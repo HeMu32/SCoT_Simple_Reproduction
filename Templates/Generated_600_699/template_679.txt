@@ -1,0 +1,6 @@
+Input: ditionary: a dictionary, key: an integer index
+Output: element: the dictionary key at the specified index
+
+1: Convert the dictionary keys to a list
+2: Access the element at the index 'key' in the list
+3: Return the element

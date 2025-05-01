@@ -1,0 +1,11 @@
+[BEGIN]
+Input: a, b: two lists of integers, n: an integer representing the length of the lists
+Output: sum: an integer representing the minimum sum of absolute differences of the two arrays
+1: Sort the list a
+2: Sort the list b
+3: Initialize sum to 0
+4: for each index i from 0 to n-1 do
+5:     Calculate the absolute difference between a[i] and b[i]
+6:     Add the absolute difference to sum
+7: return sum
+[END]

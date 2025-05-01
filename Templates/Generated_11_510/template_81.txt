@@ -1,0 +1,8 @@
+Input: test_tup1, test_tup2: two tuples
+Output: res: a list of tuples where each tuple is a pair of elements from test_tup1 and test_tup2
+
+1: Initialize an empty list res
+2: Loop through each element in test_tup1 using an index i
+3:     Create a tuple with the current element from test_tup1 and the element from test_tup2 at the index i modulo the length of test_tup2
+4:     Append this tuple to res
+5: Return res

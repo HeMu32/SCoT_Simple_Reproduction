@@ -1,0 +1,35 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the array
+Output: A list where all negative elements appear before positive ones
+
+1: Initialize two empty lists: `negatives` and `positives`.
+2: Iterate through each element in `arr`:
+3:     If the element is less than 0 (negative):
+4:         Append the element to `negatives`.
+5:     Else:
+6:         Append the element to `positives`.
+7: Concatenate `negatives` and `positives` to form the final rearranged array.
+8: Return the rearranged array.
+[END PROCESS]
+
+[BEGIN CODE]
+def re_arrange_array(arr, n):
+    negatives = []
+    positives = []
+    for num in arr:
+        if num < 0:
+            negatives.append(num)
+        else:
+            positives.append(num)
+    return negatives + positives
+[END CODE]
+
+### Explanation:
+The function `re_arrange_array` takes an array `arr` and its length `n` as input. The goal is to rearrange the elements of the array so that all negative elements appear before all positive elements. This is achieved by:
+1. Creating two separate lists: `negatives` for storing negative numbers and `positives` for storing non-negative numbers.
+2. Iterating through each element in the input array `arr`.
+3. Using a conditional statement to check if the current element is negative. If it is, the element is appended to the `negatives` list. Otherwise, it is appended to the `positives` list.
+4. After the loop, the `negatives` list is concatenated with the `positives` list to form the final rearranged array.
+5. The function returns the rearranged array.
+
+This approach ensures that all negative elements are placed before all positive elements, maintaining their relative order within their respective groups.

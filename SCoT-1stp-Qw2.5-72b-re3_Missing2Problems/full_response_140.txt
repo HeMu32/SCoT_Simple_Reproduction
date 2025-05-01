@@ -1,0 +1,52 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples
+Output: res: a list containing elements that occur exactly once in the entire list of tuples
+
+1: Initialize an empty dictionary `freq_dict` to store the frequency of each element.
+2: For each tuple `tup` in `test_list`:
+3:     For each element `ele` in `tup`:
+4:         If `ele` is not in `freq_dict`, add it with a count of 1.
+5:         If `ele` is already in `freq_dict`, increment its count by 1.
+6: Initialize an empty list `res` to store elements that occur exactly once.
+7: For each key `k` in `freq_dict`:
+8:     If the value of `k` in `freq_dict` is 1:
+9:         Append `k` to `res`.
+10: Return `res` as the list of elements that occur exactly once.
+[END PROCESS]
+
+[BEGIN CODE]
+def extract_singly(test_list):
+  # Initialize a dictionary to store the frequency of each element
+  freq_dict = {}
+  
+  # Iterate over each tuple in the list
+  for tup in test_list:
+    # Iterate over each element in the tuple
+    for ele in tup:
+      # If the element is not in the dictionary, add it with a count of 1
+      if ele not in freq_dict:
+        freq_dict[ele] = 1
+      # If the element is already in the dictionary, increment its count
+      else:
+        freq_dict[ele] += 1
+  
+  # Initialize a list to store elements that occur exactly once
+  res = []
+  
+  # Iterate over the dictionary to find elements that occur exactly once
+  for k, v in freq_dict.items():
+    if v == 1:
+      res.append(k)
+  
+  # Return the list of elements that occur exactly once
+  return res
+[END CODE]
+
+### Explanation:
+The function `extract_singly` is designed to extract elements that occur exactly once in a given list of tuples. The process involves two main steps:
+
+1. **Frequency Counting**: We first count the frequency of each element in the list of tuples using a dictionary. This is done by iterating over each tuple and then over each element in the tuple, updating the count in the dictionary.
+
+2. **Filtering Single Occurrences**: After counting the frequencies, we iterate over the dictionary to find elements that have a count of 1. These elements are then added to the result list.
+
+The function returns the list of elements that occur exactly once, providing a clear and concise solution to the problem.

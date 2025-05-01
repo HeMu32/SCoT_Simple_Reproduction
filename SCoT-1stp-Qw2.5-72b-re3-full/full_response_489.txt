@@ -1,0 +1,40 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the size of the array, arr: a list of integers
+Output: frequency: an integer representing the frequency of the largest value in the array
+
+1: Check if the array is empty or if n is less than 1. If so, return 0 as there are no elements to process.
+2: Initialize a variable `max_value` to store the largest value found in the array. Set it to the first element of the array.
+3: Initialize a variable `frequency` to 0 to count the occurrences of the largest value.
+4: Loop through each element in the array:
+5:   If the current element is greater than `max_value`, update `max_value` to the current element and reset `frequency` to 1.
+6:   If the current element is equal to `max_value`, increment `frequency` by 1.
+7: After the loop, return the `frequency` of the largest value.
+[END PROCESS]
+
+[BEGIN CODE]
+def frequency_Of_Largest(n, arr):
+    if n < 1 or not arr:
+        return 0  # Return 0 if the array is empty or n is less than 1
+    
+    max_value = arr[0]
+    frequency = 1
+    
+    for i in range(1, n):
+        if arr[i] > max_value:
+            max_value = arr[i]
+            frequency = 1
+        elif arr[i] == max_value:
+            frequency += 1
+    
+    return frequency
+[END CODE]
+
+### Explanation:
+- **Input Validation**: The function first checks if the array is empty or if the size `n` is less than 1. If either condition is true, it returns 0 because there are no elements to process.
+- **Initialization**: The `max_value` is initialized to the first element of the array, and `frequency` is initialized to 1, assuming the first element is the largest.
+- **Loop Through Array**: The function then iterates through the array starting from the second element. For each element:
+  - If the current element is greater than `max_value`, it updates `max_value` to the current element and resets `frequency` to 1.
+  - If the current element is equal to `max_value`, it increments `frequency` by 1.
+- **Return Result**: After the loop, the function returns the `frequency` of the largest value found in the array.
+
+This approach ensures that the function efficiently finds the largest value and counts its occurrences in a single pass through the array.

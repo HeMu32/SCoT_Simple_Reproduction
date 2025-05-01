@@ -1,0 +1,10 @@
+Input: x, y: two integers
+Output: boolean: True if x and y are co-prime, False otherwise
+
+1: Define a function to find the greatest common divisor (GCD) of two numbers.
+2: Use the Euclidean algorithm to compute the GCD:
+   - While y is not 0:
+     - Set x to y
+     - Set y to the remainder of x divided by y
+3: If the GCD is 1, x and y are co-prime, return True.
+4: Otherwise, return False.

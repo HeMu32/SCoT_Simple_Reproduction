@@ -1,0 +1,13 @@
+[BEGIN]
+Input: num: an integer number
+Output: sum: the minimum sum of factors of num
+1: Initialize sum to 0
+2: Initialize i to 2
+3: While i * i is less than or equal to num:
+4:     While num is divisible by i:
+5:         Add i to sum
+6:         Divide num by i
+7:     Increment i by 1
+8: Add the remaining num to sum
+9: Return sum
+[END]

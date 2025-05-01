@@ -1,0 +1,4 @@
+Input: str1: a string, char: a character to replace blanks
+Output: str2: a string with blanks replaced by char
+1:  Initialize str2 by replacing all blank spaces in str1 with char
+2:  Return str2

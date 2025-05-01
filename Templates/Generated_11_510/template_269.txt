@@ -1,0 +1,4 @@
+Input: k: a character  
+Output: ascii_val: the ASCII value of k  
+1:  set ch to k  
+2:  return the ASCII value of ch using the ord function

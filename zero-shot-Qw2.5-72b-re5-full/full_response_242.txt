@@ -1,0 +1,7 @@
+[BEGIN CODE]
+def count_charac(str1): 
+	""" 
+	Write a function to count total characters in a string. 
+	""" 
+	return len(str1)
+[END CODE]

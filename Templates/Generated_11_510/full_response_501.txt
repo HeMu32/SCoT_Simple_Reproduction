@@ -1,0 +1,16 @@
+[BEGIN]
+Input: x, y: two integers  
+Output: result: the number of common divisors between x and y  
+
+1: Call the function `ngcd(x, y)` to find the greatest common divisor (gcd) of x and y.
+2: Initialize `result` to 0, which will store the count of common divisors.
+3: Calculate the square root of the gcd and store it in `z`.
+4: Initialize `i` to 1.
+5: Loop while `i` is less than or equal to `z`:
+   6:     If `n` is divisible by `i`:
+   7:         Increment `result` by 2, as both `i` and `n/i` are divisors.
+   8:         If `i` is equal to `n/i` (i.e., `i` is the square root of `n`):
+   9:             Decrement `result` by 1 to correct the count (since `i` and `n/i` are the same).
+10:     Increment `i` by 1.
+11: Return `result`.
+[END]

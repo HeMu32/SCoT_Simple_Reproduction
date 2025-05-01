@@ -1,0 +1,9 @@
+Input: arr: a list of integers, N: the length of the list, P: a prime number
+Output: count of elements in arr whose modular inverse under P is equal to itself
+
+1: Initialize a variable `count` to 0 to keep track of the number of elements that meet the condition
+2: Loop through each element `x` in the array `arr`
+3:     Calculate the modular inverse of `x` under `P` using the formula `x^(P-2) % P` (Fermat's Little Theorem)
+4:     If the modular inverse of `x` is equal to `x` itself:
+5:         Increment `count` by 1
+6: Return the value of `count`

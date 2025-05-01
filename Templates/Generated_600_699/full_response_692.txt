@@ -1,0 +1,11 @@
+[BEGIN]
+Input: N: an integer
+Output: last two digits of N!
+
+1: if N is greater than or equal to 10:
+2:     return None
+3: initialize fac to 1
+4: for i from 1 to N inclusive:
+5:     update fac to (fac * i) % 100
+6: return fac
+[END]

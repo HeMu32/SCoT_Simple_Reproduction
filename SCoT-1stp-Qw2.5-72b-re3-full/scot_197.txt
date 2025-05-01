@@ -1,0 +1,14 @@
+Input: 
+- `test_tup1`: a tuple of integers
+- `test_tup2`: a tuple of integers
+
+Output: 
+- `result_tup`: a tuple containing the results of `a ** b` for each pair `(a, b)` from `test_tup1` and `test_tup2`
+
+1: Initialize an empty list `result_list` to store the results
+2: Ensure both tuples have the same length
+3: for each index `i` from 0 to the length of `test_tup1`:
+4:     Compute `test_tup1[i] ** test_tup2[i]`
+5:     Append the result to `result_list`
+6: Convert `result_list` to a tuple `result_tup`
+7: Return `result_tup`

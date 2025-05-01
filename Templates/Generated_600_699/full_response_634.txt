@@ -1,0 +1,9 @@
+[BEGIN]
+Input: n: an integer 
+Output: sum: the sum of the fourth power of the first n even natural numbers 
+1: Initialize sum to 0 
+2: for i from 1 to n do 
+3:     Calculate j as 2 * i 
+4:     Add the fourth power of j to sum 
+5: return sum 
+[END]

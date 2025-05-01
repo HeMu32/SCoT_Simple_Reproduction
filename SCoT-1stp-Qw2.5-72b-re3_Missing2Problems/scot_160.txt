@@ -1,0 +1,9 @@
+Input: a, b, n: integers
+Output: A tuple (x, y) of integers that satisfy the equation ax + by = n, or None if no such integers exist
+
+1: Initialize x to 0
+2: Loop through possible values of x from 0 to n/a (inclusive):
+3:     Calculate y as (n - ax) / b
+4:     Check if y is an integer:
+5:         If y is an integer, return (x, y)
+6: If no solution is found, return None

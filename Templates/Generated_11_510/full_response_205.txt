@@ -1,0 +1,9 @@
+[BEGIN]
+Input: test_tup: a tuple of integers  
+Output: res: a tuple of integers where each element is the inversion of the corresponding element in test_tup  
+1: Convert test_tup to a list  
+2: For each element x in the list:  
+3:     Apply the bitwise NOT operator (~) to x  
+4: Convert the resulting list back to a tuple  
+5: Return the resulting tuple  
+[END]

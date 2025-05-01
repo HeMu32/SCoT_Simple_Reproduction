@@ -1,0 +1,11 @@
+Input: s: a string  
+Output: min_length: the minimized length of the string by removing the most frequent character  
+1: Initialize maxOcc to 0  
+2: Initialize n to the length of s  
+3: Initialize an array arr of size 26 with all elements set to 0  
+4: For each character ch in s:  
+5:     Increment arr[ord(ch) - ord('a')] by 1  
+6: For each element in arr:  
+7:     If the element is greater than maxOcc:  
+8:         Set maxOcc to the element  
+9: Return n - maxOcc

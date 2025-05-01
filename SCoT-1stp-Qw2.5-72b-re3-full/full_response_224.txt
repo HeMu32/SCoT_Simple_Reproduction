@@ -1,0 +1,35 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: count: the number of set bits (1s) in the binary representation of n
+
+1: Initialize count to 0
+2: While n is greater than 0:
+3:     If the last bit of n is 1:
+4:         Increment count by 1
+5:     Right shift n by 1 bit
+6: Return count
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Set_Bits(n):
+    count = 0
+    while n > 0:
+        if n & 1:  # Check if the last bit is 1
+            count += 1
+        n >>= 1  # Right shift n by 1 bit
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_Set_Bits` is designed to count the number of set bits (1s) in the binary representation of a given integer `n`. Here's a step-by-step explanation of the process:
+
+1. **Initialization**: We start by initializing a variable `count` to 0. This variable will keep track of the number of set bits.
+
+2. **Loop Through Bits**: We use a while loop to iterate through the bits of `n` until `n` becomes 0. In each iteration:
+   - We check if the last bit of `n` is 1 using the bitwise AND operation (`n & 1`). If the result is 1, it means the last bit is set.
+   - If the last bit is set, we increment the `count` by 1.
+   - We then right shift `n` by 1 bit (`n >>= 1`) to move to the next bit.
+
+3. **Return the Count**: Once the loop completes, we return the `count` which now holds the number of set bits in `n`.
+
+This approach is efficient and works by directly manipulating the bits of the integer, which is a common technique in bit manipulation problems.

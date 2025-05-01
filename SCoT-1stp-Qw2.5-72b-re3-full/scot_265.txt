@@ -1,0 +1,10 @@
+Input: S: a list of elements, step: an integer indicating the step size
+Output: result: a list of lists, where each sublist contains elements from the original list, starting from the first element and then every nth element
+
+1: Initialize an empty list called result to store the sublists
+2: For each index i from 0 to step-1 (inclusive):
+3:     Initialize an empty list called temp to store the elements for the current sublist
+4:     For each index j from i to the length of S, incrementing by step:
+5:         Append S[j] to temp
+6:     Append temp to result
+7: Return result

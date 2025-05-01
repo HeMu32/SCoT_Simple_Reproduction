@@ -1,0 +1,46 @@
+[BEGIN PROCESS]
+Input: slat, slon: starting latitude and longitude (in degrees)  
+        elat, elon: ending latitude and longitude (in degrees)  
+Output: distance: the distance between the two points in kilometers  
+
+1: Import the math module to use trigonometric functions and the value of pi.
+2: Convert the latitude and longitude from degrees to radians.
+3: Calculate the differences in latitude and longitude.
+4: Apply the Haversine formula to calculate the great-circle distance between the two points.
+5: The Earth's radius is approximately 6371 kilometers, which is used in the distance calculation.
+6: Return the calculated distance.
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def distance_lat_long(slat, slon, elat, elon):
+    # Earth's radius in kilometers
+    R = 6371.0
+
+    # Convert latitude and longitude from degrees to radians
+    slat, slon, elat, elon = map(math.radians, [slat, slon, elat, elon])
+
+    # Calculate the differences in coordinates
+    dlat = elat - slat
+    dlon = elon - slon
+
+    # Haversine formula
+    a = math.sin(dlat / 2)**2 + math.cos(slat) * math.cos(elat) * math.sin(dlon / 2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    # Calculate the distance
+    distance = R * c
+    return distance
+[END CODE]
+
+### Explanation:
+The function `distance_lat_long` calculates the distance between two points on the Earth's surface given their latitude and longitude. The Haversine formula is used to calculate the great-circle distance, which is the shortest distance over the Earth's surface, giving an "as-the-crow-flies" distance between the points (ignoring any hills, valleys, etc.).
+
+1. **Conversion to Radians**: The input latitudes and longitudes are in degrees, but the trigonometric functions in Python's `math` module require angles in radians. Therefore, the first step is to convert these values to radians.
+
+2. **Haversine Formula**: The Haversine formula is used to calculate the great-circle distance between two points. The formula involves the differences in latitude and longitude, and the cosine and sine functions.
+
+3. **Distance Calculation**: The final distance is calculated by multiplying the Earth's radius by the central angle (in radians) obtained from the Haversine formula.
+
+This function is useful in various applications, such as GPS navigation, mapping, and geographic information systems (GIS).

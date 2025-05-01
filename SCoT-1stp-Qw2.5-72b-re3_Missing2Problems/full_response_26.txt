@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples, K: an integer representing the number of elements to check for in each tuple
+Output: A boolean value indicating whether all tuples in the list have exactly K elements
+
+1: Initialize a variable all_have_k_elements to True
+2: For each tuple t in test_list:
+3:     If the length of t is not equal to K:
+4:         Set all_have_k_elements to False
+5:         Break the loop
+6: Return all_have_k_elements
+[END PROCESS]
+
+[BEGIN CODE]
+def check_k_elements(test_list, K):
+    all_have_k_elements = True
+    for t in test_list:
+        if len(t) != K:
+            all_have_k_elements = False
+            break
+    return all_have_k_elements
+[END CODE]
+
+Explanation:
+The function `check_k_elements` takes two parameters: `test_list`, which is a list of tuples, and `K`, which is an integer. The goal is to determine if every tuple in `test_list` has exactly `K` elements. 
+
+- The variable `all_have_k_elements` is initialized to `True`. This variable will be used to track whether all tuples meet the condition.
+- A loop iterates over each tuple `t` in `test_list`.
+- Inside the loop, the length of the tuple `t` is checked against `K`. If the length is not equal to `K`, `all_have_k_elements` is set to `False`, and the loop is exited early using `break`.
+- After the loop, the function returns the value of `all_have_k_elements`, which will be `True` if all tuples have exactly `K` elements, and `False` otherwise.

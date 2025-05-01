@@ -1,0 +1,8 @@
+Input: price: a tuple containing elements of various types, including at least one float.
+Output: sorted_tuple: a tuple sorted by its float elements.
+
+1: Convert the tuple to a list to enable sorting.
+2: Define a key function that extracts the float value from each element.
+3: Use the sorted function with the key function to sort the list by the float values.
+4: Convert the sorted list back to a tuple.
+5: Return the sorted tuple.

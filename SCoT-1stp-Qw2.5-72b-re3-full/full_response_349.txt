@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: A string, s
+Output: A boolean value indicating whether the string is a binary string or not
+
+1: Initialize a set of valid binary characters, binary_chars, containing '0' and '1'
+2: Iterate through each character, c, in the input string, s
+3:     If c is not in binary_chars, return False
+4: If the loop completes without returning False, return True
+[END PROCESS]
+
+[BEGIN CODE]
+def check(s):
+    binary_chars = {'0', '1'}
+    for c in s:
+        if c not in binary_chars:
+            return False
+    return True
+[END CODE]
+
+### Explanation:
+The function `check` is designed to determine if a given string `s` is a binary string, which means it contains only the characters '0' and '1'. The process involves:
+
+1. **Initialization**: A set `binary_chars` is created containing the characters '0' and '1'. Using a set for this purpose allows for efficient membership testing.
+2. **Iteration**: The function iterates over each character `c` in the string `s`.
+3. **Validation**: For each character, it checks if `c` is in the set `binary_chars`. If `c` is not in the set, the function immediately returns `False`, indicating that the string is not a binary string.
+4. **Completion**: If the loop completes without finding any invalid characters, the function returns `True`, indicating that the string is a binary string.
+
+This approach ensures that the function efficiently checks the string and returns the correct result.

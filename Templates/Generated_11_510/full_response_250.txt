@@ -1,0 +1,9 @@
+[BEGIN]
+Input: tup: a tuple, x: an element to count
+Output: count: the number of occurrences of x in tup
+1: Initialize count to 0
+2: for each element ele in tup:
+3:     if ele is equal to x:
+4:         increment count by 1
+5: return count
+[END]

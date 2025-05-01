@@ -1,0 +1,9 @@
+1. Input: \( x \) (an integer)
+2. Check if \( x + 1 \) is a power of 2:
+   - If \( (x + 1) \& (x) == 0 \) and \( x + 1 > 0 \):
+     - Calculate \( k \) as \( \log_2(x + 1) \).
+     - Calculate \( n \) as \( \frac{x + 1}{2^k} - 1 \).
+     - Check if \( n \) is an integer.
+3. Return the result:
+   - If \( n \) is an integer, return `True`.
+   - Otherwise, return `False`.

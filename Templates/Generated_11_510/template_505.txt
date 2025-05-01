@@ -1,0 +1,11 @@
+Input: A: an array of integers  
+Output: A: the array with all zeroes moved to the end  
+
+1: Initialize a variable k to 0  
+2: Loop through each element i in A:  
+3:     If i is not zero:  
+4:         Set A[k] to i  
+5:         Increment k by 1  
+6: Loop from k to the length of A:  
+7:     Set A[i] to 0  
+8: Return A

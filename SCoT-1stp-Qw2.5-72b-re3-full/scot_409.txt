@@ -1,0 +1,9 @@
+Input: list1: a list of tuples, where each tuple contains two integers
+Output: min_product: the minimum product of the pairs of integers from the tuples in the list
+
+1: Initialize min_product to None
+2: Loop through each tuple in list1:
+3:     Calculate the product of the two integers in the current tuple
+4:     If min_product is None or the current product is less than min_product:
+5:         Set min_product to the current product
+6: Return min_product

@@ -1,0 +1,7 @@
+Input: list: a list of integers
+Output: count: an integer representing the number of negative numbers in the list
+
+1: Initialize a counter variable to zero
+2: Loop through each element in the list
+   2.1: If the current element is less than zero (negative), increment the counter by one
+3: After the loop, return the counter value

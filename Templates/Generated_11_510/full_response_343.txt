@@ -1,0 +1,13 @@
+[BEGIN]
+Input: s: a string  
+Output: (l, d): a tuple containing the number of letters and digits in s  
+1: Initialize counters d and l to 0  
+2: for each character c in s:  
+3:     if c is a digit:  
+4:         increment d by 1  
+5:     else if c is a letter:  
+6:         increment l by 1  
+7:     else:  
+8:         do nothing  
+9: return the tuple (l, d)  
+[END]

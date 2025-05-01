@@ -1,0 +1,7 @@
+Input: str: a string  
+Output: result: a string with characters at odd indices removed  
+1: Initialize an empty string result  
+2: for each index i in the range of the length of str:  
+3:     if i is even (i.e., i % 2 == 0):  
+4:         append the character at index i of str to result  
+5: return result

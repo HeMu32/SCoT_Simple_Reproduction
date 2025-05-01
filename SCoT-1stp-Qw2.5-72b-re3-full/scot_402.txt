@@ -1,0 +1,13 @@
+Input: n, r, p: integers where n and r are non-negative and p is a prime number
+Output: The value of nCr % p
+
+1: If r is greater than n, return 0 because it's not possible to choose more items than available.
+2: If r is 0 or r is equal to n, return 1 because there is exactly one way to choose no items or all items.
+3: Initialize a variable `result` to 1 to store the result of nCr % p.
+4: Use a loop to calculate the result:
+   a: For each value i from 1 to r:
+      i: Multiply `result` by (n - r + i) and take modulo p.
+      ii: Divide `result` by i and take modulo p.
+5: Return the final value of `result`.
+
+This process uses the properties of modular arithmetic to efficiently compute the binomial coefficient modulo a prime number. The loop iterates through the values, updating the result with the necessary multiplications and divisions, all while keeping the result within the bounds of the prime number p.

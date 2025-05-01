@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: a, b: two angles of a triangle in degrees
+Output: The third angle of the triangle in degrees
+
+1: Check if a and b are valid angles (i.e., both are greater than 0 and their sum is less than 180 degrees)
+2: If the angles are valid, calculate the third angle by subtracting the sum of a and b from 180 degrees
+3: If the angles are not valid, raise an error or return an appropriate message
+4: Return the calculated third angle
+[END PROCESS]
+
+[BEGIN CODE]
+def find_angle(a, b):
+    # Check if the input angles are valid
+    if a <= 0 or b <= 0 or (a + b) >= 180:
+        raise ValueError("Angles must be greater than 0 and their sum must be less than 180 degrees.")
+    
+    # Calculate the third angle
+    third_angle = 180 - (a + b)
+    
+    return third_angle
+[END CODE]
+
+### Explanation:
+The function `find_angle(a, b)` calculates the third angle of a triangle given two angles `a` and `b`. The process involves:
+1. **Validation**: The function first checks if the input angles are valid. Angles must be greater than 0 degrees, and their sum must be less than 180 degrees. If these conditions are not met, a `ValueError` is raised.
+2. **Calculation**: If the angles are valid, the third angle is calculated by subtracting the sum of `a` and `b` from 180 degrees.
+3. **Return**: The function returns the calculated third angle.
+
+This ensures that the function handles invalid inputs gracefully and provides the correct third angle for valid inputs.

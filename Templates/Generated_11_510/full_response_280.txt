@@ -1,0 +1,12 @@
+[BEGIN]
+Input: dlist: a list, item: an element to search for
+Output: found: a boolean indicating if the item was found, pos: the position of the item in the list
+1: Initialize pos to 0
+2: Initialize found to False
+3: While pos is less than the length of dlist and found is False:
+4:     If dlist[pos] is equal to item:
+5:         Set found to True
+6:     Else:
+7:         Increment pos by 1
+8: Return found and pos
+[END]

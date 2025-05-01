@@ -1,0 +1,9 @@
+Input: x, y: two integers
+Output: the product of x and y
+
+1: Initialize a variable `result` to 0.
+2: Determine the sign of the result based on the signs of x and y.
+3: Convert x and y to their absolute values.
+4: Use a loop to add x to `result`, y times.
+5: If the determined sign is negative, negate the `result`.
+6: Return the `result`.

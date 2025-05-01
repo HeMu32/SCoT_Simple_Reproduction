@@ -1,0 +1,10 @@
+Input: n: an integer 
+Output: an integer with all even bits toggled 
+1: Initialize res to 0 and count to 0 
+2: Set temp to n 
+3: While temp is greater than 0: 
+4:     If count is odd: 
+5:         Toggle the bit at position count in res 
+6:     Increment count by 1 
+7:     Right shift temp by 1 bit 
+8: Return the result of XOR between n and res

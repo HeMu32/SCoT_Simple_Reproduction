@@ -1,0 +1,17 @@
+[BEGIN CODE]
+```python
+def extract_missing(test_list, strt_val, stop_val):
+    full_range = set(range(strt_val, stop_val + 1))
+    test_set = set(test_list)
+    missing = sorted(full_range - test_set)
+    missing_ranges = []
+    if missing:
+        start = missing[0]
+        for i in range(1, len(missing)):
+            if missing[i] != missing[i - 1] + 1:
+                missing_ranges.append((start, missing[i - 1]))
+                start = missing[i]
+        missing_ranges.append((start, missing[-1]))
+    return missing_ranges
+```
+[END CODE]

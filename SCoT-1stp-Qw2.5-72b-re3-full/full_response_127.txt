@@ -1,0 +1,51 @@
+[BEGIN PROCESS]
+Input: x, y: two integers
+Output: the product of x and y
+
+1: Initialize a variable `result` to 0.
+2: Determine the sign of the result based on the signs of x and y.
+3: Convert x and y to their absolute values.
+4: Use a loop to add x to `result`, y times.
+5: If the determined sign is negative, negate the `result`.
+6: Return the `result`.
+[END PROCESS]
+
+[BEGIN CODE]
+def multiply_int(x, y):
+    # Initialize result to 0
+    result = 0
+    
+    # Determine the sign of the result
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+    
+    # Convert x and y to their absolute values
+    x, y = abs(x), abs(y)
+    
+    # Add x to result, y times
+    for _ in range(y):
+        result += x
+    
+    # If the sign is negative, negate the result
+    if sign == -1:
+        result = -result
+    
+    # Return the result
+    return result
+[END CODE]
+
+### Explanation:
+The function `multiply_int` multiplies two integers `x` and `y` without using the multiplication operator `*`. Here's a breakdown of the process:
+
+1. **Initialization**: We start by initializing a variable `result` to 0. This variable will hold the final product of `x` and `y`.
+
+2. **Determine the Sign**: We determine the sign of the result based on the signs of `x` and `y`. If one of them is negative and the other is positive, the result will be negative. If both are either positive or negative, the result will be positive. This is done using the XOR operator `^`.
+
+3. **Absolute Values**: We convert `x` and `y` to their absolute values to simplify the multiplication process. This ensures that we are working with positive numbers, making the loop straightforward.
+
+4. **Loop for Addition**: We use a loop to add `x` to `result`, `y` times. This effectively simulates the multiplication process.
+
+5. **Adjust the Sign**: After the loop, if the determined sign is negative, we negate the `result` to ensure it has the correct sign.
+
+6. **Return the Result**: Finally, we return the `result`, which is the product of `x` and `y`.
+
+This approach ensures that the function works correctly for both positive and negative integers.

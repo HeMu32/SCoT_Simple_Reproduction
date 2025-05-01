@@ -1,0 +1,12 @@
+Input: nums: a list of items (can be numbers, strings, etc.)
+Output: The item with the maximum occurrences in the list
+
+1: Initialize an empty dictionary `count_dict` to store the count of each item.
+2: Loop through each item in the list `nums`:
+3:     If the item is already in `count_dict`, increment its count by 1.
+4:     Otherwise, add the item to `count_dict` with a count of 1.
+5: Initialize `max_item` to None and `max_count` to 0 to keep track of the item with the maximum occurrences.
+6: Loop through each item and its count in `count_dict`:
+7:     If the current item's count is greater than `max_count`:
+8:         Update `max_item` to the current item and `max_count` to the current item's count.
+9: Return `max_item` as the item with the maximum occurrences.

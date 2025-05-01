@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: a: the first term of the geometric series, n: the term number to find, r: the common ratio of the geometric series
+Output: The n-th term of the geometric series
+
+1: Calculate the n-th term using the formula for the n-th term of a geometric series: a * r^(n-1)
+2: Return the calculated n-th term
+[END PROCESS]
+
+[BEGIN CODE]
+def tn_gp(a, n, r):
+    # Calculate the n-th term of the geometric series
+    nth_term = a * (r ** (n - 1))
+    # Return the calculated n-th term
+    return nth_term
+[END CODE]
+
+### Explanation:
+The function `tn_gp` is designed to calculate the n-th term of a geometric series. In a geometric series, each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio. The formula to find the n-th term of a geometric series is given by:
+
+\[ a_n = a \cdot r^{(n-1)} \]
+
+Where:
+- \( a \) is the first term of the series.
+- \( r \) is the common ratio.
+- \( n \) is the term number.
+
+The function takes three parameters:
+- `a`: the first term of the geometric series.
+- `n`: the term number to find.
+- `r`: the common ratio of the geometric series.
+
+The function calculates the n-th term using the formula and returns the result. This implementation is straightforward and directly applies the mathematical formula to compute the desired term.

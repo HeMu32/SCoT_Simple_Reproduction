@@ -1,0 +1,23 @@
+[BEGIN]
+Input: month: a string representing the month, days: an integer representing the day of the month
+Output: season: a string representing the season
+
+1: Initialize season to an empty string
+2: If month is in ('January', 'February', 'March'):
+3:     Set season to 'winter'
+4: If month is in ('April', 'May', 'June'):
+5:     Set season to 'spring'
+6: If month is in ('July', 'August', 'September'):
+7:     Set season to 'summer'
+8: If month is in ('October', 'November', 'December'):
+9:     Set season to 'autumn'
+10: If month is 'March' and days is greater than 19:
+11:     Set season to 'spring'
+12: If month is 'June' and days is greater than 20:
+13:     Set season to 'summer'
+14: If month is 'September' and days is greater than 21:
+15:     Set season to 'autumn'
+16: If month is 'December' and days is greater than 20:
+17:     Set season to 'winter'
+18: Return season
+[END]

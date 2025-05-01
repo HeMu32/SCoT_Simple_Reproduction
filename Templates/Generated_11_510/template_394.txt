@@ -1,0 +1,11 @@
+Input: test_tup: a tuple  
+Output: res: a boolean indicating if all elements in test_tup are distinct  
+1: Initialize res to True  
+2: Initialize an empty set temp  
+3: for each element ele in test_tup:  
+4:     if ele is in temp:  
+5:         set res to False  
+6:         break the loop  
+7:     else:  
+8:         add ele to temp  
+9: return res

@@ -1,0 +1,37 @@
+[BEGIN PROCESS]
+Input: lst: a list of numbers
+Output: sum_of_three_smallest: the sum of the three smallest positive numbers in the list
+
+1: Initialize an empty list called `positive_nums` to store positive numbers from `lst`
+2: For each number `num` in `lst`:
+3:     If `num` is greater than 0:
+4:         Add `num` to `positive_nums`
+5: If the length of `positive_nums` is less than 3:
+6:     Return a message indicating there are not enough positive numbers
+7: Sort `positive_nums` in ascending order
+8: Initialize a variable `sum_of_three_smallest` to 0
+9: For the first three elements in `positive_nums`:
+10:     Add the element to `sum_of_three_smallest`
+11: Return `sum_of_three_smallest`
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_three_smallest_nums(lst):
+    positive_nums = [num for num in lst if num > 0]
+    if len(positive_nums) < 3:
+        return "Not enough positive numbers in the list."
+    positive_nums.sort()
+    sum_of_three_smallest = sum(positive_nums[:3])
+    return sum_of_three_smallest
+[END CODE]
+
+### Explanation:
+The function `sum_three_smallest_nums` is designed to find the sum of the three smallest positive numbers in a given list. Here's a breakdown of the steps:
+
+1. **Filter Positive Numbers**: We first filter out all the positive numbers from the input list `lst` and store them in `positive_nums`.
+2. **Check for Sufficient Positive Numbers**: If there are fewer than three positive numbers in `positive_nums`, the function returns a message indicating that there are not enough positive numbers.
+3. **Sort Positive Numbers**: We sort the `positive_nums` list in ascending order to easily access the three smallest numbers.
+4. **Sum the Three Smallest Numbers**: We sum the first three elements of the sorted `positive_nums` list.
+5. **Return the Sum**: Finally, the function returns the sum of the three smallest positive numbers.
+
+This approach ensures that we correctly handle cases where there are not enough positive numbers and efficiently computes the required sum.

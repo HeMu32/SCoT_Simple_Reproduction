@@ -1,0 +1,12 @@
+Input: A: a circularly sorted array (an array that has been rotated)
+Output: count: the number of rotations applied to the original sorted array
+
+1: Initialize count to 0
+2: Use a loop to iterate over the array from the first element to the second last element
+3:     For each element A[i]:
+4:         Check if A[i] is greater than A[i+1]
+5:         If true, this indicates the point of rotation
+6:             Set count to i + 1
+7:             Break the loop
+8: If the loop completes without finding a rotation point, the array is not rotated, and count remains 0
+9: Return count

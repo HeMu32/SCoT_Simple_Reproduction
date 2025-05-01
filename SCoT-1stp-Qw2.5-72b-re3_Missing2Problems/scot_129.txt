@@ -1,0 +1,10 @@
+Input: my_matrix: a 2D list of integers representing a square matrix
+Output: True if the matrix is a magic square, False otherwise
+
+1: Initialize a variable `n` to the length of the matrix (number of rows or columns, since it's a square matrix)
+2: Calculate the sum of the first row to use as a reference sum for all rows, columns, and diagonals
+3: Check if all rows have the same sum as the reference sum
+4: Check if all columns have the same sum as the reference sum
+5: Check if the main diagonal (top-left to bottom-right) has the same sum as the reference sum
+6: Check if the secondary diagonal (top-right to bottom-left) has the same sum as the reference sum
+7: If all checks pass, return True; otherwise, return False

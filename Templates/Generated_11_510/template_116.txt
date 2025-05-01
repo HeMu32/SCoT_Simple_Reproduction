@@ -1,0 +1,7 @@
+Input: nums: a tuple of positive integers
+Output: result: an integer formed by concatenating the elements of nums
+
+1: Convert each element in nums to a string
+2: Join the string representations of the elements without any separator
+3: Convert the concatenated string back to an integer
+4: Return the resulting integer

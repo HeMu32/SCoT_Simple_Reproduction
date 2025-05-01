@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: list1, list2, list3: three lists of elements
+Output: count: the number of pairs (x, y) that appear in all three lists
+
+1: Initialize a counter variable count to 0.
+2: Create a set from list1 to remove duplicates and allow for faster lookup.
+3: Create a set from list2 to remove duplicates and allow for faster lookup.
+4: Create a set from list3 to remove duplicates and allow for faster lookup.
+5: For each element x in the set of list1:
+6:     For each element y in the set of list2:
+7:         If the pair (x, y) exists in the set of list3:
+8:             Increment the counter by 1.
+9: Return the counter.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_samepair(list1, list2, list3):
+    # Convert lists to sets for faster lookup and to remove duplicates
+    set1 = set(list1)
+    set2 = set(list2)
+    set3 = set(list3)
+    
+    # Initialize the counter
+    count = 0
+    
+    # Iterate through the elements of the first set
+    for x in set1:
+        # Iterate through the elements of the second set
+        for y in set2:
+            # Check if the pair (x, y) exists in the third set
+            if (x, y) in set3:
+                # Increment the counter if the pair is found
+                count += 1
+    
+    # Return the final count
+    return count
+[END CODE]
+
+Explanation:
+- The function `count_samepair` takes three lists as input and returns the number of pairs (x, y) that are present in all three lists.
+- To optimize the search for pairs, the lists are first converted into sets. This not only removes any duplicates within the lists but also allows for faster membership testing.
+- The function then iterates through each element in the first set and, for each element, iterates through the second set. For each pair (x, y) formed, it checks if the pair exists in the third set.
+- If the pair is found in the third set, the counter is incremented.
+- Finally, the function returns the count of such pairs found in all three lists.

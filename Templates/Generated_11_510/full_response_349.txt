@@ -1,0 +1,11 @@
+[BEGIN]
+Input: string: a string to check if it is a binary string
+Output: "Yes" if the string is a binary string, "No" otherwise
+
+1: Convert the string into a set of characters, p
+2: Define a set s containing the characters '0' and '1'
+3: If p is equal to s, or p is equal to a set containing only '0', or p is equal to a set containing only '1':
+4:     Return "Yes"
+5: Else:
+6:     Return "No"
+[END]

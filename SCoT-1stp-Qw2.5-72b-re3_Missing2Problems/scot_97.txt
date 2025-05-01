@@ -1,0 +1,11 @@
+Input: list1: a list of lists, where each sublist contains integers
+Output: frequency_dict: a dictionary where keys are the unique sublists (converted to tuples to be hashable) and values are the counts of how many times each sublist appears in list1
+
+1: Initialize an empty dictionary called frequency_dict
+2: Iterate over each sublist in list1
+3:     Convert the sublist to a tuple (since lists are not hashable and cannot be dictionary keys)
+4:     If the tuple is already a key in frequency_dict:
+5:         Increment the value associated with the tuple key by 1
+6:     Otherwise:
+7:         Add the tuple as a new key in frequency_dict with a value of 1
+8: Return frequency_dict

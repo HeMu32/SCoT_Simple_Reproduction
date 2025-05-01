@@ -1,0 +1,12 @@
+Input: A: list of integers, n: length of list A, sum: target sum, count: current count of elements in the triplet
+Output: True if a triplet with the given sum exists, otherwise False
+
+1: If count is 3 and sum is 0:
+2:     return True
+3: If count is 3 or n is 0 or sum is less than 0:
+4:     return False
+5: Recursively check two possibilities:
+6:     1. Include the current element in the triplet and reduce the sum by the current element's value and increase the count by 1.
+7:     2. Exclude the current element and keep the sum and count unchanged.
+8: If either of the recursive calls returns True, return True.
+9: Otherwise, return False.

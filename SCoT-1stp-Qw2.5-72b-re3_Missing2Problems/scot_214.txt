@@ -1,0 +1,6 @@
+Input: radian: a float representing an angle in radians
+Output: degree: a float representing the angle in degrees
+
+1: Define the conversion factor from radians to degrees (180 / π)
+2: Multiply the radian value by the conversion factor to get the degree value
+3: Return the degree value

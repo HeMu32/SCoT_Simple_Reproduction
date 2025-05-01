@@ -1,0 +1,10 @@
+Input: string: a string to be checked
+Output: True if the string contains only a-z, A-Z, and 0-9 characters; otherwise, False
+
+1: Import the `re` module for regular expression operations.
+2: Define a regular expression pattern `get_char` that matches any character not in the set a-z, A-Z, and 0-9.
+3: Use the `search` method from the `re` module to find the first occurrence of any character not in the allowed set within the string.
+4: If the `search` method returns a match (i.e., a character not in the allowed set is found):
+5:     Return False, indicating the string contains characters outside the allowed set.
+6: Otherwise:
+7:     Return True, indicating the string contains only characters within the allowed set.

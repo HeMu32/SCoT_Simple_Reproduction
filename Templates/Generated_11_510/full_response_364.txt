@@ -1,0 +1,18 @@
+[BEGIN]
+Input: str: a binary string  
+Output: flip_count: the minimum number of flips required to make the string alternate
+
+1: Define a function `make_flip(ch)` that:
+   1.1: Returns '1' if `ch` is '0', otherwise returns '0'
+2: Define a function `get_flip_with_starting_charcter(str, expected)` that:
+   2.1: Initialize `flip_count` to 0
+   2.2: For each character `i` in `str`:
+       2.2.1: If `str[i]` is not equal to `expected`:
+           2.2.1.1: Increment `flip_count` by 1
+       2.2.2: Set `expected` to the result of `make_flip(expected)`
+   2.3: Return `flip_count`
+3: Define a function `min_flip_to_make_string_alternate(str)` that:
+   3.1: Return the minimum value between:
+       3.1.1: `get_flip_with_starting_charcter(str, '0')`
+       3.1.2: `get_flip_with_starting_charcter(str, '1')`
+[END]

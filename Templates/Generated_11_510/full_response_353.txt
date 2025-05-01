@@ -1,0 +1,7 @@
+[BEGIN]
+Input: list1: a nested list, n: an integer representing the column index to remove
+Output: list1: the modified nested list with the specified column removed
+1: for each sublist i in list1:
+2:     delete the element at index n in sublist i
+3: return the modified list1
+[END]

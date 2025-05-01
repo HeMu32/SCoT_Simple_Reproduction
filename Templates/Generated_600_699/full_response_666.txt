@@ -1,0 +1,9 @@
+[BEGIN]
+Input: string: a string, char: a character  
+Output: count: the number of occurrences of char in string  
+1: Initialize count to 0  
+2: for each character in string do  
+3:     if the character is equal to char then  
+4:         increment count by 1  
+5: return count  
+[END]

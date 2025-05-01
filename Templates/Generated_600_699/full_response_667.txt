@@ -1,0 +1,9 @@
+[BEGIN]
+Input: string: a string, vowels: a string of vowels
+Output: count: the number of vowels in the string
+1: Initialize an empty list final
+2: for each character each in string:
+3:     if each is in vowels:
+4:         add each to final
+5: return the length of final
+[END]

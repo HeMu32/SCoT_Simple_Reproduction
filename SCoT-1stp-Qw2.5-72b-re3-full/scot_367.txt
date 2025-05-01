@@ -1,0 +1,9 @@
+Input: root: the root node of a binary tree
+Output: boolean value indicating whether the tree is balanced
+
+1: Define a helper function `get_height` that returns the height of a subtree and a boolean indicating if the subtree is balanced.
+2: If the root is None, return (0, True) as an empty tree is balanced and has height 0.
+3: Recursively call `get_height` for the left and right subtrees.
+4: If either subtree is not balanced, or the height difference between the left and right subtrees is greater than 1, return (max height of the two subtrees + 1, False).
+5: Otherwise, return (max height of the two subtrees + 1, True).
+6: In the main function `is_tree_balanced`, call `get_height` on the root and return the boolean part of the result.

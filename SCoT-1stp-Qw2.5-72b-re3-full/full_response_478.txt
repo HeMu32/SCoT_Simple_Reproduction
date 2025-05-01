@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: str1: a string from which lowercase substrings are to be removed
+Output: result: a string with all lowercase substrings removed
+
+1: Initialize an empty string called `result` to store the final output
+2: Loop through each character `ch` in the input string `str1`
+3:   If `ch` is not a lowercase letter:
+4:     Append `ch` to `result`
+5: Return `result` as the final output
+[END PROCESS]
+
+[BEGIN CODE]
+def remove_lowercase(str1):
+    result = ""
+    for ch in str1:
+        if not ch.islower():
+            result += ch
+    return result
+[END CODE]
+
+### Explanation:
+The function `remove_lowercase` is designed to remove all lowercase letters from a given string `str1`. The process involves iterating through each character in the string and checking if it is a lowercase letter. If the character is not a lowercase letter, it is appended to the `result` string. Finally, the `result` string, which contains only the non-lowercase characters, is returned. This approach ensures that all lowercase substrings are removed, leaving only uppercase letters, digits, and special characters in the output.

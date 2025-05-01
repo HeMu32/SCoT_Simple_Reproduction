@@ -1,0 +1,18 @@
+Input: list1: a list of elements (can be of any type)
+Output: encoded_list: a list representing the run-length encoding of the input list
+
+1: Initialize an empty list encoded_list to store the encoded result
+2: Initialize an empty list current_group to store the current group of identical elements
+3: Initialize a variable current_element to None to keep track of the current element being processed
+4: For each element in list1:
+5:     If the element is the same as current_element:
+6:         Add the element to current_group
+7:     Else:
+8:         If current_group is not empty:
+9:             Append a tuple (length of current_group, current_element) to encoded_list
+10:            Reset current_group to an empty list
+11:        Set current_element to the current element
+12:        Add the current element to current_group
+13: After the loop, if current_group is not empty:
+14:    Append a tuple (length of current_group, current_element) to encoded_list
+15: Return encoded_list

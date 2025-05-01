@@ -1,0 +1,14 @@
+Input: list1, list2: two lists of elements
+Output: 1 if there is at least one common element between list1 and list2, otherwise 0
+
+1: Initialize c to 0
+2: Initialize d to 0
+3: For each element i in list1:
+4:     Increment c by 1
+5: For each element i in list2:
+6:     Increment d by 1
+7: For i from 0 to c-1:
+8:     For j from 0 to d-1:
+9:         If list1[i] is equal to list2[j]:
+10:            Return 1
+11: Return 0

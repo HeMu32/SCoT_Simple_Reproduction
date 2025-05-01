@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: str1: a string, char: a character to replace blank spaces
+Output: new_str: a new string with all blank spaces replaced by the character `char`
+
+1: Initialize an empty string `new_str` to store the result
+2: Iterate over each character `c` in the input string `str1`
+3:     If `c` is a blank space:
+4:         Append `char` to `new_str`
+5:     Else:
+6:         Append `c` to `new_str`
+7: Return `new_str`
+[END PROCESS]
+
+[BEGIN CODE]
+def replace_blank(str1, char):
+    new_str = ""
+    for c in str1:
+        if c == ' ':
+            new_str += char
+        else:
+            new_str += c
+    return new_str
+[END CODE]
+
+### Explanation:
+The function `replace_blank` takes two parameters: `str1`, which is the input string, and `char`, which is the character used to replace blank spaces. The function initializes an empty string `new_str` to build the result. It then iterates over each character in `str1`. If the character is a blank space, it appends `char` to `new_str`; otherwise, it appends the original character `c` to `new_str`. Finally, the function returns the modified string `new_str`.
+
+This approach ensures that all blank spaces in the input string are replaced with the specified character, while all other characters remain unchanged.

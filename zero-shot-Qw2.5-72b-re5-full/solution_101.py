@@ -1,0 +1,4 @@
+def kth_element(arr, n, k): 
+    if k < 1 or k > n:
+        return None
+    return arr[k-1]

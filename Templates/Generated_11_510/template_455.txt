@@ -1,0 +1,6 @@
+Input: monthnum2: an integer representing a month number (1-12)
+Output: True if the month has 31 days, otherwise False
+1: if monthnum2 is 1, 3, 5, 7, 8, 10, or 12:
+2:     return True
+3: else:
+4:     return False

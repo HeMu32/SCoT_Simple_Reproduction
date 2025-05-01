@@ -1,0 +1,10 @@
+[BEGIN]
+Input: M: a matrix (list of lists)
+Output: result: a matrix sorted in ascending order according to the sum of its rows
+1: Initialize result as an empty list
+2: For each row in M:
+3:     Calculate the sum of the current row
+4: Sort M based on the sum of each row in ascending order
+5: Assign the sorted matrix to result
+6: Return result
+[END]

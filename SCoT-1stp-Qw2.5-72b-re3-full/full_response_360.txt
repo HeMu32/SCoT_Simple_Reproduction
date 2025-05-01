@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position of the Carol number to find
+Output: the n-th Carol number
+
+1: Check if n is less than 1, if true, return an error message or raise an exception as Carol numbers are defined for positive integers.
+2: Initialize a variable `k` to 2, as the Carol number is defined as \( (2^k - 1)^2 - 2 \).
+3: Initialize a counter `count` to 0 to keep track of the number of Carol numbers found.
+4: Start a loop to generate Carol numbers:
+5:     Calculate the Carol number using the formula \( (2^k - 1)^2 - 2 \).
+6:     Increment the counter `count` by 1.
+7:     If `count` is equal to `n`, return the current Carol number.
+8:     Otherwise, increment `k` by 1 and continue the loop.
+[END PROCESS]
+
+[BEGIN CODE]
+def get_carol(n):
+    if n < 1:
+        raise ValueError("n must be a positive integer")
+    
+    k = 2
+    count = 0
+    
+    while True:
+        carol_number = (2**k - 1)**2 - 2
+        count += 1
+        if count == n:
+            return carol_number
+        k += 1
+[END CODE]
+
+### Explanation:
+The function `get_carol(n)` is designed to find the n-th Carol number. Carol numbers are a specific sequence of numbers defined by the formula \( (2^k - 1)^2 - 2 \), where \( k \) is a positive integer. The function starts with \( k = 2 \) and iterates, calculating Carol numbers until it finds the n-th one. The loop continues indefinitely, incrementing \( k \) each time, until the desired Carol number is found. The function includes a check to ensure that the input `n` is a positive integer, raising a `ValueError` if it is not. This ensures that the function behaves correctly and safely for valid inputs.

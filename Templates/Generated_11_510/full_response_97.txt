@@ -1,0 +1,13 @@
+[BEGIN]
+Input: list1: a list of lists
+Output: dic_data: a dictionary with frequency counts of elements
+
+1: Flatten list1 into a single list by iterating over each sublist and each item within the sublist.
+2: Initialize an empty dictionary dic_data to store the frequency counts.
+3: For each num in the flattened list:
+4:     If num is already a key in dic_data:
+5:         Increment the value of dic_data[num] by 1.
+6:     Else:
+7:         Add num as a key to dic_data with a value of 1.
+8: Return dic_data.
+[END]

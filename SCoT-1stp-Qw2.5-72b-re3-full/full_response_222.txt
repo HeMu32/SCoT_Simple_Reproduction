@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: test_tuple: a tuple containing elements of any data type
+Output: True if all elements in the tuple have the same data type, otherwise False
+
+1: If the length of the tuple is 0, return True (an empty tuple is considered to have elements of the same type).
+2: Get the type of the first element in the tuple.
+3: Loop through each element in the tuple.
+4:     If the type of the current element is not the same as the type of the first element:
+5:         Return False
+6: If the loop completes without returning False, return True
+[END PROCESS]
+
+[BEGIN CODE]
+def check_type(test_tuple):
+    if len(test_tuple) == 0:
+        return True
+    first_type = type(test_tuple[0])
+    for element in test_tuple:
+        if type(element) != first_type:
+            return False
+    return True
+[END CODE]
+
+Explanation:
+The function `check_type` checks if all elements in a given tuple have the same data type. It first handles the edge case of an empty tuple by returning `True`, as an empty tuple trivially satisfies the condition. It then determines the type of the first element in the tuple and iterates through the rest of the elements, comparing their types to the first element's type. If any element has a different type, the function returns `False`. If the loop completes without finding any differing types, the function returns `True`, indicating that all elements have the same type.

@@ -1,0 +1,6 @@
+[BEGIN]
+Input: r: radius of the cylinder, h: height of the cylinder
+Output: volume: the volume of the cylinder
+1: Calculate the volume using the formula π * r^2 * h
+2: Return the calculated volume
+[END]

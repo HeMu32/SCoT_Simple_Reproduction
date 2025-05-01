@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: text: a string from which we need to find sequences of lowercase letters joined with an underscore
+Output: matches: a list of all sequences of lowercase letters joined with an underscore found in the text
+
+1: Import the regular expression module (re)
+2: Define a regular expression pattern that matches sequences of lowercase letters joined with an underscore
+3: Use the re.findall() function to find all occurrences of the pattern in the input text
+4: Return the list of matches
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def text_lowercase_underscore(text):
+    # Define the pattern to match sequences of lowercase letters joined with an underscore
+    pattern = r'\b[a-z]+_[a-z]+\b'
+    # Find all occurrences of the pattern
+    matches = re.findall(pattern, text)
+    # Return the list of matches
+    return matches
+[END CODE]
+
+Explanation:
+- The function `text_lowercase_underscore` takes a string `text` as input.
+- The regular expression pattern `\b[a-z]+_[a-z]+\b` is used to match sequences of lowercase letters joined with an underscore. Here, `\b` ensures that the match is a whole word, `[a-z]+` matches one or more lowercase letters, and the underscore `_` is the literal character that joins two sequences of lowercase letters.
+- The `re.findall()` function is used to find all non-overlapping matches of the pattern in the string `text`.
+- The function returns a list of all matches found in the input text. If no matches are found, an empty list is returned.

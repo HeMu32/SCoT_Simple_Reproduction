@@ -1,0 +1,12 @@
+Input: arr: a list of integers, n: the length of the list
+Output: res: the first missing positive integer
+
+1: Initialize a variable `i` to 0 for the current index
+2: While `i` is less than `n`:
+3:     Calculate the correct index `j` for the current element `arr[i]` as `arr[i] - 1`
+4:     If `arr[i]` is positive, within the range of the array (1 to n), and not already in its correct position:
+5:         Swap `arr[i]` with `arr[j]`
+6:     Otherwise, move to the next element by incrementing `i`
+7: After the loop, iterate through the array to find the first index `i` where `arr[i]` is not equal to `i + 1`
+8: Return `i + 1` as the first missing positive integer
+9: If no such index is found, return `n + 1` (all numbers from 1 to n are present)

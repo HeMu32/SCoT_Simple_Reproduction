@@ -1,0 +1,8 @@
+Input: l: a list of integers
+Output: The greatest common divisor (GCD) of the elements in the list
+
+1: If the list is empty, return None (or raise an error, depending on the requirement)
+2: Initialize a variable `gcd_result` with the first element of the list
+3: For each element `num` in the list starting from the second element:
+4:     Update `gcd_result` to be the GCD of `gcd_result` and `num`
+5: Return `gcd_result`

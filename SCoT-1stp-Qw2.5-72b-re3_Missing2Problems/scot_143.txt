@@ -1,0 +1,8 @@
+Input: Input: a tuple that may contain various types of elements, including lists
+Output: count: the number of lists present in the tuple
+
+1: Initialize count to 0
+2: For each element in the Input tuple:
+3:     If the element is of type list:
+4:         Increment count by 1
+5: Return count

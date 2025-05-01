@@ -1,0 +1,9 @@
+[BEGIN]
+Input: test_tup: a tuple containing binary digits (0s and 1s)
+Output: res: an integer representation of the binary tuple
+
+1: Convert each element in test_tup to a string
+2: Join the string representations of the elements to form a single binary string
+3: Convert the binary string to an integer using base 2
+4: Return the integer as a string
+[END]

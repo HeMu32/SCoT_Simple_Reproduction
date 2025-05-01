@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, N: the length of the list, P: a prime number
+Output: count of elements in arr whose modular inverse under P is equal to itself
+
+1: Initialize a variable `count` to 0 to keep track of the number of elements that meet the condition
+2: Loop through each element `x` in the array `arr`
+3:     Calculate the modular inverse of `x` under `P` using the formula `x^(P-2) % P` (Fermat's Little Theorem)
+4:     If the modular inverse of `x` is equal to `x` itself:
+5:         Increment `count` by 1
+6: Return the value of `count`
+[END PROCESS]
+
+[BEGIN CODE]
+def modular_inverse(arr, N, P):
+    count = 0
+    for x in arr:
+        # Calculate the modular inverse of x under P using Fermat's Little Theorem
+        mod_inverse = pow(x, P - 2, P)
+        if mod_inverse == x:
+            count += 1
+    return count
+[END CODE]
+
+### Explanation:
+The function `modular_inverse` takes three parameters: `arr` (a list of integers), `N` (the length of the list, though it is not used in the function as Python lists know their own length), and `P` (a prime number). The goal is to count how many elements in `arr` have a modular inverse under `P` that is equal to the element itself.
+
+1. **Initialization**: A variable `count` is initialized to 0. This will be used to keep track of the number of elements that meet the condition.
+2. **Loop**: The function iterates over each element `x` in the array `arr`.
+3. **Modular Inverse Calculation**: For each element `x`, the modular inverse is calculated using Fermat's Little Theorem, which states that for a prime number `P`, the modular inverse of `x` under `P` is `x^(P-2) % P`.
+4. **Condition Check**: If the calculated modular inverse is equal to `x` itself, the `count` is incremented by 1.
+5. **Return**: After the loop completes, the function returns the value of `count`.
+
+This approach ensures that the function efficiently counts the elements in the array that satisfy the given condition.

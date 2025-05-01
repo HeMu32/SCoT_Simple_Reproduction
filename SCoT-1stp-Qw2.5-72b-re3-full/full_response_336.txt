@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: monthname1: a string representing the name of a month
+Output: a boolean value indicating whether the given month can have 28 days
+
+1: Define a list of month names that can have 28 days (February)
+2: Check if the input month name is in the list
+3: If the month name is in the list, return True
+4: Otherwise, return False
+[END PROCESS]
+
+[BEGIN CODE]
+def check_monthnum(monthname1):
+    # List of months that can have 28 days (only February)
+    months_with_28_days = ["February"]
+    
+    # Check if the input month name is in the list
+    if monthname1 in months_with_28_days:
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+The function `check_monthnum` is designed to determine whether the given month name can have 28 days. The only month that can have exactly 28 days is February. Therefore, the function checks if the input month name is "February" and returns `True` if it is, otherwise it returns `False`. This approach is straightforward and leverages a simple list and a membership check to achieve the desired functionality.

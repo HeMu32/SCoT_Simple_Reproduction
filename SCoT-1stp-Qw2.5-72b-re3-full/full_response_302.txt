@@ -1,0 +1,42 @@
+Certainly! Let's break down the task and solve it step by step.
+
+### Task Understanding
+The function `set_Bit_Number(n)` is required to find the most significant bit (MSB) that is set (i.e., 1) in the binary representation of a given integer `n`.
+
+### Solving Process
+[BEGIN PROCESS]
+Input: n: an integer  
+Output: msb: the most significant bit number which is set in the binary representation of n  
+1: Initialize msb to 0  
+2: Initialize a variable `bit_position` to 0  
+3: While n is greater than 0:  
+4:     If the least significant bit of n is 1:  
+5:         Set msb to 2 raised to the power of `bit_position`  
+6:     Right shift n by 1 bit  
+7:     Increment `bit_position` by 1  
+8: Return msb
+[END PROCESS]
+
+### Code Implementation
+[BEGIN CODE]
+def set_Bit_Number(n):
+    msb = 0
+    bit_position = 0
+    while n > 0:
+        if n & 1:  # Check if the least significant bit is 1
+            msb = 2 ** bit_position
+        n = n >> 1  # Right shift n by 1 bit
+        bit_position += 1
+    return msb
+[END CODE]
+
+### Explanation
+1. **Initialization**: We start by initializing `msb` to 0, which will store the most significant set bit. We also initialize `bit_position` to 0, which will keep track of the current bit position.
+2. **Loop**: We use a while loop to iterate through the bits of `n` until `n` becomes 0.
+3. **Check Bit**: Inside the loop, we use the bitwise AND operator (`&`) to check if the least significant bit of `n` is 1.
+4. **Update MSB**: If the least significant bit is 1, we update `msb` to `2 ** bit_position`, which represents the value of the bit at the current position.
+5. **Right Shift**: We right shift `n` by 1 bit to move to the next bit.
+6. **Increment Position**: We increment `bit_position` by 1 to move to the next bit position.
+7. **Return Result**: After the loop, we return `msb`, which will be the most significant set bit.
+
+This approach ensures that we correctly identify the most significant set bit in the binary representation of the given integer `n`.

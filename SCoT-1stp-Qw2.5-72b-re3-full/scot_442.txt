@@ -1,0 +1,9 @@
+Input: nums: a list of integers
+Output: The ratio of positive numbers in the list
+
+1: Initialize a variable `positive_count` to 0 to keep track of the number of positive numbers.
+2: Initialize a variable `total_count` to the length of the list `nums` to represent the total number of elements.
+3: Iterate over each element in the list `nums`:
+   3.1: If the current element is greater than 0, increment `positive_count` by 1.
+4: Calculate the ratio of positive numbers by dividing `positive_count` by `total_count`.
+5: Return the ratio.

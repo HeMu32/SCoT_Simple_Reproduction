@@ -1,0 +1,14 @@
+Input: lst: a list of numbers
+Output: sum_of_three_smallest: the sum of the three smallest positive numbers in the list
+
+1: Initialize an empty list called `positive_nums` to store positive numbers from `lst`
+2: For each number `num` in `lst`:
+3:     If `num` is greater than 0:
+4:         Add `num` to `positive_nums`
+5: If the length of `positive_nums` is less than 3:
+6:     Return a message indicating there are not enough positive numbers
+7: Sort `positive_nums` in ascending order
+8: Initialize a variable `sum_of_three_smallest` to 0
+9: For the first three elements in `positive_nums`:
+10:     Add the element to `sum_of_three_smallest`
+11: Return `sum_of_three_smallest`

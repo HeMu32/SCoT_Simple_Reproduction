@@ -1,0 +1,8 @@
+Input: tuplex: a tuple, m: an integer representing the start index, n: an integer representing the end index
+Output: A new tuple that is a slice of the original tuple from index m to n (exclusive)
+1: Check if m and n are within the bounds of the tuple length
+2: If m and n are valid:
+3:     Slice the tuple from index m to n
+4:     Return the sliced tuple
+5: If m or n are out of bounds:
+6:     Return an error message or an empty tuple

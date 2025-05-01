@@ -1,0 +1,9 @@
+[BEGIN]
+Input: nums: a list of numbers  
+Output: result: a list of products of consecutive numbers in nums  
+1: Initialize an empty list result  
+2: Loop through each pair of consecutive numbers (a, b) in nums:  
+3:     Multiply a by b to get the product  
+4:     Append the product to result  
+5: Return result  
+[END]

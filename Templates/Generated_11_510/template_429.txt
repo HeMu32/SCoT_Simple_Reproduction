@@ -1,0 +1,8 @@
+Input: test_tup1, test_tup2: two tuples of integers
+Output: res: a tuple containing the element-wise AND operation result of the two input tuples
+
+1: Initialize an empty tuple res
+2: Loop through each pair of elements (ele1, ele2) from test_tup1 and test_tup2 using zip:
+3:     Perform the bitwise AND operation between ele1 and ele2
+4:     Add the result of the bitwise AND operation to res
+5: Return res

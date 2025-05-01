@@ -1,0 +1,6 @@
+Input: nums: list of numbers, n: integer
+Output: smallest_nums: list of n smallest numbers from nums
+1: Import heapq module as hq
+2: Use hq.nsmallest function to find the n smallest numbers in nums
+3: Store the result in smallest_nums
+4: Return smallest_nums

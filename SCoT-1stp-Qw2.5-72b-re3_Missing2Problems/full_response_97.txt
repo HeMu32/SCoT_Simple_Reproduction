@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: list1: a list of lists, where each sublist contains integers
+Output: frequency_dict: a dictionary where keys are the unique sublists (converted to tuples to be hashable) and values are the counts of how many times each sublist appears in list1
+
+1: Initialize an empty dictionary called frequency_dict
+2: Iterate over each sublist in list1
+3:     Convert the sublist to a tuple (since lists are not hashable and cannot be dictionary keys)
+4:     If the tuple is already a key in frequency_dict:
+5:         Increment the value associated with the tuple key by 1
+6:     Otherwise:
+7:         Add the tuple as a new key in frequency_dict with a value of 1
+8: Return frequency_dict
+[END PROCESS]
+
+[BEGIN CODE]
+def frequency_lists(list1):
+    frequency_dict = {}
+    for sublist in list1:
+        # Convert sublist to tuple to use as a dictionary key
+        tuple_sublist = tuple(sublist)
+        if tuple_sublist in frequency_dict:
+            frequency_dict[tuple_sublist] += 1
+        else:
+            frequency_dict[tuple_sublist] = 1
+    return frequency_dict
+[END CODE]
+
+### Explanation:
+The function `frequency_lists` takes a list of lists as input and returns a dictionary that maps each unique sublist (converted to a tuple) to its frequency count in the input list. The process involves iterating through each sublist, converting it to a tuple (since lists are not hashable and cannot be used as dictionary keys), and then updating the dictionary with the frequency count. If the tuple is already a key in the dictionary, its count is incremented; otherwise, a new entry is created with a count of 1. This approach ensures that we can efficiently count the occurrences of each unique sublist in the input list.

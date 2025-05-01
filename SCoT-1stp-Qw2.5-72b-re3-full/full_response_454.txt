@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: text: a string of text
+Output: A boolean value indicating whether the text contains a word with the letter 'z'
+
+1: Initialize a variable `found` to False, which will be used to indicate if a word containing 'z' is found.
+2: Split the input text into a list of words.
+3: Loop through each word in the list:
+4:     If the word contains the letter 'z':
+5:         Set `found` to True
+6:         Break the loop
+7: After the loop, return the value of `found`.
+[END PROCESS]
+
+[BEGIN CODE]
+def text_match_wordz(text):
+    found = False
+    words = text.split()
+    for word in words:
+        if 'z' in word:
+            found = True
+            break
+    return found
+[END CODE]
+
+Explanation:
+The function `text_match_wordz` takes a string `text` as input and checks if any word in the text contains the letter 'z'. It initializes a boolean variable `found` to `False` to keep track of whether a word with 'z' has been found. The text is split into a list of words using the `split()` method. The function then iterates over each word in the list. If a word containing 'z' is found, `found` is set to `True` and the loop is exited early using `break`. Finally, the function returns the value of `found`, which will be `True` if a word with 'z' was found, and `False` otherwise.

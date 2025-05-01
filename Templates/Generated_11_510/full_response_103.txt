@@ -1,0 +1,9 @@
+[BEGIN]
+Input: n, m: integers
+Output: Eulerian number a(n, m)
+1: if m is greater than or equal to n or n is 0:
+2:     return 0
+3: if m is 0:
+4:     return 1
+5: return ((n - m) * eulerian_num(n - 1, m - 1) + (m + 1) * eulerian_num(n - 1, m))
+[END]

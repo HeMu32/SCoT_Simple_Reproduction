@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number of first even natural numbers to consider
+Output: sum_of_squares: the sum of squares of the first n even natural numbers
+1: Initialize sum_of_squares to 0
+2: for each number i from 1 to n:
+3:     calculate the i-th even number (2 * i)
+4:     square the i-th even number
+5:     add the squared value to sum_of_squares
+6: return sum_of_squares
+[END PROCESS]
+
+[BEGIN CODE]
+def square_Sum(n):
+    sum_of_squares = 0
+    for i in range(1, n + 1):
+        even_number = 2 * i
+        squared_value = even_number ** 2
+        sum_of_squares += squared_value
+    return sum_of_squares
+[END CODE]
+
+### Explanation:
+The function `square_Sum(n)` calculates the sum of the squares of the first `n` even natural numbers. The process involves initializing a variable `sum_of_squares` to 0, which will store the cumulative sum of the squares. A loop runs from 1 to `n`, and for each iteration, it calculates the i-th even number (which is `2 * i`), squares it, and adds the squared value to `sum_of_squares`. Finally, the function returns the total sum of the squares. This approach ensures that we correctly compute the sum of squares of the first `n` even natural numbers.

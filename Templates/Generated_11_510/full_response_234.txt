@@ -1,0 +1,6 @@
+[BEGIN]
+Input: l: a number representing the length of a side of the cube
+Output: volume: the volume of the cube
+1: Calculate the volume by multiplying the length of the side by itself three times
+2: Return the calculated volume
+[END]

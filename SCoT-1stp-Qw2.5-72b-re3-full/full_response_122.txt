@@ -1,0 +1,54 @@
+To solve the task of finding the n-th smart number, we first need to understand what a smart number is. A smart number is defined as a number that has at least three distinct prime factors. For example, the number 30 (2 * 3 * 5) is a smart number because it has three distinct prime factors.
+
+### Solving Process
+
+[BEGIN PROCESS]
+Input: n: an integer representing the position in the sequence of smart numbers
+Output: The n-th smart number
+
+1: Initialize a list `smart_numbers` to store the smart numbers found.
+2: Initialize a variable `current_number` to 2, the smallest number to check.
+3: Use a loop to find smart numbers until the length of `smart_numbers` is equal to `n`.
+4: For each `current_number`:
+5:     Initialize a set `factors` to store distinct prime factors.
+6:     For each number `i` from 2 to the square root of `current_number`:
+7:         While `current_number` is divisible by `i`:
+8:             Add `i` to `factors`.
+9:             Divide `current_number` by `i`.
+10:     If `current_number` is greater than 1, add it to `factors` (it is a prime factor).
+11:     If the length of `factors` is at least 3, add `current_number` to `smart_numbers`.
+12:     Increment `current_number` by 1.
+13: Return the n-th element in `smart_numbers`.
+[END PROCESS]
+
+### Code Implementation
+
+[BEGIN CODE]
+def smartNumber(n):
+    def is_smart_number(num):
+        factors = set()
+        # Check for each number from 2 to the square root of num
+        for i in range(2, int(num**0.5) + 1):
+            while num % i == 0:
+                factors.add(i)
+                num //= i
+        if num > 1:
+            factors.add(num)
+        return len(factors) >= 3
+
+    smart_numbers = []
+    current_number = 2
+    while len(smart_numbers) < n:
+        if is_smart_number(current_number):
+            smart_numbers.append(current_number)
+        current_number += 1
+    return smart_numbers[-1]
+[END CODE]
+
+### Explanation
+
+1. **is_smart_number Function**: This helper function checks if a given number has at least three distinct prime factors. It does this by iterating from 2 to the square root of the number and dividing the number by each factor found, adding the factor to a set to ensure uniqueness. If the remaining number after all divisions is greater than 1, it is also added to the set of factors. The function returns `True` if the set of factors has at least three elements.
+
+2. **Main Function**: The `smartNumber` function initializes an empty list `smart_numbers` to store the smart numbers found. It starts checking from the number 2 and continues to find smart numbers until the list has `n` elements. For each number, it uses the `is_smart_number` function to check if it is a smart number. If it is, the number is added to the list. The function returns the last element of the list, which is the n-th smart number.
+
+This approach ensures that we efficiently find the n-th smart number by checking each number in sequence and using a helper function to determine if a number is a smart number.

@@ -1,0 +1,9 @@
+[BEGIN]
+Input: array_nums1, array_nums2: two lists of numbers  
+Output: result: a list containing the intersection of array_nums1 and array_nums2  
+1: Initialize an empty list result  
+2: For each element x in array_nums2:  
+3:     If x is also in array_nums1:  
+4:         Add x to result  
+5: Return result  
+[END]

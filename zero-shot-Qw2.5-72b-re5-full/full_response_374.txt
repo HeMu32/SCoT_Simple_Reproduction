@@ -1,0 +1,18 @@
+[BEGIN CODE]
+```python
+def permute_string(str):
+    """
+    Write a function to print all permutations of a given string including duplicates.
+    """
+    def permute(data, i, length): 
+        if i==length: 
+            print(''.join(data) )
+        else: 
+            for j in range(i,length): 
+                data[i], data[j] = data[j], data[i] 
+                permute(data, i+1, length) 
+                data[i], data[j] = data[j], data[i]  
+
+    permute(list(str), 0, len(str))
+```
+[END CODE]

@@ -1,0 +1,12 @@
+Input: str: a string
+Output: A boolean value indicating whether the string has at least one letter and one number
+
+1: Initialize two flags, `has_letter` and `has_number`, to False.
+2: Loop through each character `ch` in the string `str`:
+3:     If `ch` is a letter:
+4:         Set `has_letter` to True.
+5:     If `ch` is a number:
+6:         Set `has_number` to True.
+7:     If both `has_letter` and `has_number` are True:
+8:         Break the loop as the condition is already met.
+9: Return the result of `has_letter and has_number`.

@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: The highest power of 2 that is less than or equal to n
+
+1: Initialize a variable `power` to 1 (2^0)
+2: While `power * 2` is less than or equal to n:
+3:     Update `power` to `power * 2`
+4: Return `power` as the highest power of 2 less than or equal to n
+[END PROCESS]
+
+[BEGIN CODE]
+def highest_Power_of_2(n):
+    power = 1
+    while power * 2 <= n:
+        power *= 2
+    return power
+[END CODE]
+
+### Explanation:
+The function `highest_Power_of_2` is designed to find the highest power of 2 that is less than or equal to the given number `n`. The process starts by initializing `power` to 1, which is 2^0. The while loop continues to multiply `power` by 2 until `power * 2` exceeds `n`. At this point, `power` holds the highest power of 2 that is less than or equal to `n`. The function then returns this value.
+
+This approach ensures that the function efficiently finds the desired power of 2 by leveraging the properties of powers of 2 and using a simple loop. The time complexity of this function is O(log n), as the number of iterations is proportional to the logarithm of `n` base 2.

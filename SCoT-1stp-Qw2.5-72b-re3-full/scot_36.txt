@@ -1,0 +1,9 @@
+Input: num1, num2, n: three integers where num1 and num2 are the numerator and denominator of a fraction, and n is the position of the digit to find in the decimal part of the fraction.
+Output: digit: the nth digit in the decimal part of the fraction num1/num2
+
+1: Compute the decimal part of the fraction num1/num2
+2: Convert the decimal part to a string to easily access individual digits
+3: If the length of the decimal part is less than n:
+4:     Return an error message indicating that n is out of range
+5: Else:
+6:     Return the nth digit from the decimal part

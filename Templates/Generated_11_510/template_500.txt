@@ -1,0 +1,7 @@
+Input: list: a list of elements that can be converted to strings  
+Output: ans: a string that is the concatenation of all elements in the list  
+1: Initialize ans as an empty string  
+2: for each element i in list:  
+3:     Convert i to a string if it is not already a string  
+4:     Concatenate i to ans with a space in between  
+5: return ans

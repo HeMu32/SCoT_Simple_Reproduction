@@ -1,0 +1,14 @@
+Input: X: first sequence, Y: second sequence, m: length of X, n: length of Y
+Output: lcs: the longest common subsequence of X and Y
+
+1: Initialize a 2D array dp of size (m+1) x (n+1) to store the lengths of the longest common subsequences for different prefixes of X and Y.
+2: For each element in the 2D array:
+   - If the current indices are 0 (i.e., the first row or the first column), set the value to 0 (base case).
+   - If the characters of X and Y at the current indices match, set dp[i][j] to dp[i-1][j-1] + 1.
+   - If the characters do not match, set dp[i][j] to the maximum of dp[i-1][j] and dp[i][j-1].
+3: The value dp[m][n] will contain the length of the longest common subsequence.
+4: To construct the actual subsequence, start from dp[m][n] and trace back to the beginning:
+   - If the characters of X and Y match, add the character to the result and move diagonally up-left.
+   - Otherwise, move in the direction of the larger value (either up or left).
+5: Reverse the constructed subsequence to get the correct order.
+6: Return the longest common subsequence.

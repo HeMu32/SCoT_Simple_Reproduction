@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number of first even natural numbers to consider
+Output: sum: the sum of the cubes of the first n even natural numbers
+
+1: Initialize a variable sum to 0 to store the cumulative sum of cubes.
+2: Loop from 1 to n (inclusive) with a loop variable i:
+3:     Calculate the i-th even number as 2 * i.
+4:     Calculate the cube of the i-th even number.
+5:     Add the cube to the sum.
+6: Return the sum.
+[END PROCESS]
+
+[BEGIN CODE]
+def cube_Sum(n):
+    sum = 0
+    for i in range(1, n + 1):
+        even_number = 2 * i
+        cube = even_number ** 3
+        sum += cube
+    return sum
+[END CODE]
+
+### Explanation:
+The function `cube_Sum(n)` calculates the sum of the cubes of the first `n` even natural numbers. The process involves initializing a sum variable to 0, then iterating through the first `n` even numbers (which are 2, 4, 6, ..., 2n). For each even number, its cube is calculated and added to the sum. Finally, the function returns the total sum of these cubes. This approach ensures that the function correctly computes the desired result for any positive integer `n`.

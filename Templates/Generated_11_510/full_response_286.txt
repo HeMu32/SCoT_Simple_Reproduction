@@ -1,0 +1,14 @@
+[BEGIN]
+Input: a: list of integers, n: length of list a, k: number of times the array is repeated
+Output: max_sum: the largest sum of contiguous subarray in the modified array
+
+1: Initialize max_so_far to the smallest possible integer
+2: Initialize max_ending_here to 0
+3: for i from 0 to n*k - 1 do
+4:     Add a[i % n] to max_ending_here
+5:     if max_so_far is less than max_ending_here then
+6:         Set max_so_far to max_ending_here
+7:     if max_ending_here is less than 0 then
+8:         Set max_ending_here to 0
+9: return max_so_far
+[END]

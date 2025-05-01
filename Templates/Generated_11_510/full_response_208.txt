@@ -1,0 +1,10 @@
+[BEGIN]
+Input: num: a string representing a number  
+Output: True if num is a decimal with a precision of 2, otherwise False  
+1:  Compile a regular expression pattern that matches a number with an optional decimal part of up to 2 digits  
+2:  Use the compiled pattern to search the input string num  
+3:  If the search returns a match:  
+4:    Return True  
+5:  Else:  
+6:    Return False  
+[END]

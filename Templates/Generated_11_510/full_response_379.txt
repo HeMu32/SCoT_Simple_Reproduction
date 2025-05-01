@@ -1,0 +1,7 @@
+[BEGIN]
+Input: l, w, h: dimensions of the cuboid (length, width, height)
+Output: SA: the surface area of the cuboid
+
+1: Calculate the surface area (SA) using the formula: SA = 2 * (l * w + l * h + w * h)
+2: Return the calculated surface area (SA)
+[END]

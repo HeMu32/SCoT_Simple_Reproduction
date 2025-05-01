@@ -1,0 +1,13 @@
+[BEGIN]
+Input: arr: a non-negative integer array, k: an integer
+Output: count: the number of subsequences having a product smaller than k
+
+1: Initialize n as the length of arr
+2: Create a 2D list dp with dimensions (k + 1) x (n + 1) initialized to 0
+3: For i from 1 to k (inclusive):
+4:     For j from 1 to n (inclusive):
+5:         Set dp[i][j] to dp[i][j - 1]
+6:         If arr[j - 1] is less than or equal to i and arr[j - 1] is greater than 0:
+7:             Add dp[i // arr[j - 1]][j - 1] + 1 to dp[i][j]
+8: Return dp[k][n]
+[END]

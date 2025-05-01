@@ -1,0 +1,18 @@
+[BEGIN PROCESS]
+Input: heap: a list representing a min-heap, a: an integer to be inserted
+Output: None (the function modifies the heap in place)
+
+1: Import the `heapq` module to use heap operations.
+2: Use the `heapreplace` function from the `heapq` module to pop the smallest element from the heap and push the new item `a` onto the heap in a single operation.
+3: The function does not return anything as the heap is modified in place.
+[END PROCESS]
+
+[BEGIN CODE]
+import heapq
+
+def heap_replace(heap, a):
+    heapq.heapreplace(heap, a)
+[END CODE]
+
+Explanation:
+The `heapq` module in Python provides an efficient implementation of a min-heap. The `heapreplace` function is specifically designed to pop the smallest element from the heap and push a new item onto the heap in a single operation, which is more efficient than popping and pushing separately. This function is useful in scenarios where you need to maintain a fixed-size heap, such as in the implementation of algorithms that require the top k elements or in priority queues. The function modifies the heap in place and does not return any value, which is why the function itself does not have a return statement.

@@ -1,0 +1,11 @@
+def validate(n):
+    digit_count = [0] * 10
+    while n > 0:
+        digit = n % 10
+        digit_count[digit] += 1
+        n //= 10
+    
+    for digit, count in enumerate(digit_count):
+        if count > digit:
+            return False
+    return True

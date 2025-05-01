@@ -1,0 +1,5 @@
+Input: n: an integer representing the position of the rectangular number to find
+Output: the n-th rectangular number
+
+1: Calculate the n-th rectangular number using the formula for rectangular numbers: n * (n + 1)
+2: Return the calculated value

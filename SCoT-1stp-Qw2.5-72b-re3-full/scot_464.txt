@@ -1,0 +1,9 @@
+Input: dict: a dictionary with values, n: a value to check against
+Output: result: a boolean indicating if all values in the dictionary are equal to n
+
+1: Initialize a variable result to True
+2: For each value in the dictionary do
+3:     If the value is not equal to n then
+4:         Set result to False
+5:         Break the loop
+6: Return result

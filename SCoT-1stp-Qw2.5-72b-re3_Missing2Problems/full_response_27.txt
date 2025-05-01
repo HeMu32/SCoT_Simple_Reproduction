@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: list: a list of strings, where each string may contain digits and other characters
+Output: new_list: a list of strings with all digits removed from each string
+
+1: Initialize an empty list new_list to store the results
+2: For each string (s) in the input list:
+3:     Initialize an empty string new_s to store the processed string
+4:     For each character (c) in the string s:
+5:         If c is not a digit:
+6:             Append c to new_s
+7:     Append new_s to new_list
+8: Return new_list
+[END PROCESS]
+
+[BEGIN CODE]
+def remove(lst):
+    new_list = []
+    for s in lst:
+        new_s = ''.join([c for c in s if not c.isdigit()])
+        new_list.append(new_s)
+    return new_list
+[END CODE]
+
+Explanation:
+- The function `remove` takes a list of strings as input.
+- It initializes an empty list `new_list` to store the results.
+- It iterates over each string `s` in the input list.
+- For each string, it initializes an empty string `new_s` to build the new string without digits.
+- It then iterates over each character `c` in the string `s`.
+- If the character `c` is not a digit (checked using `c.isdigit()`), it is appended to `new_s`.
+- After processing all characters in the string `s`, the new string `new_s` is appended to `new_list`.
+- Finally, the function returns `new_list`, which contains the original strings with all digits removed.

@@ -1,0 +1,7 @@
+[BEGIN]
+Input: nums: a list of numbers  
+Output: True if nums is in increasing order, otherwise False  
+1: Check if the sorted version of nums is equal to nums itself  
+2:     If they are equal, return True  
+3:     Otherwise, return False  
+[END]

@@ -1,0 +1,6 @@
+[BEGIN CODE]
+```python
+def count_X(tup, x): 
+    return tup.count(x)
+```
+[END CODE]

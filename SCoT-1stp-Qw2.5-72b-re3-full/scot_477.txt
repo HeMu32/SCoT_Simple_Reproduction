@@ -1,0 +1,5 @@
+Input: string: a string that may contain uppercase and lowercase letters
+Output: A new string where all characters are converted to lowercase
+
+1: Use the built-in `lower()` method of the string to convert all characters to lowercase.
+2: Return the new string.

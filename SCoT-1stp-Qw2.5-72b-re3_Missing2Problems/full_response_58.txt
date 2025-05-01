@@ -1,0 +1,18 @@
+[BEGIN PROCESS]
+Input: x, y: two integers
+Output: A boolean value indicating whether x and y have opposite signs
+
+1: Check if the product of x and y is less than 0
+2:   If the product is less than 0, return True (indicating opposite signs)
+3:   Otherwise, return False (indicating same signs or one of them is zero)
+[END PROCESS]
+
+[BEGIN CODE]
+def opposite_Signs(x, y):
+    return x * y < 0
+[END CODE]
+
+### Explanation:
+The function `opposite_Signs` takes two integers, `x` and `y`, as input and returns a boolean value indicating whether the two integers have opposite signs. The logic is based on the property that the product of two numbers with opposite signs is negative. Therefore, if `x * y` is less than 0, the numbers have opposite signs, and the function returns `True`. Otherwise, it returns `False`.
+
+This approach is efficient and straightforward, leveraging the mathematical property of multiplication to determine the sign relationship between the two numbers.

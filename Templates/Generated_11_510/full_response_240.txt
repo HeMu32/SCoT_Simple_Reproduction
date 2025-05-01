@@ -1,0 +1,7 @@
+[BEGIN]
+Input: list1: a list, list2: a list  
+Output: replace_list: a list where the last element of list1 is replaced by list2  
+1: Replace the last element of list1 with list2 using slicing  
+2: Assign the modified list1 to replace_list  
+3: Return replace_list  
+[END]

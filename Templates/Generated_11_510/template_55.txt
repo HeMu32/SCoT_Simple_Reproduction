@@ -1,0 +1,4 @@
+Input: a: first term of the geometric series, n: term number to find, r: common ratio
+Output: tn: the n-th term of the geometric series
+1: Calculate the n-th term using the formula tn = a * (r ** (n - 1))
+2: Return the calculated value of tn

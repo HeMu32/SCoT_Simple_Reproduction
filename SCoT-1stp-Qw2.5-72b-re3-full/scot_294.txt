@@ -1,0 +1,10 @@
+Input: listval: a list that can contain various data types (integers, floats, strings, etc.)
+Output: max_val: the maximum value found in the list, considering only numeric types (integers and floats)
+
+1: Initialize a variable max_value to None
+2: Loop through each element in listval:
+3:     If the element is an integer or a float:
+4:         If max_value is None or the element is greater than max_value:
+5:             Set max_value to the element
+6: If max_value is still None after the loop, raise an error indicating that no numeric values were found
+7: Return max_value

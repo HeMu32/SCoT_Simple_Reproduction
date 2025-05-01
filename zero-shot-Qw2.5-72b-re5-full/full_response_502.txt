@@ -1,0 +1,4 @@
+[BEGIN CODE]
+def find(n, m):
+    return n % m
+[END CODE]

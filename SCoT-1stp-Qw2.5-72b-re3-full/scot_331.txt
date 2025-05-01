@@ -1,0 +1,9 @@
+Input: n: an integer
+Output: count: the number of unset (0) bits in the binary representation of n
+
+1: Convert the integer n to its binary representation as a string, excluding the '0b' prefix.
+2: Initialize a counter variable count to 0.
+3: Loop through each character in the binary string:
+4:     If the character is '0':
+5:         Increment the count by 1.
+6: Return the count.

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: nums: list of integers, m: start index, n: end index
+Output: sum_range: sum of elements in nums from index m to n inclusive
+1: Initialize sum_range to 0
+2: for i from m to n inclusive:
+3:     add nums[i] to sum_range
+4: return sum_range
+[END]

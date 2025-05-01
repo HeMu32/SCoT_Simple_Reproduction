@@ -1,0 +1,11 @@
+[BEGIN]
+Input: test_list: a list of tuples
+Output: res: a dictionary where keys are the second elements of the tuples and values are lists of the first elements grouped by the second elements
+
+1: Initialize an empty dictionary res
+2: Sort test_list based on the second element of each tuple
+3: Loop through each group of tuples grouped by their second element:
+4:     For each group, set the key in res to the second element of the tuple
+5:     For each tuple in the group, append the first element to the list in res corresponding to the key
+6: Return res
+[END]

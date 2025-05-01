@@ -1,0 +1,24 @@
+'''python
+def monotonic (str)
+	"""
+	Complete this method, return True is list elements are monotonically increasing or decreasing.
+	"""
+	Pass
+'''
+
+Please understand the requirement and write a rough solving process. It starts with a input-output structure. You should use three basic structures to build the solving process, including sequences, branches, and loops. The necessary details should be written in natural languages.
+And you'll need to put [BEGIN] before your solution and [DONE] after it.
+
+[BEGIN]
+Input: l: list 
+Output: True or False 
+1: 	for each element in l do 
+2: 		if the element is greater than its previous element then 
+3: 			l increases 
+4: 		if the element is less than its previous element then 
+5: 			l decreases 
+6: 	if both increase and decrease then 
+7: 		return False 
+8: 	else 
+9: 		return True 
+[DONE]

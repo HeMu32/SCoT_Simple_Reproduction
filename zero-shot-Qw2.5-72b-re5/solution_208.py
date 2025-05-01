@@ -1,0 +1,8 @@
+import re
+
+def is_decimal(num):
+    """
+    Write a function to check the given decimal with a precision of 2 by using regex.
+    """
+    pattern = r'^\d+(\.\d{2})?$'
+    return bool(re.match(pattern, num))

@@ -1,0 +1,13 @@
+[BEGIN]
+Input: arr: a list of integers, n: the length of arr, k: an integer representing the number of operations
+Output: res: the minimum number of operations required to make all elements in arr equal, or -1 if it's not possible
+
+1: max1 = max(arr)  # Find the maximum value in the array
+2: res = 0  # Initialize the result variable to store the number of operations
+3: for i in range(0, n):  # Loop through each element in the array
+4:     if ((max1 - arr[i]) % k != 0):  # Check if the difference between max1 and the current element is divisible by k
+5:         return -1  # If not, return -1 indicating it's not possible to make all elements equal
+6:     else:
+7:         res += (max1 - arr[i]) / k  # Calculate the number of operations needed for the current element and add to res
+8: return int(res)  # Return the total number of operations as an integer
+[END]

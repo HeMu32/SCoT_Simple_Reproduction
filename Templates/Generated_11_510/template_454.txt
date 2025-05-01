@@ -1,0 +1,8 @@
+Input: text: a string  
+Output: 'Found a match!' or 'Not matched!'  
+1: Define a pattern that matches a word containing 'z'  
+2: Use a regular expression search to find the pattern in the text  
+3: If the pattern is found in the text:  
+4:     Return 'Found a match!'  
+5: Else:  
+6:     Return 'Not matched!'

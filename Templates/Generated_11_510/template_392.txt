@@ -1,0 +1,10 @@
+Input: n: an integer  
+Output: max_sum: the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n)  
+
+1: Initialize a list res with two elements: 0 and 1.  
+2: Set i to 2.  
+3: While i is less than or equal to n:  
+4:     Calculate the value of the expression (res[i/2] + res[i/3] + res[i/4] + res[i/5]) and store it in temp.  
+5:     Append the maximum value between i and temp to res.  
+6:     Increment i by 1.  
+7: Return the nth element of res.

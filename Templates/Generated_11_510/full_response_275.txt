@@ -1,0 +1,13 @@
+[BEGIN]
+Input: a: list of integers, n: length of the list, m: divisor integer  
+Output: position: the position of the last removed element from the array
+
+1: for each element in the list a from index 0 to n-1:
+2:     update the element to be the integer division of the element by m plus 1 if the remainder of the division by m is not zero
+3: initialize result and maxx to -1
+4: for each element in the list a from index n-1 to 0:
+5:     if the current element is greater than maxx:
+6:         update maxx to the current element
+7:         update result to the current index
+8: return result + 1
+[END]

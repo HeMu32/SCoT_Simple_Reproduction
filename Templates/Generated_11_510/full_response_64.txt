@@ -1,0 +1,9 @@
+[BEGIN]
+Input: subjectmarks: a list of tuples where each tuple contains a subject name and a mark
+
+Output: A list of tuples sorted based on the marks in ascending order
+
+1: Use the sort method on the list subjectmarks
+2:     Set the key parameter to a lambda function that takes a tuple x and returns the second element of the tuple, x[1]
+3: Return the sorted list subjectmarks
+[END]

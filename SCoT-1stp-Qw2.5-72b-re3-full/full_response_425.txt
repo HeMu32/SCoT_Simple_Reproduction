@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: list1: a list of lists (sublists), x: an element to search for
+Output: count: the number of sublists containing the element x
+
+1: Initialize count to 0
+2: Loop through each sublist in list1
+3:     If x is in the current sublist:
+4:         Increment count by 1
+5: Return count
+[END PROCESS]
+
+[BEGIN CODE]
+def count_element_in_list(list1, x):
+    count = 0
+    for sublist in list1:
+        if x in sublist:
+            count += 1
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_element_in_list` is designed to count how many sublists within a given list (`list1`) contain a specific element (`x`). The process involves iterating through each sublist and checking if the element `x` is present. If `x` is found in a sublist, the counter `count` is incremented. Finally, the function returns the total count of sublists that contain the element `x`. This approach ensures that all sublists are checked, and the count is accurate.

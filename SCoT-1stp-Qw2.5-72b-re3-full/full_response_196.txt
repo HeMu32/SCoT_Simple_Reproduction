@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: test_list: a list containing various elements, including tuples
+       K: an integer representing the length of tuples to be removed
+Output: A new list with all tuples of length K removed
+
+1: Initialize an empty list called `result` to store the elements that are not tuples of length K.
+2: Iterate through each element in `test_list`.
+3: For each element:
+   4: Check if the element is a tuple and its length is equal to K.
+   5: If the element is not a tuple of length K, add it to the `result` list.
+6: After the loop, return the `result` list.
+[END PROCESS]
+
+[BEGIN CODE]
+def remove_tuples(test_list, K):
+    result = []
+    for item in test_list:
+        if not (isinstance(item, tuple) and len(item) == K):
+            result.append(item)
+    return result
+[END CODE]
+
+### Explanation:
+- **Input Handling**: The function `remove_tuples` takes two parameters: `test_list`, which is a list that may contain tuples among other elements, and `K`, which is the length of the tuples to be removed.
+- **Initialization**: An empty list `result` is initialized to store the elements that do not match the criteria for removal.
+- **Iteration and Filtering**: The function iterates over each element in `test_list`. For each element, it checks if the element is a tuple and if its length is equal to `K`. If the element does not meet these conditions, it is added to the `result` list.
+- **Output**: After iterating through all elements, the function returns the `result` list, which contains all elements from `test_list` except the tuples of length `K`.
+
+This approach ensures that the function efficiently filters out the specified tuples while preserving the order and other elements in the list.

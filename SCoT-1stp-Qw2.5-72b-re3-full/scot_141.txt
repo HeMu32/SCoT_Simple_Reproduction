@@ -1,0 +1,9 @@
+Input: nums: a list of integers
+Output: nums: the list of integers sorted in ascending order using pancake sort
+
+1: While the list is not sorted:
+2:     Find the maximum element in the unsorted portion of the list
+3:     Flip the list so that the maximum element moves to the front
+4:     Flip the list again to move the maximum element to its correct position at the end of the unsorted portion
+5:     Reduce the size of the unsorted portion by one
+6: Return the sorted list

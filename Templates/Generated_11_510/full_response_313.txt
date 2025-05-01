@@ -1,0 +1,7 @@
+[BEGIN]
+Input: list1: a list of numbers  
+Output: Positive numbers in list1  
+1: for each number num in list1:  
+2:     if num is greater than or equal to 0:  
+3:         return num  
+[END]

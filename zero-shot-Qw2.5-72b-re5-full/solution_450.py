@@ -1,0 +1,2 @@
+def extract_string(str_list, length): 
+    return [s for s in str_list if len(s) == length]

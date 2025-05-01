@@ -1,0 +1,12 @@
+Input: n: an integer representing an octal number
+Output: dec_value: an integer representing the decimal equivalent of the octal number
+1: Initialize num to n
+2: Initialize dec_value to 0
+3: Initialize base to 1
+4: Set temp to num
+5: While temp is not 0:
+6:     last_digit = temp % 10
+7:     temp = int(temp / 10)
+8:     dec_value = dec_value + last_digit * base
+9:     base = base * 8
+10: Return dec_value

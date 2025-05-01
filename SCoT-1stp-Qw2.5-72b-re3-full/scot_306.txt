@@ -1,0 +1,16 @@
+Input: a: a list of integers, n: the length of the list, index: the index up to which we consider the prefix, k: the index of the element that must be included in the subsequence.
+Output: The maximum sum of an increasing subsequence from the prefix till the ith index and including the kth element.
+
+1: Initialize a list `dp` of size `n` with all elements set to 0. This list will store the maximum sum of increasing subsequence ending at each index.
+2: Set `dp[k]` to the value of `a[k]` since the kth element must be included.
+3: Loop through the list from the beginning up to the `index` (inclusive).
+4:     For each element at position `i`:
+5:         If `i` is less than `k`:
+6:             Loop through all elements from the start up to `i` (exclusive).
+7:                 If the current element `a[j]` is less than `a[i]`:
+8:                     Update `dp[i]` to be the maximum of `dp[i]` and `dp[j] + a[i]`.
+9:         Else if `i` is equal to `k`:
+10:             Continue to the next iteration since `dp[k]` is already set.
+11:         Else:
+12:             Break the loop as we only need to consider elements up to the `index`.
+13: Return the value of `dp[k]` which represents the maximum sum of the increasing subsequence including the kth element.

@@ -1,0 +1,7 @@
+Input: list1: a list, L: an integer indicating the position of the element to remove
+Output: a list with the k'th element removed
+
+1: Create a new list by concatenating:
+2:     - The elements from the start of list1 up to but not including the L'th element (list1[:L-1])
+3:     - The elements from the list1 starting from the element after the L'th element to the end (list1[L:])
+4: Return the new list

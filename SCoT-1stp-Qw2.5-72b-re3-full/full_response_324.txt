@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: test_tuple: a tuple of integers
+Output: sum_of_alternates: the sum of elements at alternate positions in the tuple
+
+1: Initialize a variable `sum_of_alternates` to 0 to store the sum of alternate elements.
+2: Loop through the elements of `test_tuple` with an index, starting from index 0.
+3:     If the index is even (i.e., the element is at an alternate position starting from the first element):
+4:         Add the current element to `sum_of_alternates`.
+5: After the loop, return the value of `sum_of_alternates`.
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_of_alternates(test_tuple):
+    sum_of_alternates = 0
+    for index, element in enumerate(test_tuple):
+        if index % 2 == 0:  # Check if the index is even
+            sum_of_alternates += element
+    return sum_of_alternates
+[END CODE]
+
+### Explanation:
+The function `sum_of_alternates` calculates the sum of elements at alternate positions in a given tuple. The positions are considered based on zero-indexing, meaning the first element is at position 0, the second at position 1, and so on. The function uses a loop to iterate through the tuple, and an `if` statement to check if the current index is even. If it is, the element at that index is added to the `sum_of_alternates`. This approach ensures that only elements at alternate positions (starting from the first element) are summed. The final sum is returned after the loop completes.

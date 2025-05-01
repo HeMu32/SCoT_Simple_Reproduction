@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: test_tup: a tuple of elements
+Output: result: a boolean value indicating whether all elements in the tuple are distinct
+
+1: Convert the tuple to a set to remove any duplicate elements
+2: Compare the length of the original tuple with the length of the set
+3: If the lengths are equal, all elements in the tuple are distinct; return True
+4: Otherwise, there are duplicates; return False
+[END PROCESS]
+
+[BEGIN CODE]
+def check_distinct(test_tup):
+    # Convert the tuple to a set to remove duplicates
+    test_set = set(test_tup)
+    # Compare the lengths of the tuple and the set
+    if len(test_tup) == len(test_set):
+        # If lengths are equal, all elements are distinct
+        return True
+    else:
+        # If lengths are not equal, there are duplicates
+        return False
+[END CODE]
+
+### Explanation:
+The function `check_distinct` checks if all elements in a given tuple are distinct. The process involves converting the tuple into a set, which automatically removes any duplicate elements. By comparing the length of the original tuple with the length of the set, we can determine if there were any duplicates. If the lengths are equal, it means all elements in the tuple are unique, and the function returns `True`. Otherwise, if the lengths differ, it indicates the presence of duplicates, and the function returns `False`. This method is efficient and leverages the properties of sets to quickly identify duplicates.

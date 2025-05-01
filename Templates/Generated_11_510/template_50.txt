@@ -1,0 +1,8 @@
+Input: input_list: a list of lists  
+Output: min_length: the minimum length among the lists, min_list: the list with the minimum length  
+1: Calculate the minimum length of the lists in input_list using a generator expression and the min function  
+2: 	min_length = min(len(x) for x in input_list)  
+3: Find the list with the minimum length using the min function with a lambda function as the key  
+4: 	min_list = min(input_list, key = lambda i: len(i))  
+5: Return the minimum length and the list with the minimum length  
+6: 	return (min_length, min_list)

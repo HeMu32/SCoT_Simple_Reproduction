@@ -1,0 +1,16 @@
+Input: str: a string  
+Output: length: the length of the longest palindromic subsequence in str  
+1: n = length of str  
+2: Create a 2D list L of size n x n and initialize all entries to 0  
+3: for i from 0 to n-1:  
+4:     L[i][i] = 1  // Every single character is a palindrome of length 1  
+5: for cl from 2 to n:  // cl is the length of the substring  
+6:     for i from 0 to n-cl:  
+7:         j = i + cl - 1  // j is the ending index of the substring  
+8:         if str[i] == str[j] and cl == 2:  
+9:             L[i][j] = 2  // If the substring is of length 2 and both characters are the same  
+10:         elif str[i] == str[j]:  
+11:             L[i][j] = L[i+1][j-1] + 2  // If the characters at the start and end are the same, add 2 to the length of the inner substring  
+12:         else:  
+13:             L[i][j] = max(L[i][j-1], L[i+1][j])  // If the characters at the start and end are different, take the maximum length from the two possible substrings  
+14: return L[0][n-1]  // The length of the longest palindromic subsequence is in L[0][n-1]

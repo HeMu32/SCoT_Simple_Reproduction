@@ -1,0 +1,11 @@
+[BEGIN]
+Input: nums: a list of numbers  
+Output: sum of negative numbers in nums  
+
+1: Use a lambda function to filter out negative numbers from nums  
+2:     for each number n in nums:  
+3:         if n is less than 0:  
+4:             include n in the filtered list  
+5: Calculate the sum of the filtered list of negative numbers  
+6: Return the sum  
+[END]

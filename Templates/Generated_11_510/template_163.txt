@@ -1,0 +1,4 @@
+Input: s: number of sides, l: length of each side
+Output: area: area of the regular polygon
+1: Calculate the area using the formula: area = s * (l ** 2) / (4 * tan(pi / s))
+2: Return the calculated area

@@ -1,0 +1,6 @@
+[BEGIN]
+Input: l: a number representing the length of an edge of the cube
+Output: surfacearea: the surface area of the cube
+1: Calculate the surface area using the formula 6 * l * l
+2: Return the calculated surface area
+[END]

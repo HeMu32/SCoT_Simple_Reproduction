@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: text: a string that may represent an integer
+Output: A boolean value indicating whether the string represents an integer
+
+1: Import the regex module (re)
+2: Define a function check_integer with a parameter text
+3:   Use regex to check if the string matches the pattern of an integer (optional leading + or -, followed by digits)
+4:   If the string matches the pattern, return True
+5:   Otherwise, return False
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def check_integer(text):
+    # Define the regex pattern for an integer
+    pattern = r'^[+-]?[0-9]+$'
+    # Use regex to check if the string matches the pattern
+    if re.match(pattern, text):
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+The function `check_integer` is designed to determine whether a given string `text` represents an integer. The process involves the following steps:
+
+1. **Import the regex module**: The `re` module is imported to use regular expressions for pattern matching.
+2. **Define the function**: The function `check_integer` is defined with a single parameter `text`, which is the string to be checked.
+3. **Define the regex pattern**: The pattern `^[+-]?[0-9]+$` is used to match an integer. This pattern breaks down as follows:
+   - `^`: Asserts the start of the string.
+   - `[+-]?`: Matches an optional leading `+` or `-` sign.
+   - `[0-9]+`: Matches one or more digits.
+   - `$`: Asserts the end of the string.
+4. **Check the pattern**: The `re.match` function is used to check if the string `text` matches the defined pattern.
+5. **Return the result**: If the string matches the pattern, the function returns `True`, indicating that the string represents an integer. Otherwise, it returns `False`.
+
+This approach ensures that the function accurately identifies strings that represent integers, including those with leading signs.

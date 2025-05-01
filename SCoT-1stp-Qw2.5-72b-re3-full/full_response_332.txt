@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: str1: a string  
+Output: A dictionary with characters as keys and their frequencies as values  
+1: Initialize an empty dictionary to store the character frequencies  
+2: Loop through each character in the string  
+3:     If the character is already in the dictionary, increment its count  
+4:     Otherwise, add the character to the dictionary with a count of 1  
+5: Return the dictionary
+[END PROCESS]
+
+[BEGIN CODE]
+def char_frequency(str1):
+    # Initialize an empty dictionary to store character frequencies
+    freq_dict = {}
+    
+    # Loop through each character in the string
+    for char in str1:
+        # If the character is already in the dictionary, increment its count
+        if char in freq_dict:
+            freq_dict[char] += 1
+        # Otherwise, add the character to the dictionary with a count of 1
+        else:
+            freq_dict[char] = 1
+    
+    # Return the dictionary
+    return freq_dict
+[END CODE]
+
+### Explanation:
+The function `char_frequency` takes a single string `str1` as input and returns a dictionary where each key is a unique character from the string, and the corresponding value is the frequency of that character in the string.
+
+1. **Initialization**: An empty dictionary `freq_dict` is initialized to store the character frequencies.
+2. **Looping Through the String**: The function iterates over each character in the string `str1`.
+3. **Checking and Updating the Dictionary**:
+   - If the character is already a key in `freq_dict`, its value (frequency) is incremented by 1.
+   - If the character is not in `freq_dict`, it is added as a new key with a value of 1.
+4. **Returning the Result**: After the loop completes, the function returns the `freq_dict` containing the character frequencies.
+
+This approach ensures that each character in the string is counted correctly and efficiently.

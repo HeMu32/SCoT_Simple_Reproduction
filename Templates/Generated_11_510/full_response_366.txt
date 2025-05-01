@@ -1,0 +1,9 @@
+[BEGIN]
+Input: list_nums: a list of integers  
+Output: the largest product of the pair of adjacent elements from list_nums  
+1: Initialize a variable to store the maximum product  
+2: Loop through the list using a pair of adjacent elements (a, b)  
+3:     Calculate the product of the current pair (a * b)  
+4:     If the product is greater than the current maximum product, update the maximum product  
+5: Return the maximum product  
+[END]

@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: subjectmarks: a list of tuples, where each tuple contains a subject name and a mark
+Output: sorted_subjectmarks: the list of tuples sorted by marks in descending order
+
+1: Use the `sorted` function to sort the list of tuples.
+2: The `sorted` function takes a key parameter, which is a function to extract a comparison key from each input element.
+3: Use a lambda function as the key parameter to extract the mark from each tuple.
+4: Set the `reverse` parameter to True to sort the list in descending order.
+5: Return the sorted list.
+[END PROCESS]
+
+[BEGIN CODE]
+def subject_marks(subjectmarks):
+    # Sort the list of tuples based on the second element (marks) in descending order
+    sorted_subjectmarks = sorted(subjectmarks, key=lambda x: x[1], reverse=True)
+    return sorted_subjectmarks
+[END CODE]
+
+### Explanation:
+The function `subject_marks` takes a list of tuples as input, where each tuple consists of a subject name and a mark. The goal is to sort this list based on the marks in descending order. To achieve this, the `sorted` function is used with a lambda function as the key to extract the mark from each tuple. The `reverse=True` parameter ensures that the sorting is done in descending order. The sorted list is then returned.

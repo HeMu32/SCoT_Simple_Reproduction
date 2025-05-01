@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: s: a string
+Output: min_length: the minimum length of the string after removing all occurrences of any one character
+
+1: Initialize min_length to the length of the string s
+2: for each unique character c in s:
+3:     Create a new string s_new by removing all occurrences of c from s
+4:     if the length of s_new is less than min_length:
+5:         Update min_length to the length of s_new
+6: return min_length
+[END PROCESS]
+
+[BEGIN CODE]
+def minimum_Length(s):
+    min_length = len(s)
+    for c in set(s):
+        s_new = s.replace(c, '')
+        if len(s_new) < min_length:
+            min_length = len(s_new)
+    return min_length
+[END CODE]
+
+### Explanation:
+The function `minimum_Length` is designed to find the minimum possible length of a string after removing all occurrences of any single character. The process involves:
+- Initializing `min_length` to the length of the input string `s`.
+- Iterating over each unique character in the string.
+- For each unique character, creating a new string `s_new` by removing all occurrences of that character.
+- Checking if the length of `s_new` is less than the current `min_length`.
+- If it is, updating `min_length` to the length of `s_new`.
+- Finally, returning the `min_length`.
+
+This approach ensures that the function considers the impact of removing each character and finds the minimum length possible.

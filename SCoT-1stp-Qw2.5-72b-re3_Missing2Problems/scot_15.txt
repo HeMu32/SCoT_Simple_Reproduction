@@ -1,0 +1,6 @@
+Input: text: a string
+Output: parts: a list of substrings split at each lowercase letter
+
+1: Import the `re` module for regular expression operations
+2: Use the `re.split()` function to split the string `text` at each lowercase letter
+3: Return the resulting list of substrings

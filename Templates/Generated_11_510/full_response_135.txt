@@ -1,0 +1,7 @@
+[BEGIN]
+Input: n: an integer representing the position in the sequence of hexagonal numbers
+Output: h: the nth hexagonal number
+
+1: Calculate the nth hexagonal number using the formula h = n * (2 * n - 1)
+2: Return h
+[END]

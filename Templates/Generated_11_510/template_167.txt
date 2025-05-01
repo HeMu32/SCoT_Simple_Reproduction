@@ -1,0 +1,10 @@
+Input: n: an integer  
+Output: The smallest power of 2 greater than or equal to n  
+1: Initialize count to 0  
+2: If n is a power of 2 (i.e., n is not zero and n & (n - 1) is zero):  
+3:     Return n  
+4: Else:  
+5:     While n is not 0:  
+6:         Right shift n by 1 bit  
+7:         Increment count by 1  
+8:     Return 1 shifted left by count bits

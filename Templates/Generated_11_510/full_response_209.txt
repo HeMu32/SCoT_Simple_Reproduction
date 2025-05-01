@@ -1,0 +1,8 @@
+[BEGIN]
+Input: heap: a list representing a heap, a: an element to be inserted
+Output: heap: the modified heap after replacing the smallest element with a
+
+1: Convert heap into a valid heap structure if it is not already one
+2: Remove the smallest element from the heap and insert the new element a
+3: Return the modified heap
+[END]

@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: nums: a list of items (can be numbers, strings, etc.)
+Output: The item with the maximum occurrences in the list
+
+1: Initialize an empty dictionary `count_dict` to store the count of each item.
+2: Loop through each item in the list `nums`:
+3:     If the item is already in `count_dict`, increment its count by 1.
+4:     Otherwise, add the item to `count_dict` with a count of 1.
+5: Initialize `max_item` to None and `max_count` to 0 to keep track of the item with the maximum occurrences.
+6: Loop through each item and its count in `count_dict`:
+7:     If the current item's count is greater than `max_count`:
+8:         Update `max_item` to the current item and `max_count` to the current item's count.
+9: Return `max_item` as the item with the maximum occurrences.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_occurrences(nums):
+    count_dict = {}
+    for item in nums:
+        if item in count_dict:
+            count_dict[item] += 1
+        else:
+            count_dict[item] = 1
+    
+    max_item = None
+    max_count = 0
+    for item, count in count_dict.items():
+        if count > max_count:
+            max_item = item
+            max_count = count
+    
+    return max_item
+[END CODE]
+
+### Explanation:
+The function `max_occurrences` is designed to find the item that appears most frequently in a given list `nums`. The process involves two main steps:
+
+1. **Counting Occurrences**: We use a dictionary `count_dict` to keep track of how many times each item appears in the list. We iterate through the list, and for each item, we either increment its count in the dictionary or add it to the dictionary with a count of 1 if it's not already present.
+
+2. **Finding the Maximum**: After counting the occurrences of each item, we iterate through the dictionary to find the item with the highest count. We initialize `max_item` to `None` and `max_count` to 0, and then update these variables whenever we find an item with a higher count.
+
+Finally, the function returns the item with the maximum occurrences. This approach ensures that we efficiently count and find the most frequent item in the list.

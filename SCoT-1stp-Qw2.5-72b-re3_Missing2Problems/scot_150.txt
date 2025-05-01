@@ -1,0 +1,14 @@
+Input: a: an integer (starting number of the sequence)
+       b: an integer (step or increment between consecutive numbers)
+       c: an integer (number to check if it is in the sequence)
+Output: A boolean value indicating whether `c` is in the sequence
+
+1: Calculate the difference `diff` between `c` and `a`
+2: Check if `b` is zero:
+   2.1: If `b` is zero, return `True` if `a` equals `c`, otherwise return `False`
+3: Check if `diff` is divisible by `b`:
+   3.1: If `diff` is divisible by `b`, calculate `k` as `diff // b`
+   3.2: Check if `k` is non-negative:
+         3.2.1: If `k` is non-negative, return `True`
+         3.2.2: If `k` is negative, return `False`
+4: If `diff` is not divisible by `b`, return `False`

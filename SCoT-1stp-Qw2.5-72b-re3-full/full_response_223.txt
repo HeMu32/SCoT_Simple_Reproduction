@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: arr: a sorted list of integers, n: the number of elements in arr, x: the element to check for majority
+Output: True if x is a majority element, False otherwise
+1: Initialize count to 0
+2: Iterate through the array arr
+3:     If the current element is equal to x, increment count
+4:     If count is greater than n/2, return True
+5: If the loop completes without count exceeding n/2, return False
+[END PROCESS]
+
+[BEGIN CODE]
+def is_majority(arr, n, x):
+    count = 0
+    for element in arr:
+        if element == x:
+            count += 1
+        if count > n // 2:
+            return True
+    return False
+[END CODE]
+
+### Explanation:
+The function `is_majority` checks if a given element `x` is a majority element in a sorted array `arr`. A majority element is defined as an element that appears more than `n/2` times in the array, where `n` is the number of elements in the array.
+
+1. **Initialization**: We initialize a variable `count` to 0. This variable will keep track of the number of occurrences of `x` in the array.
+2. **Iteration**: We iterate through each element in the array `arr`.
+3. **Counting**: For each element, if it is equal to `x`, we increment the `count` by 1.
+4. **Majority Check**: If at any point the `count` exceeds `n/2`, we return `True` because `x` is a majority element.
+5. **Completion**: If the loop completes and the `count` does not exceed `n/2`, we return `False` because `x` is not a majority element.
+
+This approach ensures that we efficiently check for the majority element in a single pass through the array, making it suitable for large arrays.

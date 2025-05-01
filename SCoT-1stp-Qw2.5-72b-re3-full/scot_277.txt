@@ -1,0 +1,8 @@
+Input: dict: a dictionary with integer values, n: an integer
+Output: filtered_dict: a dictionary containing only the key-value pairs from the original dictionary where the value is greater than or equal to n
+
+1: Initialize an empty dictionary called filtered_dict
+2: For each key-value pair (key, value) in dict:
+3:     If value is greater than or equal to n:
+4:         Add the key-value pair to filtered_dict
+5: Return filtered_dict

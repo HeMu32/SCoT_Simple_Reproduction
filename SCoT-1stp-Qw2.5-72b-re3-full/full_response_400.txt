@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples
+Output: freq_dict: a dictionary where each key is a tuple (considering order of elements as irrelevant) and the value is the frequency of that tuple in the input list
+
+1: Import Counter from the collections module
+2: Initialize an empty Counter object named freq_dict
+3: For each tuple t in test_list:
+4:     Sort the tuple t to ensure that tuples with the same elements in different orders are treated as the same
+5:     Convert the sorted tuple to a tuple (since lists are not hashable and cannot be used as dictionary keys)
+6:     Update the Counter object with the sorted tuple
+7: Return the freq_dict
+[END PROCESS]
+
+[BEGIN CODE]
+from collections import Counter
+
+def extract_freq(test_list):
+    freq_dict = Counter()
+    for t in test_list:
+        # Sort the tuple to treat (1, 2) and (2, 1) as the same
+        sorted_t = tuple(sorted(t))
+        # Update the frequency of the sorted tuple
+        freq_dict[sorted_t] += 1
+    return dict(freq_dict)
+[END CODE]
+
+### Explanation:
+The function `extract_freq` is designed to count the frequency of unique tuples in a given list, where the order of elements within the tuples does not matter. For example, the tuples `(1, 2)` and `(2, 1)` should be considered the same.
+
+1. **Importing Counter**: The `Counter` class from the `collections` module is used to count the frequency of elements. It is a dictionary subclass that helps count hashable objects.
+
+2. **Initializing the Counter**: An empty `Counter` object named `freq_dict` is initialized to store the frequency of each unique tuple.
+
+3. **Iterating Over the List**: The function iterates over each tuple `t` in the input list `test_list`.
+
+4. **Sorting the Tuple**: Each tuple `t` is sorted to ensure that tuples with the same elements but in different orders are treated as the same. For example, `(1, 2)` and `(2, 1)` both become `(1, 2)` after sorting.
+
+5. **Converting to Tuple**: The sorted list is converted back to a tuple because lists are not hashable and cannot be used as dictionary keys.
+
+6. **Updating the Counter**: The `Counter` object `freq_dict` is updated with the sorted tuple. The `Counter` automatically handles the counting of the frequencies.
+
+7. **Returning the Result**: Finally, the function returns the `freq_dict` as a dictionary, which contains the frequency of each unique tuple.
+
+This approach ensures that the function correctly counts the frequency of tuples regardless of the order of their elements.

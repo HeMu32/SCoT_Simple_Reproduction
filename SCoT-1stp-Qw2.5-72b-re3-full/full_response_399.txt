@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: test_tup1, test_tup2: two tuples of integers
+Output: res: a tuple containing the result of bitwise XOR operations
+
+1: Initialize an empty list res
+2: For each pair of elements (ele1, ele2) from test_tup1 and test_tup2, respectively:
+3:     Compute ele1 ^ ele2 (bitwise XOR operation)
+4:     Add the result to res
+5: Convert the list res to a tuple
+6: Return the resulting tuple
+[END PROCESS]
+
+[BEGIN CODE]
+def bitwise_xor(test_tup1, test_tup2):
+    # Initialize an empty list to store the results
+    res = []
+    # Iterate over pairs of elements from both tuples
+    for ele1, ele2 in zip(test_tup1, test_tup2):
+        # Perform bitwise XOR operation and append the result to the list
+        res.append(ele1 ^ ele2)
+    # Convert the list to a tuple and return it
+    return tuple(res)
+[END CODE]
+
+### Explanation:
+The function `bitwise_xor` takes two tuples, `test_tup1` and `test_tup2`, as input. It performs the bitwise XOR operation on corresponding elements of the two tuples and returns a new tuple containing the results of these operations. The process involves:
+
+1. **Initialization**: An empty list `res` is initialized to store the results of the bitwise XOR operations.
+2. **Iteration**: The function uses a `for` loop to iterate over pairs of elements from `test_tup1` and `test_tup2` using the `zip` function.
+3. **Bitwise XOR Operation**: For each pair of elements `(ele1, ele2)`, the bitwise XOR operation `ele1 ^ ele2` is performed, and the result is appended to the list `res`.
+4. **Conversion and Return**: After the loop completes, the list `res` is converted to a tuple and returned as the final result.
+
+This approach ensures that the function correctly handles tuples of the same length and performs the bitwise XOR operation element-wise.

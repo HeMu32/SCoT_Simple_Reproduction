@@ -1,0 +1,6 @@
+Input: arr: a list of elements, n: the length of the list (not necessarily needed for the function, but provided), k: an integer representing the index (1-based) of the element to find
+Output: the kth element in the array
+
+1: Check if k is within the valid range (1 to n inclusive).
+2:   If k is not within the valid range, raise an error or return an appropriate message.
+3: Return the (k-1)th element of the array (since Python uses 0-based indexing).

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: test_list: a list, test_tup: a tuple  
+Output: res: a tuple containing elements from both test_list and test_tup  
+1: Convert test_tup to a list  
+2: Concatenate test_list to the converted list from test_tup  
+3: Convert the concatenated list back to a tuple  
+4: Return the resulting tuple  
+[END]

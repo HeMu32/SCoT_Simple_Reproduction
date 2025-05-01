@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: The first duplicate integer in the list, or None if there are no duplicates
+
+1: Initialize an empty set to keep track of seen numbers
+2: Iterate through the list of numbers
+3:     For each number, check if it is already in the seen set
+4:         If it is, return this number as it is the first duplicate
+5:         If it is not, add the number to the seen set
+6: If the loop completes without finding a duplicate, return None
+[END PROCESS]
+
+[BEGIN CODE]
+def find_first_duplicate(nums):
+    seen = set()
+    for num in nums:
+        if num in seen:
+            return num
+        seen.add(num)
+    return None
+[END CODE]
+
+Explanation:
+The function `find_first_duplicate` is designed to find the first duplicate element in a given list of integers. The process involves using a set to keep track of the numbers that have been seen as we iterate through the list. If a number is encountered that is already in the set, it is the first duplicate and is returned. If no duplicates are found by the end of the list, the function returns `None`. This approach ensures that the function runs efficiently, with a time complexity of O(n) and a space complexity of O(n), where n is the number of elements in the list.

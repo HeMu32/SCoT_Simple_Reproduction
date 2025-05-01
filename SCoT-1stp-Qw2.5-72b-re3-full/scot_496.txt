@@ -1,0 +1,9 @@
+Input: nums: a list of integers, n: number of smallest integers to find
+Output: smallest_n: a list of the n smallest integers from nums
+
+1: Import the heapq module for heap queue operations
+2: Convert the list nums into a heap in-place using heapify
+3: Initialize an empty list smallest_n to store the n smallest integers
+4: for i from 0 to n-1:
+5:     Pop the smallest element from the heap and append it to smallest_n
+6: return smallest_n

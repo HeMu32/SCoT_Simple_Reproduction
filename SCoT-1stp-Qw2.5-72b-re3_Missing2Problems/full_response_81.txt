@@ -1,0 +1,17 @@
+[BEGIN PROCESS]
+Input: test_tup1, test_tup2: two tuples of elements
+Output: result: a list of tuples where each tuple contains elements from the corresponding positions of test_tup1 and test_tup2
+
+1: Use the `zip` function to combine the two tuples into a list of tuples.
+2: Convert the zip object to a list.
+3: Return the list as the result.
+[END PROCESS]
+
+[BEGIN CODE]
+def zip_tuples(test_tup1, test_tup2):
+    result = zip(test_tup1, test_tup2)
+    return list(result)
+[END CODE]
+
+### Explanation:
+The function `zip_tuples` takes two tuples, `test_tup1` and `test_tup2`, as input. The `zip` function is used to pair elements from these two tuples at the same index positions, creating a list of tuples. Each tuple in the resulting list contains one element from `test_tup1` and one from `test_tup2`. The `zip` function returns a zip object, which is then converted to a list using the `list` function before being returned. This approach is efficient and leverages Python's built-in functions to achieve the desired result.

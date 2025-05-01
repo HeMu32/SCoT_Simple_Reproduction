@@ -1,0 +1,7 @@
+[BEGIN]
+Input: string: a string 
+Output: lst: a list of substrings from the string 
+
+1: Convert the string into a list of substrings by splitting the string at each space character.
+2: Return the list of substrings.
+[END]

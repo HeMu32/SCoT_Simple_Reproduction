@@ -1,0 +1,77 @@
+[BEGIN PROCESS]
+Input: list: a list of lists, where each sublist represents an array of integers
+Output: a tuple (start, end) representing the smallest range that includes at least one element from each of the given arrays
+
+1: Initialize variables to store the minimum and maximum values of the current range, and the overall minimum range.
+2: Use a min-heap to keep track of the minimum element from each array and the current range.
+3: Initialize the heap with the first element of each array along with the array index and element index.
+4: Set the initial minimum and maximum values based on the first elements of the arrays.
+5: Loop until the heap is exhausted:
+   - Pop the smallest element from the heap.
+   - Update the overall minimum range if the current range is smaller.
+   - If there are more elements in the array from which the smallest element was popped, push the next element from that array into the heap.
+   - Update the maximum value of the current range if the new element is larger than the current maximum.
+6: Return the overall minimum range.
+[END PROCESS]
+
+[BEGIN CODE]
+import heapq
+
+def find_minimum_range(lists):
+    # Initialize the heap and the variables to track the current and overall minimum range
+    heap = []
+    current_max = float('-inf')
+    overall_min_range = float('inf')
+    start = 0
+    end = 0
+
+    # Initialize the heap with the first element of each list
+    for i, lst in enumerate(lists):
+        heapq.heappush(heap, (lst[0], i, 0))
+        current_max = max(current_max, lst[0])
+
+    # Process the heap until we have considered all elements
+    while heap:
+        current_min, list_idx, element_idx = heapq.heappop(heap)
+
+        # Update the overall minimum range if the current range is smaller
+        if current_max - current_min < overall_min_range:
+            overall_min_range = current_max - current_min
+            start = current_min
+            end = current_max
+
+        # If there are more elements in the current list, push the next element into the heap
+        if element_idx + 1 < len(lists[list_idx]):
+            next_element = lists[list_idx][element_idx + 1]
+            heapq.heappush(heap, (next_element, list_idx, element_idx + 1))
+            current_max = max(current_max, next_element)
+        else:
+            # If any list is exhausted, we cannot form a range with all lists
+            break
+
+    return (start, end)
+[END CODE]
+
+### Explanation:
+The function `find_minimum_range` is designed to find the smallest range that includes at least one element from each of the given arrays. The approach uses a min-heap to efficiently track the minimum element from each array and the current range. Here's a step-by-step breakdown:
+
+1. **Initialization**:
+   - A min-heap is used to keep track of the minimum element from each array.
+   - Variables `current_max` and `overall_min_range` are initialized to track the current and overall minimum range, respectively.
+   - Variables `start` and `end` are used to store the start and end of the overall minimum range.
+
+2. **Heap Initialization**:
+   - The heap is initialized with the first element of each array, along with the array index and element index.
+   - The `current_max` is updated to the maximum of the first elements of the arrays.
+
+3. **Heap Processing**:
+   - The function enters a loop where it processes the heap until it is exhausted.
+   - In each iteration, the smallest element is popped from the heap.
+   - The overall minimum range is updated if the current range is smaller.
+   - If there are more elements in the array from which the smallest element was popped, the next element from that array is pushed into the heap, and the `current_max` is updated if necessary.
+
+4. **Termination**:
+   - The loop terminates when any list is exhausted, meaning it is no longer possible to form a range that includes elements from all lists.
+   - The function returns the overall minimum range as a tuple `(start, end)`.
+
+This approach ensures that the function efficiently finds the smallest range by leveraging the properties of a min-heap to keep track of the minimum elements and the current range.

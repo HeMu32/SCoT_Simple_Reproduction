@@ -1,0 +1,7 @@
+[BEGIN]
+Input: nums: a list of lists
+Output: result: a dictionary with elements as keys and their frequencies as values
+1: Flatten the list of lists into a single list
+2: Count the frequency of each element in the flattened list
+3: Return the frequency dictionary
+[END]

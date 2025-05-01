@@ -1,0 +1,5 @@
+Input: l, b, h: length, base, and height of the triangular prism
+Output: volume: the volume of the triangular prism
+1: Calculate the area of the triangular base using the formula (base * height) / 2
+2: Multiply the area of the triangular base by the length of the prism to get the volume
+3: Return the calculated volume

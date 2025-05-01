@@ -1,0 +1,12 @@
+Input: 
+- `arr`: a list of integers
+- `rotations`: an integer representing the number of rotations
+- `index`: an integer representing the index to find the element at
+
+Output: 
+- The element at the specified index after the rotations
+
+1: Calculate the effective number of rotations needed. Since rotating a list by its length results in the same list, we can reduce the number of rotations to `rotations % len(arr)`.
+2: If the effective number of rotations is 0, return the element at the given index directly.
+3: Otherwise, calculate the new index after the rotations. The new index can be found using the formula: `(index + effective_rotations) % len(arr)`.
+4: Return the element at the new index.

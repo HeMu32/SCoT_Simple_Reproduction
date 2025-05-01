@@ -1,0 +1,8 @@
+Input: nums: a list of elements
+Output: s_result: a list of elements sorted in ascending order
+
+1: Convert nums into a heap using the heapify function
+2: Initialize an empty list s_result
+3: for i in range from 0 to the length of nums:
+4:     Remove the smallest element from the heap and append it to s_result
+5: return s_result

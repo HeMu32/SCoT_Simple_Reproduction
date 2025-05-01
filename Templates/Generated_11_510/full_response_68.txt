@@ -1,0 +1,16 @@
+[BEGIN]
+Input: A: an array of integers
+Output: True if the array is monotonic, False otherwise
+
+1: Initialize a variable `increasing` to True
+2: Initialize a variable `decreasing` to True
+3: For each index `i` in the range from 0 to length of A - 2 do:
+4:     If A[i] is greater than A[i + 1] then:
+5:         Set `increasing` to False
+6:     If A[i] is less than A[i + 1] then:
+7:         Set `decreasing` to False
+8: If `increasing` is True or `decreasing` is True then:
+9:     Return True
+10: Else:
+11:     Return False
+[END]

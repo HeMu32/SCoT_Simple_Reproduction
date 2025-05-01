@@ -1,0 +1,8 @@
+Input: n: an integer representing the position in the Lucas sequence
+Output: the n'th Lucas number
+
+1: if n is 0:
+2:     return 2
+3: if n is 1:
+4:     return 1
+5: return the result of find_lucas(n - 1) plus find_lucas(n - 2)

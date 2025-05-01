@@ -1,0 +1,12 @@
+Input: number: a non-negative number for which the square root is to be computed  
+Output: g: the square root of the number using the Babylonian method  
+
+1: if number is 0:  
+2:     return 0  
+3: initialize g as number divided by 2.0  
+4: initialize g2 as g + 1  
+5: while g is not equal to g2:  
+6:     set n as number divided by g  
+7:     set g2 to the current value of g  
+8:     set g to the average of g and n  
+9: return g

@@ -1,0 +1,9 @@
+[BEGIN]
+Input: li: a list of numbers, min: a number, max: a number
+Output: count: the number of elements in li that are within the range [min, max]
+1: Initialize a counter variable ctr to 0
+2: Iterate over each element x in the list li
+3:     If x is greater than or equal to min and less than or equal to max:
+4:         Increment ctr by 1
+5: Return ctr
+[END]

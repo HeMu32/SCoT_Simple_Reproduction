@@ -1,0 +1,8 @@
+[BEGIN]
+Input: nums1, nums2: two lists of numbers
+Output: result: a list of modulo division results
+
+1: Initialize a map function with a lambda function that takes two arguments x and y, and returns x modulo y, applied to nums1 and nums2.
+2: Convert the map object to a list.
+3: Return the list of results.
+[END]

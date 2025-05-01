@@ -1,0 +1,9 @@
+Input: list1: a list of elements; m: the number of positions to rotate the list to the left; n: the length of the list
+Output: A new list with elements rotated m positions to the left
+
+1: Validate the input to ensure m is within the bounds of the list length (0 <= m < n).
+2: If m is 0 or the list is empty, return the list as is since no rotation is needed.
+3: If m is greater than or equal to the length of the list, reduce m by the length of the list to find the effective rotation (m % n).
+4: Split the list into two parts: the first m elements and the rest of the list.
+5: Concatenate the second part of the list with the first part to achieve the left rotation.
+6: Return the concatenated list.

@@ -1,0 +1,7 @@
+Input: list1: a list of integers
+Output: None (prints positive numbers from the list)
+
+1: Iterate through each element in the list1
+2: For each element, check if it is greater than 0
+3: If the element is greater than 0, print the element
+4: Continue until all elements in the list have been checked

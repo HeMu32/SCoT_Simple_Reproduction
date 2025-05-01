@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: s: a string
+Output: A tuple containing two integers: the first integer is the number of digits in the string, and the second integer is the number of letters in the string.
+
+1: Initialize a variable `digit_count` to 0 to keep track of the number of digits.
+2: Initialize a variable `letter_count` to 0 to keep track of the number of letters.
+3: Loop through each character `ch` in the string `s`:
+4:     If `ch` is a digit (using `ch.isdigit()`):
+5:         Increment `digit_count` by 1.
+6:     Else if `ch` is a letter (using `ch.isalpha()`):
+7:         Increment `letter_count` by 1.
+8: After the loop, return a tuple containing `digit_count` and `letter_count`.
+[END PROCESS]
+
+[BEGIN CODE]
+def dig_let(s):
+    digit_count = 0
+    letter_count = 0
+    for ch in s:
+        if ch.isdigit():
+            digit_count += 1
+        elif ch.isalpha():
+            letter_count += 1
+    return (digit_count, letter_count)
+[END CODE]
+
+### Explanation:
+The function `dig_let` takes a string `s` as input and returns a tuple containing two integers. The first integer is the count of digits in the string, and the second integer is the count of letters in the string. The function uses a loop to iterate through each character in the string, checking if the character is a digit or a letter using the `isdigit()` and `isalpha()` methods, respectively. It increments the appropriate counter based on the character type. Finally, it returns a tuple with the counts of digits and letters.

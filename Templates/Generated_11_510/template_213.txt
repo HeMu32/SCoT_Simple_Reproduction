@@ -1,0 +1,8 @@
+Input: test_tup1, test_tup2: two tuples of strings  
+Output: res: a tuple of concatenated strings  
+1: Initialize an empty list to store the concatenated results  
+2: Loop through each pair of strings from test_tup1 and test_tup2 simultaneously  
+3:     Concatenate the current pair of strings  
+4:     Append the concatenated string to the results list  
+5: Convert the results list into a tuple  
+6: Return the tuple of concatenated strings

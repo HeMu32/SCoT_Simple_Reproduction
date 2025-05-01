@@ -1,0 +1,7 @@
+Input: n: an integer representing the position in the Perrin sequence
+Output: The n'th Perrin number
+
+1: If n is 0, return 3 (base case for the 0th Perrin number)
+2: If n is 1, return 0 (base case for the 1st Perrin number)
+3: If n is 2, return 2 (base case for the 2nd Perrin number)
+4: Otherwise, return the sum of the (n-2)th and (n-3)th Perrin numbers (recursive step)

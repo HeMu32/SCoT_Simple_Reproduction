@@ -1,0 +1,7 @@
+Input: d1, d2: two dictionaries
+Output: merged_dict: a single dictionary containing all key-value pairs from both d1 and d2. If there are overlapping keys, the values from d2 will overwrite those from d1.
+
+1: Initialize an empty dictionary merged_dict
+2: For each key-value pair in d1, add it to merged_dict
+3: For each key-value pair in d2, add it to merged_dict (this will overwrite any existing key in merged_dict with the value from d2)
+4: Return merged_dict

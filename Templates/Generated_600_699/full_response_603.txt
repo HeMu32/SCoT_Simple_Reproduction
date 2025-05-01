@@ -1,0 +1,17 @@
+[BEGIN]
+Input: n: an integer 
+Output: ludics: a list of ludic numbers up to n 
+
+1: Initialize an empty list `ludics`
+2: For each integer `i` from 1 to n inclusive:
+3:     Add `i` to `ludics`
+4: Set `index` to 1
+5: While `index` is not equal to the length of `ludics`:
+6:     Set `first_ludic` to the element at `index` in `ludics`
+7:     Set `remove_index` to `index + first_ludic`
+8:     While `remove_index` is less than the length of `ludics`:
+9:         Remove the element at `remove_index` from `ludics`
+10:        Increment `remove_index` by `first_ludic - 1`
+11:    Increment `index` by 1
+12: Return `ludics`
+[END]

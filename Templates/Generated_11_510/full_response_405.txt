@@ -1,0 +1,7 @@
+[BEGIN]
+Input: tuplex: a tuple, tuple1: an element to check for existence in tuplex
+Output: True if tuple1 exists in tuplex, otherwise False
+1:  Check if tuple1 is in tuplex:
+2:      If true, return True
+3:      If false, return False
+[END]

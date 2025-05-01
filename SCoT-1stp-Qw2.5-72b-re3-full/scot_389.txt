@@ -1,0 +1,10 @@
+Input: n: an integer representing the position in the Lucas sequence
+Output: the n'th Lucas number
+
+1: Define the base cases for the Lucas sequence:
+   - The 0th Lucas number is 2.
+   - The 1st Lucas number is 1.
+2: For n > 1, calculate the n'th Lucas number using the formula:
+   - Lucas(n) = Lucas(n-1) + Lucas(n-2)
+3: Use a loop to compute the Lucas number iteratively to avoid the exponential time complexity of a naive recursive approach.
+4: Return the n'th Lucas number.

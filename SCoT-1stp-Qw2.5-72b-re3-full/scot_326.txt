@@ -1,0 +1,14 @@
+Input: test_list: a list of strings
+Output: The word with the most occurrences in the list
+
+1: Initialize an empty dictionary `word_count` to store the count of each word
+2: Loop through each string in `test_list`:
+3:     Split the string into words
+4:     For each word in the split result:
+5:         If the word is already in `word_count`, increment its count by 1
+6:         Otherwise, add the word to `word_count` with a count of 1
+7: Initialize `max_word` to None and `max_count` to 0
+8: Loop through each word and its count in `word_count`:
+9:     If the count of the current word is greater than `max_count`:
+10:        Set `max_word` to the current word and `max_count` to the current count
+11: Return `max_word`

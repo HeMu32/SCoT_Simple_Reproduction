@@ -1,0 +1,7 @@
+Input: list1: a list of strings  
+Output: max_length: the length of the longest word in list1  
+1: Set max_length to the length of the first word in list1  
+2: for each word i in list1:  
+3:     if the length of i is greater than max_length:  
+4:         Set max_length to the length of i  
+5: return max_length

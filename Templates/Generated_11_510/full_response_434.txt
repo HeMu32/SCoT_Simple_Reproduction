@@ -1,0 +1,10 @@
+[BEGIN]
+Input: text: a string  
+Output: A message indicating whether a match was found or not  
+1: Define a pattern 'ab+?' to match 'a' followed by one or more 'b's  
+2: Use re.search to search for the pattern in the text  
+3: If a match is found:  
+4:     Return 'Found a match!'  
+5: Else:  
+6:     Return 'Not matched!'  
+[END]

@@ -1,0 +1,6 @@
+Input: x, y, z: lengths of the three sides of a triangle
+Output: True if the triangle is equilateral, False otherwise
+1: if x is equal to y and y is equal to z:
+2:     return True
+3: else:
+4:     return False

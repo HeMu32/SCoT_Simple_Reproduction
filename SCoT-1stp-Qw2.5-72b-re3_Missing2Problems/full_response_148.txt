@@ -1,0 +1,49 @@
+[BEGIN PROCESS]
+Input: num: an integer
+Output: a tuple of two integers (part1, part2) such that the sum of the digits of part1 and part2 is maximized
+
+1: Convert the number to a string to easily iterate over each digit.
+2: Initialize two parts, part1 and part2, as empty strings.
+3: Iterate over each digit in the string representation of the number.
+4: For each digit, decide whether to add it to part1 or part2 based on which part currently has a smaller sum of digits.
+5: Convert part1 and part2 back to integers.
+6: Return the tuple (part1, part2).
+
+Explanation:
+The goal is to divide the number into two parts such that the sum of the digits of these two parts is maximized. To achieve this, we can distribute the digits between the two parts in a way that balances the sum of the digits as evenly as possible. This is because the closer the sums of the digits of the two parts are, the higher the total sum of the digits will be. By always adding the current digit to the part with the smaller sum, we ensure that the sums of the digits of the two parts remain as close as possible.
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_digits_twoparts(num):
+    # Convert the number to a string to iterate over each digit
+    num_str = str(num)
+    
+    # Initialize two parts as empty strings
+    part1 = ""
+    part2 = ""
+    
+    # Initialize the sum of digits for each part
+    sum1 = 0
+    sum2 = 0
+    
+    # Iterate over each digit in the string representation of the number
+    for digit in num_str:
+        digit_int = int(digit)
+        
+        # Decide which part to add the digit to based on the current sums
+        if sum1 <= sum2:
+            part1 += digit
+            sum1 += digit_int
+        else:
+            part2 += digit
+            sum2 += digit_int
+    
+    # Convert part1 and part2 back to integers
+    part1 = int(part1) if part1 else 0
+    part2 = int(part2) if part2 else 0
+    
+    # Return the tuple of the two parts
+    return (part1, part2)
+[END CODE]
+
+This function divides the number into two parts such that the sum of the digits of these two parts is maximized. It does this by iterating over each digit and adding it to the part with the smaller sum of digits, ensuring an even distribution of the digit sums.

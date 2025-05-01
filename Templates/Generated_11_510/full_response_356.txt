@@ -1,0 +1,7 @@
+[BEGIN]
+Input: a, b: two angles of a triangle
+Output: c: the third angle of the triangle
+1: Calculate the sum of a and b
+2: Subtract the sum from 180 to get the third angle c
+3: Return c
+[END]

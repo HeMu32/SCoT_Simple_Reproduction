@@ -1,0 +1,16 @@
+[BEGIN]
+Input: L, R: integers representing the range
+Output: count: the number of hexadecimal numbers within the range [L, R]
+
+1: Initialize count to 0
+2: for each integer i in the range from L to R inclusive:
+3:     if i is between 10 and 15 inclusive:
+4:         increment count by 1
+5:     elif i is greater than 15:
+6:         set k to i
+7:         while k is not 0:
+8:             if the remainder of k divided by 16 is greater than or equal to 10:
+9:                 increment count by 1
+10:            set k to the integer division of k by 16
+11: return count
+[END]

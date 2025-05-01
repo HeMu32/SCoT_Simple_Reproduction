@@ -1,0 +1,11 @@
+Input: N: an odd integer
+Output: avg: the average of all odd numbers up to and including N
+
+1: Initialize a variable `sum_of_odds` to 0 to store the sum of odd numbers.
+2: Initialize a variable `count_of_odds` to 0 to count the number of odd numbers.
+3: For each number `i` from 1 to N (inclusive):
+4:     If `i` is odd (i.e., `i % 2` is not equal to 0):
+5:         Add `i` to `sum_of_odds`.
+6:         Increment `count_of_odds` by 1.
+7: Calculate the average `avg` as `sum_of_odds` divided by `count_of_odds`.
+8: Return `avg`.

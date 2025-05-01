@@ -1,0 +1,8 @@
+Input: text: a string  
+Output: words: a list of words that are 3 to 5 characters long  
+1: import the re module  
+2: define a function find_char that takes a string text as an argument  
+3:   use re.findall with a regex pattern to find all words of length 3 to 5  
+4:   the regex pattern \b\w{3,5}\b is used to match words of the specified length  
+5:   \b asserts a word boundary, \w matches any word character, and {3,5} specifies the length of the word  
+6:   return the list of matched words

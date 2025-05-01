@@ -1,0 +1,7 @@
+Input: arr: a list of numbers, number: a number
+Output: A string indicating whether the number is greater than all elements in arr
+1: Sort the list arr in ascending order
+2: If the number is greater than the last element in arr:
+3:     Return 'Yes, the entered number is greater than those in the array'
+4: Else:
+5:     Return 'No, entered number is less than those in the array'

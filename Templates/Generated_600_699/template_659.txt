@@ -1,0 +1,10 @@
+Input: x: a list of integers  
+Output: repeated: a list of integers that are duplicates in x  
+1: _size = length of x  
+2: repeated = an empty list  
+3: for i from 0 to _size - 1:  
+4:     k = i + 1  
+5:     for j from k to _size - 1:  
+6:         if x[i] is equal to x[j] and x[i] is not in repeated:  
+7:             add x[i] to repeated  
+8: return repeated

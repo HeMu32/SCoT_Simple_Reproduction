@@ -1,0 +1,10 @@
+Input: n: an integer
+Output: count: the number of integers from 1 to n (inclusive) that have an odd number of set bits (1s) in their binary representation
+
+1: Initialize a variable `count` to 0 to keep track of the number of integers with an odd number of set bits.
+2: For each integer `i` from 1 to n (inclusive):
+3:     Convert `i` to its binary representation.
+4:     Count the number of set bits (1s) in the binary representation of `i`.
+5:     If the number of set bits is odd:
+6:         Increment `count` by 1.
+7: Return `count`.

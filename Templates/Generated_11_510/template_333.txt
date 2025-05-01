@@ -1,0 +1,4 @@
+Input: sub_li: a list of sublists
+Output: sorted_list: a list sorted according to the second element in each sublist
+1: 	sort sub_li using a key that accesses the second element of each sublist
+2: 	return the sorted list

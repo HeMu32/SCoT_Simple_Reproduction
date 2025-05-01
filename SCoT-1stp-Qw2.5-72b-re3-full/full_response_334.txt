@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: a, b, c: three numerical values representing the sides of a triangle
+Output: A boolean value indicating whether the triangle is valid or not
+
+1: Check if any of the sides are less than or equal to 0. If so, the triangle is invalid.
+2: Check the triangle inequality theorem, which states that the sum of the lengths of any two sides of a triangle must be greater than the length of the remaining side.
+3: If both conditions are satisfied, return True (the triangle is valid); otherwise, return False (the triangle is invalid).
+[END PROCESS]
+
+[BEGIN CODE]
+def check_validity(a, b, c):
+    # Check if any side is less than or equal to 0
+    if a <= 0 or b <= 0 or c <= 0:
+        return False
+    # Check the triangle inequality theorem
+    if (a + b > c) and (a + c > b) and (b + c > a):
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+The function `check_validity` takes three parameters `a`, `b`, and `c`, which represent the sides of a triangle. The function first checks if any of the sides are less than or equal to 0, as a valid triangle cannot have sides of non-positive length. If any side is non-positive, the function returns `False`.
+
+Next, the function checks the triangle inequality theorem, which is a fundamental property of triangles. According to this theorem, the sum of the lengths of any two sides of a triangle must be greater than the length of the remaining side. If this condition is met for all three combinations of sides, the function returns `True`, indicating that the triangle is valid. Otherwise, it returns `False`.
+
+This approach ensures that the function correctly identifies valid and invalid triangles based on the given side lengths.

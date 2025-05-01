@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: n, m: integers
+Output: quotient: the quotient of n divided by m
+
+1: Check if m is not zero to avoid division by zero error
+2: If m is zero, raise an error or return a specific message indicating that division by zero is not allowed
+3: If m is not zero, calculate the quotient of n divided by m using integer division
+4: Return the quotient
+[END PROCESS]
+
+[BEGIN CODE]
+def find(n, m):
+    if m == 0:
+        raise ValueError("Division by zero is not allowed.")
+    quotient = n // m
+    return quotient
+[END CODE]
+
+### Explanation:
+The function `find(n, m)` is designed to compute the quotient of two integers, `n` and `m`. The process involves checking if the divisor `m` is zero, as division by zero is undefined and should be handled appropriately. If `m` is not zero, the function performs integer division using the `//` operator, which returns the quotient as an integer. This ensures that the result is the largest integer less than or equal to the exact division result. If `m` is zero, the function raises a `ValueError` with a descriptive message to indicate that division by zero is not allowed.

@@ -1,0 +1,5 @@
+Input: r: radius of the base of the cone, h: height of the cone
+Output: SA: surface area of the cone
+1: Calculate the slant height (l) using the Pythagorean theorem: l = sqrt(r^2 + h^2)
+2: Calculate the surface area (SA) using the formula: SA = π * r * (r + l)
+3: Return the surface area (SA)

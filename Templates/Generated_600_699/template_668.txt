@@ -1,0 +1,6 @@
+Input: string: a string, char: a character
+Output: string: the modified string with consecutive occurrences of char replaced by a single occurrence
+
+1: Construct a pattern that matches two or more consecutive occurrences of char
+2: Use a regular expression to find and replace all occurrences of the pattern in string with a single char
+3: Return the modified string

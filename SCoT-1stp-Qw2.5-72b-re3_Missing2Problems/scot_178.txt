@@ -1,0 +1,9 @@
+Input: patterns: a list of strings to search for, text: the string to search within
+Output: matches: a list of tuples, each containing the pattern and its starting index in the text
+
+1: Initialize an empty list to store the matches
+2: For each pattern in the patterns list:
+3:     Use the find method to locate the starting index of the pattern in the text
+4:     If the pattern is found (index is not -1):
+5:         Append a tuple containing the pattern and its starting index to the matches list
+6: Return the matches list

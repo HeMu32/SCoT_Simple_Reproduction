@@ -1,0 +1,8 @@
+Input: list1: a list of strings
+Output: length of the longest string in list1
+
+1: Initialize a variable max_length to 0 to keep track of the longest word length
+2: Loop through each word in list1:
+3:     If the length of the current word is greater than max_length:
+4:         Update max_length to the length of the current word
+5: Return max_length as the length of the longest word

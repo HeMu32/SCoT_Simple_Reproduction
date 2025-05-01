@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: nums: a two-dimensional list, N: an integer specifying the element index to extract from each sublist
+Output: a list containing the Nth element from each sublist in nums
+1: Initialize an empty list to store the result
+2: For each sublist in nums do
+3:     If the length of the sublist is greater than or equal to N then
+4:         Append the Nth element of the sublist to the result list
+5: Return the result list
+[END PROCESS]
+
+[BEGIN CODE]
+def specified_element(nums, N):
+    result = []
+    for sublist in nums:
+        if len(sublist) >= N:
+            result.append(sublist[N-1])
+    return result
+[END CODE]
+
+### Explanation:
+The function `specified_element` is designed to extract the Nth element from each sublist within a two-dimensional list `nums`. Here's a breakdown of the process:
+
+1. **Initialization**: An empty list `result` is created to store the Nth elements from each sublist.
+2. **Iteration**: The function iterates over each sublist in `nums`.
+3. **Condition Check**: For each sublist, the function checks if the length of the sublist is greater than or equal to `N`. This ensures that the sublist has enough elements to avoid an `IndexError`.
+4. **Element Extraction**: If the condition is met, the Nth element (index `N-1` because list indices start at 0) is appended to the `result` list.
+5. **Return**: Finally, the `result` list is returned, containing the Nth elements from all sublists that meet the condition.
+
+This approach ensures that the function handles cases where sublists may have different lengths and avoids errors when trying to access an index that does not exist.

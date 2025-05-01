@@ -1,0 +1,10 @@
+Input: strr: a string  
+Output: ch: a character made by adding all the characters of the given string  
+1: Initialize summ to 0  
+2: for each character ch in strr:  
+3:     Add the position of ch in the alphabet (1 for 'a', 2 for 'b', etc.) to summ  
+4: if summ is divisible by 26:  
+5:     return 'z'  
+6: else:  
+7:     Calculate the remainder of summ when divided by 26  
+8:     Return the character corresponding to the position in the alphabet (1 for 'a', 2 for 'b', etc.)

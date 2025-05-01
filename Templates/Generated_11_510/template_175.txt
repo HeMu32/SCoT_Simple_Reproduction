@@ -1,0 +1,15 @@
+Input: str1: a string of parentheses
+Output: True if the string is valid, False otherwise
+
+1: Initialize an empty stack and a dictionary pchar that maps opening parentheses to their corresponding closing parentheses.
+2: For each character parenthese in str1:
+3:     If parenthese is an opening parenthesis (found in pchar):
+4:         Push parenthese onto the stack.
+5:     Else:
+6:         If the stack is empty or the top of the stack does not match the corresponding opening parenthesis for parenthese:
+7:             Return False.
+8:         Else:
+9:             Pop the top element from the stack.
+10: If the stack is not empty after processing all characters:
+11:     Return False.
+12: Return True.

@@ -1,0 +1,8 @@
+Input: nums: a list of integers
+Output: ratio: the ratio of zeroes in the list
+1: Initialize a variable zero_count to 0 to keep track of the number of zeroes
+2: Initialize a variable total_count to the length of the list to represent the total number of elements
+3: Loop through each element in the list:
+4:     If the element is 0, increment zero_count by 1
+5: Calculate the ratio of zeroes by dividing zero_count by total_count
+6: Return the ratio

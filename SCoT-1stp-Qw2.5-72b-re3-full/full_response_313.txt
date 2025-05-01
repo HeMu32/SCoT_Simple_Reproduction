@@ -1,0 +1,19 @@
+[BEGIN PROCESS]
+Input: list1: a list of integers
+Output: None (prints positive numbers from the list)
+
+1: Iterate through each element in the list1
+2: For each element, check if it is greater than 0
+3: If the element is greater than 0, print the element
+4: Continue until all elements in the list have been checked
+[END PROCESS]
+
+[BEGIN CODE]
+def pos_nos(list1):
+    for num in list1:
+        if num > 0:
+            print(num)
+[END CODE]
+
+### Explanation:
+The function `pos_nos` takes a list of integers as input and prints out all the positive numbers in the list. The process involves iterating through each element in the list using a loop. For each element, a conditional check is performed to determine if the number is positive (greater than 0). If the number is positive, it is printed. This process continues until all elements in the list have been checked. The function does not return any value; it only prints the positive numbers.

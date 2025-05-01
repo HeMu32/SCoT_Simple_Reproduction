@@ -1,0 +1,11 @@
+Input: test_list: a list of tuples, where each tuple contains elements that can be used to form a key for frequency counting
+Output: A list of tuples, where each tuple from the input list is paired with its frequency of occurrence in the input list
+
+1: Initialize an empty dictionary to store the frequency of each unique tuple
+2: Loop through each tuple in the input list
+3:     If the tuple is already a key in the dictionary, increment its value by 1
+4:     Otherwise, add the tuple to the dictionary with a value of 1
+5: Initialize an empty list to store the result
+6: Loop through each tuple in the input list
+7:     Append a new tuple to the result list, consisting of the original tuple and its frequency from the dictionary
+8: Return the result list

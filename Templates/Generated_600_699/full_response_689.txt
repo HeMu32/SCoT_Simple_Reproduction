@@ -1,0 +1,15 @@
+[BEGIN]
+Input: arr: a list of integers, n: the length of the array
+Output: The minimum number of jumps to reach the end of the array
+
+1: Initialize a list `jumps` of length `n` with all elements set to 0.
+2: If the length of the array `n` is 0 or the first element of the array `arr[0]` is 0, return infinity (indicating it's impossible to reach the end).
+3: Set the first element of `jumps` to 0 (no jumps needed to stay at the start).
+4: For each index `i` from 1 to `n-1`:
+5:     Set `jumps[i]` to infinity.
+6:     For each index `j` from 0 to `i-1`:
+7:         If the current position `i` is reachable from position `j` (i.e., `i <= j + arr[j]`) and `jumps[j]` is not infinity:
+8:             Set `jumps[i]` to the minimum of its current value and `jumps[j] + 1`.
+9:             Break the inner loop (no need to check further once a valid jump is found).
+10: Return the last element of `jumps` (the minimum number of jumps to reach the end of the array).
+[END]

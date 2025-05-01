@@ -1,0 +1,11 @@
+Input: tup: a tuple, lst: a list
+Output: count_dict: a dictionary with elements from lst as keys and their counts in tup as values
+
+1: Initialize an empty dictionary count_dict
+2: For each element ele in lst:
+3:     Initialize a variable count to 0
+4:     For each item in tup:
+5:         If item is equal to ele:
+6:             Increment count by 1
+7:     Add ele and count as a key-value pair to count_dict
+8: Return count_dict

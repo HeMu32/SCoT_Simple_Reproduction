@@ -1,0 +1,6 @@
+[BEGIN]
+Input: l, w, h: length, width, and height of the cuboid
+Output: LSA: the lateral surface area of the cuboid
+1: Calculate the lateral surface area (LSA) using the formula 2 * h * (l + w)
+2: Return the calculated LSA
+[END]

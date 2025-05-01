@@ -1,0 +1,6 @@
+Input: tup: a list of tuples
+Output: sorted_tup: a list of tuples sorted in increasing order by the last element in each tuple
+
+1: Define a helper function `last` that takes a tuple and returns its last element.
+2: Use the `sorted` function with a key argument set to the helper function `last` to sort the list of tuples based on their last elements.
+3: Return the sorted list of tuples.

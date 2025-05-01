@@ -1,0 +1,9 @@
+Input: s: a binary string, n: an integer representing the length of the string
+Output: count: the number of rotations of the string that result in an odd binary number
+
+1: Initialize count to 0
+2: Loop i from 0 to n-1 (inclusive)
+3:     Rotate the string s to the left by i positions
+4:     Convert the rotated string to an integer
+5:     If the integer is odd, increment count by 1
+6: Return count

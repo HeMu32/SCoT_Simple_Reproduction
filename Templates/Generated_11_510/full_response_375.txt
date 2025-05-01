@@ -1,0 +1,11 @@
+[BEGIN]
+Input: n: a number to be rounded, m: the specific number to which n should be rounded to the nearest multiple
+Output: the nearest multiple of m to n
+
+1: Calculate a as the largest multiple of m that is less than or equal to n
+2: Calculate b as the next multiple of m after a
+3: If the difference between n and a is greater than the difference between b and n:
+4:     Return b
+5: Else:
+6:     Return a
+[END]

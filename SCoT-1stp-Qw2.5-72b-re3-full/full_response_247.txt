@@ -1,0 +1,71 @@
+[BEGIN PROCESS]
+Input: str: a string
+Output: The longest palindromic subsequence (LPS) in the given string
+
+1: Define a function `lps` that takes a string `str` as input.
+2: Initialize a 2D array `dp` of size `n x n` (where `n` is the length of the string) with all elements set to 0. This array will be used to store the length of the longest palindromic subsequence for substrings of `str`.
+3: Every single character in the string is a palindrome of length 1, so fill the diagonal of `dp` with 1s.
+4: Use a loop to iterate over all possible lengths of substrings from 2 to `n`.
+5: For each length, use another loop to iterate over all possible starting indices of the substrings.
+6: For each starting index and length, calculate the ending index.
+7: If the characters at the starting and ending indices are the same and the length is 2, then the substring is a palindrome of length 2.
+8: If the characters at the starting and ending indices are the same and the length is more than 2, then the length of the LPS is 2 plus the value of `dp[start+1][end-1]`.
+9: If the characters at the starting and ending indices are different, then the LPS is the maximum of the LPS excluding the starting character or the ending character.
+10: After filling the `dp` array, the value at `dp[0][n-1]` will contain the length of the longest palindromic subsequence.
+11: To reconstruct the LPS, use the `dp` array and the original string.
+12: Return the longest palindromic subsequence.
+[END PROCESS]
+
+[BEGIN CODE]
+def lps(s):
+    n = len(s)
+    # Create a DP table with all elements initialized to 0
+    dp = [[0] * n for _ in range(n)]
+    
+    # Every single character is a palindrome of length 1
+    for i in range(n):
+        dp[i][i] = 1
+    
+    # Build the table. Note that the lower diagonal values of table are
+    # useless and not filled in the process. `cl` is the length of the substring
+    for cl in range(2, n + 1):
+        for i in range(n - cl + 1):
+            j = i + cl - 1
+            if s[i] == s[j] and cl == 2:
+                dp[i][j] = 2
+            elif s[i] == s[j]:
+                dp[i][j] = dp[i + 1][j - 1] + 2
+            else:
+                dp[i][j] = max(dp[i][j - 1], dp[i + 1][j])
+    
+    # Reconstruct the longest palindromic subsequence
+    lps_str = ""
+    i, j = 0, n - 1
+    while i <= j:
+        if s[i] == s[j]:
+            lps_str += s[i]
+            i += 1
+            j -= 1
+        elif dp[i + 1][j] >= dp[i][j - 1]:
+            i += 1
+        else:
+            j -= 1
+    
+    # If the length of the LPS is odd, the middle character is added only once
+    if i > j:
+        lps_str += s[i]
+    
+    # Since the LPS is built from both ends, we need to add the reverse of the first half to the end
+    lps_str += lps_str[::-1][len(lps_str) % 2:]
+    
+    return lps_str
+
+# Example usage
+input_str = "BBABCBCAB"
+print(lps(input_str))  # Output: "BABCBAB"
+[END CODE]
+
+### Explanation:
+The function `lps` finds the longest palindromic subsequence in a given string using dynamic programming. The `dp` table is used to store the lengths of the longest palindromic subsequences for all substrings of the input string. The table is filled in a bottom-up manner, and the final answer is found in `dp[0][n-1]`.
+
+To reconstruct the LPS, the function iterates through the string and the `dp` table, adding characters to the result string when they match and adjusting the indices accordingly. The final result is constructed by appending the reverse of the first half of the LPS to itself, ensuring the result is a palindrome.

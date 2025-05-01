@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: S: a list of elements, step: an integer indicating the step size
+Output: result: a list of lists, where each sublist contains elements from the original list, starting from the first element and then every nth element
+
+1: Initialize an empty list called result to store the sublists
+2: For each index i from 0 to step-1 (inclusive):
+3:     Initialize an empty list called temp to store the elements for the current sublist
+4:     For each index j from i to the length of S, incrementing by step:
+5:         Append S[j] to temp
+6:     Append temp to result
+7: Return result
+[END PROCESS]
+
+[BEGIN CODE]
+def list_split(S, step):
+    result = []
+    for i in range(step):
+        temp = []
+        for j in range(i, len(S), step):
+            temp.append(S[j])
+        result.append(temp)
+    return result
+[END CODE]
+
+### Explanation
+
+The function `list_split` takes two parameters: `S`, which is the list to be split, and `step`, which is the step size indicating how often to pick the next element. The function returns a list of lists, where each sublist contains elements from the original list, starting from the first element and then every nth element.
+
+1. **Initialization**: An empty list `result` is initialized to store the final sublists.
+2. **Outer Loop**: The outer loop iterates over the range from 0 to `step-1`. This loop is responsible for starting the sublists at different initial positions.
+3. **Inner Loop**: For each starting position `i`, an inner loop is used to collect elements from the original list `S`. The inner loop starts at `i` and increments by `step` to ensure that it picks every nth element.
+4. **Appending Elements**: The elements collected in the inner loop are appended to a temporary list `temp`.
+5. **Appending Sublists**: After the inner loop completes, the temporary list `temp` is appended to the `result` list.
+6. **Return Result**: Finally, the `result` list, which contains all the sublists, is returned.
+
+This approach ensures that the list is split into sublists where each sublist contains elements starting from a different initial position and then every nth element.

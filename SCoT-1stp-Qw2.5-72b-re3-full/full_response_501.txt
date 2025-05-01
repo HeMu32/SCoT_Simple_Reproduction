@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: x, y: two integers
+Output: count: the number of common divisors between x and y
+
+1: Initialize a variable `count` to 0 to keep track of the number of common divisors.
+2: Determine the smaller of the two numbers, `x` and `y`, and store it in a variable `min_val`.
+3: Loop from 1 to `min_val` (inclusive):
+4:     If both `x` and `y` are divisible by the current loop index (i.e., the remainder when `x` and `y` are divided by the index is 0):
+5:         Increment `count` by 1.
+6: After the loop, return `count` as the number of common divisors.
+[END PROCESS]
+
+[BEGIN CODE]
+def num_comm_div(x, y):
+    count = 0
+    min_val = min(x, y)
+    for i in range(1, min_val + 1):
+        if (x % i == 0) and (y % i == 0):
+            count += 1
+    return count
+[END CODE]
+
+### Explanation:
+The function `num_comm_div` calculates the number of common divisors between two integers, `x` and `y`. The process involves:
+- Initializing a counter `count` to 0.
+- Finding the smaller of the two numbers to limit the range of the loop.
+- Iterating from 1 to the smaller number, checking if both `x` and `y` are divisible by the current number.
+- If they are, increment the counter.
+- Finally, the function returns the count of common divisors.
+
+This approach ensures that all possible divisors are checked, and the function efficiently counts the common divisors by only iterating up to the smaller of the two numbers.

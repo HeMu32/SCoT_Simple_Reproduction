@@ -1,0 +1,8 @@
+Input: num: an integer
+Output: next_palindrome: the next smallest palindrome integer greater than num
+1: Convert num to a string numstr
+2: Start a loop from i = num + 1 to the maximum integer value (sys.maxsize)
+3:     Convert i to a string
+4:     Check if the string representation of i is equal to its reverse
+5:     If it is, return i as the next smallest palindrome
+6: If no palindrome is found (theoretically, this should not happen), the function will implicitly return None

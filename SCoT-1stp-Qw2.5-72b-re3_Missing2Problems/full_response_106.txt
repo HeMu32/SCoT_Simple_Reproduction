@@ -1,0 +1,40 @@
+[BEGIN PROCESS]
+Input: test_list: a list of elements, test_tup: a tuple of elements
+Output: res: a new list where each element from the list is added to the corresponding element in the tuple
+
+1: Initialize an empty list `res` to store the result.
+2: Determine the length of the shorter of the two input sequences (list or tuple) to avoid index out-of-range errors.
+3: Loop through the range of the determined length:
+4:     For each index `i`, add the `i`th element of `test_list` to the `i`th element of `test_tup`.
+5:     Append the result of the addition to `res`.
+6: If the list `test_list` is longer than `test_tup`:
+7:     Append the remaining elements of `test_list` to `res`.
+8: If the tuple `test_tup` is longer than `test_list`:
+9:     Convert the remaining part of `test_tup` to a list and append these elements to `res`.
+10: Return the list `res`.
+[END PROCESS]
+
+[BEGIN CODE]
+def add_lists(test_list, test_tup):
+    res = []
+    min_length = min(len(test_list), len(test_tup))
+    
+    for i in range(min_length):
+        res.append(test_list[i] + test_tup[i])
+    
+    if len(test_list) > len(test_tup):
+        res.extend(test_list[min_length:])
+    elif len(test_tup) > len(test_list):
+        res.extend(list(test_tup[min_length:]))
+    
+    return res
+[END CODE]
+
+Explanation:
+- The function `add_lists` takes two parameters: `test_list` (a list) and `test_tup` (a tuple).
+- It initializes an empty list `res` to store the results of the addition.
+- It determines the length of the shorter sequence to ensure that the loop does not exceed the bounds of either the list or the tuple.
+- It then iterates over the range of the shorter sequence, adding corresponding elements from the list and tuple and appending the result to `res`.
+- If `test_list` is longer than `test_tup`, the remaining elements of `test_list` are appended to `res`.
+- If `test_tup` is longer than `test_list`, the remaining elements of `test_tup` are converted to a list and appended to `res`.
+- Finally, the function returns the list `res`, which contains the results of the addition.

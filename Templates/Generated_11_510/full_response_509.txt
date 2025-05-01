@@ -1,0 +1,14 @@
+[BEGIN]
+Input: n: an integer (expected to be an odd number)
+Output: average: the average of all odd numbers up to and including n, or "Invalid Input" if n is not an odd number
+
+1: if n is even:
+2:     return "Invalid Input"
+3: initialize sm to 0 (to store the sum of odd numbers)
+4: initialize count to 0 (to count the number of odd numbers)
+5: while n is greater than or equal to 1:
+6:     increment count by 1
+7:     add n to sm
+8:     decrement n by 2
+9: return the integer division of sm by count
+[END]

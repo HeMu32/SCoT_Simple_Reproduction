@@ -1,0 +1,22 @@
+[BEGIN]
+Input: arr: a list of strings, n: the number of strings in arr
+Output: prefix: the longest common prefix among the strings in arr
+
+1: Initialize prefix to the first string in arr
+2: for i from 1 to n-1 do
+3:     Call common_prefix_util with prefix and arr[i] and store the result in prefix
+4: return prefix
+
+common_prefix_util(str1, str2)
+1: Initialize result to an empty string
+2: Initialize n1 to the length of str1
+3: Initialize n2 to the length of str2
+4: Initialize i and j to 0
+5: while i is less than or equal to n1 - 1 and j is less than or equal to n2 - 1 do
+6:     if str1[i] is not equal to str2[j] then
+7:         break
+8:     Append str1[i] to result
+9:     Increment i by 1
+10:    Increment j by 1
+11: return result
+[END]

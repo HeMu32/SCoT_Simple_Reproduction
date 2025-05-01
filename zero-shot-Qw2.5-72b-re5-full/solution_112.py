@@ -1,0 +1,5 @@
+def perimeter(radius, height):
+    """
+    Write a python function to find the perimeter of a cylinder.
+    """
+    return 2 * 3.1415 * radius + 2 * height

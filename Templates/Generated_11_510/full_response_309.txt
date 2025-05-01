@@ -1,0 +1,8 @@
+[BEGIN]
+Input: a, b: two numbers
+Output: max_value: the maximum of the two numbers
+1: if a is greater than or equal to b:
+2:     return a
+3: else:
+4:     return b
+[END]

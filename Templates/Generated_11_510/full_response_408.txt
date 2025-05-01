@@ -1,0 +1,17 @@
+[BEGIN]
+Input: nums1: list of integers, nums2: list of integers, k: integer
+Output: pairs: list of k smallest pairs, each pair is a list of two integers, one from nums1 and one from nums2
+
+1: Initialize an empty min-heap queue.
+2: Define a helper function push(i, j) that:
+   3:   If i is less than the length of nums1 and j is less than the length of nums2:
+   4:       Push the tuple (nums1[i] + nums2[j], i, j) into the queue.
+5: Call push(0, 0) to initialize the queue with the first pair.
+6: Initialize an empty list pairs to store the result.
+7: While the queue is not empty and the length of pairs is less than k:
+   8:   Pop the smallest element from the queue, which is a tuple (_, i, j).
+   9:   Append the pair [nums1[i], nums2[j]] to the pairs list.
+  10:   Call push(i, j + 1) to add the next pair from the same row.
+  11:   If j is 0, call push(i + 1, 0) to add the next pair from the next row.
+12: Return the pairs list.
+[END]

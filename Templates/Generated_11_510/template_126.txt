@@ -1,0 +1,7 @@
+Input: a, b: two integers  
+Output: sum: the sum of common divisors of a and b  
+1: Initialize sum to 0  
+2: for i from 1 to the minimum of a and b:  
+3:     if a is divisible by i and b is divisible by i:  
+4:         add i to sum  
+5: return sum

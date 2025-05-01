@@ -1,0 +1,8 @@
+Input: test_list: a list of tuples, K: an integer
+Output: a list of tuples where all elements in each tuple are divisible by K
+
+1: Initialize an empty list to store the result.
+2: Iterate over each tuple in the test_list.
+3: For each tuple, check if all elements are divisible by K.
+   - If yes, add the tuple to the result list.
+4: After iterating through all tuples, return the result list.

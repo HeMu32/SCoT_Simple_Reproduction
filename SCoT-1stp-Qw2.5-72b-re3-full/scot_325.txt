@@ -1,0 +1,8 @@
+Input: n: an integer representing the target sum
+Output: The minimum number of perfect squares that sum up to n
+
+1: Initialize a list `dp` of size `n + 1` with all elements set to infinity, except `dp[0]` which is set to 0 (base case)
+2: For each number `i` from 1 to n inclusive:
+3:     For each possible square `j * j` where `j * j` is less than or equal to `i`:
+4:         Update `dp[i]` to be the minimum of its current value and `dp[i - j * j] + 1`
+5: Return `dp[n]` which contains the minimum number of squares that sum up to `n`

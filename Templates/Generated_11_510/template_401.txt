@@ -1,0 +1,10 @@
+Input: test_tup1, test_tup2: two nested tuples of integers
+Output: res: a nested tuple with the result of index-wise addition of test_tup1 and test_tup2
+
+1: Initialize an empty tuple res to store the result.
+2: Loop through each pair of nested tuples (tup1, tup2) from test_tup1 and test_tup2 using zip.
+3:   Initialize an empty tuple inner_res to store the result of the current nested tuple addition.
+4:   Loop through each pair of elements (a, b) from tup1 and tup2 using zip.
+5:     Add a and b and append the result to inner_res.
+6:   Append inner_res to res.
+7: Return res.

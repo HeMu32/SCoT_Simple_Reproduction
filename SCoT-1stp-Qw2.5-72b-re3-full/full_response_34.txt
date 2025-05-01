@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: ar: a sorted list of integers, N: the length of the list including the missing number
+Output: The missing number in the list
+
+1: Initialize a variable 'low' to 0 and 'high' to N - 1
+2: While 'low' is less than or equal to 'high':
+3:     Calculate 'mid' as the floor of (low + high) / 2
+4:     If the element at index 'mid' is equal to 'mid' + 1:
+5:         The missing number is not in the left half, so set 'low' to 'mid' + 1
+6:     Else:
+7:         The missing number is in the left half, so set 'high' to 'mid' - 1
+8: The missing number is 'low' + 1
+9: Return the missing number
+[END PROCESS]
+
+[BEGIN CODE]
+def find_missing(ar, N):
+    low = 0
+    high = N - 1
+    
+    while low <= high:
+        mid = (low + high) // 2
+        
+        if ar[mid] == mid + 1:
+            low = mid + 1
+        else:
+            high = mid - 1
+    
+    return low + 1
+[END CODE]
+
+Explanation:
+The function `find_missing` is designed to find the missing number in a sorted array of integers. The array is expected to contain numbers from 1 to N, but one number is missing. The function uses a binary search approach to efficiently find the missing number.
+
+- The function initializes two pointers, `low` and `high`, to the start and end of the array, respectively.
+- It then enters a loop that continues as long as `low` is less than or equal to `high`.
+- Inside the loop, it calculates the middle index `mid`.
+- If the element at `mid` is equal to `mid + 1`, it means the missing number is not in the left half of the array, so it updates `low` to `mid + 1`.
+- If the element at `mid` is not equal to `mid + 1`, it means the missing number is in the left half, so it updates `high` to `mid - 1`.
+- Once the loop exits, the missing number is `low + 1`, which is returned by the function.
+
+This approach ensures that the function runs in O(log N) time, making it efficient for large arrays.

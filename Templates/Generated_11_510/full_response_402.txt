@@ -1,0 +1,11 @@
+[BEGIN]
+Input: n: an integer, r: an integer, p: a prime number
+Output: The value of nCr % p
+
+1: Initialize a list C of size r+1 with all elements set to 0
+2: Set the first element of C to 1
+3: For each integer i from 1 to n (inclusive):
+4:     For each integer j from min(i, r) down to 1 (inclusive):
+5:         Update C[j] to (C[j] + C[j-1]) % p
+6: Return the value of C[r]
+[END]

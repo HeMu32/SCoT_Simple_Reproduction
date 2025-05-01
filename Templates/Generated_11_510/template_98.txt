@@ -1,0 +1,7 @@
+Input: numbers: a list of numbers  
+Output: result: the product of all numbers in the list divided by the length of the list  
+1: Initialize total to 1  
+2: for each number x in numbers:  
+3:     total = total * x  
+4: result = total / length of numbers  
+5: return result

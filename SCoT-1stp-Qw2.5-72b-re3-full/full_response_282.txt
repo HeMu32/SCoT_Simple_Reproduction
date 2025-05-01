@@ -1,0 +1,19 @@
+[BEGIN PROCESS]
+Input: nums1, nums2: two lists of integers
+Output: A list of integers where each element is the result of subtracting the corresponding element in nums2 from the corresponding element in nums1.
+1: Use the `map` function to apply a lambda function to each pair of elements from nums1 and nums2.
+2: The lambda function should take two arguments and return the result of subtracting the second argument from the first.
+3: Convert the result of the map function to a list.
+4: Return the resulting list.
+[END PROCESS]
+
+[BEGIN CODE]
+def sub_list(nums1, nums2):
+    # Use map and a lambda function to subtract elements of nums2 from nums1
+    result = map(lambda x, y: x - y, nums1, nums2)
+    # Convert the map object to a list and return it
+    return list(result)
+[END CODE]
+
+### Explanation:
+The function `sub_list` takes two lists, `nums1` and `nums2`, as input. It uses the `map` function to apply a lambda function to each pair of corresponding elements from `nums1` and `nums2`. The lambda function subtracts the second element (from `nums2`) from the first element (from `nums1`). The result of the `map` function is a map object, which is then converted to a list and returned. This approach efficiently performs element-wise subtraction between the two lists.

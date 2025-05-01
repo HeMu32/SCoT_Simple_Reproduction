@@ -1,0 +1,10 @@
+Input: h_age: an integer representing the human age
+Output: d_age: an integer representing the dog's age in dog years
+
+1: If h_age is less than or equal to 2, multiply h_age by 10.5 to get d_age.
+2: If h_age is greater than 2, calculate the dog's age as follows:
+   - Set d_age to 21 (the equivalent of the first two human years in dog years).
+   - Subtract 2 from h_age to get the remaining human years.
+   - Multiply the remaining human years by 4 to convert them to dog years.
+   - Add the result to d_age.
+3: Return d_age.

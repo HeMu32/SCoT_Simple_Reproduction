@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position in the Perrin sequence
+Output: The n'th Perrin number
+
+1: If n is 0, return 3 (base case for the 0th Perrin number)
+2: If n is 1, return 0 (base case for the 1st Perrin number)
+3: If n is 2, return 2 (base case for the 2nd Perrin number)
+4: Otherwise, return the sum of the (n-2)th and (n-3)th Perrin numbers (recursive step)
+[END PROCESS]
+
+[BEGIN CODE]
+def get_perrin(n):
+    """ 
+    Write a function to find the n'th perrin number using recursion. 
+    """
+    if n == 0:
+        return 3
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 2
+    else:
+        return get_perrin(n - 2) + get_perrin(n - 3)
+[END CODE]
+
+### Explanation:
+The Perrin sequence is defined as follows:
+- \( P(0) = 3 \)
+- \( P(1) = 0 \)
+- \( P(2) = 2 \)
+- \( P(n) = P(n-2) + P(n-3) \) for \( n > 2 \)
+
+The function `get_perrin(n)` is designed to compute the n'th Perrin number using recursion. The base cases handle the first three numbers in the sequence, and the recursive step computes the n'th number by summing the (n-2)th and (n-3)th numbers in the sequence. This approach directly follows the definition of the Perrin sequence.

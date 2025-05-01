@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: l: a list of tuples, where each tuple contains a key and a value
+Output: A dictionary where each key from the input tuples is associated with a list of values that were paired with that key in the input list.
+
+1: Initialize an empty dictionary called `result`.
+2: For each tuple `(key, value)` in the list `l`:
+3:     If `key` is not already in `result`:
+4:         Add `key` to `result` with an empty list as its value.
+5:     Append `value` to the list associated with `key` in `result`.
+6: Return the `result` dictionary.
+[END PROCESS]
+
+[BEGIN CODE]
+def group_keyvalue(l):
+    result = {}
+    for key, value in l:
+        if key not in result:
+            result[key] = []
+        result[key].append(value)
+    return result
+[END CODE]
+
+Explanation:
+The function `group_keyvalue` takes a list of tuples as input, where each tuple consists of a key and a value. The goal is to group all values associated with the same key into a list within a dictionary. The process involves iterating over each tuple in the input list, checking if the key already exists in the dictionary, and either initializing a new list for that key or appending the value to the existing list. This way, the function constructs a dictionary where each key maps to a list of all values associated with it in the input list.

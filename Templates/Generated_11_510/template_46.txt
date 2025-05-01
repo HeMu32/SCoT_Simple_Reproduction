@@ -1,0 +1,8 @@
+Input: data: a list of numbers  
+Output: True if all numbers in the list are distinct, False otherwise  
+1: Convert the list `data` to a set to remove duplicates  
+2: Compare the length of the original list `data` with the length of the set  
+3:     if the lengths are equal:  
+4:         return True  
+5:     else:  
+6:         return False

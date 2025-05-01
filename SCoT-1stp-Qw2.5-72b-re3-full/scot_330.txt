@@ -1,0 +1,7 @@
+Input: text: a string containing words of various lengths
+Output: result: a list of words that are exactly three, four, or five characters long
+1: Import the regex module (re)
+2: Define a regex pattern to match words that are 3, 4, or 5 characters long
+3: Use the regex pattern to find all matches in the input text
+4: Store the matches in a list
+5: Return the list of matched words

@@ -1,0 +1,8 @@
+Input: list1, list2: two lists of elements
+Output: a new list containing elements from list1 that are not present in list2
+
+1: Initialize an empty list called `result` to store the elements that are in list1 but not in list2.
+2: Loop through each element in list1.
+3: For each element, check if it is not in list2.
+4: If the element is not in list2, append it to the `result` list.
+5: After the loop ends, return the `result` list.

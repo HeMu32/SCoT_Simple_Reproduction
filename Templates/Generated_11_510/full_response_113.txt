@@ -1,0 +1,15 @@
+[BEGIN]
+Input: text: a string  
+Output: True if text represents an integer, otherwise False  
+1: Remove leading and trailing spaces from text  
+2: If the length of text is less than 1:  
+3:     Return None  
+4: Else:  
+5:     If all characters in text are digits:  
+6:         Return True  
+7:     Else if the first character of text is '+' or '-':  
+8:         If all characters from the second position to the end are digits:  
+9:             Return True  
+10:     Else:  
+11:         Return False  
+[END]

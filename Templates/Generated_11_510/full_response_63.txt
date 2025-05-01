@@ -1,0 +1,11 @@
+[BEGIN]
+Input: test_list: a list of tuples, where each tuple contains two integers
+Output: res: the maximum difference between the pairs in the tuples
+
+1: Initialize an empty list temp
+2: For each tuple (a, b) in test_list:
+3:     Calculate the absolute difference between a and b
+4:     Append the calculated difference to temp
+5: Find the maximum value in temp and assign it to res
+6: Return res
+[END]

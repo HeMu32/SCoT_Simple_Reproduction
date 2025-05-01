@@ -1,0 +1,6 @@
+Input: x, y: two integers
+Output: A boolean value indicating whether x and y have opposite signs
+
+1: Check if the product of x and y is less than 0
+2:   If the product is less than 0, return True (indicating opposite signs)
+3:   Otherwise, return False (indicating same signs or one of them is zero)

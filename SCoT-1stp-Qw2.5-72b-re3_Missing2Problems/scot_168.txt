@@ -1,0 +1,8 @@
+Input: a: a list of integers, x: an integer to find the frequency of
+Output: frequency: the number of times x appears in the list a
+
+1: Initialize a variable `frequency` to 0 to keep track of the occurrences of `x`
+2: Loop through each element `element` in the list `a`
+3:     If `element` is equal to `x`:
+4:         Increment `frequency` by 1
+5: After the loop, return the value of `frequency`

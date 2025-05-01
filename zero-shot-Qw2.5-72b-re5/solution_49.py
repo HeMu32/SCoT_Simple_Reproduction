@@ -1,0 +1,5 @@
+def specified_element(nums, N=0): 
+    """ 
+    Write a function to extract every first or specified element from a given two-dimensional list. 
+    """ 
+    return [sublist[N] for sublist in nums if len(sublist) > N]

@@ -1,0 +1,7 @@
+Input: a, b, c: coefficients of the parabola equation (ax^2 + bx + c)
+Output: focus: a tuple representing the coordinates of the focus of the parabola
+
+1: Calculate the x-coordinate of the focus using the formula (-b / (2 * a))
+2: Calculate the y-coordinate of the focus using the formula (((4 * a * c) - (b * b) + 1) / (4 * a))
+3: Create a tuple with the calculated x and y coordinates
+4: Return the tuple as the focus of the parabola

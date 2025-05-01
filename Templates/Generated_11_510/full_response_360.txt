@@ -1,0 +1,7 @@
+[BEGIN]
+Input: n: an integer 
+Output: result: the n’th carol number 
+1: Calculate the value of 2 raised to the power of n and subtract 1, store this in a variable result 
+2: Calculate the square of result and subtract 2 
+3: Return the final result 
+[END]

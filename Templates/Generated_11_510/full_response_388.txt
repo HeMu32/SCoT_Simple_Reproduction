@@ -1,0 +1,11 @@
+[BEGIN]
+Input: n: an integer
+Output: res: the highest power of 2 less than or equal to n
+
+1: Initialize res to 0
+2: Loop from n down to 1 (inclusive)
+3:     If i is a power of 2 (i.e., (i & (i - 1)) == 0):
+4:         Set res to i
+5:         Break the loop
+6: Return res
+[END]

@@ -1,0 +1,5 @@
+Input: l: a float or integer representing the length of one side of the cube.
+Output: volume: a float or integer representing the volume of the cube.
+
+1: Calculate the volume of the cube using the formula `volume = l * l * l`.
+2: Return the calculated volume.

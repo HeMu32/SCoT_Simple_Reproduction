@@ -1,0 +1,10 @@
+[BEGIN]
+Input: dict1, dict2, dict3: three dictionaries
+Output: merged_dict: a single dictionary containing all key-value pairs from dict1, dict2, and dict3
+
+1: Import the collections module as ct
+2: Create an empty dictionary
+3: Use ct.ChainMap to create a chain of the three dictionaries, starting with an empty dictionary
+4: Convert the ChainMap object to a regular dictionary, which will merge all the dictionaries
+5: Return the merged dictionary
+[END]

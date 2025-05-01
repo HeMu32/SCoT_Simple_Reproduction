@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: string: a binary string (consisting of 0s and 1s), n: the length of the string
+Output: max_diff: the maximum difference between the number of 0s and the number of 1s in any sub-string of the given binary string
+
+1: Initialize max_diff to 0
+2: Initialize a variable count to 0, which will keep track of the current difference between the number of 0s and 1s
+3: Loop through each character in the string:
+4:     If the character is '0', increment count by 1
+5:     If the character is '1', decrement count by 1
+6:     If count is greater than max_diff, update max_diff to count
+7:     If count is less than 0, reset count to 0 (since a negative count means more 1s than 0s, and we are looking for the maximum difference of 0s over 1s)
+8: Return max_diff
+[END PROCESS]
+
+[BEGIN CODE]
+def find_length(string, n):
+    max_diff = 0
+    count = 0
+    for char in string:
+        if char == '0':
+            count += 1
+        elif char == '1':
+            count -= 1
+        if count > max_diff:
+            max_diff = count
+        if count < 0:
+            count = 0
+    return max_diff
+[END CODE]
+
+### Explanation:
+The function `find_length` is designed to find the maximum difference between the number of 0s and the number of 1s in any sub-string of the given binary string. The approach used here is to traverse the string while maintaining a running count of the difference between the number of 0s and 1s. If the count becomes negative, it is reset to 0, as a negative count indicates that there are more 1s than 0s, which is not what we are looking for. The maximum value of this count during the traversal is the maximum difference we are looking for. This approach ensures that we efficiently find the maximum difference in a single pass through the string, making it an O(n) solution.

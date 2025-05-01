@@ -1,0 +1,11 @@
+Input: list1: a list of elements
+Output: encoded_list: a list of lists, where each sublist contains the count of consecutive elements and the element itself
+
+1: Import the `groupby` function from the `itertools` module
+2: Initialize an empty list `encoded_list`
+3: Use the `groupby` function to group consecutive identical elements in `list1`
+4: For each group of consecutive elements (key, group) in the grouped list:
+5:     Calculate the length of the group
+6:     Create a sublist with the length of the group and the key
+7:     Append the sublist to `encoded_list`
+8: Return `encoded_list`

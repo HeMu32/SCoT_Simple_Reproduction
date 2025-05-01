@@ -1,0 +1,10 @@
+Input: text: a string, patterns: a list of strings
+Output: matches: a list of tuples, each containing the pattern and the start and end positions of the match in the text
+
+1: Import the `re` module for regular expression operations.
+2: Initialize an empty list to store the matches.
+3: Loop through each pattern in the patterns list:
+   3.1: Use the `re.finditer` function to find all occurrences of the pattern in the text.
+   3.2: For each match found, extract the start and end positions of the match.
+   3.3: Append a tuple containing the pattern and the start and end positions to the matches list.
+4: Return the matches list.

@@ -1,0 +1,13 @@
+Input: n: an integer 
+Output: maxPrime: the largest prime factor of n 
+1: Initialize maxPrime to -1 
+2: While n is divisible by 2: 
+3:     Set maxPrime to 2 
+4:     Right shift n by 1 (equivalent to dividing n by 2) 
+5: For i from 3 to the square root of n, incrementing by 2: 
+6:     While n is divisible by i: 
+7:         Set maxPrime to i 
+8:         Divide n by i 
+9: If n is greater than 2: 
+10:    Set maxPrime to n 
+11: Return maxPrime

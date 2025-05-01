@@ -1,0 +1,11 @@
+[BEGIN]
+Input: s: a string representing a number
+Output: res: a string representing the demlo number for the given number
+1: l = length of s
+2: res = an empty string
+3: for i from 1 to l (inclusive):
+4:     res = res + string representation of i
+5: for i from l-1 down to 1 (inclusive):
+6:     res = res + string representation of i
+7: return res
+[END]

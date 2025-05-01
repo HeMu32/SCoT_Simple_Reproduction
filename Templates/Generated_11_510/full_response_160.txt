@@ -1,0 +1,14 @@
+[BEGIN]
+Input: a, b, n: integers
+Output: A tuple (x, y) of integers that satisfies the equation ax + by = n, or a message "No solution" if no such x and y exist.
+
+1: Initialize i to 0
+2: Loop while i * a is less than or equal to n:
+3:     Calculate the remainder of (n - (i * a)) divided by b
+4:     If the remainder is 0:
+5:         Calculate y as (n - (i * a)) divided by b
+6:         Return the tuple (i, y) as the solution
+7:     Increment i by 1
+8: If the loop completes without finding a solution:
+9:     Return "No solution"
+[END]

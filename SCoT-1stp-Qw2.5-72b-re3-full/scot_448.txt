@@ -1,0 +1,13 @@
+Input: n: an integer indicating the number of Perrin numbers to sum
+Output: The sum of the first n Perrin numbers
+
+1: Initialize a list `perrin` to store the first n Perrin numbers.
+2: Set the first three Perrin numbers:
+3:     - perrin[0] = 3
+4:     - perrin[1] = 0
+5:     - perrin[2] = 2
+6: If n is less than or equal to 2:
+7:     Return the sum of the first n elements in the perrin list
+8: For i from 3 to n-1:
+9:     Calculate perrin[i] as perrin[i-2] + perrin[i-3]
+10: Return the sum of all elements in the perrin list

@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: r: a float representing the radius of the cylinder; h: a float representing the height of the cylinder
+Output: The lateral surface area of the cylinder as a float
+
+1: Calculate the lateral surface area using the formula 2 * π * r * h
+2: Return the calculated lateral surface area
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def lateralsurface_cylinder(r, h):
+    # Calculate the lateral surface area
+    lateral_surface_area = 2 * math.pi * r * h
+    # Return the calculated lateral surface area
+    return lateral_surface_area
+[END CODE]
+
+### Explanation:
+The lateral surface area of a cylinder is the area of the side surface, excluding the top and bottom circles. The formula for the lateral surface area of a cylinder is given by \( 2 \pi r h \), where \( r \) is the radius of the base and \( h \) is the height of the cylinder. The function `lateralsurface_cylinder` takes two parameters, `r` and `h`, and returns the lateral surface area calculated using this formula. The `math` module is imported to use the value of \( \pi \) (pi).

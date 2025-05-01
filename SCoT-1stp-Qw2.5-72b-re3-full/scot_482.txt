@@ -1,0 +1,7 @@
+Input: text: a string  
+Output: matches: a list of substrings that match the pattern of one uppercase letter followed by lowercase letters  
+1: Import the re module for regular expression operations  
+2: Define the regex pattern to match one uppercase letter followed by zero or more lowercase letters  
+3: Use the re.findall() function to find all non-overlapping matches of the pattern in the text  
+4: Store the matches in a list called matches  
+5: Return the matches list

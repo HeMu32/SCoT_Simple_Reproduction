@@ -1,0 +1,7 @@
+Input: a, b: two angles of a triangle in degrees
+Output: The third angle of the triangle in degrees
+
+1: Check if a and b are valid angles (i.e., both are greater than 0 and their sum is less than 180 degrees)
+2: If the angles are valid, calculate the third angle by subtracting the sum of a and b from 180 degrees
+3: If the angles are not valid, raise an error or return an appropriate message
+4: Return the calculated third angle

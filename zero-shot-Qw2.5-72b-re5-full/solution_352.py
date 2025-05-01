@@ -1,0 +1,5 @@
+def unique_Characters(s):
+    """
+    Write a python function to check whether all the characters in a given string are unique.
+    """
+    return len(set(s)) == len(s)

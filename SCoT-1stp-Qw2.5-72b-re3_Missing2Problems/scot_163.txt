@@ -1,0 +1,7 @@
+Input: s: number of sides of the polygon, l: length of each side
+Output: area: the area of the regular polygon
+
+1: Calculate the apothem (a) of the polygon using the formula: a = l / (2 * tan(π / s))
+2: Calculate the perimeter (p) of the polygon using the formula: p = s * l
+3: Calculate the area (area) of the polygon using the formula: area = (p * a) / 2
+4: Return the area

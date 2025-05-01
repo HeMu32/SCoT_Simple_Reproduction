@@ -1,0 +1,12 @@
+[BEGIN]
+Input: n: an integer representing the number of first natural numbers to consider
+Output: average: the average of the cubes of the first n natural numbers
+
+1: Initialize a variable sum to 0 to store the sum of cubes
+2: For each integer i from 1 to n (inclusive):
+3:     Calculate the cube of i (i * i * i)
+4:     Add the cube of i to sum
+5: Calculate the average by dividing sum by n
+6: Round the average to 6 decimal places
+7: Return the rounded average
+[END]

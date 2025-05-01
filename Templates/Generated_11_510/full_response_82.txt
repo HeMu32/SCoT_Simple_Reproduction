@@ -1,0 +1,6 @@
+[BEGIN]
+Input: r: a float representing the radius of the sphere  
+Output: volume: a float representing the volume of the sphere  
+1: Calculate the volume using the formula (4/3) * π * r^3  
+2: Return the calculated volume  
+[END]

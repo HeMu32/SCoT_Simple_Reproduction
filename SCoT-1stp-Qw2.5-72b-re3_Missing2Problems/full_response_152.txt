@@ -1,0 +1,76 @@
+[BEGIN PROCESS]
+Input: x: a list of integers or comparable elements
+Output: A new list that is a sorted version of x
+
+1: If the length of x is 1 or less, return x as it is already sorted.
+2: Divide the list x into two halves, left and right.
+3: Recursively sort the left half using merge_sort.
+4: Recursively sort the right half using merge_sort.
+5: Merge the two sorted halves into a single sorted list.
+   - Initialize an empty list called merged.
+   - Initialize two pointers, i and j, to 0, which will iterate over the left and right lists, respectively.
+   - While i is less than the length of the left list and j is less than the length of the right list:
+     - If the element at index i in the left list is less than or equal to the element at index j in the right list:
+       - Append the element at index i from the left list to merged.
+       - Increment i by 1.
+     - Otherwise:
+       - Append the element at index j from the right list to merged.
+       - Increment j by 1.
+   - If there are remaining elements in the left list, append them to merged.
+   - If there are remaining elements in the right list, append them to merged.
+6: Return the merged list.
+[END PROCESS]
+
+[BEGIN CODE]
+def merge_sort(x):
+    # Base case: if the list is of length 0 or 1, it is already sorted
+    if len(x) <= 1:
+        return x
+    
+    # Divide the list into two halves
+    mid = len(x) // 2
+    left = x[:mid]
+    right = x[mid:]
+    
+    # Recursively sort both halves
+    left_sorted = merge_sort(left)
+    right_sorted = merge_sort(right)
+    
+    # Merge the sorted halves
+    return merge(left_sorted, right_sorted)
+
+def merge(left, right):
+    merged = []
+    i = j = 0
+    
+    # Merge the two lists while there are elements in both
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            merged.append(left[i])
+            i += 1
+        else:
+            merged.append(right[j])
+            j += 1
+    
+    # Append any remaining elements from the left list
+    while i < len(left):
+        merged.append(left[i])
+        i += 1
+    
+    # Append any remaining elements from the right list
+    while j < len(right):
+        merged.append(right[j])
+        j += 1
+    
+    return merged
+[END CODE]
+
+### Explanation:
+The `merge_sort` function implements the merge sort algorithm, which is a divide-and-conquer algorithm. The process involves recursively dividing the input list into smaller sublists until each sublist contains a single element (which is inherently sorted). The `merge` function then combines these sublists back together in a sorted manner.
+
+1. **Base Case**: If the list has 0 or 1 elements, it is already sorted, so we return it as is.
+2. **Divide**: The list is divided into two halves. This is done by finding the midpoint of the list.
+3. **Conquer**: Each half is sorted recursively using the `merge_sort` function.
+4. **Combine**: The two sorted halves are merged back together using the `merge` function, which ensures that the resulting list is sorted.
+
+The `merge` function works by maintaining two pointers, one for each of the two sublists. It compares the elements at these pointers and appends the smaller element to the `merged` list. This process continues until one of the sublists is exhausted, at which point any remaining elements from the other sublist are appended to the `merged` list. This ensures that the final merged list is sorted.

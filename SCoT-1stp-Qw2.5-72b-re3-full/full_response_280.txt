@@ -1,0 +1,37 @@
+[BEGIN PROCESS]
+Input: dlist: a list of elements, item: the element to search for
+Output: The index of the item if found, otherwise -1
+
+1: Initialize a variable `index` to 0
+2: Loop through the list `dlist`:
+3:     If the current element is equal to `item`:
+4:         Return the current `index`
+5:     Increment `index` by 1
+6: If the loop completes without finding the item:
+7:     Return -1
+[END PROCESS]
+
+[BEGIN CODE]
+def sequential_search(dlist, item):
+    index = 0
+    for element in dlist:
+        if element == item:
+            return index
+        index += 1
+    return -1
+[END CODE]
+
+### Explanation:
+The function `sequential_search` is designed to search for a specific `item` in a given list `dlist`. The process is straightforward and follows a linear search approach, which is suitable for unsorted lists or when the list is small.
+
+1. **Initialization**: We start by initializing an `index` variable to 0. This variable will keep track of the current position in the list as we iterate through it.
+
+2. **Loop Through the List**: We use a `for` loop to iterate through each element in the list `dlist`.
+
+3. **Check for the Item**: Inside the loop, we check if the current element is equal to the `item` we are searching for. If it is, we return the current `index`.
+
+4. **Increment Index**: If the current element is not the `item`, we increment the `index` by 1 to move to the next position in the list.
+
+5. **Return -1 if Not Found**: If the loop completes without finding the `item`, we return -1 to indicate that the `item` is not present in the list.
+
+This approach ensures that we check each element in the list exactly once, making it a simple and effective solution for sequential search.

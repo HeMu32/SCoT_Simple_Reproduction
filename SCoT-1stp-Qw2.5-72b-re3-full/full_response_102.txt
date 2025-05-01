@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: word: a string in snake_case format
+Output: camelCase: a string in camelCase format
+
+1: Initialize an empty string named camelCase to store the result.
+2: Split the input string word by underscores to get a list of words.
+3: For each word in the list:
+4:     If it is the first word, append it to camelCase as is (lowercase).
+5:     For all other words, capitalize the first letter and append the rest of the word to camelCase.
+6: Return the camelCase string.
+[END PROCESS]
+
+[BEGIN CODE]
+def snake_to_camel(word):
+    camelCase = ""
+    words = word.split('_')
+    for i, w in enumerate(words):
+        if i == 0:
+            camelCase += w.lower()
+        else:
+            camelCase += w.capitalize()
+    return camelCase
+[END CODE]
+
+### Explanation:
+- **Step 1:** Initialize an empty string `camelCase` to build the final camelCase string.
+- **Step 2:** Split the input string `word` by underscores using the `split('_')` method, which returns a list of words.
+- **Step 3:** Iterate over the list of words using a for loop.
+- **Step 4:** If the current word is the first word in the list, append it to `camelCase` as is, ensuring it remains in lowercase.
+- **Step 5:** For all other words, capitalize the first letter using the `capitalize()` method and append the rest of the word to `camelCase`.
+- **Step 6:** Return the final `camelCase` string.
+
+This approach ensures that the first word is in lowercase and all subsequent words have their first letter capitalized, which is the correct format for a camelCase string.

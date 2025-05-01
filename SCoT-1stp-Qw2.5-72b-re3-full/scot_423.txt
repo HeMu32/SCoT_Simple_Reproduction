@@ -1,0 +1,11 @@
+1. **Initialize a 2D list `dp`** of size `m x n` to store the maximum gold that can be collected up to each cell.
+2. **Copy the first column of `gold` to `dp`** since the maximum gold collected from the first column is the gold in that cell itself.
+3. **Iterate through each cell in the gold mine starting from the second column**:
+   - For each cell `(i, j)` in the current column:
+     - **Check the possible moves** from the previous column:
+       - Move from the cell directly to the left.
+       - Move from the cell diagonally up to the left.
+       - Move from the cell diagonally down to the left.
+     - **Update `dp[i][j]`** with the maximum gold collected from the possible moves plus the gold in the current cell.
+4. **Find the maximum value in the last column of `dp`** which represents the maximum gold that can be collected.
+5. **Return the maximum value**.

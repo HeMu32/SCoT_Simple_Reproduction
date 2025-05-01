@@ -1,0 +1,8 @@
+[BEGIN CODE]
+```python
+def find_gcd(x, y):
+    while(y):
+        x, y = y, x % y
+    return x
+```
+[END CODE]

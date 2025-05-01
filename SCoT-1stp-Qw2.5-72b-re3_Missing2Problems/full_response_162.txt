@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: n: a positive integer
+Output: sum: the sum of the series n + (n-2) + (n-4) + ... (until n-x <= 0)
+
+1: Initialize sum to 0
+2: Initialize current to n
+3: Loop while current is greater than 0:
+4:     Add current to sum
+5:     Subtract 2 from current
+6: Return sum
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_series(n):
+    sum = 0
+    current = n
+    while current > 0:
+        sum += current
+        current -= 2
+    return sum
+[END CODE]
+
+Explanation:
+The function `sum_series` calculates the sum of a series where each term decreases by 2 starting from `n` until the term is less than or equal to 0. The process involves initializing a variable `sum` to store the cumulative sum and a variable `current` to track the current term in the series. The loop continues as long as `current` is greater than 0, adding `current` to `sum` and then decrementing `current` by 2. Once the loop condition fails, the function returns the total sum. This approach ensures that all terms in the series are included in the sum, and the function correctly handles the termination condition when `current` is no longer positive.

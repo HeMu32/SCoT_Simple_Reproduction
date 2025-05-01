@@ -1,0 +1,11 @@
+Input: listval: a heterogeneous list 
+Output: max_val: the maximum integer value in listval 
+1: Initialize max_val to None 
+2: for each element i in listval: 
+3:     if i is an integer: 
+4:         if max_val is None or i is greater than max_val: 
+5:             set max_val to i 
+6: if max_val is None: 
+7:     return None 
+8: else: 
+9:     return max_val

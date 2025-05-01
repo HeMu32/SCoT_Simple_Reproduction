@@ -1,0 +1,12 @@
+Input: n: an integer  
+Output: an integer with the leftmost unset bit set  
+
+1: if n & (n + 1) is 0:  
+2:     return n  
+3: initialize pos to 0, temp to n, and count to 0  
+4: while temp is not 0:  
+5:     if the least significant bit of temp is 0:  
+6:         set pos to count  
+7:     increment count by 1  
+8:     right shift temp by 1 bit  
+9: return n with the bit at position pos set to 1

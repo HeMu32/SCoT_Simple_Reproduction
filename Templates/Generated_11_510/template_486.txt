@@ -1,0 +1,19 @@
+Input: n: integer, r: integer
+Output: binomial coefficient: float
+
+1: if r is greater than n divided by 2:
+2:     set r to n minus r
+3: initialize answer to 1
+4: for i from 1 to r inclusive:
+5:     multiply answer by (n - r + i)
+6:     divide answer by i
+7: return answer
+
+Input: n: integer, k: integer, p: float
+Output: binomial probability: float
+
+1: compute the binomial coefficient using the nCr function
+2: compute p to the power of k
+3: compute (1 - p) to the power of (n - k)
+4: multiply the binomial coefficient by the results of steps 2 and 3
+5: return the result of step 4

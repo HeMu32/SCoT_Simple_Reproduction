@@ -1,0 +1,20 @@
+Input: string: a string containing spaces
+Output: A new string with all spaces replaced by '%20'
+
+1: Remove leading and trailing spaces from the string
+2: Calculate the length of the string
+3: Count the number of spaces in the string
+4: Calculate the new length of the string after replacing spaces with '%20'
+5: If the new length exceeds the maximum allowed length (1000), return -1
+6: Convert the string into a list of characters
+7: Extend the list to accommodate the new length
+8: Initialize an index to the last position of the new length
+9: Loop through the original string in reverse order
+10:     If the current character is a space:
+11:         Replace the current position and the two positions before it with '0', '2', and '%', respectively
+12:         Move the index back by 3 positions
+13:     Else:
+14:         Copy the current character to the new position
+15:         Move the index back by 1 position
+16: Convert the list back to a string
+17: Return the new string

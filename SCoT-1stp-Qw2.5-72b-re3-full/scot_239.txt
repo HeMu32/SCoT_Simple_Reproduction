@@ -1,0 +1,13 @@
+Input: m: an integer representing the maximum value of the elements in the sequence
+       n: an integer representing the length of the sequence
+Output: count: the number of possible sequences of length n where each element is greater than or equal to twice the previous element and less than or equal to m
+
+1: Initialize count to 0
+2: Define a recursive function count_sequences that takes current index, previous value, and m as parameters
+3:     If the current index equals n:
+4:         Increment count by 1
+5:         Return
+6:     For each value i from (previous value * 2) to m:
+7:         Call count_sequences with (current index + 1), i, and m
+8: Call count_sequences with 0, 1, and m
+9: Return count

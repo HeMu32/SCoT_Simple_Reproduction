@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: a: an integer or float, b: an integer or float
+Output: The maximum value between a and b
+
+1: Define the function `maximum` with parameters `a` and `b`
+2: Compare `a` and `b` using a conditional statement
+3:   If `a` is greater than `b`, return `a`
+4:   Otherwise, return `b`
+[END PROCESS]
+
+[BEGIN CODE]
+def maximum(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+[END CODE]
+
+### Explanation:
+The function `maximum` is designed to find the maximum value between two numbers, `a` and `b`. The process involves a simple comparison using an `if-else` statement. If `a` is greater than `b`, the function returns `a`; otherwise, it returns `b`. This approach ensures that the function always returns the larger of the two numbers. The use of a conditional statement (branch) is the key structure in this solution, as it allows the function to make a decision based on the comparison of the two inputs.

@@ -1,0 +1,53 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number of fence posts, k: an integer representing the number of colors available
+Output: an integer representing the number of ways to paint the fence posts with the given constraints
+
+1: If n is 0, return 0 (no posts to paint)
+2: If n is 1, return k (each post can be painted in k ways)
+3: If n is 2, return k * k (each post can be painted in k ways, and the second post can be painted in k ways regardless of the first post's color)
+4: Initialize two variables, same and diff, to store the number of ways to paint the fence with the last two posts the same color and different colors, respectively
+5: Set same to k (the first post can be painted in k ways, and the second post must be the same color)
+6: Set diff to k * (k - 1) (the first post can be painted in k ways, and the second post can be painted in k - 1 ways, ensuring the colors are different)
+7: For each post from 3 to n:
+8:     Calculate the new value for diff as (same + diff) * (k - 1) (the current post can be painted in k - 1 ways, and the previous post can be either the same or different)
+9:     Calculate the new value for same as diff (the current post must be the same color as the previous post, which can only happen if the previous post was different from the one before it)
+10: Return the sum of same and diff (the total number of ways to paint the fence)
+[END PROCESS]
+
+[BEGIN CODE]
+def count_no_of_ways(n, k):
+    if n == 0:
+        return 0
+    if n == 1:
+        return k
+    if n == 2:
+        return k * k
+    
+    same = k  # The number of ways to paint the fence with the last two posts the same color
+    diff = k * (k - 1)  # The number of ways to paint the fence with the last two posts different colors
+    
+    for _ in range(3, n + 1):
+        new_diff = (same + diff) * (k - 1)
+        same = diff
+        diff = new_diff
+    
+    return same + diff
+[END CODE]
+
+### Explanation:
+The function `count_no_of_ways(n, k)` calculates the number of ways to paint a fence with `n` posts using `k` colors such that no more than two adjacent posts have the same color. The approach uses dynamic programming to keep track of the number of valid ways to paint the fence as we iterate through each post.
+
+- **Base Cases:**
+  - If `n` is 0, there are no posts to paint, so the number of ways is 0.
+  - If `n` is 1, each post can be painted in `k` ways.
+  - If `n` is 2, each post can be painted in `k` ways, and the second post can be painted in `k` ways regardless of the first post's color, so the total number of ways is `k * k`.
+
+- **Dynamic Programming:**
+  - `same` keeps track of the number of ways to paint the fence such that the last two posts have the same color.
+  - `diff` keeps track of the number of ways to paint the fence such that the last two posts have different colors.
+  - For each post from 3 to `n`, we update `diff` and `same`:
+    - `new_diff` is calculated as `(same + diff) * (k - 1)`, because the current post can be painted in `k - 1` ways (any color except the color of the previous post), and the previous post can be either the same or different from the post before it.
+    - `same` is updated to the previous value of `diff`, because the current post must be the same color as the previous post, which can only happen if the previous post was different from the one before it.
+  - Finally, the total number of ways to paint the fence is the sum of `same` and `diff`.
+
+This approach ensures that the constraints are met and efficiently calculates the number of valid ways to paint the fence.

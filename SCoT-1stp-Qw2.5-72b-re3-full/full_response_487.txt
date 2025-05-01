@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: tup: a list of tuples
+Output: sorted_tup: a list of tuples sorted in increasing order by the last element in each tuple
+
+1: Define a helper function `last` that takes a tuple and returns its last element.
+2: Use the `sorted` function with a key argument set to the helper function `last` to sort the list of tuples based on their last elements.
+3: Return the sorted list of tuples.
+[END PROCESS]
+
+[BEGIN CODE]
+def sort_tuple(tup):
+    # Helper function to get the last element of a tuple
+    def last(n):
+        return n[-1]
+    
+    # Sort the list of tuples using the last element of each tuple
+    sorted_tup = sorted(tup, key=last)
+    
+    return sorted_tup
+[END CODE]
+
+### Explanation:
+- **Helper Function (`last`)**: This function takes a tuple `n` and returns the last element of the tuple. This is used as the key function in the `sorted` function to determine the sorting order.
+- **Sorting**: The `sorted` function sorts the list of tuples based on the key provided by the `last` function. The `key` parameter in the `sorted` function specifies a function of one argument that is used to extract a comparison key from each input element.
+- **Return**: The sorted list of tuples is returned.
+
+This approach ensures that the list of tuples is sorted in increasing order based on the last element of each tuple.

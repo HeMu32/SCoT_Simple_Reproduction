@@ -1,0 +1,8 @@
+[BEGIN]
+Input: str1: a string  
+Output: total: the total number of characters in str1  
+1: Initialize a variable total to 0  
+2: for each character i in str1:  
+3:     Increment total by 1  
+4: return total  
+[END]

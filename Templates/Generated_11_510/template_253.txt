@@ -1,0 +1,7 @@
+Input: list1: a list of elements
+Output: count: the number of integers in list1
+1: Initialize a counter variable `ctr` to 0
+2: For each element `i` in list1:
+3:     If `i` is an instance of the integer type:
+4:         Increment `ctr` by 1
+5: Return `ctr`

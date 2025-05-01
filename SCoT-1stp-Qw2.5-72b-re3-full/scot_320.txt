@@ -1,0 +1,11 @@
+Input: n: an integer representing the number of the first natural numbers to consider.
+Output: The difference between the squared sum of the first n natural numbers and the sum of the squares of the first n natural numbers.
+
+1: Initialize a variable `sum_of_squares` to 0 to store the sum of the squares of the first n natural numbers.
+2: Initialize a variable `square_of_sum` to 0 to store the square of the sum of the first n natural numbers.
+3: Loop from 1 to n (inclusive):
+4:     Add the square of the current number to `sum_of_squares`.
+5:     Add the current number to `square_of_sum`.
+6: After the loop, square the `square_of_sum`.
+7: Calculate the difference between `square_of_sum` and `sum_of_squares`.
+8: Return the calculated difference.

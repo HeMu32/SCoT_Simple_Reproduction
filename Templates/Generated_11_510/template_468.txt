@@ -1,0 +1,11 @@
+Input: arr: a list of integers, n: the length of arr
+Output: the maximum product of an increasing subsequence in arr
+
+1: Initialize an array mpis of length n with all elements set to 0
+2: For each index i from 0 to n-1:
+3:     Set mpis[i] to arr[i]
+4: For each index i from 1 to n-1:
+5:     For each index j from 0 to i-1:
+6:         If arr[i] is greater than arr[j] and mpis[i] is less than mpis[j] * arr[i]:
+7:             Set mpis[i] to mpis[j] * arr[i]
+8: Return the maximum value in mpis

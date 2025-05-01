@@ -1,0 +1,6 @@
+Input: x, y: two integers  
+Output: True if x and y have opposite signs, False otherwise  
+1: Compute the bitwise XOR of x and y  
+2: Check if the result of the XOR operation is less than 0  
+3:     If true, return True (indicating opposite signs)  
+4:     If false, return False (indicating same signs)

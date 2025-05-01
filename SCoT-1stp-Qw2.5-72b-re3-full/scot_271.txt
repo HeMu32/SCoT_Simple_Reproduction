@@ -1,0 +1,9 @@
+Input: n: an integer representing the number of first even natural numbers to consider.
+Output: sum: an integer representing the sum of the fifth power of the first n even natural numbers.
+
+1: Initialize a variable sum to 0 to store the cumulative sum.
+2: Loop through each integer i from 1 to n inclusive.
+3:     Calculate the even number as 2 * i.
+4:     Calculate the fifth power of the even number.
+5:     Add the fifth power to the sum.
+6: After the loop, return the sum.

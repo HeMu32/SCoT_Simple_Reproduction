@@ -1,0 +1,12 @@
+Input: N: a decimal number  
+Output: B_Number: a binary number as an integer  
+
+1: Initialize B_Number to 0  
+2: Initialize cnt to 0  
+3: While N is not equal to 0:  
+4:     Calculate the remainder of N divided by 2 and store it in rem  
+5:     Calculate 10 raised to the power of cnt and store it in c  
+6:     Add the product of rem and c to B_Number  
+7:     Update N to the integer division of N by 2  
+8:     Increment cnt by 1  
+9: Return B_Number

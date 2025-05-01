@@ -1,0 +1,7 @@
+Input: test_list: a list of tuples, K: an integer  
+Output: res: a list of tuples with tuples of length K removed  
+1: Initialize an empty list res  
+2: For each element ele in test_list:  
+3:     If the length of ele is not equal to K:  
+4:         Append ele to res  
+5: Return res

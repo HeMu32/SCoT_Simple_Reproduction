@@ -1,0 +1,11 @@
+[BEGIN]
+Input: n: an integer representing half the length of the binary sequences
+Output: res: the count of all binary sequences of length 2n such that the sum of the first n bits is the same as the sum of the last n bits
+
+1: Initialize nCr to 1
+2: Initialize res to 1
+3: for r from 1 to n (inclusive):
+4:     Update nCr to (nCr * (n + 1 - r)) / r
+5:     Add (nCr * nCr) to res
+6: return res
+[END]

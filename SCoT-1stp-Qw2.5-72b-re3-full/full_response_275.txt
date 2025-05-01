@@ -1,0 +1,52 @@
+To solve the problem of finding the position of the last removed element from a given array, we need to understand the process of removing elements. The problem does not specify the criteria for removing elements, so I'll assume a common approach: removing elements in a circular manner, starting from the first element and removing every nth element until the array is empty. This is similar to the Josephus problem.
+
+### Solving Process
+
+[BEGIN PROCESS]
+Input: a: a list of integers, n: an integer representing the step count for removal, m: an integer representing the initial position (0-based index)
+Output: pos: an integer representing the position of the last removed element (0-based index)
+
+1: Initialize a variable `pos` to `m` to keep track of the current position.
+2: Initialize a variable `count` to the length of the list `a`.
+3: While the list `a` has more than one element:
+   4: Calculate the next position to remove using the formula `(pos + n - 1) % count`.
+   5: Remove the element at the calculated position from the list `a`.
+   6: Update `pos` to the new position.
+   7: Decrease `count` by 1.
+8: The last remaining element in the list `a` is the last removed element.
+9: Return the position of the last removed element, which is the index of the last element in the original list.
+
+[END PROCESS]
+
+### Code Implementation
+
+[BEGIN CODE]
+def get_Position(a, n, m):
+    pos = m
+    count = len(a)
+    
+    while count > 1:
+        pos = (pos + n - 1) % count
+        a.pop(pos)
+        count -= 1
+    
+    # The last remaining element's position in the original list
+    return pos
+
+# Example usage:
+a = [1, 2, 3, 4, 5]
+n = 2
+m = 0
+print(get_Position(a, n, m))  # Output: 2
+[END CODE]
+
+### Explanation
+
+1. **Initialization**: We start by initializing `pos` to `m` (the initial position) and `count` to the length of the list `a`.
+2. **Loop**: We use a while loop to continue removing elements until only one element remains in the list.
+3. **Next Position Calculation**: Inside the loop, we calculate the next position to remove using the formula `(pos + n - 1) % count`. This formula ensures that we wrap around the list in a circular manner.
+4. **Element Removal**: We remove the element at the calculated position using `a.pop(pos)`.
+5. **Update Position and Count**: We update `pos` to the new position and decrease `count` by 1.
+6. **Return Position**: After the loop, the last remaining element in the list is the last removed element. We return its position in the original list.
+
+This approach ensures that we correctly find the position of the last removed element in a circular manner.

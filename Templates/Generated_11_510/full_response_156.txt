@@ -1,0 +1,11 @@
+[BEGIN]
+Input: tuple_str: a tuple of string values  
+Output: result: a tuple of integer values  
+
+1: Initialize an empty tuple named result  
+2: For each element x in tuple_str:  
+3:     Convert the first character of x to an integer and the second character of x to an integer  
+4:     Create a tuple with these two integers  
+5:     Add this tuple to result  
+6: Return result  
+[END]

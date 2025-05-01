@@ -1,0 +1,7 @@
+def adjacent_num_product(list_nums):
+    max_product = list_nums[0] * list_nums[1]
+    for i in range(1, len(list_nums) - 1):
+        product = list_nums[i] * list_nums[i + 1]
+        if product > max_product:
+            max_product = product
+    return max_product

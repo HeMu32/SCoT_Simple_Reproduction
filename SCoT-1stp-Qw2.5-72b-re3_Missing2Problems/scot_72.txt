@@ -1,0 +1,10 @@
+Input: n: an integer
+Output: A boolean value indicating whether the number can be represented as the difference of two squares
+
+1: Check if n is less than 0; if so, return False since negative numbers cannot be represented as the difference of two squares.
+2: If n is 0 or 1, return True as both can be represented as the difference of two squares (0 = 0^2 - 0^2, 1 = 1^2 - 0^2).
+3: For numbers greater than 1, check if n is odd or a multiple of 4:
+   - If n is odd, it can always be represented as the difference of two squares.
+   - If n is a multiple of 4, it can also be represented as the difference of two squares.
+   - If n is even but not a multiple of 4, it cannot be represented as the difference of two squares.
+4: Return the result of the check.

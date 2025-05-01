@@ -1,0 +1,7 @@
+Input: list1: a list, L: an integer indicating the length of the first part
+Output: Two lists, the first part of length L and the second part containing the remaining elements
+
+1: Split the list1 into two parts:
+2:     - The first part from the start to the Lth element (exclusive)
+3:     - The second part from the Lth element to the end
+4: Return the two parts as a tuple

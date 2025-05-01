@@ -1,0 +1,9 @@
+Input: test_list: a list of tuples, K: an integer indicating the number of elements to trim from each tuple
+Output: result: a list of tuples where each tuple has been trimmed by K elements from both the start and the end
+
+1: Initialize an empty list called result to store the trimmed tuples.
+2: For each tuple in test_list:
+3:     If the length of the tuple is less than 2 * K, skip this tuple as it cannot be trimmed by K from both ends.
+4:     Otherwise, slice the tuple from index K to the length of the tuple minus K.
+5:     Append the sliced tuple to the result list.
+6: Return the result list.

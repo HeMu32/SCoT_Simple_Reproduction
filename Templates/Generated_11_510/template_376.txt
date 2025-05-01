@@ -1,0 +1,10 @@
+Input: test_tup: a tuple  
+Output: res: a tuple with duplicates replaced by 'MSP'  
+1: Initialize an empty set temp  
+2: Initialize an empty tuple res  
+3: For each element ele in test_tup:  
+4:     If ele is not in temp and adding ele to temp is successful:  
+5:         Add ele to res  
+6:     Else:  
+7:         Add 'MSP' to res  
+8: Return res

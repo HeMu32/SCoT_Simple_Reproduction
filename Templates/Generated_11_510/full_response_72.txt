@@ -1,0 +1,8 @@
+[BEGIN]
+Input: n: an integer
+Output: True if n can be represented as the difference of two squares, otherwise False
+1: if n modulo 4 is not equal to 2:
+2:     return True
+3: else:
+4:     return False
+[END]

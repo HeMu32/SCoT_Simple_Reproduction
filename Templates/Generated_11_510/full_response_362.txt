@@ -1,0 +1,12 @@
+[BEGIN]
+Input: nums: a list of items
+Output: item: the item with the maximum occurrences in nums
+1: Initialize max_val to 0
+2: Initialize result to the first item in nums
+3: for each item i in nums:
+4:     Calculate the number of occurrences of i in nums and store it in occu
+5:     if occu is greater than max_val:
+6:         Update max_val to occu
+7:         Update result to i
+8: return result
+[END]

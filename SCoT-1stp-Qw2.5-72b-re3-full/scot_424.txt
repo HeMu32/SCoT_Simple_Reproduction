@@ -1,0 +1,8 @@
+Input: test_tuple: a tuple containing strings
+Output: res: a list of the last characters of each string in the tuple
+
+1: Initialize an empty list res to store the results
+2: Loop through each string in the test_tuple
+3:   For each string, extract the last character
+4:   Append the last character to the res list
+5: Return the res list

@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: s: number of sides of the polygon, l: length of each side
+Output: area: the area of the regular polygon
+
+1: Calculate the apothem (a) of the polygon using the formula: a = l / (2 * tan(π / s))
+2: Calculate the perimeter (p) of the polygon using the formula: p = s * l
+3: Calculate the area (area) of the polygon using the formula: area = (p * a) / 2
+4: Return the area
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def area_polygon(s, l):
+    # Calculate the apothem
+    apothem = l / (2 * math.tan(math.pi / s))
+    # Calculate the perimeter
+    perimeter = s * l
+    # Calculate the area
+    area = (perimeter * apothem) / 2
+    return area
+[END CODE]
+
+### Explanation:
+To calculate the area of a regular polygon, we use the formula that involves the apothem (the perpendicular distance from the center to a side) and the perimeter of the polygon. The apothem is calculated using the length of a side and the number of sides, and the perimeter is simply the number of sides multiplied by the length of each side. The area is then calculated by multiplying the perimeter by the apothem and dividing by 2. This method ensures that the area is accurately computed for any regular polygon given the number of sides and the length of each side.

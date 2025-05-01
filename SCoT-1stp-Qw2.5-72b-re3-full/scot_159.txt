@@ -1,0 +1,8 @@
+Input: month: a string representing the month, days: an integer representing the day of the month
+Output: season: a string representing the season for the given month and day
+1: Convert the month to lowercase to ensure case insensitivity
+2: Initialize season as an empty string
+3: Use a series of if-elif-else statements to determine the season based on the month and day
+4: For each month, check if the day falls within the range that defines the transition between seasons
+5: Assign the appropriate season based on the month and day
+6: Return the season

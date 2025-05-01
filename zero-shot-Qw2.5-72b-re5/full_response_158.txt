@@ -1,0 +1,14 @@
+[BEGIN CODE]
+```python
+def min_Ops(arr, n, k):
+    if n == 0:
+        return 0
+    min_val = min(arr)
+    operations = 0
+    for i in range(n):
+        if (arr[i] - min_val) % k != 0:
+            return -1
+        operations += (arr[i] - min_val) // k
+    return operations
+```
+[END CODE]

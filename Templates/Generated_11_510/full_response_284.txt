@@ -1,0 +1,10 @@
+[BEGIN]
+Input: list: a list of elements, element: a string to compare against
+Output: True if all items in the list are equal to the given string, otherwise False
+1: Initialize a variable `check_element` to store the result
+2: Use a generator expression to iterate over each element `v` in the list:
+3:     Check if `v` is equal to the given `element`
+4: Use the `all` function to evaluate if all elements in the generator expression are True
+5: Assign the result of the `all` function to `check_element`
+6: Return `check_element`
+[END]

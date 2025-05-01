@@ -1,0 +1,8 @@
+Input: list1: a list of tuples, where each tuple contains two integers
+Output: max_product: the maximum product of the pairs of integers from the tuples in list1
+1: Initialize max_product to None to keep track of the maximum product found
+2: for each tuple t in list1:
+3:     calculate the product of the two integers in t
+4:     if max_product is None or the current product is greater than max_product:
+5:         update max_product to the current product
+6: return max_product

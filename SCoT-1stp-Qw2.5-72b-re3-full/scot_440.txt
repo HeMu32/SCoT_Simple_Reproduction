@@ -1,0 +1,10 @@
+Input: text: a string representing a sentence
+Output: adverbs: a list of tuples, each containing an adverb and its starting position in the text
+
+1: Initialize an empty list to store the adverbs and their positions
+2: Split the text into words
+3: Loop through each word in the text
+4:     If the word ends with "ly" (a common adverb ending in English):
+5:         Record the word and its position in the text
+6:         Append the adverb and its position to the list
+7: Return the list of adverbs and their positions

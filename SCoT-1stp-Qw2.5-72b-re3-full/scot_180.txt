@@ -1,0 +1,10 @@
+Input: slat, slon: starting latitude and longitude (in degrees)  
+        elat, elon: ending latitude and longitude (in degrees)  
+Output: distance: the distance between the two points in kilometers  
+
+1: Import the math module to use trigonometric functions and the value of pi.
+2: Convert the latitude and longitude from degrees to radians.
+3: Calculate the differences in latitude and longitude.
+4: Apply the Haversine formula to calculate the great-circle distance between the two points.
+5: The Earth's radius is approximately 6371 kilometers, which is used in the distance calculation.
+6: Return the calculated distance.

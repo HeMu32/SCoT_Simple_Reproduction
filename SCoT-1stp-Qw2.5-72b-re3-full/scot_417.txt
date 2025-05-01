@@ -1,0 +1,10 @@
+Input: Input: a list of tuples
+Output: a dictionary where each key is a unique first element from the tuples, and the value is a list of tuples that have this first element
+
+1: Initialize an empty dictionary to store the grouped tuples
+2: Iterate over each tuple in the input list
+3:     Extract the first element of the current tuple
+4:     If the first element is not already a key in the dictionary:
+5:         Add the first element as a new key with an empty list as its value
+6:     Append the current tuple to the list of the corresponding key
+7: Return the dictionary

@@ -1,0 +1,11 @@
+[BEGIN]
+Input: nums: a tuple of tuples containing numbers  
+Output: result: a list of average values of the numbers in each position across all tuples  
+
+1: Initialize an empty list named result  
+2: Unpack the tuples in nums using zip(*nums) to align elements at the same index from each tuple  
+3: For each aligned set of elements x in the unpacked tuples:  
+4:     Calculate the average of the elements in x by summing them and dividing by the length of x  
+5:     Append the calculated average to the result list  
+6: Return the result list  
+[END]

@@ -1,0 +1,10 @@
+Input: n: an octal number as a string
+Output: decimal: the decimal equivalent of the octal number
+
+1: Initialize `decimal` to 0
+2: Initialize `base` to 1 (which is 8^0)
+3: Iterate over the characters in the string `n` from the last character to the first:
+4:     Convert the current character to an integer and store it in `digit`
+5:     Add `digit * base` to `decimal`
+6:     Multiply `base` by 8
+7: Return `decimal`

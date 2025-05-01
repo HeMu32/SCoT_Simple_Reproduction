@@ -1,0 +1,11 @@
+Input: n: an integer
+Output: The next bigger number formed by rearranging the digits of n, or -1 if it is not possible
+
+1: Convert the integer n to a list of its digits.
+2: Identify the first digit from the right that is smaller than the digit immediately to its right. This is the pivot.
+3: If no such digit is found, it means the digits are in descending order, and no larger number can be formed. Return -1.
+4: Find the smallest digit on the right side of the pivot that is larger than the pivot.
+5: Swap the pivot with this digit.
+6: Sort the digits to the right of the pivot's original position in ascending order.
+7: Convert the list of digits back to an integer.
+8: Return the new integer.

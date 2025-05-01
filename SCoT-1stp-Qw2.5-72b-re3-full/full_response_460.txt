@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: lst: a list of sublists
+Output: A list containing the first element of each sublist
+
+1: Initialize an empty list result
+2: Loop through each sublist in lst
+3:     For each sublist, extract the first element
+4:     Append the first element to result
+5: Return the result list
+[END PROCESS]
+
+[BEGIN CODE]
+def Extract(lst):
+    result = []
+    for sublist in lst:
+        if sublist:  # Check if the sublist is not empty
+            result.append(sublist[0])
+    return result
+[END CODE]
+
+### Explanation:
+The function `Extract` is designed to take a list of sublists (`lst`) as input and return a new list containing the first element of each sublist. The process involves:
+- Initializing an empty list `result` to store the first elements.
+- Iterating over each sublist in the input list `lst`.
+- For each sublist, checking if it is not empty to avoid an `IndexError`.
+- If the sublist is not empty, appending the first element of the sublist to the `result` list.
+- Finally, returning the `result` list.
+
+This approach ensures that the function handles cases where sublists might be empty, preventing runtime errors.

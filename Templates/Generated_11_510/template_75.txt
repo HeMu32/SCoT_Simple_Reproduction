@@ -1,0 +1,12 @@
+Input: test_list: a list of tuples, K: an integer
+Output: a string representation of a list of tuples where each tuple has all elements divisible by K
+
+1: Initialize an empty list res to store the resulting tuples.
+2: For each tuple sub in test_list:
+3:     Initialize a flag variable all_divisible to True.
+4:     For each element ele in sub:
+5:         If ele is not divisible by K:
+6:             Set all_divisible to False and break the loop.
+7:     If all_divisible is True:
+8:         Append sub to res.
+9: Convert res to a string and return it.

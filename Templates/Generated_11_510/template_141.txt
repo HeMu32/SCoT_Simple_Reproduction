@@ -1,0 +1,10 @@
+Input: nums: a list of integers  
+Output: sorted_nums: a sorted list of integers  
+
+1: Set arr_len to the length of nums  
+2: While arr_len is greater than 1:  
+3:     Find the index mi of the maximum element in the sublist nums[0:arr_len]  
+4:     Flip the sublist nums[0:mi+1] to move the maximum element to the front  
+5:     Flip the entire sublist nums[0:arr_len] to move the maximum element to its correct position at the end  
+6:     Decrease arr_len by 1  
+7: Return nums

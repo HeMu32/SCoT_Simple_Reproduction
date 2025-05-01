@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: word: a string in snake_case format
+Output: word: the string converted to camelCase format
+
+1: Use a regular expression to find all occurrences of an underscore followed by a lowercase letter.
+2: For each match, replace the underscore and the letter with the uppercase version of the letter.
+3: Return the modified string.
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def snake_to_camel(word):
+    # Use regex to find and replace all occurrences of '_[a-z]' with the uppercase of the letter
+    return re.sub(r'_([a-z])', lambda x: x.group(1).upper(), word)
+[END CODE]
+
+### Explanation:
+The function `snake_to_camel` converts a string from snake_case to camelCase using regular expressions. Here's a breakdown of the steps:
+
+1. **Regular Expression**: The pattern `r'_([a-z])'` is used to match any underscore followed by a lowercase letter. The parentheses `()` create a capturing group, which allows us to refer to the matched letter later.
+
+2. **Replacement**: The `re.sub` function is used to replace each match with the uppercase version of the letter. The lambda function `lambda x: x.group(1).upper()` is used to convert the matched letter (captured in group 1) to its uppercase form.
+
+3. **Return**: The modified string, where all underscores and their following letters have been replaced, is returned.
+
+This approach ensures that the string is converted correctly from snake_case to camelCase.

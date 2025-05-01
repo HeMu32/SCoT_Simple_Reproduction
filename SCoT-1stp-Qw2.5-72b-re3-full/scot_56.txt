@@ -1,0 +1,9 @@
+Input: n: an integer to check
+Output: A boolean value indicating whether the number is one less than twice its reverse.
+
+1: Convert the integer n to a string to facilitate reversing.
+2: Reverse the string representation of n.
+3: Convert the reversed string back to an integer.
+4: Calculate twice the reversed integer and subtract one.
+5: Compare the result from step 4 with the original number n.
+6: If they are equal, return True; otherwise, return False.

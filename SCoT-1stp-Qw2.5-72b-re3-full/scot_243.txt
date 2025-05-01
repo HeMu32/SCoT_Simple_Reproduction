@@ -1,0 +1,10 @@
+Input: lst: a list of tuples
+Output: sorted_lst: a list of tuples sorted based on the occurrence of the first element of each tuple
+
+1: Initialize an empty dictionary named count_dict to store the count of the first element of each tuple.
+2: Loop through each tuple in lst:
+3:     If the first element of the tuple is not in count_dict, add it with a count of 1.
+4:     If the first element of the tuple is already in count_dict, increment its count by 1.
+5: Define a helper function named sort_key that takes a tuple and returns the count of its first element from count_dict.
+6: Sort lst using the sort_key function as the key.
+7: Return the sorted list.

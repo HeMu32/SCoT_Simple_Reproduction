@@ -1,0 +1,6 @@
+Input: str1: a string from which lowercase substrings need to be removed
+Output: result: a string with all lowercase substrings removed
+
+1: Import the `re` module for regular expression operations
+2: Use the `re.sub` function to substitute all lowercase letters (a-z) with an empty string
+3: Return the modified string

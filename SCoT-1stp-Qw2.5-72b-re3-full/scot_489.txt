@@ -1,0 +1,10 @@
+Input: n: an integer representing the size of the array, arr: a list of integers
+Output: frequency: an integer representing the frequency of the largest value in the array
+
+1: Check if the array is empty or if n is less than 1. If so, return 0 as there are no elements to process.
+2: Initialize a variable `max_value` to store the largest value found in the array. Set it to the first element of the array.
+3: Initialize a variable `frequency` to 0 to count the occurrences of the largest value.
+4: Loop through each element in the array:
+5:   If the current element is greater than `max_value`, update `max_value` to the current element and reset `frequency` to 1.
+6:   If the current element is equal to `max_value`, increment `frequency` by 1.
+7: After the loop, return the `frequency` of the largest value.

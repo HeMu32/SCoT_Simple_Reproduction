@@ -1,0 +1,10 @@
+Input: test_list: a list of tuples
+Output: freq_dict: a dictionary where each key is a tuple (considering order of elements as irrelevant) and the value is the frequency of that tuple in the input list
+
+1: Import Counter from the collections module
+2: Initialize an empty Counter object named freq_dict
+3: For each tuple t in test_list:
+4:     Sort the tuple t to ensure that tuples with the same elements in different orders are treated as the same
+5:     Convert the sorted tuple to a tuple (since lists are not hashable and cannot be used as dictionary keys)
+6:     Update the Counter object with the sorted tuple
+7: Return the freq_dict

@@ -1,0 +1,11 @@
+[BEGIN]
+Input: text: a string  
+Output: A list of tuples, each containing the start position, end position, and the adverb found in the text  
+1: Initialize an empty list to store the results  
+2: Use a regular expression to find all occurrences of words ending in "ly" in the text  
+3: For each match found:  
+4:     Get the start position, end position, and the matched adverb  
+5:     Create a tuple with the start position, end position, and the adverb  
+6:     Append the tuple to the results list  
+7: Return the results list  
+[END]

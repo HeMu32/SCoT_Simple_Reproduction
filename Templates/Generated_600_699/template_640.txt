@@ -1,0 +1,6 @@
+Input: items: a list of strings  
+Output: a list of strings with parenthesis and their contents removed  
+1: for each item in items:  
+2:     use regular expression to find and remove any substring that starts with a space or no space followed by '(', contains any sequence of characters that are not ')', and ends with ')'  
+3:     return the modified item  
+4: return None if the list is empty or no changes are made

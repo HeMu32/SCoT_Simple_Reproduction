@@ -1,0 +1,6 @@
+Input: r (radius of the cylinder), h (height of the cylinder)
+Output: volume (the volume of the cylinder)
+
+1: Define the value of π (pi) as a constant (approximately 3.14159)
+2: Calculate the volume using the formula V = π * r^2 * h
+3: Return the calculated volume

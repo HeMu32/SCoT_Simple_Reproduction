@@ -1,0 +1,10 @@
+[BEGIN]
+Input: N: a string representing a hexadecimal number
+Output: "Even" or "Odd" based on the parity of the hexadecimal number
+1: Determine the length of the string N
+2: Check the last character of the string N
+3:     if the last character is one of '0', '2', '4', '6', '8', 'A', 'C', 'E':
+4:         return "Even"
+5:     else:
+6:         return "Odd"
+[END]

@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: x: an integer
+Output: the first natural number n such that n! (n factorial) is divisible by x
+
+1: Initialize n to 1
+2: Initialize factorial to 1
+3: while True:
+4:     if factorial is divisible by x:
+5:         return n
+6:     increment n by 1
+7:     update factorial to factorial * n
+[END PROCESS]
+
+[BEGIN CODE]
+def first_Factorial_Divisible_Number(x):
+    n = 1
+    factorial = 1
+    while True:
+        if factorial % x == 0:
+            return n
+        n += 1
+        factorial *= n
+[END CODE]
+
+### Explanation:
+The function `first_Factorial_Divisible_Number(x)` is designed to find the smallest natural number `n` such that `n!` (n factorial) is divisible by `x`. The process involves initializing `n` and `factorial` to 1. The loop continues indefinitely until a number `n` is found where `n!` is divisible by `x`. Inside the loop, the factorial is updated by multiplying it with the current value of `n`, and `n` is incremented by 1 in each iteration. Once the condition `factorial % x == 0` is met, the function returns `n`. This approach ensures that the smallest such `n` is found efficiently.

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: n: an integer
+Output: True if n can be represented as a sum of non-zero powers of 2, otherwise False
+1: if n is odd:
+2:     return False
+3: else:
+4:     return True
+[END]

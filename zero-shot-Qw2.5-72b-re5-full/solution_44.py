@@ -1,0 +1,9 @@
+import re
+
+def text_match_string(text):
+    """
+    Write a function that matches a word at the beginning of a string.
+    """
+    pattern = r'^\b\w+\b'
+    match = re.match(pattern, text)
+    return match.group(0) if match else None

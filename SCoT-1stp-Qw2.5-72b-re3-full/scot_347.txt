@@ -1,0 +1,10 @@
+Input: m, n: two integers representing the dimensions of the rectangle (m rows and n columns)
+Output: count: the total number of squares that can be formed within the rectangle
+
+1: Initialize count to 0
+2: For each possible square size s from 1 to the minimum of m and n:
+3:     Calculate the number of s x s squares that can fit horizontally as (n - s + 1)
+4:     Calculate the number of s x s squares that can fit vertically as (m - s + 1)
+5:     Multiply the horizontal and vertical counts to get the total number of s x s squares
+6:     Add the total number of s x s squares to count
+7: Return count

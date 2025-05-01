@@ -1,0 +1,8 @@
+Input: n: an integer representing the number of even natural numbers to consider
+Output: sum: the sum of the fifth power of the first n even natural numbers
+1: Initialize sum to 0
+2: for i from 1 to n (inclusive):
+3:     Calculate j as 2 * i (to get the ith even number)
+4:     Calculate the fifth power of j
+5:     Add the fifth power of j to sum
+6: return sum

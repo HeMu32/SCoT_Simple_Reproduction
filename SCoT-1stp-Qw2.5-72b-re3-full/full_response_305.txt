@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: words: a list of strings
+Output: result: a list of strings where each string starts with the letter 'p'
+
+1: Initialize an empty list `result` to store the words that start with 'p'
+2: Loop through each word in the `words` list
+3:   If the word starts with the letter 'p' (case-insensitive):
+4:     Add the word to the `result` list
+5: Return the `result` list
+[END PROCESS]
+
+[BEGIN CODE]
+def start_withp(words):
+    result = []  # Initialize an empty list to store the words starting with 'p'
+    for word in words:  # Loop through each word in the input list
+        if word.lower().startswith('p'):  # Check if the word starts with 'p' (case-insensitive)
+            result.append(word)  # Add the word to the result list
+    return result  # Return the list of words starting with 'p'
+[END CODE]
+
+### Explanation:
+The function `start_withp` is designed to filter a list of words and return a new list containing only the words that start with the letter 'p'. The function is case-insensitive, meaning it will match words that start with both 'P' and 'p'. Here's a step-by-step breakdown of the function:
+
+1. **Initialization**: An empty list `result` is created to store the words that meet the criteria.
+2. **Looping**: The function iterates over each word in the input list `words`.
+3. **Condition Check**: For each word, the function checks if the word starts with 'p' using the `startswith` method. The `lower` method is used to ensure the check is case-insensitive.
+4. **Appending**: If the word starts with 'p', it is added to the `result` list.
+5. **Return**: After the loop completes, the `result` list is returned, containing all the words that start with 'p'.
+
+This approach ensures that the function is efficient and straightforward, leveraging Python's built-in string methods for simplicity and readability.

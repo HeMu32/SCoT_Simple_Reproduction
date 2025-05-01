@@ -1,0 +1,9 @@
+Input: test_list: a list of tuples, where each tuple contains two integers
+Output: max_diff: the maximum difference between the two integers in any of the tuples
+
+1: Initialize max_diff to 0
+2: For each tuple (a, b) in test_list:
+3:     Calculate the absolute difference between a and b and store it in diff
+4:     If diff is greater than max_diff:
+5:         Set max_diff to diff
+6: Return max_diff

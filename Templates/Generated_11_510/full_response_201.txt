@@ -1,0 +1,10 @@
+[BEGIN]
+Input: lst: a list of elements
+Output: True if all elements in lst are the same, False otherwise
+1: Convert lst to a set to remove duplicates
+2: Check the length of the set
+3:     if the length is 1:
+4:         return True
+5:     else:
+6:         return False
+[END]

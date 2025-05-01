@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: deciNum: an integer representing the decimal number to be converted to octal
+Output: octal: a string representing the octal equivalent of the decimal number
+
+1: Initialize an empty string called `octal` to store the octal digits
+2: Initialize a variable `deciNum` with the input decimal number
+3: While `deciNum` is greater than 0:
+4:     Compute the remainder of `deciNum` divided by 8 and convert it to a string
+5:     Prepend the remainder to the `octal` string
+6:     Update `deciNum` by performing integer division by 8
+7: If the `octal` string is empty, set it to "0"
+8: Return the `octal` string
+[END PROCESS]
+
+[BEGIN CODE]
+def decimal_to_Octal(deciNum):
+    octal = ""
+    while deciNum > 0:
+        remainder = deciNum % 8
+        octal = str(remainder) + octal
+        deciNum = deciNum // 8
+    if octal == "":
+        octal = "0"
+    return octal
+[END CODE]
+
+### Explanation:
+The function `decimal_to_Octal` converts a decimal number to its octal representation. The process involves repeatedly dividing the decimal number by 8 and collecting the remainders. The remainders are then concatenated to form the octal number, which is returned as a string. If the input decimal number is 0, the function returns "0" to handle this edge case. The use of integer division (`//`) ensures that the quotient is an integer, and the remainder is prepended to the `octal` string to build the final result in the correct order.

@@ -1,0 +1,12 @@
+Input: arr: a list of elements, ranges: a list of tuples indicating the range of each rotation, rotations: an integer indicating the number of rotations, index: an integer indicating the target index
+Output: The element at the given index after all rotations
+
+1: for each rotation from the last to the first:
+2:     left = the start of the current rotation range
+3:     right = the end of the current rotation range
+4:     if the target index is within the current rotation range:
+5:         if the target index is equal to the start of the range:
+6:             set the target index to the end of the range
+7:         else:
+8:             decrement the target index by 1
+9: return the element at the target index in the original array

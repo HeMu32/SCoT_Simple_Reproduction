@@ -1,0 +1,9 @@
+Input: list1: a list of dictionaries
+Output: True if all dictionaries in the list are empty, False otherwise
+
+1: Initialize a variable `all_empty` to True
+2: For each dictionary `d` in list1:
+3:     If the dictionary `d` is not empty (i.e., it has any key-value pairs):
+4:         Set `all_empty` to False
+5:         Break the loop
+6: Return the value of `all_empty`

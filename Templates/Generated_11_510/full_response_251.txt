@@ -1,0 +1,10 @@
+[BEGIN]
+Input: list: a list of elements, element: the element to insert
+Output: new_list: a list with the element inserted before each original element
+
+1: Initialize an empty list new_list
+2: For each element elt in the original list:
+3:     Insert the specified element into new_list
+4:     Insert the current element elt into new_list
+5: Return new_list
+[END]

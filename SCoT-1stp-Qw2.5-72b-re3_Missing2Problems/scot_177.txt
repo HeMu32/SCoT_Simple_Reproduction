@@ -1,0 +1,14 @@
+Input: L, R: two integers representing the range [L, R]
+Output: A tuple (a, b) of two distinct integers such that their least common multiple (LCM) is within the range [L, R]
+
+1: Initialize a variable `found` to False to track if a valid pair is found
+2: Loop through each number `a` starting from L to R-1:
+3:   Loop through each number `b` starting from a+1 to R:
+4:     Calculate the LCM of `a` and `b`
+5:     If the LCM is within the range [L, R]:
+6:       Set `found` to True
+7:       Store the pair (a, b)
+8:       Break the inner loop
+9:   If `found` is True, break the outer loop
+10: If a valid pair is found, return the pair
+11: If no valid pair is found, return None

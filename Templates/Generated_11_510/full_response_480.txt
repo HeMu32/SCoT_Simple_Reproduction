@@ -1,0 +1,13 @@
+[BEGIN]
+Input: str1: a string  
+Output: ch: the character with the highest frequency in str1  
+1: Initialize an array `ctr` of size 256 to zero (to count occurrences of each ASCII character)  
+2: Initialize `max` to -1 and `ch` to an empty string  
+3: For each character `i` in `str1`:  
+4:     Increment `ctr[ord(i)]` by 1  
+5: For each character `i` in `str1`:  
+6:     If `max` is less than `ctr[ord(i)]`:  
+7:         Set `max` to `ctr[ord(i)]`  
+8:         Set `ch` to `i`  
+9: Return `ch`  
+[END]

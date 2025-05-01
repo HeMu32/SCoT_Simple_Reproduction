@@ -1,0 +1,11 @@
+Input: str1, str2: two binary strings of equal length  
+Output: minimum number of swaps required to convert str1 to str2, or "Not Possible" if it cannot be done  
+
+1: Initialize count to 0  
+2: For each index i in the range of the length of str1:  
+3:     If the character at index i in str1 is not equal to the character at index i in str2:  
+4:         Increment count by 1  
+5: If count is even:  
+6:     Return count divided by 2  
+7: Else:  
+8:     Return "Not Possible"

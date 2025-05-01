@@ -1,0 +1,9 @@
+Input: n: a number to be rounded, m: the multiple to which n should be rounded
+Output: the nearest multiple of m to n
+
+1: Calculate the remainder of n divided by m
+2: If the remainder is less than half of m:
+3:     Round down to the nearest multiple of m
+4: Else:
+5:     Round up to the nearest multiple of m
+6: Return the rounded value

@@ -1,0 +1,18 @@
+[BEGIN]
+Input: m: an integer representing the maximum value of the sequence elements
+Input: n: an integer representing the length of the sequence
+Output: The total number of sequences of length n where each element is greater than or equal to twice the previous element but less than or equal to m
+
+1: Initialize a 2D list T with dimensions (m+1) x (n+1) and fill it with zeros.
+2: For each value i from 0 to m (inclusive):
+3:     For each value j from 0 to n (inclusive):
+4:         If i is 0 or j is 0:
+5:             Set T[i][j] to 0.
+6:         Else if i is less than j:
+7:             Set T[i][j] to 0.
+8:         Else if j is 1:
+9:             Set T[i][j] to i.
+10:        Else:
+11:            Set T[i][j] to the sum of T[i-1][j] and T[i//2][j-1].
+12: Return the value of T[m][n].
+[END]

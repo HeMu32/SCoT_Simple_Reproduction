@@ -1,0 +1,18 @@
+[BEGIN]
+Input: my_list: a list of integers
+Output: sorted_list: a list of integers sorted in ascending order
+
+1: Initialize max_value to 0
+2: for each element i in my_list:
+3:     if my_list[i] is greater than max_value:
+4:         set max_value to my_list[i]
+5: Initialize buckets as a list of zeros with length max_value + 1
+6: for each element i in my_list:
+7:     increment buckets[i] by 1
+8: Initialize index i to 0
+9: for each index j from 0 to max_value:
+10:     for each count a in range(buckets[j]):
+11:         set my_list[i] to j
+12:         increment i by 1
+13: return my_list
+[END]

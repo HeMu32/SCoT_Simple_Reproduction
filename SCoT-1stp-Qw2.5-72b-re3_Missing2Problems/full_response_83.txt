@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: strr: a string  
+Output: result_char: a character representing the sum of the ASCII values of all characters in the string, converted back to a character  
+1: Initialize a variable `total` to 0 to store the sum of ASCII values  
+2: For each character `c` in the string `strr`:  
+3:     Add the ASCII value of `c` to `total`  
+4: Compute the result character by converting `total` back to a character using `chr`  
+5: Return the result character  
+[END PROCESS]
+
+[BEGIN CODE]
+def get_Char(strr):
+    total = 0
+    for c in strr:
+        total += ord(c)
+    result_char = chr(total)
+    return result_char
+[END CODE]
+
+Explanation:
+The function `get_Char` takes a string `strr` as input and returns a single character. This character is determined by summing the ASCII values of all characters in the input string and then converting this sum back into a character using the `chr` function. The `ord` function is used to get the ASCII value of each character in the string. The loop iterates over each character in the string, adding its ASCII value to the `total`. After the loop, the `total` is converted to a character, which is then returned as the result. This approach ensures that the function meets the requirement of finding the character made by adding all the characters of the given string.

@@ -1,0 +1,5 @@
+def move_first(test_list):
+    if test_list:
+        last_element = test_list.pop()
+        test_list.insert(0, last_element)
+    return test_list

@@ -1,0 +1,9 @@
+Input: str1: a string  
+Output: result: a string with uppercase substrings removed  
+
+1: Import the `re` module for regular expression operations.  
+2: Define a lambda function `remove_upper` that takes a string `text` as input.  
+3:   Use `re.sub` to substitute all uppercase letters `[A-Z]` in `text` with an empty string.  
+4:   Return the modified string from the lambda function.  
+5: Apply the `remove_upper` lambda function to `str1` and store the result in `result`.  
+6: Return `result`.

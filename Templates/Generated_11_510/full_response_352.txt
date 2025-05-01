@@ -1,0 +1,9 @@
+[BEGIN]
+Input: str: a string  
+Output: True or False  
+1: for each character at position i in str:  
+2:     for each character at position j in str, where j is greater than i:  
+3:         if the character at position i is equal to the character at position j:  
+4:             return False  
+5: return True  
+[END]

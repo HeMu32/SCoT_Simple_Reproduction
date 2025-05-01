@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: str1: a string containing parentheses
+Output: Boolean value indicating whether the string of parentheses is valid
+
+1: Initialize an empty stack to keep track of opening parentheses
+2: for each character in str1 do
+3:     if the character is an opening parenthesis (i.e., '(', '{', '[') then
+4:         push the character onto the stack
+5:     else if the character is a closing parenthesis (i.e., ')', '}', ']') then
+6:         if the stack is empty then
+7:             return False (unmatched closing parenthesis)
+8:         else
+9:             pop the top element from the stack
+10:            if the popped element does not match the current closing parenthesis then
+11:                return False (mismatched parentheses)
+12: if the stack is not empty then
+13:     return False (unmatched opening parentheses)
+14: return True (all parentheses are matched)
+[END PROCESS]
+
+[BEGIN CODE]
+def is_valid_parenthese(str1):
+    stack = []
+    parentheses_map = {')': '(', '}': '{', ']': '['}
+    
+    for char in str1:
+        if char in parentheses_map.values():
+            stack.append(char)
+        elif char in parentheses_map.keys():
+            if not stack or stack.pop() != parentheses_map[char]:
+                return False
+    return not stack
+[END CODE]
+
+**Explanation:**
+The function `is_valid_parenthese` checks if a string of parentheses is valid. A string is considered valid if all opening parentheses are matched with the corresponding closing parentheses in the correct order. The function uses a stack to keep track of the opening parentheses encountered. For each character in the string:
+- If it is an opening parenthesis, it is pushed onto the stack.
+- If it is a closing parenthesis, the function checks if the stack is empty (which would mean there is no corresponding opening parenthesis) or if the top of the stack does not match the current closing parenthesis. If either condition is true, the string is invalid, and the function returns `False`.
+- After processing all characters, if the stack is not empty, it means there are unmatched opening parentheses, and the function returns `False`.
+- If the stack is empty, all parentheses are matched, and the function returns `True`.
+
+This approach ensures that the function correctly identifies valid and invalid strings of parentheses.

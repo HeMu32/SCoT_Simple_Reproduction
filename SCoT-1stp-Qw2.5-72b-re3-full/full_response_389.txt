@@ -1,0 +1,37 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position in the Lucas sequence
+Output: the n'th Lucas number
+
+1: Define the base cases for the Lucas sequence:
+   - The 0th Lucas number is 2.
+   - The 1st Lucas number is 1.
+2: For n > 1, calculate the n'th Lucas number using the formula:
+   - Lucas(n) = Lucas(n-1) + Lucas(n-2)
+3: Use a loop to compute the Lucas number iteratively to avoid the exponential time complexity of a naive recursive approach.
+4: Return the n'th Lucas number.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_lucas(n):
+    # Base cases for the Lucas sequence
+    if n == 0:
+        return 2
+    elif n == 1:
+        return 1
+    
+    # Initialize the first two Lucas numbers
+    lucas_prev2 = 2  # L(0)
+    lucas_prev1 = 1  # L(1)
+    
+    # Compute the n'th Lucas number iteratively
+    for _ in range(2, n + 1):
+        lucas_current = lucas_prev1 + lucas_prev2
+        # Update the previous two Lucas numbers
+        lucas_prev2 = lucas_prev1
+        lucas_prev1 = lucas_current
+    
+    return lucas_current
+[END CODE]
+
+### Explanation:
+The Lucas sequence is a series of numbers where each number is the sum of its two immediate predecessors, similar to the Fibonacci sequence but starting with 2 and 1 instead of 0 and 1. The function `find_lucas(n)` computes the n'th Lucas number using an iterative approach to ensure efficiency. The base cases handle the first two numbers in the sequence, and the loop calculates subsequent numbers up to the n'th position. This method avoids the overhead and potential stack overflow issues associated with recursive solutions, especially for large values of `n`.

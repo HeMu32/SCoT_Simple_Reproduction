@@ -1,0 +1,9 @@
+[BEGIN]
+Input: x, y: integers representing the interval [x, y]
+Output: The maximum occurring divisor in the interval [x, y]
+
+1: if x is equal to y:
+2:     return y
+3: else:
+4:     return 2
+[END]

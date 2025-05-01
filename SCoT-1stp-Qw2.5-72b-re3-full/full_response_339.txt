@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: x, y: two integers representing the start and end of the interval (inclusive)
+Output: max_divisor: the divisor that occurs the most times within the interval [x, y]
+
+1: Initialize a dictionary `divisor_count` to keep track of the occurrence of each divisor.
+2: Loop through each number `num` in the range from `x` to `y` inclusive.
+3:   For each `num`, loop through all possible divisors `d` from 1 to `num` inclusive.
+4:     If `num` is divisible by `d` (i.e., `num % d == 0`), increment the count of `d` in `divisor_count`.
+5: Initialize `max_divisor` and `max_count` to store the divisor with the maximum occurrences and its count, respectively.
+6: Loop through each key-value pair in `divisor_count`.
+7:   If the current count is greater than `max_count`, update `max_divisor` and `max_count`.
+8: Return `max_divisor`.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Divisor(x, y):
+    # Dictionary to store the count of each divisor
+    divisor_count = {}
+    
+    # Loop through each number in the interval
+    for num in range(x, y + 1):
+        # Check each possible divisor
+        for d in range(1, num + 1):
+            if num % d == 0:
+                if d in divisor_count:
+                    divisor_count[d] += 1
+                else:
+                    divisor_count[d] = 1
+    
+    # Initialize variables to track the maximum occurring divisor
+    max_divisor = None
+    max_count = 0
+    
+    # Find the divisor with the maximum count
+    for d, count in divisor_count.items():
+        if count > max_count:
+            max_divisor = d
+            max_count = count
+    
+    return max_divisor
+[END CODE]
+
+### Explanation:
+The function `find_Divisor` is designed to find the divisor that occurs the most frequently within a given interval [x, y]. The process involves iterating through each number in the interval and checking all possible divisors for each number. A dictionary is used to keep track of the count of each divisor. After processing all numbers, the function identifies the divisor with the highest count and returns it. This approach ensures that we accurately count the occurrences of each divisor and find the one that appears the most.

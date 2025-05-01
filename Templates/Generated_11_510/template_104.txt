@@ -1,0 +1,8 @@
+Input: input_list: a list of lists of strings  
+Output: result: a list of lists of strings where each sublist is sorted  
+
+1: Initialize an empty list named result  
+2: For each sublist x in input_list:  
+3:     Sort the sublist x using a lambda function that sorts based on the first character of each string  
+4:     Append the sorted sublist to result  
+5: Return result

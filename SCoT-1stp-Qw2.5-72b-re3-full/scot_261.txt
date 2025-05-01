@@ -1,0 +1,12 @@
+Input: test_tup1: a tuple of numbers, test_tup2: a tuple of numbers
+Output: result_tup: a tuple containing the result of element-wise division of test_tup1 by test_tup2
+
+1: Initialize an empty list result_list to store the division results
+2: for each pair of elements (num1, num2) from test_tup1 and test_tup2 respectively:
+3:     if num2 is 0:
+4:         raise a ValueError indicating division by zero
+5:     else:
+6:         calculate the division of num1 by num2
+7:         append the result to result_list
+8: convert result_list to a tuple result_tup
+9: return result_tup

@@ -1,0 +1,9 @@
+Input: list1: a list, list2: a list
+Output: a new list where the last element of list1 is replaced by the entire list2
+1: Check if list1 is not empty
+2: If list1 is not empty:
+3:     Remove the last element from list1
+4:     Append list2 to the end of list1
+5: If list1 is empty:
+6:     Return list2 as the result
+7: Return the modified list1

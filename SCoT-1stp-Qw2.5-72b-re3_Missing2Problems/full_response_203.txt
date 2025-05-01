@@ -1,0 +1,47 @@
+[BEGIN PROCESS]
+Input: x, y: two integers
+Output: distance: the Hamming distance between x and y
+
+1: Convert integers x and y to their binary representations
+2: Ensure both binary strings are of the same length by padding with leading zeros if necessary
+3: Initialize a variable `distance` to 0 to keep track of the Hamming distance
+4: For each bit in the binary strings:
+5:     If the bits at the current position are different:
+6:         Increment `distance` by 1
+7: Return the `distance`
+[END PROCESS]
+
+[BEGIN CODE]
+def hamming_Distance(x, y):
+    # Convert integers to binary and remove the '0b' prefix
+    bin_x = bin(x)[2:]
+    bin_y = bin(y)[2:]
+    
+    # Pad the shorter binary string with leading zeros
+    max_len = max(len(bin_x), len(bin_y))
+    bin_x = bin_x.zfill(max_len)
+    bin_y = bin_y.zfill(max_len)
+    
+    # Initialize the Hamming distance
+    distance = 0
+    
+    # Calculate the Hamming distance
+    for i in range(max_len):
+        if bin_x[i] != bin_y[i]:
+            distance += 1
+    
+    return distance
+[END CODE]
+
+### Explanation:
+The Hamming distance between two integers is the number of positions at which the corresponding bits are different. The function `hamming_Distance` takes two integers `x` and `y` as input and returns their Hamming distance.
+
+1. **Binary Conversion**: The integers are first converted to their binary representations using the `bin()` function, which returns a string prefixed with '0b'. The `[2:]` slice removes this prefix to get the binary string.
+
+2. **Padding**: To ensure both binary strings are of the same length, the shorter string is padded with leading zeros using the `zfill()` method. This is necessary because the Hamming distance is calculated by comparing bits at the same positions.
+
+3. **Distance Calculation**: A loop iterates over each bit in the binary strings. If the bits at the current position are different, the `distance` counter is incremented.
+
+4. **Return**: Finally, the function returns the calculated Hamming distance.
+
+This approach ensures that the Hamming distance is computed correctly and efficiently.

@@ -1,0 +1,15 @@
+Input: str1: a string  
+Output: result_string: a string with vowels reversed  
+
+1: Initialize an empty string `vowels` to store all vowels from `str1`  
+2: For each character `char` in `str1`:  
+3:     If `char` is a vowel (i.e., in "aeiouAEIOU"):  
+4:         Append `char` to `vowels`  
+5: Initialize an empty string `result_string` to store the final result  
+6: For each character `char` in `str1`:  
+7:     If `char` is a vowel (i.e., in "aeiouAEIOU"):  
+8:         Append the last character of `vowels` to `result_string`  
+9:         Remove the last character from `vowels`  
+10:    Else:  
+11:        Append `char` to `result_string`  
+12: Return `result_string`

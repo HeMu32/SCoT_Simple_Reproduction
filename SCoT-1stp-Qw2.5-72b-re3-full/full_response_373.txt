@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: l, w, h: three integers or floats representing the length, width, and height of a cuboid.
+Output: The volume of the cuboid as a float or integer.
+
+1: Calculate the volume by multiplying the length, width, and height.
+2: Return the calculated volume.
+[END PROCESS]
+
+[BEGIN CODE]
+def volume_cuboid(l, w, h):
+    """ 
+    Write a function to find the volume of a cuboid. 
+    """
+    # Calculate the volume of the cuboid
+    volume = l * w * h
+    # Return the calculated volume
+    return volume
+[END CODE]
+
+### Explanation:
+The function `volume_cuboid` takes three parameters: `l` (length), `w` (width), and `h` (height), which represent the dimensions of a cuboid. The volume of a cuboid is calculated by multiplying these three dimensions together. The result is then returned as the output of the function. This is a straightforward calculation that does not require any complex logic or control structures.

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: tuplex: a tuple, m: an integer, n: an element
+Output: tuplex_colon: a modified tuple
+
+1: Create a deep copy of tuplex and assign it to tuplex_colon
+2: Append n to the m-th element of tuplex_colon
+3: Return tuplex_colon
+[END]

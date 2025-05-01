@@ -1,0 +1,11 @@
+[BEGIN]
+Input: test_list: a list of tuples, K: an integer  
+Output: res: a list of tuples with each element increased by K  
+1: Initialize an empty list res  
+2: For each tuple sub in test_list:  
+3:     Initialize an empty tuple  
+4:     For each element j in sub:  
+5:         Add K to j and append the result to the tuple  
+6:     Append the tuple to res  
+7: Return res  
+[END]

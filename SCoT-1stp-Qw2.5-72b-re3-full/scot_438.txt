@@ -1,0 +1,8 @@
+Input: test_list: a list of tuples, where each tuple represents a pair of elements
+Output: count: an integer representing the number of bidirectional pairs in the list
+
+1: Initialize a variable `count` to 0 to keep track of the number of bidirectional pairs
+2: Loop through each tuple `pair` in `test_list` using an index `i`
+3:     For each `pair`, loop through the remaining tuples in `test_list` starting from the next index `i + 1`
+4:         If the reverse of the current `pair` (i.e., `pair` with elements swapped) is found in the remaining tuples, increment `count` by 1
+5: Return the final value of `count`

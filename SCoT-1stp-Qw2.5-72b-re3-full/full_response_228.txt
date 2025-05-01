@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: n: an integer, l: an integer representing the left boundary of the range, r: an integer representing the right boundary of the range
+Output: A boolean value indicating whether all bits in the range [l, r] of the binary representation of n are unset (0).
+
+1: Generate a number mask with bits set in the range [l, r] and all other bits unset.
+2: Perform a bitwise AND operation between n and the mask.
+3: If the result of the AND operation is 0, it means all bits in the range [l, r] of n are unset.
+4: Return True if the result is 0, otherwise return False.
+[END PROCESS]
+
+[BEGIN CODE]
+def all_Bits_Set_In_The_Given_Range(n, l, r):
+    # Generate a mask with bits set in the range [l, r]
+    mask = ((1 << r) - 1) ^ ((1 << (l - 1)) - 1)
+    
+    # Perform a bitwise AND between n and the mask
+    result = n & mask
+    
+    # If the result is 0, all bits in the range [l, r] are unset
+    return result == 0
+[END CODE]
+
+### Explanation:
+- **Mask Generation**: The mask is created to have bits set from position `l` to `r` and all other bits unset. This is done using the expression `((1 << r) - 1) ^ ((1 << (l - 1)) - 1)`. Here, `(1 << r) - 1` generates a number with the first `r` bits set, and `(1 << (l - 1)) - 1` generates a number with the first `l-1` bits set. The XOR operation between these two numbers results in a number with bits set from `l` to `r`.
+- **Bitwise AND Operation**: The bitwise AND operation between `n` and the mask is performed. If all bits in the range [l, r] of `n` are unset, the result of this operation will be 0.
+- **Result Check**: The function returns `True` if the result of the AND operation is 0, indicating that all bits in the specified range are unset. Otherwise, it returns `False`.
+
+This approach ensures that the function efficiently checks the status of the bits in the specified range.

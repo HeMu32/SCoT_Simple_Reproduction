@@ -1,0 +1,12 @@
+[BEGIN]
+Input: a, b: two integers
+Output: gcd: the greatest common divisor of a and b
+1: Determine the smaller number (low) and the larger number (high) between a and b
+2: If low is 0:
+3:     Return high as the gcd
+4: Else if low is 1:
+5:     Return 1 as the gcd
+6: Else:
+7:     Recursively call the function with low and the remainder of high divided by low
+8:     Return the result of the recursive call
+[END]

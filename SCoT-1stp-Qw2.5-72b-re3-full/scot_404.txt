@@ -1,0 +1,7 @@
+Input: a, b: two numbers
+Output: The minimum of the two numbers
+
+1: Define the function `minimum` with parameters `a` and `b`.
+2: Compare the values of `a` and `b`.
+3: If `a` is less than `b`, return `a`.
+4: Otherwise, return `b`.

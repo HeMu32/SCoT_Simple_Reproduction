@@ -1,0 +1,7 @@
+Input: arr: a list of integers, n: an integer representing the length of the list
+Output: sum: an integer representing the sum of even numbers at even positions in the list
+1: Initialize sum to 0
+2: for each index i from 0 to n-1, incrementing by 2 (to only consider even indices) do
+3:     if arr[i] is even then
+4:         Add arr[i] to sum
+5: return sum

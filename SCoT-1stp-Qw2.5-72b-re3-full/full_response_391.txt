@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: l1, l2, l3: lists of elements
+Output: nested_dict: a nested dictionary where elements from l1 are the top-level keys, elements from l2 are the second-level keys, and elements from l3 are the values
+
+1: Initialize an empty dictionary called nested_dict
+2: Loop through the indices of the lists (assuming all lists have the same length)
+3:     For each index i:
+4:         If the element from l1 at index i is not already a key in nested_dict:
+5:             Add it as a key with an empty dictionary as its value
+6:         Add the element from l3 at index i to the dictionary that is the value of the key from l1 at index i, using the element from l2 at index i as the key
+7: Return nested_dict
+[END PROCESS]
+
+[BEGIN CODE]
+def convert_list_dictionary(l1, l2, l3):
+    nested_dict = {}
+    for i in range(len(l1)):
+        if l1[i] not in nested_dict:
+            nested_dict[l1[i]] = {}
+        nested_dict[l1[i]][l2[i]] = l3[i]
+    return nested_dict
+[END CODE]
+
+### Explanation:
+The function `convert_list_dictionary` takes three lists, `l1`, `l2`, and `l3`, and converts them into a nested dictionary. The elements of `l1` become the top-level keys, the elements of `l2` become the keys in the nested dictionaries, and the elements of `l3` become the values in the nested dictionaries.
+
+1. **Initialization**: An empty dictionary `nested_dict` is initialized to store the nested structure.
+2. **Looping through the lists**: A loop iterates over the indices of the lists. It is assumed that all three lists have the same length.
+3. **Adding top-level keys**: For each index `i`, the function checks if the element from `l1` at index `i` is already a key in `nested_dict`. If not, it adds it with an empty dictionary as its value.
+4. **Adding nested keys and values**: The function then adds the element from `l3` at index `i` to the nested dictionary, using the element from `l2` at index `i` as the key.
+5. **Returning the result**: Finally, the function returns the `nested_dict`.
+
+This approach ensures that the function correctly constructs a nested dictionary from the provided lists.

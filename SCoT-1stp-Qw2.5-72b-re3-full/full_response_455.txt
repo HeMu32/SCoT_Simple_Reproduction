@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: monthnum2: an integer representing a month number (1-12)
+Output: A boolean value indicating whether the month has 31 days or not
+
+1: Create a list of months that have 31 days (January, March, May, July, August, October, December)
+2: Check if the given month number is in the list of months with 31 days
+3: If the month number is in the list, return True
+4: Otherwise, return False
+[END PROCESS]
+
+[BEGIN CODE]
+def check_monthnumb_number(monthnum2):
+    # List of months with 31 days
+    months_with_31_days = [1, 3, 5, 7, 8, 10, 12]
+    
+    # Check if the given month number is in the list
+    if monthnum2 in months_with_31_days:
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+The function `check_monthnumb_number` takes an integer `monthnum2` as input, which represents a month number (1 for January, 2 for February, etc.). The function checks whether the given month number corresponds to a month that has 31 days. 
+
+- A list `months_with_31_days` is defined, containing the month numbers of months that have 31 days.
+- The function then checks if `monthnum2` is in this list.
+- If it is, the function returns `True`, indicating that the month has 31 days.
+- If it is not, the function returns `False`, indicating that the month does not have 31 days.
+
+This approach is straightforward and leverages a simple list lookup to determine the result.

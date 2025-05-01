@@ -1,0 +1,13 @@
+[BEGIN]
+Input: arr1, arr2: two lists of integers; n, m: lengths of arr1 and arr2 respectively
+Output: True if arr1 and arr2 are equal, False otherwise
+
+1: if n is not equal to m:
+2:     return False
+3: sort arr1
+4: sort arr2
+5: for i from 0 to n - 1:
+6:     if arr1[i] is not equal to arr2[i]:
+7:         return False
+8: return True
+[END]

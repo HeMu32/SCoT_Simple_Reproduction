@@ -1,0 +1,11 @@
+Input: s: a string
+Output: A tuple containing two integers: the first integer is the number of digits in the string, and the second integer is the number of letters in the string.
+
+1: Initialize a variable `digit_count` to 0 to keep track of the number of digits.
+2: Initialize a variable `letter_count` to 0 to keep track of the number of letters.
+3: Loop through each character `ch` in the string `s`:
+4:     If `ch` is a digit (using `ch.isdigit()`):
+5:         Increment `digit_count` by 1.
+6:     Else if `ch` is a letter (using `ch.isalpha()`):
+7:         Increment `letter_count` by 1.
+8: After the loop, return a tuple containing `digit_count` and `letter_count`.

@@ -1,0 +1,4 @@
+Input: n, m: two integers
+Output: r: the remainder when n is divided by m
+1: Compute the remainder of n divided by m and store it in r
+2: Return r

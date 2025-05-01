@@ -1,0 +1,6 @@
+Input: s: a set of elements
+Output: t: a tuple containing all elements from the set s in an arbitrary order
+
+1: Convert the set s to a list to allow for indexing and ordering
+2: Convert the list to a tuple t
+3: Return the tuple t

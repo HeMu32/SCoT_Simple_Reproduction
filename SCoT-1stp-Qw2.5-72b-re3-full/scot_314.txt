@@ -1,0 +1,9 @@
+Input: A 2D list (grid) of integers, where the grid is of dimension 2 x n.
+Output: The maximum sum of non-adjacent elements in the grid.
+
+1: Initialize two variables, `prev` and `curr`, to store the maximum sums of the previous and current columns, respectively.
+2: Iterate through each column of the grid.
+3:     For each column, calculate the maximum sum of the current column's elements, considering the non-adjacency rule.
+4:     Update `curr` with the maximum of the current column's sum plus `prev` (the sum from two columns back) and `prev` itself (if skipping the current column gives a better sum).
+5:     Update `prev` to the old `curr` value before updating `curr`.
+6: After the loop, return `curr` as the maximum sum of non-adjacent elements.

@@ -1,0 +1,51 @@
+[BEGIN PROCESS]
+Input: m: an integer representing the maximum value of the elements in the sequence
+       n: an integer representing the length of the sequence
+Output: count: the number of possible sequences of length n where each element is greater than or equal to twice the previous element and less than or equal to m
+
+1: Initialize count to 0
+2: Define a recursive function count_sequences that takes current index, previous value, and m as parameters
+3:     If the current index equals n:
+4:         Increment count by 1
+5:         Return
+6:     For each value i from (previous value * 2) to m:
+7:         Call count_sequences with (current index + 1), i, and m
+8: Call count_sequences with 0, 1, and m
+9: Return count
+[END PROCESS]
+
+[BEGIN CODE]
+def get_total_number_of_sequences(m, n):
+    count = 0
+    
+    def count_sequences(index, prev, m):
+        nonlocal count
+        if index == n:
+            count += 1
+            return
+        for i in range(max(1, 2 * prev), m + 1):
+            count_sequences(index + 1, i, m)
+    
+    count_sequences(0, 0, m)
+    return count
+[END CODE]
+
+### Explanation:
+The function `get_total_number_of_sequences(m, n)` is designed to count the number of sequences of length `n` where each element is greater than or equal to twice the previous element and less than or equal to `m`.
+
+1. **Initialization**: We start by initializing a counter `count` to 0. This counter will keep track of the number of valid sequences.
+
+2. **Recursive Function**: We define a recursive function `count_sequences` that takes three parameters:
+   - `index`: the current position in the sequence.
+   - `prev`: the value of the previous element in the sequence.
+   - `m`: the maximum value that any element in the sequence can take.
+
+3. **Base Case**: If the current index equals `n`, it means we have successfully constructed a valid sequence of length `n`. We increment the `count` by 1 and return.
+
+4. **Recursive Case**: For each possible value `i` that the current element can take (starting from `2 * prev` to `m`), we recursively call `count_sequences` with the next index, the current value `i`, and the same maximum value `m`.
+
+5. **Initial Call**: We start the recursion by calling `count_sequences` with the initial index 0, the initial previous value 0 (since there is no previous element initially), and the maximum value `m`.
+
+6. **Return the Result**: After the recursion completes, the function returns the total count of valid sequences.
+
+This approach ensures that all possible sequences are considered, and the constraints are respected at each step of the sequence construction.

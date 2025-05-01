@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: a, b, c: coefficients of the parabola equation in the form y = ax^2 + bx + c
+Output: directrix: the y-coordinate of the directrix of the parabola
+
+1: Calculate the x-coordinate of the vertex (h) using the formula h = -b / (2a)
+2: Calculate the y-coordinate of the vertex (k) using the formula k = c - (b^2 - 1) / (4a)
+3: Calculate the y-coordinate of the directrix using the formula directrix = k - 1 / (4a)
+4: Return the y-coordinate of the directrix
+[END PROCESS]
+
+[BEGIN CODE]
+def parabola_directrix(a, b, c):
+    # Calculate the x-coordinate of the vertex
+    h = -b / (2 * a)
+    # Calculate the y-coordinate of the vertex
+    k = c - (b**2 - 1) / (4 * a)
+    # Calculate the y-coordinate of the directrix
+    directrix = k - 1 / (4 * a)
+    # Return the y-coordinate of the directrix
+    return directrix
+[END CODE]
+
+### Explanation:
+The directrix of a parabola given by the equation \( y = ax^2 + bx + c \) can be found using the vertex form of the parabola equation. The vertex form is \( y = a(x - h)^2 + k \), where \( (h, k) \) is the vertex of the parabola.
+
+1. **Vertex Calculation**:
+   - The x-coordinate of the vertex \( h \) is given by \( h = -\frac{b}{2a} \).
+   - The y-coordinate of the vertex \( k \) is given by substituting \( h \) back into the original equation: \( k = c - \frac{b^2 - 1}{4a} \).
+
+2. **Directrix Calculation**:
+   - The directrix of a parabola is a horizontal line that is equidistant from the vertex as the focus. The y-coordinate of the directrix is given by \( k - \frac{1}{4a} \).
+
+By following these steps, the function `parabola_directrix` calculates and returns the y-coordinate of the directrix of the parabola.

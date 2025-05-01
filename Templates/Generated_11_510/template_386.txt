@@ -1,0 +1,17 @@
+Input: s: a string containing brackets '[' and ']'
+Output: swap: the minimum number of swaps required to balance the brackets
+
+1: Initialize count_left to 0 to count the number of '['
+2: Initialize count_right to 0 to count the number of ']'
+3: Initialize swap to 0 to count the number of swaps needed
+4: Initialize imbalance to 0 to track the imbalance of brackets
+5: Loop through each character in the string s
+6:     If the character is '['
+7:         Increment count_left by 1
+8:         If imbalance is greater than 0
+9:             Increment swap by imbalance
+10:            Decrement imbalance by 1
+11:    Else if the character is ']'
+12:        Increment count_right by 1
+13:        Set imbalance to (count_right - count_left)
+14: Return swap

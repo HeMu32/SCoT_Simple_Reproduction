@@ -1,0 +1,16 @@
+1. **Initialize Variables:**
+   - `max_aggregate_sum` to store the maximum sum of integers found so far. Initialize it to 0.
+   - `max_aggregate_string` to store the string associated with the maximum sum. Initialize it to an empty string.
+   - `aggregate_dict` to store the sum of integers for each unique string. Initialize it as an empty dictionary.
+
+2. **Iterate Through the List of Tuples:**
+   - For each tuple `(string, integer)` in the list:
+     - If the string is not already in `aggregate_dict`, add it with the integer as its value.
+     - If the string is already in `aggregate_dict`, add the integer to the existing value.
+
+3. **Find the Maximum Aggregate:**
+   - Iterate through the `aggregate_dict` to find the string with the maximum sum.
+   - Update `max_aggregate_sum` and `max_aggregate_string` accordingly.
+
+4. **Return the Result:**
+   - Return the string with the maximum aggregate sum.

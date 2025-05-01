@@ -1,0 +1,12 @@
+[BEGIN]
+Input: list1: a list of numbers  
+Output: total_sum: the total sum of rounded numbers in list1 multiplied by the length of list1  
+1: Calculate the length of list1 and store it in a variable named length  
+2: Initialize an empty list to store the rounded values of the numbers in list1  
+3: For each number num in list1:  
+4:     Round num to the nearest integer  
+5:     Append the rounded number to the list of rounded values  
+6: Calculate the sum of the rounded values and store it in a variable named sum_rounded  
+7: Multiply sum_rounded by length and store the result in a variable named total_sum  
+8: Return total_sum  
+[END]

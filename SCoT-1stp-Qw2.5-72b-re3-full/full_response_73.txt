@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: text: a string to be split
+Output: a list of substrings split by the specified delimiters
+
+1: Define the delimiters as a string of characters, each of which can be used to split the text
+2: Use the re.split function to split the text using the delimiters
+3: Return the list of substrings resulting from the split
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def multiple_split(text):
+    # Define the delimiters
+    delimiters = ' ,;.'  # Example delimiters: space, comma, semicolon, and period
+    # Create a regex pattern to match any of the delimiters
+    pattern = '[' + re.escape(delimiters) + ']'
+    # Split the text using the regex pattern
+    result = re.split(pattern, text)
+    # Filter out any empty strings that may result from consecutive delimiters
+    result = [s for s in result if s]
+    return result
+[END CODE]
+
+Explanation:
+- The function `multiple_split` takes a single argument `text`, which is the string to be split.
+- The delimiters are defined as a string containing characters that will be used to split the text. In this example, the delimiters are space, comma, semicolon, and period.
+- The `re.escape` function is used to escape any special characters in the delimiters string, ensuring that they are treated as literal characters in the regex pattern.
+- The `re.split` function is used to split the text based on the regex pattern, which matches any of the characters in the delimiters string.
+- A list comprehension is used to filter out any empty strings that may result from consecutive delimiters in the text.
+- The function returns the list of substrings obtained after splitting the text.
+
+This approach ensures that the text is split correctly using multiple delimiters and that any resulting empty strings are removed from the final output.

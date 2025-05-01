@@ -1,0 +1,9 @@
+Input: test_list1, test_list2: two lists of tuples
+Output: A new list of tuples with the matching tuples removed from both lists
+
+1: Initialize an empty list `result` to store the non-matching tuples.
+2: Loop through each tuple `t1` in `test_list1`.
+3: If `t1` is not in `test_list2`, append `t1` to `result`.
+4: Loop through each tuple `t2` in `test_list2`.
+5: If `t2` is not in `test_list1`, append `t2` to `result`.
+6: Return the `result` list.

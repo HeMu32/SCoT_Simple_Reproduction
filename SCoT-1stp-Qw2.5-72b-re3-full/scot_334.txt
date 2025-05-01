@@ -1,0 +1,6 @@
+Input: a, b, c: three numerical values representing the sides of a triangle
+Output: A boolean value indicating whether the triangle is valid or not
+
+1: Check if any of the sides are less than or equal to 0. If so, the triangle is invalid.
+2: Check the triangle inequality theorem, which states that the sum of the lengths of any two sides of a triangle must be greater than the length of the remaining side.
+3: If both conditions are satisfied, return True (the triangle is valid); otherwise, return False (the triangle is invalid).

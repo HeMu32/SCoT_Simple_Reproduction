@@ -1,0 +1,29 @@
+[BEGIN]
+Input: startx, starty, endx, endy, radius: integers representing the starting and ending coordinates of the grid and the radius of the hexagons.
+Output: polygons: a list of lists, where each inner list contains 6 tuples of (x, y) coordinates representing the vertices of a hexagon.
+
+1: Calculate the side length (sl) of the hexagon using the formula (2 * radius) * tan(π / 6).
+2: Calculate the half side length (p) as sl * 0.5.
+3: Calculate the base length (b) as sl * cos(30 degrees).
+4: Calculate the width (w) of the hexagon as 2 * b.
+5: Calculate the height (h) of the hexagon as 2 * sl.
+6: Adjust the starting coordinates (startx, starty) and ending coordinates (endx, endy) to ensure the entire hexagon fits within the specified area.
+7: Set the original starting coordinates (origx, origy) to the adjusted starting coordinates.
+8: Set the x-offset (xoffset) to the base length (b).
+9: Set the y-offset (yoffset) to 3 times the half side length (p).
+10: Initialize an empty list (polygons) to store the hexagon coordinates.
+11: Initialize a row counter and a general counter.
+12: While the current y-coordinate (starty) is less than the ending y-coordinate (endy):
+    13: If the row is even:
+        14: Set the current x-coordinate (startx) to the original x-coordinate plus the x-offset.
+    15: Otherwise:
+        16: Set the current x-coordinate (startx) to the original x-coordinate.
+    17: While the current x-coordinate (startx) is less than the ending x-coordinate (endx):
+        18: Calculate the coordinates of the six vertices of the hexagon (p1, p2, p3, p4, p5, p6).
+        19: Append the hexagon coordinates to the polygons list.
+        20: Increment the counter.
+        21: Increase the current x-coordinate (startx) by the width (w).
+    22: Increase the current y-coordinate (starty) by the y-offset.
+    23: Increment the row counter.
+24: Return the list of hexagon coordinates (polygons).
+[END]

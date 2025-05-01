@@ -1,0 +1,11 @@
+Input: arr: a list of integers, n: the length of the array, k: the number of occurrences to find
+Output: The first element in the array that occurs k times, or -1 if no such element exists
+
+1: Initialize an empty dictionary count_dict to store the count of each element
+2: Loop through the array arr:
+3:     If the element is not in count_dict, add it with a count of 1
+4:     Otherwise, increment the count of the element in count_dict
+5: Loop through the array arr again:
+6:     If the count of the current element in count_dict is equal to k:
+7:         Return the current element
+8: If no element occurs k times, return -1

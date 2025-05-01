@@ -1,0 +1,15 @@
+Input: my_list: a list of integers
+Output: my_list: the list sorted in ascending order
+
+1: Define the function shell_sort with a parameter my_list
+2: Initialize the gap to half the length of my_list
+3: While the gap is greater than 0:
+4:   For i from gap to the length of my_list:
+5:     Set temp to my_list[i]
+6:     Set j to i
+7:     While j is greater than or equal to gap and my_list[j - gap] is greater than temp:
+8:       Set my_list[j] to my_list[j - gap]
+9:       Decrement j by gap
+10:     Set my_list[j] to temp
+11:   Reduce the gap to the next value (gap // 2)
+12: Return the sorted my_list

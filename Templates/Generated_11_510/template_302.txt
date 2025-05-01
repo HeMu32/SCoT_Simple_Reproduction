@@ -1,0 +1,10 @@
+Input: n: an integer  
+Output: msb_number: the most significant bit number which is also a set bit in n  
+1: if n is 0:  
+2:     return 0  
+3: msb = 0  
+4: n = n // 2  
+5: while n > 0:  
+6:     n = n // 2  
+7:     msb += 1  
+8: return (1 << msb)

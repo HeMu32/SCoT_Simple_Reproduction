@@ -1,0 +1,10 @@
+[BEGIN]
+Input: arr: a list of digits, n: the number of digits in arr
+Output: num: the largest number that can be formed with the given digits
+1: Sort the arr in descending order
+2: Initialize num with the first element of arr
+3: For each element from the second to the last in arr:
+4:     Multiply num by 10
+5:     Add the current element to num
+6: Return num
+[END]

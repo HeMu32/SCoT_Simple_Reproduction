@@ -1,0 +1,8 @@
+Input: n: an integer greater than 1
+Output: largest_prime: the largest prime factor of n
+1: Initialize largest_prime to -1 (to handle the case where n is 1 or no prime factors are found)
+2: While n is even, divide n by 2 and set largest_prime to 2
+3: For i from 3 to the square root of n, incrementing by 2 (to check only odd numbers):
+4:     While i divides n, divide n by i and set largest_prime to i
+5: If n is a prime number greater than 2, set largest_prime to n
+6: Return largest_prime

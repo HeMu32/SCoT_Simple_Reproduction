@@ -1,0 +1,7 @@
+[BEGIN]
+Input: degree: a numerical value representing an angle in degrees  
+Output: radian: the equivalent angle in radians  
+1: Import the math module to access the value of pi  
+2: Calculate the radian value by multiplying the degree by (pi/180)  
+3: Return the calculated radian value  
+[END]

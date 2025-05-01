@@ -1,0 +1,55 @@
+[BEGIN PROCESS]
+Input: price: a list of integers representing the price of a stock on different days, k: an integer representing the maximum number of transactions allowed
+Output: max_profit: an integer representing the maximum profit that can be earned from at most k transactions
+
+1: Initialize a list dp of size (k+1) with each element being a list of size 2 (0 for no stock, 1 for holding stock), all set to 0.
+2: Loop through each transaction count from 1 to k (inclusive):
+3:     Initialize max_diff to -price[0] (the maximum difference for buying stock on the first day)
+4:     Loop through each day from 1 to the length of price - 1 (inclusive):
+5:         Update dp[transaction][0] to the maximum of dp[transaction][0] and dp[transaction-1][1] + price[day] (selling stock on the current day)
+6:         Update dp[transaction][1] to the maximum of dp[transaction][1] and dp[transaction-1][0] + max_diff (buying stock on the current day)
+7:         Update max_diff to the maximum of max_diff and dp[transaction-1][0] - price[day] (updating the maximum difference for buying stock)
+8: Return dp[k][0] as the maximum profit that can be earned from at most k transactions
+[END PROCESS]
+
+[BEGIN CODE]
+def max_profit(price, k):
+    n = len(price)
+    if n == 0:
+        return 0
+
+    # Initialize dp array
+    dp = [[0 for _ in range(2)] for _ in range(k + 1)]
+
+    for transaction in range(1, k + 1):
+        max_diff = -price[0]
+        for day in range(1, n):
+            # Update profit if selling on the current day
+            dp[transaction][0] = max(dp[transaction][0], dp[transaction - 1][1] + price[day])
+            # Update profit if buying on the current day
+            dp[transaction][1] = max(dp[transaction][1], dp[transaction - 1][0] + max_diff)
+            # Update the maximum difference for buying stock
+            max_diff = max(max_diff, dp[transaction - 1][0] - price[day])
+
+    # The maximum profit is the profit from the last transaction without holding any stock
+    return dp[k][0]
+[END CODE]
+
+### Explanation
+
+The problem is to find the maximum profit that can be earned from at most `k` transactions, where a transaction is defined as buying and then selling one share of the stock. The solution uses dynamic programming to solve this problem efficiently.
+
+- **Dynamic Programming Table (dp)**: The `dp` table is a 2D list where `dp[transaction][0]` represents the maximum profit with `transaction` transactions and no stock held, and `dp[transaction][1]` represents the maximum profit with `transaction` transactions and stock held.
+
+- **Initialization**: The `dp` table is initialized with zeros. The `max_diff` variable is initialized to `-price[0]` to represent the maximum difference for buying stock on the first day.
+
+- **Filling the DP Table**:
+  - For each transaction from 1 to `k`:
+    - For each day from 1 to `n-1`:
+      - Update the profit if selling on the current day.
+      - Update the profit if buying on the current day.
+      - Update the maximum difference for buying stock.
+
+- **Result**: The maximum profit that can be earned from at most `k` transactions is stored in `dp[k][0]`.
+
+This approach ensures that the solution is efficient and handles the constraints of the problem effectively.

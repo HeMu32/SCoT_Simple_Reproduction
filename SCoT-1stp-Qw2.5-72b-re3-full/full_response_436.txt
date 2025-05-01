@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: list1: a list of numbers
+Output: a list of negative numbers from list1
+
+1: Initialize an empty list to store the negative numbers
+2: Iterate over each element in list1
+3:     If the current element is less than zero (negative):
+4:         Append the current element to the list of negative numbers
+5: Return the list of negative numbers
+[END PROCESS]
+
+[BEGIN CODE]
+def neg_nos(list1):
+    # Initialize an empty list to store negative numbers
+    negative_numbers = []
+    
+    # Iterate over each element in the input list
+    for num in list1:
+        # Check if the current element is negative
+        if num < 0:
+            # Append the negative number to the list
+            negative_numbers.append(num)
+    
+    # Return the list of negative numbers
+    return negative_numbers
+[END CODE]
+
+### Explanation:
+The function `neg_nos` takes a list of numbers as input and returns a new list containing only the negative numbers from the input list. The process involves:
+1. **Initialization**: An empty list `negative_numbers` is created to store the negative numbers.
+2. **Iteration**: A loop iterates over each element in the input list `list1`.
+3. **Condition Check**: For each element, the function checks if it is less than zero (negative).
+4. **Appending**: If the element is negative, it is appended to the `negative_numbers` list.
+5. **Return**: Finally, the function returns the list of negative numbers.
+
+This approach ensures that only the negative numbers are included in the output list, and it is efficient and straightforward.

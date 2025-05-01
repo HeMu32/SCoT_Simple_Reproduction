@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: 
+- str: a list of strings
+- l: an integer representing the length of the strings to extract
+
+Output: 
+- res: a list of strings from the input list that have a length equal to `l`
+
+1: Initialize an empty list `res` to store the result.
+2: Loop through each string `s` in the input list `str`.
+3:     If the length of `s` is equal to `l`:
+4:         Append `s` to the list `res`.
+5: After the loop, return the list `res`.
+[END PROCESS]
+
+[BEGIN CODE]
+def extract_string(str, l):
+    res = []  # Initialize an empty list to store the result
+    for s in str:  # Loop through each string in the input list
+        if len(s) == l:  # Check if the length of the string is equal to l
+            res.append(s)  # Append the string to the result list
+    return res  # Return the result list
+[END CODE]
+
+### Explanation:
+The function `extract_string` takes two parameters: `str`, which is a list of strings, and `l`, which is an integer representing the desired length of the strings to be extracted. The function initializes an empty list `res` to store the strings that match the specified length. It then iterates over each string in the input list `str`. For each string, it checks if the length of the string is equal to `l`. If it is, the string is appended to the `res` list. Finally, the function returns the `res` list containing all the strings that have the specified length.

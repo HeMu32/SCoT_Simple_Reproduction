@@ -1,0 +1,16 @@
+Input: n: an integer representing the position in the sequence of smart numbers
+Output: The n-th smart number
+
+1: Initialize a list `smart_numbers` to store the smart numbers found.
+2: Initialize a variable `current_number` to 2, the smallest number to check.
+3: Use a loop to find smart numbers until the length of `smart_numbers` is equal to `n`.
+4: For each `current_number`:
+5:     Initialize a set `factors` to store distinct prime factors.
+6:     For each number `i` from 2 to the square root of `current_number`:
+7:         While `current_number` is divisible by `i`:
+8:             Add `i` to `factors`.
+9:             Divide `current_number` by `i`.
+10:     If `current_number` is greater than 1, add it to `factors` (it is a prime factor).
+11:     If the length of `factors` is at least 3, add `current_number` to `smart_numbers`.
+12:     Increment `current_number` by 1.
+13: Return the n-th element in `smart_numbers`.

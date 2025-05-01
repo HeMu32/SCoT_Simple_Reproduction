@@ -1,0 +1,18 @@
+def answer(L, R):
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+
+    def lcm(a, b):
+        return a * b // gcd(a, b)
+
+    if R < 2 * L:
+        return -1, -1
+
+    for i in range(L, R + 1):
+        for j in range(i + 1, R + 1):
+            if L <= lcm(i, j) <= R:
+                return i, j
+
+    return -1, -1

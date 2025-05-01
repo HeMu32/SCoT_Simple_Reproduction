@@ -1,0 +1,8 @@
+Input: N: an integer representing the size of the larger cube, K: an integer representing the size of the smaller cube
+Output: No: the number of smaller cubes of size K that can fit inside a larger cube of size N
+1: Initialize No to 0
+2: Calculate the number of positions along one edge where a smaller cube of size K can fit inside the larger cube of size N
+3:   No = (N - K + 1)
+4: Since the cube is three-dimensional, the total number of smaller cubes is the cube of the number of positions along one edge
+5:   No = pow(No, 3)
+6: Return No

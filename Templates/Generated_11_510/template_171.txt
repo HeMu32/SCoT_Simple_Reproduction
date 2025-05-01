@@ -1,0 +1,4 @@
+Input: a: length of one side of the pentagon  
+Output: perimeter: the perimeter of the pentagon  
+1: Calculate the perimeter by multiplying the side length `a` by 5  
+2: Return the calculated perimeter

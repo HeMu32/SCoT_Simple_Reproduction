@@ -1,0 +1,8 @@
+Input: S: a list, step: an integer
+Output: A list of lists, where each sublist contains every nth element of S
+
+1: Initialize an empty list to store the result
+2: For i from 0 to step-1 do
+3:     Create a new sublist from S starting at index i and taking every step-th element
+4:     Append the new sublist to the result list
+5: Return the result list

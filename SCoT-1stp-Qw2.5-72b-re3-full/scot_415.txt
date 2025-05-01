@@ -1,0 +1,9 @@
+Input: arr: a list of integers
+Output: A tuple containing the pair of integers from the array that has the highest product
+
+1: Check if the length of the array is less than 2, if so, return None because a pair cannot be formed.
+2: Initialize two variables to store the maximum product and the pair of integers that produce this product.
+3: Iterate through the array using a loop, for each element, compare it with every other element in the array.
+4:     Calculate the product of the current pair of elements.
+5:     If the product is greater than the current maximum product, update the maximum product and the pair.
+6: After the loop, return the pair of integers that produced the highest product.

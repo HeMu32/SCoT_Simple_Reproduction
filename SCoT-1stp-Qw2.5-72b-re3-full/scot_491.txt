@@ -1,0 +1,9 @@
+Input: a, n, r: real numbers representing the first term, number of terms, and the common ratio of a geometric progression (GP) series, respectively.
+Output: sum_gp: the sum of the first n terms of the GP series.
+
+1: Check if the common ratio (r) is 1:
+2:     If true, the series is a constant series, and the sum is simply the first term (a) multiplied by the number of terms (n).
+3:     Return the sum.
+4: If the common ratio (r) is not 1:
+5:     Use the formula for the sum of a geometric series: sum = a * (1 - r^n) / (1 - r)
+6:     Return the sum.

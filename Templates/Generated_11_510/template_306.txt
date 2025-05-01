@@ -1,0 +1,19 @@
+Input: a: list of integers, n: length of list a, index: an integer, k: an integer
+Output: Maximum sum of increasing subsequence from prefix till ith index and including kth element
+
+1: Initialize a 2D list dp with dimensions n x n, filled with zeros
+2: For each element i in range(n):
+3:     If a[i] is greater than a[0]:
+4:         Set dp[0][i] to a[i] + a[0]
+5:     Else:
+6:         Set dp[0][i] to a[i]
+7: For each element i in range(1, n):
+8:     For each element j in range(n):
+9:         If a[j] is greater than a[i] and j is greater than i:
+10:            If dp[i - 1][i] + a[j] is greater than dp[i - 1][j]:
+11:                Set dp[i][j] to dp[i - 1][i] + a[j]
+12:            Else:
+13:                Set dp[i][j] to dp[i - 1][j]
+14:        Else:
+15:            Set dp[i][j] to dp[i - 1][j]
+16: Return dp[index][k]

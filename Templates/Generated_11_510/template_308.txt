@@ -1,0 +1,11 @@
+Input: nums1, nums2: two lists of numbers; N: an integer
+Output: result: a list of the N largest products from the two lists
+
+1: Initialize an empty list to store the products
+2: Loop through each number x in nums1:
+3:     Loop through each number y in nums2:
+4:         Calculate the product of x and y
+5:         Append the product to the list of products
+6: Sort the list of products in descending order
+7: Select the first N elements from the sorted list of products
+8: Return the selected elements as the result

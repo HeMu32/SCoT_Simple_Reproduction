@@ -1,0 +1,7 @@
+Input: text: a string from which we need to find sequences of lowercase letters joined with an underscore
+Output: matches: a list of all sequences of lowercase letters joined with an underscore found in the text
+
+1: Import the regular expression module (re)
+2: Define a regular expression pattern that matches sequences of lowercase letters joined with an underscore
+3: Use the re.findall() function to find all occurrences of the pattern in the input text
+4: Return the list of matches

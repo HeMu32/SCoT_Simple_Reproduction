@@ -1,0 +1,12 @@
+Input: limit: an integer representing the upper limit of the range to check for amicable numbers
+Output: sum_amicable: the sum of all amicable numbers within the range from 1 to the limit
+
+1: Initialize a variable sum_amicable to 0 to store the sum of amicable numbers
+2: for each number n from 2 to limit do
+3:     Calculate the sum of proper divisors of n (sum_divisors_n)
+4:     if sum_divisors_n is not equal to n and is less than or equal to limit then
+5:         Calculate the sum of proper divisors of sum_divisors_n (sum_divisors_sum_divisors_n)
+6:         if sum_divisors_sum_divisors_n equals n then
+7:             n and sum_divisors_n are an amicable pair
+8:             Add n to sum_amicable
+9: return sum_amicable

@@ -1,0 +1,8 @@
+Input: dict: a dictionary, n: a value to check against
+Output: True if all values in dict are equal to n, otherwise False
+1: Initialize result to True
+2: for each value x in dict.values() do
+3:     if x is not equal to n then
+4:         set result to False
+5:         break the loop
+6: return result

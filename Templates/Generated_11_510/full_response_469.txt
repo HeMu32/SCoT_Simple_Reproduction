@@ -1,0 +1,19 @@
+[BEGIN]
+Input: price: a list of integers representing the price of a stock on different days, k: an integer representing the maximum number of transactions allowed
+Output: max_profit: the maximum profit that can be earned from a maximum of k transactions
+
+1: Initialize n as the length of the price list
+2: Create a 2D list final_profit with dimensions (k + 1) x n, initialized with None
+3: Loop i from 0 to k (inclusive):
+4:     Loop j from 0 to n (inclusive):
+5:         If i is 0 or j is 0:
+6:             Set final_profit[i][j] to 0
+7:         Else:
+8:             Initialize max_so_far to 0
+9:             Loop x from 0 to j (exclusive):
+10:                Calculate curr_price as price[j] - price[x] + final_profit[i-1][x]
+11:                If max_so_far is less than curr_price:
+12:                    Set max_so_far to curr_price
+13:            Set final_profit[i][j] to the maximum of final_profit[i][j-1] and max_so_far
+14: Return final_profit[k][n-1]
+[END]

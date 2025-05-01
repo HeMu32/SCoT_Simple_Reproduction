@@ -1,0 +1,62 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: an integer representing the length of the list
+Output: a list of integers rearranged such that positive and negative numbers alternate, starting with a positive number if possible
+1: Initialize two lists, pos and neg, to store positive and negative numbers from arr, respectively
+2: Iterate through the elements in arr
+3:     If the element is positive, append it to pos
+4:     If the element is negative, append it to neg
+5: Initialize an empty list, result, to store the rearranged elements
+6: Initialize two index variables, i and j, to 0 for tracking the current position in pos and neg lists, respectively
+7: While i is less than the length of pos and j is less than the length of neg:
+8:     Append the element at index i from pos to result
+9:     Increment i by 1
+10:     Append the element at index j from neg to result
+11:     Increment j by 1
+12: If there are remaining elements in pos, append them to result
+13: If there are remaining elements in neg, append them to result
+14: Return result
+[END PROCESS]
+
+[BEGIN CODE]
+def re_arrange(arr, n):
+    pos = []
+    neg = []
+    
+    # Separate positive and negative numbers
+    for num in arr:
+        if num >= 0:
+            pos.append(num)
+        else:
+            neg.append(num)
+    
+    result = []
+    i, j = 0, 0
+    
+    # Alternate between positive and negative numbers
+    while i < len(pos) and j < len(neg):
+        result.append(pos[i])
+        result.append(neg[j])
+        i += 1
+        j += 1
+    
+    # Append any remaining positive numbers
+    while i < len(pos):
+        result.append(pos[i])
+        i += 1
+    
+    # Append any remaining negative numbers
+    while j < len(neg):
+        result.append(neg[j])
+        j += 1
+    
+    return result
+[END CODE]
+
+### Explanation:
+The function `re_arrange` takes an array `arr` and its length `n` as input and rearranges the array such that positive and negative numbers alternate. The process involves:
+1. Separating the positive and negative numbers into two different lists.
+2. Iterating through these lists and appending elements alternately to the result list.
+3. If one list is exhausted before the other, the remaining elements of the non-exhausted list are appended to the result list.
+4. The function returns the rearranged list.
+
+This approach ensures that the array is rearranged to have alternating positive and negative numbers, starting with a positive number if possible. If there are more positive or negative numbers, the extra numbers are appended at the end.

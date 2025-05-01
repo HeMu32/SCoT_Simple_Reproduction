@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: L: a list of integers  
+Output: num: a single integer formed by concatenating the integers in the list L  
+1: Initialize an empty string, str_num  
+2: Loop through each element in the list L  
+3:     Convert the current element to a string and append it to str_num  
+4: Convert the concatenated string str_num back to an integer  
+5: Return the integer num
+[END PROCESS]
+
+[BEGIN CODE]
+def multiple_to_single(L):
+    str_num = ""
+    for num in L:
+        str_num += str(num)
+    num = int(str_num)
+    return num
+[END CODE]
+
+### Explanation:
+The function `multiple_to_single` takes a list of integers `L` and converts it into a single integer by concatenating the integers. Here's a step-by-step breakdown of the process:
+
+1. **Initialization**: We start by initializing an empty string `str_num`. This string will be used to concatenate the string representations of the integers in the list.
+
+2. **Loop through the list**: We use a `for` loop to iterate over each element in the list `L`.
+
+3. **Convert and concatenate**: Inside the loop, we convert each integer to a string using `str(num)` and append it to `str_num`.
+
+4. **Convert to integer**: After the loop, we convert the concatenated string `str_num` back to an integer using `int(str_num)`.
+
+5. **Return the result**: Finally, we return the resulting integer `num`.
+
+This approach ensures that the integers in the list are concatenated in the order they appear, forming a single integer. For example, if the input list is `[1, 2, 3]`, the function will return the integer `123`.

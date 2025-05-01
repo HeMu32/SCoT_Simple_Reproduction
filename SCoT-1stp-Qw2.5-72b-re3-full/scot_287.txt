@@ -1,0 +1,8 @@
+Input: n: an integer representing the number of first even natural numbers to consider
+Output: sum_of_squares: the sum of squares of the first n even natural numbers
+1: Initialize sum_of_squares to 0
+2: for each number i from 1 to n:
+3:     calculate the i-th even number (2 * i)
+4:     square the i-th even number
+5:     add the squared value to sum_of_squares
+6: return sum_of_squares

@@ -1,0 +1,14 @@
+[BEGIN]
+Input: set: a list of integers, n: the number of elements in the set, sum: the target sum
+Output: True if there is a subset of set with a sum equal to the given sum, otherwise False
+
+1: if sum is 0:
+2:     return True
+3: if n is 0:
+4:     return False
+5: if the last element of set is greater than sum:
+6:     return the result of is_subset_sum with the last element removed and the same sum
+7: return the logical OR of:
+8:     - is_subset_sum with the last element removed and the same sum
+9:     - is_subset_sum with the last element removed and the sum decreased by the last element
+[END]

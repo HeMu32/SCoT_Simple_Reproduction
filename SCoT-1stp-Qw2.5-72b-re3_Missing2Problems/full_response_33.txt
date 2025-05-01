@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: N: an integer representing the decimal number to be converted to binary
+Output: binary_str: a string representing the binary equivalent of the decimal number N
+
+1: Initialize an empty string called binary_str to store the binary representation
+2: While N is greater than 0:
+3:     Calculate the remainder of N when divided by 2 (this will be the binary digit)
+4:     Convert the remainder to a string and prepend it to binary_str
+5:     Update N to be the integer division of N by 2 (this reduces the number for the next iteration)
+6: If binary_str is empty (which means N was 0):
+7:     Set binary_str to "0"
+8: Return binary_str
+[END PROCESS]
+
+[BEGIN CODE]
+def decimal_To_Binary(N):
+    binary_str = ""
+    while N > 0:
+        remainder = N % 2
+        binary_str = str(remainder) + binary_str
+        N = N // 2
+    if binary_str == "":
+        binary_str = "0"
+    return binary_str
+[END CODE]
+
+Explanation:
+The function `decimal_To_Binary` converts a decimal number to its binary representation. The process involves repeatedly dividing the number by 2 and collecting the remainders, which form the binary digits. The remainders are collected in reverse order, so they are prepended to the result string. If the input number is 0, the function directly returns "0" to handle this special case. This approach ensures that the binary representation is correctly formed and returned as a string.

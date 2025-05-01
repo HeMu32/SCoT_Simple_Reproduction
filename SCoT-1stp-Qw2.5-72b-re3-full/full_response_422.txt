@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number of first natural numbers to consider
+Output: The average of the cubes of the first n natural numbers
+
+1: Initialize a variable `sum_of_cubes` to 0 to store the sum of cubes
+2: Loop from 1 to n (inclusive)
+3:     For each number i in the loop, calculate i^3 and add it to `sum_of_cubes`
+4: After the loop, calculate the average by dividing `sum_of_cubes` by n
+5: Return the calculated average
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Average_Of_Cube(n):
+    sum_of_cubes = 0
+    for i in range(1, n + 1):
+        sum_of_cubes += i ** 3
+    average = sum_of_cubes / n
+    return average
+[END CODE]
+
+### Explanation:
+The function `find_Average_Of_Cube` calculates the average of the cubes of the first `n` natural numbers. Here's a step-by-step breakdown of the process:
+
+1. **Initialization**: We start by initializing a variable `sum_of_cubes` to 0. This variable will be used to accumulate the sum of the cubes of the first `n` natural numbers.
+
+2. **Looping through the numbers**: We use a `for` loop to iterate through the numbers from 1 to `n` (inclusive). For each number `i` in this range, we calculate its cube using `i ** 3` and add this value to `sum_of_cubes`.
+
+3. **Calculating the average**: After the loop completes, we calculate the average by dividing `sum_of_cubes` by `n`.
+
+4. **Returning the result**: Finally, we return the calculated average.
+
+This approach ensures that we correctly compute the average of the cubes of the first `n` natural numbers. The function is efficient and straightforward, leveraging a simple loop and basic arithmetic operations.

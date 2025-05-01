@@ -1,0 +1,12 @@
+def flatten_list(list1):
+    """ 
+    Write a function to flatten a given nested list structure. 
+    """ 
+    def _flatten(lst):
+        for item in lst:
+            if isinstance(item, list):
+                yield from _flatten(item)
+            else:
+                yield item
+
+    return list(_flatten(list1))

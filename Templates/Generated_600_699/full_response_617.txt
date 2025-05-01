@@ -1,0 +1,16 @@
+[BEGIN]
+Input: a, b, d: integers representing the lengths of two jumps and the target distance d to reach from the origin in a 2D plane.
+Output: The minimum number of jumps required to reach the point (d, 0).
+
+1: Set temp to a.
+2: Set a to the minimum of a and b.
+3: Set b to the maximum of temp and b.
+4: If d is greater than or equal to b:
+5:     Return the result of (d + b - 1) divided by b.
+6: If d is equal to 0:
+7:     Return 0.
+8: If d is equal to a:
+9:     Return 1.
+10: Otherwise:
+11:     Return 2.
+[END]

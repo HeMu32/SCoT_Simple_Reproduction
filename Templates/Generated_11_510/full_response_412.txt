@@ -1,0 +1,8 @@
+[BEGIN]
+Input: l: a list of integers  
+Output: l: a list with odd numbers removed  
+1: for each element i in l:  
+2:     if i is odd (i % 2 != 0):  
+3:         remove i from l  
+4: return l  
+[END]

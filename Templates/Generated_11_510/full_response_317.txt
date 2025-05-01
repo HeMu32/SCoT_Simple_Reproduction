@@ -1,0 +1,15 @@
+[BEGIN]
+Input: alist: a list of elements
+Output: encoded_list: a list with modified run-length encoding
+
+1: Define a helper function `ctr_ele` that takes a list `el` as input:
+   2:     If the length of `el` is greater than 1:
+   3:         Return a list containing the length of `el` and the first element of `el`
+   4:     Else:
+   5:         Return the first element of `el`
+6: Use the `groupby` function from the `itertools` module to group consecutive identical elements in `alist`
+7: For each group of consecutive identical elements in `alist`:
+   8:     Convert the group to a list and pass it to the `ctr_ele` function
+   9:     Append the result of `ctr_ele` to the `encoded_list`
+10: Return `encoded_list`
+[END]

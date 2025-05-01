@@ -1,0 +1,40 @@
+[BEGIN PROCESS]
+Input: a, b: two integers
+Output: sum: the sum of all common divisors of a and b
+
+1: Initialize a variable `sum` to 0 to store the sum of common divisors.
+2: Determine the smaller of the two numbers, `min_num`, because the largest possible common divisor cannot be larger than the smaller of the two numbers.
+3: Loop from 1 to `min_num` (inclusive):
+4:     Check if the current number is a divisor of both `a` and `b`:
+5:         If it is, add the current number to `sum`.
+6: After the loop, return the value of `sum`.
+[END PROCESS]
+
+[BEGIN CODE]
+def sum(a, b):
+    # Initialize sum to 0
+    sum = 0
+    
+    # Determine the smaller of the two numbers
+    min_num = min(a, b)
+    
+    # Loop from 1 to min_num (inclusive)
+    for i in range(1, min_num + 1):
+        # Check if i is a divisor of both a and b
+        if (a % i == 0) and (b % i == 0):
+            # Add i to sum if it is a common divisor
+            sum += i
+    
+    # Return the sum of common divisors
+    return sum
+[END CODE]
+
+### Explanation:
+The function `sum(a, b)` calculates the sum of all common divisors of two given integers `a` and `b`. The process involves:
+1. Initializing a variable `sum` to 0 to accumulate the sum of common divisors.
+2. Finding the smaller of the two numbers (`min_num`) to limit the range of the loop, as the largest possible common divisor cannot exceed the smaller number.
+3. Iterating through all numbers from 1 to `min_num` to check if they are divisors of both `a` and `b`.
+4. If a number is a common divisor, it is added to `sum`.
+5. Finally, the function returns the total sum of all common divisors.
+
+This approach ensures that all common divisors are considered and summed up efficiently.

@@ -1,0 +1,11 @@
+[BEGIN]
+Input: test_dict: a dictionary where each value is a list of elements
+Output: res: a sorted list of unique elements from all the lists in test_dict
+
+1: Initialize an empty set to store unique elements
+2: For each value list in test_dict:
+3:     For each element in the value list:
+4:         Add the element to the set
+5: Convert the set to a list and sort it
+6: Return the sorted list
+[END]

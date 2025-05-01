@@ -1,0 +1,4 @@
+Input: a, b, c: sides of a triangle  
+Output: perimeter: the perimeter of the triangle  
+1: Calculate the perimeter by adding the lengths of the three sides: perimeter = a + b + c  
+2: Return the perimeter

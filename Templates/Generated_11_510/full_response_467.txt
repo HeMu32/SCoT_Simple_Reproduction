@@ -1,0 +1,13 @@
+[BEGIN]
+Input: deciNum: a decimal number  
+Output: octalNum: the octal representation of deciNum  
+1: Initialize octalNum to 0  
+2: Initialize countval to 1  
+3: Set dNo to deciNum (though dNo is not used in the procedure, it's part of the original code)  
+4: While deciNum is not 0:  
+5:     Calculate the remainder of deciNum divided by 8  
+6:     Update octalNum by adding the product of remainder and countval  
+7:     Multiply countval by 10  
+8:     Perform integer division of deciNum by 8  
+9: Return octalNum  
+[END]

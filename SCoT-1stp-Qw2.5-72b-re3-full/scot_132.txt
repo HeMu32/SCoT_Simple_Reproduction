@@ -1,0 +1,7 @@
+Input: tup1: a tuple of elements (can be of any type that can be converted to a string)
+Output: A string representation of the tuple, with elements concatenated together without any separators.
+
+1: Initialize an empty string `result`.
+2: Iterate over each element `e` in the tuple `tup1`.
+3: Convert the element `e` to a string and concatenate it to `result`.
+4: Return the `result` string.

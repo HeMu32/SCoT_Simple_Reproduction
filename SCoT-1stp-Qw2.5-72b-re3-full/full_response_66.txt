@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: list: a list of numbers
+Output: count: the number of positive numbers in the list
+
+1: Initialize a counter variable to 0
+2: Loop through each number in the list:
+3:     If the number is greater than 0:
+4:         Increment the counter by 1
+5: Return the counter
+[END PROCESS]
+
+[BEGIN CODE]
+def pos_count(lst):
+    count = 0
+    for num in lst:
+        if num > 0:
+            count += 1
+    return count
+[END CODE]
+
+Explanation:
+- The function `pos_count` takes a list of numbers as input.
+- It initializes a counter variable `count` to 0, which will be used to keep track of the number of positive numbers in the list.
+- The function then iterates over each number in the list using a for loop.
+- Inside the loop, an if statement checks if the current number is greater than 0. If it is, the counter `count` is incremented by 1.
+- After the loop completes, the function returns the value of `count`, which represents the total number of positive numbers in the list.

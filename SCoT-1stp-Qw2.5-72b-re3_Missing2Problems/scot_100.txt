@@ -1,0 +1,10 @@
+Input: num: an integer
+Output: The next smallest palindrome integer greater than num
+
+1: Define a function `next_smallest_palindrome` that takes an integer `num` as input.
+2: Increment `num` by 1 to start checking from the next number.
+3: Start a loop that continues until a palindrome is found.
+4:   Convert the current number to a string.
+5:   Check if the string is equal to its reverse (i.e., it is a palindrome).
+6:   If it is a palindrome, return the number.
+7:   If it is not a palindrome, increment the number by 1 and continue the loop.

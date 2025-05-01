@@ -1,0 +1,7 @@
+Input: price: a tuple containing elements that have a float value as one of their components  
+Output: sorted_list: a list of tuples sorted by the float value in descending order  
+
+1:  Call the sorted function with the price tuple as the first argument  
+2:  Set the key parameter of the sorted function to a lambda function that extracts the float value from each element of the tuple  
+3:  Set the reverse parameter of the sorted function to True to sort the elements in descending order based on their float values  
+4:  Return the sorted list of tuples

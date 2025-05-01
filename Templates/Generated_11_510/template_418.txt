@@ -1,0 +1,7 @@
+Input: lst: a list of sublists
+Output: maxList: the sublist with the maximum length
+1: Initialize maxList to None
+2: for each sublist x in lst:
+3:     if maxList is None or the length of x is greater than the length of maxList:
+4:         set maxList to x
+5: return maxList

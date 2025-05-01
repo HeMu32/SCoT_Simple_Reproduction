@@ -1,0 +1,7 @@
+Input: arr: a list of integers, arr_size: the size of the list
+Output: The element that occurs an odd number of times in the list
+
+1: Initialize a variable `result` to 0. This will be used to store the XOR of all elements.
+2: Loop through each element `num` in the list `arr`:
+3:     XOR `num` with `result`. This operation will cancel out the elements occurring an even number of times, leaving the element that occurs an odd number of times.
+4: Return `result` as the element occurring an odd number of times.

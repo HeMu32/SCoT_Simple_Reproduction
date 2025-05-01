@@ -1,0 +1,4 @@
+Input: N: an integer  
+Output: closest_num: the closest smaller number than N  
+1: Subtract 1 from N  
+2: Return the result

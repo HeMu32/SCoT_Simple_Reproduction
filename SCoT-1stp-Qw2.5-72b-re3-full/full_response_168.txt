@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: a: a list of integers, x: an integer to find the frequency of
+Output: frequency: the number of times x appears in the list a
+
+1: Initialize a variable `frequency` to 0 to keep track of the occurrences of `x`
+2: Loop through each element `element` in the list `a`
+3:     If `element` is equal to `x`:
+4:         Increment `frequency` by 1
+5: After the loop, return the value of `frequency`
+[END PROCESS]
+
+[BEGIN CODE]
+def frequency(a, x):
+    frequency = 0
+    for element in a:
+        if element == x:
+            frequency += 1
+    return frequency
+[END CODE]
+
+### Explanation:
+The function `frequency` takes two parameters: a list `a` and an integer `x`. The goal is to count how many times `x` appears in the list `a`. The process involves initializing a counter `frequency` to 0, then iterating through each element in the list. For each element, if it matches `x`, the counter is incremented by 1. After the loop completes, the function returns the value of `frequency`, which represents the number of occurrences of `x` in the list `a`. This approach is straightforward and efficient for finding the frequency of a specific element in a list.

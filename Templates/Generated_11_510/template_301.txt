@@ -1,0 +1,12 @@
+Input: d: a dictionary 
+Output: depth: an integer representing the depth of the dictionary 
+1: if d is a dictionary:
+2:     if d is not empty:
+3:         for each value in d:
+4:             recursively calculate the depth of the value
+5:         find the maximum depth among all values
+6:         return 1 plus the maximum depth
+7:     else:
+8:         return 1 (since an empty dictionary has a depth of 1)
+9: else:
+10:    return 0 (since d is not a dictionary, it has no depth)

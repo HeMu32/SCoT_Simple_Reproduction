@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: N: a string representing a hexadecimal number
+Output: "Even" if the number is even, "Odd" if the number is odd
+
+1: Convert the hexadecimal number to an integer
+2: Check if the integer is even or odd by using the modulo operator
+3: If the result of the integer modulo 2 is 0, the number is even
+4: Otherwise, the number is odd
+5: Return "Even" or "Odd" based on the result
+[END PROCESS]
+
+[BEGIN CODE]
+def even_or_odd(N):
+    # Convert the hexadecimal number to an integer
+    num = int(N, 16)
+    
+    # Check if the number is even or odd
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+[END CODE]
+
+### Explanation:
+The function `even_or_odd` takes a string `N` as input, which represents a hexadecimal number. The function first converts this hexadecimal string to an integer using Python's built-in `int` function with base 16. After conversion, the function checks if the integer is even or odd by using the modulo operator `%`. If the result of `num % 2` is 0, the number is even, and the function returns "Even". Otherwise, it returns "Odd". This approach leverages the properties of the modulo operation to determine the parity of the number efficiently.

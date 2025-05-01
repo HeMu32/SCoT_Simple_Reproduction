@@ -1,0 +1,9 @@
+Input: tri: a list of lists representing the right triangle of numbers; n: the number of rows in the triangle
+Output: max_sum: the maximum sum possible by moving from the top of the triangle to the bottom, moving to adjacent numbers on the row below
+
+1: Initialize a variable `max_sum` to store the maximum sum, starting with the top element of the triangle.
+2: Start a loop from the second last row of the triangle to the first row (moving upwards).
+3: For each element in the current row:
+4:     Add to the element the maximum of the two elements directly below it in the next row.
+5: After the loop, the top element will contain the maximum sum.
+6: Return the top element as the maximum sum.

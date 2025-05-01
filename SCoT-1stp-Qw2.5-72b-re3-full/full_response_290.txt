@@ -1,0 +1,46 @@
+[BEGIN PROCESS]
+Input: list1: a list of lists
+Output: a list of lists with the maximum length
+
+1: Initialize a variable max_len to 0 to keep track of the maximum length found.
+2: Initialize an empty list max_lists to store lists that have the maximum length.
+3: Loop through each sublist in list1:
+4:     If the length of the current sublist is greater than max_len:
+5:         Update max_len to the length of the current sublist.
+6:         Clear max_lists and add the current sublist to max_lists.
+7:     Else if the length of the current sublist is equal to max_len:
+8:         Add the current sublist to max_lists.
+9: Return max_lists.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_length(list1):
+    max_len = 0
+    max_lists = []
+    for sublist in list1:
+        if len(sublist) > max_len:
+            max_len = len(sublist)
+            max_lists = [sublist]
+        elif len(sublist) == max_len:
+            max_lists.append(sublist)
+    return max_lists
+[END CODE]
+
+### Explanation:
+The function `max_length` is designed to find and return all the lists within a given list of lists that have the maximum length. Here's a step-by-step breakdown of how the function works:
+
+1. **Initialization**:
+   - `max_len` is initialized to 0 to keep track of the maximum length of any sublist encountered.
+   - `max_lists` is initialized as an empty list to store the sublists that have the maximum length.
+
+2. **Loop Through Sublists**:
+   - The function iterates through each sublist in the input list `list1`.
+
+3. **Update Maximum Length**:
+   - If the length of the current sublist is greater than `max_len`, it updates `max_len` to the length of the current sublist and resets `max_lists` to contain only the current sublist.
+   - If the length of the current sublist is equal to `max_len`, it appends the current sublist to `max_lists`.
+
+4. **Return Result**:
+   - After the loop, the function returns `max_lists`, which contains all the sublists with the maximum length.
+
+This approach ensures that the function correctly identifies and returns all sublists that have the maximum length, even if there are multiple sublists with the same maximum length.

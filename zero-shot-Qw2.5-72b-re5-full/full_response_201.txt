@@ -1,0 +1,6 @@
+[BEGIN CODE]
+```python
+def chkList(lst):
+    return len(set(lst)) == 1
+```
+[END CODE]

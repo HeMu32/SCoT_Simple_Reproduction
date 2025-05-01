@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: a, b: two numbers  
+Output: a, b: the two numbers with their values swapped  
+
+1: Store the value of 'a' in a temporary variable 'temp'.  
+2: Assign the value of 'b' to 'a'.  
+3: Assign the value stored in 'temp' (which is the original value of 'a') to 'b'.  
+4: Return the new values of 'a' and 'b'.
+[END PROCESS]
+
+[BEGIN CODE]
+def swap_numbers(a, b):
+    temp = a
+    a = b
+    b = temp
+    return (a, b)
+[END CODE]
+
+### Explanation:
+The function `swap_numbers` is designed to swap the values of two variables, `a` and `b`. This is a common task in programming and can be achieved using a temporary variable to hold the value of one of the variables during the swap process. Here’s a step-by-step breakdown of how the function works:
+
+1. **Store the value of `a` in a temporary variable `temp`**: This step ensures that the original value of `a` is not lost when `a` is updated.
+2. **Assign the value of `b` to `a`**: This step updates `a` to hold the value of `b`.
+3. **Assign the value stored in `temp` to `b`**: This step updates `b` to hold the original value of `a` that was stored in `temp`.
+4. **Return the new values of `a` and `b`**: The function returns the swapped values as a tuple.
+
+This method is straightforward and works efficiently for swapping two values in Python.

@@ -1,0 +1,16 @@
+[BEGIN]
+Input: mixed_list: a list containing integers and strings
+Output: sorted_list: a list with integers and strings sorted separately and concatenated
+
+1: Initialize int_part as an empty list
+2: Initialize str_part as an empty list
+3: For each element i in mixed_list:
+4:     If the type of i is int:
+5:         Add i to int_part
+6:     Else if the type of i is str:
+7:         Add i to str_part
+8: Sort int_part
+9: Sort str_part
+10: Concatenate int_part and str_part to form sorted_list
+11: Return sorted_list
+[END]

@@ -1,0 +1,10 @@
+Input: A number (integer)
+Output: The number with all even bits toggled
+
+1: Define a function `even_bit_toggle_number` that takes an integer `num` as input.
+2: Initialize a variable `mask` to 0, which will be used to create a bitmask to identify even bits.
+3: Loop through each bit position, starting from 0 up to the number of bits in `num`:
+4:     If the bit position is even (0, 2, 4, ...):
+5:         Set the corresponding bit in `mask` to 1.
+6: Use the XOR operation between `num` and `mask` to toggle the even bits in `num`.
+7: Return the result of the XOR operation.

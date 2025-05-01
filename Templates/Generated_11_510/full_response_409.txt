@@ -1,0 +1,11 @@
+[BEGIN]
+Input: list1: a list of tuples, where each tuple contains two numeric elements
+Output: result_min: the minimum product of the pairs of tuples in list1
+
+1: Initialize an empty list to store the products of the tuples
+2: For each tuple (x, y) in list1:
+3:     Calculate the product of x and y
+4:     Append the absolute value of the product to the list
+5: Find the minimum value in the list of products
+6: Return the minimum value as result_min
+[END]

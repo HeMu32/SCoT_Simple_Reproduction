@@ -1,0 +1,7 @@
+Input: list: a list of numbers  
+Output: neg_count: the count of negative numbers in the list  
+1: Initialize neg_count to 0  
+2: for each number num in list:  
+3:     if num is less than or equal to 0:  
+4:         increment neg_count by 1  
+5: return neg_count

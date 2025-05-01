@@ -1,0 +1,9 @@
+Input: list: a list of elements, element: a string to compare against
+Output: result: a boolean indicating whether all items in the list are equal to the given string
+
+1: Initialize a variable result to True
+2: Loop through each item in the list:
+3:     If the current item is not equal to the given string:
+4:         Set result to False
+5:         Break the loop
+6: Return result

@@ -1,0 +1,7 @@
+Input: a: list, x: number
+Output: count: the frequency of x in a
+1: Initialize count to 0
+2: for each element i in a:
+3:     if i is equal to x:
+4:         increment count by 1
+5: return count

@@ -1,0 +1,8 @@
+Input: A: list of integers, N: length of the list
+Output: evenPair: count of pairs with XOR as an even number
+1: Initialize evenPair to 0
+2: for i from 0 to N-1 do
+3:     for j from i+1 to N-1 do
+4:         if (A[i] ^ A[j]) % 2 == 0 then
+5:             evenPair += 1
+6: return evenPair

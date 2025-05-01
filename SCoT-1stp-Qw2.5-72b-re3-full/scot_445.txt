@@ -1,0 +1,13 @@
+Input: test_tup1, test_tup2: two tuples of integers
+Output: result_tup: a tuple where each element is the product of the corresponding elements from test_tup1 and test_tup2
+
+1: Initialize an empty list to store the results of the multiplication.
+2: Check if the lengths of the two input tuples are equal.
+3: If the lengths are not equal:
+4:     Return None (or an error message) as the operation cannot be performed.
+5: If the lengths are equal:
+6:     Loop through the indices of the tuples.
+7:     For each index, multiply the corresponding elements from test_tup1 and test_tup2.
+8:     Append the result to the result list.
+9: Convert the result list to a tuple.
+10: Return the result tuple.

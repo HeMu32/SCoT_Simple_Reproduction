@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position in the Pell number sequence
+Output: res: the nth Pell number
+
+1: Define the base cases for the first two Pell numbers (P0 = 0 and P1 = 1)
+2: If n is 0, return 0
+3: If n is 1, return 1
+4: Initialize variables to store the two previous Pell numbers (prev1 and prev2)
+5: Set prev1 to 1 and prev2 to 0
+6: Use a loop to calculate the nth Pell number for n > 1
+7:     For each iteration from 2 to n:
+8:         Calculate the current Pell number as 2 * prev1 + prev2
+9:         Update prev2 to prev1
+10:        Update prev1 to the current Pell number
+11: After the loop, return the nth Pell number stored in prev1
+[END PROCESS]
+
+[BEGIN CODE]
+def get_pell(n):
+  if n == 0:
+    return 0
+  elif n == 1:
+    return 1
+  prev1, prev2 = 1, 0
+  for _ in range(2, n + 1):
+    curr = 2 * prev1 + prev2
+    prev2 = prev1
+    prev1 = curr
+  return prev1
+[END CODE]
+
+Explanation:
+The Pell numbers are a sequence of numbers where each number is the sum of twice the previous number and the number before that. The sequence starts with P0 = 0 and P1 = 1. The function `get_pell` calculates the nth Pell number using an iterative approach. It handles the base cases for n = 0 and n = 1 directly. For n > 1, it uses a loop to compute the nth Pell number by iteratively updating the values of the two previous Pell numbers until it reaches the desired position in the sequence. This method is efficient and avoids the potential stack overflow issues that can arise with recursive solutions for large values of n.

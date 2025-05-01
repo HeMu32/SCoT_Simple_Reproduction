@@ -1,0 +1,8 @@
+Input: arr: list of integers, n: length of arr, k: the position of the element to find
+Output: the kth element in the sorted array
+
+1: for i from 0 to n-1:
+2:     for j from 0 to n-i-2:
+3:         if arr[j] is greater than arr[j+1]:
+4:             swap arr[j] and arr[j+1]
+5: return the element at index k-1 in arr

@@ -1,0 +1,1012 @@
+{
+  "15": {
+    "task_description": "Write a function to split a string at lowercase letters.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_15.py",
+    "timestamp": "2025-04-25 11:40:45"
+  },
+  "16": {
+    "task_description": "Write a function to find sequences of lowercase letters joined with an underscore.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_16.py",
+    "timestamp": "2025-04-25 11:40:59"
+  },
+  "17": {
+    "task_description": "Write a function to find the perimeter of a square.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_17.py",
+    "timestamp": "2025-04-25 11:41:10"
+  },
+  "18": {
+    "task_description": "Write a function to remove characters from the first string which are present in the second string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_18.py",
+    "timestamp": "2025-04-25 11:41:23"
+  },
+  "19": {
+    "task_description": "Write a function to find whether a given array of integers contains any duplicate element.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_19.py",
+    "timestamp": "2025-04-25 11:41:40"
+  },
+  "20": {
+    "task_description": "Write a function to check if the given number is woodball or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_20.py",
+    "timestamp": "2025-04-25 11:41:59"
+  },
+  "21": {
+    "task_description": "Write a function to find m number of multiples of n.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_21.py",
+    "timestamp": "2025-04-25 11:42:12"
+  },
+  "22": {
+    "task_description": "Write a function to find the first duplicate element in a given array of integers.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_22.py",
+    "timestamp": "2025-04-25 11:42:44"
+  },
+  "23": {
+    "task_description": "Write a python function to find the maximum sum of elements of list in a list of lists.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_23.py",
+    "timestamp": "2025-04-25 11:42:56"
+  },
+  "24": {
+    "task_description": "Write a function to convert the given binary number to its decimal equivalent.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_24.py",
+    "timestamp": "2025-04-25 11:43:46"
+  },
+  "25": {
+    "task_description": "Write a python function to find the product of non-repeated elements in a given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_25.py",
+    "timestamp": "2025-04-25 11:44:33"
+  },
+  "26": {
+    "task_description": "Write a function to check if the given tuple list has all k elements.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_26.py",
+    "timestamp": "2025-04-25 11:45:41"
+  },
+  "27": {
+    "task_description": "Write a python function to remove all digits from a list of strings.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_27.py",
+    "timestamp": "2025-04-25 11:46:22"
+  },
+  "28": {
+    "task_description": "Write a python function to find binomial co-efficient.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_28.py",
+    "timestamp": "2025-04-25 11:47:23"
+  },
+  "29": {
+    "task_description": "Write a python function to find the element occurring odd number of times.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_29.py",
+    "timestamp": "2025-04-25 11:49:39"
+  },
+  "30": {
+    "task_description": "Write a python function to count all the substrings starting and ending with same characters.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_30.py",
+    "timestamp": "2025-04-25 11:52:02"
+  },
+  "31": {
+    "task_description": "Write a function to find the top k integers that occur most frequently from given lists of sorted and distinct integers using heap queue algorithm.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_31.py",
+    "timestamp": "2025-04-25 11:54:51"
+  },
+  "32": {
+    "task_description": "Write a python function to find the largest prime factor of a given number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_32.py",
+    "timestamp": "2025-04-25 11:56:31"
+  },
+  "33": {
+    "task_description": "Write a python function to convert a decimal number to binary number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_33.py",
+    "timestamp": "2025-04-25 11:59:56"
+  },
+  "34": {
+    "task_description": "Write a python function to find the missing number in a sorted array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_34.py",
+    "timestamp": "2025-04-25 12:03:24"
+  },
+  "35": {
+    "task_description": "Write a function to find the n-th rectangular number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_35.py",
+    "timestamp": "2025-04-25 12:06:57"
+  },
+  "36": {
+    "task_description": "Write a python function to find the nth digit in the proper fraction of two given numbers.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_36.py",
+    "timestamp": "2025-04-25 12:07:11"
+  },
+  "37": {
+    "task_description": "Write a function to sort a given mixed list of integers and strings.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_37.py",
+    "timestamp": "2025-04-25 12:07:25"
+  },
+  "38": {
+    "task_description": "Write a function to find the division of first even and odd number of a given list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_38.py",
+    "timestamp": "2025-04-25 12:08:00"
+  },
+  "39": {
+    "task_description": "Write a function to check if the letters of a given string can be rearranged so that two characters that are adjacent to each other are different.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_39.py",
+    "timestamp": "2025-04-25 12:08:18"
+  },
+  "40": {
+    "task_description": "Write a function to find frequency of the elements in a given list of lists using collections module.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_40.py",
+    "timestamp": "2025-04-25 12:08:30"
+  },
+  "41": {
+    "task_description": "Write a function to filter even numbers using lambda function.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_41.py",
+    "timestamp": "2025-04-25 12:08:42"
+  },
+  "42": {
+    "task_description": "Write a python function to find the sum of repeated elements in a given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_42.py",
+    "timestamp": "2025-04-25 12:08:57"
+  },
+  "43": {
+    "task_description": "Write a function to find sequences of lowercase letters joined with an underscore using regex.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_43.py",
+    "timestamp": "2025-04-25 12:09:11"
+  },
+  "44": {
+    "task_description": "Write a function that matches a word at the beginning of a string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_44.py",
+    "timestamp": "2025-04-25 12:09:23"
+  },
+  "45": {
+    "task_description": "Write a function to find the gcd of the given array elements.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_45.py",
+    "timestamp": "2025-04-25 12:09:36"
+  },
+  "46": {
+    "task_description": "Write a python function to determine whether all the numbers are different from each other are not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_46.py",
+    "timestamp": "2025-04-25 12:09:48"
+  },
+  "47": {
+    "task_description": "Write a python function to find the last digit when factorial of a divides factorial of b.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_47.py",
+    "timestamp": "2025-04-25 12:10:04"
+  },
+  "48": {
+    "task_description": "Write a python function to set all odd bits of a given number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_48.py",
+    "timestamp": "2025-04-25 12:10:19"
+  },
+  "49": {
+    "task_description": "Write a function to extract every first or specified element from a given two-dimensional list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_49.py",
+    "timestamp": "2025-04-25 12:10:32"
+  },
+  "50": {
+    "task_description": "Write a function to find the list with minimum length using lambda function.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_50.py",
+    "timestamp": "2025-04-25 12:10:45"
+  },
+  "51": {
+    "task_description": "Write a function to print check if the triangle is equilateral or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_51.py",
+    "timestamp": "2025-04-25 12:10:59"
+  },
+  "52": {
+    "task_description": "Write a function to caluclate area of a parallelogram.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_52.py",
+    "timestamp": "2025-04-25 12:11:11"
+  },
+  "53": {
+    "task_description": "Write a python function to check whether the first and last characters of a given string are equal or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_53.py",
+    "timestamp": "2025-04-25 12:11:23"
+  },
+  "54": {
+    "task_description": "Write a function to sort the given array by using counting sort.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_54.py",
+    "timestamp": "2025-04-25 12:11:40"
+  },
+  "55": {
+    "task_description": "Write a function to find t-nth term of geometric series.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_55.py",
+    "timestamp": "2025-04-25 12:11:52"
+  },
+  "56": {
+    "task_description": "Write a python function to check if a given number is one less than twice its reverse.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_56.py",
+    "timestamp": "2025-04-25 12:12:05"
+  },
+  "57": {
+    "task_description": "Write a python function to find the largest number that can be formed with the given digits.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_57.py",
+    "timestamp": "2025-04-25 12:12:19"
+  },
+  "58": {
+    "task_description": "Write a python function to check whether the given two integers have opposite sign or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_58.py",
+    "timestamp": "2025-04-25 12:12:31"
+  },
+  "59": {
+    "task_description": "Write a function to find the nth octagonal number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_59.py",
+    "timestamp": "2025-04-25 12:12:42"
+  },
+  "60": {
+    "task_description": "Write a function to find the maximum length of the subsequence with difference between adjacent elements for the given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_60.py",
+    "timestamp": "2025-04-25 12:12:56"
+  },
+  "61": {
+    "task_description": "Write a python function to count number of substrings with the sum of digits equal to their length.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_61.py",
+    "timestamp": "2025-04-25 12:13:11"
+  },
+  "62": {
+    "task_description": "Write a python function to find smallest number in a list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_62.py",
+    "timestamp": "2025-04-25 12:13:23"
+  },
+  "63": {
+    "task_description": "Write a function to find the maximum difference between available pairs in the given tuple list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_63.py",
+    "timestamp": "2025-04-25 12:13:37"
+  },
+  "64": {
+    "task_description": "Write a function to sort a list of tuples using lambda.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_64.py",
+    "timestamp": "2025-04-25 12:13:49"
+  },
+  "65": {
+    "task_description": "Write a function of recursion list sum.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_65.py",
+    "timestamp": "2025-04-25 12:14:02"
+  },
+  "66": {
+    "task_description": "Write a python function to count positive numbers in a list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_66.py",
+    "timestamp": "2025-04-25 12:14:15"
+  },
+  "67": {
+    "task_description": "Write a function to find the number of ways to partition a set of bell numbers.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_67.py",
+    "timestamp": "2025-04-25 12:14:30"
+  },
+  "68": {
+    "task_description": "Write a python function to check whether the given array is monotonic or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_68.py",
+    "timestamp": "2025-04-25 12:14:43"
+  },
+  "69": {
+    "task_description": "Write a function to check whether a list contains the given sublist or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_69.py",
+    "timestamp": "2025-04-25 12:14:59"
+  },
+  "70": {
+    "task_description": "Write a function to find whether all the given tuples have equal length or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_70.py",
+    "timestamp": "2025-04-25 12:15:11"
+  },
+  "71": {
+    "task_description": "Write a function to sort a list of elements using comb sort.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_71.py",
+    "timestamp": "2025-04-25 12:15:34"
+  },
+  "72": {
+    "task_description": "Write a python function to check whether the given number can be represented as difference of two squares or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_72.py",
+    "timestamp": "2025-04-25 12:15:49"
+  },
+  "73": {
+    "task_description": "Write a function to split the given string with multiple delimiters by using regex.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_73.py",
+    "timestamp": "2025-04-25 12:16:03"
+  },
+  "74": {
+    "task_description": "Write a function to check whether it follows the sequence given in the patterns array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_74.py",
+    "timestamp": "2025-04-25 12:16:18"
+  },
+  "75": {
+    "task_description": "Write a function to find tuples which have all elements divisible by k from the given list of tuples.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_75.py",
+    "timestamp": "2025-04-25 12:16:33"
+  },
+  "76": {
+    "task_description": "Write a python function to count the number of squares in a rectangle.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_76.py",
+    "timestamp": "2025-04-25 12:16:46"
+  },
+  "77": {
+    "task_description": "Write a python function to find the difference between sum of even and odd digits.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_77.py",
+    "timestamp": "2025-04-25 12:16:59"
+  },
+  "78": {
+    "task_description": "Write a python function to find number of integers with odd number of set bits.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_78.py",
+    "timestamp": "2025-04-25 12:17:12"
+  },
+  "79": {
+    "task_description": "Write a python function to check whether the length of the word is odd or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_79.py",
+    "timestamp": "2025-04-25 12:17:26"
+  },
+  "80": {
+    "task_description": "Write a function to find the nth tetrahedral number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_80.py",
+    "timestamp": "2025-04-25 12:17:40"
+  },
+  "81": {
+    "task_description": "Write a function to zip the two given tuples.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_81.py",
+    "timestamp": "2025-04-25 12:17:52"
+  },
+  "82": {
+    "task_description": "Write a function to find the volume of a sphere.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_82.py",
+    "timestamp": "2025-04-25 12:18:07"
+  },
+  "83": {
+    "task_description": "Write a python function to find the character made by adding all the characters of the given string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_83.py",
+    "timestamp": "2025-04-25 12:18:20"
+  },
+  "84": {
+    "task_description": "Write a function to find the n-th number in newman conway sequence.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_84.py",
+    "timestamp": "2025-04-25 12:18:36"
+  },
+  "85": {
+    "task_description": "Write a function to find the surface area of a sphere.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_85.py",
+    "timestamp": "2025-04-25 12:18:51"
+  },
+  "86": {
+    "task_description": "Write a function to find nth centered hexagonal number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_86.py",
+    "timestamp": "2025-04-25 12:19:03"
+  },
+  "87": {
+    "task_description": "Write a function to merge three dictionaries into a single expression.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_87.py",
+    "timestamp": "2025-04-25 12:19:15"
+  },
+  "88": {
+    "task_description": "Write a function to get the frequency of the elements in a list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_88.py",
+    "timestamp": "2025-04-25 12:19:29"
+  },
+  "89": {
+    "task_description": "Write a function to find the closest smaller number than n.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_89.py",
+    "timestamp": "2025-04-25 12:19:42"
+  },
+  "90": {
+    "task_description": "Write a python function to find the length of the longest word.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_90.py",
+    "timestamp": "2025-04-25 12:19:55"
+  },
+  "91": {
+    "task_description": "Write a function to check if a substring is present in a given list of string values.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_91.py",
+    "timestamp": "2025-04-25 12:20:08"
+  },
+  "92": {
+    "task_description": "Write a function to check whether the given number is undulating or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_92.py",
+    "timestamp": "2025-04-25 12:20:21"
+  },
+  "93": {
+    "task_description": "Write a function to calculate the value of 'a' to the power 'b'.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_93.py",
+    "timestamp": "2025-04-25 12:20:33"
+  },
+  "94": {
+    "task_description": "Write a function to extract the index minimum value record from the given tuples.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_94.py",
+    "timestamp": "2025-04-25 12:20:46"
+  },
+  "95": {
+    "task_description": "Write a python function to find the minimum length of sublist.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_95.py",
+    "timestamp": "2025-04-25 12:20:59"
+  },
+  "96": {
+    "task_description": "Write a python function to find the number of divisors of a given integer.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_96.py",
+    "timestamp": "2025-04-25 12:21:12"
+  },
+  "97": {
+    "task_description": "Write a function to find frequency count of list of lists.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_97.py",
+    "timestamp": "2025-04-25 12:21:24"
+  },
+  "98": {
+    "task_description": "Write a function to multiply all the numbers in a list and divide with the length of the list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_98.py",
+    "timestamp": "2025-04-25 12:21:41"
+  },
+  "99": {
+    "task_description": "Write a function to convert the given decimal number to its binary equivalent.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_99.py",
+    "timestamp": "2025-04-25 12:21:53"
+  },
+  "100": {
+    "task_description": "Write a function to find the next smallest palindrome of a specified number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_100.py",
+    "timestamp": "2025-04-25 12:22:06"
+  },
+  "101": {
+    "task_description": "Write a function to find the kth element in the given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_101.py",
+    "timestamp": "2025-04-25 12:22:18"
+  },
+  "102": {
+    "task_description": "Write a function to convert snake case string to camel case string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_102.py",
+    "timestamp": "2025-04-25 12:22:31"
+  },
+  "103": {
+    "task_description": "Write a function to find eulerian number a(n, m).",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_103.py",
+    "timestamp": "2025-04-25 12:22:45"
+  },
+  "104": {
+    "task_description": "Write a function to sort each sublist of strings in a given list of lists using lambda function.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_104.py",
+    "timestamp": "2025-04-25 12:22:57"
+  },
+  "105": {
+    "task_description": "Write a python function to count true booleans in the given list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_105.py",
+    "timestamp": "2025-04-25 12:23:10"
+  },
+  "106": {
+    "task_description": "Write a function to add the given list to the given tuples.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_106.py",
+    "timestamp": "2025-04-25 12:23:23"
+  },
+  "107": {
+    "task_description": "Write a python function to count hexadecimal numbers for a given range.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_107.py",
+    "timestamp": "2025-04-25 12:23:37"
+  },
+  "108": {
+    "task_description": "Write a function to merge multiple sorted inputs into a single sorted iterator using heap queue algorithm.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_108.py",
+    "timestamp": "2025-04-25 12:23:50"
+  },
+  "109": {
+    "task_description": "Write a python function to find the count of rotations of a binary string with odd value.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_109.py",
+    "timestamp": "2025-04-25 12:24:03"
+  },
+  "110": {
+    "task_description": "Write a function to extract the ranges that are missing from the given list with the given start range and end range values.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_110.py",
+    "timestamp": "2025-04-25 12:24:18"
+  },
+  "111": {
+    "task_description": "Write a function to find common elements in given nested lists. * list item * list item * list item * list item",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_111.py",
+    "timestamp": "2025-04-25 12:24:31"
+  },
+  "112": {
+    "task_description": "Write a python function to find the perimeter of a cylinder.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_112.py",
+    "timestamp": "2025-04-25 12:24:44"
+  },
+  "113": {
+    "task_description": "Write a function to check if a string represents an integer or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_113.py",
+    "timestamp": "2025-04-25 12:24:57"
+  },
+  "114": {
+    "task_description": "Write a function to assign frequency to each tuple in the given tuple list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_114.py",
+    "timestamp": "2025-04-25 12:25:09"
+  },
+  "115": {
+    "task_description": "Write a function to check whether all dictionaries in a list are empty or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_115.py",
+    "timestamp": "2025-04-25 12:25:22"
+  },
+  "116": {
+    "task_description": "Write a function to convert a given tuple of positive integers into an integer.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_116.py",
+    "timestamp": "2025-04-25 12:25:34"
+  },
+  "117": {
+    "task_description": "Write a function to convert all possible convertible elements in the list to float.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_117.py",
+    "timestamp": "2025-04-25 12:25:50"
+  },
+  "118": {
+    "task_description": "[link text](https:// [link text](https:// [link text](https://)))write a function to convert a string to a list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_118.py",
+    "timestamp": "2025-04-25 12:26:03"
+  },
+  "119": {
+    "task_description": "Write a python function to find the element that appears only once in a sorted array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_119.py",
+    "timestamp": "2025-04-25 12:26:18"
+  },
+  "120": {
+    "task_description": "Write a function to find the maximum product from the pairs of tuples within a given list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_120.py",
+    "timestamp": "2025-04-25 12:26:35"
+  },
+  "121": {
+    "task_description": "Write a function to find the triplet with sum of the given array",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_121.py",
+    "timestamp": "2025-04-25 12:26:53"
+  },
+  "122": {
+    "task_description": "Write a function to find n\u2019th smart number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_122.py",
+    "timestamp": "2025-04-25 12:27:11"
+  },
+  "123": {
+    "task_description": "Write a function to sum all amicable numbers from 1 to a specified number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_123.py",
+    "timestamp": "2025-04-25 12:27:30"
+  },
+  "124": {
+    "task_description": "Write a function to get the angle of a complex number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_124.py",
+    "timestamp": "2025-04-25 12:27:42"
+  },
+  "125": {
+    "task_description": "Write a function to find the maximum difference between the number of 0s and number of 1s in any sub-string of the given binary string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_125.py",
+    "timestamp": "2025-04-25 12:27:56"
+  },
+  "126": {
+    "task_description": "Write a python function to find the sum of common divisors of two given numbers.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_126.py",
+    "timestamp": "2025-04-25 12:28:15"
+  },
+  "127": {
+    "task_description": "Write a function to multiply two integers without using the * operator in python.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_127.py",
+    "timestamp": "2025-04-25 12:28:28"
+  },
+  "128": {
+    "task_description": "Write a function to shortlist words that are longer than n from a given list of words.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_128.py",
+    "timestamp": "2025-04-25 12:28:41"
+  },
+  "129": {
+    "task_description": "Write a function to calculate magic square.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_129.py",
+    "timestamp": "2025-04-25 12:28:59"
+  },
+  "130": {
+    "task_description": "Write a function to find the item with maximum frequency in a given list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_130.py",
+    "timestamp": "2025-04-25 12:29:13"
+  },
+  "131": {
+    "task_description": "Write a python function to reverse only the vowels of a given string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_131.py",
+    "timestamp": "2025-04-25 12:29:28"
+  },
+  "132": {
+    "task_description": "Write a function to convert tuple to a string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_132.py",
+    "timestamp": "2025-04-25 12:29:40"
+  },
+  "133": {
+    "task_description": "Write a function to calculate the sum of the negative numbers of a given list of numbers using lambda function.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_133.py",
+    "timestamp": "2025-04-25 12:29:54"
+  },
+  "134": {
+    "task_description": "Write a python function to check whether the last element of given array is even or odd after performing an operation p times.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_134.py",
+    "timestamp": "2025-04-25 12:30:07"
+  },
+  "135": {
+    "task_description": "Write a function to find the nth hexagonal number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_135.py",
+    "timestamp": "2025-04-25 12:30:19"
+  },
+  "136": {
+    "task_description": "Write a function to calculate electricity bill.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_136.py",
+    "timestamp": "2025-04-25 12:30:38"
+  },
+  "137": {
+    "task_description": "Write a function to find the ration of zeroes in an array of integers.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_137.py",
+    "timestamp": "2025-04-25 12:30:50"
+  },
+  "138": {
+    "task_description": "Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_138.py",
+    "timestamp": "2025-04-25 12:31:04"
+  },
+  "139": {
+    "task_description": "Write a function to find the circumference of a circle.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_139.py",
+    "timestamp": "2025-04-25 12:31:16"
+  },
+  "140": {
+    "task_description": "Write a function to extract elements that occur singly in the given tuple list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_140.py",
+    "timestamp": "2025-04-25 12:31:29"
+  },
+  "141": {
+    "task_description": "Write a function to sort a list of elements using pancake sort.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_141.py",
+    "timestamp": "2025-04-25 12:31:45"
+  },
+  "142": {
+    "task_description": "Write a function to count the same pair in three given lists.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_142.py",
+    "timestamp": "2025-04-25 12:32:00"
+  },
+  "143": {
+    "task_description": "Write a function to find number of lists present in the given tuple.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_143.py",
+    "timestamp": "2025-04-25 12:32:14"
+  },
+  "144": {
+    "task_description": "Write a python function to find the sum of absolute differences in all pairs of the given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_144.py",
+    "timestamp": "2025-04-25 12:32:27"
+  },
+  "145": {
+    "task_description": "Write a python function to find the maximum difference between any two elements in a given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_145.py",
+    "timestamp": "2025-04-25 12:32:41"
+  },
+  "146": {
+    "task_description": "Write a function to find the ascii value of total characters in a string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_146.py",
+    "timestamp": "2025-04-25 12:32:54"
+  },
+  "147": {
+    "task_description": "Write a function to find the maximum total path sum in the given triangle.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_147.py",
+    "timestamp": "2025-04-25 12:33:12"
+  },
+  "148": {
+    "task_description": "Write a function to divide a number into two parts such that the sum of digits is maximum.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_148.py",
+    "timestamp": "2025-04-25 12:33:28"
+  },
+  "149": {
+    "task_description": "Write a function to find the longest subsequence such that the difference between adjacents is one for the given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_149.py",
+    "timestamp": "2025-04-25 12:33:43"
+  },
+  "150": {
+    "task_description": "Write a python function to find whether the given number is present in the infinite sequence or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_150.py",
+    "timestamp": "2025-04-25 12:33:55"
+  },
+  "151": {
+    "task_description": "Write a python function to check whether the given number is co-prime or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_151.py",
+    "timestamp": "2025-04-25 12:34:08"
+  },
+  "152": {
+    "task_description": "Write a function to sort the given array by using merge sort.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_152.py",
+    "timestamp": "2025-04-25 12:34:27"
+  },
+  "153": {
+    "task_description": "Write a function to find the vertex of a parabola.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_153.py",
+    "timestamp": "2025-04-25 12:34:40"
+  },
+  "154": {
+    "task_description": "Write a function to extract every specified element from a given two dimensional list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_154.py",
+    "timestamp": "2025-04-25 12:34:52"
+  },
+  "155": {
+    "task_description": "Write a python function to toggle all even bits of a given number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_155.py",
+    "timestamp": "2025-04-25 12:35:08"
+  },
+  "156": {
+    "task_description": "Write a function to convert a tuple of string values to a tuple of integer values.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_156.py",
+    "timestamp": "2025-04-25 12:35:20"
+  },
+  "157": {
+    "task_description": "Write a function to reflect the run-length encoding from a list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_157.py",
+    "timestamp": "2025-04-25 12:35:36"
+  },
+  "158": {
+    "task_description": "Write a python function to find k number of operations required to make all elements equal.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_158.py",
+    "timestamp": "2025-04-25 12:35:49"
+  },
+  "159": {
+    "task_description": "Write a function to print the season for the given month and day.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_159.py",
+    "timestamp": "2025-04-25 12:36:07"
+  },
+  "160": {
+    "task_description": "Write a function to find x and y that satisfies ax + by = n.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_160.py",
+    "timestamp": "2025-04-25 12:36:22"
+  },
+  "161": {
+    "task_description": "Write a function to remove all elements from a given list present in another list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_161.py",
+    "timestamp": "2025-04-25 12:36:34"
+  },
+  "162": {
+    "task_description": "Write a function to calculate the sum of the positive integers of n+(n-2)+(n-4)... (until n-x =< 0).",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_162.py",
+    "timestamp": "2025-04-25 12:36:45"
+  },
+  "163": {
+    "task_description": "Write a function to calculate the area of a regular polygon.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_163.py",
+    "timestamp": "2025-04-25 12:36:58"
+  },
+  "164": {
+    "task_description": "Write a python function to check whether the sum of divisors are same or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_164.py",
+    "timestamp": "2025-04-25 12:37:10"
+  },
+  "165": {
+    "task_description": "Write a python function to count characters at same position in a given string (lower and uppercase characters) as in english alphabet.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_165.py",
+    "timestamp": "2025-04-25 12:37:23"
+  },
+  "166": {
+    "task_description": "Write a python function to count the pairs with xor as an even number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_166.py",
+    "timestamp": "2025-04-25 12:37:36"
+  },
+  "167": {
+    "task_description": "Write a python function to find smallest power of 2 greater than or equal to n.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_167.py",
+    "timestamp": "2025-04-25 12:37:50"
+  },
+  "168": {
+    "task_description": "Write a python function to find the frequency of a number in a given array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_168.py",
+    "timestamp": "2025-04-25 12:38:02"
+  },
+  "169": {
+    "task_description": "Write a function to calculate the nth pell number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_169.py",
+    "timestamp": "2025-04-25 12:38:17"
+  },
+  "170": {
+    "task_description": "Write a function to find sum of the numbers in a list between the indices of a specified range.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_170.py",
+    "timestamp": "2025-04-25 12:38:31"
+  },
+  "171": {
+    "task_description": "Write a function to find the perimeter of a pentagon.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_171.py",
+    "timestamp": "2025-04-25 12:38:44"
+  },
+  "172": {
+    "task_description": "Write a function to find the occurence of characters 'std' in the given string 1. list item 1. list item 1. list item 2. list item 2. list item 2. list item",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_172.py",
+    "timestamp": "2025-04-25 12:38:58"
+  },
+  "173": {
+    "task_description": "Write a function to remove everything except alphanumeric characters from a string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_173.py",
+    "timestamp": "2025-04-25 12:39:10"
+  },
+  "174": {
+    "task_description": "Write a function to group a sequence of key-value pairs into a dictionary of lists.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_174.py",
+    "timestamp": "2025-04-25 12:39:23"
+  },
+  "175": {
+    "task_description": "Write a function to verify validity of a string of parentheses.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_175.py",
+    "timestamp": "2025-04-25 12:39:36"
+  },
+  "176": {
+    "task_description": "Write a function to find the perimeter of a triangle.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_176.py",
+    "timestamp": "2025-04-25 12:39:48"
+  },
+  "177": {
+    "task_description": "Write a python function to find two distinct numbers such that their lcm lies within the given range.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_177.py",
+    "timestamp": "2025-04-25 12:40:03"
+  },
+  "178": {
+    "task_description": "Write a function to search some literals strings in a string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_178.py",
+    "timestamp": "2025-04-25 12:40:17"
+  },
+  "179": {
+    "task_description": "Write a function to find if the given number is a keith number or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_179.py",
+    "timestamp": "2025-04-25 12:40:33"
+  },
+  "180": {
+    "task_description": "Write a function to calculate distance between two points using latitude and longitude.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_180.py",
+    "timestamp": "2025-04-25 12:40:50"
+  },
+  "181": {
+    "task_description": "Write a function to find the longest common prefix in the given set of strings.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_181.py",
+    "timestamp": "2025-04-25 12:41:04"
+  },
+  "182": {
+    "task_description": "Write a function to find uppercase, lowercase, special character and numeric values using regex.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_182.py",
+    "timestamp": "2025-04-25 12:41:19"
+  },
+  "183": {
+    "task_description": "Write a function to count all the distinct pairs having a difference of k in any array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_183.py",
+    "timestamp": "2025-04-25 12:41:31"
+  },
+  "184": {
+    "task_description": "Write a function to find all the values in a list that are greater than a specified number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_184.py",
+    "timestamp": "2025-04-25 12:41:44"
+  },
+  "185": {
+    "task_description": "Write a function to find the focus of a parabola.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_185.py",
+    "timestamp": "2025-04-25 12:41:58"
+  },
+  "186": {
+    "task_description": "Write a function to search some literals strings in a string by using regex.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_186.py",
+    "timestamp": "2025-04-25 12:42:11"
+  },
+  "187": {
+    "task_description": "Write a function to find the longest common subsequence for the given two sequences.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_187.py",
+    "timestamp": "2025-04-25 12:42:29"
+  },
+  "188": {
+    "task_description": "Write a python function to check whether the given number can be represented by product of two squares or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_188.py",
+    "timestamp": "2025-04-25 12:42:42"
+  },
+  "189": {
+    "task_description": "Write a python function to find the first missing positive number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_189.py",
+    "timestamp": "2025-04-25 12:42:56"
+  },
+  "190": {
+    "task_description": "Write a python function to count the number of integral co-ordinates that lie inside a square.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_190.py",
+    "timestamp": "2025-04-25 12:43:11"
+  },
+  "191": {
+    "task_description": "Write a function to check whether the given month name contains 30 days or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_191.py",
+    "timestamp": "2025-04-25 12:43:24"
+  },
+  "192": {
+    "task_description": "Write a python function to check whether a string has atleast one letter and one number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_192.py",
+    "timestamp": "2025-04-25 12:43:39"
+  },
+  "193": {
+    "task_description": "Write a function to remove the duplicates from the given tuple.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_193.py",
+    "timestamp": "2025-04-25 12:43:51"
+  },
+  "194": {
+    "task_description": "Write a python function to convert octal number to decimal number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_194.py",
+    "timestamp": "2025-04-25 12:44:03"
+  },
+  "195": {
+    "task_description": "Write a python function to find the first position of an element in a sorted array.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_195.py",
+    "timestamp": "2025-04-25 12:44:18"
+  },
+  "196": {
+    "task_description": "Write a function to remove all the tuples with length k.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_196.py",
+    "timestamp": "2025-04-25 12:44:30"
+  },
+  "197": {
+    "task_description": "Write a function to perform the exponentiation of the given two tuples.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_197.py",
+    "timestamp": "2025-04-25 12:44:44"
+  },
+  "198": {
+    "task_description": "Write a function to find the largest triangle that can be inscribed in an ellipse.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_198.py",
+    "timestamp": "2025-04-25 12:44:59"
+  },
+  "199": {
+    "task_description": "Write a python function to find highest power of 2 less than or equal to given number.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_199.py",
+    "timestamp": "2025-04-25 12:45:11"
+  },
+  "200": {
+    "task_description": "Write a function to find all index positions of the maximum values in a given list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_200.py",
+    "timestamp": "2025-04-25 12:45:24"
+  },
+  "201": {
+    "task_description": "Write a python function to check whether the elements in a list are same or not.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_201.py",
+    "timestamp": "2025-04-25 12:45:35"
+  },
+  "202": {
+    "task_description": "Write a function to remove even characters in a string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_202.py",
+    "timestamp": "2025-04-25 12:45:49"
+  },
+  "203": {
+    "task_description": "Write a python function to find the hamming distance between given two integers.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_203.py",
+    "timestamp": "2025-04-25 12:46:03"
+  },
+  "204": {
+    "task_description": "Write a python function to count the occurrence of a given character in a string.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_204.py",
+    "timestamp": "2025-04-25 12:46:15"
+  },
+  "205": {
+    "task_description": "Write a function to find the inversions of tuple elements in the given tuple list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_205.py",
+    "timestamp": "2025-04-25 12:46:28"
+  },
+  "206": {
+    "task_description": "Write a function to perform the adjacent element concatenation in the given tuples.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_206.py",
+    "timestamp": "2025-04-25 12:46:41"
+  },
+  "207": {
+    "task_description": "Write a function to count the longest repeating subsequences such that the two subsequences don\u2019t have same string characters at same positions.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_207.py",
+    "timestamp": "2025-04-25 12:47:01"
+  },
+  "208": {
+    "task_description": "Write a function to check the given decimal with a precision of 2 by using regex.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_208.py",
+    "timestamp": "2025-04-25 12:47:14"
+  },
+  "209": {
+    "task_description": "Write a function to delete the smallest element from the given heap and then insert a new item.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_209.py",
+    "timestamp": "2025-04-25 12:47:26"
+  },
+  "210": {
+    "task_description": "Write a function to check that the given string contains only a certain set of characters(in this case a-z, a-z and 0-9) by using regex.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_210.py",
+    "timestamp": "2025-04-25 12:47:40"
+  },
+  "211": {
+    "task_description": "Write a python function to count numbers whose oth and nth bits are set.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_211.py",
+    "timestamp": "2025-04-25 12:47:52"
+  },
+  "212": {
+    "task_description": "Write a python function to find the sum of fourth power of n natural numbers.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_212.py",
+    "timestamp": "2025-04-25 12:48:05"
+  },
+  "213": {
+    "task_description": "Write a function to perform the concatenation of two string tuples.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_213.py",
+    "timestamp": "2025-04-25 12:48:18"
+  },
+  "214": {
+    "task_description": "Write a function to convert radians to degrees.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_214.py",
+    "timestamp": "2025-04-25 12:48:31"
+  },
+  "215": {
+    "task_description": "Write a function to decode a run-length encoded given list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_215.py",
+    "timestamp": "2025-04-25 12:48:44"
+  },
+  "216": {
+    "task_description": "Write a function to check if a nested list is a subset of another nested list.",
+    "solution_path": ".\\zero-shot-Qw2.5-72b-re5\\solution_216.py",
+    "timestamp": "2025-04-25 12:48:57"
+  }
+}

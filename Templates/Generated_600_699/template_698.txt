@@ -1,0 +1,8 @@
+Input: test_dict: a dictionary with tuple keys  
+Output: res: a dictionary with items sorted by the product of tuple keys  
+
+1: Initialize an empty dictionary res  
+2: Sort the keys of test_dict based on the product of the tuple elements  
+3: For each key in the sorted keys:  
+4:     Add the key and its corresponding value from test_dict to res  
+5: Return res

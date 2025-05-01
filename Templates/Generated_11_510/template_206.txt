@@ -1,0 +1,8 @@
+Input: test_tup: a tuple of elements
+Output: res: a new tuple with adjacent elements concatenated
+
+1: Initialize res as an empty tuple
+2: For each pair of adjacent elements (i, j) in test_tup:
+3:     Concatenate i and j
+4:     Add the concatenated result to res
+5: Return res

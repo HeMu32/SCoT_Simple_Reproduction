@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: n: an octal number as a string
+Output: decimal: the decimal equivalent of the octal number
+
+1: Initialize `decimal` to 0
+2: Initialize `base` to 1 (which is 8^0)
+3: Iterate over the characters in the string `n` from the last character to the first:
+4:     Convert the current character to an integer and store it in `digit`
+5:     Add `digit * base` to `decimal`
+6:     Multiply `base` by 8
+7: Return `decimal`
+[END PROCESS]
+
+[BEGIN CODE]
+def octal_To_Decimal(n):
+    decimal = 0
+    base = 1
+    for digit in reversed(n):
+        decimal += int(digit) * base
+        base *= 8
+    return decimal
+[END CODE]
+
+### Explanation:
+The function `octal_To_Decimal` converts an octal number (given as a string) to its decimal equivalent. The process involves iterating over each digit of the octal number from right to left, converting each digit to an integer, and then multiplying it by the appropriate power of 8 (the base of the octal system). The `base` variable is initialized to 1 (which is 8^0) and is multiplied by 8 for each digit processed, effectively shifting the power of 8 for each position in the octal number. The result is accumulated in the `decimal` variable, which is returned at the end of the function.

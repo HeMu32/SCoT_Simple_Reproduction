@@ -1,0 +1,7 @@
+Input: a, b: semi-major and semi-minor axes of the ellipse
+Output: area: the area of the largest triangle that can be inscribed in the ellipse
+
+1: Understand the geometric property that the largest triangle inscribed in an ellipse is an equilateral triangle with one vertex at one of the foci of the ellipse and the other two vertices on the ellipse.
+2: The area of the largest inscribed triangle in an ellipse is given by the formula: (3 * sqrt(3) * a * b) / 4, where a is the semi-major axis and b is the semi-minor axis.
+3: Calculate the area using the formula.
+4: Return the calculated area.

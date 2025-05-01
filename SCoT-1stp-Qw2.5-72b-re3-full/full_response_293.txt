@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: w, h: two integers representing the two sides of a right-angled triangle (w and h are the legs of the triangle)
+Output: res: a float representing the length of the hypotenuse (the third side of the triangle)
+
+1: Import the `math` module to use the square root function.
+2: Calculate the square of the hypotenuse using the Pythagorean theorem: `hypotenuse^2 = w^2 + h^2`.
+3: Compute the square root of the result from step 2 to get the length of the hypotenuse.
+4: Return the length of the hypotenuse as a float.
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def otherside_rightangle(w, h):
+  # Calculate the square of the hypotenuse
+  hypotenuse_squared = w**2 + h**2
+  # Compute the length of the hypotenuse
+  hypotenuse = math.sqrt(hypotenuse_squared)
+  # Return the length of the hypotenuse
+  return hypotenuse
+[END CODE]
+
+### Explanation:
+The function `otherside_rightangle(w, h)` calculates the length of the hypotenuse of a right-angled triangle given the lengths of the other two sides (w and h). The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides. This is mathematically represented as:
+
+\[ c^2 = a^2 + b^2 \]
+
+where \( c \) is the hypotenuse, and \( a \) and \( b \) are the other two sides. In this function, \( w \) and \( h \) represent \( a \) and \( b \), respectively. The function computes \( c \) by first calculating \( c^2 \) and then taking the square root of \( c^2 \) to find \( c \). The `math.sqrt` function from the `math` module is used to compute the square root. The result is returned as a float.

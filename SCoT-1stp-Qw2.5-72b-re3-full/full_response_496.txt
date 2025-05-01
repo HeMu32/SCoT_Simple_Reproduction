@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers, n: number of smallest integers to find
+Output: smallest_n: a list of the n smallest integers from nums
+
+1: Import the heapq module for heap queue operations
+2: Convert the list nums into a heap in-place using heapify
+3: Initialize an empty list smallest_n to store the n smallest integers
+4: for i from 0 to n-1:
+5:     Pop the smallest element from the heap and append it to smallest_n
+6: return smallest_n
+[END PROCESS]
+
+[BEGIN CODE]
+import heapq as hq
+
+def heap_queue_smallest(nums, n):
+    # Convert the list into a heap in-place
+    hq.heapify(nums)
+    # Initialize the list to store the n smallest integers
+    smallest_n = []
+    # Pop the smallest elements from the heap n times
+    for i in range(n):
+        smallest_n.append(hq.heappop(nums))
+    return smallest_n
+[END CODE]
+
+Explanation:
+The function `heap_queue_smallest` is designed to find the n smallest integers from a given list of numbers using the heap queue algorithm. The process involves converting the input list into a heap using the `heapify` function from the `heapq` module. This transformation ensures that the smallest element is always at the root of the heap. We then repeatedly pop the smallest element from the heap and append it to the result list until we have collected n elements. This approach is efficient and leverages the properties of the heap data structure to ensure that the smallest elements are retrieved in O(n log n) time complexity, where n is the number of smallest elements to find.

@@ -1,0 +1,8 @@
+Input: rownum: integer, colnum: integer  
+Output: multi_list: a two-dimensional list of size rownum x colnum  
+
+1: Initialize multi_list as an empty two-dimensional list of size rownum x colnum with all elements set to 0.  
+2: For each row in the range from 0 to rownum - 1:  
+3:     For each column in the range from 0 to colnum - 1:  
+4:         Set multi_list[row][col] to the product of row and col.  
+5: Return multi_list.

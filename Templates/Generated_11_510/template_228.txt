@@ -1,0 +1,12 @@
+Input: n: an integer, l: an integer (left boundary of the range), r: an integer (right boundary of the range)
+Output: True if all bits in the range [l, r] of n are unset, False otherwise
+
+1: Calculate a number `num` that has bits set from position `l` to `r` and all other bits unset:
+   1.1: Create a mask with bits set from 0 to `r` using `1 << r` and subtract 1 to get a number with bits set from 0 to `r-1`.
+   1.2: Create a mask with bits set from 0 to `l-1` using `1 << (l - 1)` and subtract 1 to get a number with bits set from 0 to `l-2`.
+   1.3: XOR the two masks to get a number with bits set from `l` to `r` and all other bits unset.
+2: Apply the mask `num` to `n` to isolate the bits in the range [l, r]:
+   2.1: Perform a bitwise AND operation between `n` and `num` to get `new_num`.
+3: Check if all bits in the range [l, r] are unset in `n`:
+   3.1: If `new_num` is 0, return True (all bits in the range are unset).
+   3.2: Otherwise, return False (at least one bit in the range is set).

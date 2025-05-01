@@ -1,0 +1,9 @@
+Input: l: a list of tuples, where each tuple contains a key and a value
+Output: A dictionary where each key from the input tuples is associated with a list of values that were paired with that key in the input list.
+
+1: Initialize an empty dictionary called `result`.
+2: For each tuple `(key, value)` in the list `l`:
+3:     If `key` is not already in `result`:
+4:         Add `key` to `result` with an empty list as its value.
+5:     Append `value` to the list associated with `key` in `result`.
+6: Return the `result` dictionary.

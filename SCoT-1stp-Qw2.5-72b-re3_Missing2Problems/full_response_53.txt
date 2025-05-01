@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: str: a string
+Output: A boolean value indicating whether the first and last characters of the string are the same
+
+1: Check if the string is empty. If it is, return False because there are no characters to compare.
+2: Compare the first character (str[0]) with the last character (str[-1]).
+3: If they are the same, return True.
+4: Otherwise, return False.
+[END PROCESS]
+
+[BEGIN CODE]
+def check_Equality(s):
+    # Check if the string is empty
+    if not s:
+        return False
+    # Compare the first and last characters
+    if s[0] == s[-1]:
+        return True
+    else:
+        return False
+[END CODE]
+
+Explanation:
+The function `check_Equality` takes a single string `s` as input. It first checks if the string is empty, in which case it returns `False` because an empty string does not have characters to compare. If the string is not empty, it compares the first character (`s[0]`) with the last character (`s[-1]`). If these characters are the same, the function returns `True`; otherwise, it returns `False`. This approach efficiently checks the equality of the first and last characters with a time complexity of O(1), as it only involves accessing the first and last elements of the string.

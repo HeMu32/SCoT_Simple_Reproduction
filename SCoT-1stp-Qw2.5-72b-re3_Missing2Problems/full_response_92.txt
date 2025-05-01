@@ -1,0 +1,65 @@
+Certainly! Let's break down the task and then implement the solution.
+
+### Understanding the Requirement
+An undulating number is a number that has the form `ababab...` or `bababa...`, where `a` and `b` are digits and `a` is not equal to `b`. For example, `121212` and `474747` are undulating numbers, while `123123` and `111111` are not.
+
+### Solving Process
+[BEGIN PROCESS]
+Input: n: an integer
+Output: True if n is an undulating number, False otherwise
+
+1: Convert the integer n to a string to easily access individual digits
+2: Check if the length of the string is less than 3:
+3:     If true, return False (a number with less than 3 digits cannot be undulating)
+4: Initialize two variables, a and b, to store the first and second digits of the string
+5: If a is equal to b:
+6:     Return False (a and b must be different for the number to be undulating)
+7: Iterate through the string from the third digit to the end:
+8:     For each digit at index i:
+9:         If i is even and the digit is not equal to a:
+10:            Return False
+11:         If i is odd and the digit is not equal to b:
+12:            Return False
+13: Return True (if all checks pass, the number is undulating)
+[END PROCESS]
+
+### Code Implementation
+[BEGIN CODE]
+def is_undulating(n):
+    # Convert the integer to a string
+    s = str(n)
+    
+    # Check if the length of the string is less than 3
+    if len(s) < 3:
+        return False
+    
+    # Initialize the first and second digits
+    a = s[0]
+    b = s[1]
+    
+    # Check if the first and second digits are the same
+    if a == b:
+        return False
+    
+    # Iterate through the string from the third digit to the end
+    for i in range(2, len(s)):
+        if i % 2 == 0 and s[i] != a:
+            return False
+        if i % 2 == 1 and s[i] != b:
+            return False
+    
+    # If all checks pass, the number is undulating
+    return True
+[END CODE]
+
+### Explanation
+1. **Conversion to String**: We convert the integer `n` to a string `s` to easily access individual digits.
+2. **Length Check**: We check if the length of the string is less than 3. If it is, the number cannot be undulating, so we return `False`.
+3. **First and Second Digits**: We initialize `a` and `b` to the first and second digits of the string, respectively.
+4. **Equality Check**: We check if `a` and `b` are the same. If they are, the number cannot be undulating, so we return `False`.
+5. **Loop Through Digits**: We iterate through the string starting from the third digit. For each digit at index `i`:
+   - If `i` is even and the digit is not equal to `a`, we return `False`.
+   - If `i` is odd and the digit is not equal to `b`, we return `False`.
+6. **Return True**: If all checks pass, the number is undulating, so we return `True`.
+
+This approach ensures that the number meets the criteria for being undulating.

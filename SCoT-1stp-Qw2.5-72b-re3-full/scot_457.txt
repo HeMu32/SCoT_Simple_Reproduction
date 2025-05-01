@@ -1,0 +1,9 @@
+Input: lst: a list of sublists  
+Output: The sublist with the minimum length  
+1: Initialize a variable `min_length` with a large number (like infinity) to keep track of the minimum length found so far  
+2: Initialize a variable `min_sublist` to store the sublist with the minimum length  
+3: Iterate through each sublist in the input list `lst`:  
+4:     If the length of the current sublist is less than `min_length`:  
+5:         Update `min_length` to the length of the current sublist  
+6:         Update `min_sublist` to the current sublist  
+7: Return `min_sublist`

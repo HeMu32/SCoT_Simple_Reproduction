@@ -1,0 +1,9 @@
+[BEGIN]
+Input: str1: a string  
+Output: count_chars: the number of characters at the same position in the string as in the English alphabet  
+1: Initialize count_chars to 0  
+2: for each index i in the range of the length of str1:  
+3:     if i is equal to the ASCII value of the character at position i minus the ASCII value of 'A' or 'a':  
+4:         increment count_chars by 1  
+5: return count_chars  
+[END]

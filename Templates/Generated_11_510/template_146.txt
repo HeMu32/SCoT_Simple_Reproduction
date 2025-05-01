@@ -1,0 +1,4 @@
+Input: str1: a string  
+Output: ascii_value: the ASCII value of the first character in str1  
+1: for each character in str1 do  
+2:     return the ASCII value of the current character using ord()

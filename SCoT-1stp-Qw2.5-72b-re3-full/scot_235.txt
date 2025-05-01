@@ -1,0 +1,11 @@
+Input: n: an integer
+Output: result: an integer with all even bits set to 1
+
+1: Initialize a variable `mask` to 0, which will be used to create a mask with all even bits set to 1.
+2: Initialize a variable `bit_position` to 1, which will be used to determine the current bit position.
+3: Loop through each bit position from 1 to the number of bits in `n`:
+   a: Check if the current bit position is even:
+      - If the bit position is even, set the corresponding bit in `mask` to 1.
+   b: Increment the `bit_position` by 1.
+4: Use the `mask` to set all even bits in `n` by performing a bitwise OR operation between `n` and `mask`.
+5: Return the result of the bitwise OR operation.

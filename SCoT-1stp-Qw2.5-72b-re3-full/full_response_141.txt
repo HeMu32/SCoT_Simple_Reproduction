@@ -1,0 +1,57 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: nums: the list of integers sorted in ascending order using pancake sort
+
+1: While the list is not sorted:
+2:     Find the maximum element in the unsorted portion of the list
+3:     Flip the list so that the maximum element moves to the front
+4:     Flip the list again to move the maximum element to its correct position at the end of the unsorted portion
+5:     Reduce the size of the unsorted portion by one
+6: Return the sorted list
+[END PROCESS]
+
+[BEGIN CODE]
+def pancake_sort(nums):
+    def flip(sublist, k):
+        """Flip the first k elements of the sublist."""
+        sublist[:k] = sublist[:k][::-1]
+
+    def find_max_position(sublist, n):
+        """Find the position of the maximum element in the first n elements of the sublist."""
+        max_pos = 0
+        for i in range(1, n):
+            if sublist[i] > sublist[max_pos]:
+                max_pos = i
+        return max_pos
+
+    n = len(nums)
+    while n > 1:
+        # Find the position of the maximum element in the unsorted portion
+        max_pos = find_max_position(nums, n)
+        
+        # Move the maximum element to the front if it's not already there
+        if max_pos != n - 1:
+            flip(nums, max_pos + 1)
+            flip(nums, n)
+        
+        # Reduce the size of the unsorted portion
+        n -= 1
+
+    return nums
+[END CODE]
+
+### Explanation
+
+Pancake sorting is a sorting algorithm that sorts a list by repeatedly flipping (reversing) the order of the first k elements of the list. The goal is to move the largest unsorted element to its correct position at the end of the list, and then reduce the size of the unsorted portion of the list.
+
+1. **Flip Function**: This function reverses the order of the first `k` elements in the list. It is used to move elements to the front or to their correct positions.
+2. **Find Max Position Function**: This function finds the index of the maximum element in the first `n` elements of the list. This is used to identify the element that needs to be moved to the front.
+3. **Main Loop**:
+   - The loop continues until the entire list is sorted.
+   - In each iteration, the maximum element in the unsorted portion is found.
+   - If the maximum element is not already at the end of the unsorted portion, it is moved to the front using a flip.
+   - Another flip is then used to move the maximum element to its correct position at the end of the unsorted portion.
+   - The size of the unsorted portion is reduced by one.
+4. **Return the Sorted List**: Once the loop completes, the list is sorted, and it is returned.
+
+This approach ensures that the list is sorted in O(n^2) time complexity, which is efficient for pancake sorting.

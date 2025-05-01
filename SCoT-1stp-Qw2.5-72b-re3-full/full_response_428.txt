@@ -1,0 +1,46 @@
+[BEGIN PROCESS]
+Input: my_list: a list of integers
+Output: my_list: the list sorted in ascending order
+
+1: Define the function shell_sort with a parameter my_list
+2: Initialize the gap to half the length of my_list
+3: While the gap is greater than 0:
+4:   For i from gap to the length of my_list:
+5:     Set temp to my_list[i]
+6:     Set j to i
+7:     While j is greater than or equal to gap and my_list[j - gap] is greater than temp:
+8:       Set my_list[j] to my_list[j - gap]
+9:       Decrement j by gap
+10:     Set my_list[j] to temp
+11:   Reduce the gap to the next value (gap // 2)
+12: Return the sorted my_list
+[END PROCESS]
+
+[BEGIN CODE]
+def shell_sort(my_list):
+    n = len(my_list)
+    gap = n // 2
+
+    while gap > 0:
+        for i in range(gap, n):
+            temp = my_list[i]
+            j = i
+            while j >= gap and my_list[j - gap] > temp:
+                my_list[j] = my_list[j - gap]
+                j -= gap
+            my_list[j] = temp
+        gap //= 2
+
+    return my_list
+[END CODE]
+
+### Explanation:
+The Shell sort algorithm is an in-place comparison sort which generalizes an exchanging sort, such as insertion sort, by allowing the comparison and exchange of elements that are some distance apart. The idea is to arrange the list of elements so that, starting anywhere, taking every hth element produces a sorted list. Such a list is said to be h-sorted. It starts by sorting pairs of elements far apart from each other, then progressively reducing the gap between elements to be compared. By starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange.
+
+1. **Initialization**: The gap is initialized to half the length of the list. This gap is used to determine the distance between elements to be compared and swapped.
+2. **Gap Reduction Loop**: The outer loop continues as long as the gap is greater than 0. After each iteration, the gap is reduced by half.
+3. **Insertion Sort with Gap**: The inner loop performs an insertion sort with the current gap. It iterates through the list starting from the gap index, and for each element, it finds the correct position in the already sorted part of the list (considering the gap).
+4. **Swapping Elements**: If the current element is smaller than the element at the position `j - gap`, the elements are swapped, and the index `j` is decremented by the gap. This process continues until the correct position for the current element is found.
+5. **Return Sorted List**: After the gap has been reduced to 0, the list is fully sorted, and the function returns the sorted list.
+
+This approach ensures that the list is sorted efficiently, especially for larger lists, by reducing the number of swaps needed compared to a simple insertion sort.

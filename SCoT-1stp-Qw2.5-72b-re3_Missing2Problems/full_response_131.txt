@@ -1,0 +1,48 @@
+[BEGIN PROCESS]
+Input: str1: a string
+Output: A new string with only the vowels reversed
+
+1: Initialize an empty list `vowels` to store the vowels found in the string.
+2: Initialize an empty list `result` to store the characters of the new string.
+3: Loop through each character `ch` in the string `str1`:
+4:     If `ch` is a vowel (either uppercase or lowercase):
+5:         Append `ch` to the `vowels` list.
+6: Initialize an index `vowel_index` to the last position of the `vowels` list.
+7: Loop through each character `ch` in the string `str1` again:
+8:     If `ch` is a vowel:
+9:         Append the vowel at `vowel_index` in the `vowels` list to `result`.
+10:        Decrement `vowel_index` by 1.
+11:    Else:
+12:        Append `ch` to `result`.
+13: Join the characters in `result` to form a new string.
+14: Return the new string.
+[END PROCESS]
+
+[BEGIN CODE]
+def reverse_vowels(str1):
+    vowels = 'aeiouAEIOU'
+    found_vowels = []
+    for ch in str1:
+        if ch in vowels:
+            found_vowels.append(ch)
+    
+    result = []
+    vowel_index = len(found_vowels) - 1
+    for ch in str1:
+        if ch in vowels:
+            result.append(found_vowels[vowel_index])
+            vowel_index -= 1
+        else:
+            result.append(ch)
+    
+    return ''.join(result)
+[END CODE]
+
+### Explanation:
+The function `reverse_vowels` takes a string `str1` as input and returns a new string where only the vowels are reversed. The process involves two main steps:
+
+1. **Collecting Vowels**: The function first iterates through the input string and collects all the vowels into a list called `found_vowels`. This list will be used to reverse the order of the vowels.
+
+2. **Constructing the Result String**: The function then iterates through the input string again. For each character, if it is a vowel, it appends the corresponding vowel from the end of the `found_vowels` list to the result list. If it is not a vowel, it appends the character as is. The `vowel_index` is used to keep track of the position in the `found_vowels` list, starting from the last vowel and moving backwards.
+
+Finally, the result list is joined into a single string and returned. This approach ensures that the consonants remain in their original positions while the vowels are reversed.

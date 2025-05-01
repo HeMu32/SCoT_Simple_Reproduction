@@ -1,0 +1,35 @@
+[BEGIN PROCESS]
+Input: x1, y1, x2, y2, x3, y3: coordinates of three points
+Output: A boolean value indicating whether the points form a valid triangle
+
+1: Define a function to calculate the distance between two points (x1, y1) and (x2, y2) using the distance formula.
+2: Calculate the distances between the three pairs of points to get the lengths of the sides of the potential triangle.
+3: Check if the sum of the lengths of any two sides is greater than the length of the remaining side (Triangle Inequality Theorem).
+4:     If the condition is met for all three combinations of sides, return True (indicating the points form a valid triangle).
+5:     Otherwise, return False (indicating the points do not form a valid triangle).
+[END PROCESS]
+
+[BEGIN CODE]
+def check_Triangle(x1, y1, x2, y2, x3, y3):
+    # Function to calculate the distance between two points
+    def distance(x1, y1, x2, y2):
+        return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+
+    # Calculate the lengths of the sides of the potential triangle
+    side1 = distance(x1, y1, x2, y2)
+    side2 = distance(x2, y2, x3, y3)
+    side3 = distance(x3, y3, x1, y1)
+
+    # Check the Triangle Inequality Theorem
+    if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side1):
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+The function `check_Triangle` takes six parameters representing the coordinates of three points. It first defines a helper function `distance` to calculate the Euclidean distance between two points. This distance function is used to compute the lengths of the sides of the potential triangle formed by the three points.
+
+The function then checks the Triangle Inequality Theorem, which states that for any triangle, the sum of the lengths of any two sides must be greater than the length of the remaining side. If this condition is met for all three combinations of sides, the function returns `True`, indicating that the points form a valid triangle. Otherwise, it returns `False`.
+
+This approach ensures that the function correctly identifies whether the given points can form a valid triangle.

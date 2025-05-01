@@ -1,0 +1,8 @@
+Input: test_list: a list of tuples
+Output: result: a list containing the last element of each tuple in test_list
+
+1: Initialize an empty list called `result`
+2: Loop through each tuple in `test_list`
+3:     Extract the last element of the current tuple
+4:     Append the extracted element to `result`
+5: Return `result`

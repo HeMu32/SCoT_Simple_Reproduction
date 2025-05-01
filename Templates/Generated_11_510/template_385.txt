@@ -1,0 +1,10 @@
+Input: n: an integer
+Output: the n'th Perrin number
+
+1: if n is 0:
+2:     return 3
+3: if n is 1:
+4:     return 0
+5: if n is 2:
+6:     return 2
+7: return the sum of the n-2'th and n-3'th Perrin numbers

@@ -1,0 +1,8 @@
+Input: n: an integer, str: a string of words separated by spaces  
+Output: word_len: a list of words longer than n characters  
+1: Initialize an empty list word_len  
+2: Split str into a list of words txt  
+3: For each word x in txt:  
+4:     If the length of x is greater than n:  
+5:         Append x to word_len  
+6: Return word_len

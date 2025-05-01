@@ -1,0 +1,7 @@
+Input: list: a list of elements (can be of any type that can be converted to a string)
+Output: result: a single string that is the concatenation of all elements in the list
+1: Initialize an empty string called `result`
+2: For each element in the list:
+3:     Convert the element to a string (if it is not already a string)
+4:     Append the string representation of the element to `result`
+5: Return `result`

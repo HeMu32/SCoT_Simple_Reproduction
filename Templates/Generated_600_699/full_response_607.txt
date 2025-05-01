@@ -1,0 +1,14 @@
+[BEGIN]
+Input: text: a string, pattern: a string
+Output: A tuple containing the pattern, start index, and end index of the first occurrence of the pattern in the text
+
+1: Import the re module for regular expression operations
+2: Define the function find_literals with parameters text and pattern
+3:   Use re.search to search for the first occurrence of the pattern in the text
+4:   If the pattern is found:
+5:     Get the start index of the match
+6:     Get the end index of the match
+7:     Return a tuple containing the pattern, start index, and end index
+8:   If the pattern is not found:
+9:     Return None
+[END]

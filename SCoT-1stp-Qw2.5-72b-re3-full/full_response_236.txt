@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: N: the side length of the larger equilateral triangle
+       K: the side length of the smaller equilateral triangles to be formed within the larger one
+Output: count: the maximum number of smaller equilateral triangles that can fit within the larger one
+
+1: Calculate the number of smaller triangles that can fit along one side of the larger triangle, which is N // K.
+2: The number of smaller triangles that can fit within the larger triangle is the square of the number calculated in step 1, because the arrangement of smaller triangles within the larger one forms a grid-like structure.
+3: Return the result from step 2 as the count of smaller triangles.
+[END PROCESS]
+
+[BEGIN CODE]
+def No_of_Triangle(N, K):
+  # Calculate the number of smaller triangles that can fit along one side
+  num_fit = N // K
+  # The total number of smaller triangles that can fit within the larger one
+  count = num_fit ** 2
+  return count
+[END CODE]
+
+### Explanation:
+The function `No_of_Triangle(N, K)` calculates the maximum number of smaller equilateral triangles of side length `K` that can fit within a larger equilateral triangle of side length `N`. The key insight is that the smaller triangles can be arranged in a grid-like pattern within the larger triangle. The number of smaller triangles that can fit along one side of the larger triangle is `N // K`. Since the arrangement is grid-like, the total number of smaller triangles is the square of this number, `(N // K) ** 2`. This approach ensures that the maximum number of smaller triangles is counted without overlapping.

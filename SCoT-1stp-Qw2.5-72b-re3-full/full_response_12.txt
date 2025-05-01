@@ -1,0 +1,45 @@
+[BEGIN PROCESS]
+Input: M: a 2D list (matrix) of integers
+Output: M: a 2D list (matrix) of integers sorted in ascending order based on the sum of each row
+
+1: Initialize an empty list to store the sums of each row
+2: Loop through each row in the matrix M:
+3:     Calculate the sum of the current row
+4:     Append the sum to the list of sums
+5: Pair each row with its corresponding sum in a list of tuples
+6: Sort the list of tuples based on the sum (second element of each tuple)
+7: Extract the rows from the sorted list of tuples to form the sorted matrix
+8: Return the sorted matrix
+[END PROCESS]
+
+[BEGIN CODE]
+def sort_matrix(M):
+    # Calculate the sum of each row and store it in a list
+    row_sums = [sum(row) for row in M]
+    
+    # Pair each row with its sum
+    paired_list = [(M[i], row_sums[i]) for i in range(len(M))]
+    
+    # Sort the paired list based on the sum
+    sorted_pairs = sorted(paired_list, key=lambda x: x[1])
+    
+    # Extract the rows from the sorted pairs
+    sorted_matrix = [pair[0] for pair in sorted_pairs]
+    
+    return sorted_matrix
+[END CODE]
+
+### Explanation:
+The function `sort_matrix` takes a 2D list `M` as input and returns a new 2D list where the rows are sorted in ascending order based on the sum of their elements. Here's a step-by-step breakdown of the process:
+
+1. **Calculate Row Sums**: We use a list comprehension to calculate the sum of each row in the matrix `M` and store these sums in the list `row_sums`.
+
+2. **Pair Rows with Sums**: We create a list of tuples where each tuple contains a row from the matrix and its corresponding sum. This is done using a list comprehension that pairs each row with its sum.
+
+3. **Sort the Paired List**: We sort the list of tuples based on the second element of each tuple (the sum of the row). The `sorted` function is used with a lambda function as the key to sort by the sum.
+
+4. **Extract Sorted Rows**: After sorting, we extract the rows from the sorted list of tuples to form the sorted matrix. This is done using a list comprehension that extracts the first element of each tuple.
+
+5. **Return the Sorted Matrix**: Finally, the sorted matrix is returned.
+
+This approach ensures that the matrix is sorted based on the sum of its rows in ascending order.

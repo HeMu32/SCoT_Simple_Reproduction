@@ -1,0 +1,14 @@
+def pancake_sort(nums):
+    def flip(sublist, k):
+        return sublist[:k][::-1] + sublist[k:]
+
+    def find_max_index(sublist, n):
+        return max(range(n), key=lambda i: sublist[i])
+
+    n = len(nums)
+    while n > 1:
+        max_index = find_max_index(nums, n)
+        nums = flip(nums, max_index + 1)
+        nums = flip(nums, n)
+        n -= 1
+    return nums

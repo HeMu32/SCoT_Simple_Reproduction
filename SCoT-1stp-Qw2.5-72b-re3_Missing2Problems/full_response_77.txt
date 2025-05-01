@@ -1,0 +1,47 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: difference: the difference between the sum of even digits and the sum of odd digits in n
+
+1: Initialize sum_even to 0 (to store the sum of even digits)
+2: Initialize sum_odd to 0 (to store the sum of odd digits)
+3: Convert n to a string to easily iterate through each digit
+4: Loop through each character in the string representation of n:
+5:     Convert the character back to an integer
+6:     If the integer is even:
+7:         Add the integer to sum_even
+8:     Else:
+9:         Add the integer to sum_odd
+10: Calculate the difference as sum_even - sum_odd
+11: Return the difference
+[END PROCESS]
+
+[BEGIN CODE]
+def is_Diff(n):
+    sum_even = 0
+    sum_odd = 0
+    # Convert the number to a string to iterate through each digit
+    for digit in str(n):
+        digit = int(digit)
+        if digit % 2 == 0:
+            sum_even += digit
+        else:
+            sum_odd += digit
+    # Calculate the difference between the sum of even and odd digits
+    difference = sum_even - sum_odd
+    return difference
+[END CODE]
+
+### Explanation:
+The function `is_Diff` calculates the difference between the sum of even digits and the sum of odd digits in a given integer `n`. Here's a step-by-step breakdown of the process:
+
+1. **Initialization**: Two variables, `sum_even` and `sum_odd`, are initialized to 0. These will store the sums of even and odd digits, respectively.
+2. **String Conversion**: The integer `n` is converted to a string to allow easy iteration through each digit.
+3. **Iteration and Summation**:
+   - The function iterates through each character in the string representation of `n`.
+   - Each character is converted back to an integer.
+   - If the integer is even (i.e., `digit % 2 == 0`), it is added to `sum_even`.
+   - If the integer is odd, it is added to `sum_odd`.
+4. **Difference Calculation**: After the loop, the difference between `sum_even` and `sum_odd` is calculated.
+5. **Return the Result**: The function returns the calculated difference.
+
+This approach ensures that the function correctly computes the required difference for any given integer `n`.

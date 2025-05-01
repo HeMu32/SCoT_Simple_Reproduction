@@ -1,0 +1,17 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position in the sequence of centered hexagonal numbers
+Output: res: the nth centered hexagonal number
+1: Understand the formula for the nth centered hexagonal number: \( H_n = 3n(n - 1) + 1 \)
+2: Calculate the value using the formula
+3: Return the calculated value
+[END PROCESS]
+
+[BEGIN CODE]
+def centered_hexagonal_number(n):
+    # Calculate the nth centered hexagonal number using the formula
+    res = 3 * n * (n - 1) + 1
+    return res
+[END CODE]
+
+Explanation:
+A centered hexagonal number, also known as a hex number, is a centered figurate number that represents a hexagon with a dot in the center and all other dots surrounding the center dot in a hexagonal lattice. The formula to find the nth centered hexagonal number is given by \( H_n = 3n(n - 1) + 1 \). This formula is derived from the geometric arrangement of points in a hexagonal pattern. The function `centered_hexagonal_number` takes an integer `n` as input and returns the nth centered hexagonal number by applying the formula. The calculation is straightforward and involves a simple arithmetic operation.

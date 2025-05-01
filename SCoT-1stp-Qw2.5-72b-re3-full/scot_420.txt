@@ -1,0 +1,9 @@
+Input: n: an integer representing the number of first even natural numbers to consider
+Output: sum: the sum of the cubes of the first n even natural numbers
+
+1: Initialize a variable sum to 0 to store the cumulative sum of cubes.
+2: Loop from 1 to n (inclusive) with a loop variable i:
+3:     Calculate the i-th even number as 2 * i.
+4:     Calculate the cube of the i-th even number.
+5:     Add the cube to the sum.
+6: Return the sum.

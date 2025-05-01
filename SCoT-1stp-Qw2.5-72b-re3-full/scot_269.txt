@@ -1,0 +1,7 @@
+Input: k: a single character
+Output: ascii_value: the ASCII value of the character k
+
+1: Check if the input k is a single character
+2: If k is not a single character, raise an error or return an appropriate message
+3: If k is a single character, use the ord() function to get the ASCII value of k
+4: Return the ASCII value

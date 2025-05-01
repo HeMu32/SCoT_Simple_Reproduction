@@ -1,0 +1,11 @@
+Input: test_list: a list of tuples representing ranges, strt_val: an integer representing the start value, stop_val: an integer representing the stop value
+Output: res: a list of tuples representing the missing ranges
+
+1: Initialize an empty list res to store the missing ranges
+2: Loop through each tuple sub in test_list
+3:     If the first element of sub is greater than strt_val:
+4:         Append the tuple (strt_val, sub[0]) to res
+5:         Set strt_val to the second element of sub
+6: After the loop, if strt_val is less than stop_val:
+7:     Append the tuple (strt_val, stop_val) to res
+8: Return res

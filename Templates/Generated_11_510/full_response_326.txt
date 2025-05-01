@@ -1,0 +1,12 @@
+[BEGIN]
+Input: test_list: a list of strings  
+Output: res: the word with the most occurrences in the list of strings  
+
+1: Initialize a dictionary `temp` to store the count of each word  
+2: For each string `sub` in `test_list`:  
+3:     Split `sub` into words  
+4:     For each word `wrd` in the split result:  
+5:         Increment the count of `wrd` in `temp` by 1  
+6: Find the word with the maximum count in `temp` and assign it to `res`  
+7: Return `res` as the word with the most occurrences  
+[END]

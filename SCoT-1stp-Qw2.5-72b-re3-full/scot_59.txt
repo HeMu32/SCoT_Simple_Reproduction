@@ -1,0 +1,5 @@
+Input: n: an integer  
+Output: The nth octagonal number  
+1: Define the formula for the nth octagonal number: \( O_n = n(3n - 2) \)
+2: Calculate the nth octagonal number using the formula
+3: Return the calculated value

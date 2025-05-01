@@ -1,0 +1,19 @@
+'''python
+def first_Repeated_Char(str): 
+	""" 
+	Write a python function to find the first repeated character in a given string. 
+	""" 
+	Pass
+'''
+
+Please understand the requirement and write a rough solving process. It starts with a input-output structure. You should use three basic structures to build the solving process, including sequences, branches, and loops. The necessary details should be written in natural languages.
+And you'll need to put [BEGIN] before your solution and [DONE] after it.
+
+[BEGIN]
+Input: str: a string 
+Output: ch: a repeated character in str 
+1: 	for each character ch in str: 
+2: 		if ch appears more than once in str: 
+3: 			return ch 
+4: 	return None
+[DONE]

@@ -1,0 +1,12 @@
+Input: arr: a list of integers
+Output: max_product: the maximum product of a contiguous subarray within arr
+
+1: Initialize `max_product` to the first element of arr.
+2: Initialize `current_max` and `current_min` to the first element of arr. These will track the maximum and minimum product at the current position, considering the possibility of negative numbers flipping the sign of the product.
+3: Iterate through the array starting from the second element.
+4: For each element in the array:
+5:     If the current element is negative, swap `current_max` and `current_min`. This is because multiplying a negative number by a negative number results in a positive number, which could potentially be the new maximum.
+6:     Update `current_max` to be the maximum of the current element and the product of `current_max` and the current element.
+7:     Update `current_min` to be the minimum of the current element and the product of `current_min` and the current element.
+8:     Update `max_product` to be the maximum of `max_product` and `current_max`.
+9: Return `max_product`.

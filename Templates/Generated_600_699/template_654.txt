@@ -1,0 +1,4 @@
+Input: l: length of the rectangle, b: breadth of the rectangle  
+Output: perimeter: the perimeter of the rectangle  
+1: Calculate the perimeter using the formula 2 * (l + b)  
+2: Return the calculated perimeter

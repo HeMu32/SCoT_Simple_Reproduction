@@ -1,0 +1,10 @@
+Input: number: an integer for which we need to find the sum of all divisors.
+Output: sum_divisors: the sum of all divisors of the given number.
+
+1: Initialize a variable sum_divisors to 0 to store the sum of divisors.
+2: For each integer i from 1 to the square root of number (inclusive):
+3:     If number is divisible by i (i.e., number % i == 0):
+4:         Add i to sum_divisors.
+5:         If i is not equal to number // i (to avoid adding the square root twice if it's a perfect square):
+6:             Add number // i to sum_divisors.
+7: Return sum_divisors.

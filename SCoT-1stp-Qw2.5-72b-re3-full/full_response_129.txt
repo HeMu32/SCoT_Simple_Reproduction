@@ -1,0 +1,51 @@
+[BEGIN PROCESS]
+Input: my_matrix: a 2D list of integers representing a square matrix
+Output: True if the matrix is a magic square, False otherwise
+
+1: Initialize a variable `n` to the length of the matrix (number of rows or columns, since it's a square matrix)
+2: Calculate the sum of the first row to use as a reference sum for all rows, columns, and diagonals
+3: Check if all rows have the same sum as the reference sum
+4: Check if all columns have the same sum as the reference sum
+5: Check if the main diagonal (top-left to bottom-right) has the same sum as the reference sum
+6: Check if the secondary diagonal (top-right to bottom-left) has the same sum as the reference sum
+7: If all checks pass, return True; otherwise, return False
+[END PROCESS]
+
+[BEGIN CODE]
+def magic_square_test(my_matrix):
+    n = len(my_matrix)
+    # Calculate the reference sum using the first row
+    ref_sum = sum(my_matrix[0])
+    
+    # Check all rows
+    for row in my_matrix:
+        if sum(row) != ref_sum:
+            return False
+    
+    # Check all columns
+    for col in range(n):
+        if sum(my_matrix[row][col] for row in range(n)) != ref_sum:
+            return False
+    
+    # Check main diagonal
+    if sum(my_matrix[i][i] for i in range(n)) != ref_sum:
+        return False
+    
+    # Check secondary diagonal
+    if sum(my_matrix[i][n-1-i] for i in range(n)) != ref_sum:
+        return False
+    
+    return True
+[END CODE]
+
+### Explanation:
+A magic square is a square grid of numbers, typically positive integers, in which the sums of the numbers in each row, each column, and both main diagonals are the same. The function `magic_square_test` checks if a given matrix is a magic square by following these steps:
+
+1. **Initialization**: Determine the size of the matrix `n` and calculate the reference sum using the sum of the first row.
+2. **Row Check**: Iterate through each row and check if the sum of the elements in the row matches the reference sum.
+3. **Column Check**: Iterate through each column and check if the sum of the elements in the column matches the reference sum.
+4. **Main Diagonal Check**: Calculate the sum of the elements on the main diagonal (from the top-left to the bottom-right) and check if it matches the reference sum.
+5. **Secondary Diagonal Check**: Calculate the sum of the elements on the secondary diagonal (from the top-right to the bottom-left) and check if it matches the reference sum.
+6. **Return Result**: If all checks pass, the matrix is a magic square, and the function returns `True`. If any check fails, the function returns `False`.
+
+This approach ensures that all necessary conditions for a magic square are met, and it efficiently checks the matrix using loops and simple arithmetic operations.

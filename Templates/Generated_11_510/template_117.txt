@@ -1,0 +1,13 @@
+Input: test_list: a list of tuples, where each tuple contains elements that may or may not be convertible to float.
+Output: res: a list of tuples with all convertible elements converted to float.
+
+1: Initialize an empty list res to store the result.
+2: For each tuple tup in test_list:
+3:     Initialize an empty list temp to store the processed elements of the current tuple.
+4:     For each element ele in tup:
+5:         If ele consists only of alphabetic characters (i.e., it is a string and not convertible to float):
+6:             Append ele to temp without conversion.
+7:         Else:
+8:             Convert ele to a float and append the converted value to temp.
+9:     Append a tuple created from the elements in temp to res.
+10: Return res as the final list of tuples with converted elements.

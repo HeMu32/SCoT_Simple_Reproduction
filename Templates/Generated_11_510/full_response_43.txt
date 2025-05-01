@@ -1,0 +1,10 @@
+[BEGIN]
+Input: text: a string  
+Output: 'Found a match!' or 'Not matched!'  
+1: Define a regex pattern that matches sequences of lowercase letters joined with an underscore  
+2: Use the regex search function to look for the pattern in the input text  
+3: If a match is found:  
+4:     Return 'Found a match!'  
+5: Else:  
+6:     Return 'Not matched!'
+[END]

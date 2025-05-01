@@ -1,0 +1,8 @@
+Input: x1, y1, x2, y2, x3, y3: coordinates of three points
+Output: A boolean value indicating whether the points form a valid triangle
+
+1: Define a function to calculate the distance between two points (x1, y1) and (x2, y2) using the distance formula.
+2: Calculate the distances between the three pairs of points to get the lengths of the sides of the potential triangle.
+3: Check if the sum of the lengths of any two sides is greater than the length of the remaining side (Triangle Inequality Theorem).
+4:     If the condition is met for all three combinations of sides, return True (indicating the points form a valid triangle).
+5:     Otherwise, return False (indicating the points do not form a valid triangle).

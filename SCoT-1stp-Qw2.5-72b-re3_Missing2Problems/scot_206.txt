@@ -1,0 +1,8 @@
+Input: test_tup: a tuple containing elements that can be concatenated (e.g., strings, numbers, etc.)
+Output: result: a new tuple where each element is the concatenation of adjacent elements from the input tuple
+
+1: Initialize an empty list `result` to store the concatenated elements.
+2: Iterate over the elements of `test_tup` using a loop, but stop one element before the end to avoid index out of range errors.
+3: For each element, concatenate it with the next element in the tuple and append the result to the `result` list.
+4: Convert the `result` list back into a tuple.
+5: Return the `result` tuple.

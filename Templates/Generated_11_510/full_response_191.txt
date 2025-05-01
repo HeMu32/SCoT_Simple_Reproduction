@@ -1,0 +1,8 @@
+[BEGIN]
+Input: monthname3: a string representing the name of a month
+Output: True if the month has 30 days, otherwise False
+1: if monthname3 is "April" or "June" or "September" or "November":
+2:     return True
+3: else:
+4:     return False
+[END]

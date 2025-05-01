@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: list1: a list of integers
+Output: The largest negative number in the list, or None if there are no negative numbers
+
+1: Initialize a variable `max_neg` to None to keep track of the largest negative number found
+2: For each number `num` in list1:
+3:     If `num` is less than 0 (negative) and `max_neg` is None or `num` is greater than `max_neg`:
+4:         Set `max_neg` to `num`
+5: After the loop, if `max_neg` is still None, return None (no negative numbers found)
+6: Otherwise, return `max_neg` (the largest negative number found)
+[END PROCESS]
+
+[BEGIN CODE]
+def largest_neg(list1):
+    max_neg = None
+    for num in list1:
+        if num < 0 and (max_neg is None or num > max_neg):
+            max_neg = num
+    return max_neg
+[END CODE]
+
+Explanation:
+The function `largest_neg` takes a list of integers as input and returns the largest negative number in the list. If there are no negative numbers in the list, it returns None. The function iterates through each number in the list, checking if it is negative and if it is larger than the current largest negative number found. If both conditions are met, the current number becomes the new largest negative number. After checking all numbers, the function returns the largest negative number found, or None if no negative numbers were found.

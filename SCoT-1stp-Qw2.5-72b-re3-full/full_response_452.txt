@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: actual_cost, sale_amount: two numbers representing the actual cost and the sale amount of a product
+Output: loss: the loss amount if there is a loss, otherwise None
+
+1: Calculate the difference between actual_cost and sale_amount
+2: if the difference is greater than 0 (indicating a loss):
+3:     return the difference as the loss amount
+4: else:
+5:     return None (indicating no loss)
+[END PROCESS]
+
+[BEGIN CODE]
+def loss_amount(actual_cost, sale_amount):
+    difference = actual_cost - sale_amount
+    if difference > 0:
+        return difference
+    else:
+        return None
+[END CODE]
+
+Explanation:
+The function `loss_amount` takes two parameters, `actual_cost` and `sale_amount`, which represent the actual cost of a product and the amount it was sold for, respectively. The function calculates the difference between these two values. If the `actual_cost` is greater than the `sale_amount`, it means there was a loss, and the function returns the difference as the loss amount. If the `sale_amount` is greater than or equal to the `actual_cost`, it means there was no loss, and the function returns `None`. This approach ensures that the function only returns a loss amount when there is an actual loss, and returns `None` otherwise, which is consistent with the problem statement.

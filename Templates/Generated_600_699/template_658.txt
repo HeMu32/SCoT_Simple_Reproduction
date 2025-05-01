@@ -1,0 +1,11 @@
+Input: list1: a list of elements
+Output: result: the element with the maximum occurrences in list1
+
+1: Initialize max_val to 0
+2: Initialize result to the first element of list1
+3: For each element i in list1:
+4:     Count the occurrences of i in list1 and store it in occu
+5:     If occu is greater than max_val:
+6:         Set max_val to occu
+7:         Set result to i
+8: Return result

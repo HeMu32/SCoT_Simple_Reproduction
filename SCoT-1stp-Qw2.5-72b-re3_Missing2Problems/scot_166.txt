@@ -1,0 +1,10 @@
+Input: A: a list of integers, N: the length of the list A
+Output: count: the number of pairs (i, j) such that A[i] XOR A[j] is an even number and i < j
+
+1: Initialize a variable count to 0 to keep track of the number of valid pairs.
+2: Loop through each element in the list A using index i.
+3: For each element A[i], loop through the elements that come after it in the list using index j (i.e., j > i).
+4: Compute the XOR of A[i] and A[j].
+5: Check if the result of the XOR operation is even.
+6: If the result is even, increment the count by 1.
+7: After all pairs have been checked, return the count.

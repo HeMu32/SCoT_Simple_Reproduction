@@ -1,0 +1,8 @@
+Input: m: an integer representing the number of multiples to find
+Input: n: an integer representing the number to find multiples of
+Output: a list of the first m multiples of n
+
+1: Initialize a list to store the multiples of n
+2: Use a range function to generate numbers starting from n, up to (m+1)*n, with a step of n
+3: Convert the range object to a list
+4: Return the list of multiples

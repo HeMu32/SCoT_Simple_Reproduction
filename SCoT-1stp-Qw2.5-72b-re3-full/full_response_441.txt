@@ -1,0 +1,16 @@
+[BEGIN PROCESS]
+Input: l: a float or integer representing the length of one side of the cube
+Output: surface_area: a float or integer representing the surface area of the cube
+
+1: Calculate the surface area of the cube using the formula 6 * l^2, where l is the length of one side of the cube.
+2: Return the calculated surface area.
+[END PROCESS]
+
+[BEGIN CODE]
+def surfacearea_cube(l):
+    surface_area = 6 * l ** 2
+    return surface_area
+[END CODE]
+
+Explanation:
+The surface area of a cube is calculated by the formula \(6 \times l^2\), where \(l\) is the length of one side of the cube. This formula comes from the fact that a cube has 6 faces, and each face is a square with area \(l^2\). By multiplying the area of one face by 6, we get the total surface area of the cube. The function `surfacearea_cube` takes the length of one side of the cube as input, computes the surface area, and returns it.

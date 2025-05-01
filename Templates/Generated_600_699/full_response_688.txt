@@ -1,0 +1,8 @@
+[BEGIN]
+Input: a, b: real numbers representing the real and imaginary parts of a complex number
+Output: length: the length (magnitude) of the complex number
+
+1: Create a complex number cn using a and b
+2: Calculate the length of the complex number cn using the absolute value function
+3: Return the length
+[END]

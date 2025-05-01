@@ -1,0 +1,9 @@
+[BEGIN]
+Input: dt: a string representing a date in yyyy-mm-dd format
+Output: a string representing the date in dd-mm-yyyy format
+
+1: Use a regular expression to match the date pattern in the input string dt
+2: The pattern should capture three groups: year (yyyy), month (mm), and day (dd)
+3: Substitute the matched pattern in the input string with the day, month, and year in the new order (dd-mm-yyyy)
+4: Return the modified string
+[END]

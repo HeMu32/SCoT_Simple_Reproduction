@@ -1,0 +1,5 @@
+Input: n: an integer representing the position in the sequence of decagonal numbers
+Output: The nth decagonal number
+
+1: Calculate the nth decagonal number using the formula: Dn = 4n^2 - 3n
+2: Return the calculated decagonal number

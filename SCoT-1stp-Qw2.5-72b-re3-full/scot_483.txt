@@ -1,0 +1,10 @@
+Input: x: an integer
+Output: the first natural number n such that n! (n factorial) is divisible by x
+
+1: Initialize n to 1
+2: Initialize factorial to 1
+3: while True:
+4:     if factorial is divisible by x:
+5:         return n
+6:     increment n by 1
+7:     update factorial to factorial * n

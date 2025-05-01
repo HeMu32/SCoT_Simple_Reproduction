@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: x: an integer value for which the parity needs to be determined
+Output: parity: a string indicating the parity of the number ("Even" or "Odd")
+
+1: Initialize a variable `parity` to store the result
+2: Use a branch to check if the number `x` is even or odd
+3:     If `x` modulo 2 equals 0, set `parity` to "Even"
+4:     Otherwise, set `parity` to "Odd"
+5: Return the value of `parity`
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Parity(x):
+    # Determine if the number is even or odd
+    if x % 2 == 0:
+        parity = "Even"
+    else:
+        parity = "Odd"
+    return parity
+[END CODE]
+
+Explanation:
+The function `find_Parity` takes an integer `x` as input and returns a string indicating whether the number is "Even" or "Odd". The parity of a number is determined by checking the remainder when the number is divided by 2. If the remainder is 0, the number is even; otherwise, it is odd. The function uses a simple if-else statement to perform this check and assigns the appropriate string to the variable `parity`, which is then returned.

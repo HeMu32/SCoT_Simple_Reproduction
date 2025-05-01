@@ -1,0 +1,12 @@
+Input: A number (integer)
+Output: A number with all odd bits toggled
+
+1: Define the function even_bit_toggle_number with a parameter num
+2: Initialize a variable mask to 0
+3: Initialize a variable bit_position to 0
+4: Loop while (1 << bit_position) is less than or equal to num:
+5:     If bit_position is odd:
+6:         Set the bit at bit_position in mask
+7:     Increment bit_position by 1
+8: XOR num with mask to toggle all odd bits
+9: Return the result of the XOR operation

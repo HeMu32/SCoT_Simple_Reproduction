@@ -1,0 +1,9 @@
+[BEGIN]
+Input: num_list: a list of numbers  
+Output: x: a new list with the first element of num_list moved to the end  
+
+1: Create a list `a` containing all occurrences of the first element of `num_list`  
+2: Create a list `x` containing all elements of `num_list` except the first element  
+3: Extend `x` with the list `a`  
+4: Return `x`  
+[END]

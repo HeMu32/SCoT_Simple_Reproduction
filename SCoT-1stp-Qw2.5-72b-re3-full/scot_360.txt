@@ -1,0 +1,11 @@
+Input: n: an integer representing the position of the Carol number to find
+Output: the n-th Carol number
+
+1: Check if n is less than 1, if true, return an error message or raise an exception as Carol numbers are defined for positive integers.
+2: Initialize a variable `k` to 2, as the Carol number is defined as \( (2^k - 1)^2 - 2 \).
+3: Initialize a counter `count` to 0 to keep track of the number of Carol numbers found.
+4: Start a loop to generate Carol numbers:
+5:     Calculate the Carol number using the formula \( (2^k - 1)^2 - 2 \).
+6:     Increment the counter `count` by 1.
+7:     If `count` is equal to `n`, return the current Carol number.
+8:     Otherwise, increment `k` by 1 and continue the loop.

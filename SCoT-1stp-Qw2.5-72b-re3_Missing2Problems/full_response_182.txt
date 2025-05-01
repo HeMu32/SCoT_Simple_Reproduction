@@ -1,0 +1,46 @@
+[BEGIN PROCESS]
+Input: string: a string to be analyzed
+Output: A dictionary with counts of uppercase letters, lowercase letters, special characters, and numeric values
+
+1: Import the `re` module for regular expressions
+2: Initialize a dictionary to store the counts of each category: uppercase, lowercase, special characters, and numeric values
+3: Use regular expressions to find all uppercase letters in the string and update the dictionary
+4: Use regular expressions to find all lowercase letters in the string and update the dictionary
+5: Use regular expressions to find all special characters in the string and update the dictionary
+6: Use regular expressions to find all numeric values in the string and update the dictionary
+7: Return the dictionary with the counts
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def find_character(string):
+    # Initialize a dictionary to store the counts
+    counts = {
+        'uppercase': 0,
+        'lowercase': 0,
+        'special_characters': 0,
+        'numeric_values': 0
+    }
+    
+    # Regular expressions to find each category
+    counts['uppercase'] = len(re.findall(r'[A-Z]', string))
+    counts['lowercase'] = len(re.findall(r'[a-z]', string))
+    counts['special_characters'] = len(re.findall(r'[^A-Za-z0-9]', string))
+    counts['numeric_values'] = len(re.findall(r'[0-9]', string))
+    
+    return counts
+[END CODE]
+
+### Explanation:
+1. **Importing the `re` module**: This module provides support for regular expressions in Python, which are used to search for patterns in strings.
+2. **Initializing the dictionary**: A dictionary named `counts` is initialized to store the counts of uppercase letters, lowercase letters, special characters, and numeric values.
+3. **Using regular expressions**:
+   - `re.findall(r'[A-Z]', string)`: This finds all uppercase letters in the string.
+   - `re.findall(r'[a-z]', string)`: This finds all lowercase letters in the string.
+   - `re.findall(r'[^A-Za-z0-9]', string)`: This finds all characters that are not letters or digits, which are considered special characters.
+   - `re.findall(r'[0-9]', string)`: This finds all numeric values in the string.
+4. **Updating the dictionary**: The length of the list returned by `re.findall` is used to update the corresponding count in the dictionary.
+5. **Returning the dictionary**: The function returns the dictionary containing the counts of each category.
+
+This approach ensures that the function accurately counts the different types of characters in the input string using regular expressions.

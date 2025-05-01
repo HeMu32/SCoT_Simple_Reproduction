@@ -1,0 +1,10 @@
+Input: A: a list of integers
+Output: True if the list is monotonic, False otherwise
+
+1: Initialize two boolean variables, increasing and decreasing, to True.
+2: Iterate through the list from the second element to the last element.
+3: For each element, compare it with the previous element:
+   3.1: If the current element is greater than the previous element, set decreasing to False.
+   3.2: If the current element is less than the previous element, set increasing to False.
+4: After the loop, if either increasing or decreasing is True, the list is monotonic.
+5: Return the logical OR of increasing and decreasing.

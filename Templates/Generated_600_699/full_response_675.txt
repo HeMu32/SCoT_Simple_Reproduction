@@ -1,0 +1,10 @@
+[BEGIN]
+Input: x, y: integers; m, n: integers representing the range
+Output: sum or 20 based on the condition
+
+1: Calculate the sum of x and y
+2: If the sum is within the range from m to n (inclusive of m, exclusive of n):
+3:     Return 20
+4: Else:
+5:     Return the sum
+[END]

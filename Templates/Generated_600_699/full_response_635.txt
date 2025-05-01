@@ -1,0 +1,12 @@
+[BEGIN]
+Input: iterable: a collection of elements
+Output: sorted_list: a list of elements sorted in ascending order
+
+1: Initialize an empty heap h
+2: for each value in iterable:
+3:     push value into heap h
+4: Initialize an empty list sorted_list
+5: for i in range from 0 to length of heap h:
+6:     pop the smallest element from heap h and append it to sorted_list
+7: return sorted_list
+[END]

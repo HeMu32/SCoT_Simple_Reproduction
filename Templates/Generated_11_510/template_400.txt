@@ -1,0 +1,11 @@
+Input: test_list: a list of tuples  
+Output: res: the number of unique tuples in the list, considering order of elements in tuples as irrelevant  
+
+1: Initialize an empty list to store sorted tuples  
+2: For each tuple sub in test_list:  
+3:     Sort the elements of sub to make the order irrelevant  
+4:     Convert the sorted sub to a tuple and add it to the list from step 1  
+5: Convert the list of sorted tuples to a set to remove duplicates  
+6: Convert the set back to a list  
+7: Calculate the length of the list from step 6 to get the number of unique tuples  
+8: Return the length as res

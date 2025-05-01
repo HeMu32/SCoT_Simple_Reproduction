@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: s: a string
+Output: count: the number of occurrences of the substring 'std' in the given string
+
+1: Initialize a variable count to 0 to keep track of the number of occurrences of 'std'.
+2: Use a loop to iterate through the string s, checking for the substring 'std'.
+3: For each position in the string:
+4:     If the substring starting at the current position is 'std':
+5:         Increment count by 1.
+6: Continue until the end of the string is reached.
+7: Return the count.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_occurance(s):
+    # Initialize count to 0
+    count = 0
+    # Length of the substring to find
+    sub_len = len('std')
+    # Iterate through the string, stopping before the last (sub_len - 1) characters
+    for i in range(len(s) - sub_len + 1):
+        # Check if the substring starting at position i is 'std'
+        if s[i:i+sub_len] == 'std':
+            # Increment count if the substring is found
+            count += 1
+    # Return the final count
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_occurance` is designed to count the number of times the substring 'std' appears in the input string `s`. The process involves iterating through the string and checking for the substring 'std' at each position. The loop runs from the start of the string to a position that ensures there are enough characters left to form the substring 'std'. If the substring is found, the count is incremented. Finally, the function returns the total count of occurrences of 'std'. This approach ensures that all possible positions of the substring 'std' are checked, and the count is accurate.

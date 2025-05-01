@@ -1,0 +1,8 @@
+Input: subjectmarks: a list of tuples, where each tuple contains a subject name and a mark
+Output: sorted_subjectmarks: the list of tuples sorted by marks in descending order
+
+1: Use the `sorted` function to sort the list of tuples.
+2: The `sorted` function takes a key parameter, which is a function to extract a comparison key from each input element.
+3: Use a lambda function as the key parameter to extract the mark from each tuple.
+4: Set the `reverse` parameter to True to sort the list in descending order.
+5: Return the sorted list.

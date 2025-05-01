@@ -1,0 +1,7 @@
+Input: str: a string  
+Output: upper_ctr: the count of uppercase characters in str  
+1: Initialize upper_ctr to 0  
+2: for each character ch in str:  
+3:     if ch is an uppercase character (between 'A' and 'Z'):  
+4:         increment upper_ctr by 1  
+5: return upper_ctr

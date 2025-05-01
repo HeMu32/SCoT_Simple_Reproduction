@@ -1,0 +1,8 @@
+[BEGIN]
+Input: str: a string  
+Output: "Equal" or "Not Equal"  
+1: if the first character of str is equal to the last character of str:  
+2:     return "Equal"  
+3: else:  
+4:     return "Not Equal"  
+[END]

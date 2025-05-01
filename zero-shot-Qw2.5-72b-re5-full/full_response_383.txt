@@ -1,0 +1,16 @@
+[BEGIN CODE]
+```python
+def even_bit_toggle_number(n):
+    """
+    Toggles all odd bits of a given number.
+    """
+    if n == 0:
+        return 1
+    mask = 0
+    bit_position = 1
+    while bit_position <= n:
+        mask |= bit_position
+        bit_position <<= 2
+    return n ^ mask
+```
+[END CODE]

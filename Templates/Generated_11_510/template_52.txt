@@ -1,0 +1,4 @@
+Input: b: base of the parallelogram, h: height of the parallelogram  
+Output: area: area of the parallelogram  
+1: Calculate the area by multiplying the base (b) with the height (h)  
+2: Return the calculated area

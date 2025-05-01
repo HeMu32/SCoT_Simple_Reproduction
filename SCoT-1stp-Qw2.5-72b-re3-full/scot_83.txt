@@ -1,0 +1,7 @@
+Input: strr: a string  
+Output: result_char: a character representing the sum of the ASCII values of all characters in the string, converted back to a character  
+1: Initialize a variable `total` to 0 to store the sum of ASCII values  
+2: For each character `c` in the string `strr`:  
+3:     Add the ASCII value of `c` to `total`  
+4: Compute the result character by converting `total` back to a character using `chr`  
+5: Return the result character

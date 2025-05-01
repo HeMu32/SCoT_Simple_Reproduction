@@ -1,0 +1,5 @@
+def find_equal_tuple(Input, k):
+    if not Input:
+        return True
+    first_length = len(Input[0])
+    return all(len(t) == first_length for t in Input)

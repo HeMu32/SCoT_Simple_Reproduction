@@ -1,0 +1,4 @@
+Input: a: the length of one side of a regular pentagon
+Output: perimeter: the perimeter of the pentagon
+1: Calculate the perimeter by multiplying the length of one side by 5, since a pentagon has five sides.
+2: Return the calculated perimeter.

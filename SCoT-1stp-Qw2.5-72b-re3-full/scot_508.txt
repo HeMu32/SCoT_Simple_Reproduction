@@ -1,0 +1,12 @@
+Input: l1, l2: two lists of elements
+Output: result: a boolean value indicating whether the common elements between the two lists are in the same order
+
+1: Initialize an empty list `common` to store common elements in the order they appear in `l1`.
+2: Loop through each element `e` in `l1`:
+3:     If `e` is in `l2` and not already in `common`, append `e` to `common`.
+4: Initialize an index `index` to 0 to track the position in `common`.
+5: Loop through each element `e` in `l2`:
+6:     If `e` is in `common` and `e` is equal to `common[index]`, increment `index` by 1.
+7:     If `e` is in `common` but not equal to `common[index]`, return `False` because the order is not maintained.
+8: After the loop, if `index` is equal to the length of `common`, return `True` (all common elements are in the same order).
+9: Otherwise, return `False` (not all common elements are in the same order or the order is not maintained).

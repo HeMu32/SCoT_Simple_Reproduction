@@ -1,0 +1,8 @@
+Input: arraynums: a list of integers  
+Output: True or False  
+1: Convert arraynums to a set named nums_set  
+2: Compare the length of arraynums with the length of nums_set  
+3:     if the lengths are not equal:  
+4:         return True  
+5:     else:  
+6:         return False

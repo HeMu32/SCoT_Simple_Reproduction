@@ -1,0 +1,8 @@
+Input: list1: a nested list, list2: a nested list
+Output: boolean: True if list1 is a subset of list2, False otherwise
+
+1: Initialize a function to flatten a nested list
+2: Flatten both list1 and list2 using the flatten function
+3: Convert the flattened lists to sets to remove duplicates and allow set operations
+4: Check if the set of list1 is a subset of the set of list2
+5: Return the result of the subset check

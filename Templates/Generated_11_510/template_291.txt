@@ -1,0 +1,11 @@
+Input: n: number of fence posts, k: number of colors
+Output: number of ways to paint the fence posts with the given constraints
+
+1: Initialize an array dp of size n+1 with all elements set to 0
+2: Initialize total to k (number of colors)
+3: Set dp[1] to k (ways to paint one post)
+4: Set dp[2] to k * k (ways to paint two posts, each can be any color)
+5: for i from 3 to n do
+6:     Calculate dp[i] as ((k - 1) * (dp[i - 1] + dp[i - 2])) % mod
+7:     (This step considers the number of ways to paint the current post with a different color from the previous post and the post before the previous post)
+8: return dp[n] (the number of ways to paint n posts)

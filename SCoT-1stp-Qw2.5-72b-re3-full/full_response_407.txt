@@ -1,0 +1,58 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: The next bigger number formed by rearranging the digits of n, or -1 if it is not possible
+
+1: Convert the integer n to a list of its digits.
+2: Identify the first digit from the right that is smaller than the digit immediately to its right. This is the pivot.
+3: If no such digit is found, it means the digits are in descending order, and no larger number can be formed. Return -1.
+4: Find the smallest digit on the right side of the pivot that is larger than the pivot.
+5: Swap the pivot with this digit.
+6: Sort the digits to the right of the pivot's original position in ascending order.
+7: Convert the list of digits back to an integer.
+8: Return the new integer.
+[END PROCESS]
+
+[BEGIN CODE]
+def rearrange_bigger(n):
+    # Convert the integer to a list of its digits
+    digits = list(str(n))
+    
+    # Step 2: Find the pivot
+    pivot = -1
+    for i in range(len(digits) - 1, 0, -1):
+        if digits[i - 1] < digits[i]:
+            pivot = i - 1
+            break
+    
+    # Step 3: If no pivot is found, return -1
+    if pivot == -1:
+        return -1
+    
+    # Step 4: Find the smallest digit on the right side of the pivot that is larger than the pivot
+    for i in range(len(digits) - 1, pivot, -1):
+        if digits[i] > digits[pivot]:
+            swap_with = i
+            break
+    
+    # Step 5: Swap the pivot with this digit
+    digits[pivot], digits[swap_with] = digits[swap_with], digits[pivot]
+    
+    # Step 6: Sort the digits to the right of the pivot's original position in ascending order
+    digits = digits[:pivot + 1] + sorted(digits[pivot + 1:])
+    
+    # Step 7: Convert the list of digits back to an integer
+    result = int(''.join(digits))
+    
+    # Step 8: Return the new integer
+    return result
+[END CODE]
+
+### Explanation:
+The function `rearrange_bigger` takes an integer `n` and returns the next larger number that can be formed by rearranging its digits. If no such number exists, it returns -1. The process involves:
+1. Converting the integer to a list of digits.
+2. Finding the pivot, which is the first digit from the right that is smaller than the digit immediately to its right.
+3. If no pivot is found, the digits are in descending order, and no larger number can be formed, so the function returns -1.
+4. Finding the smallest digit on the right side of the pivot that is larger than the pivot.
+5. Swapping the pivot with this digit.
+6. Sorting the digits to the right of the pivot's original position in ascending order to form the smallest possible number larger than the original.
+7. Converting the list of digits back to an integer and returning it.

@@ -1,0 +1,8 @@
+Input: list1, list2: two nested lists  
+Output: exist: a boolean indicating if list2 is a subset of list1  
+1: Initialize l1 and l2 with the first elements of list1 and list2 respectively  
+2: Initialize exist as True  
+3: for each element i in list2:  
+4:     if i is not in list1:  
+5:         set exist to False  
+6: return exist

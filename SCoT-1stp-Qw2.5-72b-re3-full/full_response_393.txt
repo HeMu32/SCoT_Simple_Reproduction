@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: input_list: a list of lists, where each sublist contains elements of any type
+Output: The sublist with the maximum length
+
+1: Use the `max` function with a key parameter set to a lambda function that returns the length of each sublist.
+2: The `max` function will compare the lengths of the sublists and return the one with the maximum length.
+3: Return the sublist with the maximum length.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_length_list(input_list):
+    return max(input_list, key=lambda x: len(x))
+[END CODE]
+
+### Explanation:
+- **Input**: The function `max_length_list` takes a single argument `input_list`, which is expected to be a list of lists.
+- **Process**:
+  - The `max` function is used to find the sublist with the maximum length.
+  - The `key` parameter of the `max` function is set to a lambda function `lambda x: len(x)`, which calculates the length of each sublist.
+  - The `max` function compares the lengths of the sublists and returns the one with the highest length.
+- **Output**: The function returns the sublist with the maximum length.
+
+This approach is efficient and concise, leveraging Python's built-in functions and lambda expressions to achieve the desired result.

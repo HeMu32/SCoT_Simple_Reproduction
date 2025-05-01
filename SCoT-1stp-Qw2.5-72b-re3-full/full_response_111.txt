@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: nestedlist: a list of lists, where each sublist contains integers
+Output: common_elements: a list of integers that are common across all sublists
+
+1: Initialize a set with the elements of the first sublist to store potential common elements.
+2: Loop through each remaining sublist in the nested list:
+3:     Update the set to keep only elements that are also present in the current sublist.
+4: Convert the set of common elements to a list.
+5: Return the list of common elements.
+[END PROCESS]
+
+[BEGIN CODE]
+def common_in_nested_lists(nestedlist):
+    # Initialize the set with the first sublist's elements
+    common_elements = set(nestedlist[0])
+    
+    # Loop through the rest of the sublists
+    for sublist in nestedlist[1:]:
+        # Update the set to keep only elements that are in the current sublist
+        common_elements.intersection_update(sublist)
+    
+    # Convert the set to a list and return it
+    return list(common_elements)
+[END CODE]
+
+Explanation:
+- The function `common_in_nested_lists` takes a nested list as input and returns a list of common elements found in all sublists.
+- Initially, a set is created from the first sublist to store potential common elements.
+- The function then iterates over the remaining sublists, updating the set to retain only those elements that are also present in the current sublist. This is done using the `intersection_update` method, which modifies the set to keep only elements that are also in the specified iterable (in this case, the current sublist).
+- After processing all sublists, the set `common_elements` contains only the elements that are common to all sublists.
+- Finally, the set is converted to a list and returned as the output. This approach ensures that the function efficiently finds the common elements across all sublists, leveraging the properties of sets for fast membership testing and intersection operations.

@@ -1,0 +1,11 @@
+Input: deciNum: an integer representing the decimal number to be converted to octal
+Output: octal: a string representing the octal equivalent of the decimal number
+
+1: Initialize an empty string called `octal` to store the octal digits
+2: Initialize a variable `deciNum` with the input decimal number
+3: While `deciNum` is greater than 0:
+4:     Compute the remainder of `deciNum` divided by 8 and convert it to a string
+5:     Prepend the remainder to the `octal` string
+6:     Update `deciNum` by performing integer division by 8
+7: If the `octal` string is empty, set it to "0"
+8: Return the `octal` string

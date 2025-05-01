@@ -1,0 +1,10 @@
+Input: test_tuple: a tuple of integers  
+Output: (sum1, sum2): a tuple containing the sum of elements at odd indices and the sum of elements at even indices, respectively  
+1: Initialize sum1 to 0  
+2: Initialize sum2 to 0  
+3: for each element in test_tuple with index idx and value ele:  
+4:     if idx is odd:  
+5:         add ele to sum1  
+6:     else:  
+7:         add ele to sum2  
+8: return (sum1, sum2)

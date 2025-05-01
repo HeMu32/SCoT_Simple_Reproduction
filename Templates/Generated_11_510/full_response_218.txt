@@ -1,0 +1,10 @@
+[BEGIN]
+Input: A, B: two integers
+Output: min_operations: the minimum number of operations required to make A and B equal
+
+1: if A is greater than B:
+2:     swap A and B
+3: compute the greatest common divisor (gcd) of A and B
+4: divide B by the gcd of A and B
+5: return B minus 1
+[END]

@@ -1,0 +1,11 @@
+Input: test_tup: a tuple, K: an integer
+Output: res: a tuple containing the minimum and maximum K elements from test_tup
+
+1: Convert the tuple test_tup to a list to allow modifications
+2: Sort the list in ascending order and store it in temp
+3: Initialize an empty list res to store the result
+4: Loop through each element in temp with index idx and value val
+5:     If idx is less than K or idx is greater than or equal to the length of temp minus K
+6:         Append val to res
+7: Convert res back to a tuple
+8: Return res

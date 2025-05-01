@@ -1,0 +1,10 @@
+def max_Product(arr):
+    if len(arr) < 2:
+        return None  # Not enough elements to form a pair
+    
+    # Sort the array
+    arr.sort()
+    
+    # The highest product can be either from the two largest positive numbers
+    # or from the two smallest (most negative) numbers
+    return max(arr[0] * arr[1], arr[-1] * arr[-2])

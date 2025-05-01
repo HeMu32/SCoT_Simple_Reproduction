@@ -1,0 +1,11 @@
+Input: arr: a list of integers, n: the length of the list
+Output: sum of repeated elements in the list
+
+1: Initialize a dictionary to keep track of the count of each element in the list
+2: Initialize a variable `sum_repeated` to 0 to store the sum of repeated elements
+3: Loop through each element in the list:
+4:     If the element is not in the dictionary, add it with a count of 1
+5:     If the element is already in the dictionary, increment its count
+6: Loop through the dictionary:
+7:     If the count of an element is greater than 1, add the element multiplied by its count to `sum_repeated`
+8: Return `sum_repeated`

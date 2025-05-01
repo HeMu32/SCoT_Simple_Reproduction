@@ -1,0 +1,8 @@
+Input: test_list: a list of elements
+Output: True if all elements in test_list are unique, False otherwise
+1: Convert test_list to a set to remove duplicates
+2: Compare the length of the original test_list with the length of the set
+3:     if the length of test_list is greater than the length of the set:
+4:         return False
+5:     else:
+6:         return True

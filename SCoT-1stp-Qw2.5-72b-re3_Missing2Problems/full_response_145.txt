@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the number of elements in arr
+Output: max_diff: the maximum absolute difference between any two elements in arr
+
+1: Initialize max_diff to 0
+2: Loop through each element in arr with index i
+3:     Loop through each element in arr with index j, starting from i+1 to avoid redundant comparisons
+4:         Calculate the absolute difference between arr[i] and arr[j]
+5:         If the calculated difference is greater than max_diff:
+6:             Update max_diff to the calculated difference
+7: Return max_diff
+[END PROCESS]
+
+[BEGIN CODE]
+def max_Abs_Diff(arr, n):
+    max_diff = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            diff = abs(arr[i] - arr[j])
+            if diff > max_diff:
+                max_diff = diff
+    return max_diff
+[END CODE]
+
+### Explanation:
+The function `max_Abs_Diff` is designed to find the maximum absolute difference between any two elements in a given array. The approach involves a nested loop where each element is compared with every other element that comes after it in the array. The absolute difference between the two elements is calculated, and if this difference is greater than the current maximum difference (`max_diff`), `max_diff` is updated. This process ensures that the maximum possible difference is found and returned. The time complexity of this solution is O(n^2), where n is the number of elements in the array. This is because each element is compared with every other element, leading to a quadratic number of comparisons.

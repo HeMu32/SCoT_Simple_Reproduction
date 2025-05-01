@@ -1,0 +1,13 @@
+[BEGIN]
+Input: arr: an array of integers, low: the starting index, high: the ending index, n: the length of the array
+Output: index: the index of a peak element in arr
+
+1: Calculate the middle index, mid, as the average of low and high, rounded down to the nearest integer.
+2: If the middle element is the first element or greater than or equal to the previous element, and the middle element is the last element or greater than or equal to the next element:
+3:     Return mid as the peak element index.
+4: Else if the middle element is not the first element and the element before the middle is greater than the middle element:
+5:     Recursively call the function with the sub-array from low to mid - 1.
+6: Else:
+7:     Recursively call the function with the sub-array from mid + 1 to high.
+8: The function find_peak initializes the search by calling find_peak_util with the full array range.
+[END]

@@ -1,0 +1,8 @@
+Input: text: a string  
+Output: 'Found a match!' or 'Not matched!'  
+1: Define a pattern as '\Bz\B'  
+2: Use re.search to search for the pattern in the text  
+3: If the pattern is found:  
+4:     Return 'Found a match!'  
+5: Else:  
+6:     Return 'Not matched!'

@@ -1,0 +1,48 @@
+[BEGIN PROCESS]
+Input: lst: a list of tuples
+Output: sorted_lst: a list of tuples sorted based on the occurrence of the first element of each tuple
+
+1: Initialize an empty dictionary named count_dict to store the count of the first element of each tuple.
+2: Loop through each tuple in lst:
+3:     If the first element of the tuple is not in count_dict, add it with a count of 1.
+4:     If the first element of the tuple is already in count_dict, increment its count by 1.
+5: Define a helper function named sort_key that takes a tuple and returns the count of its first element from count_dict.
+6: Sort lst using the sort_key function as the key.
+7: Return the sorted list.
+[END PROCESS]
+
+[BEGIN CODE]
+def sort_on_occurence(lst):
+    # Initialize a dictionary to count occurrences of the first element in each tuple
+    count_dict = {}
+    
+    # Count the occurrences of the first element in each tuple
+    for tup in lst:
+        first_element = tup[0]
+        if first_element in count_dict:
+            count_dict[first_element] += 1
+        else:
+            count_dict[first_element] = 1
+    
+    # Define a helper function to use as the key for sorting
+    def sort_key(tup):
+        return count_dict[tup[0]]
+    
+    # Sort the list based on the occurrence of the first element
+    sorted_lst = sorted(lst, key=sort_key)
+    
+    return sorted_lst
+[END CODE]
+
+### Explanation:
+The function `sort_on_occurence` sorts a list of tuples based on the frequency of the first element in each tuple. Here's a step-by-step breakdown:
+
+1. **Count Occurrences**: We first create a dictionary `count_dict` to store the count of the first element of each tuple. We loop through the list and update the count for each first element.
+
+2. **Helper Function**: We define a helper function `sort_key` that takes a tuple and returns the count of its first element from `count_dict`. This function will be used as the key for sorting.
+
+3. **Sorting**: We use Python's built-in `sorted` function to sort the list `lst` based on the counts provided by the `sort_key` function.
+
+4. **Return Sorted List**: Finally, we return the sorted list.
+
+This approach ensures that the list is sorted in ascending order of the occurrence of the first element in each tuple. If two tuples have the same first element, they will maintain their original order in the list due to Python's stable sorting algorithm.

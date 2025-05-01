@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: nums: the list of integers sorted in ascending order
+
+1: Define a function `comb_sort(nums)` that takes a list of integers as input.
+2: Initialize the gap to the length of the list and a shrink factor to 1.3.
+3: Set a flag `swapped` to True to enter the while loop.
+4: While the gap is greater than 1 or `swapped` is True:
+5:     Update the gap by dividing it by the shrink factor and taking the floor value.
+6:     If the gap is less than 1, set it to 1 to ensure at least one comparison is made.
+7:     Set `swapped` to False to prepare for the next iteration.
+8:     For each index i from 0 to the length of the list minus the gap:
+9:         If the element at index i is greater than the element at index i + gap:
+10:            Swap the elements at indices i and i + gap.
+11:            Set `swapped` to True to indicate a swap has occurred.
+12: Return the sorted list.
+[END PROCESS]
+
+[BEGIN CODE]
+def comb_sort(nums):
+    gap = len(nums)
+    shrink = 1.3
+    swapped = True
+
+    while gap > 1 or swapped:
+        gap = int(gap / shrink)
+        if gap < 1:
+            gap = 1
+        swapped = False
+        for i in range(len(nums) - gap):
+            if nums[i] > nums[i + gap]:
+                nums[i], nums[i + gap] = nums[i + gap], nums[i]
+                swapped = True
+    return nums
+[END CODE]
+
+### Explanation:
+Comb sort is an improvement over bubble sort. It works by comparing and swapping elements that are far apart (the gap), and then reducing the gap and repeating the process until the gap is 1. This helps to eliminate turtles (small values near the end of the list) more efficiently than bubble sort. The gap is reduced by a shrink factor, typically set to 1.3, which is a heuristic value that works well in practice. The process continues until the gap is 1 and no more swaps are needed, indicating the list is sorted.

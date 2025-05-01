@@ -1,0 +1,10 @@
+[BEGIN]
+Input: test_list: a list of tuples containing numerical values  
+Output: res: the cumulative sum of all the values in the tuples  
+
+1: Initialize res to 0  
+2: For each tuple in test_list:  
+3:     For each value in the tuple:  
+4:         Add the value to res  
+5: Return res  
+[END]

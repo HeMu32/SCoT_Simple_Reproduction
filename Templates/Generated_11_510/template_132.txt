@@ -1,0 +1,4 @@
+Input: tup1: a tuple  
+Output: str: a string  
+1: Convert the tuple elements into a string by joining them without any separator  
+2: Return the resulting string

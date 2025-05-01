@@ -1,0 +1,45 @@
+[BEGIN PROCESS]
+Input: dt: a string representing a date in the format "yyyy-mm-dd"
+Output: A new string with the date in the format "dd-mm-yyyy"
+
+1: Define a regex pattern that matches the date format "yyyy-mm-dd"
+2: Use the regex pattern to search the input dt
+3: If the search returns a match:
+4:     Extract the year, month, and day from the match
+5:     Construct a new string in the format "dd-mm-yyyy" using the extracted values
+6:     Return the new string
+7: Else:
+8:     Return "Invalid date format"
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def change_date_format(dt):
+    # Define the regex pattern for the date format "yyyy-mm-dd"
+    pattern = r'(\d{4})-(\d{2})-(\d{2})'
+    
+    # Search for the pattern in the input date string
+    match = re.search(pattern, dt)
+    
+    if match:
+        # Extract the year, month, and day from the match
+        year, month, day = match.groups()
+        
+        # Construct the new date string in the format "dd-mm-yyyy"
+        new_date = f"{day}-{month}-{year}"
+        
+        # Return the new date string
+        return new_date
+    else:
+        # Return an error message if the input date does not match the expected format
+        return "Invalid date format"
+[END CODE]
+
+### Explanation
+
+1. **Regex Pattern**: The regex pattern `(\d{4})-(\d{2})-(\d{2})` is used to match a date in the format "yyyy-mm-dd". It captures the year, month, and day into separate groups.
+2. **Search for Pattern**: The `re.search` function is used to find the pattern in the input string `dt`.
+3. **Extract Groups**: If a match is found, the `groups` method is used to extract the year, month, and day from the match.
+4. **Construct New Date**: The new date string is constructed in the format "dd-mm-yyyy" using the extracted values.
+5. **Return Result**: The function returns the new date string if the input is valid, or an error message if the input does not match the expected format.

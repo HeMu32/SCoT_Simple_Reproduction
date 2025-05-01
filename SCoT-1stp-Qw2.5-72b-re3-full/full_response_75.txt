@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples, K: an integer
+Output: a list of tuples where all elements in each tuple are divisible by K
+
+1: Initialize an empty list to store the result.
+2: Iterate over each tuple in the test_list.
+3: For each tuple, check if all elements are divisible by K.
+   - If yes, add the tuple to the result list.
+4: After iterating through all tuples, return the result list.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_tuples(test_list, K):
+    result = []
+    for tup in test_list:
+        if all(x % K == 0 for x in tup):
+            result.append(tup)
+    return result
+[END CODE]
+
+Explanation:
+- The function `find_tuples` takes two parameters: `test_list`, which is a list of tuples, and `K`, which is an integer.
+- An empty list `result` is initialized to store the tuples that meet the criteria.
+- A loop iterates over each tuple in `test_list`.
+- For each tuple, the `all` function is used to check if all elements in the tuple are divisible by `K`. The expression `x % K == 0` returns `True` if `x` is divisible by `K` and `False` otherwise. The `all` function returns `True` only if all elements in the tuple satisfy the condition.
+- If the condition is met, the tuple is appended to the `result` list.
+- After the loop completes, the `result` list is returned, containing only the tuples where all elements are divisible by `K`.

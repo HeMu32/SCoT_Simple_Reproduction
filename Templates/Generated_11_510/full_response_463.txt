@@ -1,0 +1,25 @@
+[BEGIN]
+Input: arr: a list of integers
+Output: max_product: the maximum product of a subarray in arr
+
+1: Initialize n as the length of arr
+2: Initialize max_ending_here and min_ending_here to 1
+3: Initialize max_so_far to 0
+4: Initialize flag to 0
+5: Loop through each element in arr from index 0 to n-1
+6:     If the current element is greater than 0:
+7:         Set max_ending_here to max_ending_here multiplied by the current element
+8:         Set min_ending_here to the minimum of min_ending_here multiplied by the current element and 1
+9:         Set flag to 1
+10:    Else if the current element is 0:
+11:        Set max_ending_here and min_ending_here to 1
+12:    Else (the current element is less than 0):
+13:        Store the value of max_ending_here in a temporary variable temp
+14:        Set max_ending_here to the maximum of min_ending_here multiplied by the current element and 1
+15:        Set min_ending_here to temp multiplied by the current element
+16:    If max_so_far is less than max_ending_here:
+17:        Set max_so_far to max_ending_here
+18: If flag is 0 and max_so_far is 0:
+19:    Return 0
+20: Return max_so_far
+[END]

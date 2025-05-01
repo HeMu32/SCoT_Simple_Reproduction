@@ -1,0 +1,10 @@
+[BEGIN]
+Input: test_tup: a tuple 
+Output: a string representation of a dictionary where keys are elements from test_tup and values are their frequencies 
+
+1: Initialize an empty defaultdict named res to store the frequency of each element.
+2: For each element ele in test_tup:
+3:     Increment the count of ele in res by 1.
+4: Convert res to a regular dictionary and then to a string.
+5: Return the string representation of the dictionary.
+[END]

@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: str1: a string, ch: a character to be replaced, newch: a new character to replace ch
+Output: A new string where all occurrences of ch in str1 are replaced with newch
+
+1: Initialize an empty string, result, to store the new string.
+2: Loop through each character, c, in the input string, str1.
+3:     If c is equal to ch:
+4:         Append newch to result.
+5:     Else:
+6:         Append c to result.
+7: Return the result string.
+[END PROCESS]
+
+[BEGIN CODE]
+def replace_char(str1, ch, newch):
+    result = ""
+    for c in str1:
+        if c == ch:
+            result += newch
+        else:
+            result += c
+    return result
+[END CODE]
+
+### Explanation:
+The function `replace_char` takes three parameters: `str1` (the original string), `ch` (the character to be replaced), and `newch` (the new character to replace `ch`). The function iterates through each character in `str1`. If the character matches `ch`, it appends `newch` to the result string. Otherwise, it appends the original character to the result string. Finally, the function returns the result string, which contains all the replacements. This approach ensures that all occurrences of `ch` in `str1` are replaced with `newch`.

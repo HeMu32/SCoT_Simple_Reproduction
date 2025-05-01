@@ -1,0 +1,23 @@
+Input: a: a list of integers, n: the length of the list, k: the number of times the list is repeated
+Output: the maximum sum of a contiguous subarray in the modified array
+
+1: Initialize max_sum to the smallest possible integer
+2: Initialize current_sum to 0
+3: Initialize prefix_sum to 0
+4: Initialize max_prefix_sum to 0
+5: Initialize suffix_sum to 0
+6: Initialize max_suffix_sum to 0
+7: Loop through each element in the array a
+8:     Add the current element to current_sum
+9:     Update max_sum to be the maximum of max_sum and current_sum
+10:     If current_sum is less than 0, reset current_sum to 0
+11:     Add the current element to prefix_sum
+12:     Update max_prefix_sum to be the maximum of max_prefix_sum and prefix_sum
+13: Loop through each element in the array a in reverse
+14:     Add the current element to suffix_sum
+15:     Update max_suffix_sum to be the maximum of max_suffix_sum and suffix_sum
+16: If k is greater than 1
+17:     Calculate the total sum of the array a
+18:     If the total sum is positive
+19:         Update max_sum to be the maximum of max_sum, max_prefix_sum + (k-2) * total_sum + max_suffix_sum
+20: Return max_sum

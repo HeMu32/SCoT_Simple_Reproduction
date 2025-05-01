@@ -1,0 +1,11 @@
+[BEGIN]
+Input: str: a string  
+Output: ch: a repeated character in str or '\0' if no repeated character is found  
+1: Initialize an empty dictionary h  
+2: for each character ch in str:  
+3:     if ch is in h:  
+4:         return ch  
+5:     else:  
+6:         add ch to h with value 0  
+7: return '\0'  
+[END]

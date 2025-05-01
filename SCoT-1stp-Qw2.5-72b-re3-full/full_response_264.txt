@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: h_age: an integer representing the human age
+Output: d_age: an integer representing the dog's age in dog years
+
+1: If h_age is less than or equal to 2, multiply h_age by 10.5 to get d_age.
+2: If h_age is greater than 2, calculate the dog's age as follows:
+   - Set d_age to 21 (the equivalent of the first two human years in dog years).
+   - Subtract 2 from h_age to get the remaining human years.
+   - Multiply the remaining human years by 4 to convert them to dog years.
+   - Add the result to d_age.
+3: Return d_age.
+[END PROCESS]
+
+[BEGIN CODE]
+def dog_age(h_age):
+    if h_age <= 2:
+        d_age = h_age * 10.5
+    else:
+        d_age = 21 + (h_age - 2) * 4
+    return d_age
+[END CODE]
+
+### Explanation:
+The function `dog_age` calculates a dog's age in dog years based on the provided human age (`h_age`). The conversion is based on the common rule that the first two years of a dog's life count as 10.5 dog years each, and each additional year counts as 4 dog years. The function uses a simple conditional structure to handle the two cases: when the human age is 2 years or less, and when it is more than 2 years. This approach ensures that the function accurately converts human years to dog years according to the specified rules.

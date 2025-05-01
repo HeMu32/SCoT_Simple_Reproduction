@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: list1: a list of numbers, n: an integer representing the number of largest items to retrieve
+Output: a list of the n largest numbers from list1, in descending order
+1: Check if n is greater than the length of list1 or less than 1. If so, return an appropriate error message or an empty list.
+2: Sort the list1 in descending order.
+3: Create a new list to store the n largest numbers.
+4: Use a loop to add the first n elements from the sorted list to the new list.
+5: Return the new list containing the n largest numbers.
+[END PROCESS]
+
+[BEGIN CODE]
+def larg_nnum(list1, n):
+    # Check if n is valid
+    if n < 1 or n > len(list1):
+        return "Error: n is out of the valid range."
+    
+    # Sort the list in descending order
+    sorted_list = sorted(list1, reverse=True)
+    
+    # Get the n largest numbers
+    largest_n = sorted_list[:n]
+    
+    return largest_n
+[END CODE]
+
+### Explanation:
+The function `larg_nnum` is designed to return the n largest numbers from a given list `list1`. The process involves first checking if the value of `n` is within a valid range (greater than 0 and less than or equal to the length of the list). If `n` is not valid, an error message is returned. If `n` is valid, the list is sorted in descending order, and the first `n` elements are extracted and returned as the result. This ensures that the returned list contains the n largest numbers from the original list, in descending order.

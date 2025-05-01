@@ -1,0 +1,5 @@
+Input: str1: a string, ch: a character to be replaced, newch: a new character to replace ch
+Output: str2: a new string with all occurrences of ch replaced by newch
+1:  call the replace method on str1 with ch and newch as arguments
+2:  store the result in str2
+3:  return str2

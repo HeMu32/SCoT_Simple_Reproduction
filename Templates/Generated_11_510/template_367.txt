@@ -1,0 +1,19 @@
+Input: root: the root node of a binary tree
+Output: True if the tree is balanced, False otherwise
+
+1: if root is None:
+2:     return True
+3: lh = get_height(root.left)
+4: rh = get_height(root.right)
+5: if abs(lh - rh) > 1:
+6:     return False
+7: if is_tree_balanced(root.left) is False:
+8:     return False
+9: if is_tree_balanced(root.right) is False:
+10:    return False
+11: return True
+
+Function get_height(node):
+12: if node is None:
+13:    return 0
+14: return max(get_height(node.left), get_height(node.right)) + 1

@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: price: a tuple containing elements of various types, including at least one float.
+Output: sorted_tuple: a tuple sorted by its float elements.
+
+1: Convert the tuple to a list to enable sorting.
+2: Define a key function that extracts the float value from each element.
+3: Use the sorted function with the key function to sort the list by the float values.
+4: Convert the sorted list back to a tuple.
+5: Return the sorted tuple.
+[END PROCESS]
+
+[BEGIN CODE]
+def float_sort(price):
+    # Convert the tuple to a list to enable sorting
+    price_list = list(price)
+    
+    # Define a key function that extracts the float value from each element
+    def extract_float(element):
+        if isinstance(element, float):
+            return element
+        return float('inf')  # Return a high value for non-float elements to sort them at the end
+    
+    # Use the sorted function with the key function to sort the list by the float values
+    sorted_list = sorted(price_list, key=extract_float)
+    
+    # Convert the sorted list back to a tuple
+    sorted_tuple = tuple(sorted_list)
+    
+    # Return the sorted tuple
+    return sorted_tuple
+[END CODE]
+
+### Explanation:
+The function `float_sort` is designed to sort a tuple based on its float elements. Here's a breakdown of the steps:
+
+1. **Conversion to List**: Tuples are immutable, so we first convert the tuple to a list to allow for sorting.
+2. **Key Function**: We define a key function `extract_float` that checks if an element is a float. If it is, it returns the float value. If not, it returns a very high value (`float('inf')`) to ensure non-float elements are sorted to the end.
+3. **Sorting**: We use the `sorted` function with the key function to sort the list. The `sorted` function sorts the elements based on the values returned by the key function.
+4. **Conversion Back to Tuple**: After sorting, we convert the list back to a tuple.
+5. **Return**: Finally, we return the sorted tuple.
+
+This approach ensures that the tuple is sorted by its float elements while keeping non-float elements at the end.

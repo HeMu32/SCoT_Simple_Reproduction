@@ -1,0 +1,8 @@
+Input: s: a string, char: a character to remove from the string
+Output: result: a string with all occurrences of char removed
+
+1: Initialize an empty string result
+2: Loop through each character c in the string s
+3:     If c is not equal to char:
+4:         Append c to result
+5: Return result

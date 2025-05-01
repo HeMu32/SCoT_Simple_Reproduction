@@ -1,0 +1,10 @@
+Input: string: a string to be checked
+Output: True or False: indicating whether the string starts and ends with the same character
+
+1: Import the `re` module for regular expression operations
+2: Define a regular expression pattern that matches strings starting and ending with the same character
+3: Use the `re.match` function to check if the string matches the pattern
+4: If the match is found:
+5:     return True
+6: Else:
+7:     return False

@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: test_tup: a tuple of integers
+Output: res: a tuple containing the pairwise addition of the elements of the input tuple
+
+1: Initialize an empty list to store the results of the pairwise additions.
+2: Loop through the indices of the tuple, except the last one.
+3:     For each index, add the current element to the next element in the tuple.
+4:     Append the result of the addition to the results list.
+5: Convert the results list into a tuple.
+6: Return the resulting tuple.
+[END PROCESS]
+
+[BEGIN CODE]
+def add_pairwise(test_tup):
+    # Initialize an empty list to store the results of the pairwise additions
+    res = []
+    
+    # Loop through the indices of the tuple, except the last one
+    for i in range(len(test_tup) - 1):
+        # Add the current element to the next element in the tuple
+        sum_val = test_tup[i] + test_tup[i + 1]
+        # Append the result of the addition to the results list
+        res.append(sum_val)
+    
+    # Convert the results list into a tuple
+    res = tuple(res)
+    
+    # Return the resulting tuple
+    return res
+[END CODE]
+
+### Explanation:
+The function `add_pairwise` takes a tuple of integers as input and returns a new tuple where each element is the sum of a pair of consecutive elements from the input tuple. The loop iterates through the tuple, stopping one element before the end to avoid an index out of range error. For each iteration, it adds the current element and the next element, then appends the result to a list. After the loop, the list is converted to a tuple and returned. This approach ensures that the function correctly handles the pairwise addition and returns the expected output.

@@ -1,0 +1,8 @@
+Input: a, b, c: coefficients of the parabola equation in the form y = ax^2 + bx + c
+Output: focus: a tuple (x, y) representing the coordinates of the focus of the parabola
+
+1: Calculate the x-coordinate of the vertex using the formula x_vertex = -b / (2 * a)
+2: Calculate the y-coordinate of the vertex using the formula y_vertex = c - b^2 / (4 * a)
+3: Calculate the distance from the vertex to the focus using the formula distance = 1 / (4 * a)
+4: Determine the y-coordinate of the focus by adding the distance to the y-coordinate of the vertex
+5: Return the focus as a tuple (x_vertex, y_focus)

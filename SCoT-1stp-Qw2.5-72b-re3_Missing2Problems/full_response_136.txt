@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: units: an integer representing the number of units consumed.
+Output: A float representing the total electricity bill.
+
+1: Define the rate slabs and their corresponding rates.
+2: Initialize a variable total_bill to 0.
+3: If units are less than or equal to the first slab limit:
+4:     Calculate the bill for the first slab and return it.
+5: Else if units are less than or equal to the second slab limit:
+6:     Calculate the bill for the first slab and the remaining units in the second slab.
+7:     Add the two amounts to total_bill and return it.
+8: Else if units are less than or equal to the third slab limit:
+9:     Calculate the bill for the first, second, and the remaining units in the third slab.
+10:    Add the three amounts to total_bill and return it.
+11: Else:
+12:    Calculate the bill for the first, second, third slabs, and the remaining units at the highest rate.
+13:    Add the four amounts to total_bill and return it.
+[END PROCESS]
+
+[BEGIN CODE]
+def cal_electbill(units):
+    # Define the rate slabs and their corresponding rates
+    slabs = [(100, 0.5), (200, 0.7), (300, 1.0), (float('inf'), 1.5)]
+    
+    total_bill = 0.0
+    
+    for i in range(len(slabs)):
+        if units <= slabs[i][0]:
+            total_bill += units * slabs[i][1]
+            break
+        else:
+            total_bill += (slabs[i][0] if i == 0 else slabs[i][0] - slabs[i-1][0]) * slabs[i][1]
+            units -= (slabs[i][0] if i == 0 else slabs[i][0] - slabs[i-1][0])
+    
+    return total_bill
+[END CODE]
+
+Explanation:
+The function `cal_electbill` calculates the electricity bill based on the number of units consumed. The bill is calculated using a tiered pricing model, where the cost per unit increases as more units are consumed. The function iterates through each slab, applying the appropriate rate to the number of units consumed within that slab. If the units consumed are within the current slab, the bill is calculated and returned. If the units exceed the current slab, the bill for that slab is added to the total bill, and the remaining units are considered for the next slab. This process continues until all units are accounted for, and the total bill is returned.

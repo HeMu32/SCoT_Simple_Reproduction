@@ -1,0 +1,75 @@
+Certainly! Let's break down the task and solve it step by step.
+
+### Understanding the Requirement
+The function `check_last(arr, n, p)` needs to determine whether the last element of the given array `arr` is even or odd after performing an operation `p` times. The operation is not explicitly defined, so we need to infer it from the context. Typically, such problems involve some form of transformation or update to the array elements.
+
+### Solving Process
+1. **Input:**
+   - `arr`: a list of integers
+   - `n`: the length of the list `arr`
+   - `p`: the number of times the operation is to be performed
+
+2. **Output:**
+   - A boolean value indicating whether the last element of the array is even or odd after `p` operations.
+
+3. **Operation:**
+   - Since the operation is not explicitly defined, we will assume the simplest operation: incrementing each element of the array by 1. This is a common operation in such problems.
+
+4. **Steps:**
+   - Initialize a variable to keep track of the last element of the array.
+   - Perform the operation `p` times:
+     - Increment each element of the array by 1.
+   - After `p` operations, check if the last element of the array is even or odd.
+   - Return `True` if the last element is even, otherwise return `False`.
+
+### Detailed Solving Process
+1. **Initialize the last element:**
+   - `last_element = arr[-1]`
+2. **Perform the operation `p` times:**
+   - For each operation, increment each element of the array by 1.
+3. **Check if the last element is even or odd:**
+   - Use the modulo operator `%` to check if the last element is even (`last_element % 2 == 0`).
+
+### Implementation
+Let's implement the function based on the solving process.
+
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the list arr, p: the number of times the operation is to be performed
+Output: A boolean value indicating whether the last element of the array is even or odd after p operations
+
+1: Initialize last_element to the last element of arr
+2: For i from 0 to p-1:
+3:     For each element in arr:
+4:         Increment the element by 1
+5: After the loop, set last_element to the last element of arr
+6: Check if last_element is even:
+7:     If last_element % 2 == 0:
+8:         Return True
+9:     Else:
+10:         Return False
+[END PROCESS]
+
+[BEGIN CODE]
+def check_last(arr, n, p):
+    # Initialize the last element
+    last_element = arr[-1]
+    
+    # Perform the operation p times
+    for _ in range(p):
+        for i in range(n):
+            arr[i] += 1
+    
+    # Update the last element after p operations
+    last_element = arr[-1]
+    
+    # Check if the last element is even
+    return last_element % 2 == 0
+[END CODE]
+
+### Explanation
+- **Initialization:** We start by initializing `last_element` to the last element of the array `arr`.
+- **Operation Loop:** We use a nested loop to perform the operation `p` times. In each iteration, we increment each element of the array by 1.
+- **Final Check:** After performing the operations, we update `last_element` to the last element of the array and check if it is even using the modulo operator.
+- **Return:** The function returns `True` if the last element is even and `False` otherwise.
+
+This implementation ensures that the function correctly checks the parity of the last element after the specified number of operations.

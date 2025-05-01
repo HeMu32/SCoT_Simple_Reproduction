@@ -1,0 +1,10 @@
+[BEGIN]
+Input: nums: a list of numbers  
+Output: odd_nums: a list of odd numbers from nums  
+1: Initialize odd_nums as an empty list  
+2: Use the filter function with a lambda function to iterate over each number x in nums  
+3:     if x modulo 2 is not equal to 0 (x is odd):  
+4:         Add x to the odd_nums list  
+5: Convert the filter object to a list and assign it to odd_nums  
+6: Return odd_nums  
+[END]

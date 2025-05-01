@@ -1,0 +1,17 @@
+[BEGIN CODE]
+```python
+def find_Sum(arr, n): 
+    # Create a dictionary to count occurrences of each element
+    element_count = {}
+    for element in arr:
+        if element in element_count:
+            element_count[element] += 1
+        else:
+            element_count[element] = 1
+    
+    # Calculate the sum of elements that appear more than once
+    sum_repeated = sum(element for element, count in element_count.items() if count > 1)
+    
+    return sum_repeated
+```
+[END CODE]

@@ -1,0 +1,9 @@
+[BEGIN CODE]
+```python
+def frequency(a, x):
+    """
+    Write a python function to find the frequency of a number in a given array.
+    """
+    return a.count(x)
+```
+[END CODE]

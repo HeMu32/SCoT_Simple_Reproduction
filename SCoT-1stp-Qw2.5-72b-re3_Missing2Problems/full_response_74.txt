@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: colors: a list of colors, patterns: a list of pattern identifiers
+Output: A boolean value indicating whether the colors follow the sequence given in the patterns array
+
+1: Check if the lengths of the colors and patterns lists are the same. If not, return False.
+2: Create a dictionary to map each pattern identifier to its corresponding color.
+3: Iterate over the patterns and colors simultaneously.
+4:   For each pattern identifier:
+5:     If the pattern identifier is not in the dictionary, add it with the corresponding color.
+6:     If the pattern identifier is in the dictionary, check if the mapped color matches the current color.
+7:       If it does not match, return False.
+8: If the loop completes without returning False, return True.
+[END PROCESS]
+
+[BEGIN CODE]
+def is_samepatterns(colors, patterns):
+    if len(colors) != len(patterns):
+        return False
+    
+    pattern_to_color = {}
+    
+    for pattern, color in zip(patterns, colors):
+        if pattern not in pattern_to_color:
+            pattern_to_color[pattern] = color
+        elif pattern_to_color[pattern] != color:
+            return False
+    
+    return True
+[END CODE]
+
+### Explanation:
+The function `is_samepatterns` checks if a list of colors follows the sequence given in the patterns array. The function works as follows:
+
+1. **Length Check**: First, it checks if the lengths of the `colors` and `patterns` lists are the same. If they are not, it immediately returns `False` because the sequences cannot match.
+
+2. **Mapping Patterns to Colors**: A dictionary `pattern_to_color` is created to map each pattern identifier to its corresponding color.
+
+3. **Iterate and Validate**: The function then iterates over the `patterns` and `colors` lists simultaneously using the `zip` function. For each pattern identifier:
+   - If the pattern identifier is not already in the dictionary, it adds the pattern identifier and its corresponding color to the dictionary.
+   - If the pattern identifier is already in the dictionary, it checks if the mapped color matches the current color. If it does not match, the function returns `False`.
+
+4. **Return True**: If the loop completes without finding any mismatches, the function returns `True`, indicating that the colors follow the sequence given in the patterns array.
+
+This approach ensures that the function correctly identifies whether the colors follow the specified pattern sequence.

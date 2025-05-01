@@ -1,0 +1,8 @@
+Input: list1: a list of lists, where each sublist contains integers.
+Output: max_sum: an integer representing the maximum sum of elements from any of the sublists.
+
+1: Initialize a variable `max_sum` to store the maximum sum found, set it to the smallest possible integer value.
+2: Loop through each sublist in `list1`.
+3:     Calculate the sum of the current sublist.
+4:     If the sum of the current sublist is greater than `max_sum`, update `max_sum` with the sum of the current sublist.
+5: After the loop, return `max_sum`.

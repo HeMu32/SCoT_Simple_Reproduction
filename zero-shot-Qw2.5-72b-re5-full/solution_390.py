@@ -1,0 +1,2 @@
+def add_string(lst, string): 
+    return [string + str(item) for item in lst]

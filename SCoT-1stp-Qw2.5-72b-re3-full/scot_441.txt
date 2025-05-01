@@ -1,0 +1,5 @@
+Input: l: a float or integer representing the length of one side of the cube
+Output: surface_area: a float or integer representing the surface area of the cube
+
+1: Calculate the surface area of the cube using the formula 6 * l^2, where l is the length of one side of the cube.
+2: Return the calculated surface area.

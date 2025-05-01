@@ -1,0 +1,15 @@
+Input: set: a list of integers, n: the number of elements in the set, sum: the target sum
+Output: True if there is a subset of set whose sum is equal to sum, False otherwise
+
+1: If the sum is 0, return True (an empty subset can always sum to 0)
+2: If n is 0 and sum is not 0, return False (no elements to form the sum)
+3: Create a 2D array dp of size (n+1) x (sum+1) to store the subset sum solutions
+4: Initialize the first column of dp to True (a sum of 0 can be achieved with an empty subset)
+5: Initialize the first row of dp to False (a non-zero sum cannot be achieved with 0 elements)
+6: For each element in the set (from 1 to n):
+7:     For each possible sum value (from 1 to sum):
+8:         If the current element is greater than the current sum value:
+9:             Set dp[i][j] to dp[i-1][j] (exclude the current element)
+10:        Else:
+11:            Set dp[i][j] to dp[i-1][j] or dp[i-1][j-set[i-1]] (include or exclude the current element)
+12: Return the value of dp[n][sum]

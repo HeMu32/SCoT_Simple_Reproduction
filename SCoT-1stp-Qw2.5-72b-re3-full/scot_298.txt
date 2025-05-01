@@ -1,0 +1,9 @@
+Input: l1, l2: two lists, where l1 can contain nested lists, and l2 is a flat list.
+Output: result: a list of elements from l1 that are also present in l2.
+
+1: Initialize an empty list called `result` to store the common elements.
+2: Define a helper function `flatten` to flatten the nested list `l1` into a single list.
+3: Loop through each element `e` in the flattened list `l1`:
+4:     If `e` is in `l2` and `e` is not already in `result`:
+5:         Append `e` to `result`.
+6: Return `result`.

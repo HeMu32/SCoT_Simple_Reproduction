@@ -1,0 +1,8 @@
+[BEGIN]
+Input: nums1, nums2: two lists of numbers
+Output: result: a list containing the element-wise product of nums1 and nums2
+1: Initialize result as the map of a lambda function applied to nums1 and nums2
+2:     The lambda function takes two arguments x and y, and returns their product x * y
+3: Convert the map object to a list
+4: Return the list as the result
+[END]

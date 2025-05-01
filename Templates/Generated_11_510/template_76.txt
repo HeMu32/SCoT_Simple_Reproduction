@@ -1,0 +1,8 @@
+Input: m, n: dimensions of the rectangle (m and n are integers)
+Output: count: number of squares in the rectangle
+
+1: if n is less than m:
+2:     swap the values of m and n
+3: calculate the total number of squares using the formula:
+4:     count = (m * (m + 1) * (2 * m + 1) / 6) + ((n - m) * m * (m + 1) / 2)
+5: return count

@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: list1: a list, L: an integer representing the length of the first part of the list
+Output: A tuple containing two lists, where the first list is the first L elements of list1, and the second list contains the remaining elements
+
+1: Check if the length of list1 is less than L
+2:     If true, return the entire list1 as the first part and an empty list as the second part
+3: Otherwise, split the list into two parts:
+4:     The first part contains the first L elements of list1
+5:     The second part contains the elements from the L+1-th position to the end of list1
+6: Return a tuple containing the two parts
+[END PROCESS]
+
+[BEGIN CODE]
+def split_two_parts(list1, L):
+    if len(list1) < L:
+        return (list1, [])
+    else:
+        first_part = list1[:L]
+        second_part = list1[L:]
+        return (first_part, second_part)
+[END CODE]
+
+Explanation:
+- The function `split_two_parts` takes two parameters: `list1`, which is the list to be split, and `L`, which is the length of the first part of the list.
+- The function first checks if the length of `list1` is less than `L`. If it is, it means the entire list cannot be split into two parts where the first part has `L` elements. In this case, the function returns the entire list as the first part and an empty list as the second part.
+- If the length of `list1` is greater than or equal to `L`, the function splits the list into two parts:
+  - The first part contains the first `L` elements of `list1`.
+  - The second part contains the elements from the `L+1`-th position to the end of `list1`.
+- Finally, the function returns a tuple containing the two parts.

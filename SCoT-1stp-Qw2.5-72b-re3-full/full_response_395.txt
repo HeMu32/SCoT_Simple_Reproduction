@@ -1,0 +1,45 @@
+[BEGIN PROCESS]
+Input: str1: a string  
+Output: The first non-repeated character in str1, or None if all characters are repeated  
+1: Initialize an empty dictionary to store the count of each character  
+2: Loop through each character in str1:  
+3:     If the character is in the dictionary, increment its count  
+4:     Otherwise, add the character to the dictionary with a count of 1  
+5: Loop through each character in str1 again:  
+6:     If the character's count in the dictionary is 1, return the character  
+7: If no non-repeated character is found, return None
+[END PROCESS]
+
+[BEGIN CODE]
+def first_non_repeating_character(str1):
+    char_count = {}
+    
+    # Count the occurrences of each character
+    for char in str1:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    
+    # Find the first non-repeating character
+    for char in str1:
+        if char_count[char] == 1:
+            return char
+    
+    # If no non-repeating character is found
+    return None
+[END CODE]
+
+### Explanation:
+The function `first_non_repeating_character` is designed to find the first character in a given string `str1` that does not repeat. The process involves two main steps:
+
+1. **Counting Character Occurrences:**
+   - We use a dictionary `char_count` to keep track of how many times each character appears in the string.
+   - We iterate through the string, and for each character, we either increment its count in the dictionary if it already exists, or we add it to the dictionary with a count of 1 if it is encountered for the first time.
+
+2. **Finding the First Non-Repeating Character:**
+   - We iterate through the string again, and for each character, we check its count in the dictionary.
+   - The first character with a count of 1 is returned as the first non-repeating character.
+   - If no such character is found, the function returns `None`.
+
+This approach ensures that we efficiently find the first non-repeating character with a time complexity of O(n), where n is the length of the string. The space complexity is also O(n) due to the dictionary used to store character counts.

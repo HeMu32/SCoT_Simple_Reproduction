@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: a, b, c: three positive numbers representing the lengths of the sides of a triangle
+Output: perimeter: a number representing the perimeter of the triangle
+
+1: Check if the input values are valid (i.e., all are positive and the sum of any two sides is greater than the third side, which is the triangle inequality theorem)
+2: If the inputs are valid:
+3:     Calculate the perimeter by summing the lengths of the sides a, b, and c
+4:     Return the perimeter
+5: If the inputs are not valid:
+6:     Return an error message indicating that the inputs do not form a valid triangle
+[END PROCESS]
+
+[BEGIN CODE]
+def perimeter_triangle(a, b, c):
+    # Check if the inputs are valid
+    if a > 0 and b > 0 and c > 0 and (a + b > c) and (a + c > b) and (b + c > a):
+        # Calculate the perimeter
+        perimeter = a + b + c
+        return perimeter
+    else:
+        # Return an error message if the inputs do not form a valid triangle
+        return "Invalid input: The sides do not form a valid triangle."
+[END CODE]
+
+### Explanation:
+The function `perimeter_triangle` takes three arguments `a`, `b`, and `c`, which represent the lengths of the sides of a triangle. The function first checks if the inputs are valid by ensuring that all sides are positive and that the triangle inequality theorem holds (i.e., the sum of the lengths of any two sides must be greater than the length of the remaining side). If the inputs are valid, the function calculates the perimeter by summing the lengths of the sides and returns the result. If the inputs are not valid, the function returns an error message indicating that the sides do not form a valid triangle. This ensures that the function handles invalid input gracefully and provides meaningful feedback to the user.

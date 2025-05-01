@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: n: an integer
+Output: count: the number of divisors of n
+1: Initialize count to 0
+2: Loop from 1 to n (inclusive)
+3:     If n is divisible by the current number (i.e., n % i == 0):
+4:         Increment count by 1
+5: Return count
+[END PROCESS]
+
+[BEGIN CODE]
+def divisor(n):
+    count = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            count += 1
+    return count
+[END CODE]
+
+Explanation:
+The function `divisor(n)` is designed to find the number of divisors of a given integer `n`. The process involves initializing a counter `count` to 0, which will keep track of the number of divisors. The function then iterates over all integers from 1 to `n` (inclusive). For each integer `i` in this range, it checks if `n` is divisible by `i` (i.e., if `n % i == 0`). If `n` is divisible by `i`, `i` is a divisor of `n`, and the counter `count` is incremented by 1. After the loop completes, the function returns the value of `count`, which represents the total number of divisors of `n`. This approach ensures that all possible divisors are considered, and the function accurately counts them.

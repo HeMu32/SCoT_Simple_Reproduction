@@ -1,0 +1,10 @@
+Input: list1: a list of elements
+Output: result: a list of lists containing all possible combinations of the elements in list1
+
+1: Import the combinations function from the itertools module
+2: Initialize an empty list called result to store all combinations
+3: Determine the length of the input list, n
+4: for r from 1 to n:
+5:     Generate all combinations of length r from list1 using the combinations function
+6:     Convert each combination from a tuple to a list and add it to result
+7: Return result

@@ -1,0 +1,10 @@
+Input: listval: a heterogeneous list 
+Output: min_val: the minimum integer value in listval 
+
+1: Initialize a variable min_val to store the minimum value found
+2: Loop through each element i in listval:
+3:     If i is an integer:
+4:         Compare i with the current min_val
+5:         If i is less than min_val or min_val is not yet set:
+6:             Set min_val to i
+7: Return min_val

@@ -1,0 +1,6 @@
+[BEGIN]
+Input: r: radius of the cylinder, h: height of the cylinder
+Output: lateral_surface: the lateral surface area of the cylinder
+1: Calculate the lateral surface area using the formula 2 * π * r * h
+2: Return the calculated lateral surface area
+[END]

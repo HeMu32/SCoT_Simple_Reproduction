@@ -1,0 +1,16 @@
+[BEGIN]
+Input: str1: a string  
+Output: ch: the first non-repeated character in str1  
+1: Initialize an empty list char_order to keep track of the order of characters.  
+2: Initialize an empty dictionary ctr to count occurrences of each character.  
+3: For each character c in str1:  
+4:     If c is in ctr:  
+5:         Increment the count of c in ctr.  
+6:     Else:  
+7:         Set the count of c in ctr to 1.  
+8:         Append c to char_order.  
+9: For each character c in char_order:  
+10:     If the count of c in ctr is 1:  
+11:         Return c.  
+12: Return None if no non-repeated character is found.  
+[END]

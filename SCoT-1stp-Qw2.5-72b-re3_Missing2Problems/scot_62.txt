@@ -1,0 +1,7 @@
+Input: xs: a list of numbers
+Output: smallest: the smallest number in the list
+1: Check if the list is empty, if it is, return None or raise an error (since there is no smallest number in an empty list)
+2: Initialize smallest with the first element of the list
+3: Loop through the list starting from the second element
+4: For each element, if it is smaller than the current smallest, update smallest
+5: After the loop, return the smallest number

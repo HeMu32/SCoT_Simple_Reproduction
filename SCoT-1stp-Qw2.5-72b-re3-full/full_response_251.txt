@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: list: a list of elements, element: the element to be inserted
+Output: new_list: a new list where the given element is inserted before each element of the original list
+
+1: Initialize an empty list called new_list
+2: for each item in the original list:
+3:     Append the element to new_list
+4:     Append the item to new_list
+5: return new_list
+[END PROCESS]
+
+[BEGIN CODE]
+def insert_element(lst, element):
+    new_list = []
+    for item in lst:
+        new_list.append(element)
+        new_list.append(item)
+    return new_list
+[END CODE]
+
+Explanation:
+The function `insert_element` takes two parameters: `lst`, which is the original list, and `element`, which is the element to be inserted before each element in the list. The function initializes an empty list `new_list`. It then iterates over each item in the original list `lst`, appending the `element` followed by the `item` to `new_list`. Finally, the function returns `new_list`, which contains the `element` inserted before each original item. This approach ensures that the new list maintains the order of the original elements while inserting the specified element before each one.

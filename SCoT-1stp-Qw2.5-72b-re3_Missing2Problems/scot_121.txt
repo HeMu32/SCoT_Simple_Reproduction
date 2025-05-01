@@ -1,0 +1,16 @@
+Input:
+- `A`: a list of integers
+- `n`: the length of the list `A`
+- `sum`: the target sum for the triplet
+- `count`: a variable to keep track of the number of triplets found
+
+Output:
+- `count`: the number of triplets in `A` that sum up to `sum`
+
+1: Initialize `count` to 0
+2: Use three nested loops to iterate through all possible triplets in the array `A`
+3: For each triplet (i, j, k) where i < j < k:
+4:     Calculate the sum of the triplet A[i] + A[j] + A[k]
+5:     If the sum of the triplet equals the target `sum`:
+6:         Increment `count` by 1
+7: Return `count`

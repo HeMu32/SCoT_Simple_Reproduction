@@ -1,0 +1,49 @@
+[BEGIN PROCESS]
+Input: n: an integer representing half the length of the binary sequences
+Output: The count of all binary sequences of length 2n such that the sum of the first n bits is the same as the sum of the last n bits
+
+1: Initialize a variable `count` to 0 to keep track of the valid sequences.
+2: Generate all possible binary sequences of length 2n.
+3: For each sequence:
+   a: Split the sequence into two halves.
+   b: Calculate the sum of the bits in the first half and the second half.
+   c: If the sums are equal, increment `count`.
+4: Return the `count` of valid sequences.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_binary_seq(n):
+    from itertools import product
+    
+    count = 0
+    # Generate all binary sequences of length 2n
+    for seq in product([0, 1], repeat=2*n):
+        # Split the sequence into two halves
+        first_half = seq[:n]
+        second_half = seq[n:]
+        
+        # Calculate the sum of the bits in each half
+        sum_first_half = sum(first_half)
+        sum_second_half = sum(second_half)
+        
+        # Check if the sums are equal
+        if sum_first_half == sum_second_half:
+            count += 1
+    
+    return count
+[END CODE]
+
+### Explanation:
+The function `count_binary_seq` calculates the number of binary sequences of length 2n where the sum of the first n bits is equal to the sum of the last n bits. Here's a breakdown of the solution:
+
+1. **Initialization**: We initialize a counter `count` to 0, which will keep track of the number of valid sequences.
+
+2. **Generating Sequences**: We use the `product` function from the `itertools` module to generate all possible binary sequences of length 2n. Each sequence is a tuple of 0s and 1s.
+
+3. **Splitting and Summing**: For each generated sequence, we split it into two halves. We then calculate the sum of the bits in each half.
+
+4. **Checking Equality**: If the sums of the two halves are equal, we increment the `count`.
+
+5. **Returning the Result**: Finally, we return the `count` of valid sequences.
+
+This approach ensures that we consider all possible binary sequences and accurately count those that meet the given condition.

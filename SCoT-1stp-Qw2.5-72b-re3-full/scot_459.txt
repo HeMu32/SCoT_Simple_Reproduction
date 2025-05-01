@@ -1,0 +1,6 @@
+Input: str1: a string
+Output: a string with all uppercase substrings removed
+
+1: Import the re module for regular expression operations
+2: Use re.sub to substitute all uppercase letters (A-Z) with an empty string
+3: Return the modified string

@@ -1,0 +1,11 @@
+[BEGIN]
+Input: A: an array of integers, n: the number of elements in A
+Output: The largest palindromic number in A, or -1 if no palindromic number exists
+
+1: Sort the array A in ascending order
+2: Loop from the last element to the first element in A (i from n-1 to 0)
+3:     If the current element A[i] is a palindrome:
+4:         Return A[i]
+5: If no palindromic number is found:
+6:     Return -1
+[END]

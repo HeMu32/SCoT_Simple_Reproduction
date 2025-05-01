@@ -1,0 +1,11 @@
+[BEGIN]
+Input: test_list: a list of tuples, K: an integer
+Output: res: a list of tuples where each tuple is trimmed by K elements from both ends
+
+1: Initialize an empty list res to store the results
+2: For each tuple ele in test_list:
+3:     Calculate N as the length of the tuple ele
+4:     Convert the tuple ele to a list, slice it from index K to N - K, and convert it back to a tuple
+5:     Append the trimmed tuple to res
+6: Return res as a string representation of the list of trimmed tuples
+[END]

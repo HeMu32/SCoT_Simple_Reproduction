@@ -1,0 +1,10 @@
+[BEGIN]
+Input: test_list: a list of tuples, K: an element to check
+Output: res: a boolean indicating if all elements in all tuples are equal to K
+1: Initialize res to True
+2: for each tuple tup in test_list:
+3:     for each element ele in tup:
+4:         if ele is not equal to K:
+5:             set res to False
+6: return res
+[END]

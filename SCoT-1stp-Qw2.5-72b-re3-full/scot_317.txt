@@ -1,0 +1,20 @@
+Input: alist: a list of elements (can be of any type)
+Output: a list of tuples where each tuple represents a consecutive sequence of the same element in the input list. The first element of the tuple is the count of consecutive occurrences, and the second element is the value of the element.
+
+1: Initialize an empty list to store the result (encoded_list)
+2: Initialize a variable to keep track of the current element (current_element) and its count (count)
+3: Loop through each element in the input list (alist)
+4:     If the current element is the same as the last element (current_element):
+5:         Increment the count
+6:     Else:
+7:         If the count is greater than 1:
+8:             Append a tuple (count, current_element) to the encoded_list
+9:         Else:
+10:            Append the current_element to the encoded_list
+11:        Reset the count to 1 and set current_element to the current element
+12: After the loop, handle the last element:
+13:    If the count is greater than 1:
+14:        Append a tuple (count, current_element) to the encoded_list
+15:    Else:
+16:        Append the current_element to the encoded_list
+17: Return the encoded_list

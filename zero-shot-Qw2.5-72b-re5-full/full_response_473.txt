@@ -1,0 +1,11 @@
+[BEGIN CODE]
+```python
+def tuple_intersection(test_list1, test_list2):
+    """
+    Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.
+    """
+    set1 = {tuple(sorted(t)) for t in test_list1}
+    set2 = {tuple(sorted(t)) for t in test_list2}
+    return [tuple(t) for t in set1.intersection(set2)]
+```
+[END CODE]

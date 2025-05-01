@@ -1,0 +1,9 @@
+Input: arr: a list of integers, n: the length of arr, k: an integer representing the difference
+Output: count: the number of distinct pairs in arr that have a difference of k
+
+1: Initialize count to 0
+2: for each index i from 0 to n-1 do
+3:     for each index j from i+1 to n-1 do
+4:         if arr[i] - arr[j] equals k or arr[j] - arr[i] equals k then
+5:             increment count by 1
+6: return count

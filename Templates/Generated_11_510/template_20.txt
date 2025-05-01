@@ -1,0 +1,14 @@
+Input: x: an integer 
+Output: True if x is a Woodall number, False otherwise 
+1: if x is even: 
+2:     return False 
+3: if x is 1: 
+4:     return True 
+5: increment x by 1 
+6: initialize p to 0 
+7: while x is even: 
+8:     divide x by 2 
+9:     increment p by 1 
+10: if p equals x: 
+11:     return True 
+12: return False

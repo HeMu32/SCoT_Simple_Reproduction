@@ -1,0 +1,6 @@
+Input: v: wind speed in km/h, t: temperature in Celsius
+Output: wind chill index as an integer
+1: Calculate the wind chill index using the formula:
+2:     windchill = 13.12 + 0.6215 * t - 11.37 * v^0.16 + 0.3965 * t * v^0.16
+3: Round the calculated wind chill index to the nearest integer
+4: Return the rounded wind chill index

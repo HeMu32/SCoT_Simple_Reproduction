@@ -1,0 +1,15 @@
+[BEGIN CODE]
+```python
+def decimal_To_Binary(N):
+    """ 
+    Write a python function to convert a decimal number to binary number. 
+    """ 
+    if N == 0:
+        return '0'
+    binary = ''
+    while N > 0:
+        binary = str(N % 2) + binary
+        N = N // 2
+    return binary
+```
+[END CODE]

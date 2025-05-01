@@ -1,0 +1,8 @@
+[BEGIN]
+Input: list1: a list, m: an integer indicating the starting point, n: an integer indicating the number of items to rotate
+Output: result: a list rotated by n items to the left
+
+1:  Slice list1 from index m to the end and concatenate it with the slice from the beginning of list1 to index n
+2:  Store the concatenated result in a variable named result
+3:  Return result
+[END]

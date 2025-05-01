@@ -1,0 +1,6 @@
+[BEGIN]
+Input: a: first term of the arithmetic progression, n: number of terms, d: common difference
+Output: total: sum of the arithmetic progression
+1: Calculate the sum of the arithmetic progression using the formula: total = (n * (2 * a + (n - 1) * d)) / 2
+2: Return the calculated total
+[END]

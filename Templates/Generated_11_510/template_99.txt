@@ -1,0 +1,5 @@
+Input: n: an integer (decimal number)
+Output: binary: a string representing the binary equivalent of n
+1: Convert the integer n to its binary representation using the built-in function `bin`.
+2: The `bin` function returns a string that starts with '0b', so remove the '0b' prefix from the string.
+3: Return the modified string as the binary representation of n.

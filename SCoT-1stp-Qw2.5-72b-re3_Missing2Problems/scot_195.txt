@@ -1,0 +1,14 @@
+Input: arr: a sorted list of integers, x: the element to find, n: the length of the array
+Output: The index of the first occurrence of x in arr, or -1 if x is not found
+
+1: Define the function `first` with parameters `arr`, `x`, and `n`
+2: Initialize two variables, `low` and `high`, to 0 and n-1 respectively, to represent the current search range
+3: Use a while loop to perform binary search as long as `low` is less than or equal to `high`
+4:   Calculate the middle index, `mid`, as the average of `low` and `high`
+5:   If the element at `mid` is equal to `x`:
+6:     Check if `mid` is the first occurrence of `x` by comparing it with the element at `mid-1`
+7:     If `mid` is the first occurrence, return `mid`
+8:     Otherwise, update `high` to `mid - 1` to search the left subarray
+9:   If the element at `mid` is less than `x`, update `low` to `mid + 1` to search the right subarray
+10:   If the element at `mid` is greater than `x`, update `high` to `mid - 1` to search the left subarray
+11: If the loop completes without finding `x`, return -1 indicating `x` is not in the array

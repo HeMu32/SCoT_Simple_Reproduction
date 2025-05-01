@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: a, b, c: three numbers (integers or floats)
+Output: The median of the three numbers
+
+1: Sort the three numbers in ascending order.
+2: Return the middle number from the sorted list.
+[END PROCESS]
+
+[BEGIN CODE]
+def median_numbers(a, b, c):
+    # Create a list of the three numbers
+    numbers = [a, b, c]
+    # Sort the list in ascending order
+    numbers.sort()
+    # The median is the middle number in the sorted list
+    return numbers[1]
+[END CODE]
+
+### Explanation:
+The function `median_numbers` takes three numbers as input and returns the median of these numbers. The process involves:
+1. Creating a list containing the three input numbers.
+2. Sorting the list in ascending order. In Python, the `sort()` method sorts the list in place.
+3. Returning the middle element of the sorted list, which is the median of the three numbers. Since the list is sorted, the element at index 1 (the second element) is the median.
+
+This approach is straightforward and leverages Python's built-in list sorting capabilities to find the median efficiently.

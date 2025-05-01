@@ -1,0 +1,5 @@
+Input: n: an integer representing the position in the sequence of centered hexagonal numbers
+Output: the nth centered hexagonal number
+
+1: Calculate the nth centered hexagonal number using the formula 3 * n * (n - 1) + 1
+2: Return the result

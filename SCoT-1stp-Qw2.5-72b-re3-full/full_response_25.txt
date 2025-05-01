@@ -1,0 +1,48 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the number of elements in the list
+Output: product: the product of all non-repeated elements in the list
+
+1: Initialize a dictionary to keep track of the frequency of each element in the list.
+2: Loop through the list to populate the dictionary with the frequency of each element.
+3: Initialize a variable `product` to 1, which will hold the product of non-repeated elements.
+4: Loop through the dictionary:
+5:     If the frequency of the current element is 1 (i.e., it is not repeated):
+6:         Multiply the `product` by the current element.
+7: Return the `product`.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_Product(arr, n):
+    # Step 1: Initialize a dictionary to keep track of the frequency of each element
+    frequency = {}
+    
+    # Step 2: Populate the dictionary with the frequency of each element
+    for i in range(n):
+        if arr[i] in frequency:
+            frequency[arr[i]] += 1
+        else:
+            frequency[arr[i]] = 1
+    
+    # Step 3: Initialize the product to 1
+    product = 1
+    
+    # Step 4: Loop through the dictionary
+    for key, value in frequency.items():
+        # Step 5: Check if the element is not repeated
+        if value == 1:
+            # Step 6: Multiply the product by the non-repeated element
+            product *= key
+    
+    # Step 7: Return the product
+    return product
+[END CODE]
+
+### Explanation:
+The function `find_Product` takes a list `arr` and its length `n` as input. It calculates the product of all non-repeated elements in the list. The process involves:
+- Creating a dictionary to count the frequency of each element in the list.
+- Iterating through the list to populate the dictionary.
+- Initializing a variable `product` to 1, which will store the final product of non-repeated elements.
+- Iterating through the dictionary to find elements that appear exactly once and multiplying them to the `product`.
+- Returning the final `product`.
+
+This approach ensures that only elements that appear exactly once in the list are considered in the product calculation, meeting the requirement of the task.

@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: tup: a tuple, x: an element to count
+Output: the number of occurrences of x in the tuple
+
+1: Initialize a counter variable to 0
+2: Loop through each element in the tuple
+3:     If the current element is equal to x, increment the counter by 1
+4: After the loop, return the counter value
+[END PROCESS]
+
+[BEGIN CODE]
+def count_X(tup, x):
+    count = 0
+    for element in tup:
+        if element == x:
+            count += 1
+    return count
+[END CODE]
+
+Explanation:
+The function `count_X` takes two parameters: `tup`, which is the tuple to search through, and `x`, which is the element to count within the tuple. The function initializes a counter to 0, then iterates over each element in the tuple. For each element, it checks if the element is equal to `x`. If it is, the counter is incremented by 1. After the loop completes, the function returns the counter, which represents the number of times `x` appears in the tuple. This approach uses a simple loop and a conditional statement to achieve the desired functionality.

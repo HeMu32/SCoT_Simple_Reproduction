@@ -1,0 +1,10 @@
+Input: l1, l2, l3: lists of elements
+Output: nested_dict: a nested dictionary where elements from l1 are the top-level keys, elements from l2 are the second-level keys, and elements from l3 are the values
+
+1: Initialize an empty dictionary called nested_dict
+2: Loop through the indices of the lists (assuming all lists have the same length)
+3:     For each index i:
+4:         If the element from l1 at index i is not already a key in nested_dict:
+5:             Add it as a key with an empty dictionary as its value
+6:         Add the element from l3 at index i to the dictionary that is the value of the key from l1 at index i, using the element from l2 at index i as the key
+7: Return nested_dict

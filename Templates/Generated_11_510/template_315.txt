@@ -1,0 +1,20 @@
+Input: str: a string 
+Output: A substring representing the first maximum length even word or "-1" if no even word exists.
+
+1: Initialize n as the length of str, i as 0, currlen as 0, maxlen as 0, and st as -1.
+2: While i is less than n:
+3:     If the current character (str[i]) is a space:
+4:         If currlen is even:
+5:             If currlen is greater than maxlen:
+6:                 Set maxlen to currlen and st to i - currlen.
+7:         Set currlen to 0.
+8:     Else:
+9:         Increment currlen by 1.
+10:    Increment i by 1.
+11: After the loop, if currlen is even:
+12:    If currlen is greater than maxlen:
+13:        Set maxlen to currlen and st to i - currlen.
+14: If st is still -1:
+15:    Return "-1".
+16: Else:
+17:    Return the substring from st to st + maxlen.

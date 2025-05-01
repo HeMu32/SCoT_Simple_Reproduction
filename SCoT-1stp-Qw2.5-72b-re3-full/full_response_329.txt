@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: list: a list of integers
+Output: count: an integer representing the number of negative numbers in the list
+
+1: Initialize a counter variable to zero
+2: Loop through each element in the list
+   2.1: If the current element is less than zero (negative), increment the counter by one
+3: After the loop, return the counter value
+[END PROCESS]
+
+[BEGIN CODE]
+def neg_count(lst):
+    count = 0
+    for num in lst:
+        if num < 0:
+            count += 1
+    return count
+[END CODE]
+
+Explanation:
+The function `neg_count` takes a list of integers as input and returns the count of negative numbers in the list. The process starts by initializing a counter to zero. It then iterates through each element in the list, checking if the element is negative. If it is, the counter is incremented. After the loop completes, the function returns the counter, which represents the total number of negative numbers in the list. This approach ensures that all elements are checked, and the count is accurate.

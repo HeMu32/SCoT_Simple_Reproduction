@@ -1,0 +1,37 @@
+[BEGIN PROCESS]
+Input: Input: a list of tuples
+Output: a dictionary where each key is a unique first element from the tuples, and the value is a list of tuples that have this first element
+
+1: Initialize an empty dictionary to store the grouped tuples
+2: Iterate over each tuple in the input list
+3:     Extract the first element of the current tuple
+4:     If the first element is not already a key in the dictionary:
+5:         Add the first element as a new key with an empty list as its value
+6:     Append the current tuple to the list of the corresponding key
+7: Return the dictionary
+[END PROCESS]
+
+[BEGIN CODE]
+def group_tuples(Input):
+    # Initialize an empty dictionary to store the grouped tuples
+    grouped_dict = {}
+    
+    # Iterate over each tuple in the input list
+    for tup in Input:
+        # Extract the first element of the current tuple
+        first_element = tup[0]
+        
+        # If the first element is not already a key in the dictionary
+        if first_element not in grouped_dict:
+            # Add the first element as a new key with an empty list as its value
+            grouped_dict[first_element] = []
+        
+        # Append the current tuple to the list of the corresponding key
+        grouped_dict[first_element].append(tup)
+    
+    # Return the dictionary
+    return grouped_dict
+[END CODE]
+
+Explanation:
+The function `group_tuples` takes a list of tuples as input and returns a dictionary. The keys of this dictionary are the unique first elements found in the tuples, and the values are lists of tuples that share the same first element. The function iterates through each tuple in the input list, extracts the first element, and uses it to group the tuples in the dictionary. If a first element is encountered for the first time, a new key is created in the dictionary with an empty list. Each tuple is then appended to the list corresponding to its first element. This approach ensures that all tuples with the same first element are grouped together in the output dictionary.

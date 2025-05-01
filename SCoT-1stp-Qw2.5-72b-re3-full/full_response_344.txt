@@ -1,0 +1,43 @@
+[BEGIN PROCESS]
+Input: n, m: integers representing the start and end of the range (inclusive).
+Output: count: the number of elements within the range [n, m] that have an odd number of factors.
+
+1: Initialize count to 0.
+2: Loop through each number i in the range [n, m]:
+3:     Initialize a variable factor_count to 0.
+4:     Loop through each number j from 1 to the square root of i:
+5:         If i is divisible by j (i.e., i % j == 0):
+6:             If i divided by j equals j (i.e., i // j == j), increment factor_count by 1 (since it's a perfect square and has a repeated factor).
+7:             Otherwise, increment factor_count by 2 (since factors come in pairs).
+8:     If factor_count is odd, increment count by 1.
+9: Return count.
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Odd_Squares(n, m):
+    count = 0
+    for i in range(n, m + 1):
+        factor_count = 0
+        for j in range(1, int(i**0.5) + 1):
+            if i % j == 0:
+                if i // j == j:
+                    factor_count += 1
+                else:
+                    factor_count += 2
+        if factor_count % 2 == 1:
+            count += 1
+    return count
+[END CODE]
+
+### Explanation
+
+The function `count_Odd_Squares` is designed to find the number of elements within a given range [n, m] that have an odd number of factors. The key insight here is that a number has an odd number of factors if and only if it is a perfect square. This is because factors of a number typically come in pairs, but for perfect squares, the square root is counted only once, making the total count of factors odd.
+
+1. **Initialization**: We start by initializing `count` to 0, which will keep track of the number of elements with an odd number of factors.
+2. **Loop through the range**: We loop through each number `i` in the range [n, m].
+3. **Count factors**: For each number `i`, we initialize `factor_count` to 0 and then loop through each number `j` from 1 to the square root of `i`.
+4. **Check divisibility**: If `i` is divisible by `j`, we check if `i` divided by `j` equals `j`. If it does, it means `i` is a perfect square, and we increment `factor_count` by 1. Otherwise, we increment `factor_count` by 2 because factors come in pairs.
+5. **Check if factor count is odd**: After counting the factors, we check if `factor_count` is odd. If it is, we increment `count` by 1.
+6. **Return the result**: Finally, we return `count`, which is the number of elements with an odd number of factors in the given range.
+
+This approach ensures that we correctly count the number of perfect squares in the range, which are the only numbers with an odd number of factors.

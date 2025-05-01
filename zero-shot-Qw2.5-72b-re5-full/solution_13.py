@@ -1,0 +1,5 @@
+def count_common(words): 
+    from collections import Counter
+    word_counts = Counter(words)
+    most_common_words = word_counts.most_common()
+    return most_common_words

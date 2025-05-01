@@ -1,0 +1,15 @@
+Input: num: an integer number
+Output: True or False
+
+1: Initialize rev_num to 0
+2: While num is greater than 0:
+3:     Set rev_num to (rev_num * 10 + num % 10)
+4:     Set num to num // 10
+5: Return rev_num
+
+6: Define a function check(n):
+7:     Call the rev function with n as the argument to get rev_num
+8:     If 2 * rev_num is equal to n + 1:
+9:         Return True
+10:    Else:
+11:        Return False

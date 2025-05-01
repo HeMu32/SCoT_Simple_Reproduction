@@ -1,0 +1,10 @@
+[BEGIN]
+Input: arr: a list of integers, n: the number of elements in arr
+Output: The maximum absolute difference between any two elements in arr
+
+1: Initialize minEle and maxEle with the first element of arr
+2: Loop through the array starting from the second element to the nth element
+3:     Update minEle to be the minimum of minEle and the current element
+4:     Update maxEle to be the maximum of maxEle and the current element
+5: After the loop, return the difference between maxEle and minEle
+[END]

@@ -1,0 +1,5 @@
+Input: base1, base2, height: numerical values representing the lengths of the two bases and the height of the trapezium.
+Output: median: the median of the trapezium.
+
+1: Calculate the median of the trapezium using the formula: median = 0.5 * (base1 + base2)
+2: Return the calculated median

@@ -1,0 +1,8 @@
+Input: n: an integer
+Output: True if n can be represented by the product of two squares, False otherwise
+1: for each integer i from 2 to n inclusive:
+2:     if i squared is less than n + 1:
+3:         for each integer j from 2 to n inclusive:
+4:             if the product of i squared and j squared equals n:
+5:                 return True
+6: return False

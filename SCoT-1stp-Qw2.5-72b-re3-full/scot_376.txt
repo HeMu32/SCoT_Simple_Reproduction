@@ -1,0 +1,17 @@
+Input: test_tup: a tuple of elements
+Output: res: a tuple with elements that occur more than once replaced by a custom value (e.g., 'custom_value')
+
+1: Initialize an empty list res
+2: Initialize an empty dictionary count_dict to keep track of the count of each element
+3: For each element in test_tup:
+4:     If the element is not in count_dict:
+5:         Add the element to count_dict with a count of 1
+6:     Else:
+7:         Increment the count of the element in count_dict by 1
+8: For each element in test_tup:
+9:     If the count of the element in count_dict is 1:
+10:        Append the element to res
+11:    Else:
+12:        Append 'custom_value' to res
+13: Convert res to a tuple
+14: Return res

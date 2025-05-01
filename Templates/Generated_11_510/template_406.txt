@@ -1,0 +1,12 @@
+Input: x: an integer number
+Output: "Odd Parity" or "Even Parity"
+
+1: y = x ^ (x >> 1)
+2: y = y ^ (y >> 2)
+3: y = y ^ (y >> 4)
+4: y = y ^ (y >> 8)
+5: y = y ^ (y >> 16)
+6: if (y & 1) is true:
+7:     return "Odd Parity"
+8: else:
+9:     return "Even Parity"

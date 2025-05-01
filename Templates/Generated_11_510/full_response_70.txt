@@ -1,0 +1,15 @@
+[BEGIN]
+Input: Input: a list of tuples, k: an integer representing the expected length of each tuple
+Output: A string indicating whether all tuples have the same length or not
+
+1: Initialize a flag variable to 1
+2: Loop through each tuple in the Input list
+3:     If the length of the current tuple is not equal to k:
+4:         Set the flag to 0
+5:         Break the loop
+6: Return the flag value
+7: If the flag is 1:
+8:     Return "All tuples have same length"
+9: Else:
+10:    Return "All tuples do not have same length"
+[END]

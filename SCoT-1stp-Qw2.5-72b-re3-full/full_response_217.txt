@@ -1,0 +1,38 @@
+[BEGIN PROCESS]
+Input: str: a string
+Output: The first repeated character in the string, or None if there is no repeated character
+
+1: Initialize an empty set to keep track of seen characters
+2: Loop through each character in the string:
+3:     If the character is already in the set:
+4:         Return the character as it is the first repeated character
+5:     Else:
+6:         Add the character to the set
+7: If the loop completes without finding a repeated character, return None
+[END PROCESS]
+
+[BEGIN CODE]
+def first_Repeated_Char(str):
+    seen = set()
+    for char in str:
+        if char in seen:
+            return char
+        seen.add(char)
+    return None
+[END CODE]
+
+### Explanation
+
+The function `first_Repeated_Char` is designed to find the first repeated character in a given string. Here's a step-by-step breakdown of how the function works:
+
+1. **Initialization**: An empty set `seen` is created to keep track of characters that have been encountered as we iterate through the string.
+
+2. **Iteration**: The function iterates through each character in the string using a for loop.
+
+3. **Check for Repeated Character**:
+   - If the current character is already in the `seen` set, it means this character has been encountered before, and it is the first repeated character. The function returns this character.
+   - If the current character is not in the `seen` set, it is added to the set to mark it as seen.
+
+4. **No Repeated Character**: If the loop completes without finding any repeated characters, the function returns `None`.
+
+This approach ensures that the function efficiently finds the first repeated character by leveraging the properties of a set, which provides average O(1) time complexity for lookups and insertions.

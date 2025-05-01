@@ -1,0 +1,4 @@
+Input: l: length of the rectangle, b: breadth of the rectangle  
+Output: area: the area of the rectangle  
+1: Calculate the area by multiplying l and b  
+2: Return the area

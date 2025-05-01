@@ -1,0 +1,6 @@
+Input: list1: a list of tuples, n: an integer representing the index of the element to extract from each tuple
+Output: result: a list containing the nth element from each tuple in list1
+1: Initialize an empty list called result
+2: For each tuple x in list1:
+3:     Append the nth element of x to result
+4: Return result

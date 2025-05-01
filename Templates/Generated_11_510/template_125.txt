@@ -1,0 +1,14 @@
+Input: string: a binary string, n: length of the string
+Output: max_diff: the maximum difference between the number of 0s and number of 1s in any sub-string of the given binary string
+
+1: Initialize current_sum to 0
+2: Initialize max_sum to 0
+3: for each character in the string from index 0 to n-1 do
+4:     if the character is '0' then
+5:         increment current_sum by 1
+6:     else
+7:         decrement current_sum by 1
+8:     if current_sum is less than 0 then
+9:         set current_sum to 0
+10:    update max_sum to be the maximum of current_sum and max_sum
+11: return max_sum if max_sum is greater than 0, otherwise return 0

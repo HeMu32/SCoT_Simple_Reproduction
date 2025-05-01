@@ -1,0 +1,10 @@
+Input: arr: a list of integers, n: the number of elements in arr
+Output: sum: the sum of absolute differences in all pairs of the given array
+
+1: Initialize `sum` to 0
+2: Sort the array `arr` to make the calculation of absolute differences easier
+3: Loop through each element `i` in the range from 0 to n-1
+4:     For each element `j` in the range from i+1 to n
+5:         Calculate the absolute difference between `arr[j]` and `arr[i]`
+6:         Add the absolute difference to `sum`
+7: Return `sum`

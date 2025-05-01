@@ -1,0 +1,11 @@
+Input: string: a binary string (consisting of 0s and 1s), n: the length of the string
+Output: max_diff: the maximum difference between the number of 0s and the number of 1s in any sub-string of the given binary string
+
+1: Initialize max_diff to 0
+2: Initialize a variable count to 0, which will keep track of the current difference between the number of 0s and 1s
+3: Loop through each character in the string:
+4:     If the character is '0', increment count by 1
+5:     If the character is '1', decrement count by 1
+6:     If count is greater than max_diff, update max_diff to count
+7:     If count is less than 0, reset count to 0 (since a negative count means more 1s than 0s, and we are looking for the maximum difference of 0s over 1s)
+8: Return max_diff

@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: nums: a tuple of positive integers
+Output: an integer formed by concatenating the integers in the tuple
+
+1: Initialize an empty string `result_str` to store the concatenated string representation of the integers.
+2: Loop through each integer in the tuple `nums`.
+3: Convert the current integer to a string and concatenate it to `result_str`.
+4: After the loop, convert `result_str` to an integer.
+5: Return the resulting integer.
+[END PROCESS]
+
+[BEGIN CODE]
+def tuple_to_int(nums):
+    result_str = ''
+    for num in nums:
+        result_str += str(num)
+    return int(result_str)
+[END CODE]
+
+Explanation:
+- The function `tuple_to_int` takes a tuple of positive integers as input.
+- It initializes an empty string `result_str` to accumulate the string representations of the integers.
+- It iterates over each integer in the tuple, converts it to a string, and appends it to `result_str`.
+- After the loop, `result_str` is converted back to an integer.
+- The resulting integer, which is the concatenation of all the integers in the tuple, is returned by the function.

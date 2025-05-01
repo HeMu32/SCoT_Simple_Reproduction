@@ -1,0 +1,9 @@
+Input: alist: a list where each element is a sublist, and each sublist contains a count followed by a value (e.g., [2, 'a'] means 'a' appears twice)
+Output: decoded_list: a list where each value from the input list is repeated according to its count
+
+1: Initialize an empty list `decoded_list` to store the decoded elements.
+2: For each sublist in `alist`:
+3:     Extract the count and the value from the sublist.
+4:     For the number of times specified by the count:
+5:         Append the value to `decoded_list`.
+6: Return `decoded_list`.

@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: start, end: two integers representing the start and end of the range (inclusive)
+Output: count: the number of hexadecimal numbers within the given range
+
+1: Initialize a count variable to 0
+2: For each number in the range from start to end (inclusive):
+3:     Convert the number to a hexadecimal string
+4:     If the hexadecimal string contains any of the characters 'A', 'B', 'C', 'D', 'E', 'F':
+5:         Increment the count variable
+6: Return the count variable
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Hexadecimal(start, end):
+    count = 0
+    for num in range(start, end + 1):
+        hex_str = hex(num)[2:]  # Convert number to hexadecimal and remove the '0x' prefix
+        if any(char in hex_str.upper() for char in 'ABCDEF'):
+            count += 1
+    return count
+[END CODE]
+
+### Explanation:
+- **Input Parameters**: The function `count_Hexadecimal` takes two parameters, `start` and `end`, which define the inclusive range of numbers to check.
+- **Hexadecimal Conversion**: For each number in the range, the function converts the number to a hexadecimal string using the `hex()` function. The `hex()` function returns a string prefixed with '0x', so we slice the string from the 2nd index to remove this prefix.
+- **Character Check**: The function checks if the hexadecimal string contains any of the characters 'A', 'B', 'C', 'D', 'E', 'F'. This is done using a generator expression inside the `any()` function.
+- **Count Increment**: If the hexadecimal string contains any of these characters, the count is incremented.
+- **Return Value**: Finally, the function returns the count of numbers that have at least one hexadecimal character in their representation.
+
+This approach ensures that we accurately count the number of hexadecimal numbers within the specified range.

@@ -1,0 +1,7 @@
+Input: nums: a list of numbers
+Output: sum: the sum of the negative numbers in the list
+
+1: Use the `filter` function with a lambda to filter out the negative numbers from the list `nums`.
+2: Convert the filtered result into a list of negative numbers.
+3: Use the `sum` function to calculate the sum of the negative numbers.
+4: Return the sum.

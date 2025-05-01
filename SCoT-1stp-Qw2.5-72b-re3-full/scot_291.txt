@@ -1,0 +1,13 @@
+Input: n: an integer representing the number of fence posts, k: an integer representing the number of colors available
+Output: an integer representing the number of ways to paint the fence posts with the given constraints
+
+1: If n is 0, return 0 (no posts to paint)
+2: If n is 1, return k (each post can be painted in k ways)
+3: If n is 2, return k * k (each post can be painted in k ways, and the second post can be painted in k ways regardless of the first post's color)
+4: Initialize two variables, same and diff, to store the number of ways to paint the fence with the last two posts the same color and different colors, respectively
+5: Set same to k (the first post can be painted in k ways, and the second post must be the same color)
+6: Set diff to k * (k - 1) (the first post can be painted in k ways, and the second post can be painted in k - 1 ways, ensuring the colors are different)
+7: For each post from 3 to n:
+8:     Calculate the new value for diff as (same + diff) * (k - 1) (the current post can be painted in k - 1 ways, and the previous post can be either the same or different)
+9:     Calculate the new value for same as diff (the current post must be the same color as the previous post, which can only happen if the previous post was different from the one before it)
+10: Return the sum of same and diff (the total number of ways to paint the fence)

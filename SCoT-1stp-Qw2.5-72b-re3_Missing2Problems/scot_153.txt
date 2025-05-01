@@ -1,0 +1,5 @@
+Input: a, b, c: coefficients of the quadratic equation ax^2 + bx + c
+Output: A tuple (x, y) representing the coordinates of the vertex of the parabola
+1: Calculate the x-coordinate of the vertex using the formula x = -b / (2 * a)
+2: Calculate the y-coordinate of the vertex by substituting x into the quadratic equation y = ax^2 + bx + c
+3: Return the vertex as a tuple (x, y)

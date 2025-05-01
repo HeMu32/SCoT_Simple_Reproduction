@@ -1,0 +1,6 @@
+Input: test_tup: a tuple that may contain duplicate elements
+Output: res: a tuple with duplicates removed
+
+1: Convert the tuple to a set to remove duplicates, as sets do not allow duplicate elements.
+2: Convert the set back to a tuple to match the required output format.
+3: Return the resulting tuple.

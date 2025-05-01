@@ -1,0 +1,12 @@
+[BEGIN CODE]
+```python
+def remove_Occ(s, ch):
+    if s.count(ch) < 2:
+        return s
+    
+    first_occ = s.find(ch)
+    last_occ = s.rfind(ch)
+    
+    return s[:first_occ] + s[first_occ + 1:last_occ] + s[last_occ + 1:]
+```
+[END CODE]

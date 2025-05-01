@@ -1,0 +1,8 @@
+Input: n, k: integers representing the total number of items and the number of items to choose, respectively
+Output: binomial_coeff: the binomial coefficient, which is the number of ways to choose k items from n items without regard to the order
+
+1: If k is 0 or k is equal to n, return 1 because there is exactly one way to choose no items or all items.
+2: Initialize a variable binomial_coeff to 1 to store the binomial coefficient.
+3: For i from 1 to k:
+4:     Multiply binomial_coeff by (n - i + 1) and divide by i.
+5: Return binomial_coeff.

@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: lst: a list containing boolean values (True or False)
+Output: count: the number of True values in the list
+
+1: Initialize a variable count to 0 to keep track of the number of True values
+2: Loop through each element in the list lst
+3:     If the current element is True
+4:         Increment the count by 1
+5: After the loop, return the count
+[END PROCESS]
+
+[BEGIN CODE]
+def count(lst):
+    count = 0
+    for element in lst:
+        if element:
+            count += 1
+    return count
+[END CODE]
+
+Explanation:
+The function `count` takes a list `lst` as input, which is expected to contain boolean values (True or False). The goal is to count how many True values are in the list. The process starts by initializing a counter `count` to 0. The function then iterates over each element in the list. If an element is True, the counter is incremented by 1. After the loop completes, the function returns the total count of True values. This approach ensures that all elements in the list are checked, and the count of True values is accurately determined.

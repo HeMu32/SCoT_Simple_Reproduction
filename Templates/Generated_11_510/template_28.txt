@@ -1,0 +1,7 @@
+Input: n: integer, k: integer
+Output: binomial coefficient of n and k
+1: if k is greater than n:
+2:     return 0
+3: if k is 0 or k is equal to n:
+4:     return 1
+5: return the sum of binomial_Coeff(n-1, k-1) and binomial_Coeff(n-1, k)

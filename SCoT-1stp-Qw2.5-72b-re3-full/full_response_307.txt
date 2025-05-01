@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: tuplex: a tuple, m: an integer representing the start index, n: an integer representing the end index
+Output: A new tuple that is a slice of the original tuple from index m to n (exclusive)
+1: Check if m and n are within the bounds of the tuple length
+2: If m and n are valid:
+3:     Slice the tuple from index m to n
+4:     Return the sliced tuple
+5: If m or n are out of bounds:
+6:     Return an error message or an empty tuple
+[END PROCESS]
+
+[BEGIN CODE]
+def colon_tuplex(tuplex, m, n):
+    # Check if m and n are within the bounds of the tuple length
+    if m < 0 or n > len(tuplex) or m >= n:
+        return "Error: Index out of bounds or invalid range"
+    
+    # Slice the tuple from index m to n
+    sliced_tuple = tuplex[m:n]
+    
+    # Return the sliced tuple
+    return sliced_tuple
+[END CODE]
+
+### Explanation:
+The function `colon_tuplex` takes three parameters: `tuplex` (the original tuple), `m` (the start index), and `n` (the end index). The function returns a new tuple that is a slice of the original tuple from index `m` to `n` (exclusive).
+
+1. **Input Validation**: The function first checks if the indices `m` and `n` are within the valid range. Specifically, it ensures that `m` is not negative, `n` does not exceed the length of the tuple, and `m` is less than `n`. If any of these conditions are not met, the function returns an error message.
+
+2. **Slicing the Tuple**: If the indices are valid, the function slices the tuple using Python's slicing syntax `tuplex[m:n]`, which creates a new tuple containing elements from index `m` to `n-1`.
+
+3. **Return the Result**: The function then returns the sliced tuple.
+
+This approach ensures that the function handles invalid input gracefully and provides the correct output when the input is valid.

@@ -1,0 +1,68 @@
+To solve this problem, we need to understand the nature of the infinite sequence and how the given number fits into it. The infinite sequence is not explicitly defined in the problem statement, so we need to infer it from the parameters provided: `a`, `b`, and `c`.
+
+Given:
+- `a`: The starting number of the sequence.
+- `b`: The step or increment between consecutive numbers in the sequence.
+- `c`: The number we need to check if it is present in the sequence.
+
+The sequence can be represented as:
+\[ a, a + b, a + 2b, a + 3b, \ldots \]
+
+To determine if `c` is in this sequence, we need to check if there exists an integer `k` such that:
+\[ c = a + k \cdot b \]
+
+Rearranging the equation, we get:
+\[ k = \frac{c - a}{b} \]
+
+For `c` to be in the sequence, `k` must be a non-negative integer. Therefore, we need to check:
+1. If \( c - a \) is divisible by `b`.
+2. If the result of the division is a non-negative integer.
+
+Let's write the solving process and the code implementation based on this understanding.
+
+[BEGIN PROCESS]
+Input: a: an integer (starting number of the sequence)
+       b: an integer (step or increment between consecutive numbers)
+       c: an integer (number to check if it is in the sequence)
+Output: A boolean value indicating whether `c` is in the sequence
+
+1: Calculate the difference `diff` between `c` and `a`
+2: Check if `b` is zero:
+   2.1: If `b` is zero, return `True` if `a` equals `c`, otherwise return `False`
+3: Check if `diff` is divisible by `b`:
+   3.1: If `diff` is divisible by `b`, calculate `k` as `diff // b`
+   3.2: Check if `k` is non-negative:
+         3.2.1: If `k` is non-negative, return `True`
+         3.2.2: If `k` is negative, return `False`
+4: If `diff` is not divisible by `b`, return `False`
+[END PROCESS]
+
+[BEGIN CODE]
+def does_Contain_B(a, b, c):
+    # Calculate the difference between c and a
+    diff = c - a
+    
+    # Check if b is zero
+    if b == 0:
+        return a == c
+    
+    # Check if diff is divisible by b
+    if diff % b == 0:
+        # Calculate k
+        k = diff // b
+        # Check if k is non-negative
+        if k >= 0:
+            return True
+        else:
+            return False
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+- **Step 1**: We calculate the difference `diff` between `c` and `a`. This difference represents how far `c` is from the starting point `a` in the sequence.
+- **Step 2**: We check if `b` is zero. If `b` is zero, the sequence is constant and only contains the number `a`. Therefore, `c` is in the sequence if and only if `a` equals `c`.
+- **Step 3**: We check if `diff` is divisible by `b`. If it is, we calculate `k` as the integer division of `diff` by `b`. We then check if `k` is non-negative. If `k` is non-negative, `c` is in the sequence. If `k` is negative, `c` is not in the sequence.
+- **Step 4**: If `diff` is not divisible by `b`, `c` cannot be in the sequence, and we return `False`.
+
+This approach ensures that we correctly determine whether `c` is in the infinite sequence defined by `a` and `b`.

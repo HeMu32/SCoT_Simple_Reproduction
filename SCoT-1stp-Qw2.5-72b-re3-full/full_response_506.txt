@@ -1,0 +1,35 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the total number of items, k: an integer representing the number of items to arrange
+Output: The permutation coefficient P(n, k)
+
+1: Initialize a variable result to 1, which will store the final permutation coefficient.
+2: Check if k is greater than n:
+3:     If true, return 0 as it's not possible to arrange more items than available.
+4: Initialize a loop to iterate from 0 to k-1:
+5:     In each iteration, multiply result by (n - i) to calculate the permutation coefficient incrementally.
+6: Return the result.
+[END PROCESS]
+
+[BEGIN CODE]
+def permutation_coefficient(n, k):
+    # Initialize the result to 1
+    result = 1
+    
+    # Check if k is greater than n
+    if k > n:
+        return 0
+    
+    # Calculate the permutation coefficient P(n, k)
+    for i in range(k):
+        result *= (n - i)
+    
+    # Return the result
+    return result
+[END CODE]
+
+### Explanation:
+The permutation coefficient \( P(n, k) \) is defined as the number of ways to arrange \( k \) items out of \( n \) items, where the order matters. The formula for the permutation coefficient is:
+
+\[ P(n, k) = \frac{n!}{(n-k)!} \]
+
+This can be computed iteratively by multiplying \( n \) by \( (n-1) \), \( (n-2) \), and so on, up to \( (n-k+1) \). The loop in the code performs this multiplication step by step, updating the `result` variable with the product at each iteration. If \( k \) is greater than \( n \), the function returns 0, as it is not possible to arrange more items than are available.

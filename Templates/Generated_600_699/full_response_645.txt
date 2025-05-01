@@ -1,0 +1,15 @@
+[BEGIN]
+Input: test_list: a list of tuples, K: an integer representing the index
+Output: res: the product of the Kth index elements in the tuples
+
+1: Initialize res to 1
+2: Create a list comprehension to:
+3:     For each sub-tuple in test_list:
+4:         Extract the element at index K
+5: Pass the list of extracted elements to get_product function
+6: In get_product function:
+7:     For each element in the passed list:
+8:         Multiply res by the element
+9: Return res from get_product function
+10: Return the result from get_product function as the final output
+[END]

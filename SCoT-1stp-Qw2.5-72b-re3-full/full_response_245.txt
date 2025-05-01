@@ -1,0 +1,57 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, n: the length of the array
+Output: max_sum: the maximum sum of a bi-tonic sub-sequence in the array
+
+1: Initialize two arrays, inc and dec, of length n with all elements set to 0. These arrays will store the maximum sum of increasing and decreasing sub-sequences ending at each index, respectively.
+2: Set the first element of inc to the first element of arr, as the maximum sum of an increasing sub-sequence ending at the first element is the element itself.
+3: Loop through the array from the second element to the last:
+4:     For each element, loop through all previous elements:
+5:         If the current element is greater than the previous element, update inc at the current index to be the maximum of its current value or the value of inc at the previous index plus the current element.
+6: Set the last element of dec to the last element of arr, as the maximum sum of a decreasing sub-sequence starting at the last element is the element itself.
+7: Loop through the array from the second last element to the first:
+8:     For each element, loop through all subsequent elements:
+9:         If the current element is greater than the subsequent element, update dec at the current index to be the maximum of its current value or the value of dec at the subsequent index plus the current element.
+10: Initialize a variable max_sum to 0 to store the maximum sum of a bi-tonic sub-sequence.
+11: Loop through the array:
+12:     For each index, calculate the sum of inc and dec at that index and update max_sum to be the maximum of its current value or the calculated sum.
+13: Return max_sum.
+[END PROCESS]
+
+[BEGIN CODE]
+def max_sum(arr, n):
+    # Initialize inc and dec arrays
+    inc = [0] * n
+    dec = [0] * n
+    
+    # Initialize the first element of inc
+    inc[0] = arr[0]
+    
+    # Fill inc array
+    for i in range(1, n):
+        for j in range(i):
+            if arr[i] > arr[j] and inc[i] < inc[j] + arr[i]:
+                inc[i] = inc[j] + arr[i]
+        if inc[i] == 0:
+            inc[i] = arr[i]
+    
+    # Initialize the last element of dec
+    dec[n - 1] = arr[n - 1]
+    
+    # Fill dec array
+    for i in range(n - 2, -1, -1):
+        for j in range(i + 1, n):
+            if arr[i] > arr[j] and dec[i] < dec[j] + arr[i]:
+                dec[i] = dec[j] + arr[i]
+        if dec[i] == 0:
+            dec[i] = arr[i]
+    
+    # Calculate the maximum sum of bi-tonic sub-sequence
+    max_sum = 0
+    for i in range(n):
+        max_sum = max(max_sum, inc[i] + dec[i] - arr[i])
+    
+    return max_sum
+[END CODE]
+
+### Explanation:
+The function `max_sum` finds the maximum sum of a bi-tonic sub-sequence in the given array. A bi-tonic sub-sequence is a sequence that first increases and then decreases. The approach involves two dynamic programming arrays, `inc` and `dec`, which store the maximum sums of increasing and decreasing sub-sequences ending and starting at each index, respectively. The final step involves combining these two arrays to find the maximum sum of a bi-tonic sub-sequence, ensuring that the element is not counted twice in the sum.

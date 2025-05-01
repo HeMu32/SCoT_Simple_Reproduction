@@ -1,0 +1,9 @@
+Input: A, B: two integers where 0 <= A <= B
+Output: last_digit: the last digit of the result when factorial of A divides factorial of B
+
+1: Define a function to calculate the factorial of a number, which will be used to calculate the factorials of A and B.
+2: Calculate the factorial of A and B using the defined factorial function.
+3: Compute the division of the factorial of B by the factorial of A.
+4: Convert the result of the division to a string to easily access the last character, which represents the last digit.
+5: Convert the last character of the string back to an integer.
+6: Return the last digit as the result.

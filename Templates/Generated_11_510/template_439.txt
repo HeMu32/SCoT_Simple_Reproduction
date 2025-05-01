@@ -1,0 +1,6 @@
+Input: L: a list of integers  
+Output: x: a single integer formed by concatenating the integers in L  
+1: Convert each integer in L to a string  
+2: Concatenate all the string representations of the integers  
+3: Convert the concatenated string back to an integer  
+4: Return the resulting integer x

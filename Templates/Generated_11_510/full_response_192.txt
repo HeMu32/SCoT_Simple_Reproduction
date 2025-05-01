@@ -1,0 +1,12 @@
+[BEGIN]
+Input: str: a string  
+Output: True or False  
+1: Initialize flag_l to False  
+2: Initialize flag_n to False  
+3: for each character i in str:  
+4:     if i is a letter:  
+5:         set flag_l to True  
+6:     if i is a digit:  
+7:         set flag_n to True  
+8: return the logical AND of flag_l and flag_n  
+[END]

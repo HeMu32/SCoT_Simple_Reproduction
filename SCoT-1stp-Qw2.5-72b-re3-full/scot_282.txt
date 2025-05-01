@@ -1,0 +1,6 @@
+Input: nums1, nums2: two lists of integers
+Output: A list of integers where each element is the result of subtracting the corresponding element in nums2 from the corresponding element in nums1.
+1: Use the `map` function to apply a lambda function to each pair of elements from nums1 and nums2.
+2: The lambda function should take two arguments and return the result of subtracting the second argument from the first.
+3: Convert the result of the map function to a list.
+4: Return the resulting list.

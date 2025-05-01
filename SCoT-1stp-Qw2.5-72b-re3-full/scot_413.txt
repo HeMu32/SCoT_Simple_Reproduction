@@ -1,0 +1,8 @@
+Input: list1: a list of tuples, n: an integer representing the index of the element to extract from each tuple
+Output: A list containing the nth element from each tuple in the given list
+
+1: Initialize an empty list called result to store the nth elements.
+2: Loop through each tuple in list1.
+3:     For each tuple, check if the tuple has at least n+1 elements to avoid index out-of-range errors.
+4:     If the tuple has enough elements, append the nth element to result.
+5: After the loop, return the result list.

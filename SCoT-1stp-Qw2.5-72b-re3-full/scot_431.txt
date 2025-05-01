@@ -1,0 +1,8 @@
+Input: list1, list2: two lists of elements
+Output: A boolean value indicating whether the two lists have at least one common element
+
+1: Convert list1 to a set for efficient look-up operations.
+2: Iterate through each element in list2.
+3: For each element in list2, check if it exists in the set created from list1.
+4: If a common element is found, return True.
+5: If the loop completes without finding any common elements, return False.

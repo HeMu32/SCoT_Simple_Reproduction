@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: l: a list of integers
+Output: True if the list contains consecutive numbers, False otherwise
+
+1: If the list is empty or has only one element, return False since there are no consecutive numbers to compare.
+2: Sort the list to ensure that all potential consecutive numbers are adjacent.
+3: Loop through the sorted list from the first element to the second-to-last element.
+4:     If the current element plus one is not equal to the next element, return False.
+5: If the loop completes without returning False, return True.
+[END PROCESS]
+
+[BEGIN CODE]
+def check_Consecutive(l):
+    if len(l) <= 1:
+        return False
+    l.sort()
+    for i in range(len(l) - 1):
+        if l[i] + 1 != l[i + 1]:
+            return False
+    return True
+[END CODE]
+
+### Explanation:
+- **Step 1:** The function first checks if the list is empty or contains only one element. In either case, it returns `False` because there are no consecutive numbers to compare.
+- **Step 2:** The list is sorted to ensure that any consecutive numbers will be adjacent to each other.
+- **Step 3:** A loop iterates through the sorted list from the first element to the second-to-last element.
+- **Step 4:** Inside the loop, the function checks if the current element plus one is equal to the next element. If this condition is not met, it means the numbers are not consecutive, and the function returns `False`.
+- **Step 5:** If the loop completes without finding any non-consecutive numbers, the function returns `True`, indicating that the list contains consecutive numbers.

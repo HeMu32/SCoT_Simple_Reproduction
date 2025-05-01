@@ -1,0 +1,9 @@
+Input: n: an integer
+Output: count: the number of digits in the integer n
+
+1: Initialize count to 0
+2: If n is 0, return 1 (since 0 has one digit)
+3: While n is not 0:
+4:     Increment count by 1
+5:     Set n to the integer division of n by 10 (this removes the last digit of n)
+6: Return count

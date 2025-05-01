@@ -1,0 +1,13 @@
+Input: m, n, o: three integers representing the dimensions of the 3D array
+Output: A 3D array where each element is a string '*'
+
+1: Initialize an empty list `result` to hold the 3D array.
+2: For each i in the range of m:
+3:     Initialize an empty list `layer` to hold the 2D layer.
+4:     For each j in the range of n:
+5:         Initialize an empty list `row` to hold the 1D row.
+6:         For each k in the range of o:
+7:             Append '*' to `row`.
+8:         Append `row` to `layer`.
+9:     Append `layer` to `result`.
+10: Return `result` as the 3D array.

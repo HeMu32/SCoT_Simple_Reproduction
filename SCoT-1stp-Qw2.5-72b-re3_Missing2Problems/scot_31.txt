@@ -1,0 +1,9 @@
+Input: nums: a list of lists of sorted and distinct integers, k: an integer representing the number of top frequent integers to return
+Output: A list of the top k integers that occur most frequently in the given lists
+
+1: Initialize an empty dictionary `freq` to store the frequency of each integer.
+2: Loop through each list in `nums`:
+3:     For each integer in the list, increment its count in `freq`.
+4: Convert the dictionary `freq` into a list of tuples, where each tuple is (integer, frequency).
+5: Use a heap queue (priority queue) to find the top k elements based on their frequency.
+6: Extract the integers from the top k elements and return them as a list.

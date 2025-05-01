@@ -1,0 +1,10 @@
+Input: test_list: a list containing various elements, including tuples
+       K: an integer representing the length of tuples to be removed
+Output: A new list with all tuples of length K removed
+
+1: Initialize an empty list called `result` to store the elements that are not tuples of length K.
+2: Iterate through each element in `test_list`.
+3: For each element:
+   4: Check if the element is a tuple and its length is equal to K.
+   5: If the element is not a tuple of length K, add it to the `result` list.
+6: After the loop, return the `result` list.

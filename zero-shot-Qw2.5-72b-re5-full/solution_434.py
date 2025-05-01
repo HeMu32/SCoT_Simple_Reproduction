@@ -1,0 +1,8 @@
+import re
+
+def text_match_one(text): 
+    """
+    Write a function that matches a string that has an a followed by one or more b's. 
+    """
+    pattern = 'ab+'
+    return bool(re.search(pattern, text))

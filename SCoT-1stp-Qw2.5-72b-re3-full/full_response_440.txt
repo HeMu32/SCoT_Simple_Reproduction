@@ -1,0 +1,47 @@
+[BEGIN PROCESS]
+Input: text: a string representing a sentence
+Output: adverbs: a list of tuples, each containing an adverb and its starting position in the text
+
+1: Initialize an empty list to store the adverbs and their positions
+2: Split the text into words
+3: Loop through each word in the text
+4:     If the word ends with "ly" (a common adverb ending in English):
+5:         Record the word and its position in the text
+6:         Append the adverb and its position to the list
+7: Return the list of adverbs and their positions
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def find_adverb_position(text):
+    # Initialize an empty list to store the adverbs and their positions
+    adverbs = []
+    
+    # Split the text into words
+    words = text.split()
+    
+    # Loop through each word in the text
+    for i, word in enumerate(words):
+        # Check if the word ends with "ly"
+        if word.endswith('ly'):
+            # Record the word and its position in the text
+            start_position = text.find(word, sum(len(w) + 1 for w in words[:i]))
+            adverbs.append((word, start_position))
+    
+    # Return the list of adverbs and their positions
+    return adverbs
+[END CODE]
+
+### Explanation:
+The function `find_adverb_position` is designed to find all adverbs and their positions in a given sentence. Adverbs are typically identified by their ending "ly" in English. Here's a step-by-step breakdown of the function:
+
+1. **Initialization**: An empty list `adverbs` is initialized to store tuples of adverbs and their starting positions.
+2. **Splitting the Text**: The input text is split into a list of words using the `split()` method.
+3. **Looping Through Words**: A loop iterates over each word in the list, along with its index.
+4. **Checking for Adverbs**: For each word, the function checks if it ends with "ly" using the `endswith()` method.
+5. **Finding Position**: If the word is an adverb, the function calculates its starting position in the original text. This is done by summing the lengths of all preceding words and adding one for each space.
+6. **Appending to List**: The adverb and its starting position are appended to the `adverbs` list as a tuple.
+7. **Returning the Result**: Finally, the function returns the list of adverbs and their positions.
+
+This approach ensures that all adverbs are correctly identified and their positions are accurately recorded.

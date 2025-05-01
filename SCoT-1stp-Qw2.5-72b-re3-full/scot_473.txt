@@ -1,0 +1,9 @@
+Input: test_list1, test_list2: two lists of tuples
+Output: intersection: a list of tuples that are present in both test_list1 and test_list2, irrespective of the order of elements in the tuples
+
+1: Initialize an empty list `intersection` to store the result.
+2: For each tuple `t1` in `test_list1`:
+3:     For each tuple `t2` in `test_list2`:
+4:         If the sorted version of `t1` is equal to the sorted version of `t2`:
+5:             Add `t1` to `intersection` and break the inner loop to avoid duplicate entries.
+6: Return `intersection`.

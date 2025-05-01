@@ -1,0 +1,13 @@
+Input: n: an integer
+Output: the next bigger number by rearranging the digits of n, or False if not possible
+
+1: Convert the integer n to a list of its digits and store it in nums
+2: Iterate over the digits in nums from the second last digit to the first digit (i from len(nums)-2 to 0):
+3:     If the current digit nums[i] is less than the next digit nums[i+1]:
+4:         Extract the sublist z from nums starting from index i to the end
+5:         Find the smallest digit y in z that is greater than z[0] (nums[i])
+6:         Remove y from z
+7:         Sort the remaining digits in z in ascending order
+8:         Replace the sublist nums[i:] with y followed by the sorted digits in z
+9:         Convert the list nums back to an integer and return it
+10: If no such digit is found, return False

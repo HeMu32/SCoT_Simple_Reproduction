@@ -1,0 +1,4 @@
+[BEGIN CODE]
+def min_of_three(a, b, c):
+    return min(a, b, c)
+[END CODE]

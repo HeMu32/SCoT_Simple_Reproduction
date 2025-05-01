@@ -1,0 +1,28 @@
+[BEGIN PROCESS]
+Input: dict: a dictionary with integer values, n: an integer
+Output: filtered_dict: a dictionary containing only the key-value pairs from the original dictionary where the value is greater than or equal to n
+
+1: Initialize an empty dictionary called filtered_dict
+2: For each key-value pair (key, value) in dict:
+3:     If value is greater than or equal to n:
+4:         Add the key-value pair to filtered_dict
+5: Return filtered_dict
+[END PROCESS]
+
+[BEGIN CODE]
+def dict_filter(dict, n):
+    filtered_dict = {key: value for key, value in dict.items() if value >= n}
+    return filtered_dict
+[END CODE]
+
+Explanation:
+The function `dict_filter` takes two parameters: `dict`, which is the dictionary to be filtered, and `n`, which is the threshold value. The function returns a new dictionary, `filtered_dict`, which contains only the key-value pairs from the original dictionary where the value is greater than or equal to `n`.
+
+The process involves:
+- Initializing an empty dictionary `filtered_dict`.
+- Iterating over each key-value pair in the input dictionary `dict`.
+- Using a conditional statement to check if the value is greater than or equal to `n`.
+- If the condition is true, the key-value pair is added to `filtered_dict`.
+- Finally, the function returns `filtered_dict`.
+
+This approach uses a dictionary comprehension for a concise and efficient implementation.

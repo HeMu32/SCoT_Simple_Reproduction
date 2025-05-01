@@ -1,0 +1,12 @@
+Input: arr: a list of integers, n: the length of the array
+Output: res: the maximum product of an increasing subsequence of the array
+
+1: Initialize a list dp of the same length as arr, where each element is set to the corresponding element in arr. This list will store the maximum product of an increasing subsequence ending at each index.
+2: Initialize a variable res to store the maximum product found, initially set to the first element of arr.
+3: Use a nested loop to iterate over the array:
+4:     For each element arr[j] (where j is the outer loop index):
+5:         For each element arr[i] (where i is the inner loop index and i < j):
+6:             If arr[j] is greater than arr[i] (indicating an increasing subsequence):
+7:                 Update dp[j] to be the maximum of dp[j] and dp[i] * arr[j].
+8:             Update res to be the maximum of res and dp[j].
+9: Return res as the maximum product of an increasing subsequence.

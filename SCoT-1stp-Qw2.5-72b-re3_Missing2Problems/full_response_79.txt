@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: s: a string representing a word
+Output: True if the length of the word is odd, False otherwise
+
+1: Calculate the length of the string s
+2: Check if the length is odd:
+3:     if the length modulo 2 is 1:
+4:         return True
+5:     else:
+6:         return False
+[END PROCESS]
+
+[BEGIN CODE]
+def word_len(s):
+    length = len(s)
+    if length % 2 == 1:
+        return True
+    else:
+        return False
+[END CODE]
+
+Explanation:
+The function `word_len(s)` is designed to determine whether the length of a given word (string `s`) is odd. The process involves calculating the length of the string using the `len()` function. The length is then checked to see if it is odd by using the modulo operator `%`. If the length modulo 2 equals 1, the length is odd, and the function returns `True`. Otherwise, it returns `False`. This approach ensures that the function correctly identifies the parity of the word's length.

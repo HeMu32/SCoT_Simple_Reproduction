@@ -1,0 +1,11 @@
+Input: nums: a list of integers
+Output: a list of integers where each element is the sum of the digits of the corresponding number in the input list
+
+1: Initialize an empty list to store the sum of digits for each number
+2: Loop through each number in the input list
+3:   Convert the number to a string to easily iterate over each digit
+4:   Initialize a variable to store the sum of digits for the current number
+5:   Loop through each character in the string representation of the number
+6:     Convert the character back to an integer and add it to the sum of digits
+7:   Append the sum of digits to the result list
+8: Return the result list

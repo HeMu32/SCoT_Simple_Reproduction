@@ -1,0 +1,56 @@
+[BEGIN PROCESS]
+Input: a, b, c: coefficients of the quadratic equation ax^2 + bx + c = 0
+Output: True if one root is twice the other, False otherwise
+
+1: Calculate the discriminant (D) using the formula D = b^2 - 4ac
+2: If D is less than 0, return False (no real roots)
+3: Calculate the roots using the quadratic formula: root1 = (-b + sqrt(D)) / (2a) and root2 = (-b - sqrt(D)) / (2a)
+4: Check if root1 is twice root2 or root2 is twice root1
+5: If either condition is true, return True; otherwise, return False
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def Check_Solution(a, b, c):
+    # Calculate the discriminant
+    D = b**2 - 4*a*c
+    
+    # Check if the discriminant is negative (no real roots)
+    if D < 0:
+        return False
+    
+    # Calculate the roots
+    root1 = (-b + math.sqrt(D)) / (2*a)
+    root2 = (-b - math.sqrt(D)) / (2*a)
+    
+    # Check if one root is twice the other
+    if root1 == 2 * root2 or root2 == 2 * root1:
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+The function `Check_Solution` is designed to determine whether one root of the quadratic equation \( ax^2 + bx + c = 0 \) is twice the other. Here's a step-by-step breakdown of the process:
+
+1. **Calculate the Discriminant**: The discriminant \( D \) is calculated using the formula \( D = b^2 - 4ac \). The discriminant helps determine the nature of the roots:
+   - If \( D < 0 \), the equation has no real roots.
+   - If \( D = 0 \), the equation has one real root (a repeated root).
+   - If \( D > 0 \), the equation has two distinct real roots.
+
+2. **Check for No Real Roots**: If the discriminant \( D \) is less than 0, the function returns `False` because there are no real roots to check.
+
+3. **Calculate the Roots**: If the discriminant is non-negative, the roots are calculated using the quadratic formula:
+   \[
+   \text{root1} = \frac{-b + \sqrt{D}}{2a}
+   \]
+   \[
+   \text{root2} = \frac{-b - \sqrt{D}}{2a}
+   \]
+
+4. **Check the Condition**: The function checks if one root is twice the other:
+   - If \( \text{root1} = 2 \times \text{root2} \) or \( \text{root2} = 2 \times \text{root1} \), the function returns `True`.
+   - Otherwise, it returns `False`.
+
+This approach ensures that the function correctly identifies whether one root is twice the other, based on the properties of quadratic equations.

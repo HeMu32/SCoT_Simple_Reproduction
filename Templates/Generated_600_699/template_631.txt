@@ -1,0 +1,5 @@
+Input: text: a string  
+Output: text: a string with whitespaces and underscores replaced  
+1: Replace all spaces in text with underscores  
+2: Replace all underscores in text with spaces  
+3: Return the modified text

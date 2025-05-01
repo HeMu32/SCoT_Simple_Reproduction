@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: nums: a list of lists containing elements
+Output: freq: a dictionary with elements as keys and their frequencies as values
+
+1: Import the Counter class from the collections module
+2: Initialize an empty list to hold all elements
+3: Loop through each sublist in nums
+4:     Extend the elements list with the current sublist
+5: After the loop, create a Counter object from the elements list
+6: Convert the Counter object to a dictionary
+7: Return the dictionary
+[END PROCESS]
+
+[BEGIN CODE]
+from collections import Counter
+
+def freq_element(nums):
+    elements = []
+    for sublist in nums:
+        elements.extend(sublist)
+    freq = dict(Counter(elements))
+    return freq
+[END CODE]
+
+Explanation:
+- The function `freq_element` takes a list of lists `nums` as input.
+- We import the `Counter` class from the `collections` module, which is a convenient way to count the frequency of elements in a list.
+- We initialize an empty list `elements` to store all the elements from the sublists.
+- We loop through each sublist in `nums` and use the `extend` method to add all elements from the sublist to the `elements` list. This method is used instead of `append` to avoid creating a list of lists.
+- After collecting all elements, we create a `Counter` object which automatically counts the frequency of each element in the `elements` list.
+- We convert the `Counter` object to a dictionary to match the required output format.
+- Finally, we return the dictionary `freq` which contains the elements as keys and their frequencies as values.

@@ -1,0 +1,10 @@
+[BEGIN]
+Input: num: an integer  
+Output: True if num is a prime number, False otherwise  
+1: if num is less than 1:  
+2:     return False  
+3: for each i in range from 2 to num // 2:  
+4:     if num is divisible by i:  
+5:         return False  
+6: return True  
+[END]

@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: str1: a string
+Output: total: the sum of ASCII values of all characters in the string
+
+1: Initialize total to 0
+2: for each character c in str1 do
+3:     Add the ASCII value of c to total
+4: return total
+[END PROCESS]
+
+[BEGIN CODE]
+def ascii_value_string(str1):
+    total = 0
+    for c in str1:
+        total += ord(c)
+    return total
+[END CODE]
+
+### Explanation:
+The function `ascii_value_string` is designed to compute the sum of the ASCII values of all characters in a given string `str1`. The process involves initializing a variable `total` to 0, which will store the cumulative sum of ASCII values. The function then iterates over each character in the string, converting each character to its corresponding ASCII value using the `ord()` function, and adds this value to `total`. Finally, the function returns the total sum of ASCII values. This approach ensures that the function correctly calculates the desired sum for any input string.

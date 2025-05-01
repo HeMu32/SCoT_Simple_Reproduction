@@ -1,0 +1,8 @@
+Input: nums: a list of integers
+Output: The first even number in the list, or None if no even number is found
+
+1: For each number num in nums:
+2:     If num is even (i.e., num % 2 == 0):
+3:         Return num
+4: If no even number is found after the loop:
+5:     Return None

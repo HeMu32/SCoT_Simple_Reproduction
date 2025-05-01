@@ -1,0 +1,10 @@
+Input: s: a string
+Output: count: the number of occurrences of the substring 'std' in the given string
+
+1: Initialize a variable count to 0 to keep track of the number of occurrences of 'std'.
+2: Use a loop to iterate through the string s, checking for the substring 'std'.
+3: For each position in the string:
+4:     If the substring starting at the current position is 'std':
+5:         Increment count by 1.
+6: Continue until the end of the string is reached.
+7: Return the count.

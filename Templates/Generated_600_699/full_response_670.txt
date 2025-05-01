@@ -1,0 +1,19 @@
+[BEGIN]
+Input: nums: a list of numbers  
+Output: True or False  
+1: 	if sorted(nums) is equal to nums:  
+2: 		return False  
+3: 	else:  
+4: 		return True  
+[END]  
+
+However, this procedure does not correctly reflect the requirement to check for a decreasing trend. The correct procedure should be:
+
+[BEGIN]
+Input: nums: a list of numbers  
+Output: True or False  
+1: 	if sorted(nums, reverse=True) is equal to nums:  
+2: 		return True  
+3: 	else:  
+4: 		return False  
+[END]

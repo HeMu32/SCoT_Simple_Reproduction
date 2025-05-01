@@ -1,0 +1,7 @@
+Input: n: an integer, l: an integer representing the left boundary of the range, r: an integer representing the right boundary of the range
+Output: A boolean value indicating whether all bits in the range [l, r] of the binary representation of n are unset (0).
+
+1: Generate a number mask with bits set in the range [l, r] and all other bits unset.
+2: Perform a bitwise AND operation between n and the mask.
+3: If the result of the AND operation is 0, it means all bits in the range [l, r] of n are unset.
+4: Return True if the result is 0, otherwise return False.

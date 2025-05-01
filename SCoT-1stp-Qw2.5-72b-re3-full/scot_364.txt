@@ -1,0 +1,12 @@
+Input: str: a binary string (string containing only '0's and '1's)
+Output: The minimum number of flips required to make the string alternate in characters.
+
+1: Initialize two counters, flip0 and flip1, to 0. These will count the number of flips needed if the string starts with '0' and '1' respectively.
+2: Loop through each character in the string:
+3:     If the index of the character is even:
+4:         If the character is '1', increment flip0 (since we expect '0' at even indices for a string starting with '0').
+5:         If the character is '0', increment flip1 (since we expect '1' at even indices for a string starting with '1').
+6:     If the index of the character is odd:
+7:         If the character is '0', increment flip0 (since we expect '1' at odd indices for a string starting with '0').
+8:         If the character is '1', increment flip1 (since we expect '0' at odd indices for a string starting with '1').
+9: Return the minimum of flip0 and flip1, as this will be the minimum number of flips required to make the string alternate.

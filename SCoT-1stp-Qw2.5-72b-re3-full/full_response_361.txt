@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: list1: a list of lists, which may contain empty lists
+Output: a list of lists with all empty lists removed
+
+1: Initialize an empty list called `result` to store non-empty lists
+2: Iterate through each sublist in `list1`
+3:     If the current sublist is not empty (i.e., its length is greater than 0)
+4:         Append the current sublist to `result`
+5: Return `result` as the final list with empty lists removed
+[END PROCESS]
+
+[BEGIN CODE]
+def remove_empty(list1):
+    result = []
+    for sublist in list1:
+        if len(sublist) > 0:
+            result.append(sublist)
+    return result
+[END CODE]
+
+### Explanation:
+The function `remove_empty` is designed to filter out empty lists from a given list of lists. The process involves iterating through each sublist in the input list and checking if it is non-empty. If a sublist is non-empty, it is appended to a new list called `result`. Finally, the `result` list, which contains only the non-empty sublists, is returned. This approach ensures that the function efficiently removes all empty lists while preserving the structure and order of the non-empty sublists.

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: xs: a list of numbers  
+Output: the smallest number in xs  
+1: if xs is not empty:  
+2:     return the minimum value in xs  
+3: else:  
+4:     return None  
+[END]

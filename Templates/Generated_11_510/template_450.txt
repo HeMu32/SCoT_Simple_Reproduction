@@ -1,0 +1,8 @@
+Input: str: a list of strings, l: an integer representing the desired length of strings
+Output: result: a list of strings from str that are exactly l characters long
+
+1: Initialize an empty list named result
+2: For each element e in str:
+3:     If the length of e is equal to l:
+4:         Add e to result
+5: Return result

@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, number: an integer
+Output: result: a boolean indicating whether the number is greater than all elements in the array
+
+1: Initialize a variable `result` to True (assuming initially that the number is greater than all elements)
+2: Iterate through each element in the array `arr`
+3:   If the current element is greater than or equal to the `number`:
+4:     Set `result` to False (the number is not greater than all elements)
+5:     Break the loop (no need to check further elements)
+6: Return the value of `result`
+[END PROCESS]
+
+[BEGIN CODE]
+def check_greater(arr, number):
+    result = True
+    for element in arr:
+        if element >= number:
+            result = False
+            break
+    return result
+[END CODE]
+
+### Explanation:
+The function `check_greater` takes two parameters: `arr`, which is a list of integers, and `number`, which is an integer to compare against the elements of the list. The function returns a boolean value indicating whether the `number` is greater than all elements in the list.
+
+1. **Initialization**: The variable `result` is initialized to `True`. This variable will be used to store the final result of the comparison.
+2. **Iteration**: The function iterates through each element in the list `arr`.
+3. **Comparison**: For each element, the function checks if the element is greater than or equal to the `number`. If it is, `result` is set to `False`, and the loop is broken to stop further unnecessary comparisons.
+4. **Return**: After the loop, the function returns the value of `result`.
+
+This approach ensures that the function efficiently determines if the `number` is greater than all elements in the list by stopping the comparison as soon as a counterexample is found.

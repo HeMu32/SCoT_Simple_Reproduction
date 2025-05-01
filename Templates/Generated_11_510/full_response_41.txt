@@ -1,0 +1,9 @@
+[BEGIN]
+Input: nums: a list of numbers  
+Output: even_nums: a list of even numbers from nums  
+1: Initialize even_nums as an empty list  
+2: For each number x in nums:  
+3:     If x modulo 2 equals 0:  
+4:         Add x to even_nums  
+5: Return even_nums  
+[END]

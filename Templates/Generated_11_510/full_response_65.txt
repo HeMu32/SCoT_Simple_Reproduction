@@ -1,0 +1,12 @@
+[BEGIN]
+Input: data_list: a list which may contain integers or other lists
+Output: total: the sum of all integers in the data_list, including those in nested lists
+1: Initialize total to 0
+2: for each element in data_list do
+3:     if the element is a list then
+4:         recursively call recursive_list_sum with the element
+5:         add the result to total
+6:     else if the element is an integer then
+7:         add the element to total
+8: return total
+[END]

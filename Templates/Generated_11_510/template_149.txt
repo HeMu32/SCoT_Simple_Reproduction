@@ -1,0 +1,13 @@
+Input: arr: a list of integers, n: the length of arr
+Output: result: the length of the longest subsequence where the difference between adjacent elements is one
+
+1: Initialize a list dp of length n with all elements set to 1. This list will store the length of the longest subsequence ending at each index.
+2: Loop through each element in arr using index i:
+3:     Loop through each element in arr up to index i using index j:
+4:         If the current element arr[i] is equal to arr[j] + 1 or arr[j] - 1:
+5:             Update dp[i] to be the maximum of its current value and dp[j] + 1.
+6: Initialize a variable result to 1. This variable will store the maximum length of the subsequence found.
+7: Loop through each element in dp using index i:
+8:     If the current element dp[i] is greater than result:
+9:         Update result to dp[i].
+10: Return result.

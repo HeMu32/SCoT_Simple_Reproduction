@@ -1,0 +1,7 @@
+Input: arr: a sorted array of integers where every element appears twice except for one.  
+Output: The element that appears only once in the array.  
+
+1: Initialize a variable XOR to 0.
+2: Loop through each element in the array arr:
+3:     XOR the current element with the XOR variable.
+4: Return the value of XOR after the loop completes.

@@ -1,0 +1,13 @@
+[BEGIN]
+Input: n: an integer, x: an integer, y: an integer
+Output: ans: the largest integer k such that k modulo x is y, or -1 if no such k exists
+
+1: Initialize ans to the smallest possible integer
+2: Loop through each integer k from 0 to n inclusive
+3:     If k modulo x equals y
+4:         Set ans to the maximum of ans and k
+5: After the loop, if ans is greater than or equal to 0 and less than or equal to n
+6:     Return ans
+7: Otherwise
+8:     Return -1
+[END]

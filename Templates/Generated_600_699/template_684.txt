@@ -1,0 +1,14 @@
+Input: str: a string, x: a character, n: the number of times the string is repeated
+Output: count: the number of occurrences of x in the repeated string
+
+1: Initialize count to 0
+2: Loop through each character in str:
+3:     If the current character equals x:
+4:         Increment count by 1
+5: Calculate the number of full repetitions of str in n as repititions = n // len(str)
+6: Multiply count by repititions to get the total count for full repetitions
+7: Calculate the remaining length of str to be considered as l = n % len(str)
+8: Loop through the first l characters of str:
+9:     If the current character equals x:
+10:        Increment count by 1
+11: Return count

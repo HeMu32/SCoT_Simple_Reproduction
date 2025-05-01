@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: a, b: real and imaginary parts of a complex number
+Output: angle: the angle (in radians) of the complex number
+
+1: Create a complex number using the real part 'a' and the imaginary part 'b'
+2: Calculate the angle of the complex number using the cmath module's phase function
+3: Return the angle
+[END PROCESS]
+
+[BEGIN CODE]
+import cmath
+
+def angle_complex(a, b):
+    # Create a complex number
+    complex_num = complex(a, b)
+    # Calculate the angle of the complex number
+    angle = cmath.phase(complex_num)
+    # Return the angle
+    return angle
+[END CODE]
+
+Explanation:
+- The function `angle_complex` takes two parameters, `a` and `b`, which represent the real and imaginary parts of a complex number, respectively.
+- A complex number is created using Python's built-in `complex` function, which takes two arguments: the real part and the imaginary part.
+- The angle (or argument) of the complex number is then calculated using the `cmath.phase` function, which returns the phase angle in radians.
+- Finally, the function returns the calculated angle. This angle represents the direction of the complex number in the complex plane, measured from the positive real axis.

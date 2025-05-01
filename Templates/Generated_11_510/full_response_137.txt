@@ -1,0 +1,12 @@
+[BEGIN]
+Input: nums: an array of integers  
+Output: ratio: the ratio of zeroes in nums  
+1: Initialize n to the length of nums  
+2: Initialize n1 to 0  
+3: for each element x in nums:  
+4:     if x is equal to 0:  
+5:         increment n1 by 1  
+6:     else:  
+7:         do nothing  
+8: return the ratio of n1 to n, rounded to 2 decimal places  
+[END]

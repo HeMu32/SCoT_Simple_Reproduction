@@ -1,0 +1,7 @@
+Input: n: an integer
+Output: highest_power: the highest power of 2 that is less than or equal to n
+
+1: Initialize a variable `highest_power` to 1 (since 2^0 = 1 is the smallest power of 2)
+2: While `highest_power * 2` is less than or equal to `n`:
+3:     Update `highest_power` to `highest_power * 2`
+4: Return `highest_power`

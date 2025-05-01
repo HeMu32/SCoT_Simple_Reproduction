@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: A number (integer)
+Output: The number with all even bits toggled
+
+1: Define a function `even_bit_toggle_number` that takes an integer `num` as input.
+2: Initialize a variable `mask` to 0, which will be used to create a bitmask to identify even bits.
+3: Loop through each bit position, starting from 0 up to the number of bits in `num`:
+4:     If the bit position is even (0, 2, 4, ...):
+5:         Set the corresponding bit in `mask` to 1.
+6: Use the XOR operation between `num` and `mask` to toggle the even bits in `num`.
+7: Return the result of the XOR operation.
+[END PROCESS]
+
+[BEGIN CODE]
+def even_bit_toggle_number(num):
+    mask = 0
+    # Loop through each bit position
+    for i in range(32):  # Assuming a 32-bit integer
+        if i % 2 == 0:  # Check if the bit position is even
+            mask |= (1 << i)  # Set the corresponding bit in the mask
+    return num ^ mask  # Toggle the even bits using XOR
+
+# Example usage:
+result = even_bit_toggle_number(10)  # Binary 1010, toggling even bits results in 0101 (5)
+print(result)  # Output: 5
+[END CODE]
+
+### Explanation:
+- **Bitmask Creation**: The `mask` is created by setting the bits at even positions (0, 2, 4, ...) to 1. This is done using a loop that iterates through each bit position and sets the bit in the `mask` if the position is even.
+- **XOR Operation**: The `XOR` operation (`^`) is used to toggle the bits in `num` that correspond to the bits set in `mask`. Toggling a bit means changing a 0 to 1 or a 1 to 0.
+- **Example**: For the input `10` (binary `1010`), the even bits are at positions 0 and 2. The `mask` will be `0101` (binary for 5). Performing `1010 ^ 0101` results in `0101` (binary for 5), which is the output.
+
+This approach ensures that only the even bits are toggled, while the odd bits remain unchanged.

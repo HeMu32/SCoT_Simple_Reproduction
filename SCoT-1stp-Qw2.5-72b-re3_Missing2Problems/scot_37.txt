@@ -1,0 +1,8 @@
+Input: mixed_list: a list containing both integers and strings
+Output: sorted_list: a list with all elements sorted, with integers first in ascending order, followed by strings in ascending order
+
+1: Separate the integers and strings into two different lists
+2: Sort the list of integers in ascending order
+3: Sort the list of strings in ascending order
+4: Concatenate the sorted list of integers with the sorted list of strings
+5: Return the concatenated list

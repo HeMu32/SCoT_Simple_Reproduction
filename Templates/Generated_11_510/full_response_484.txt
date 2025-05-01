@@ -1,0 +1,10 @@
+[BEGIN]
+Input: test_list1, test_list2: two lists of tuples
+Output: res: a list of tuples from test_list1 that do not appear in test_list2
+
+1: Initialize an empty list res
+2: For each tuple sub in test_list1:
+3:     If sub is not in test_list2:
+4:         Add sub to res
+5: Return res
+[END]

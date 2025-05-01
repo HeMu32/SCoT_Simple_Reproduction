@@ -1,0 +1,13 @@
+[BEGIN]
+Input: test_list: a list of tuples  
+Output: res: a list of elements that occur singly in the given tuple list  
+
+1: Initialize an empty list res to store the result.  
+2: Initialize an empty set temp to keep track of unique elements.  
+3: For each inner tuple in test_list:  
+4:     For each element ele in the inner tuple:  
+5:         If ele is not in temp:  
+6:             Add ele to temp.  
+7:             Append ele to res.  
+8: Return res.  
+[END]

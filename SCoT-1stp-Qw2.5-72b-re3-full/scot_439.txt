@@ -1,0 +1,7 @@
+Input: L: a list of integers  
+Output: num: a single integer formed by concatenating the integers in the list L  
+1: Initialize an empty string, str_num  
+2: Loop through each element in the list L  
+3:     Convert the current element to a string and append it to str_num  
+4: Convert the concatenated string str_num back to an integer  
+5: Return the integer num

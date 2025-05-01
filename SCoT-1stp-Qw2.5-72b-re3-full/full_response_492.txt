@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: item_list: a sorted list of elements, item: the element to search for
+Output: The index of the item if found, otherwise -1
+
+1: Initialize two pointers, low and high, to the start and end of the item_list respectively.
+2: While low is less than or equal to high:
+3:     Calculate mid as the average of low and high.
+4:     If the element at mid is equal to item:
+5:         Return mid.
+6:     If the element at mid is less than item:
+7:         Set low to mid + 1.
+8:     If the element at mid is greater than item:
+9:         Set high to mid - 1.
+10: If the loop completes without finding the item:
+11:     Return -1.
+[END PROCESS]
+
+[BEGIN CODE]
+def binary_search(item_list, item):
+    low = 0
+    high = len(item_list) - 1
+    
+    while low <= high:
+        mid = (low + high) // 2
+        if item_list[mid] == item:
+            return mid
+        elif item_list[mid] < item:
+            low = mid + 1
+        else:
+            high = mid - 1
+    
+    return -1
+[END CODE]
+
+Explanation:
+The binary search algorithm is efficient for searching in a sorted list. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, the search continues in the lower half. Otherwise, it continues in the upper half. This process repeats until the value is found or the interval is empty. The function returns the index of the found item or -1 if the item is not in the list. The time complexity of binary search is O(log n), making it very efficient for large lists.

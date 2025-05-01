@@ -1,0 +1,5 @@
+Input: text: a string  
+Output: list: a list of words starting with 'a' or 'e'  
+1: Initialize a regular expression pattern to match words starting with 'a' or 'e'  
+2: Use the `findall` method from the `re` module to find all matches of the pattern in the text  
+3: Return the list of matched words

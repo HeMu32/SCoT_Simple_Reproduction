@@ -1,0 +1,10 @@
+Input: n: an integer representing the size of the set
+Output: bell: an integer representing the number of ways to partition a set of size n
+
+1: Initialize a 2D list `dp` of size (n+1) x (n+1) to store the Bell numbers, where `dp[i][j]` represents the number of ways to partition a set of size i into j non-empty subsets.
+2: Set `dp[0][0]` to 1 because there is exactly one way to partition a set of size 0 (the empty set).
+3: Use a loop to iterate from 1 to n (inclusive) for the set size `i`:
+4:     Set `dp[i][0]` to `dp[i-1][i-1]` because the number of ways to partition a set of size i into 0 non-empty subsets is the same as the number of ways to partition a set of size i-1 into i-1 non-empty subsets.
+5:     Use another loop to iterate from 1 to i (inclusive) for the number of subsets `j`:
+6:         Set `dp[i][j]` to `dp[i-1][j-1] + j * dp[i-1][j]` because the number of ways to partition a set of size i into j non-empty subsets is the sum of the number of ways to partition a set of size i-1 into j-1 non-empty subsets (where the i-th element forms a new subset) and the number of ways to partition a set of size i-1 into j non-empty subsets (where the i-th element is added to one of the existing j subsets).
+7: Return `dp[n][0]` as the Bell number for a set of size n.

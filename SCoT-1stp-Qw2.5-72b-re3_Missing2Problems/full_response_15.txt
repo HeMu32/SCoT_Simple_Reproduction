@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: text: a string
+Output: parts: a list of substrings split at each lowercase letter
+
+1: Import the `re` module for regular expression operations
+2: Use the `re.split()` function to split the string `text` at each lowercase letter
+3: Return the resulting list of substrings
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def split_lowerstring(text):
+    # Split the string at each lowercase letter
+    parts = re.split('([a-z])', text)
+    # Filter out any empty strings that may result from the split
+    parts = [part for part in parts if part]
+    return parts
+[END CODE]
+
+**Explanation:**
+The function `split_lowerstring` is designed to split a given string at each lowercase letter. The `re.split()` function from the `re` module is used to achieve this. The pattern `([a-z])` is used to match any lowercase letter and to include the matched letter in the resulting list. After splitting, the list might contain empty strings if there are consecutive lowercase letters, so a list comprehension is used to filter out these empty strings. The final list of substrings is then returned.

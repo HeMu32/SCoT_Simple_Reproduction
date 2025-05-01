@@ -1,0 +1,9 @@
+[BEGIN]
+Input: n: an integer representing the number of first even natural numbers to consider
+Output: sum: the cube sum of the first n even natural numbers
+
+1: Initialize sum to 0
+2: for i from 1 to n (inclusive):
+3:     Calculate the cube of the i-th even number (2*i) and add it to sum
+4: return sum
+[END]

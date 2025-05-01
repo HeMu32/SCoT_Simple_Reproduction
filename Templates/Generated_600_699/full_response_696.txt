@@ -1,0 +1,10 @@
+[BEGIN]
+Input: list1, list2: two lists of lists
+Output: result: a new list of lists where each element is the concatenation of the corresponding elements from list1 and list2
+
+1: Initialize an empty list called result
+2: For each pair of sublists (sublist1, sublist2) from list1 and list2:
+3:     Concatenate sublist1 and sublist2
+4:     Append the concatenated sublist to result
+5: Return result
+[END]

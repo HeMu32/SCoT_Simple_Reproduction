@@ -1,0 +1,11 @@
+Input: str: a string representing a URL
+Output: True if the URL is valid, False otherwise
+
+1: Define a regex pattern that matches valid URLs
+2: Compile the regex pattern into a regex object
+3: If str is None:
+4:     return False
+5: If the regex object finds a match in str:
+6:     return True
+7: Otherwise:
+8:     return False

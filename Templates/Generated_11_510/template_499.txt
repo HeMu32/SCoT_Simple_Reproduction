@@ -1,0 +1,4 @@
+Input: r: a numeric value representing the radius of a circle  
+Output: diameter: the diameter of the circle  
+1: Calculate the diameter by multiplying the radius by 2  
+2: Return the diameter

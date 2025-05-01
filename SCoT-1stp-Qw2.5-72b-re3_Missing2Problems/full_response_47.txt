@@ -1,0 +1,43 @@
+[BEGIN PROCESS]
+Input: A, B: two integers where 0 <= A <= B
+Output: last_digit: the last digit of the result when factorial of A divides factorial of B
+
+1: Define a function to calculate the factorial of a number, which will be used to calculate the factorials of A and B.
+2: Calculate the factorial of A and B using the defined factorial function.
+3: Compute the division of the factorial of B by the factorial of A.
+4: Convert the result of the division to a string to easily access the last character, which represents the last digit.
+5: Convert the last character of the string back to an integer.
+6: Return the last digit as the result.
+[END PROCESS]
+
+[BEGIN CODE]
+def factorial(n):
+    """Calculate the factorial of a number."""
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+def compute_Last_Digit(A, B):
+    """Find the last digit when factorial of A divides factorial of B."""
+    # Calculate the factorials of A and B
+    fact_A = factorial(A)
+    fact_B = factorial(B)
+    
+    # Compute the division of factorial of B by factorial of A
+    division_result = fact_B // fact_A
+    
+    # Convert the division result to a string to get the last digit
+    last_digit_str = str(division_result)[-1]
+    
+    # Convert the last character back to an integer
+    last_digit = int(last_digit_str)
+    
+    # Return the last digit
+    return last_digit
+[END CODE]
+
+### Explanation:
+The function `compute_Last_Digit` is designed to find the last digit of the result when the factorial of A divides the factorial of B. The process involves calculating the factorials of A and B, performing the division, and then extracting the last digit of the result. The factorial function is implemented using a simple loop to multiply all integers from 2 up to the given number. The division result is then converted to a string to easily access the last character, which is converted back to an integer and returned as the final result. This approach ensures that the function correctly computes the last digit of the division of the factorials.

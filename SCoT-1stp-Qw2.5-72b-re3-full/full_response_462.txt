@@ -1,0 +1,41 @@
+[BEGIN PROCESS]
+Input: list1: a list of elements
+Output: result: a list of lists containing all possible combinations of the elements in list1
+
+1: Import the combinations function from the itertools module
+2: Initialize an empty list called result to store all combinations
+3: Determine the length of the input list, n
+4: for r from 1 to n:
+5:     Generate all combinations of length r from list1 using the combinations function
+6:     Convert each combination from a tuple to a list and add it to result
+7: Return result
+[END PROCESS]
+
+[BEGIN CODE]
+from itertools import combinations
+
+def combinations_list(list1):
+    result = []
+    n = len(list1)
+    for r in range(1, n + 1):
+        for combo in combinations(list1, r):
+            result.append(list(combo))
+    return result
+[END CODE]
+
+### Explanation:
+The function `combinations_list` is designed to generate all possible combinations of the elements in a given list. Here's a breakdown of how it works:
+
+1. **Import the `combinations` function**: This function from the `itertools` module is used to generate all possible combinations of a specified length from a given iterable.
+
+2. **Initialize the result list**: An empty list `result` is created to store all the combinations.
+
+3. **Determine the length of the input list**: The variable `n` is set to the length of the input list `list1`.
+
+4. **Generate combinations of all lengths**: A loop iterates from 1 to `n` (inclusive), where `r` represents the length of the combinations to be generated.
+
+5. **Generate and convert combinations**: For each length `r`, the `combinations` function is used to generate all combinations of length `r` from `list1`. Each combination is a tuple, which is then converted to a list and appended to `result`.
+
+6. **Return the result**: After all combinations have been generated and added to `result`, the function returns `result`.
+
+This approach ensures that all possible combinations, from single-element lists to the full list itself, are included in the output.

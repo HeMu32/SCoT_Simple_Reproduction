@@ -1,0 +1,21 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: result: a list of integers where each element is the sum of consecutive numbers from the input list
+
+1: Initialize an empty list result
+2: For each index i in the range from 0 to the length of nums - 1:
+3:     If i is less than the length of nums - 1 (to ensure there is a next element):
+4:         Add nums[i] and nums[i+1] and append the sum to result
+5: Return result
+[END PROCESS]
+
+[BEGIN CODE]
+def add_consecutive_nums(nums):
+    result = []
+    for i in range(len(nums) - 1):
+        result.append(nums[i] + nums[i + 1])
+    return result
+[END CODE]
+
+Explanation:
+The function `add_consecutive_nums` takes a list of integers `nums` as input. It initializes an empty list `result` to store the sums of consecutive numbers. The function then iterates over the indices of the input list, except for the last index, to ensure that there is always a next element to add. For each index `i`, it calculates the sum of `nums[i]` and `nums[i + 1]` and appends this sum to the `result` list. Finally, the function returns the `result` list containing the sums of consecutive numbers from the input list.

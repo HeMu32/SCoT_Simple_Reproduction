@@ -1,0 +1,9 @@
+[BEGIN]
+Input: list: a mixed list of numbers  
+Output: ev_li: a list of even numbers from the input list  
+1: Initialize an empty list ev_li  
+2: for each element i in list:  
+3:     if i is divisible by 2 (i.e., i % 2 == 0):  
+4:         append i to ev_li  
+5: return ev_li  
+[END]

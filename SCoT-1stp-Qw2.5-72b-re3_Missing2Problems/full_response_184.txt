@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: 
+- list: a list of numbers
+- num: a number to compare the elements of the list against
+
+Output: 
+- result: a list of numbers from the input list that are greater than the specified number
+
+Process:
+1: Initialize an empty list called `result`
+2: Loop through each element `element` in the input `list`
+3:     If `element` is greater than `num`:
+4:         Add `element` to the `result` list
+5: After the loop, return the `result` list
+[END PROCESS]
+
+[BEGIN CODE]
+def greater_specificnum(list, num):
+    result = []
+    for element in list:
+        if element > num:
+            result.append(element)
+    return result
+[END CODE]
+
+Explanation:
+The function `greater_specificnum` takes two parameters: `list`, which is a list of numbers, and `num`, which is the number to compare against. The function initializes an empty list called `result` to store the numbers that are greater than `num`. It then iterates over each element in the input list. For each element, it checks if the element is greater than `num`. If it is, the element is added to the `result` list. After the loop completes, the function returns the `result` list containing all the numbers from the input list that are greater than the specified number.

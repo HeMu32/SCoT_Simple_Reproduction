@@ -1,0 +1,9 @@
+[BEGIN]
+Input: text: a string  
+Output: a list of substrings split by multiple delimiters  
+1: Import the `re` module for regular expression operations  
+2: Define the function `multiple_split` that takes a single parameter `text`  
+3:   Create a regex pattern that matches multiple delimiters: semicolon, comma, space, asterisk, and newline  
+4:   Use the `re.split` function with the regex pattern to split the `text` string  
+5:   Return the resulting list of substrings  
+[END]

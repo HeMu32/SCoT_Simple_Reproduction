@@ -1,0 +1,8 @@
+Input: actual_cost, sale_amount: two numbers representing the actual cost and the sale amount of a product
+Output: loss: the loss amount if there is a loss, otherwise None
+
+1: Calculate the difference between actual_cost and sale_amount
+2: if the difference is greater than 0 (indicating a loss):
+3:     return the difference as the loss amount
+4: else:
+5:     return None (indicating no loss)

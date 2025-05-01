@@ -1,0 +1,16 @@
+Input: units: an integer representing the number of units consumed.
+Output: A float representing the total electricity bill.
+
+1: Define the rate slabs and their corresponding rates.
+2: Initialize a variable total_bill to 0.
+3: If units are less than or equal to the first slab limit:
+4:     Calculate the bill for the first slab and return it.
+5: Else if units are less than or equal to the second slab limit:
+6:     Calculate the bill for the first slab and the remaining units in the second slab.
+7:     Add the two amounts to total_bill and return it.
+8: Else if units are less than or equal to the third slab limit:
+9:     Calculate the bill for the first, second, and the remaining units in the third slab.
+10:    Add the three amounts to total_bill and return it.
+11: Else:
+12:    Calculate the bill for the first, second, third slabs, and the remaining units at the highest rate.
+13:    Add the four amounts to total_bill and return it.

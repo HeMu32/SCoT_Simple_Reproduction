@@ -1,0 +1,14 @@
+[BEGIN]
+Input: arr: a list of integers
+Output: x, y: a pair of integers from arr with the highest product
+
+1: arr_len = length of arr
+2: if arr_len is less than 2:
+3:     return "No pairs exists"
+4: x = arr[0]; y = arr[1]
+5: for i from 0 to arr_len - 1:
+6:     for j from i + 1 to arr_len - 1:
+7:         if arr[i] * arr[j] is greater than x * y:
+8:             x = arr[i]; y = arr[j]
+9: return x, y
+[END]

@@ -1,0 +1,10 @@
+Input: Input: a tuple or a list
+Output: count: the number of lists present in the given tuple or list
+1: Initialize count to 0
+2: if Input is a list:
+3:     Increment count by 1
+4: else if Input is a tuple:
+5:     for each element in Input:
+6:         if the element is a list:
+7:             Increment count by 1
+8: return count

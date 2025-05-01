@@ -1,0 +1,12 @@
+[BEGIN]
+Input: test_tup: a tuple 
+Output: res: a string where each element of test_tup is concatenated by a delimiter 
+
+1: Initialize a delimiter string, delim, with a hyphen ("-")
+2: Initialize an empty string, res
+3: For each element, ele, in test_tup:
+4:     Convert ele to a string and concatenate it with delim
+5:     Append the result to res
+6: Remove the last occurrence of the delimiter from res
+7: Return res as the final concatenated string
+[END]

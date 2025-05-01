@@ -1,0 +1,36 @@
+[BEGIN PROCESS]
+Input: arr: a sorted list of integers, x: the element to find, n: the length of the array
+Output: The index of the first occurrence of x in arr, or -1 if x is not found
+
+1: Define the function `first` with parameters `arr`, `x`, and `n`
+2: Initialize two variables, `low` and `high`, to 0 and n-1 respectively, to represent the current search range
+3: Use a while loop to perform binary search as long as `low` is less than or equal to `high`
+4:   Calculate the middle index, `mid`, as the average of `low` and `high`
+5:   If the element at `mid` is equal to `x`:
+6:     Check if `mid` is the first occurrence of `x` by comparing it with the element at `mid-1`
+7:     If `mid` is the first occurrence, return `mid`
+8:     Otherwise, update `high` to `mid - 1` to search the left subarray
+9:   If the element at `mid` is less than `x`, update `low` to `mid + 1` to search the right subarray
+10:   If the element at `mid` is greater than `x`, update `high` to `mid - 1` to search the left subarray
+11: If the loop completes without finding `x`, return -1 indicating `x` is not in the array
+[END PROCESS]
+
+[BEGIN CODE]
+def first(arr, x, n):
+    low = 0
+    high = n - 1
+    result = -1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == x:
+            result = mid  # Update result and search the left half
+            high = mid - 1
+        elif arr[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return result
+[END CODE]
+
+Explanation:
+The function `first` implements a binary search algorithm to find the first occurrence of an element `x` in a sorted array `arr`. The binary search is efficient, with a time complexity of O(log n), making it suitable for large arrays. The function initializes `low` and `high` pointers to the start and end of the array, respectively. It then enters a loop where it calculates the middle index `mid` and checks if the element at `mid` is equal to `x`. If it is, the function checks if this is the first occurrence by comparing it with the element at `mid-1`. If it is the first occurrence, it returns `mid`. If not, it continues searching in the left subarray by updating `high` to `mid - 1`. If the element at `mid` is less than `x`, it updates `low` to `mid + 1` to search the right subarray. If the element at `mid` is greater than `x`, it updates `high` to `mid - 1` to search the left subarray. If the loop completes without finding `x`, the function returns -1, indicating that `x` is not in the array.

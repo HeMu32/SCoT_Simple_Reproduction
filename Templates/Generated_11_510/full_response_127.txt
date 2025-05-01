@@ -1,0 +1,12 @@
+[BEGIN]
+Input: x, y: integers  
+Output: product: integer  
+1: if y is less than 0:  
+2:     return the negative of multiply_int(x, -y)  
+3: elif y is 0:  
+4:     return 0  
+5: elif y is 1:  
+6:     return x  
+7: else:  
+8:     return x plus multiply_int(x, y - 1)  
+[END]

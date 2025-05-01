@@ -1,0 +1,10 @@
+Input: listval: a list containing heterogeneous elements (integers, floats, strings, etc.)
+Output: min_value: the minimum numeric value in the list
+
+1: Initialize a variable min_value to None, which will store the minimum value found
+2: Loop through each element in listval:
+3:     If the element is a numeric type (int or float):
+4:         If min_value is None or the element is less than min_value:
+5:             Set min_value to the element
+6: If min_value is still None after the loop, raise an error indicating no numeric values were found
+7: Return min_value

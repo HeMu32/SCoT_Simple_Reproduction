@@ -1,0 +1,5 @@
+Input: n: an integer representing the position in the sequence of centered hexagonal numbers
+Output: res: the nth centered hexagonal number
+1: Understand the formula for the nth centered hexagonal number: \( H_n = 3n(n - 1) + 1 \)
+2: Calculate the value using the formula
+3: Return the calculated value

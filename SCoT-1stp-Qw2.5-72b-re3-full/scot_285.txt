@@ -1,0 +1,9 @@
+Input: text: a string
+Output: match: a boolean indicating whether the string matches the pattern of 'a' followed by two to three 'b's
+
+1: Define the pattern as 'ab{2,3}' which matches 'a' followed by two to three 'b's
+2: Use the re module to search for the pattern in the input text
+3: If a match is found:
+4:     Return True
+5: Else:
+6:     Return False

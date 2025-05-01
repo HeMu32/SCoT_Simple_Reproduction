@@ -1,0 +1,7 @@
+Input: test_list: a list of tuples, N: an integer representing the index of the column
+Output: res: the maximum value found in the nth column of the tuple list
+1: Initialize an empty list to store the nth elements from each tuple
+2: Loop through each tuple in test_list
+3:     Extract the nth element from the current tuple and append it to the list
+4: After the loop, find the maximum value in the list
+5: Return the maximum value

@@ -1,0 +1,12 @@
+Input: list1, list2, list3: three lists of elements
+Output: count: the number of pairs (x, y) that appear in all three lists
+
+1: Initialize a counter variable count to 0.
+2: Create a set from list1 to remove duplicates and allow for faster lookup.
+3: Create a set from list2 to remove duplicates and allow for faster lookup.
+4: Create a set from list3 to remove duplicates and allow for faster lookup.
+5: For each element x in the set of list1:
+6:     For each element y in the set of list2:
+7:         If the pair (x, y) exists in the set of list3:
+8:             Increment the counter by 1.
+9: Return the counter.

@@ -1,0 +1,3 @@
+def max_length_list(input_list):
+    max_list = max(input_list, key=lambda x: len(x))
+    return max_list

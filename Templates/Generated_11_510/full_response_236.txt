@@ -1,0 +1,13 @@
+[BEGIN]
+Input: N: an integer representing the side length of the larger equilateral triangle, K: an integer representing the side length of the smaller equilateral triangles to be formed.
+Output: The maximum number of equilateral triangles of side length K that can be formed within the larger triangle of side length N.
+
+1: If N is less than K:
+2:     Return -1 (it's not possible to form any triangle of side K within a triangle of side N)
+3: Else:
+4:     Initialize Tri_up to 0 (to store the count of triangles pointing upwards)
+5:     Calculate Tri_up using the formula ((N - K + 1) * (N - K + 2)) // 2
+6:     Initialize Tri_down to 0 (to store the count of triangles pointing downwards)
+7:     Calculate Tri_down using the formula ((N - 2 * K + 1) * (N - 2 * K + 2)) // 2
+8:     Return the sum of Tri_up and Tri_down
+[END]

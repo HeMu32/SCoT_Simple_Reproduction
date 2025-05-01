@@ -1,0 +1,16 @@
+Input: limit: an integer 
+Output: sum of all amicable numbers from 1 to limit 
+1: if limit is not an integer: 
+2:     return "Input is not an integer!" 
+3: if limit is less than 1: 
+4:     return "Input must be bigger than 0!" 
+5: initialize an empty set amicables 
+6: for num from 2 to limit inclusive: 
+7:     if num is in amicables: 
+8:         continue 
+9:     calculate sum_fact as the sum of all factors of num, excluding num itself 
+10:    calculate sum_fact2 as the sum of all factors of sum_fact, excluding sum_fact itself 
+11:    if num equals sum_fact2 and num is not equal to sum_fact: 
+12:        add num to amicables 
+13:        add sum_fact to amicables 
+14: return the sum of all elements in amicables

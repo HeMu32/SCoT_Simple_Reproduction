@@ -1,0 +1,8 @@
+Input: nums: a list of integers
+Output: result: a list of integers where each element is the sum of consecutive numbers from the input list
+
+1: Initialize an empty list result
+2: For each index i in the range from 0 to the length of nums - 1:
+3:     If i is less than the length of nums - 1 (to ensure there is a next element):
+4:         Add nums[i] and nums[i+1] and append the sum to result
+5: Return result

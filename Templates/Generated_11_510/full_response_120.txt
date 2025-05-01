@@ -1,0 +1,11 @@
+[BEGIN]
+Input: list1: a list of tuples, where each tuple contains two integers
+Output: result_max: the maximum product of the integers from the tuples in list1
+
+1: Initialize an empty list to store the products of the tuples
+2: For each tuple (x, y) in list1:
+3:     Calculate the product of x and y
+4:     Append the absolute value of the product to the products list
+5: Find the maximum value in the products list
+6: Return the maximum value as result_max
+[END]

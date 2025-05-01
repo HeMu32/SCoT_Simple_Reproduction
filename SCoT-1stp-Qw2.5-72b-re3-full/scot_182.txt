@@ -1,0 +1,10 @@
+Input: string: a string to be analyzed
+Output: A dictionary with counts of uppercase letters, lowercase letters, special characters, and numeric values
+
+1: Import the `re` module for regular expressions
+2: Initialize a dictionary to store the counts of each category: uppercase, lowercase, special characters, and numeric values
+3: Use regular expressions to find all uppercase letters in the string and update the dictionary
+4: Use regular expressions to find all lowercase letters in the string and update the dictionary
+5: Use regular expressions to find all special characters in the string and update the dictionary
+6: Use regular expressions to find all numeric values in the string and update the dictionary
+7: Return the dictionary with the counts

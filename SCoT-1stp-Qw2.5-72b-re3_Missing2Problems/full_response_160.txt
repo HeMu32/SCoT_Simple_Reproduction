@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: a, b, n: integers
+Output: A tuple (x, y) of integers that satisfy the equation ax + by = n, or None if no such integers exist
+
+1: Initialize x to 0
+2: Loop through possible values of x from 0 to n/a (inclusive):
+3:     Calculate y as (n - ax) / b
+4:     Check if y is an integer:
+5:         If y is an integer, return (x, y)
+6: If no solution is found, return None
+[END PROCESS]
+
+[BEGIN CODE]
+def solution(a, b, n):
+    for x in range(n // a + 1):
+        y = (n - a * x) / b
+        if y.is_integer():
+            return (x, int(y))
+    return None
+[END CODE]
+
+### Explanation
+
+The function `solution(a, b, n)` is designed to find a pair of integers (x, y) that satisfy the linear Diophantine equation \( ax + by = n \). The approach taken is to iterate over possible values of \( x \) and solve for \( y \) in each iteration. If \( y \) is an integer, then the pair (x, y) is a valid solution and is returned. If no such pair is found after all iterations, the function returns `None`.
+
+- **Step 1**: Initialize \( x \) to 0.
+- **Step 2**: Loop through possible values of \( x \) from 0 to \( \left\lfloor \frac{n}{a} \right\rfloor \) (inclusive). This ensures that \( ax \) does not exceed \( n \).
+- **Step 3**: For each \( x \), calculate \( y \) as \( \frac{n - ax}{b} \).
+- **Step 4**: Check if \( y \) is an integer. This is done using the `is_integer()` method, which returns `True` if \( y \) is an integer.
+- **Step 5**: If \( y \) is an integer, return the tuple (x, y).
+- **Step 6**: If no solution is found after the loop, return `None`.
+
+This method ensures that all possible integer solutions are checked, and the first valid solution is returned. If no solution exists, the function correctly returns `None`.

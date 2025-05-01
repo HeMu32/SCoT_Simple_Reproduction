@@ -1,0 +1,10 @@
+[BEGIN]
+Input: nums: a list of items
+Output: result: a tuple containing the item with the maximum frequency and its frequency
+
+1: Initialize a dictionary `dict` to store the frequency of each item in `nums`
+2: for each item `i` in `nums`:
+3:     Increment the count of `i` in `dict` by 1
+4: Find the item with the maximum frequency in `dict` and store it in `result`
+5: return `result`
+[END]

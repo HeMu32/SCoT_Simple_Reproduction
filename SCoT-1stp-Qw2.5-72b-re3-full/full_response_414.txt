@@ -1,0 +1,30 @@
+[-BEGIN PROCESS]
+Input: list1, list2: two lists of elements
+Output: A boolean value indicating whether there is at least one common element between the two lists
+
+1: Initialize a variable `found` to False to keep track of whether a common element has been found
+2: For each element `elem1` in list1:
+3:     For each element `elem2` in list2:
+4:         If `elem1` is equal to `elem2`:
+5:             Set `found` to True
+6:             Break out of the inner loop
+7:     If `found` is True:
+8:         Break out of the outer loop
+9: Return the value of `found`
+[END PROCESS]
+
+[-BEGIN CODE]
+def overlapping(list1, list2):
+    found = False
+    for elem1 in list1:
+        for elem2 in list2:
+            if elem1 == elem2:
+                found = True
+                break
+        if found:
+            break
+    return found
+[END CODE]
+
+### Explanation:
+The function `overlapping` checks if there is at least one common element between two lists, `list1` and `list2`. It does this by iterating through each element in `list1` and comparing it with each element in `list2`. If a common element is found, the variable `found` is set to `True`, and the loops are exited early to avoid unnecessary comparisons. Finally, the function returns the value of `found`, which will be `True` if a common element was found, and `False` otherwise. This approach ensures that the function efficiently stops as soon as a common element is found, rather than checking all possible pairs.

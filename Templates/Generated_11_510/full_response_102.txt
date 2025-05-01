@@ -1,0 +1,11 @@
+[BEGIN]
+Input: word: a string in snake_case format
+Output: a string in camelCase format
+
+1: Split the input string `word` by underscores to create a list of substrings
+2: Initialize an empty string `result` to store the final camelCase string
+3: For each substring `sub` in the list:
+4:     Capitalize the first character of `sub`
+5:     Append the capitalized `sub` to `result`
+6: Return `result` as the final camelCase string
+[END]

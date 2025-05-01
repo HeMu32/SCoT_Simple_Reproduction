@@ -1,0 +1,6 @@
+Input: list1: a list of words, removewords: a list of words to be removed
+Output: list1: the list after removing the specified words
+1: for each word in list(list1):
+2:     if word is in removewords:
+3:         remove word from list1
+4: return list1

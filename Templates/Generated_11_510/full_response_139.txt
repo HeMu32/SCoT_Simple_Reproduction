@@ -1,0 +1,6 @@
+[BEGIN]
+Input: r: a number representing the radius of the circle
+Output: perimeter: the circumference of the circle
+1: Calculate the perimeter using the formula 2 * π * r, where π is approximated as 3.1415
+2: Return the calculated perimeter
+[END]

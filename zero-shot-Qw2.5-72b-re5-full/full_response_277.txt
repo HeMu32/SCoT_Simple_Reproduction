@@ -1,0 +1,9 @@
+[BEGIN CODE]
+```python
+def dict_filter(dict, n):
+    """
+    Write a function to filter a dictionary based on values.
+    """
+    return {k: v for k, v in dict.items() if v > n}
+```
+[END CODE]

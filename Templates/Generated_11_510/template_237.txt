@@ -1,0 +1,12 @@
+Input: test_list: a list of tuples
+Output: res: a dictionary with the count of occurrences of each unique tuple (considering sorted tuples as identical)
+
+1: Initialize an empty dictionary res to store the result
+2: For each element ele in test_list:
+3:     Sort the elements of the tuple ele to handle permutations as identical
+4:     Convert the sorted list back to a tuple
+5:     If the tuple is already a key in res:
+6:         Increment the count of the tuple in res
+7:     Else:
+8:         Add the tuple to res with a count of 1
+9: Return res

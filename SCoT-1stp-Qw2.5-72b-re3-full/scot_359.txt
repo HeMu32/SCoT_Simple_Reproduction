@@ -1,0 +1,8 @@
+Input: a, b, c: coefficients of the quadratic equation ax^2 + bx + c = 0
+Output: True if one root is twice the other, False otherwise
+
+1: Calculate the discriminant (D) using the formula D = b^2 - 4ac
+2: If D is less than 0, return False (no real roots)
+3: Calculate the roots using the quadratic formula: root1 = (-b + sqrt(D)) / (2a) and root2 = (-b - sqrt(D)) / (2a)
+4: Check if root1 is twice root2 or root2 is twice root1
+5: If either condition is true, return True; otherwise, return False

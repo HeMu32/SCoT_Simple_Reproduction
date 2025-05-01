@@ -1,0 +1,40 @@
+[BEGIN PROCESS]
+Input: str: a string representing a URL
+Output: True if the URL is valid, False otherwise
+
+1: Import the re module for regular expression operations
+2: Define a regex pattern that matches the structure of a valid URL
+3: Use the re.match function to check if the input string matches the regex pattern
+4: If the match is successful, return True
+5: Otherwise, return False
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def is_valid_URL(url):
+    # Define the regex pattern for a valid URL
+    pattern = r'^(http|https)://[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(/[^ \n]*)?$'
+    
+    # Use re.match to check if the URL matches the pattern
+    if re.match(pattern, url):
+        return True
+    else:
+        return False
+[END CODE]
+
+### Explanation:
+- **Regex Pattern Breakdown:**
+  - `^(http|https)`: The URL must start with "http" or "https".
+  - `://`: This is the separator between the protocol and the domain.
+  - `[a-zA-Z0-9.-]+`: The domain name can contain letters, numbers, dots, and hyphens.
+  - `\.[a-zA-Z]{2,}`: The domain must end with a dot followed by at least two letters (e.g., .com, .org).
+  - `(/[^ \n]*)?`: The URL can optionally have a path, which starts with a slash and can contain any characters except spaces and newlines.
+
+- **Function Logic:**
+  - The function `is_valid_URL` takes a string `url` as input.
+  - It uses the `re.match` function to check if the `url` matches the defined regex pattern.
+  - If the URL matches the pattern, the function returns `True`, indicating that the URL is valid.
+  - If the URL does not match the pattern, the function returns `False`, indicating that the URL is invalid.
+
+This approach ensures that the function can accurately validate URLs based on a common structure.

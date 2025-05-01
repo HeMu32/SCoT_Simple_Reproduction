@@ -1,0 +1,44 @@
+[-BEGIN PROCESS]
+Input: nums: a list of elements to be sorted
+Output: a sorted list of elements
+
+1: Initialize the gap size to the length of the list
+2: Set a flag to indicate if a swap has occurred
+3: While the gap is greater than 1 or a swap has occurred:
+4:     Update the gap size using the shrink factor (1.3)
+5:     If the gap is less than 1, set it to 1
+6:     Set the swap flag to False
+7:     For each element in the list from the start to the end minus the gap:
+8:         If the current element is greater than the element at the current position plus the gap:
+9:             Swap the elements
+10:            Set the swap flag to True
+11: Return the sorted list
+[END PROCESS]
+
+[-BEGIN CODE]
+def comb_sort(nums):
+    gap = len(nums)
+    shrink_factor = 1.3
+    swapped = True
+
+    while gap > 1 or swapped:
+        gap = int(gap / shrink_factor)
+        if gap < 1:
+            gap = 1
+        swapped = False
+        for i in range(len(nums) - gap):
+            if nums[i] > nums[i + gap]:
+                nums[i], nums[i + gap] = nums[i + gap], nums[i]
+                swapped = True
+    return nums
+[END CODE]
+
+### Explanation:
+Comb sort is an improvement over bubble sort. It works by comparing and swapping elements that are far apart, and then gradually reducing the gap between elements to be compared. The gap starts out as the length of the list and is reduced by a shrink factor (commonly 1.3) until it reaches 1. The process continues until the gap is 1 and no more swaps are needed, indicating that the list is sorted.
+
+- **Initialization**: The gap is initialized to the length of the list, and a flag `swapped` is set to `True` to enter the while loop.
+- **Gap Update**: The gap is updated by dividing it by the shrink factor. If the gap becomes less than 1, it is set to 1.
+- **Swapping**: The list is traversed, and elements are compared and swapped if they are out of order. If a swap occurs, the `swapped` flag is set to `True`.
+- **Termination**: The loop continues until the gap is 1 and no swaps have occurred, indicating that the list is sorted.
+
+This approach helps to eliminate turtles (small values near the end of the list) more efficiently than bubble sort, leading to better performance.

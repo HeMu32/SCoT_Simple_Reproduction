@@ -1,0 +1,8 @@
+Input: str1: a string from which lowercase substrings are to be removed
+Output: result: a string with all lowercase substrings removed
+
+1: Initialize an empty string called `result` to store the final output
+2: Loop through each character `ch` in the input string `str1`
+3:   If `ch` is not a lowercase letter:
+4:     Append `ch` to `result`
+5: Return `result` as the final output

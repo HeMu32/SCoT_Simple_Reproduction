@@ -1,0 +1,20 @@
+[BEGIN]
+Input: n: an integer 
+Output: sum: the sum of the first n Perrin numbers 
+1: Initialize a, b, c to 3, 0, 2 respectively 
+2: If n is 0: 
+3:     Return 3 
+4: If n is 1: 
+5:     Return 3 
+6: If n is 2: 
+7:     Return 5 
+8: Initialize sum to 5 
+9: While n is greater than 2: 
+10:     Set d to a + b 
+11:     Add d to sum 
+12:     Set a to b 
+13:     Set b to c 
+14:     Set c to d 
+15:     Decrement n by 1 
+16: Return sum 
+[END]

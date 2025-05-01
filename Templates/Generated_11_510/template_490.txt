@@ -1,0 +1,9 @@
+Input: test_list: a list of tuples
+Output: res: a set of symmetric tuples where the first element is less than the second element
+
+1: Convert test_list to a set and find the intersection with a set of reversed tuples from test_list
+2: Initialize an empty set res
+3: For each tuple (a, b) in the intersection set:
+4:     If a is less than b:
+5:         Add the tuple (a, b) to res
+6: Return res

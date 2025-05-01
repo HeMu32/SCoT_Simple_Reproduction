@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the number of elements in the binomial coefficient sequence
+Output: sum: the sum of the binomial coefficients at even indices
+
+1: Initialize a variable `sum` to 0 to store the sum of the even index binomial coefficients
+2: For each index `i` from 0 to n (inclusive):
+3:     If `i` is even:
+4:         Calculate the binomial coefficient for `n` choose `i`
+5:         Add the calculated binomial coefficient to `sum`
+6: Return `sum`
+[END PROCESS]
+
+[BEGIN CODE]
+from math import comb
+
+def even_binomial_Coeff_Sum(n):
+  sum = 0
+  for i in range(n + 1):
+    if i % 2 == 0:
+      sum += comb(n, i)
+  return sum
+[END CODE]
+
+### Explanation:
+The function `even_binomial_Coeff_Sum` calculates the sum of the binomial coefficients at even indices for a given `n`. The binomial coefficient, often denoted as \( C(n, k) \) or \( \binom{n}{k} \), represents the number of ways to choose `k` elements from a set of `n` elements without regard to the order of selection. The function uses the `comb` function from the `math` module to compute the binomial coefficients.
+
+1. **Initialization**: The variable `sum` is initialized to 0 to accumulate the sum of the binomial coefficients at even indices.
+2. **Loop**: A loop iterates over all indices from 0 to `n` (inclusive).
+3. **Condition**: Inside the loop, an `if` statement checks if the current index `i` is even.
+4. **Calculation**: If the index is even, the binomial coefficient \( C(n, i) \) is calculated using `comb(n, i)`.
+5. **Accumulation**: The calculated binomial coefficient is added to `sum`.
+6. **Return**: After the loop completes, the function returns the accumulated sum.
+
+This approach ensures that only the binomial coefficients at even indices are summed, as required by the problem statement.

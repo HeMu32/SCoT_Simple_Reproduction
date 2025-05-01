@@ -1,0 +1,11 @@
+Input: s: an integer representing the sum of the sides of a cuboid
+Output: max_volume: the maximum volume of the cuboid with the given sum of sides
+
+1: Initialize max_volume to 0
+2: Loop i from 1 to s-2 (inclusive) for the length of the cuboid
+3:     Loop j from 1 to s-i-1 (inclusive) for the width of the cuboid
+4:         Set k to s - i - j (the height of the cuboid)
+5:         Calculate the volume of the cuboid as i * j * k
+6:         If the calculated volume is greater than max_volume:
+7:             Update max_volume to the calculated volume
+8: Return max_volume

@@ -1,0 +1,10 @@
+Input: tri: a list of lists representing the triangle, m: number of rows, n: number of columns (though n is not used in the solution)
+Output: max_sum: the maximum total path sum in the triangle
+
+1: for i from m-1 to 0 (decrementing by 1):
+2:     for j from 0 to i (incrementing by 1):
+3:         if the element at tri[i+1][j] is greater than the element at tri[i+1][j+1]:
+4:             add the value of tri[i+1][j] to tri[i][j]
+5:         else:
+6:             add the value of tri[i+1][j+1] to tri[i][j]
+7: return the value at tri[0][0]

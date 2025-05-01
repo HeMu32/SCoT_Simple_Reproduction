@@ -1,0 +1,4 @@
+Input: n: an integer 
+Output: rect_num: the n-th rectangular number 
+1: Calculate the n-th rectangular number using the formula n * (n + 1)
+2: Return the calculated value

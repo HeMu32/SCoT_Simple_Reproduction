@@ -1,0 +1,8 @@
+[BEGIN]
+Input: L, R: integers representing the range
+Output: A tuple of two integers or -1
+
+1: Check if 2 * L is less than or equal to R
+2:     If true, return the tuple (L, 2 * L)
+3:     If false, return -1
+[END]

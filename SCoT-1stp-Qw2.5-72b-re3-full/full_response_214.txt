@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: radian: a float representing an angle in radians
+Output: degree: a float representing the angle in degrees
+
+1: Define the conversion factor from radians to degrees (180 / π)
+2: Multiply the radian value by the conversion factor to get the degree value
+3: Return the degree value
+[END PROCESS]
+
+[BEGIN CODE]
+import math
+
+def degree_radian(radian):
+    # Define the conversion factor
+    conversion_factor = 180 / math.pi
+    
+    # Convert radian to degree
+    degree = radian * conversion_factor
+    
+    # Return the degree value
+    return degree
+[END CODE]
+
+**Explanation:**
+The function `degree_radian` takes a single parameter `radian`, which is a float representing an angle in radians. The goal is to convert this angle into degrees. The conversion is done using the formula:
+
+\[ \text{degree} = \text{radian} \times \left( \frac{180}{\pi} \right) \]
+
+Here, `math.pi` is used to get the value of π (pi). The function then returns the calculated degree value. This process involves a simple sequence of operations with no branches or loops, as the conversion is straightforward.

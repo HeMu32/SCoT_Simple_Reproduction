@@ -1,0 +1,9 @@
+Input: test_list: a list of tuples, K: an integer representing the number of elements to check for in each tuple
+Output: A boolean value indicating whether all tuples in the list have exactly K elements
+
+1: Initialize a variable all_have_k_elements to True
+2: For each tuple t in test_list:
+3:     If the length of t is not equal to K:
+4:         Set all_have_k_elements to False
+5:         Break the loop
+6: Return all_have_k_elements

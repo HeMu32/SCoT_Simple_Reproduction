@@ -1,0 +1,13 @@
+Input: arr: a list of integers, n: the number of elements in arr, p: the number of times to perform the operation
+Output: "EVEN" or "ODD" based on the parity of the last element after p operations
+
+1: Initialize _sum to 0
+2: for each element in arr from 0 to n-1 do
+3:     add the element to _sum
+4: if p equals 1 then
+5:     if _sum is even then
+6:         return "ODD"
+7:     else
+8:         return "EVEN"
+9: else
+10:    return "EVEN"

@@ -1,0 +1,26 @@
+[BEGIN PROCESS]
+Input: nums: a list of numbers
+Output: a list of the cubes of the numbers in the input list
+
+1: Define a lambda function that takes a single argument and returns the cube of that argument.
+2: Use the map function to apply the lambda function to each element in the input list.
+3: Convert the map object to a list to get the final list of cubes.
+4: Return the list of cubes.
+[END PROCESS]
+
+[BEGIN CODE]
+def cube_nums(nums):
+    # Define a lambda function to cube a number
+    cube = lambda x: x ** 3
+    # Apply the lambda function to each element in the list using map
+    cubes = map(cube, nums)
+    # Convert the map object to a list and return it
+    return list(cubes)
+[END CODE]
+
+### Explanation:
+- **Lambda Function**: A lambda function is a small anonymous function. It can take any number of arguments but can only have one expression. In this case, the lambda function `cube` takes a single argument `x` and returns `x ** 3`, which is the cube of `x`.
+- **Map Function**: The `map` function applies the lambda function to each element in the input list `nums`. It returns a map object, which is an iterator that yields the results of applying the lambda function to each element.
+- **List Conversion**: The `list` function converts the map object to a list, which is then returned as the final result.
+
+This approach is efficient and concise, leveraging Python's functional programming capabilities to perform the operation in a single line of code.

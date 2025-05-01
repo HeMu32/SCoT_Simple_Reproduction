@@ -1,0 +1,5 @@
+Input: a, b, c: three numbers (integers or floats)
+Output: The median of the three numbers
+
+1: Sort the three numbers in ascending order.
+2: Return the middle number from the sorted list.

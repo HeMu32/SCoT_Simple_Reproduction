@@ -1,0 +1,9 @@
+Input: a, b, c: three positive numbers representing the lengths of the sides of a triangle
+Output: perimeter: a number representing the perimeter of the triangle
+
+1: Check if the input values are valid (i.e., all are positive and the sum of any two sides is greater than the third side, which is the triangle inequality theorem)
+2: If the inputs are valid:
+3:     Calculate the perimeter by summing the lengths of the sides a, b, and c
+4:     Return the perimeter
+5: If the inputs are not valid:
+6:     Return an error message indicating that the inputs do not form a valid triangle

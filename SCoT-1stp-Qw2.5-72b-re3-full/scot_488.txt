@@ -1,0 +1,6 @@
+Input: a: the side length of a regular pentagon
+Output: area: the area of the pentagon
+
+1: Define the formula for the area of a regular pentagon, which is (1/4) * sqrt(5 * (5 + 2 * sqrt(5))) * a^2.
+2: Calculate the area using the formula.
+3: Return the calculated area.

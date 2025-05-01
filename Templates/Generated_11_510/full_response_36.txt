@@ -1,0 +1,12 @@
+[BEGIN]
+Input: p, q, N: integers where p and q are the numerator and denominator of a fraction, and N is the position of the digit to find in the decimal part of the fraction.
+
+Output: The nth digit in the decimal part of the fraction p/q.
+
+1: Initialize a loop that continues while N is greater than 0.
+2:     Decrement N by 1.
+3:     Multiply p by 10.
+4:     Calculate the integer division of p by q and store the result in res.
+5:     Update p to be the remainder of p divided by q.
+6: Return the value of res, which is the nth digit in the decimal part of the fraction p/q.
+[END]

@@ -1,0 +1,18 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position in the sequence of decagonal numbers
+Output: The nth decagonal number
+
+1: Calculate the nth decagonal number using the formula: Dn = 4n^2 - 3n
+2: Return the calculated decagonal number
+[END PROCESS]
+
+[BEGIN CODE]
+def is_num_decagonal(n):
+    # Calculate the nth decagonal number using the formula
+    decagonal_number = 4 * n * n - 3 * n
+    # Return the calculated decagonal number
+    return decagonal_number
+[END CODE]
+
+Explanation:
+A decagonal number is a figurate number that represents a decagon (a ten-sided polygon). The formula to find the nth decagonal number is given by Dn = 4n^2 - 3n. This formula is derived from the general formula for polygonal numbers. In the code, we simply apply this formula to calculate the nth decagonal number and return it. The function is straightforward and does not require any complex logic or loops, as the calculation is a direct application of the mathematical formula.

@@ -1,0 +1,12 @@
+[BEGIN]
+Input: grid: a 2D list of integers representing a 2 x n grid
+Output: max_sum: the maximum sum such that no two chosen numbers are adjacent
+
+1: Initialize `incl` to the maximum value of the first column of the grid.
+2: Initialize `excl` to 0.
+3: For each column index `i` from 1 to n-1:
+4:     Set `excl_new` to the maximum of `excl` and `incl`.
+5:     Set `incl` to `excl` plus the maximum value of the current column.
+6:     Set `excl` to `excl_new`.
+7: Return the maximum of `excl` and `incl`.
+[END]

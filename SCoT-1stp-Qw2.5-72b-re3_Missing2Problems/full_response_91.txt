@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: str1: a string, sub_str: a string
+Output: result: a boolean indicating whether the substring is present in the given string
+
+1: Initialize a variable `result` to False
+2: Loop through each character index in the string `str1` where the substring could start
+3: Check if the substring starting from the current index in `str1` matches `sub_str`
+4: If a match is found, set `result` to True and break the loop
+5: After the loop, return the value of `result`
+[END PROCESS]
+
+[BEGIN CODE]
+def find_substring(str1, sub_str):
+    result = False
+    for i in range(len(str1) - len(sub_str) + 1):
+        if str1[i:i+len(sub_str)] == sub_str:
+            result = True
+            break
+    return result
+[END CODE]
+
+### Explanation:
+The function `find_substring` checks if a substring (`sub_str`) is present in a given string (`str1`). The function initializes a boolean variable `result` to `False`. It then iterates over the possible starting indices in `str1` where the substring could begin. For each starting index, it checks if the substring of `str1` starting from that index and of the same length as `sub_str` matches `sub_str`. If a match is found, `result` is set to `True` and the loop is exited. Finally, the function returns the value of `result`, which will be `True` if the substring is found and `False` otherwise.

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: list: a list of strings  
+Output: list: a list of strings with all digits removed  
+1: Define a pattern to match digits  
+2: For each string i in list:  
+3:     Replace all occurrences of the pattern in i with an empty string  
+4: Return the modified list  
+[END]

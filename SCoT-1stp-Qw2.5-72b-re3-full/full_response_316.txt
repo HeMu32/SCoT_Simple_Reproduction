@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: A: a sorted list of integers, x: an integer to find the last occurrence of
+Output: index: the index of the last occurrence of x in A, or -1 if x is not found
+
+1: Initialize index to -1
+2: Loop through each element in A with its index
+3:     If the current element equals x
+4:         Set index to the current index
+5: After the loop, return index
+[END PROCESS]
+
+[BEGIN CODE]
+def find_last_occurrence(A, x):
+    index = -1
+    for i, value in enumerate(A):
+        if value == x:
+            index = i
+    return index
+[END CODE]
+
+Explanation:
+The function `find_last_occurrence` is designed to find the index of the last occurrence of a given number `x` in a sorted array `A`. The process involves iterating through the array while keeping track of the index of the last occurrence of `x`. If `x` is found, the current index is stored in the variable `index`. After the loop completes, the function returns the value of `index`, which will be the index of the last occurrence of `x` or -1 if `x` is not found in the array. This approach ensures that the function correctly handles both cases where `x` is present and where it is not.

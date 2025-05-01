@@ -1,0 +1,8 @@
+Input: list: a list of items, string: a string to be inserted at the beginning of each item in the list
+Output: result: a new list where the given string is inserted at the beginning of each item in the original list
+
+1: Initialize an empty list result
+2: Loop through each item in the input list
+3:     Concatenate the given string with the current item
+4:     Append the concatenated result to the result list
+5: Return the result list

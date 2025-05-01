@@ -1,0 +1,13 @@
+Input: n, k: integers representing the parameters for the permutation coefficient calculation
+Output: The permutation coefficient P(n, k)
+
+1: Initialize a 2D list P of size (n+1) x (k+1) with all elements set to 0
+2: for i from 0 to n inclusive:
+3:     for j from 0 to the minimum of i and k inclusive:
+4:         if j is 0:
+5:             set P[i][j] to 1
+6:         else:
+7:             set P[i][j] to P[i-1][j] + (j * P[i-1][j-1])
+8:         if j is less than k:
+9:             set P[i][j+1] to 0
+10: return P[n][k]

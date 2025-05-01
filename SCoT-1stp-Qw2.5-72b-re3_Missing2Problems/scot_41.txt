@@ -1,0 +1,6 @@
+Input: nums: a list of integers
+Output: filtered_nums: a list of integers containing only the even numbers from the input list
+
+1: Use the filter function with a lambda function to filter out even numbers from the input list `nums`.
+2: Convert the filter object to a list to get the final list of even numbers.
+3: Return the list of even numbers.

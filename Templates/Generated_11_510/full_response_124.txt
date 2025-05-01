@@ -1,0 +1,8 @@
+[BEGIN]
+Input: a, b: real numbers representing the real and imaginary parts of a complex number
+Output: angle: the angle (in radians) of the complex number
+
+1: Create a complex number `cn` using `a` and `b`.
+2: Calculate the angle of the complex number `cn` using the `cmath.phase` function.
+3: Return the calculated angle.
+[END]

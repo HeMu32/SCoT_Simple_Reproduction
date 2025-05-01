@@ -1,0 +1,9 @@
+Input: n: an integer representing the size of the array, arr: a list of integers
+Output: frequency: an integer representing the frequency of the smallest value in the array
+
+1: Check if the array is empty or if n is less than 1. If true, return 0 as there are no elements to process.
+2: Find the smallest value in the array.
+3: Initialize a counter to 0.
+4: Loop through each element in the array:
+5:     If the current element is equal to the smallest value, increment the counter.
+6: Return the counter as the frequency of the smallest value.

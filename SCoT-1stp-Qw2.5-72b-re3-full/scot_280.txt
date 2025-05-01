@@ -1,0 +1,10 @@
+Input: dlist: a list of elements, item: the element to search for
+Output: The index of the item if found, otherwise -1
+
+1: Initialize a variable `index` to 0
+2: Loop through the list `dlist`:
+3:     If the current element is equal to `item`:
+4:         Return the current `index`
+5:     Increment `index` by 1
+6: If the loop completes without finding the item:
+7:     Return -1

@@ -1,0 +1,47 @@
+[BEGIN PROCESS]
+Input: n: an integer greater than 1
+Output: largest_prime: the largest prime factor of n
+1: Initialize largest_prime to -1 (to handle the case where n is 1 or no prime factors are found)
+2: While n is even, divide n by 2 and set largest_prime to 2
+3: For i from 3 to the square root of n, incrementing by 2 (to check only odd numbers):
+4:     While i divides n, divide n by i and set largest_prime to i
+5: If n is a prime number greater than 2, set largest_prime to n
+6: Return largest_prime
+[END PROCESS]
+
+[BEGIN CODE]
+def max_Prime_Factors(n):
+    largest_prime = -1
+    
+    # Handle the case where n is even
+    while n % 2 == 0:
+        largest_prime = 2
+        n = n // 2
+    
+    # Check for odd factors
+    for i in range(3, int(n**0.5) + 1, 2):
+        while n % i == 0:
+            largest_prime = i
+            n = n // i
+    
+    # If n is a prime number greater than 2
+    if n > 2:
+        largest_prime = n
+    
+    return largest_prime
+[END CODE]
+
+### Explanation:
+The function `max_Prime_Factors(n)` is designed to find the largest prime factor of a given integer `n`. The process involves the following steps:
+
+1. **Initialization**: We start by initializing `largest_prime` to -1. This is a placeholder value to handle edge cases where `n` might be 1 or no prime factors are found.
+
+2. **Handling Even Numbers**: We first check if `n` is even (i.e., divisible by 2). If it is, we repeatedly divide `n` by 2 and set `largest_prime` to 2. This step ensures that we remove all factors of 2 from `n`.
+
+3. **Checking Odd Factors**: After handling the even factors, we move on to checking for odd factors. We iterate from 3 to the square root of `n`, incrementing by 2 (to check only odd numbers). For each odd number `i`, we check if it divides `n`. If it does, we repeatedly divide `n` by `i` and set `largest_prime` to `i`.
+
+4. **Final Check for Prime**: After the loop, if `n` is still greater than 2, it means `n` itself is a prime number and is the largest prime factor. We set `largest_prime` to `n`.
+
+5. **Return the Result**: Finally, we return `largest_prime`, which is the largest prime factor of the original number `n`.
+
+This approach ensures that we efficiently find the largest prime factor by first removing all factors of 2 and then checking for odd factors up to the square root of `n`. This reduces the number of iterations and makes the function more efficient.

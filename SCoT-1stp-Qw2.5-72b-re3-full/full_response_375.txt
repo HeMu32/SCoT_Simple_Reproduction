@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: n: a number to be rounded, m: the multiple to which n should be rounded
+Output: the nearest multiple of m to n
+
+1: Calculate the remainder of n divided by m
+2: If the remainder is less than half of m:
+3:     Round down to the nearest multiple of m
+4: Else:
+5:     Round up to the nearest multiple of m
+6: Return the rounded value
+[END PROCESS]
+
+[BEGIN CODE]
+def round_num(n, m):
+    remainder = n % m
+    if remainder < m / 2:
+        rounded_value = n - remainder
+    else:
+        rounded_value = n + (m - remainder)
+    return rounded_value
+[END CODE]
+
+### Explanation:
+The function `round_num(n, m)` rounds the number `n` to the nearest multiple of `m`. The process involves calculating the remainder when `n` is divided by `m`. If the remainder is less than half of `m`, it means that the nearest multiple of `m` is below `n`, so we subtract the remainder from `n`. If the remainder is greater than or equal to half of `m`, the nearest multiple of `m` is above `n`, so we add the difference between `m` and the remainder to `n`. This ensures that `n` is rounded to the nearest multiple of `m`. The function then returns the rounded value.

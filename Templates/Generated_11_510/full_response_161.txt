@@ -1,0 +1,10 @@
+[BEGIN]
+Input: list1, list2: two lists of elements
+Output: result: a list with elements from list1 that are not in list2
+
+1: Initialize an empty list named result
+2: For each element x in list1:
+3:     If x is not in list2:
+4:         Add x to result
+5: Return result
+[END]

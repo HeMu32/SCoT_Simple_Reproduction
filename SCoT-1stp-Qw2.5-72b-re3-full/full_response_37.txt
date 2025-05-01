@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: mixed_list: a list containing both integers and strings
+Output: sorted_list: a list with all elements sorted, with integers first in ascending order, followed by strings in ascending order
+
+1: Separate the integers and strings into two different lists
+2: Sort the list of integers in ascending order
+3: Sort the list of strings in ascending order
+4: Concatenate the sorted list of integers with the sorted list of strings
+5: Return the concatenated list
+[END PROCESS]
+
+[BEGIN CODE]
+def sort_mixed_list(mixed_list):
+    # Separate integers and strings
+    integers = [x for x in mixed_list if isinstance(x, int)]
+    strings = [x for x in mixed_list if isinstance(x, str)]
+    
+    # Sort the integers and strings separately
+    integers.sort()
+    strings.sort()
+    
+    # Concatenate the sorted lists
+    sorted_list = integers + strings
+    
+    return sorted_list
+[END CODE]
+
+Explanation:
+- The function `sort_mixed_list` takes a mixed list as input, which can contain both integers and strings.
+- The list comprehension `[x for x in mixed_list if isinstance(x, int)]` is used to filter out and create a list of integers.
+- Similarly, `[x for x in mixed_list if isinstance(x, str)]` is used to filter out and create a list of strings.
+- The `sort()` method is used to sort both the integers and strings in ascending order.
+- The sorted lists are then concatenated using the `+` operator, with the list of integers coming first, followed by the list of strings.
+- Finally, the concatenated list is returned as the output. This ensures that the integers are sorted and placed before the strings, and the strings are also sorted and placed after the integers.

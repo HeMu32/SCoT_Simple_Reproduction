@@ -1,0 +1,42 @@
+[BEGIN PROCESS]
+Input: limit: an integer representing the upper limit of the range to check for amicable numbers
+Output: sum_amicable: the sum of all amicable numbers within the range from 1 to the limit
+
+1: Initialize a variable sum_amicable to 0 to store the sum of amicable numbers
+2: for each number n from 2 to limit do
+3:     Calculate the sum of proper divisors of n (sum_divisors_n)
+4:     if sum_divisors_n is not equal to n and is less than or equal to limit then
+5:         Calculate the sum of proper divisors of sum_divisors_n (sum_divisors_sum_divisors_n)
+6:         if sum_divisors_sum_divisors_n equals n then
+7:             n and sum_divisors_n are an amicable pair
+8:             Add n to sum_amicable
+9: return sum_amicable
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_of_proper_divisors(n):
+    """Helper function to calculate the sum of proper divisors of a number."""
+    return sum([i for i in range(1, n) if n % i == 0])
+
+def amicable_numbers_sum(limit):
+    sum_amicable = 0
+    for n in range(2, limit + 1):
+        sum_divisors_n = sum_of_proper_divisors(n)
+        if sum_divisors_n != n and sum_divisors_n <= limit:
+            sum_divisors_sum_divisors_n = sum_of_proper_divisors(sum_divisors_n)
+            if sum_divisors_sum_divisors_n == n:
+                sum_amicable += n
+    return sum_amicable
+[END CODE]
+
+### Explanation:
+1. **Helper Function**: `sum_of_proper_divisors(n)` is a helper function that calculates the sum of all proper divisors of a number `n` (excluding `n` itself).
+2. **Main Function**: `amicable_numbers_sum(limit)` is the main function that calculates the sum of all amicable numbers within the range from 1 to `limit`.
+3. **Loop Through Range**: The function iterates through each number `n` from 2 to `limit`.
+4. **Sum of Proper Divisors**: For each number `n`, it calculates the sum of its proper divisors (`sum_divisors_n`).
+5. **Check Amicable Pair**: If `sum_divisors_n` is not equal to `n` and is within the limit, it calculates the sum of proper divisors of `sum_divisors_n` (`sum_divisors_sum_divisors_n`).
+6. **Amicable Condition**: If `sum_divisors_sum_divisors_n` equals `n`, then `n` and `sum_divisors_n` form an amicable pair.
+7. **Sum Amicable Numbers**: The function adds `n` to `sum_amicable`.
+8. **Return Result**: Finally, the function returns the sum of all amicable numbers found.
+
+This approach ensures that all amicable pairs within the specified range are identified and their sum is calculated efficiently.

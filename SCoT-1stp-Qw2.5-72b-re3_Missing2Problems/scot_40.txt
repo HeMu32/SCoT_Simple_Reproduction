@@ -1,0 +1,10 @@
+Input: nums: a list of lists containing elements
+Output: freq: a dictionary with elements as keys and their frequencies as values
+
+1: Import the Counter class from the collections module
+2: Initialize an empty list to hold all elements
+3: Loop through each sublist in nums
+4:     Extend the elements list with the current sublist
+5: After the loop, create a Counter object from the elements list
+6: Convert the Counter object to a dictionary
+7: Return the dictionary

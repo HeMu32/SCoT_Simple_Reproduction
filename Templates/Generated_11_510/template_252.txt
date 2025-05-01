@@ -1,0 +1,5 @@
+Input: numbers: a complex number 
+Output: polar_coordinates: a tuple containing the magnitude and phase angle of the complex number 
+1: import the cmath module 
+2: convert the complex number to polar coordinates using cmath.polar(numbers) 
+3: return the polar coordinates

@@ -1,0 +1,20 @@
+[BEGIN PROCESS]
+Input: arr: a list of integers, lens: the length of the list, n: an integer divisor
+Output: The remainder of the product of all elements in arr divided by n
+
+1: Initialize a variable `product` to 1. This variable will hold the cumulative product of the elements in the array.
+2: Loop through each element in the array `arr`.
+3: For each element, multiply it with `product` and take the modulo `n` of the result to avoid large number overflow.
+4: After the loop, return the value of `product` which now holds the remainder of the product of all elements divided by `n`.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_remainder(arr, lens, n):
+    product = 1
+    for i in range(lens):
+        product = (product * (arr[i] % n)) % n
+    return product
+[END CODE]
+
+Explanation:
+The function `find_remainder` calculates the remainder of the product of all elements in the array `arr` when divided by `n`. To handle large numbers and prevent overflow, the product is taken modulo `n` at each step of the multiplication. This ensures that the intermediate results remain manageable and the final result is accurate. The function iterates over the array using a for loop, multiplying each element by the current product and taking the modulo `n` of the result. After the loop completes, the final value of `product` is returned, which is the remainder of the product of all elements in the array divided by `n`.

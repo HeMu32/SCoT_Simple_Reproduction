@@ -1,0 +1,10 @@
+Input: str: a string
+Output: The first repeated character in the string, or None if there is no repeated character
+
+1: Initialize an empty set to keep track of seen characters
+2: Loop through each character in the string:
+3:     If the character is already in the set:
+4:         Return the character as it is the first repeated character
+5:     Else:
+6:         Add the character to the set
+7: If the loop completes without finding a repeated character, return None

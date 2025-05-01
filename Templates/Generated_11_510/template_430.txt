@@ -1,0 +1,5 @@
+Input: a, b, c: coefficients of the parabola equation \( ax^2 + bx + c \)
+Output: directrix: the directrix of the parabola
+
+1: Calculate the value of the directrix using the formula: directrix = c - ((b * b) + 1) * 4 * a
+2: Return the calculated directrix

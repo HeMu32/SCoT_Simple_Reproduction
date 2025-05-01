@@ -1,0 +1,7 @@
+Input: string: a string of characters
+Output: A list of characters, where each character in the string is an element in the list
+
+1: Initialize an empty list called `char_list`
+2: Loop through each character in the string
+3:     Append the current character to `char_list`
+4: Return `char_list`

@@ -1,0 +1,5 @@
+Input: n: an integer 
+Output: d: the last digit of n 
+1: Compute the remainder of n divided by 10 
+2: Assign the result to d 
+3: Return d

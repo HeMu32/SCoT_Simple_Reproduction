@@ -1,0 +1,6 @@
+Input: stringlist: a list of strings  
+Output: result: a list of strings with each string reversed  
+1: Initialize an empty list result  
+2: For each string x in stringlist:  
+3:     Reverse the string x and add it to result  
+4: Return result

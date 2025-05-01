@@ -1,0 +1,17 @@
+Input: n: an integer
+Output: A boolean value indicating whether the given number can be represented as the sum of non-zero powers of 2
+
+1: Initialize a variable `result` to True
+2: While `n` is greater than 0:
+3:     If `n` is odd:
+4:         Set `result` to False
+5:         Break the loop
+6:     Otherwise:
+7:         Subtract the largest power of 2 less than or equal to `n` from `n`
+8: Return `result`
+
+Explanation:
+- A number can be represented as the sum of non-zero powers of 2 if and only if it is a sum of distinct powers of 2. This is equivalent to the number being a sum of distinct bits in its binary representation.
+- If a number is odd, it means it has a '1' in the least significant bit, which cannot be represented as a sum of non-zero powers of 2 (since the smallest non-zero power of 2 is 2^1 = 2).
+- If a number is even, we can subtract the largest power of 2 less than or equal to the number and continue checking the remainder.
+- If we can reduce the number to 0 by repeatedly subtracting powers of 2, then the number can be represented as the sum of non-zero powers of 2.

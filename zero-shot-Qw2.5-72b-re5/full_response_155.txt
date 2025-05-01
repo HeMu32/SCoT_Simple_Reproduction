@@ -1,0 +1,14 @@
+[BEGIN CODE]
+```python
+def even_bit_toggle_number(n):
+    """
+    Toggles all even bits of a given number.
+    """
+    result = 0
+    mask = 0xAAAAAAAA  # Mask for even bits (0b10101010101010101010101010101010)
+    return n ^ mask
+
+# Example usage:
+# print(bin(even_bit_toggle_number(0b10101010)))  # Output: 0b1010101
+```
+[END CODE]

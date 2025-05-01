@@ -1,0 +1,13 @@
+[BEGIN]
+Input: s: a string  
+Output: result: the number of substrings where the first and last characters are the same  
+
+1: Initialize result to 0  
+2: Calculate the length of the string, n  
+3: for i from 0 to n-1:  
+4:     for j from 1 to n-i+1:  
+5:         Extract the substring from index i to i+j  
+6:         if the first character of the substring is equal to the last character of the substring:  
+7:             Increment result by 1  
+8: return result  
+[END]

@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: nums: a list of integers
+Output: a list of integers where each element is the sum of the digits of the corresponding number in the input list
+
+1: Initialize an empty list to store the sum of digits for each number
+2: Loop through each number in the input list
+3:   Convert the number to a string to easily iterate over each digit
+4:   Initialize a variable to store the sum of digits for the current number
+5:   Loop through each character in the string representation of the number
+6:     Convert the character back to an integer and add it to the sum of digits
+7:   Append the sum of digits to the result list
+8: Return the result list
+[END PROCESS]
+
+[BEGIN CODE]
+def sum_of_digits(nums):
+    result = []
+    for num in nums:
+        num_str = str(num)
+        digit_sum = 0
+        for char in num_str:
+            digit_sum += int(char)
+        result.append(digit_sum)
+    return result
+[END CODE]
+
+### Explanation:
+The function `sum_of_digits` takes a list of integers as input and returns a list of integers where each element is the sum of the digits of the corresponding number in the input list. Here's a step-by-step breakdown of how the function works:
+
+1. **Initialization**: An empty list `result` is initialized to store the sum of digits for each number.
+2. **Loop through each number**: A for loop iterates over each number in the input list `nums`.
+3. **Convert to string**: Each number is converted to a string using `str(num)` to allow easy iteration over each digit.
+4. **Initialize sum of digits**: A variable `digit_sum` is initialized to 0 to store the sum of digits for the current number.
+5. **Loop through each digit**: Another for loop iterates over each character in the string representation of the number.
+6. **Convert and add**: Each character is converted back to an integer using `int(char)` and added to `digit_sum`.
+7. **Append to result**: After the inner loop completes, the sum of digits for the current number is appended to the `result` list.
+8. **Return result**: After the outer loop completes, the `result` list is returned, containing the sum of digits for each number in the input list.
+
+This approach ensures that the function correctly computes the sum of digits for each number in the input list and returns the results in a new list.

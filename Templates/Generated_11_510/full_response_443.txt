@@ -1,0 +1,9 @@
+[BEGIN]
+Input: list1: a list of numbers
+Output: max: the largest negative number in list1
+1: set max to the first element of list1
+2: for each element x in list1:
+3:     if x is less than max:
+4:         set max to x
+5: return max
+[END]

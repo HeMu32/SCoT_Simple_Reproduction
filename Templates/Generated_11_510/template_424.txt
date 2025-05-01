@@ -1,0 +1,6 @@
+Input: test_tuple: a tuple of strings  
+Output: res: a list of the last characters of each string in test_tuple  
+1: Initialize an empty list res  
+2: For each string sub in test_tuple do  
+3:     Append the last character of sub to res  
+4: Return res

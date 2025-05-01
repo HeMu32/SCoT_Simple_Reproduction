@@ -1,0 +1,8 @@
+Input: n: number of trials, k: number of successes, p: probability of success on an individual trial
+Output: The binomial probability of getting exactly k successes in n trials
+
+1: Calculate the binomial coefficient (n choose k) which is the number of ways to choose k successes out of n trials.
+2: Calculate the probability of k successes, which is p^k.
+3: Calculate the probability of n-k failures, which is (1-p)^(n-k).
+4: Multiply the binomial coefficient by the probability of k successes and the probability of n-k failures to get the binomial probability.
+5: Return the binomial probability.

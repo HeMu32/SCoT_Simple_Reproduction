@@ -1,0 +1,6 @@
+Input: test_list: a list of tuples
+Output: res: a list containing the last element of each tuple in test_list
+1: Initialize an empty list res
+2: For each tuple lis in test_list do
+3:     Append the last element of lis to res
+4: Return res

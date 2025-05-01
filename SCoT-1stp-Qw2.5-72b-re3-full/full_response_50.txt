@@ -1,0 +1,19 @@
+[BEGIN PROCESS]
+Input: input_list: a list of lists
+Output: The list with the minimum length from the input_list.
+
+1: Use the `min` function with a key parameter to find the list with the minimum length.
+2: The key parameter should use a lambda function that returns the length of each list.
+3: Return the list with the minimum length.
+[END PROCESS]
+
+[BEGIN CODE]
+def min_length_list(input_list): 
+    """ 
+    Write a function to find the list with minimum length using lambda function. 
+    """ 
+    return min(input_list, key=lambda x: len(x))
+[END CODE]
+
+Explanation:
+The function `min_length_list` takes a list of lists as input. It uses Python's built-in `min` function, which can take an iterable and a key function. The key function is used to compute a value for each element in the iterable, and `min` returns the element that has the smallest key value. In this case, the key function is a lambda function `lambda x: len(x)`, which computes the length of each list. Therefore, `min` returns the list with the minimum length from the input list.

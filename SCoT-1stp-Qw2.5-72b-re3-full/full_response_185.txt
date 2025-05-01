@@ -1,0 +1,44 @@
+[BEGIN PROCESS]
+Input: a, b, c: coefficients of the parabola equation in the form y = ax^2 + bx + c
+Output: focus: a tuple (x, y) representing the coordinates of the focus of the parabola
+
+1: Calculate the x-coordinate of the vertex using the formula x_vertex = -b / (2 * a)
+2: Calculate the y-coordinate of the vertex using the formula y_vertex = c - b^2 / (4 * a)
+3: Calculate the distance from the vertex to the focus using the formula distance = 1 / (4 * a)
+4: Determine the y-coordinate of the focus by adding the distance to the y-coordinate of the vertex
+5: Return the focus as a tuple (x_vertex, y_focus)
+[END PROCESS]
+
+[BEGIN CODE]
+def parabola_focus(a, b, c):
+    # Calculate the x-coordinate of the vertex
+    x_vertex = -b / (2 * a)
+    
+    # Calculate the y-coordinate of the vertex
+    y_vertex = c - b**2 / (4 * a)
+    
+    # Calculate the distance from the vertex to the focus
+    distance = 1 / (4 * a)
+    
+    # Calculate the y-coordinate of the focus
+    y_focus = y_vertex + distance
+    
+    # Return the focus as a tuple
+    return (x_vertex, y_focus)
+[END CODE]
+
+### Explanation:
+The focus of a parabola given by the equation \( y = ax^2 + bx + c \) can be found using the following steps:
+
+1. **Vertex Calculation**:
+   - The x-coordinate of the vertex is given by \( x_{\text{vertex}} = -\frac{b}{2a} \).
+   - The y-coordinate of the vertex is given by \( y_{\text{vertex}} = c - \frac{b^2}{4a} \).
+
+2. **Focus Calculation**:
+   - The distance from the vertex to the focus is \( \frac{1}{4a} \).
+   - The y-coordinate of the focus is \( y_{\text{focus}} = y_{\text{vertex}} + \frac{1}{4a} \).
+
+3. **Return the Focus**:
+   - The focus is returned as a tuple \( (x_{\text{vertex}}, y_{\text{focus}}) \).
+
+This function correctly calculates the focus of the parabola based on the given coefficients \( a \), \( b \), and \( c \).

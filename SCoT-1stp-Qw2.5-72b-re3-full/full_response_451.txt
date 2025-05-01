@@ -1,0 +1,25 @@
+[BEGIN PROCESS]
+Input: text1: a string containing whitespaces
+Output: a string with all whitespaces removed
+1: Import the regular expression module (re)
+2: Use the sub method from the re module to replace all whitespace characters in text1 with an empty string
+3: Return the modified string
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def remove_whitespaces(text1):
+    # Use re.sub to replace all whitespace characters with an empty string
+    return re.sub(r'\s+', '', text1)
+[END CODE]
+
+### Explanation:
+- **Input**: The function `remove_whitespaces` takes a single argument `text1`, which is a string that may contain one or more whitespace characters.
+- **Process**:
+  1. **Import the `re` module**: This module provides support for regular expressions in Python.
+  2. **Use `re.sub`**: The `re.sub` function is used to replace all occurrences of a pattern (in this case, one or more whitespace characters) with a specified replacement string (in this case, an empty string `''`). The pattern `\s+` matches any whitespace character (spaces, tabs, newlines, etc.) and the `+` ensures that one or more consecutive whitespace characters are matched.
+  3. **Return the result**: The modified string, with all whitespaces removed, is returned.
+- **Output**: The function returns a new string with all whitespace characters removed from the original string.
+
+This approach is efficient and concise, leveraging the power of regular expressions to handle the whitespace removal in a single line of code.

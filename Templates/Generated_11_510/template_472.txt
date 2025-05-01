@@ -1,0 +1,9 @@
+Input: l: a list of integers
+Output: True if the list contains consecutive numbers, otherwise False
+1: Sort the list l
+2: Create a range of numbers from the minimum value in l to the maximum value in l, inclusive
+3: Convert this range into a list
+4: If the sorted list l is equal to the list created from the range:
+5:     return True
+6: Else:
+7:     return False

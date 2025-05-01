@@ -1,0 +1,32 @@
+[BEGIN PROCESS]
+Input: tuple_str: a tuple containing string values
+Output: tuple_int: a tuple containing the integer values converted from the string values
+
+1: Initialize an empty list to store the integer values
+2: Loop through each element in the input tuple
+3: Convert the current string element to an integer
+4: Append the converted integer to the list
+5: Convert the list of integers to a tuple
+6: Return the tuple of integers
+[END PROCESS]
+
+[BEGIN CODE]
+def tuple_int_str(tuple_str):
+    # Initialize an empty list to store the integer values
+    int_list = []
+    
+    # Loop through each element in the input tuple
+    for item in tuple_str:
+        # Convert the current string element to an integer
+        int_value = int(item)
+        # Append the converted integer to the list
+        int_list.append(int_value)
+    
+    # Convert the list of integers to a tuple
+    tuple_int = tuple(int_list)
+    # Return the tuple of integers
+    return tuple_int
+[END CODE]
+
+Explanation:
+The function `tuple_int_str` takes a single argument, `tuple_str`, which is expected to be a tuple of strings. The function processes this tuple by converting each string element into an integer and then returns a new tuple containing these integers. The process involves initializing an empty list, iterating over the input tuple, converting each string to an integer, appending the integer to the list, and finally converting the list back to a tuple before returning it. This approach ensures that the function can handle tuples of any length and that each string is properly converted to an integer.

@@ -1,0 +1,20 @@
+Input: my_matrix: a 2D list representing a square matrix
+Output: True if the matrix is a magic square, False otherwise
+
+1: iSize = the length of the first row of my_matrix
+2: sum_list = an empty list to store the sums of rows, columns, and diagonals
+3: for each row in my_matrix:
+4:     add the sum of the row to sum_list
+5: for each column index in the range of iSize:
+6:     add the sum of the column to sum_list
+7: result1 = 0
+8: for each index i in the range of iSize:
+9:     add the element at position (i, i) to result1
+10: add result1 to sum_list
+11: result2 = 0
+12: for each index i in the range of iSize-1 to 0 (decreasing):
+13:     add the element at position (i, i) to result2
+14: add result2 to sum_list
+15: if the length of the set of sum_list is greater than 1:
+16:     return False
+17: return True

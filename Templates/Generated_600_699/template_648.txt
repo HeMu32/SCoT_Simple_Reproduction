@@ -1,0 +1,13 @@
+Input: lst: a list 
+Output: a new list with the position of every n-th value exchanged with (n+1)th value and (n+1)th value with n-th value 
+
+1: Create two iterators, lst1 and lst2, from the original list lst
+2: Initialize an empty list to store the result
+3: Use a loop to iterate over the elements of lst1 and lst2 in pairs
+4:     for each pair (n-th, (n+1)th) from lst1 and lst2:
+5:         if the pair is not a single element (i.e., both elements are present):
+6:             append (n+1)th element to the result list
+7:             append n-th element to the result list
+8:         else:
+9:             append the single element to the result list
+10: Return the result list

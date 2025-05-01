@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: list1: a list of floating-point numbers
+Output: The total sum of the rounded numbers multiplied by the length of the list
+
+1: Initialize a variable `total_sum` to 0 to store the sum of the rounded numbers.
+2: Loop through each number in `list1`:
+3:     Round the current number to the nearest integer.
+4:     Add the rounded number to `total_sum`.
+5: After the loop, multiply `total_sum` by the length of `list1`.
+6: Print the result of the multiplication.
+[END PROCESS]
+
+[BEGIN CODE]
+def round_and_sum(list1):
+    total_sum = 0
+    for number in list1:
+        rounded_number = round(number)
+        total_sum += rounded_number
+    result = total_sum * len(list1)
+    print(result)
+[END CODE]
+
+### Explanation:
+- **Step 1:** Initialize `total_sum` to 0. This variable will be used to accumulate the sum of the rounded numbers.
+- **Step 2:** Use a `for` loop to iterate through each number in the input list `list1`.
+- **Step 3:** Inside the loop, use the `round()` function to round the current number to the nearest integer.
+- **Step 4:** Add the rounded number to `total_sum`.
+- **Step 5:** After the loop, multiply `total_sum` by the length of `list1` to get the final result.
+- **Step 6:** Print the final result.
+
+This function will correctly round each number in the list, sum them up, and then multiply the sum by the length of the list, printing the final result.

@@ -1,0 +1,9 @@
+[BEGIN]
+Input: n: an integer representing the bit position
+Output: count: the number of integers where the 0th and nth bits are set
+
+1: if n is 1:
+2:     return 1
+3: initialize count as 2^(n-2)
+4: return count
+[END]

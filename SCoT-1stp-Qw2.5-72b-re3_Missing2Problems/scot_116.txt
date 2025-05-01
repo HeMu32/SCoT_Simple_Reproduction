@@ -1,0 +1,8 @@
+Input: nums: a tuple of positive integers
+Output: an integer formed by concatenating the integers in the tuple
+
+1: Initialize an empty string `result_str` to store the concatenated string representation of the integers.
+2: Loop through each integer in the tuple `nums`.
+3: Convert the current integer to a string and concatenate it to `result_str`.
+4: After the loop, convert `result_str` to an integer.
+5: Return the resulting integer.

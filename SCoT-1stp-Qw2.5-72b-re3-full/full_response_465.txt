@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: dict1: a dictionary with various key-value pairs, where some values may be empty (None, '', [], {}, etc.)
+Output: A new dictionary with all empty values removed
+
+1: Initialize a new dictionary, new_dict, to store the non-empty items
+2: Loop through each key-value pair in dict1
+3:     If the value is not empty (i.e., not None, not an empty string, not an empty list, not an empty dictionary, etc.)
+4:         Add the key-value pair to new_dict
+5: After the loop, return new_dict
+[END PROCESS]
+
+[BEGIN CODE]
+def drop_empty(dict1):
+    # Initialize a new dictionary to store non-empty items
+    new_dict = {}
+    
+    # Loop through each key-value pair in the input dictionary
+    for key, value in dict1.items():
+        # Check if the value is not empty
+        if value:
+            # Add the key-value pair to the new dictionary
+            new_dict[key] = value
+    
+    # Return the new dictionary with non-empty items
+    return new_dict
+[END CODE]
+
+### Explanation:
+The function `drop_empty` takes a dictionary `dict1` as input and returns a new dictionary with all empty values removed. In Python, empty values can be `None`, `''` (empty string), `[]` (empty list), `{}` (empty dictionary), and `0` (zero). The function uses a simple loop to iterate over each key-value pair in the input dictionary. For each pair, it checks if the value is truthy (i.e., not empty). If the value is not empty, it adds the key-value pair to a new dictionary `new_dict`. Finally, the function returns `new_dict`, which contains only the non-empty items from the original dictionary.

@@ -1,0 +1,12 @@
+[BEGIN]
+Input: string: a string to be analyzed
+Output: uppercase_characters, lowercase_characters, numerical_characters, special_characters: lists of characters found in the string
+
+1: Import the regex module (re)
+2: Define a function find_character that takes a string as an argument
+3:   Use regex to find all uppercase characters in the string and store them in uppercase_characters
+4:   Use regex to find all lowercase characters in the string and store them in lowercase_characters
+5:   Use regex to find all numeric characters in the string and store them in numerical_characters
+6:   Use regex to find all special characters (, . ! ?) in the string and store them in special_characters
+7:   Return the lists uppercase_characters, lowercase_characters, numerical_characters, and special_characters
+[END]

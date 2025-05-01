@@ -1,0 +1,11 @@
+[BEGIN]
+Input: list1: a list of elements
+Output: min_result: a list of indices where the minimum value occurs in list1
+
+1: Find the minimum value in list1 and store it in min_val
+2: Initialize an empty list min_result to store the indices of the minimum value
+3: For each element in list1, do the following:
+4:     If the current element is equal to min_val, then
+5:         Add the current index to min_result
+6: Return min_result
+[END]

@@ -1,0 +1,7 @@
+Input: lst: a list of sublists  
+Output: minLength: the minimum length of the sublists in lst  
+1: Initialize minLength to the length of the first sublist in lst  
+2: for each sublist x in lst:  
+3:     if the length of x is less than minLength:  
+4:         set minLength to the length of x  
+5: return minLength

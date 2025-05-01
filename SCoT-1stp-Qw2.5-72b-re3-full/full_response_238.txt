@@ -1,0 +1,25 @@
+[-BEGIN PROCESS]
+Input: str: a string
+Output: count: the number of non-empty substrings of the given string
+
+1: Calculate the length of the string, let's call it n
+2: The number of non-empty substrings of a string of length n is given by the formula: n * (n + 1) / 2
+3: Return the calculated count
+[END PROCESS]
+
+[BEGIN CODE]
+def number_of_substrings(str):
+    n = len(str)
+    count = n * (n + 1) // 2
+    return count
+[END CODE]
+
+### Explanation:
+The function `number_of_substrings` is designed to calculate the number of non-empty substrings that can be formed from a given string. The key insight here is that for a string of length `n`, the total number of non-empty substrings is given by the formula `n * (n + 1) / 2`. This formula comes from the fact that for each starting position in the string, there are `n - i` possible substrings that can be formed, where `i` is the starting index. Summing these possibilities from `i = 0` to `i = n - 1` gives the total number of substrings, which simplifies to the formula `n * (n + 1) / 2`.
+
+The implementation is straightforward:
+1. Calculate the length of the string.
+2. Apply the formula to get the count of non-empty substrings.
+3. Return the count.
+
+This approach ensures that the function runs in constant time, O(1), making it very efficient.

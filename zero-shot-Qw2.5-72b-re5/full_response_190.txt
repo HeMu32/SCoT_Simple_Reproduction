@@ -1,0 +1,18 @@
+[BEGIN CODE]
+```python
+def count_Intgral_Points(x1, y1, x2, y2):
+    # Ensure the coordinates form a square
+    if abs(x2 - x1) != abs(y2 - y1):
+        return 0
+    
+    # Calculate the side length of the square
+    side_length = abs(x2 - x1)
+    
+    # Calculate the number of integral points inside the square
+    # Exclude the boundary points
+    if side_length > 1:
+        return (side_length - 1) ** 2
+    else:
+        return 0
+```
+[END CODE]

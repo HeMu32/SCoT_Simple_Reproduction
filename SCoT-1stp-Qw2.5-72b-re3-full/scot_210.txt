@@ -1,0 +1,8 @@
+Input: string: a string to be checked
+Output: is_allowed: a boolean indicating whether the string contains only the allowed characters (a-z, A-Z, 0-9)
+
+1: Import the re module to use regular expressions
+2: Define a pattern that matches only the allowed characters (a-z, A-Z, 0-9)
+3: Use the re.fullmatch function to check if the entire string matches the pattern
+4: If the string matches the pattern, return True
+5: Otherwise, return False

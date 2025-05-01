@@ -1,0 +1,63 @@
+[BEGIN PROCESS]
+Input: nums1: a list of integers, nums2: a list of integers, k: an integer
+Output: pairs: a list of k pairs, each pair consisting of one element from nums1 and one element from nums2
+
+1: Initialize an empty list to store the pairs
+2: Initialize a min-heap to store the pairs along with their sums, where the heap is sorted by the sum of the pair
+3: For each element in nums1, and for each element in nums2:
+4:     Calculate the sum of the current pair
+5:     If the heap has less than k elements, push the current pair and its sum into the heap
+6:     If the heap has k elements and the sum of the current pair is less than the largest sum in the heap, replace the largest sum in the heap with the current pair and its sum
+7: Initialize an empty list to store the final k pairs
+8: While the heap is not empty:
+9:     Pop the smallest sum pair from the heap and add it to the final list of pairs
+10: Return the final list of pairs
+[END PROCESS]
+
+[BEGIN CODE]
+import heapq
+
+def k_smallest_pairs(nums1, nums2, k):
+    # Initialize the min-heap
+    min_heap = []
+    
+    # Iterate over each element in nums1 and nums2
+    for i in nums1:
+        for j in nums2:
+            # Calculate the sum of the current pair
+            pair_sum = i + j
+            
+            # If the heap has less than k elements, push the current pair and its sum
+            if len(min_heap) < k:
+                heapq.heappush(min_heap, (-pair_sum, (i, j)))
+            else:
+                # If the heap has k elements and the sum of the current pair is less than the largest sum in the heap
+                if -min_heap[0][0] > pair_sum:
+                    heapq.heappop(min_heap)
+                    heapq.heappush(min_heap, (-pair_sum, (i, j)))
+    
+    # Extract the pairs from the heap
+    result = [pair for _, pair in min_heap]
+    
+    # Since the heap is a max-heap (due to negative sums), reverse the result to get the smallest pairs first
+    result.reverse()
+    
+    return result
+[END CODE]
+
+### Explanation:
+The function `k_smallest_pairs` is designed to find the `k` smallest pairs from two lists of integers, `nums1` and `nums2`. Each pair consists of one element from `nums1` and one element from `nums2`. The pairs are ordered by the sum of their elements.
+
+1. **Min-Heap Initialization**: A min-heap is used to keep track of the `k` smallest pairs. The heap is initialized as an empty list.
+
+2. **Iterate Over Pairs**: We iterate over each element in `nums1` and `nums2` to form pairs. For each pair, we calculate the sum of the elements.
+
+3. **Heap Operations**: 
+   - If the heap has fewer than `k` elements, we push the current pair and its sum into the heap.
+   - If the heap already has `k` elements, we compare the sum of the current pair with the largest sum in the heap (which is the root of the heap). If the current pair's sum is smaller, we replace the largest sum in the heap with the current pair.
+
+4. **Extract Pairs**: After processing all pairs, we extract the pairs from the heap. Since the heap is a max-heap (due to the negative sums), we reverse the result to get the smallest pairs first.
+
+5. **Return Result**: Finally, the function returns the list of `k` smallest pairs.
+
+This approach ensures that we efficiently find the `k` smallest pairs with a time complexity of O(n * m * log k), where `n` and `m` are the lengths of `nums1` and `nums2`, respectively. The space complexity is O(k) for storing the heap.

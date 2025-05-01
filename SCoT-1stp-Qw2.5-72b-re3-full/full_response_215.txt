@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: alist: a list where each element is a sublist, and each sublist contains a count followed by a value (e.g., [2, 'a'] means 'a' appears twice)
+Output: decoded_list: a list where each value from the input list is repeated according to its count
+
+1: Initialize an empty list `decoded_list` to store the decoded elements.
+2: For each sublist in `alist`:
+3:     Extract the count and the value from the sublist.
+4:     For the number of times specified by the count:
+5:         Append the value to `decoded_list`.
+6: Return `decoded_list`.
+[END PROCESS]
+
+[BEGIN CODE]
+def decode_list(alist):
+    decoded_list = []
+    for item in alist:
+        count, value = item  # Unpack the count and value from the sublist
+        for _ in range(count):  # Repeat the value `count` times
+            decoded_list.append(value)
+    return decoded_list
+[END CODE]
+
+### Explanation
+
+The function `decode_list` is designed to decode a run-length encoded list. Run-length encoding is a simple form of data compression where sequences of the same data value are stored as a single data value and count. In this context, the input list `alist` is a list of sublists, where each sublist contains a count and a value. The function decodes this list by repeating each value according to its count and appending it to a new list, which is then returned.
+
+1. **Initialization**: An empty list `decoded_list` is initialized to store the decoded elements.
+2. **Iteration over sublists**: The function iterates over each sublist in the input list `alist`.
+3. **Unpacking**: For each sublist, the count and value are unpacked from the sublist.
+4. **Repetition**: A loop runs for the number of times specified by the count, and in each iteration, the value is appended to `decoded_list`.
+5. **Return**: Finally, the `decoded_list` is returned, which contains the decoded elements.
+
+This approach ensures that the function correctly decodes the run-length encoded list and returns the expected output.

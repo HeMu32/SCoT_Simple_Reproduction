@@ -1,0 +1,43 @@
+[BEGIN PROCESS]
+Input: n: a non-negative integer
+Output: count: the number of prime numbers less than n
+
+1: Initialize count to 0 (to keep track of the number of primes)
+2: Loop from 2 to n - 1 (since 0 and 1 are not prime)
+3:     Initialize is_prime to True (assume the current number is prime)
+4:     Loop from 2 to the square root of the current number (inclusive)
+5:         If the current number is divisible by any number in this range:
+6:             Set is_prime to False
+7:             Break the loop
+8:     If is_prime is still True after the inner loop:
+9:         Increment count by 1
+10: Return count
+[END PROCESS]
+
+[BEGIN CODE]
+def count_Primes_nums(n):
+    count = 0
+    for num in range(2, n):
+        is_prime = True
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            count += 1
+    return count
+[END CODE]
+
+### Explanation
+
+The function `count_Primes_nums` takes a non-negative integer `n` and returns the number of prime numbers less than `n`.
+
+1. **Initialization**: We initialize `count` to 0, which will keep track of the number of prime numbers found.
+2. **Outer Loop**: We loop through each number from 2 to `n-1` (since 0 and 1 are not prime numbers).
+3. **Prime Check**: For each number, we assume it is prime (`is_prime = True`).
+4. **Inner Loop**: We check if the number is divisible by any integer from 2 to the square root of the number (inclusive). This is because a larger factor of the number would be a multiple of a smaller factor that has already been checked.
+5. **Divisibility Check**: If the number is divisible by any of these integers, it is not prime, and we set `is_prime` to `False` and break out of the inner loop.
+6. **Count Increment**: If the number is still considered prime after the inner loop, we increment `count` by 1.
+7. **Return Result**: After the outer loop completes, we return the value of `count`, which is the number of prime numbers less than `n`.
+
+This approach ensures that we efficiently check for prime numbers by reducing the number of divisibility checks needed.

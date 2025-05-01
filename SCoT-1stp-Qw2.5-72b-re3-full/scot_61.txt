@@ -1,0 +1,12 @@
+Input: s: a string, n: the length of the string
+Output: count: the number of substrings where the sum of the digits equals the length of the substring
+
+1: Initialize a variable `count` to 0 to keep track of the number of valid substrings.
+2: For each starting index `i` from 0 to `n-1`:
+3:     Initialize a variable `sum_of_digits` to 0 to keep track of the sum of digits in the current substring.
+4:     For each ending index `j` from `i` to `n-1`:
+5:         If the character at index `j` is a digit:
+6:             Add the integer value of the character at index `j` to `sum_of_digits`.
+7:         If `sum_of_digits` equals `j - i + 1` (the length of the current substring):
+8:             Increment `count` by 1.
+9: Return `count`.

@@ -1,0 +1,6 @@
+[BEGIN]
+Input: a: side length of the pentagon  
+Output: area: area of the pentagon  
+1: Calculate the area using the formula (sqrt(5 * (5 + 2 * sqrt(5))) * a^2) / 4  
+2: Return the calculated area  
+[END]

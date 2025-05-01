@@ -1,0 +1,18 @@
+[BEGIN PROCESS]
+Input: sub_li: a list of sublists, where each sublist contains at least two elements
+Output: sorted_list: a list of sublists sorted based on the second element of each sublist
+
+1: Define a function named `Sort` that takes a list `sub_li` as an argument
+2: Use the `sorted` function with a custom key to sort the list
+3: The key should be a lambda function that returns the second element of each sublist
+4: Return the sorted list
+[END PROCESS]
+
+[BEGIN CODE]
+def Sort(sub_li):
+    # Sort the list using the second element of each sublist as the key
+    return sorted(sub_li, key=lambda x: x[1])
+[END CODE]
+
+### Explanation:
+The function `Sort` is designed to sort a list of sublists based on the second element of each sublist. The `sorted` function in Python is used for this purpose, and it takes an optional `key` parameter that specifies a function of one argument that is used to extract a comparison key from each input element. In this case, the key is a lambda function `lambda x: x[1]`, which returns the second element of each sublist. This lambda function is used to determine the order of the sublists in the sorted output. The function then returns the sorted list.

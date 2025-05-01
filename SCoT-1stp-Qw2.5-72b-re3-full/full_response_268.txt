@@ -1,0 +1,30 @@
+[BEGIN PROCESS]
+Input: n: an integer representing the position of the star number to find
+Output: The n-th star number
+
+1: Define the formula for calculating the n-th star number. The formula for the n-th star number is \( 6n(n - 1) + 1 \).
+2: Calculate the n-th star number using the formula.
+3: Return the calculated star number.
+[END PROCESS]
+
+[BEGIN CODE]
+def find_star_num(n):
+    """
+    Write a function to find the n'th star number.
+    """
+    # Calculate the n-th star number using the formula
+    star_number = 6 * n * (n - 1) + 1
+    return star_number
+[END CODE]
+
+### Explanation
+
+A star number is a figurate number that represents a centered hexagram (six-pointed star), such as the one that Chinese checkers is played on. The formula to find the n-th star number is given by:
+
+\[ S_n = 6n(n - 1) + 1 \]
+
+Where:
+- \( S_n \) is the n-th star number.
+- \( n \) is the position of the star number in the sequence.
+
+The function `find_star_num` takes an integer `n` as input and returns the n-th star number by applying the formula. The formula is derived from the geometric properties of a centered hexagram, where each new layer of the star adds a multiple of 6 to the previous star number. The initial star number (when \( n = 1 \)) is 1, which is the center of the hexagram. For each subsequent layer, the number of points added is \( 6(n - 1) \), and this is summed up to get the total number of points in the n-th star.

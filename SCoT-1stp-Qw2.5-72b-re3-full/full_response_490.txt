@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples
+Output: a list of tuples that are symmetric (i.e., (a, b) and (b, a) are considered symmetric)
+
+1: Initialize an empty list named symmetric_pairs to store the symmetric tuples.
+2: Create a set named seen to keep track of the tuples that have been encountered.
+3: For each tuple pair in test_list:
+4:     If the reverse of the pair (i.e., (b, a) for (a, b)) is in seen:
+5:         Add the pair to symmetric_pairs.
+6:     Add the pair to seen.
+7: Return symmetric_pairs.
+[END PROCESS]
+
+[BEGIN CODE]
+def extract_symmetric(test_list):
+    symmetric_pairs = []
+    seen = set()
+    for pair in test_list:
+        reverse_pair = (pair[1], pair[0])
+        if reverse_pair in seen:
+            symmetric_pairs.append(pair)
+        seen.add(pair)
+    return symmetric_pairs
+[END CODE]
+
+### Explanation:
+The function `extract_symmetric` is designed to find all symmetric pairs in a given list of tuples. A symmetric pair is defined as a pair (a, b) for which there exists another pair (b, a) in the list. The function works as follows:
+
+1. **Initialization**: We initialize an empty list `symmetric_pairs` to store the symmetric pairs and a set `seen` to keep track of the tuples that have been encountered.
+
+2. **Iteration**: We iterate through each tuple in `test_list`.
+
+3. **Check for Symmetry**: For each tuple, we create its reverse. If the reverse tuple is already in the `seen` set, it means we have found a symmetric pair, and we add the current tuple to `symmetric_pairs`.
+
+4. **Update Seen Set**: We add the current tuple to the `seen` set to mark it as encountered.
+
+5. **Return Result**: Finally, we return the list of symmetric pairs.
+
+This approach ensures that we only add pairs to the result list if their symmetric counterparts have been seen before, thus correctly identifying all symmetric pairs in the input list.

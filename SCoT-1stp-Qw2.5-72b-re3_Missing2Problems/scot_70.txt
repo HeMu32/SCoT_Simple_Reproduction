@@ -1,0 +1,10 @@
+Input: Input: a list of tuples, k: an integer (though k is not used in this function, it's included in the function signature)
+Output: A boolean value indicating whether all tuples in the list have the same length
+
+1: Initialize a variable `first_length` to store the length of the first tuple in the list
+2: Initialize a boolean variable `all_equal` to True
+3: For each tuple `tup` in the list:
+4:     If the length of `tup` is not equal to `first_length`:
+5:         Set `all_equal` to False
+6:         Break the loop
+7: Return `all_equal`

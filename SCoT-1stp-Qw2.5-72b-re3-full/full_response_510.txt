@@ -1,0 +1,46 @@
+[BEGIN PROCESS]
+Input: arr: a list of non-negative integers, k: a positive integer
+Output: count: the number of subsequences where the product of elements is less than k
+
+1: Initialize count to 0
+2: for each subsequence of arr:
+3:     Initialize product to 1
+4:     for each element in the subsequence:
+5:         Multiply the element to the product
+6:     if the product is less than k:
+7:         Increment count by 1
+8: return count
+[END PROCESS]
+
+[BEGIN CODE]
+def no_of_subsequences(arr, k):
+    from itertools import combinations
+    
+    def product_of_elements(subseq):
+        product = 1
+        for num in subseq:
+            product *= num
+        return product
+    
+    count = 0
+    for r in range(1, len(arr) + 1):
+        for subseq in combinations(arr, r):
+            if product_of_elements(subseq) < k:
+                count += 1
+    return count
+[END CODE]
+
+### Explanation:
+The function `no_of_subsequences` calculates the number of subsequences in the given array `arr` where the product of the elements in each subsequence is less than a given threshold `k`.
+
+1. **Initialization**: The variable `count` is initialized to 0 to keep track of the number of valid subsequences.
+
+2. **Generating Subsequences**: The function uses the `combinations` function from the `itertools` module to generate all possible subsequences of the array `arr`. The `combinations` function is called for each possible length `r` from 1 to the length of `arr`.
+
+3. **Calculating Product**: For each subsequence, the function `product_of_elements` is called to calculate the product of the elements in the subsequence. This function multiplies all elements in the subsequence and returns the result.
+
+4. **Checking Condition**: If the product of the elements in the subsequence is less than `k`, the `count` is incremented by 1.
+
+5. **Returning Result**: After all subsequences have been checked, the function returns the `count` of valid subsequences.
+
+This approach ensures that all possible subsequences are considered, and the product of each subsequence is checked against the threshold `k`. The use of `combinations` simplifies the generation of subsequences, making the solution both clear and efficient.

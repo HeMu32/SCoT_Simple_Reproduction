@@ -1,0 +1,13 @@
+Input: list1: a list of integers
+Output: res: the result of dividing the first even number by the first odd number in the list
+
+1: Initialize variables `first_even` and `first_odd` to `None`.
+2: Iterate through the list `list1`:
+3:     For each element, check if it is even:
+4:         If it is even and `first_even` is `None`, set `first_even` to the current element.
+5:     Otherwise, check if it is odd:
+6:         If it is odd and `first_odd` is `None`, set `first_odd` to the current element.
+7:     If both `first_even` and `first_odd` are not `None`, break the loop.
+8: If `first_even` or `first_odd` is `None`, return a message indicating that the division cannot be performed.
+9: Otherwise, compute the division of `first_even` by `first_odd`.
+10: Return the result of the division.

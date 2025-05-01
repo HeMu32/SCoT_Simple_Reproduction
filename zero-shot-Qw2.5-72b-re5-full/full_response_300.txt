@@ -1,0 +1,20 @@
+[BEGIN CODE]
+```python
+def count_binary_seq(n):
+    def comb(n, k):
+        if k > n or k < 0:
+            return 0
+        if k == 0 or k == n:
+            return 1
+        k = min(k, n - k)
+        c = 1
+        for i in range(k):
+            c = c * (n - i) // (i + 1)
+        return c
+
+    total = 0
+    for i in range(n + 1):
+        total += comb(n, i) ** 2
+    return total
+```
+[END CODE]

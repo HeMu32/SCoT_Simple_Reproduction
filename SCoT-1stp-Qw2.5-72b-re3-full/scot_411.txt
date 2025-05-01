@@ -1,0 +1,6 @@
+Input: word: a string in snake_case format
+Output: word: the string converted to camelCase format
+
+1: Use a regular expression to find all occurrences of an underscore followed by a lowercase letter.
+2: For each match, replace the underscore and the letter with the uppercase version of the letter.
+3: Return the modified string.

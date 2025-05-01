@@ -1,0 +1,43 @@
+[BEGIN PROCESS]
+Input: list1: a list of elements; m: the number of positions to rotate the list to the left; n: the length of the list
+Output: A new list with elements rotated m positions to the left
+
+1: Validate the input to ensure m is within the bounds of the list length (0 <= m < n).
+2: If m is 0 or the list is empty, return the list as is since no rotation is needed.
+3: If m is greater than or equal to the length of the list, reduce m by the length of the list to find the effective rotation (m % n).
+4: Split the list into two parts: the first m elements and the rest of the list.
+5: Concatenate the second part of the list with the first part to achieve the left rotation.
+6: Return the concatenated list.
+[END PROCESS]
+
+[BEGIN CODE]
+def rotate_left(list1, m, n):
+    # Validate the input
+    if not (0 <= m < n) or n != len(list1):
+        raise ValueError("Invalid input: m must be within the bounds of the list length and n must match the list length.")
+    
+    # If no rotation is needed, return the list as is
+    if m == 0 or not list1:
+        return list1
+    
+    # Reduce m to find the effective rotation
+    m = m % n
+    
+    # Perform the rotation
+    return list1[m:] + list1[:m]
+[END CODE]
+
+### Explanation:
+The function `rotate_left` takes three parameters: `list1`, `m`, and `n`. The parameter `list1` is the list to be rotated, `m` is the number of positions to rotate the list to the left, and `n` is the length of the list. The function performs the following steps:
+
+1. **Input Validation**: The function first checks if `m` is within the valid range (0 <= m < n) and if `n` matches the actual length of `list1`. If not, it raises a `ValueError`.
+
+2. **No Rotation Needed**: If `m` is 0 or the list is empty, the function returns the list as is because no rotation is necessary.
+
+3. **Effective Rotation**: If `m` is greater than or equal to the length of the list, the function reduces `m` by taking the modulus of `m` with `n` to find the effective rotation. This step ensures that the function handles cases where `m` is larger than the list length.
+
+4. **Split and Concatenate**: The list is split into two parts: the first `m` elements and the rest of the list. The function then concatenates the second part with the first part to achieve the left rotation.
+
+5. **Return the Result**: The function returns the concatenated list, which is the result of the left rotation.
+
+This approach ensures that the function is efficient and handles edge cases gracefully.

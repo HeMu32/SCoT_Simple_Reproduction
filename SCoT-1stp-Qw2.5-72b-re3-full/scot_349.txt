@@ -1,0 +1,7 @@
+Input: A string, s
+Output: A boolean value indicating whether the string is a binary string or not
+
+1: Initialize a set of valid binary characters, binary_chars, containing '0' and '1'
+2: Iterate through each character, c, in the input string, s
+3:     If c is not in binary_chars, return False
+4: If the loop completes without returning False, return True

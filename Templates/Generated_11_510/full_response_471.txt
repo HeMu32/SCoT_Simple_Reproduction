@@ -1,0 +1,9 @@
+[BEGIN]
+Input: arr: list of integers, lens: length of arr, n: divisor integer  
+Output: remainder: the remainder of the product of arr elements divided by n  
+1: Initialize mul to 1  
+2: for i from 0 to lens - 1:  
+3:     Compute arr[i] % n and multiply it with mul  
+4:     Take the result modulo n and assign it back to mul  
+5: return mul % n  
+[END]

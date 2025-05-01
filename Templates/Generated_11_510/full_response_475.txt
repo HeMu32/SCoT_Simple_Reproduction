@@ -1,0 +1,7 @@
+[BEGIN]
+Input: dict1: a dictionary 
+Output: sort_counter: a list of tuples sorted by the values in descending order 
+1: 	Create a Counter object x from dict1 
+2: 	Sort x by its values in descending order and store the result in sort_counter 
+3: 	Return sort_counter 
+[END]

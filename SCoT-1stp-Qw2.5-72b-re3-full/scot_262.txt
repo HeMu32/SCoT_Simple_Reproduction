@@ -1,0 +1,9 @@
+Input: list1: a list, L: an integer representing the length of the first part of the list
+Output: A tuple containing two lists, where the first list is the first L elements of list1, and the second list contains the remaining elements
+
+1: Check if the length of list1 is less than L
+2:     If true, return the entire list1 as the first part and an empty list as the second part
+3: Otherwise, split the list into two parts:
+4:     The first part contains the first L elements of list1
+5:     The second part contains the elements from the L+1-th position to the end of list1
+6: Return a tuple containing the two parts

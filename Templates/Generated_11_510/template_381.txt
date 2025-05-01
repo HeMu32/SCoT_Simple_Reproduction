@@ -1,0 +1,8 @@
+Input: list_data: a list of lists, index_no: an integer representing the index to sort by
+Output: result: a list of lists sorted by the specified index
+
+1: Import the `itemgetter` function from the `operator` module
+2: Define a function `index_on_inner_list` that takes `list_data` and `index_no` as parameters
+3:   Use the `sorted` function on `list_data` with a key that uses `itemgetter` to sort by the element at `index_no`
+4:   Store the sorted list in a variable `result`
+5:   Return `result`

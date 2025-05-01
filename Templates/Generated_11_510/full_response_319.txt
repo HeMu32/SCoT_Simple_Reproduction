@@ -1,0 +1,9 @@
+[BEGIN]
+Input: text: a string  
+Output: words: a list of words that are exactly five characters long  
+1: Import the regex module  
+2: Define a function find_long_word that takes a string text as input  
+3:   Define a regex pattern to match words that are exactly five characters long  
+4:   Use the findall method from the regex module to find all occurrences of the pattern in the text  
+5:   Return the list of found words  
+[END]

@@ -1,0 +1,10 @@
+[BEGIN]
+Input: n: an integer representing the number of natural numbers to consider
+Output: sum: the sum of the fourth power of the first n natural numbers
+
+1: Initialize sum to 0
+2: for i from 1 to n inclusive:
+3:     Calculate the fourth power of i
+4:     Add the fourth power of i to sum
+5: return sum
+[END]

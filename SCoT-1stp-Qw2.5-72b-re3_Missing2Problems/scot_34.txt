@@ -1,0 +1,12 @@
+Input: ar: a sorted list of integers, N: the length of the list including the missing number
+Output: The missing number in the list
+
+1: Initialize a variable 'low' to 0 and 'high' to N - 1
+2: While 'low' is less than or equal to 'high':
+3:     Calculate 'mid' as the floor of (low + high) / 2
+4:     If the element at index 'mid' is equal to 'mid' + 1:
+5:         The missing number is not in the left half, so set 'low' to 'mid' + 1
+6:     Else:
+7:         The missing number is in the left half, so set 'high' to 'mid' - 1
+8: The missing number is 'low' + 1
+9: Return the missing number

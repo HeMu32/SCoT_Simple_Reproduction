@@ -1,0 +1,10 @@
+Input: nums: a two-dimensional list, N: an integer representing the index of the element to extract (0-based index)
+Output: result: a list containing the first or specified element from each sublist in nums
+
+1: Initialize an empty list called result
+2: for each sublist in nums:
+3:     if the length of the sublist is greater than N:
+4:         append the element at index N of the sublist to result
+5:     else:
+6:         append None to result (to handle cases where the sublist is too short)
+7: return result

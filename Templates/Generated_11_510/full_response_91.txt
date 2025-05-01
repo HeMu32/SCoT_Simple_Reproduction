@@ -1,0 +1,8 @@
+[BEGIN]
+Input: str1: a list of strings, sub_str: a string to search for
+Output: True if sub_str is found in any string in str1, otherwise False
+1: for each string s in str1:
+2:     if sub_str is found in s:
+3:         return True
+4: return False
+[END]

@@ -1,0 +1,29 @@
+[BEGIN PROCESS]
+Input: binary: a string representing a binary number
+Output: decimal: an integer representing the decimal equivalent of the binary number
+
+1: Initialize a variable decimal to 0 to store the decimal result.
+2: Initialize a variable power to 0 to keep track of the current power of 2.
+3: Reverse the binary string to process it from the least significant bit to the most significant bit.
+4: For each character in the reversed binary string:
+5:     If the character is '1':
+6:         Add 2 raised to the power to the decimal variable.
+7:     Increment the power by 1.
+8: Return the decimal variable as the result.
+[END PROCESS]
+
+[BEGIN CODE]
+def binary_to_decimal(binary):
+    decimal = 0
+    power = 0
+    # Reverse the binary string to process from the least significant bit
+    binary = binary[::-1]
+    for bit in binary:
+        if bit == '1':
+            decimal += 2 ** power
+        power += 1
+    return decimal
+[END CODE]
+
+Explanation:
+The function `binary_to_decimal` converts a binary number (given as a string) to its decimal equivalent. The process involves reversing the binary string so that we can start processing from the least significant bit (rightmost bit). For each bit in the reversed string, if the bit is '1', we add 2 raised to the current power (starting from 0) to the decimal result. The power is incremented by 1 for each bit processed. This method effectively sums the values of the binary digits, each multiplied by the appropriate power of 2, to produce the decimal equivalent.

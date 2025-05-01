@@ -1,0 +1,27 @@
+[BEGIN PROCESS]
+Input: input_list: a list of lists, where each sublist contains strings
+Output: sorted_list: a list of lists, where each sublist is sorted alphabetically
+
+1: Initialize an empty list called sorted_list
+2: For each sublist in input_list:
+3:     Sort the sublist using a lambda function that sorts strings alphabetically
+4:     Append the sorted sublist to sorted_list
+5: Return sorted_list
+[END PROCESS]
+
+[BEGIN CODE]
+def sort_sublists(input_list):
+    # Using list comprehension and sorted with a lambda function to sort each sublist
+    sorted_list = [sorted(sublist, key=lambda x: x) for sublist in input_list]
+    return sorted_list
+[END CODE]
+
+### Explanation:
+- **Input**: The function `sort_sublists` takes a list of lists (`input_list`) as input, where each sublist contains strings.
+- **Process**:
+  - We use a list comprehension to iterate over each sublist in `input_list`.
+  - For each sublist, we use the `sorted` function with a lambda function as the key. The lambda function `lambda x: x` is used to sort the strings alphabetically.
+  - The sorted sublist is then appended to the `sorted_list`.
+- **Output**: The function returns `sorted_list`, which is a list of lists where each sublist is sorted alphabetically.
+
+This approach ensures that each sublist in the input list is sorted individually, and the overall structure of the list of lists is preserved.

@@ -1,0 +1,10 @@
+Input: n: an integer representing the number of first natural numbers to consider
+Output: difference: an integer representing the difference between the squared sum of the first n natural numbers and the sum of the squares of the first n natural numbers
+
+1: Initialize sumofsquares to 0
+2: Initialize squareofsum to 0
+3: for each number num from 1 to n (inclusive):
+4:     add num * num to sumofsquares
+5:     add num to squareofsum
+6: squareofsum = squareofsum squared
+7: return the difference between squareofsum and sumofsquares

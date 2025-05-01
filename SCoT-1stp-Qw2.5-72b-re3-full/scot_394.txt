@@ -1,0 +1,7 @@
+Input: test_tup: a tuple of elements
+Output: result: a boolean value indicating whether all elements in the tuple are distinct
+
+1: Convert the tuple to a set to remove any duplicate elements
+2: Compare the length of the original tuple with the length of the set
+3: If the lengths are equal, all elements in the tuple are distinct; return True
+4: Otherwise, there are duplicates; return False

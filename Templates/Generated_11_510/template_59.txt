@@ -1,0 +1,4 @@
+Input: n: an integer
+Output: octagonal_number: the nth octagonal number
+1: Calculate the value of 3 * n * n - 2 * n
+2: Return the calculated value as the nth octagonal number

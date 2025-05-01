@@ -1,0 +1,33 @@
+[BEGIN PROCESS]
+Input: list: a list of elements, element: a string to compare against
+Output: result: a boolean indicating whether all items in the list are equal to the given string
+
+1: Initialize a variable result to True
+2: Loop through each item in the list:
+3:     If the current item is not equal to the given string:
+4:         Set result to False
+5:         Break the loop
+6: Return result
+[END PROCESS]
+
+[BEGIN CODE]
+def check_element(lst, element):
+    result = True
+    for item in lst:
+        if item != element:
+            result = False
+            break
+    return result
+[END CODE]
+
+### Explanation
+
+The function `check_element` is designed to determine if all elements in a given list `lst` are equal to a specified string `element`. The process involves:
+
+1. **Initialization**: A boolean variable `result` is initialized to `True`. This variable will be used to store the outcome of the check.
+2. **Iteration**: The function iterates over each item in the list using a for loop.
+3. **Comparison**: Inside the loop, each item is compared to the given string `element`.
+4. **Condition Check**: If any item in the list is not equal to `element`, the `result` is set to `False`, and the loop is terminated early using `break`.
+5. **Return**: After the loop, the function returns the value of `result`.
+
+This approach ensures that the function efficiently returns `False` as soon as it finds an item that does not match the given string, avoiding unnecessary checks. If the loop completes without finding any mismatches, the function returns `True`, indicating that all items in the list are equal to the given string.

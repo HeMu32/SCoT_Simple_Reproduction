@@ -1,0 +1,10 @@
+Input: n: an integer  
+Output: msb: the most significant bit number which is set in the binary representation of n  
+1: Initialize msb to 0  
+2: Initialize a variable `bit_position` to 0  
+3: While n is greater than 0:  
+4:     If the least significant bit of n is 1:  
+5:         Set msb to 2 raised to the power of `bit_position`  
+6:     Right shift n by 1 bit  
+7:     Increment `bit_position` by 1  
+8: Return msb

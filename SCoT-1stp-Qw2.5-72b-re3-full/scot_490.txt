@@ -1,0 +1,10 @@
+Input: test_list: a list of tuples
+Output: a list of tuples that are symmetric (i.e., (a, b) and (b, a) are considered symmetric)
+
+1: Initialize an empty list named symmetric_pairs to store the symmetric tuples.
+2: Create a set named seen to keep track of the tuples that have been encountered.
+3: For each tuple pair in test_list:
+4:     If the reverse of the pair (i.e., (b, a) for (a, b)) is in seen:
+5:         Add the pair to symmetric_pairs.
+6:     Add the pair to seen.
+7: Return symmetric_pairs.

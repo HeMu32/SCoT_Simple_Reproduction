@@ -1,0 +1,71 @@
+[BEGIN PROCESS]
+Input: root: the root node of a binary tree
+Output: boolean value indicating whether the tree is balanced
+
+1: Define a helper function `get_height` that returns the height of a subtree and a boolean indicating if the subtree is balanced.
+2: If the root is None, return (0, True) as an empty tree is balanced and has height 0.
+3: Recursively call `get_height` for the left and right subtrees.
+4: If either subtree is not balanced, or the height difference between the left and right subtrees is greater than 1, return (max height of the two subtrees + 1, False).
+5: Otherwise, return (max height of the two subtrees + 1, True).
+6: In the main function `is_tree_balanced`, call `get_height` on the root and return the boolean part of the result.
+[END PROCESS]
+
+[BEGIN CODE]
+class TreeNode:
+    def __init__(self, value=0, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+def is_tree_balanced(root):
+    def get_height(node):
+        if node is None:
+            return (0, True)
+        
+        left_height, is_left_balanced = get_height(node.left)
+        right_height, is_right_balanced = get_height(node.right)
+        
+        if not is_left_balanced or not is_right_balanced or abs(left_height - right_height) > 1:
+            return (max(left_height, right_height) + 1, False)
+        
+        return (max(left_height, right_height) + 1, True)
+    
+    return get_height(root)[1]
+
+# Example usage:
+# Constructing a balanced binary tree
+#       1
+#      / \
+#     2   3
+#    / \
+#   4   5
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+
+print(is_tree_balanced(root))  # Output: True
+
+# Constructing an unbalanced binary tree
+#       1
+#      / 
+#     2   
+#    / 
+#   3   
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.left.left = TreeNode(3)
+
+print(is_tree_balanced(root))  # Output: False
+[END CODE]
+
+### Explanation:
+- **TreeNode Class**: A simple class to represent nodes in a binary tree. Each node has a value, a left child, and a right child.
+- **is_tree_balanced Function**: This function checks if the binary tree is balanced. It uses a helper function `get_height` to compute the height of the tree and determine if it is balanced.
+- **get_height Function**: This recursive function returns a tuple containing the height of the subtree and a boolean indicating if the subtree is balanced. It works as follows:
+  - If the node is `None`, it returns (0, True) because an empty tree is balanced and has a height of 0.
+  - It recursively calls itself for the left and right subtrees.
+  - It checks if either subtree is not balanced or if the height difference between the left and right subtrees is greater than 1. If either condition is true, it returns (max height of the two subtrees + 1, False).
+  - If both subtrees are balanced and the height difference is at most 1, it returns (max height of the two subtrees + 1, True).
+- **Example Usage**: Two example trees are constructed to demonstrate the function. The first tree is balanced, and the second tree is unbalanced. The function correctly identifies the balance status of each tree.

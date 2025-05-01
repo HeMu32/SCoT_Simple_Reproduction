@@ -1,0 +1,9 @@
+[BEGIN]
+Input: n: an integer 
+Output: count: the number of digits in n 
+1: Initialize count to 0 
+2: While n is not equal to 0: 
+3:     Divide n by 10 using integer division 
+4:     Increment count by 1 
+5: Return count 
+[END]

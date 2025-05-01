@@ -1,0 +1,9 @@
+[BEGIN CODE]
+```python
+def assign_freq(test_list):
+    from collections import Counter
+    freq_dict = Counter(test_list)
+    result = [(key, freq_dict[key]) for key in test_list]
+    return result
+```
+[END CODE]

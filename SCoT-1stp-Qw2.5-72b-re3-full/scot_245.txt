@@ -1,0 +1,16 @@
+Input: arr: a list of integers, n: the length of the array
+Output: max_sum: the maximum sum of a bi-tonic sub-sequence in the array
+
+1: Initialize two arrays, inc and dec, of length n with all elements set to 0. These arrays will store the maximum sum of increasing and decreasing sub-sequences ending at each index, respectively.
+2: Set the first element of inc to the first element of arr, as the maximum sum of an increasing sub-sequence ending at the first element is the element itself.
+3: Loop through the array from the second element to the last:
+4:     For each element, loop through all previous elements:
+5:         If the current element is greater than the previous element, update inc at the current index to be the maximum of its current value or the value of inc at the previous index plus the current element.
+6: Set the last element of dec to the last element of arr, as the maximum sum of a decreasing sub-sequence starting at the last element is the element itself.
+7: Loop through the array from the second last element to the first:
+8:     For each element, loop through all subsequent elements:
+9:         If the current element is greater than the subsequent element, update dec at the current index to be the maximum of its current value or the value of dec at the subsequent index plus the current element.
+10: Initialize a variable max_sum to 0 to store the maximum sum of a bi-tonic sub-sequence.
+11: Loop through the array:
+12:     For each index, calculate the sum of inc and dec at that index and update max_sum to be the maximum of its current value or the calculated sum.
+13: Return max_sum.

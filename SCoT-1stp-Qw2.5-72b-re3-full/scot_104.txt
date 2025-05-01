@@ -1,0 +1,8 @@
+Input: input_list: a list of lists, where each sublist contains strings
+Output: sorted_list: a list of lists, where each sublist is sorted alphabetically
+
+1: Initialize an empty list called sorted_list
+2: For each sublist in input_list:
+3:     Sort the sublist using a lambda function that sorts strings alphabetically
+4:     Append the sorted sublist to sorted_list
+5: Return sorted_list

@@ -1,0 +1,11 @@
+Input: An array of integers
+Output: The largest palindromic number in the array
+
+1: Initialize a variable `max_palindrome` to None, which will store the largest palindrome found.
+2: Iterate through each element in the array.
+3: For each element:
+4:     Convert the element to a string.
+5:     Check if the string is a palindrome by comparing it to its reverse.
+6:     If it is a palindrome and either `max_palindrome` is None or the current element is greater than `max_palindrome`, update `max_palindrome` with the current element.
+7: After the loop, if `max_palindrome` is still None, return a message indicating no palindromic number was found.
+8: Otherwise, return `max_palindrome`.

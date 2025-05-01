@@ -1,0 +1,10 @@
+[BEGIN]
+Input: l: a list of key-value pairs (tuples)
+Output: d: a dictionary where each key is associated with a list of values
+
+1: Import defaultdict from the collections module
+2: Create a defaultdict d with list as the default factory
+3: for each key-value pair (k, v) in l:
+4:     append v to the list associated with key k in d
+5: return d
+[END]

@@ -1,0 +1,9 @@
+[BEGIN]
+Input: n: an integer representing the position of the Newman–Shanks–Williams prime number to find
+Output: The nth Newman–Shanks–Williams prime number
+
+1: if n is 0 or 1:
+2:     return 1
+3: else:
+4:     return 2 * newman_prime(n - 1) + newman_prime(n - 2)
+[END]

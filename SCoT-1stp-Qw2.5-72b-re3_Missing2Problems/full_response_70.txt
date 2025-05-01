@@ -1,0 +1,31 @@
+[BEGIN PROCESS]
+Input: Input: a list of tuples, k: an integer (though k is not used in this function, it's included in the function signature)
+Output: A boolean value indicating whether all tuples in the list have the same length
+
+1: Initialize a variable `first_length` to store the length of the first tuple in the list
+2: Initialize a boolean variable `all_equal` to True
+3: For each tuple `tup` in the list:
+4:     If the length of `tup` is not equal to `first_length`:
+5:         Set `all_equal` to False
+6:         Break the loop
+7: Return `all_equal`
+[END PROCESS]
+
+[BEGIN CODE]
+def get_equal(Input, k):
+    if not Input:  # Check if the list is empty
+        return True  # An empty list is considered to have tuples of equal length
+    
+    first_length = len(Input[0])  # Get the length of the first tuple
+    all_equal = True  # Assume all tuples are of equal length
+    
+    for tup in Input:
+        if len(tup) != first_length:
+            all_equal = False
+            break
+    
+    return all_equal
+[END CODE]
+
+### Explanation:
+The function `get_equal` checks if all tuples in the provided list `Input` have the same length. The function starts by checking if the list is empty, in which case it returns `True` because an empty list trivially satisfies the condition of having tuples of equal length. It then initializes `first_length` with the length of the first tuple in the list. A boolean variable `all_equal` is set to `True` initially, assuming all tuples are of equal length. The function then iterates through each tuple in the list, and if it finds a tuple whose length is not equal to `first_length`, it sets `all_equal` to `False` and breaks out of the loop. Finally, the function returns the value of `all_equal`.

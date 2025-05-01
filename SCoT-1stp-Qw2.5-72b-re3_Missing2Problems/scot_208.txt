@@ -1,0 +1,7 @@
+Input: num: a string representing a number
+Output: A boolean value indicating whether the number is a decimal with a precision of 2
+
+1: Import the `re` module for regular expression operations
+2: Define a regular expression pattern that matches a decimal number with exactly two digits after the decimal point
+3: Use the `re.match` function to check if the input string matches the pattern
+4: If the match is found, return True; otherwise, return False

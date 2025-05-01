@@ -1,0 +1,24 @@
+[BEGIN PROCESS]
+Input: test_list: a list of tuples, K: an integer indicating the number of elements to trim from each tuple
+Output: result: a list of tuples where each tuple has been trimmed by K elements from both the start and the end
+
+1: Initialize an empty list called result to store the trimmed tuples.
+2: For each tuple in test_list:
+3:     If the length of the tuple is less than 2 * K, skip this tuple as it cannot be trimmed by K from both ends.
+4:     Otherwise, slice the tuple from index K to the length of the tuple minus K.
+5:     Append the sliced tuple to the result list.
+6: Return the result list.
+[END PROCESS]
+
+[BEGIN CODE]
+def trim_tuple(test_list, K):
+  result = []
+  for tup in test_list:
+    if len(tup) > 2 * K:
+      trimmed_tup = tup[K:-K]
+      result.append(trimmed_tup)
+  return result
+[END CODE]
+
+Explanation:
+The function `trim_tuple` takes a list of tuples (`test_list`) and an integer (`K`) as inputs. The goal is to trim `K` elements from the start and the end of each tuple in the list. If a tuple has fewer elements than `2 * K`, it is skipped because it cannot be trimmed by `K` elements from both ends. The function iterates over each tuple, checks its length, and if it is long enough, slices the tuple to remove `K` elements from both the start and the end. The trimmed tuples are then collected in a new list (`result`), which is returned at the end. This approach ensures that only valid tuples (those with a length greater than `2 * K`) are processed and included in the final output.

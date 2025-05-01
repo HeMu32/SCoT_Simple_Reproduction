@@ -1,0 +1,23 @@
+[BEGIN PROCESS]
+Input: A number `n` for which we need to find the sum of even factors.
+Output: The sum of all even factors of `n`.
+
+1: Initialize a variable `sum_even_factors` to 0 to store the sum of even factors.
+2: Loop through numbers from 2 to `n` (inclusive) with a step of 2 to only consider even numbers.
+3:     For each even number `i`:
+4:         If `i` is a factor of `n` (i.e., `n % i == 0`):
+5:             Add `i` to `sum_even_factors`.
+6: After the loop, return `sum_even_factors`.
+[END PROCESS]
+
+[BEGIN CODE]
+def sumofFactors(n):
+    sum_even_factors = 0
+    for i in range(2, n + 1, 2):
+        if n % i == 0:
+            sum_even_factors += i
+    return sum_even_factors
+[END CODE]
+
+### Explanation:
+The function `sumofFactors` is designed to calculate the sum of all even factors of a given number `n`. The process involves iterating through all even numbers from 2 up to `n` and checking if each number is a factor of `n`. If it is, the number is added to the `sum_even_factors`. This approach ensures that only even factors are considered, and the sum of these factors is returned as the result. The loop increments by 2 to skip odd numbers, optimizing the function's performance.

@@ -1,0 +1,22 @@
+[BEGIN PROCESS]
+Input: str1: a string from which lowercase substrings need to be removed
+Output: result: a string with all lowercase substrings removed
+
+1: Import the `re` module for regular expression operations
+2: Use the `re.sub` function to substitute all lowercase letters (a-z) with an empty string
+3: Return the modified string
+[END PROCESS]
+
+[BEGIN CODE]
+import re
+
+def remove_lowercase(str1):
+    # Substitute all lowercase letters with an empty string
+    result = re.sub('[a-z]', '', str1)
+    return result
+[END CODE]
+
+Explanation:
+- The function `remove_lowercase` takes a single string `str1` as input.
+- The `re.sub` function from the `re` module is used to search for all occurrences of lowercase letters (a-z) in the input string and replace them with an empty string, effectively removing them.
+- The modified string, which no longer contains any lowercase letters, is then returned as the output.

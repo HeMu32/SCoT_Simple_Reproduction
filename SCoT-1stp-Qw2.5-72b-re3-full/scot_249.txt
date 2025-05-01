@@ -1,0 +1,6 @@
+Input: array_nums1, array_nums2: two lists of integers
+Output: A list containing the intersection of the two input lists
+
+1: Use the `filter` function with a lambda to filter elements in array_nums1 that are also present in array_nums2.
+2: Convert the filtered result to a list to get the intersection.
+3: Return the list of intersecting elements.

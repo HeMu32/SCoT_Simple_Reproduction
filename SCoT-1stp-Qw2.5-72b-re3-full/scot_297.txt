@@ -1,0 +1,13 @@
+Input: list1: a nested list of elements
+Output: flat_list: a list containing all the elements from the nested lists, flattened into a single list
+
+1: Initialize an empty list flat_list
+2: Define a helper function flatten that takes a single argument item
+3:     If item is a list:
+4:         For each element in item:
+5:             Recursively call flatten on the element
+6:     Else:
+7:         Append item to flat_list
+8: For each item in list1:
+9:     Call the flatten function on item
+10: Return flat_list

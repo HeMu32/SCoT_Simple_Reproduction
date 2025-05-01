@@ -1,0 +1,10 @@
+[BEGIN]
+Input: nums: a list of numbers  
+Output: first_even: the first even number in nums or -1 if no even number exists  
+1: Initialize a generator expression that iterates over each element el in nums  
+2:     if el is even (el % 2 == 0):  
+3:         yield el  
+4: Use the next function to get the first value from the generator  
+5:     if no even number is found, return -1  
+6: Return the first even number found  
+[END]

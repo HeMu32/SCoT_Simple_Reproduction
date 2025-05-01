@@ -1,0 +1,39 @@
+[BEGIN PROCESS]
+Input: list1: a list, list2: a list
+Output: a new list where the last element of list1 is replaced by the entire list2
+1: Check if list1 is not empty
+2: If list1 is not empty:
+3:     Remove the last element from list1
+4:     Append list2 to the end of list1
+5: If list1 is empty:
+6:     Return list2 as the result
+7: Return the modified list1
+[END PROCESS]
+
+[BEGIN CODE]
+def replace_list(list1, list2):
+    # Check if list1 is not empty
+    if list1:
+        # Remove the last element from list1
+        list1.pop()
+        # Append list2 to the end of list1
+        list1.extend(list2)
+    else:
+        # If list1 is empty, return list2
+        return list2
+    # Return the modified list1
+    return list1
+[END CODE]
+
+### Explanation:
+The function `replace_list` takes two lists, `list1` and `list2`, as input. The goal is to replace the last element of `list1` with the entire `list2`. Here's a step-by-step breakdown of the process:
+
+1. **Check if `list1` is not empty**: This is important because if `list1` is empty, there is no last element to remove. In this case, the function should simply return `list2`.
+
+2. **Remove the last element from `list1`**: If `list1` is not empty, the last element is removed using the `pop()` method.
+
+3. **Append `list2` to the end of `list1`**: After removing the last element, `list2` is appended to the end of `list1` using the `extend()` method. This method adds all elements of `list2` to the end of `list1`.
+
+4. **Return the modified `list1`**: Finally, the modified `list1` is returned. If `list1` was initially empty, the function returns `list2` directly.
+
+This approach ensures that the function handles both cases where `list1` is empty and where it contains elements.

@@ -1,0 +1,8 @@
+[BEGIN]
+Input: a, b, c: coefficients of a quadratic equation (ax^2 + bx + c = 0)
+Output: "Yes" if the roots are reciprocal of each other, "No" otherwise
+1: if a is equal to c:
+2:     return "Yes"
+3: else:
+4:     return "No"
+[END]

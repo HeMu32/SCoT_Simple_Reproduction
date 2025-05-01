@@ -1,0 +1,9 @@
+[BEGIN]
+Input: nums: a list of numbers, n: an integer
+Output: nth_nums: a list of numbers where each element is the n-th power of the corresponding element in nums
+1: Initialize an empty list nth_nums
+2: For each element x in nums:
+3:     Compute x to the power of n using a lambda function
+4:     Add the result to nth_nums
+5: Return nth_nums
+[END]

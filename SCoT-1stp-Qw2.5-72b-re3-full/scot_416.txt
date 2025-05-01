@@ -1,0 +1,9 @@
+Input: n: an integer
+Output: max_sum: the maximum sum obtained by dividing the number into three parts recursively and summing them up
+
+1: If n is less than or equal to 0, return 0 (base case)
+2: Initialize max_sum to 0
+3: For each division of n into three parts (i, j, k) where i + j + k = n and i, j, k > 0:
+4:     Calculate the sum of the recursive calls for i, j, and k
+5:     If the calculated sum is greater than max_sum, update max_sum
+6: Return max_sum

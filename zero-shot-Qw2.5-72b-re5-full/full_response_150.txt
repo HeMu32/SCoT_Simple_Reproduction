@@ -1,0 +1,10 @@
+[BEGIN CODE]
+```python
+def does_Contain_B(a, b, c):
+    if b < a:
+        return False
+    if (b - a) % c == 0:
+        return True
+    return False
+```
+[END CODE]

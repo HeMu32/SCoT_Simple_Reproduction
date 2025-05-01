@@ -1,0 +1,34 @@
+[BEGIN PROCESS]
+Input: numbers: a list of complex numbers
+Output: polar_coords: a list of tuples, each containing the magnitude and phase angle (in radians) of the corresponding complex number
+
+1: Initialize an empty list called polar_coords
+2: For each complex number in the numbers list:
+3:     Calculate the magnitude using the formula sqrt(real^2 + imag^2)
+4:     Calculate the phase angle using the formula atan2(imag, real)
+5:     Append a tuple (magnitude, phase angle) to polar_coords
+6: Return polar_coords
+[END PROCESS]
+
+[BEGIN CODE]
+import cmath
+
+def convert(numbers):
+    polar_coords = []
+    for num in numbers:
+        magnitude = abs(num)
+        phase_angle = cmath.phase(num)
+        polar_coords.append((magnitude, phase_angle))
+    return polar_coords
+[END CODE]
+
+### Explanation:
+The function `convert` takes a list of complex numbers as input and returns a list of tuples, where each tuple represents the polar coordinates (magnitude and phase angle) of the corresponding complex number.
+
+- **Magnitude Calculation**: The magnitude of a complex number \( z = a + bi \) is calculated using the formula \( \sqrt{a^2 + b^2} \). In Python, this can be done using the `abs()` function, which returns the magnitude of a complex number.
+  
+- **Phase Angle Calculation**: The phase angle (or argument) of a complex number \( z = a + bi \) is calculated using the formula \( \text{atan2}(b, a) \). In Python, this can be done using the `cmath.phase()` function, which returns the phase angle in radians.
+
+- **Looping Through the List**: The function iterates over each complex number in the input list, calculates its magnitude and phase angle, and appends the results as a tuple to the `polar_coords` list.
+
+- **Returning the Result**: Finally, the function returns the list of tuples, each representing the polar coordinates of the complex numbers in the input list.

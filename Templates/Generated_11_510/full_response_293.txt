@@ -1,0 +1,8 @@
+[BEGIN]
+Input: w, h: two sides of a right-angled triangle (w and h are the legs)
+Output: s: the length of the hypotenuse
+
+1: Import the math module to use the square root function.
+2: Calculate the square of the hypotenuse (s) using the Pythagorean theorem: s = sqrt(w^2 + h^2)
+3: Return the calculated value of s.
+[END]

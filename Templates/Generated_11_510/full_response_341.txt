@@ -1,0 +1,7 @@
+[BEGIN]
+Input: s: a set  
+Output: t: an ordered tuple  
+1: Convert the set s into a sorted list  
+2: Convert the sorted list into a tuple t  
+3: Return t  
+[END]

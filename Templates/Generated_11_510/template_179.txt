@@ -1,0 +1,18 @@
+Input: x: an integer
+Output: True if x is a Keith number, otherwise False
+
+1: Initialize an empty list `terms` to store the digits of x.
+2: Set `temp` to x and `n` to 0.
+3: While `temp` is greater than 0:
+   4:     Append the last digit of `temp` to `terms`.
+   5:     Update `temp` by removing its last digit.
+   6:     Increment `n` by 1.
+7: Reverse the list `terms` to get the digits in the correct order.
+8: Initialize `next_term` to 0 and `i` to `n`.
+9: While `next_term` is less than x:
+   10:     Set `next_term` to 0.
+   11:     For `j` from 1 to `n` (inclusive):
+   12:         Add the `j`-th last element of `terms` to `next_term`.
+   13:     Append `next_term` to `terms`.
+   14:     Increment `i` by 1.
+15: Return True if `next_term` is equal to x, otherwise return False.

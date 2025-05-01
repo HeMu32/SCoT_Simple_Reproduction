@@ -1,0 +1,7 @@
+Input: dict1: a dictionary where keys are elements and values are counts (similar to a counter)
+Output: sorted_dict: a dictionary or list of tuples sorted by the count values in descending order
+
+1: Convert the dictionary into a list of tuples where each tuple is (key, value)
+2: Sort the list of tuples based on the value in descending order
+3: Convert the sorted list of tuples back into a dictionary or keep it as a list of tuples
+4: Return the sorted dictionary or list of tuples

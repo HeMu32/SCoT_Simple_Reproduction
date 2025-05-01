@@ -1,0 +1,13 @@
+Input: Input: a list of tuples
+Output: a list of tuples where each tuple has the same first element
+
+1: Initialize an empty dictionary `out`
+2: For each tuple `elem` in `Input`:
+3:     Try:
+4:         Extend the list associated with the key `elem[0]` in `out` with the remaining elements of `elem` (i.e., `elem[1:]`)
+5:     Except KeyError:
+6:         Create a new key in `out` with `elem[0]` and set its value to a list of all elements in `elem`
+7: Initialize an empty list `result`
+8: For each value in `out.values()`:
+9:     Convert the value to a tuple and append it to `result`
+10: Return `result`

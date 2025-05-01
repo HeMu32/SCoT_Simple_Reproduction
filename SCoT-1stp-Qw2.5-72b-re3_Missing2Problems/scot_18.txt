@@ -1,0 +1,8 @@
+Input: string, second_string: two strings where characters from the first string that are present in the second string need to be removed.
+Output: A new string with characters removed.
+
+1: Initialize an empty string called `clean_string` to store the result.
+2: Loop through each character `char` in `string`.
+3:     If `char` is not in `second_string`:
+4:         Append `char` to `clean_string`.
+5: Return `clean_string`.

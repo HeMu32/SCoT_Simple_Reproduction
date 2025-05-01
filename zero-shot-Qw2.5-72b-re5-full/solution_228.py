@@ -1,0 +1,7 @@
+def all_Bits_Set_In_The_Given_Range(n, l, r):
+    # Create a mask to isolate bits in the range [l, r]
+    mask = ((1 << r) - 1) ^ ((1 << (l - 1)) - 1)
+    # Apply the mask to n
+    masked_n = n & mask
+    # If all bits in the range [l, r] are set, the result should be equal to the mask
+    return masked_n == mask

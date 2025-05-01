@@ -1,0 +1,9 @@
+Input: test_tuple: a tuple of elements
+Output: res: a boolean indicating if all elements in the tuple have the same data type
+
+1: Initialize res to True
+2: for each element ele in test_tuple:
+3:     if the type of ele is not the same as the type of the first element in test_tuple:
+4:         set res to False
+5:         break the loop
+6: return res

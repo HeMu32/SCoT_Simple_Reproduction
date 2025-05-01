@@ -1,0 +1,7 @@
+Input: nums: a list of numbers  
+Output: sum: the sum of the largest and smallest values in nums  
+1: Initialize sum to 0  
+2: Find the maximum value in nums and store it in a variable max_val  
+3: Find the minimum value in nums and store it in a variable min_val  
+4: Calculate the sum of max_val and min_val and store it in sum  
+5: Return sum

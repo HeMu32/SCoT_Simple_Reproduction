@@ -1,0 +1,4 @@
+Input: a: first term of the geometric progression, n: number of terms, r: common ratio
+Output: total: sum of the geometric progression series
+1: Calculate the total sum using the formula (a * (1 - r^n)) / (1 - r)
+2: Return the total sum

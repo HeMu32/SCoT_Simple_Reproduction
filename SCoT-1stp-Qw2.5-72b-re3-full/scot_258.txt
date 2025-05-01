@@ -1,0 +1,8 @@
+Input: array_nums: a list of integers
+Output: count: the number of odd elements in the list
+
+1: Use the `filter` function to apply a lambda function to each element in array_nums.
+2:     The lambda function checks if an element is odd by using the modulus operator (%). If the element modulo 2 is not equal to 0, it is odd.
+3: Convert the filter object to a list to get a list of all odd elements.
+4: Use the `len` function to count the number of elements in the list of odd elements.
+5: Return the count.
