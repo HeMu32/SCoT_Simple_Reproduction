@@ -243,7 +243,7 @@ def save_response(task_id: int, response: str, directory: str = "./ans_cache/"):
 
 
 
-def solve_mbpp_task_SCoT(task_id: int, dataset_path: str = "mbpp.jsonl", validate_immediately: bool = True, result_dir: str = ".\\SCoT-results-dsv3", timeout: int = 10):
+def solve_mbpp_task_SCoT(task_id: int, dataset_path: str = "mbpp.jsonl", validate_immediately: bool = True, result_dir: str = ".\\SCoT-results", timeout: int = 10):
     """
     解决MBPP任务
     Args:
@@ -346,7 +346,7 @@ def solve_mbpp_task_SCoT(task_id: int, dataset_path: str = "mbpp.jsonl", validat
     
     return solution_path
 
-def batch_solve_mbpp_tasks(start_id: int, end_id: int, dataset_path: str = "mbpp.jsonl", delay: int = 15, result_dir: str = ".\\SCoT-results-dsv3", timeout: int = 10):
+def batch_solve_mbpp_tasks(start_id: int, end_id: int, dataset_path: str = "mbpp.jsonl", delay: int = 15, result_dir: str = ".\\SCoT-results", timeout: int = 10):
     """
     批量解决MBPP任务
     
@@ -466,7 +466,7 @@ def main():
         print("例如: python mbpp_llm_solver_SCoT.py batch 11 20")
         print("validate: true - 立即验证解答(默认), false - 不验证解答")
         print("delay: 每个问题之间的延迟时间（秒），默认为15")
-        print("result_dir: 结果保存目录，默认为.\\SCoT-results-dsv3")
+        print("result_dir: 结果保存目录，默认为.\\SCoT-results")
         sys.exit(1)
 
     # 检查是否为批量模式
@@ -496,7 +496,7 @@ def main():
                 print(f"警告: 延迟时间必须是整数，使用默认值{delay}")
         
         # 默认结果保存目录
-        result_dir = ".\\SCoT-results-dsv3"
+        result_dir = ".\\SCoT-results"
         if len(sys.argv) >= 7:
             result_dir = sys.argv[6]
             print(f"结果将保存到: {os.path.abspath(result_dir)}")
@@ -526,7 +526,7 @@ def main():
             validate_immediately = sys.argv[3].lower() == "true"
         
         # 默认结果保存目录
-        result_dir = ".\\SCoT-results-dsv3"
+        result_dir = ".\\SCoT-results"
         if len(sys.argv) >= 5:
             result_dir = sys.argv[4]
             print(f"结果将保存到: {os.path.abspath(result_dir)}")
